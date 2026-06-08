@@ -1,0 +1,30 @@
+# Manim rendered output
+media/
+rendered/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+concat.txt
+
+# Thumbnail downloads from competitive analysis
+channel-analysis/thumbnails/
+
+# Node.js dependencies
+node_modules/
+channel-analysis/node_modules/

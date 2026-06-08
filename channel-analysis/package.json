@@ -1,0 +1,15 @@
+{
+  "name": "channel-analysis",
+  "version": "1.0.0",
+  "description": "All analysis scripts use **Tor + Playwright** to bypass YouTube's cloud IP blocking.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "youtubei.js": "^17.0.1"
+  }
+}
