@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """
-TTS Narration Pipeline v2 for Manim Math Videos.
+TTS Narration Pipeline v3 for Manim Math Videos.
 
-Complete rewrite to fix audio overlap, distortion, and sync issues.
+v3: Pure concat-based assembly — eliminates ALL audio overlap.
+Replaced v2's amix mixing (which still caused overlap despite gap enforcement)
+with ffmpeg concat demuxer — segments are placed sequentially so overlap is
+physically impossible. Also fixed tts_dur not being recalculated after speedup.
 
-Key improvements over v1:
+Key improvements:
+  - NO amix: pure concat demuxer (silence → clip → silence → clip → ...)
   - Gap enforcement: minimum 0.3s silence between segments
   - Smart splitting: long TTS gets split into sub-sentences
-  - No more amix overlap: segments are placed sequentially on a timeline
-  - Silence padding: 0.15s before and after each segment
+  - Duration verification: warns if final audio doesn't match video duration
   - Quality gate: warn if any segment needs >1.5x speedup
   - Better rate control for edge-tts
 
@@ -131,17 +134,20 @@ def build_audio_timeline(
     """
     Build a clean audio timeline with gap enforcement.
     
+    v3: Pure concat-based assembly — NO amix. Overlap is physically impossible
+    because segments are concatenated sequentially (silence → clip → silence → ...).
+    
     Algorithm:
     1. For each SRT segment, generate TTS and measure its natural duration
     2. Place segments on a timeline starting at each segment's SRT start time
     3. If a segment's audio would overlap with the previous segment's end,
        delay it to start after (prev_end + MIN_SEGMENT_GAP)
     4. If TTS is longer than available time, speed it up (with warning)
-    5. Concatenate all segments with proper silence gaps
+    5. Concatenate silence gaps + TTS clips sequentially (no mixing)
     
     Returns path to final audio file.
     """
-    timeline = []  # list of (start_time, audio_file_path)
+    timeline = []  # list of (start_time, audio_file_path, audio_duration)
     last_end = 0.0
     warnings = []
 
@@ -180,7 +186,6 @@ def build_audio_timeline(
 
                 # Concatenate sub-segments with short pauses
                 combined_path = os.path.join(output_dir, f"combined_{i:04d}.wav")
-                # Create silence gap between sub-sentences
                 gap_path = os.path.join(output_dir, f"gap_{i:04d}.wav")
                 subprocess.run(
                     ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=22050:cl=mono",
@@ -213,10 +218,12 @@ def build_audio_timeline(
                 sped_path = os.path.join(output_dir, f"sped_{i:04d}.wav")
                 speedup_audio(raw_path, sped_path, speedup)
                 raw_path = sped_path
+                # FIX: recalculate duration after speedup
+                tts_dur = get_duration(sped_path)
 
-        # Place on timeline
-        timeline.append((actual_start, raw_path))
-        last_end = actual_start + min(tts_dur, slot_end - actual_start)
+        # Place on timeline (now track actual audio duration)
+        timeline.append((actual_start, raw_path, tts_dur))
+        last_end = actual_start + tts_dur
 
     if warnings:
         print("WARNINGS:", file=sys.stderr)
@@ -224,59 +231,96 @@ def build_audio_timeline(
             print(f"  ⚠ {w}", file=sys.stderr)
         print(file=sys.stderr)
 
-    # Build final audio track
-    if not timeline:
-        # No segments — return silence
-        silence_path = os.path.join(output_dir, "silence.wav")
-        subprocess.run(
-            ["ffmpeg", "-y", "-f", "lavfi", "-i", f"anullsrc=r=22050:cl=mono",
-             "-t", str(video_duration), "-q:a", "9", silence_path],
-            capture_output=True,
-        )
-        return silence_path
-
-    # Create base silence
-    silence_path = os.path.join(output_dir, "base_silence.wav")
-    subprocess.run(
-        ["ffmpeg", "-y", "-f", "lavfi", "-i", f"anullsrc=r=22050:cl=mono",
-         "-t", str(video_duration), "-q:a", "9", silence_path],
-        capture_output=True,
-    )
-
-    # Use ffmpeg overlay approach: place each segment at its timestamp
-    # Build filter_complex with delayed segments overlaid on silence
-    inputs = ["-i", silence_path]
-    filter_parts = []
-
-    for idx, (start, audio_file) in enumerate(timeline):
-        inputs.extend(["-i", audio_file])
-        delay_ms = int(start * 1000)
-        filter_parts.append(
-            f"[{idx + 1}:a]adelay={delay_ms}|{delay_ms},apad[a{idx}]"
-        )
-
-    # Sequential mix: overlay each segment onto accumulated result
-    # First segment mixes with silence
-    mix_expr = f"[0:a][a0]amix=inputs=2:duration=first:dropout_transition=0[mix0]"
-    for idx in range(1, len(timeline)):
-        mix_expr += f";[mix{idx - 1}][a{idx}]amix=inputs=2:duration=first:dropout_transition=0[mix{idx}]"
-
-    final_idx = len(timeline) - 1
-    filter_parts.append(f"{mix_expr}")
-
-    filter_complex = ";".join(filter_parts)
+    # Build final audio track using pure concat (NO amix — zero overlap risk)
     output_path = os.path.join(output_dir, "narration.wav")
 
-    cmd = ["ffmpeg", "-y"] + inputs + [
-        "-filter_complex", filter_complex,
-        "-map", f"[mix{final_idx}]",
-        output_path,
-    ]
+    if not timeline:
+        # No segments — return silence for full video duration
+        subprocess.run(
+            ["ffmpeg", "-y", "-f", "lavfi", "-i", f"anullsrc=r=22050:cl=mono",
+             "-t", str(video_duration), "-q:a", "9", output_path],
+            capture_output=True,
+        )
+        return output_path
 
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    # Normalize all audio clips to uniform format (22050Hz mono PCM)
+    # This is required for the concat demuxer to work correctly
+    norm_clips = []
+    for idx, (start, audio_file, dur) in enumerate(timeline):
+        norm_path = os.path.join(output_dir, f"norm_{idx:04d}.wav")
+        subprocess.run(
+            ["ffmpeg", "-y", "-i", audio_file,
+             "-ar", "22050", "-ac", "1", "-c:a", "pcm_s16le",
+             norm_path],
+            capture_output=True,
+        )
+        norm_clips.append((start, norm_path, dur))
+
+    # Build concat list: silence → clip → silence → clip → ... → final silence
+    concat_list_path = os.path.join(output_dir, "final_concat.txt")
+    concat_entries = []
+    cursor = 0.0  # tracks current position in the timeline
+
+    for idx, (start, norm_path, dur) in enumerate(norm_clips):
+        # Silence gap before this segment
+        gap = start - cursor
+        if gap > 0.01:  # only add silence if gap > 10ms
+            silence_path = os.path.join(output_dir, f"silence_{idx:04d}.wav")
+            subprocess.run(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=22050:cl=mono",
+                 "-t", f"{gap:.3f}", "-c:a", "pcm_s16le", silence_path],
+                capture_output=True,
+            )
+            concat_entries.append(silence_path)
+
+        # The TTS clip itself
+        concat_entries.append(norm_path)
+
+        # Advance cursor past this clip
+        cursor = start + dur
+
+    # Final silence to fill remaining video duration
+    remaining = video_duration - cursor
+    if remaining > 0.01:
+        final_silence_path = os.path.join(output_dir, "final_silence.wav")
+        subprocess.run(
+            ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=22050:cl=mono",
+             "-t", f"{remaining:.3f}", "-c:a", "pcm_s16le", final_silence_path],
+            capture_output=True,
+        )
+        concat_entries.append(final_silence_path)
+
+    # Write concat list
+    with open(concat_list_path, "w") as f:
+        for entry in concat_entries:
+            f.write(f"file '{entry}'\n")
+
+    # Concatenate everything sequentially — physically impossible to overlap
+    result = subprocess.run(
+        ["ffmpeg", "-y", "-f", "concat", "-safe", "0",
+         "-i", concat_list_path,
+         "-c:a", "pcm_s16le", output_path],
+        capture_output=True, text=True,
+    )
     if result.returncode != 0:
-        print(f"FFmpeg error: {result.stderr[-500:]}", file=sys.stderr)
-        return silence_path
+        print(f"FFmpeg concat error: {result.stderr[-500:]}", file=sys.stderr)
+        # Fallback: return silence
+        fallback = os.path.join(output_dir, "silence.wav")
+        subprocess.run(
+            ["ffmpeg", "-y", "-f", "lavfi", "-i", f"anullsrc=r=22050:cl=mono",
+             "-t", str(video_duration), "-q:a", "9", fallback],
+            capture_output=True,
+        )
+        return fallback
+
+    # Verify total duration is reasonable
+    actual_dur = get_duration(output_path)
+    if abs(actual_dur - video_duration) > 1.0:
+        warnings.append(
+            f"Duration mismatch: audio={actual_dur:.1f}s, video={video_duration:.1f}s"
+        )
+        print(f"  ⚠ Duration mismatch: audio={actual_dur:.1f}s vs video={video_duration:.1f}s",
+              file=sys.stderr)
 
     return output_path
 
