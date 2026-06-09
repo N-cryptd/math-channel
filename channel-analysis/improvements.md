@@ -1148,3 +1148,52 @@ Color scheme: PRIMARY=gradient vector, SECONDARY=directional derivative, ACCENT=
 - Show the formula ∮F·dr = ∬(∇×F)·n dS prominently
 
 ---
+
+## 2026-06-09 — Video 55: What is a Differential Equation?
+
+### Competitor Videos Analyzed
+
+#### 1. 3Blue1Brown — "Differential equations, a tourist's guide | DE1" (5.8M views)
+- video_id: p_di4Zn4wz4, 27:16, Mar 2019
+- **Structure (10/10):** Masterful overview — starts with simple pendulum, escalates through multiple examples (spring, Lotka-Volterra, Lorenz system). Each example builds on previous concepts.
+- **Pacing (9/10):** Very deliberate — spends time on each example's phase portrait before moving on. Long but never boring.
+- **Visual Techniques (10/10):** Phase space trajectories, color-coded vector fields, animated solution curves flowing through slope fields. Signature 3B1B style.
+- **Narration Style (9/10):** Conversational, curious tone. Uses "tourist's guide" framing — "here's what you'll see" rather than formal definitions.
+- **Engagement Hooks (10/10):** Opens with pendulum — immediate physical intuition. Lotka-Volterra (predator-prey) adds real-world relevance. Lorenz attractor as the "wow" moment.
+- **Key techniques to adopt:** Multiple quick examples before formalism; phase space visualization; physical motivation first
+- **Key techniques to avoid:** 27-min length is too long for us; 3B1B's loose structure wouldn't work for a systematic course
+
+#### 2. Zach Star — "This is why you're learning differential equations" (3.9M views)
+- video_id: ifbaAqfqpc4, 18:36, Jun 2020
+- **Structure (7/10):** Application-first approach — shows WHY diff eqs matter before formal definitions. Mix of COVID modeling, population growth, circuits, springs.
+- **Pacing (7/10):** Fast-paced with quick cuts between applications. More breadth than depth.
+- **Visual Techniques (7/10):** Professional animations (Brainup Studios), but less mathematical depth than 3B1B. More focus on motivation than visualization.
+- **Narration Style (8/10):** Enthusiastic, motivational. "This is why you're learning this" framing works well for engagement.
+- **Engagement Hooks (9/10):** COVID-19 context (released during pandemic) — extremely timely. Real-world examples throughout.
+- **Key techniques to adopt:** Application-first framing; real-world examples as motivation
+- **Key techniques to avoid:** Too scattered — we should balance applications with mathematical structure
+
+#### 3. Khan Academy — "Differential equation introduction" (3.2M views)
+- video_id: 6o7b9yyhH7k, Sep 2014
+- **Structure (6/10):** Traditional classroom approach — starts with dy/dx notation, defines order/classification. Dry but correct.
+- **Pacing (5/10)::** Very slow, repetitive. Good for confused students but boring for engaged ones.
+- **Visual Techniques (5/10):** Digital whiteboard — no Manim. Clear formulas but no visual intuition.
+- **Narration Style (6/10):** Patient tutorial tone. Explains step-by-step.
+- **Engagement Hooks (4/10):** No hook — jumps straight into definitions.
+- **Key techniques to adopt:** Clear classification (order, linearity) definitions
+- **Key techniques to avoid:** Starting with dry notation before motivation; no visual animation
+
+### Thumbnail Analysis
+- 3B1B: Dark BG, grid pattern, vector field circles (RGB), "Differential Equations" in white. Clean, mathematical.
+- Zach Star: Dark BG, neon blue/purple grid, futuristic font, "Differential Equations" in bold. Energetic.
+- Khan Academy: Black BG, white/yellow text, graph with curve. Simple but clear.
+- **Our approach:** Dark BG (#1A1832), ACCENT text, a simple slope field visualization, "What is a Differential Equation?" in clean SANS font.
+
+### Synthesis for Video 55
+1. **Hook (adopt from 3B1B+Zach):** Start with a real physical example (falling object or population growth) — show the DE forming naturally
+2. **Classification (adopt from KA):** Define ODE, order, linearity — but AFTER motivation, not before
+3. **Visual metaphor (adopt from 3B1B):** Slope field visualization showing how a DE defines a "terrain" for solutions
+4. **Structure:** Motivation → definition → classification → simple examples → slope field visual → preview of course
+5. **Duration target:** 10-12 min (between KA's brevity and 3B1B's depth)
+
+---

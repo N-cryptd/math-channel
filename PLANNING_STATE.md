@@ -59,5 +59,18 @@
 | 53 | Stokes' Theorem | DONE | YES | YES | YES | YES |
 | 54 | Divergence Theorem (FINAL) | DONE | YES | YES | YES | YES |
 
+## Differential Equations (undergraduate/)
+| # | Video | Status | Plan | Script | Rendered | Narrated |
+|---|-------|--------|------|--------|----------|----------|
+| 55 | What is a Differential Equation? | DONE | YES | YES | YES | YES |
+
 ## Last Updated
-2026-06-08 (Video 54 — Divergence Theorem produced: plan, script, render, narrate. CALCULUS III COMPLETE — all 54 videos done.)
+2026-06-09 (Video 54 — Divergence Theorem produced: plan, script, render, narrate. CALCULUS III COMPLETE — all 54 videos done.)
+
+## Ordinary Differential Equations (undergraduate/)
+| # | Video | Status | Plan | Script | Rendered | Narrated |
+|---|-------|--------|------|--------|----------|----------|
+| 55 | What is a Differential Equation? | DONE | YES | YES | YES | YES |
+
+## Last Updated
+2026-06-09 (Video 55 — What is a Differential Equation? produced: plan, script, render, narrate. ODE COURSE STARTED.)
