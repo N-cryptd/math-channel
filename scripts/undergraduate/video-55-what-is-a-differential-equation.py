@@ -20,7 +20,7 @@ from channel_branding import (
     FAST, NORMAL, SLOW,
     play_intro, play_outro, setup_background,
 )
-from layout import LayoutEngine, ensure_fits
+from layout import LayoutEngine, ensure_fits, clamp_position
 
 
 class Video55_WhatIsADifferentialEquation(Scene):
@@ -436,8 +436,8 @@ class Video55_WhatIsADifferentialEquation(Scene):
             "Different starting points = different curves",
             font_size=BODY_SIZE, color=WHITE, font=SANS,
         )
-        insight.to_edge(DOWN, buff=0.3)
-        ensure_fits(insight)
+        insight.move_to(UP * (self.ly.content_bottom + 0.5))
+        clamp_position(insight)
         self.play(FadeIn(insight, shift=UP * 0.15), run_time=NORMAL)
         self.wait(2)
         self.ly.clear()

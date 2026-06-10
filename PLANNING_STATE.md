@@ -71,6 +71,7 @@
 | # | Video | Status | Plan | Script | Rendered | Narrated |
 |---|-------|--------|------|--------|----------|----------|
 | 55 | What is a Differential Equation? | DONE | YES | YES | YES | YES |
+| 56 | Separable Equations | BACKLOG | YES | YES | NO | NO |
 
 ## Last Updated
-2026-06-09 (Video 55 — What is a Differential Equation? produced: plan, script, render, narrate. ODE COURSE STARTED.)
+2026-06-09 (Video 56 — Separable Equations: plan + script written, pending render. Competitive analysis appended to improvements.md.)

@@ -68,18 +68,27 @@ Videos 25-40 created with v2 templates. Videos 25-29 received targeted improveme
 | 39 | Linear Transformations | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(40), section_divider, SANS font(23) — no improvement needed |
 | 40 | SVD | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(28), section_divider, SANS font(18) — no improvement needed |
 
-### Calculus III (scripts/undergraduate/) — NEW PIPELINE
+### Calculus III + ODE (scripts/undergraduate/) — NEW PIPELINE
 Videos 41+ created with v2 templates from the start.
 
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
-| 41 | Vectors in 3D | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(24), section_divider, SANS font(10) — no improvement needed |
-| 42 | Dot Product in 3D | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(24), section_divider, SANS font(17) — no improvement needed |
-| 43 | Cross Product in 3D | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(24), section_divider, SANS font(16) — no improvement needed |
-| 44 | Lines and Planes in 3D | 337 | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(8), section_divider(6), SANS font(15), zero .shift()/.to_edge() — no improvement needed |
-| 45 | Vector-Valued Functions | — | YES | N/A (already v2) | YES | Created with v2: setup_background(2), progressive_reveal(8), section_divider(6), SANS font(14), zero .shift()/.to_edge() — no improvement needed |
-| 46 | Partial Derivatives | — | YES | N/A (already v2) | YES | Created with v2: setup_background(2), progressive_reveal(2), section_divider(5), SANS font(21), zero .shift()/.to_edge() — no improvement needed |
-| 47 | Gradient/Directional | — | YES | N/A (already v2) | N/A (render pending) | Created with v2: setup_background(2), progressive_reveal(3), section_divider(5), SANS font(21), zero .shift()/.to_edge() — no improvement needed |
+| 41 | Vectors in 3D | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(24), section_divider, SANS font(10) |
+| 42 | Dot Product in 3D | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(24), section_divider, SANS font(17) |
+| 43 | Cross Product in 3D | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(24), section_divider, SANS font(16) |
+| 44 | Lines and Planes in 3D | 337 | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(8), section_divider(6), SANS font(15) |
+| 45 | Vector-Valued Functions | — | YES | N/A (already v2) | YES | Created with v2: setup_background(2), progressive_reveal(8), section_divider(6), SANS font(14) |
+| 46 | Partial Derivatives | — | YES | N/A (already v2) | YES | Created with v2: setup_background(2), progressive_reveal(2), section_divider(5), SANS font(21) |
+| 47 | Gradient/Directional | — | YES | N/A (already v2) | N/A | Created with v2: setup_background(2), progressive_reveal(3), section_divider(5), SANS font(21) |
+| 48 | Lagrange Multipliers | 635 | YES | YES (minor) | N/A | v2-compliant. Fixed 1 .shift() → removed. setup_bg(2), section_divider(6), SANS(16), ly.clear(11), formula_box(2) |
+| 49 | Double Integrals | 536 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(1), section_divider(7), SANS(23), ly.clear(8) |
+| 50 | Triple Integrals | 473 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(7), SANS(22), ly.clear(8) |
+| 51 | Line Integrals | 385 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(6), SANS(22), ly.clear(7) |
+| 52 | Green's Theorem | 380 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(6), SANS(21), ly.clear(7) |
+| 53 | Stokes' Theorem | 411 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(6), SANS(30), ly.clear(7) |
+| 54 | Divergence Theorem | 635 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(6), section_divider(7), SANS(48), ly.clear(14) |
+| 55 | What is a DE? | 612 | YES | YES (minor) | N/A | v2-compliant. Fixed 1 .to_edge() → clamp_position. setup_bg(2), progressive_reveal(4), section_divider(4), SANS(31), ly.clear(12) |
+| 56 | Separable Equations | 668 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(4), SANS(24), ly.clear(9) |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -90,7 +99,7 @@ Videos 41+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 47 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Re-render tasks for Videos 1-29 are running separately in kanban.
+All 56 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-56 analyzed and verified v2-compliant (minor fixes to 48 and 55). Re-render tasks for Videos 1-29 completed.
 
 ## Last Updated
-2026-06-06 (Videos 45-47 verified v2-compliant. Video 29 re-render confirmed on disk. Improvement cycle COMPLETE for all 47 existing videos.)
+2026-06-10 (Videos 48-56 added to tracker, all analyzed. Videos 48 and 55 had minor .shift()/.to_edge() fixes.)

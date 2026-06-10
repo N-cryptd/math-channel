@@ -482,7 +482,6 @@ class Video48_LagrangeMultipliers(Scene):
         )
         line_group.add(constraint_line)
         self.ly.center_in_content(line_group)
-        line_group.shift(DOWN * 0.3)
         self.play(Create(constraint_line), run_time=NORMAL)
 
         # Circle centered at origin, tangent to the line
