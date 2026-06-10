@@ -48,6 +48,11 @@ Each entry has:
 - [PENDING] Analyze 3B1B SVD content
 - [PENDING] Analyze Reducible SVD content
 
+### Video 57: First-Order Linear Equations
+- [DONE] Full analysis completed 2026-06-10 (5 competitors analyzed, see below)
+- [NOTE] 3B1B has NO video on this topic — major competitive opportunity
+- [DONE] Analyzed Organic Chemistry Tutor (2.75M views), Dr. Trefor Bazett (186K), Professor Dave (117K), blackpenredpen (714K), Khan Academy (920K)
+
 ---
 
 ## Completed Analyses
@@ -1195,5 +1200,171 @@ Color scheme: PRIMARY=gradient vector, SECONDARY=directional derivative, ACCENT=
 3. **Visual metaphor (adopt from 3B1B):** Slope field visualization showing how a DE defines a "terrain" for solutions
 4. **Structure:** Motivation → definition → classification → simple examples → slope field visual → preview of course
 5. **Duration target:** 10-12 min (between KA's brevity and 3B1B's depth)
+
+---
+---
+
+## 2026-06-09 — Video 56: First-Order Separable Equations
+
+### Competitive Analysis (web search unavailable — analysis from known content)
+
+#### 1. 3Blue1Brown — "Differential equations, a tourist's guide | DE1" (5.8M views)
+- 3B1B's DE series does NOT have a dedicated separable equations video. The "tourist's guide" touches on separable methods briefly when discussing simple cases.
+- **Key technique to adopt:** Visual intuition for separation — show how splitting variables has a geometric meaning
+- **Key technique to avoid:** 3B1B's approach is purely visual/qualitative — we need to actually SOLVE equations with algebra
+- **Note:** 3B1B's DE series uses phase portraits and vector fields extensively — our separable equations video can reference these
+
+#### 2. Khan Academy — "Separable equations introduction" (2.1M views)
+- Style: Digital whiteboard, systematic worked examples. Separates variables step-by-step.
+- **Structure (7/10):** Starts with definition of separable form, then works through 3-4 examples progressively
+- **Pacing (5/10):** Slow and repetitive — each algebraic step spelled out. Good for confused students.
+- **Visual Techniques (4/10):** No Manim, just formulas on a whiteboard. Clear but dry.
+- **Narration Style (6/10):** Patient, tutorial-like. "Let's try another example" pattern.
+- **Engagement Hooks (3/10):** No hook — jumps straight into "a separable differential equation looks like this"
+- **Key techniques to adopt:** Clear step-by-step algebraic separation process; definition of separable form first
+- **Key techniques to avoid:** No physical motivation before algebra; no visual animation; repetitive examples without variety
+
+#### 3. Dr. Trefor Bazett — "Separable Differential Equations" (~400K views)
+- Style: Clean animations, enthusiastic narration, good mix of theory and example
+- **Structure (8/10):** Starts with "what makes a DE separable?" → formal definition → worked example → applications
+- **Pacing (8/10):** Brisk but not rushed. Good balance between intuition and computation.
+- **Visual Techniques (7/10):** Animated equation solving, color-coded steps, real-time formula manipulation
+- **Narration Style (8/10):** Conversational and encouraging. Uses "the key idea is..." framing well.
+- **Engagement Hooks (7/10):** Opens by connecting back to previous video content. Clear motivation for why separation is useful.
+- **Key techniques to adopt:** Animated algebraic manipulation of the separation; "key idea" moments highlighted; connecting to prior knowledge
+- **Key techniques to avoid:** Can be a bit rapid-fire with examples — we should pace more deliberately
+
+### Synthesis for Video 56
+1. **Hook:** Start by recalling dy/dx = rN from Video 55 and show we can actually SOLVE it now
+2. **Definition:** Define separable form dy/dx = g(x)h(y) clearly, then show the algebraic separation
+3. **Visual metaphor (our innovation):** Animate the algebraic manipulation — physically "move" y terms to one side, x terms to the other
+4. **Worked examples:** Exponential growth/decay (connects to Video 55), Newton's Law of Cooling (real-world), trickier example (dy/dx = xy)
+5. **Structure:** Hook → definition → separation technique → example 1 (simple) → example 2 (cooling) → example 3 (trickier) → summary
+6. **Duration target:** 10-12 min
+
+### Thumbnail Ideas
+- Dark BG (#1A1832), split design showing "dy" on one side and "dx" on the other with arrows
+- Title: "Separable Equations" in ACCENT (#FFD166) with subtitle "Solving by Splitting"
+- Show the formula dy/g(y) = f(x)dx prominently
+
+---
+
+## 2026-06-10 — Video 57: First-Order Linear Equations (Integrating Factor Method)
+
+### Competitive Landscape Note
+3B1B has NO dedicated video on this topic. His DE series ("Differential equations, a tourist's guide" DE1, 5.8M views) is purely conceptual — phase portraits, slope fields, qualitative behavior. He never teaches the integrating factor method or any computational technique. This creates a **massive gap in the market**: nobody has combined 3B1B-style intuition with systematic computation for first-order linear ODEs.
+
+Dr. Peyam is producing very low-view (1-7K) content on advanced topics — not a competitive threat. Mathologer and Reducible continue producing niche/deep-dive content on non-curriculum topics. Zach Star has fully pivoted to sketch comedy.
+
+### Competitor Videos Analyzed
+
+#### 1. The Organic Chemistry Tutor — "First Order Linear Differential Equations" (2.75M views)
+- video_id: gd1FYn86P0c, 22:28, Mar 25, 2018, 10.7M subs
+- **Structure (7/10):** Formula-first approach. Writes standard form y' + P(x)y = Q(x) immediately, gives the integrating factor formula μ(x) = e^(∫P(x)dx), then works through 5-6 examples progressively.
+- **Pacing (6/10):** Very slow and repetitive. Each algebraic step spelled out in detail. Good for confused students but tedious for engaged learners.
+- **Visual Techniques (4/10):** Handwritten-style digital whiteboard. Yellow/blue/red color coding for different parts of equations. No animations, no visual intuition. Pure computation.
+- **Narration Style (7/10):** Patient tutorial tone. "Here's the formula, here's how to use it" approach. Clear explanations but no "why."
+- **Engagement Hooks (3/10):** No hook whatsoever. Jumps straight into "write the equation in standard form." No motivation for why this method exists.
+- **Key techniques to adopt:** Clear standard form identification (y' + P(x)y = Q(x)); explicit step-by-step worked examples; the formula-for-solution y = (1/μ)(∫μQ dx + C)
+- **Key techniques to avoid:** Formula-dumping without motivation; no visual/geometric intuition; excessively long (22 min); no explanation of WHY the integrating factor works
+
+**Thumbnail Analysis:** Black background with yellow, blue, and red handwritten-style text and lines. Key equations and terms highlighted in different colors. Clean but not eye-catching — looks like a textbook page rather than a video. **Quality: 6/10.**
+
+---
+
+#### 2. Dr. Trefor Bazett — "Linear Differential Equations & the Method of Integrating Factors" (186K views)
+- video_id: 2H6BZHlD_3g, 11:36, Feb 24, 2021, 603K subs
+- **Structure (9/10):** Excellent progression: (1) What makes a DE "linear" → (2) Standard form → (3) Derivation of integrating factor → (4) Solution formula → (5) Worked example → (6) Existence & uniqueness theorem. Sections with clear timestamps.
+- **Pacing (8/10):** Brisk but well-balanced. Derivation is shown carefully (not skipped) but doesn't dwell. Good balance between theory and computation.
+- **Visual Techniques (8/10):** Clean Manim-style animations. Color-coded equation parts. Animated derivation of the integrating factor formula (the "key insight" step is highlighted). This is the closest competitor to our production style.
+- **Narration Style (8/10):** Conversational and encouraging. Uses "the key idea is..." framing well. Connects back to prior videos. Explains both WHAT the integrating factor is and WHY it works.
+- **Engagement Hooks (7/10):** Opens by defining what makes a DE linear — a solid pedagogical start but not a "hook" in the engagement sense. Better motivation would help.
+- **Key techniques to adopt:** The DERIVATION of the integrating factor (multiply both sides by μ, recognize product rule); connecting linearity to the existence & uniqueness theorem; clean animated equation manipulation; section structure with timestamps
+- **Key techniques to avoid:** The existence/uniqueness theorem may be too advanced for Video 57 (we cover it in Video 58 per curriculum); some transitions feel abrupt
+
+**Thumbnail Analysis:** Blackboard-style background with white text and colorful math equations (blue, red, green). Shows the presenter and key formulas. Professional, well-lit. **Quality: 7/10.**
+
+---
+
+#### 3. Professor Dave Explains — "Linear First-Order Differential Equations" (117K views)
+- video_id: rO31HNxBedg, 4:46, Mar 19, 2025, 4.32M subs
+- **Structure (6/10):** Very compressed. rushes through: definition → standard form → integrating factor → one quick example → done. Too fast for genuine learning.
+- **Pacing (4/10):** Extremely fast. 4:46 for a topic that needs 10+ minutes. Feels like a summary/recap rather than an introduction.
+- **Visual Techniques (7/10):** Animated with clean graphics. Uses arrows and integral signs as visual elements. More polished than OCT but less rigorous than Trefor.
+- **Narration Style (7/10):** Friendly, enthusiastic. "Let's see how this works" approach. Good personality but too rushed.
+- **Engagement Hooks (6/10):** Mentions separable equations first (connects to prior knowledge) before introducing the new technique. Decent transitional hook.
+- **Key techniques to adopt:** Connecting back to separable equations as a bridge ("we just did separable, now here's something slightly trickier"); clean animated visual style; concise title
+- **Key techniques to avoid:** Way too short — doesn't give enough time for the derivation; no explanation of WHY the integrating factor works; skips too many steps
+
+**Thumbnail Analysis:** White background with blue and black text, mathematical equations with arrows and integrals. Clean but plain — lacks visual impact. **Quality: 5/10.**
+
+---
+
+#### 4. blackpenredpen — "First Order Linear Differential Equation & Integrating Factor" (714K views)
+- video_id: DJsjZ5aYK_g, 20:34, Dec 31, 2016, 1.43M subs
+- **Structure (7/10):** Live whiteboard with worked example. Starts by writing the standard form, derives the integrating factor, then works through a detailed example. Also has a follow-up "verify the solution" video.
+- **Pacing (6/10):** Very slow — 20 minutes for one example. Good for following along step-by-step but tedious for faster learners.
+- **Visual Techniques (5/10):** Physical whiteboard with colored markers. Classic blackpenredpen style (black pen + red pen). No Manim/animations. Handwritten formulas.
+- **Narration Style (7/10):** Casual, friendly, "let's work through this together." Encouraging tone. Good for students who like the "study buddy" feel.
+- **Engagement Hooks (4/10):** Jumps straight into writing formulas. No conceptual motivation.
+- **Key techniques to adopt:** The "verify the solution" follow-up idea — have students check that their solution actually works; the dual-color (black+red) emphasis technique
+- **Key techniques to avoid:** Pure mechanical computation without derivation; no animation/visualization; too long for a single example
+
+**Thumbnail Analysis:** White background with black text and red accents. Red highlighting on key components of equations. Clean, mathematical, but low-effort. **Quality: 5/10.**
+
+---
+
+#### 5. Khan Academy — "Integrating factors 1" (920K views)
+- video_id: j511hg7Hlbg, 10:16, Sep 1, 2008, 9.38M subs
+- **Structure (6/10):** Digital chalkboard (Sal Khan's signature style). Writes the equation, identifies the integrating factor, multiplies through, works through an example. Systematic but dry.
+- **Pacing (5/10):** Slow, repetitive. Good for struggling students but boring for engaged ones.
+- **Visual Techniques (4/10):** Digital chalkboard with colored chalk-like writing. Red, orange, blue for different equation parts. No animations.
+- **Narration Style (6/10):** Patient, tutorial-style. "Let me show you..." approach. Explains reasoning while writing.
+- **Engagement Hooks (3/10):** No hook. Starts with "Let's say we have a differential equation..."
+- **Key techniques to adopt:** The concept of "making a differential equation exact" — good framing for WHY we multiply by the integrating factor
+- **Key techniques to avoid:** Starting without motivation; chalkboard-only visuals; no animated derivation
+
+**Thumbnail Analysis:** Black background, white text with high contrast. Equations written in red, orange, and blue chalk-style text. Chalkboard aesthetic. **Quality: 6/10.**
+
+---
+
+### 3B1B Gap Analysis (Critical for Video 57)
+3B1B's DE content is purely qualitative:
+- DE1 "tourist's guide": Phase portraits, slope fields, Lotka-Volterra, Lorenz attractor — visual, conceptual
+- DE2 "partial differential equations": PDE intuition with heat/wave equations
+- NO video covers: integrating factors, linear first-order methods, computational techniques
+
+**This is our opportunity.** Every competitor teaches integrating factors mechanically. Nobody provides the "aha moment" geometric intuition that 3B1B would. We can fill this gap:
+1. **Visualize the integrating factor:** Show μ(x) as a "correction factor" that makes the left side of the equation into a perfect derivative
+2. **Animate the product rule recognition:** Show d/dx[μy] = μy' + μ'y expanding and contracting
+3. **Slope field before/after:** Show how the integrating factor "straightens out" the solution curves
+4. **Physical motivation:** Mixing problems, RC circuits, population with immigration — real-world scenarios that produce linear first-order DEs
+
+### Thumbnail Strategy for Video 57
+**Our approach:** Dark BG (#1A1832), PRIMARY (#5BC0EB) accent color. Show the standard form y' + P(x)y = Q(x) prominently with the integrating factor μ = e^(∫P dx) highlighted in ACCENT (#FFD166). Clean mathematical aesthetic — somewhere between 3B1B's dark minimalism and Trefor's blackboard style. Title: "First-Order Linear Equations" in SANS font.
+
+**Thumbnail differentiation from competitors:**
+- OCT uses black BG + yellow/blue handwritten text → We use dark BG (#1A1832) + clean SANS font
+- Trefor uses blackboard BG + presenter face → We use pure mathematical BG (no face)
+- Professor Dave uses white BG → We use dark BG (trendier, more clicks)
+- blackpenredpen uses white BG + red accents → We use dark BG + ACCENT highlights
+
+### Synthesis for Video 57
+1. **Hook (our innovation — NO competitor does this):** Start with a physical example that produces a linear DE (e.g., mixing tank: dQ/dt = rate_in - rate_out = c·V - Q/V·k). Show the DE forming naturally, then identify its linear structure.
+2. **Definition (adopt from Trefor):** Define what makes a DE "linear" — y' + P(x)y = Q(x). Show both linear and nonlinear examples for contrast.
+3. **The Key Insight (our innovation — Trefor partially does this):** Visualize WHY the integrating factor works — it's the missing factor that turns the left side into a product rule derivative. Animate: d/dx[μ·y] = μ·y' + μ'·y, and show that μ' = P(x)·μ is exactly what we need.
+4. **Derivation (adopt from Trefor, improve on OCT/Khan):** Animated step-by-step derivation of μ(x) = e^(∫P(x)dx) from the product rule condition. This is where Manim shines.
+5. **The Solution Formula (adopt from OCT):** Present y = (1/μ)(∫μ·Q dx + C) clearly and prominently.
+6. **Worked Example 1 (adopt from OCT's computational thoroughness):** A simple example (e.g., y' + 2y = 3). Step-by-step with animated equation manipulation.
+7. **Worked Example 2 (physical application):** A mixing problem or cooling problem that demonstrates real-world relevance (adopt from Zach Star's application-first philosophy).
+8. **Verification (adopt from blackpenredpen):** Show that plugging the solution back into the original DE gives an identity.
+9. **Structure:** Hook → definition → key insight (integrating factor motivation) → derivation → solution formula → example 1 → example 2 → verification → summary
+10. **Duration target:** 10-12 min (shorter than OCT's 22 min, longer than Prof Dave's 4:46, similar to Trefor's 11:36)
+
+### Key Differentiators for Our Video
+1. **Derivation visualization:** Nobody animates the integrating factor derivation with Manim. We will.
+2. **Physical motivation:** Most channels skip motivation entirely. We start with a real-world problem.
+3. **Product rule connection:** We'll show that the integrating factor is "the thing that makes the product rule work backwards" — this is the deepest insight that no competitor communicates.
+4. **Existence/uniqueness tease:** Briefly mention that because the integrating factor ALWAYS works (when P and Q are continuous), every linear first-order ODE has a unique solution — this connects to Video 58 (Existence & Uniqueness).
 
 ---
