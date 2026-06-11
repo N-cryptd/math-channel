@@ -74,6 +74,7 @@
 | 56 | Separable Equations | DONE | YES | YES | YES | YES |
 | 57 | First-Order Linear Equations | DONE | YES | YES | YES | YES |
 | 58 | Second-Order Linear Equations (Intro) | DONE | YES | YES | YES | YES |
+| 59 | Second-Order IVPs | DONE | YES | YES | YES | YES |
 
 ## Last Updated
-2026-06-11 (Video 57 — First-Order Linear Equations rendered+narrated at 480p15. Video 58 — Second-Order Linear Equations Intro rendered+narrated at 480p15.)
+2026-06-11 (Videos 57-59 produced: First-Order Linear, Second-Order Linear Intro, Second-Order IVPs. All at 480p15.)
