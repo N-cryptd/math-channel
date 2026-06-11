@@ -89,6 +89,7 @@ Videos 41+ created with v2 templates from the start.
 | 54 | Divergence Theorem | 635 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(6), section_divider(7), SANS(48), ly.clear(14) |
 | 55 | What is a DE? | 612 | YES | YES (minor) | N/A | v2-compliant. Fixed 1 .to_edge() → clamp_position. setup_bg(2), progressive_reveal(4), section_divider(4), SANS(31), ly.clear(12) |
 | 56 | Separable Equations | 668 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(4), SANS(24), ly.clear(9) |
+| 57 | First-Order Linear | 744 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(1), section_divider(4), SANS(16), ly.clear(6), formula_box(1), zero .shift()/.to_edge() |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -99,7 +100,7 @@ Videos 41+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 56 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-56 analyzed and verified v2-compliant (minor fixes to 48 and 55). Re-render tasks for Videos 1-29 completed.
+All 57 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Re-render tasks for Videos 1-29 completed.
 
 ## Last Updated
-2026-06-10 (Videos 48-56 added to tracker, all analyzed. Videos 48 and 55 had minor .shift()/.to_edge() fixes.)
+2026-06-11 (Video 57 added to tracker — verified v2-compliant. All 57 videos analyzed.)

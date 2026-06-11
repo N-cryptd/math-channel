@@ -72,6 +72,7 @@
 |---|-------|--------|------|--------|----------|----------|
 | 55 | What is a Differential Equation? | DONE | YES | YES | YES | YES |
 | 56 | Separable Equations | DONE | YES | YES | YES | YES |
+| 57 | First-Order Linear Equations | PLAN+SCRIPT | YES | — | — |
 
 ## Last Updated
-2026-06-10 (Video 56 — Separable Equations produced: plan, script, render, narrate.)
+2026-06-11 (Video 57 render status corrected — plan+script only, no render exists.)
