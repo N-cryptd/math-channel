@@ -75,6 +75,7 @@
 | 57 | First-Order Linear Equations | DONE | YES | YES | YES | YES |
 | 58 | Second-Order Linear Equations (Intro) | DONE | YES | YES | YES | YES |
 | 59 | Second-Order IVPs | DONE | YES | YES | YES | YES |
+| 60 | Non-Homogeneous Equations | DONE | YES | YES | YES | YES |
 
 ## Last Updated
-2026-06-11 (Videos 57-59 produced: First-Order Linear, Second-Order Linear Intro, Second-Order IVPs. All at 480p15.)
+2026-06-11 (Videos 57-60 produced: First-Order Linear, 2nd-Order Intro, 2nd-Order IVPs, Non-Homogeneous. All at 480p15.)
