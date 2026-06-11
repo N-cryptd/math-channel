@@ -73,6 +73,7 @@
 | 55 | What is a Differential Equation? | DONE | YES | YES | YES | YES |
 | 56 | Separable Equations | DONE | YES | YES | YES | YES |
 | 57 | First-Order Linear Equations | DONE | YES | YES | YES | YES |
+| 58 | Second-Order Linear Equations (Intro) | DONE | YES | YES | YES | YES |
 
 ## Last Updated
-2026-06-11 (Video 57 — First-Order Linear Equations rendered+ narrated at 480p15. Fixed index bug in int_eq[6]→[5].)
+2026-06-11 (Video 57 — First-Order Linear Equations rendered+narrated at 480p15. Video 58 — Second-Order Linear Equations Intro rendered+narrated at 480p15.)
