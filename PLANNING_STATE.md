@@ -1,81 +1,103 @@
 # Math Channel — Planning State
 
-## Production Progress
-| # | Video | Status | Script | Rendered (480p) | Narrated |
-|---|-------|--------|--------|-----------------|----------|
-| 01-16 | Calculus I | DONE | YES | YES | YES |
-| 17 | Sequences | DONE | YES | YES | YES (rendered/) |
-| 18 | Series | DONE | YES | YES | YES (rendered/) |
-| 19 | Convergence Tests | DONE | YES | YES | YES (rendered/) |
-| 20 | Power Series | DONE | YES | YES | YES (rendered/) |
-| 21 | Taylor/Maclaurin | DONE | YES | YES | YES (rendered/) |
-| 22 | Parametric | DONE | YES | YES | YES (rendered/) |
-| 23 | Polar | DONE | YES | YES | YES (rendered/) |
-| 24 | Calc II Review | DONE | YES | YES | YES (rendered/) |
+**Last updated:** 2026-06-12
 
-## Next Up: Linear Algebra (undergraduate/)
-| # | Video | Status | Plan | Script | Rendered | Narrated |
-|---|-------|--------|------|--------|----------|----------|
-| 25 | What is a Vector? | DONE | YES | YES | YES |
-| 26 | Linear Combinations and Span | DONE | YES | YES | YES |
-| 27 | Matrices as Transformations | DONE | YES | YES | YES |
-| 28 | Matrix Multiplication | DONE | YES | YES | YES |
-| 29 | Determinants | DONE | YES | YES | YES |
-| 30 | Inverse Matrices | DONE | YES | YES | YES | YES |
-| 31 | Systems of Equations (Matrix) | DONE | YES | YES | YES | YES |
-| 32 | Row Reduction / Echelon Form | DONE | YES | YES | YES | YES |
-| 33 | Null Space and Column Space | DONE | YES | YES | YES | YES |
-| 34 | Rank and Nullity | DONE | YES | YES | YES | YES |
-| 35 | Eigenvalues and Eigenvectors | DONE | YES | YES | YES | YES |
-| 36 | Diagonalization | DONE | YES | YES | YES | YES |
-| 37 | Inner Product Spaces | DONE | YES | YES | YES | YES |
-| 38 | Orthogonality and Gram-Schmidt | DONE | YES | YES | YES | YES |
-| 39 | Linear Transformations (Abstract) | DONE | YES | YES | YES | YES |
-| 40 | Singular Value Decomposition | DONE | YES | YES | YES | YES |
+## Completed Videos (60 total)
 
-## Pipeline Steps Per Video
-1. Write plan → planning/video-NN-topic.md
-2. Write script → scripts/undergraduate/video-NN-topic.py
-3. Compile check → python3 -c "import py_compile; ..."
-4. Render → bash templates/produce.sh VideoNN_ClassName ql
-5. Verify output → check *_narrated.mp4 exists
-6. Update this file → change BACKLOG to DONE
+### Pre-University / Calculus I (Videos 1–16)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 01 | Tangent Problem | ✅ | ✅ |
+| 02 | Power Rule | ✅ | ✅ |
+| 03 | Product/Quotient Rule | ✅ | ✅ |
+| 04 | Chain Rule | ✅ | ✅ |
+| 05 | Implicit/Related Rates | ✅ | ✅ |
+| 06 | Maxima and Minima | ✅ | ✅ |
+| 07 | Trig Derivatives | ✅ | ✅ |
+| 08 | MVT Applications | ✅ | ✅ |
+| 09 | Concavity | ✅ | ✅ |
+| 10 | Curve Sketching | ✅ | ✅ |
+| 11 | Optimization | ✅ | ✅ |
+| 12 | L'Hôpital's Rule | ✅ | ✅ |
+| 13 | Taylor Series Intro | ✅ | ✅ |
+| 14 | Integration Intro | ✅ | ✅ |
+| 15 | Integration by Parts | ✅ | ✅ |
+| 16 | Applications of Integrals | ✅ | ✅ |
 
-## Calculus III — Multivariable (undergraduate/)
-| # | Video | Status | Plan | Script | Rendered | Narrated |
-|---|-------|--------|------|--------|----------|----------|
-| 41 | Vectors in 3D Space | DONE | YES | YES | YES | YES |
-| 42 | Dot Product in 3D | DONE | YES | YES | YES | YES |
-| 43 | Cross Product in 3D | DONE | YES | YES | YES | YES |
-| 44 | Lines and Planes in 3D | DONE | YES | YES | YES | YES |
-| 45 | Vector-Valued Functions | DONE | YES | YES | YES | YES |
-| 46 | Partial Derivatives | DONE | YES | YES | YES | YES |
-| 47 | Gradient and Directional Derivatives | DONE | YES | YES | YES | YES |
-| 48 | Lagrange Multipliers | DONE | YES | YES | YES | YES |
-| 49 | Double Integrals | DONE | YES | YES | YES | YES |
-| 50 | Triple Integrals | DONE | YES | YES | YES | YES |
-| 51 | Line Integrals | DONE | YES | YES | YES | YES |
-| 52 | Green's Theorem | DONE | YES | YES | YES | YES |
-| 53 | Stokes' Theorem | DONE | YES | YES | YES | YES |
-| 54 | Divergence Theorem (FINAL) | DONE | YES | YES | YES | YES |
+### Calculus II (Videos 17–24)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 17 | Sequences | ✅ | ✅ |
+| 18 | Infinite Series | ✅ | ✅ |
+| 19 | Convergence Tests | ✅ | ✅ |
+| 20 | Power Series | ✅ | ✅ |
+| 21 | Taylor/Maclaurin Series | ✅ | ✅ |
+| 22 | Parametric Equations | ✅ | ✅ |
+| 23 | Polar Coordinates | ✅ | ✅ |
+| 24 | Calc II Review | ✅ | ✅ |
 
-## Differential Equations (undergraduate/)
-| # | Video | Status | Plan | Script | Rendered | Narrated |
-|---|-------|--------|------|--------|----------|----------|
-| 55 | What is a Differential Equation? | DONE | YES | YES | YES | YES |
+### Linear Algebra (Videos 25–40)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 25 | What is a Vector? | ✅ | ✅ |
+| 26 | Linear Combinations & Span | ✅ | ✅ |
+| 27 | Matrices as Transformations | ✅ | ✅ |
+| 28 | Matrix Multiplication | ✅ | ✅ |
+| 29 | Determinants | ✅ | ✅ |
+| 30 | Inverse Matrices | ✅ | ✅ |
+| 31 | Systems of Equations | ✅ | ✅ |
+| 32 | Row Reduction | ✅ | ✅ |
+| 33 | Null Space & Column Space | ✅ | ✅ |
+| 34 | Rank & Nullity | ✅ | ✅ |
+| 35 | Eigenvalues & Eigenvectors | ✅ | ✅ |
+| 36 | Diagonalization | ✅ | ✅ |
+| 37 | Inner Product Spaces | ✅ | ✅ |
+| 38 | Orthogonality & Gram-Schmidt | ✅ | ✅ |
+| 39 | Linear Transformations (Abstract) | ✅ | ✅ |
+| 40 | SVD | ✅ | ✅ |
 
-## Last Updated
-2026-06-09 (Video 54 — Divergence Theorem produced: plan, script, render, narrate. CALCULUS III COMPLETE — all 54 videos done.)
+### Calculus III (Videos 41–54)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 41 | Vectors in 3D | ✅ | ✅ |
+| 42 | Dot Product | ✅ | ✅ |
+| 43 | Cross Product | ✅ | ✅ |
+| 44 | Lines & Planes in 3D | ✅ | ✅ |
+| 45 | Vector-Valued Functions | ✅ | ✅ |
+| 46 | Partial Derivatives | ✅ | ✅ |
+| 47 | Gradient & Directional Derivatives | ✅ | ✅ |
+| 48 | Lagrange Multipliers | ✅ | ✅ |
+| 49 | Double Integrals | ✅ | ✅ |
+| 50 | Triple Integrals | ✅ | ✅ |
+| 51 | Line Integrals | ✅ | ✅ |
+| 52 | Green's Theorem | ✅ | ✅ |
+| 53 | Stokes' Theorem | ✅ | ✅ |
+| 54 | Divergence Theorem | ✅ | ✅ |
 
-## Ordinary Differential Equations (undergraduate/)
-| # | Video | Status | Plan | Script | Rendered | Narrated |
-|---|-------|--------|------|--------|----------|----------|
-| 55 | What is a Differential Equation? | DONE | YES | YES | YES | YES |
-| 56 | Separable Equations | DONE | YES | YES | YES | YES |
-| 57 | First-Order Linear Equations | DONE | YES | YES | YES | YES |
-| 58 | Second-Order Linear Equations (Intro) | DONE | YES | YES | YES | YES |
-| 59 | Second-Order IVPs | DONE | YES | YES | YES | YES |
-| 60 | Non-Homogeneous Equations | DONE | YES | YES | YES | YES |
+### Differential Equations (Videos 55–60)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 55 | What is a DE? | ✅ | ✅ |
+| 56 | Separable Equations | ✅ | ✅ |
+| 57 | First-Order Linear | ✅ | ✅ |
+| 58 | Second-Order Linear Intro | ✅ | ✅ |
+| 59 | Second-Order IVP | ✅ | ✅ |
+| 60 | Non-Homogeneous | ✅ | ✅ |
 
-## Last Updated
-2026-06-11 (Videos 57-60 produced: First-Order Linear, 2nd-Order Intro, 2nd-Order IVPs, Non-Homogeneous. All at 480p15.)
+## In Progress
+- **Video 62: Power Series Solutions** — BACKLOG (next to produce)
+
+## Upcoming (Differential Equations, continuing)
+| # | Topic | Status |
+|---|-------|--------|
+| 61 | Variation of Parameters | ✅ DONE |
+| 62 | Power Series Solutions | BACKLOG |
+| 63 | Laplace Transforms | BACKLOG |
+| 64 | Systems of ODEs | BACKLOG |
+| 65 | Phase Portraits | BACKLOG |
+| 66 | Numerical Methods (Euler, RK4) | BACKLOG |
+
+## After ODEs
+- Probability & Statistics (12 videos)
+- Introduction to Proofs (9 videos)
+- Real Analysis I (12 videos)

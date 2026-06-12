@@ -1368,3 +1368,16 @@ Dr. Peyam is producing very low-view (1-7K) content on advanced topics — not a
 4. **Existence/uniqueness tease:** Briefly mention that because the integrating factor ALWAYS works (when P and Q are continuous), every linear first-order ODE has a unique solution — this connects to Video 58 (Existence & Uniqueness).
 
 ---
+
+## 2026-06-12 — Video 61: Variation of Parameters
+
+### Analysis: Niche ODE topic, limited competitor coverage
+- 3B1B: No dedicated Variation of Parameters video. Closest is "Why Laplace transforms are so useful" (FE-hM1kRK4Y, 747K views) — covers a different method for non-homogeneous ODEs.
+- Khan Academy / Organic Chemistry Tutor: Standard lecture-format coverage, no Manim-animated versions.
+- blackpenredpen / Dr. Trefor Bazett: No dedicated Variation of Parameters content indexed.
+- **Key insight**: Very little high-quality animated coverage of this topic — a gap we fill.
+- **3B1B ODE approach (Laplace video)**: Heavy visual intuition, transforms as mapping to S-plane, pole-zero analysis. We differentiate by covering variation of parameters methodically.
+- **Approach to adopt**: Build from Video 60 (undetermined coefficients), contrast the two methods visually. Show why variation of parameters is more general.
+- **Approach to avoid**: Don't just dump the formula — motivate it from the Wronskian and show the derivation step by step.
+
+---
