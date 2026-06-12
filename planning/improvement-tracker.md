@@ -90,6 +90,9 @@ Videos 41+ created with v2 templates from the start.
 | 55 | What is a DE? | 612 | YES | YES (minor) | N/A | v2-compliant. Fixed 1 .to_edge() → clamp_position. setup_bg(2), progressive_reveal(4), section_divider(4), SANS(31), ly.clear(12) |
 | 56 | Separable Equations | 668 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(4), SANS(24), ly.clear(9) |
 | 57 | First-Order Linear | 744 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(1), section_divider(4), SANS(16), ly.clear(6), formula_box(1), zero .shift()/.to_edge() |
+| 58 | Second-Order Linear Intro | 636 | YES | N/A (already v2) | YES | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(4), SANS(14), ly.clear(7), zero .shift()/.to_edge() |
+| 59 | Second-Order IVPs | 570 | YES | N/A (already v2) | YES | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(5), SANS(10), ly.clear(7), zero .shift()/.to_edge() |
+| 60 | Non-Homogeneous Equations | 438 | YES | N/A (already v2) | YES | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(4), SANS(10), ly.clear(6), zero .shift()/.to_edge() |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -100,7 +103,7 @@ Videos 41+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 57 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Re-render tasks for Videos 1-29 completed.
+All 60 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-60 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed.
 
 ## Last Updated
-2026-06-11 (Video 57 added to tracker — verified v2-compliant. All 57 videos analyzed.)
+2026-06-12 (Videos 58-60 added to tracker — all verified v2-compliant. All 60 videos analyzed.)
