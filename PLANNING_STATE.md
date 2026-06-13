@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-12
+**Last updated:** 2026-06-13
 
-## Completed Videos (60 total)
+**Completed Videos (63 total)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -74,7 +74,7 @@
 | 53 | Stokes' Theorem | ✅ | ✅ |
 | 54 | Divergence Theorem | ✅ | ✅ |
 
-### Differential Equations (Videos 55–60)
+### Differential Equations (Videos 55–63)
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 55 | What is a DE? | ✅ | ✅ |
@@ -83,16 +83,16 @@
 | 58 | Second-Order Linear Intro | ✅ | ✅ |
 | 59 | Second-Order IVP | ✅ | ✅ |
 | 60 | Non-Homogeneous | ✅ | ✅ |
+| 61 | Variation of Parameters | ✅ | ✅ |
+| 62 | Power Series Solutions | ✅ | ✅ |
+| 63 | Laplace Transforms | ✅ | ✅ |
 
 ## In Progress
-- **Video 62: Power Series Solutions** — BACKLOG (next to produce)
+- **Video 64: Systems of ODEs** — BACKLOG (next to produce)
 
 ## Upcoming (Differential Equations, continuing)
 | # | Topic | Status |
 |---|-------|--------|
-| 61 | Variation of Parameters | ✅ DONE |
-| 62 | Power Series Solutions | BACKLOG |
-| 63 | Laplace Transforms | BACKLOG |
 | 64 | Systems of ODEs | BACKLOG |
 | 65 | Phase Portraits | BACKLOG |
 | 66 | Numerical Methods (Euler, RK4) | BACKLOG |

@@ -1381,3 +1381,196 @@ Dr. Peyam is producing very low-view (1-7K) content on advanced topics — not a
 - **Approach to avoid**: Don't just dump the formula — motivate it from the Wronskian and show the derivation step by step.
 
 ---
+
+## 2026-06-12 — Video 62: Power Series Solutions
+
+### Video 62: Power Series Solutions to ODEs — Full Analysis
+
+**Source 1: Dr. Trefor Bazett — "How to solve ODEs with infinite series | Intro & Easiest Example: y'=y"**
+URL: https://www.youtube.com/watch?v=xeeM3TT4Zgg
+Views: 110,029 | Date: May 26, 2020 | Channel: Dr. Trefor Bazett (603K subs)
+Captions: True | Duration: 11:01
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 7/10 | Narration 8/10 | Hooks 6/10
+
+Thumbnail Analysis: Blackboard background with white text and math equations including summation symbols and y'=y. Clean educational design, quality 8/10.
+
+Key Insights:
+- Starts by reviewing power series basics (sin, cos, e^x, geometric series) before tackling ODEs
+- Uses the simplest possible example (y'=y) to demonstrate the method — brilliant pedagogy
+- Shows index manipulation clearly: differentiating shifts the sum index
+- Recovers the known e^x solution from the recurrence relation — satisfying "aha" moment
+- Has a follow-up video on Airy's equation for a more advanced example
+- Mentions this method works when other methods fail
+
+Techniques to Adopt:
+- Start with the simplest example (y'=y) to build intuition before tackling harder problems
+- Review power series differentiation rules briefly at the start
+- Show index shifting clearly — this is where most students get confused
+- Recover a known solution as validation — gives confidence the method works
+- Mention real-world motivation: some ODEs have NO closed-form solution
+
+Techniques to Avoid:
+- Trefor spends too long on series review (could be more concise — our audience already saw Videos 20-21)
+- The pacing is slightly slow for the amount of content covered
+
+---
+
+**Source 2: blackpenredpen — "POWER SERIES SOLUTION TO DIFFERENTIAL EQUATION"**
+URL: https://www.youtube.com/watch?v=SS6bniyB7rw
+Views: 525,111 | Date: Jun 3, 2017 | Channel: blackpenredpen (1.43M subs)
+Captions: True | Duration: 37:54
+Dimensions: Structure 6/10 | Pacing 4/10 | Visuals 5/10 | Narration 6/10 | Hooks 4/10
+
+Thumbnail Analysis: Grey background, rectangular shape, "Math 1-10" label. Low quality thumbnail (2/10) — generic and uninviting.
+
+Key Insights:
+- Very long video (38 min) covering y'' - 2xy' + y = 0 — one example in extreme detail
+- Pure computation: substitute series, match coefficients term by term
+- Shows index manipulation but at a tedious pace
+- No visual/Manim animations — just handwriting on paper
+- Solves a Hermite equation variant — interesting mathematical content but buried in computation
+- High view count (525K) shows strong demand for this topic despite poor production
+
+Techniques to Adopt:
+- Show a non-trivial example beyond y'=y (second-order, non-constant coefficients)
+- Demonstrate index shifting step by step — this is the core computational skill
+- Show that the method works for equations with VARIABLE coefficients (unlike characteristic equation method)
+
+Techniques to Avoid:
+- 38 minutes for one example is way too long — keep under 15 min total
+- Pure computation without motivation or visual aids loses viewers
+- No hook or real-world motivation — just jumps into computation
+- Thumbnail is terrible — avoid generic/uninviting designs
+
+---
+
+**Source 3: Houston Math Prep — "Solving Differential Equations with Power Series"**
+URL: https://www.youtube.com/watch?v=RJJKq7Uc-9I
+Views: 502,369 | Date: Oct 2, 2013 | Channel: Houston Math Prep (54.5K subs)
+Captions: True | Duration: 18:29
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 6/10 | Hooks 4/10
+
+Thumbnail Analysis: Black background, white text, "Houston Math Prep" branding. Clean but plain, professional design.
+
+Key Insights:
+- Lecture-style with slides — no animations
+- Covers the general method: assume solution form, substitute, match coefficients
+- Includes initial conditions to determine specific solutions
+- Systematic approach: good for exam preparation
+- 500K+ views despite small channel — topic demand is very high
+
+Techniques to Adopt:
+- Show how initial conditions fit into the power series framework
+- Present the general method steps systematically (assume, substitute, match, solve recurrence)
+- Cover both even and odd terms arising from recurrence relations
+
+Techniques to Avoid:
+- Static slides with no visual dynamism
+- No motivation for WHY power series work — just "here's the algorithm"
+
+---
+
+**Source 4: Steve Brunton — "Solving Differential Equations with Power Series: A Simple Example"**
+URL: https://www.youtube.com/watch?v=3icbG3geC60
+Views: 49,452 | Date: Sep 30, 2022 | Channel: Steve Brunton (531K subs)
+Captions: True | Duration: 17:03
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+
+Thumbnail Analysis: Black background, white and light blue text, Taylor Series formula. Clean, quality 8/10.
+
+Key Insights:
+- Applied math perspective: "this is an extremely powerful approach that can solve nearly any differential equation, even nasty nonlinear equations"
+- Good motivation: positions series solutions as a UNIVERSAL tool
+- Clean chalk-talk style, well-organized with chapter markers
+- Recovers exponential solution from series — same satisfying moment as Trefor
+- Mentions nonlinear applications — broader than most other videos
+
+Techniques to Adopt:
+- Frame power series solutions as a UNIVERSAL method — not just a textbook technique
+- Mention that this method can even handle some nonlinear ODEs
+- Use chapter markers for navigation
+- Connect back to Taylor series (our Videos 13, 20-21)
+
+---
+
+### Video 62 Production Notes (from analysis)
+- **No 3B1B video on this topic** — major gap opportunity (3B1B's DE playlist skips series solutions)
+- Start with motivation: some ODEs have NO elementary solution (Airy's equation, Bessel's equation)
+- Brief power series review (2-3 min max — our audience has Videos 20-21)
+- Simplest example: y' = y → recover e^x (build confidence, following Trefor's approach)
+- Second example: Airy's equation y'' - xy = 0 (variable coefficients — show power series advantage)
+- Key technique: INDEX SHIFTING — animate this clearly (where most students struggle)
+- Show recurrence relation and how to extract coefficients
+- Connect to initial conditions: a0 = y(0), a1 = y'(0)
+
+## 2026-06-13 — Laplace Transforms (Video 63)
+
+### 3Blue1Brown — "But what is a Laplace Transform?" (j0wJBEZdwLs)
+- Views: 1.69M | Date: Oct 2025 | Duration: ~34 min
+- Structure: 10/10 — Engine metaphor opening (physical intuition), background ideas, definition + intuition, complex integration, analytic continuation, transform of exponentials, deep cos(t) analysis
+- Pacing: 9/10 — Starts slow with physical metaphor (car engine), builds gradually, heavy on intuition before rigor
+- Visuals: 10/10 — Custom manimlib, S-plane pole-zero diagrams, contour integration visualization, color-coded real/imaginary, beautiful geometric animations
+- Narration: 10/10 — Calm, conversational, uses physical analogies extensively (engine vibration as motivation)
+- Hooks: 10/10 — Opens with "understanding the engine" — real-world problem that hooks immediately. The S-plane visualization is the "aha moment"
+- **Key insight**: Starts with a PHYSICAL problem (forced harmonic oscillator) not the definition. The transform is motivated by the problem, not introduced abstractly.
+- **Key insight**: Heavy emphasis on COMPLEX analysis aspects — contour integration, analytic continuation. Very theoretical/visual approach.
+- **Key insight**: Spends 34 min on just the definition and intuition. This is NOT a practical/applied tutorial.
+
+### 3Blue1Brown — "Why Laplace transforms are so useful" (FE-hM1kRK4Y)
+- Views: 748K | Date: Nov 2025 | Duration: ~20 min
+- Structure: 9/10 — Opening puzzle, key properties, qualitative analysis with transforms, derivative of transform, forced oscillator application, intuition from transformed solution, inverting
+- Pacing: 8/10 — More applied than the definition video, still intuition-heavy
+- Visuals: 10/10 — Pole-zero plots, S-plane analysis, amplitude response visualization
+- Narration: 9/10 — Builds on previous video, more practical focus
+- Hooks: 9/10 — Opening puzzle approach, then dives into solving a real problem
+- **Key insight**: Shows the POWER of Laplace transforms through the forced harmonic oscillator — qualitative analysis without solving. Pole-zero analysis for understanding behavior.
+- **Key insight**: Derivative property: L{y'} = sL{y} - y(0) — this converts ODEs to algebra.
+
+### Dr. Trefor Bazett — "Intro to the Laplace Transform & Three Examples" (KqokoYr_h1A)
+- Views: 1.34M | Date: Mar 2020 | Duration: ~11 min
+- Structure: 8/10 — Quick motivation, definition as improper integral, three worked examples (exponentials, step function, polynomials via gamma function)
+- Pacing: 8/10 — Efficient, covers ground quickly, good for review/first exposure
+- Visuals: 7/10 — Standard whiteboard style with some animations
+- Narration: 8/10 — Clear and methodical, typical lecture style
+- Hooks: 7/10 — Opens with "help solve differential equations" motivation, then straight to definition
+- **Key insight**: Starts with DEFINITION first, then examples. Practical approach. Three examples build confidence.
+- **Key insight**: Includes the Gamma Function connection — n! = Gamma(n+1)
+- **Key insight**: Step function (Heaviside) example is practical and useful
+
+### Steve Brunton — "The Laplace Transform: A Generalized Fourier Transform" (7UvtU75NXTg)
+- Views: 366K | Date: Jul 2020 | Duration: ~13 min
+- Structure: 7/10 — Generalized Fourier transform framing, definition, properties, connection to control theory
+- Pacing: 7/10 — Lecture-style, covers a lot of ground quickly
+- Visuals: 6/10 — Whiteboard + some slides, minimal animation
+- Narration: 7/10 — Academic lecture style, clear but less engaging
+- Hooks: 6/10 — Starts with Fourier connection (good for students who know Fourier)
+- **Key insight**: Frames Laplace as GENERALIZED Fourier — good for students who already know Fourier
+- **Key insight**: Connects to control theory and system stability — practical engineering angle
+
+### Thumbnail Analysis
+- **3B1B (j0wJBEZdwLs)**: Black background, white cursive "L", blue line graph on left. Very high quality, minimal, elegant. Color palette: black + white + blue.
+- **3B1B (FE-hM1kRK4Y)**: Dark background, light blue "Differential Equation" text, yellow "Algebra", white "C". Clean, high contrast.
+- **Rating**: 9/10 — 3B1B thumbnails are gold standard. Single visual element + text, dark background.
+
+### Techniques to Adopt for Our Video
+1. **Physical motivation opening**: Like 3B1B's engine metaphor, open with a real-world problem (spring-mass-damper or circuit)
+2. **Transform as mapping**: Visualize the Laplace transform as mapping from t-domain to s-domain (time → frequency)
+3. **Color-code domains**: Use PRIMARY for t-domain, SECONDARY for s-domain throughout
+4. **Three progressive examples**: Like Trefor's approach — exponential (simplest), then step function, then polynomial
+5. **Show the "magic"**: Emphasize that L{y'} = sL{y} - y(0) converts derivatives to algebra
+6. **Keep it practical**: Unlike 3B1B's 34-min theoretical deep dive, we focus on: definition, basic properties, examples, solving a simple ODE
+
+### Techniques to Avoid
+1. **Heavy complex analysis**: 3B1B spends 10+ min on contour integration and analytic continuation — too theoretical for an intro video
+2. **Engine metaphor**: 3B1B's specific physical setup is great but too involved; use simpler spring-mass motivation
+3. **Pure whiteboard style**: Trefor/Brunton's static whiteboard lacks engagement for animation channel
+4. **Gamma function deep dive**: Save for a separate video or brief mention only
+
+### What Makes Our Video Unique
+1. **Systematic curriculum context**: This is Video 63 in our series — students already know ODEs, integration, series
+2. **Spanish narration**: Major market gap for Manim math content in Spanish
+3. **Practical focus**: Definition → properties → examples → solve one ODE, all in 12 min
+4. **Progressive disclosure**: We add complexity one step at a time, never overwhelming
+- Frame as universal tool (following Brunton's motivation)
+- Duration target: 12-15 min
+- Color scheme: PRIMARY=series terms, SECONDARY=derivatives, ACCENT=recurrence/highlights, RED=equation itself
