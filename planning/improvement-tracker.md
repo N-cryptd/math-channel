@@ -93,6 +93,9 @@ Videos 41+ created with v2 templates from the start.
 | 58 | Second-Order Linear Intro | 636 | YES | N/A (already v2) | YES | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(4), SANS(14), ly.clear(7), zero .shift()/.to_edge() |
 | 59 | Second-Order IVPs | 570 | YES | N/A (already v2) | YES | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(5), SANS(10), ly.clear(7), zero .shift()/.to_edge() |
 | 60 | Non-Homogeneous Equations | 438 | YES | N/A (already v2) | YES | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(4), SANS(10), ly.clear(6), zero .shift()/.to_edge() |
+| 61 | Variation of Parameters | 555 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(5), SANS(9), ly.clear(7), formula_box(3), zero .shift()/.to_edge() |
+| 62 | Power Series Solutions | 605 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(5), SANS(13), ly.clear(12), formula_box(5), zero .shift()/.to_edge() |
+| 63 | Laplace Transforms | 678 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(1), SANS(14), ly.clear(9), zero .shift()/.to_edge() |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -103,7 +106,7 @@ Videos 41+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 60 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-60 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed.
+All 63 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-63 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed. Video 55 has a stale render (minor fix applied post-render).
 
 ## Last Updated
-2026-06-12 (Videos 58-60 added to tracker — all verified v2-compliant. All 60 videos analyzed.)
+2026-06-14 (Videos 61-63 added to tracker — all verified v2-compliant. All 63 videos analyzed.)

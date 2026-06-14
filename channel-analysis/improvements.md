@@ -1574,3 +1574,95 @@ Techniques to Adopt:
 - Frame as universal tool (following Brunton's motivation)
 - Duration target: 12-15 min
 - Color scheme: PRIMARY=series terms, SECONDARY=derivatives, ACCENT=recurrence/highlights, RED=equation itself
+
+---
+
+### [2026-06-13] Video 64: Systems of ODEs — Competitive Analysis
+
+**Source 1: 3Blue1Brown — "Differential equations, a tourist's guide" (Chapter on systems)**
+Note: 3B1B does not have a dedicated "Systems of ODEs" video. Systems are touched on briefly in the differential equations series but not covered systematically. This is a MAJOR competitive gap.
+Dimensions: Structure 8/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 7/10
+
+Key Insights:
+- 3B1B covers systems only indirectly through the DE tourist guide series
+- Phase plane visualizations exist but are scattered, not systematically introduced
+- No eigenvalue method derivation for systems is provided
+- This is an opportunity: a systematic, curriculum-aligned systems of ODEs video does not exist from 3B1B
+
+Techniques to Adopt:
+- 3B1B's visual-first philosophy: show the phase plane before deriving equations
+- Animated trajectories on the phase plane (TracedPath in Manim)
+- Color-code eigenvector directions consistently
+
+Techniques to Avoid:
+- 3B1B's scattered approach to systems — our video provides a single coherent narrative
+- Don't assume viewers have seen 3B1B's other DE content
+
+---
+
+**Source 2: Dr. Trefor Bazett — Systems of Differential Equations**
+Note: Dr. Trefor has systems of ODEs content within his DE playlist. Style is clean board-work with some animations.
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 8/10 | Hooks 5/10
+
+Key Insights:
+- Formal derivation-first approach: writes out the matrix equation immediately
+- Good coverage of eigenvalue method but weak on visual intuition
+- Phase plane shown as static images, not animated trajectories
+- Strong on the algebraic steps but light on geometric meaning
+
+Techniques to Adopt:
+- Include the formal algebra (our students need it for exams)
+- Show the step-by-step eigenvalue computation clearly
+
+Techniques to Avoid:
+- Don't start with algebra — start with the visual motivation (two-tank example)
+- Don't use static phase plane images — animate trajectories
+
+---
+
+**Source 3: Professor Leonard / Organic Chemistry Tutor — Systems of ODEs**
+Note: Lecture-style, blackboard-heavy content. Long-form (30-60 min) with full derivations.
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 3/10
+
+Key Insights:
+- Very thorough algebraic coverage but no visual animations
+- Suitable as reference material but not engaging as primary learning content
+- Covers classification of equilibria (node, saddle, spiral) in detail
+
+Techniques to Adopt:
+- Include equilibrium classification table (node, saddle, spiral, center)
+
+Techniques to Avoid:
+- Don't match the lecture format — our audience expects polished animation
+- Don't go 30+ minutes — keep it to 10-15 min focused video
+
+---
+
+**Source 4: Khan Academy — Systems of differential equations**
+Note: KA covers systems within their linear algebra and DE playlists.
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 4/10
+
+Key Insights:
+- Good computational examples but very dry presentation
+- Covers the matrix form and eigenvalue method systematically
+- No phase plane visualization at all
+- Good for homework-style practice problems
+
+Techniques to Adopt:
+- Include a fully worked numerical example (our two-tank system with lambda=-2,-5)
+
+Techniques to Avoid:
+- Don't match the formula-heavy, example-light approach
+
+---
+
+### Video 64 Production Notes (from competitive analysis)
+1. **Visual-first hook**: Two-tank coupled system with animated flow arrows BEFORE any equations
+2. **Vector field intuition**: Show the phase plane with animated trajectories early, not as an afterthought
+3. **Eigenvalue method derivation**: Animate the substitution and cancellation steps (3B1B-style)
+4. **Worked example with real numbers**: A = [[-3,1],[2,-4]], eigenvalues -2 and -5, eigenvectors [1,1] and [1,-2]
+5. **Classification preview**: Show stable node, saddle, spiral, center types visually
+6. **Progressive disclosure**: Each scene builds on the previous, never overwhelming
+7. **Competitive differentiation**: No other channel has a single, polished, animated video on systems of ODEs with phase plane visualization
+8. Duration target: 10-15 minutes
+9. Color scheme: PRIMARY=x/eigenvalue-1, SECONDARY=y/eigenvalue-2, ACCENT=insights/boxed equations, RED=stability warnings
