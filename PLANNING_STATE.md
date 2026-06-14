@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-13
+**Last updated:** 2026-06-14
 
-**Completed Videos (63 total)**
+**Completed Videos (65 total)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -86,18 +86,14 @@
 | 61 | Variation of Parameters | ✅ | ✅ |
 | 62 | Power Series Solutions | ✅ | ✅ |
 | 63 | Laplace Transforms | ✅ | ✅ |
+| 64 | Systems of ODEs | ✅ | ⏳ (render timeout — retry next cycle) |
+| 65 | Phase Portraits | ✅ | ✅ |
+| 66 | Numerical Methods (Euler, RK4) | ✅ | ✅ |
 
 ## In Progress
-- **Video 64: Systems of ODEs** — BACKLOG (next to produce)
+- **Video 64: Systems of ODEs** — Render timed out on CPU (775-line script, 28+ min). Script needs shortening or splitting before retry.
 
-## Upcoming (Differential Equations, continuing)
-| # | Topic | Status |
-|---|-------|--------|
-| 64 | Systems of ODEs | BACKLOG |
-| 65 | Phase Portraits | BACKLOG |
-| 66 | Numerical Methods (Euler, RK4) | BACKLOG |
+## Completed Playlists
+- Differential Equations (Videos 55–63 + 65–66): 12 of 13 complete; Video 64 render pending
 
-## After ODEs
-- Probability & Statistics (12 videos)
-- Introduction to Proofs (9 videos)
-- Real Analysis I (12 videos)
+## Upcoming — Next Playlist: Probability & Statistics

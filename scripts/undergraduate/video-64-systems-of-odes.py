@@ -16,7 +16,7 @@ from manim import *
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "templates"))
 from channel_branding import (
-    BG, PRIMARY, SECONDARY, ACCENT, RED, DIM, WHITE, SANS, MONO,
+    BG, BG_LIGHT, PRIMARY, SECONDARY, ACCENT, RED, DIM, WHITE, SANS, MONO,
     TITLE_SIZE, HEADING_SIZE, BODY_SIZE, LABEL_SIZE, SMALL_SIZE,
     FAST, NORMAL, SLOW,
     play_intro, play_outro, setup_background,
