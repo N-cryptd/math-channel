@@ -1666,3 +1666,154 @@ Techniques to Avoid:
 7. **Competitive differentiation**: No other channel has a single, polished, animated video on systems of ODEs with phase plane visualization
 8. Duration target: 10-15 minutes
 9. Color scheme: PRIMARY=x/eigenvalue-1, SECONDARY=y/eigenvalue-2, ACCENT=insights/boxed equations, RED=stability warnings
+
+---
+
+## 2026-06-14 — Probability Spaces (Video 67, Probability & Statistics Playlist)
+
+**Source 1: Dr. Trefor Bazett — "Introduction to probability // Events, Sample Space, Formula, Independence"**
+Video ID: 4wV9xGJXFjg | Views: 45,061 | Duration: 532s (8:52)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 7/10 | Narration 8/10 | Hooks 6/10
+
+Key Insights:
+- Clean structure: sample space → events → probability formula → examples → independence
+- Uses colored Venn diagrams to show events, intersections, unions
+- Good balance of formal definition with intuitive examples (dice, cards)
+- Introduces the (Omega, F, P) triple notation explicitly — rigorous but accessible
+- Moderately paced with clear visual transitions between topics
+- Covers independence as a bonus topic at the end (could be separate video)
+
+Techniques to Adopt:
+- Colored Venn diagram visual for events and set operations
+- The (Omega, F, P) formal triple as a "framework" — present it as a powerful organizational tool
+- Clean transition from informal "chance of" language to formal probability function notation
+- Dice/cards examples for immediate intuition before formalism
+
+Techniques to Avoid:
+- Trefor covers independence too quickly at the end — better to defer it to a dedicated video
+- Can be slightly lecture-heavy in the middle section — we should keep more visual momentum
+
+---
+
+**Source 2: Organic Chemistry Tutor — "Introduction to Probability, Basic Overview - Sample Space, & Tree Diagrams"**
+Video ID: SkidyDQuupA | Views: 3,807,587 | Duration: 1019s (17:00)
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 4/10
+
+Key Insights:
+- Whiteboard-style presentation, no animations — purely handwritten content
+- Covers sample space definition, tree diagrams, and basic probability calculation
+- Very thorough with many worked examples (coin flips, dice, marbles, cards)
+- Very long (17 min) — covers a LOT of ground in one sitting
+- No color coding, no visual flair — relies on worked examples
+- Massive view count shows demand for this topic but little competition for quality
+
+Techniques to Adopt:
+- Tree diagram for multi-step experiments (coin→coin→coin) — very useful visual
+- Multiple small examples showing the same pattern (reinforcement through repetition)
+- The concept of "equally likely outcomes" as a bridge between counting and probability
+
+Techniques to Avoid:
+- Don't match the 17-minute length — way too long for one video
+- Don't use whiteboard-only style — no visual differentiation between topics
+- Don't try to cover everything (tree diagrams, counting, permutations) in one video
+
+---
+
+**Source 3: MIT OpenCourseWare — "L01.4 Probability Axioms"**
+Video ID: pA83XtLeVig | Views: 225,081 | Duration: 535s (8:55)
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 3/10
+
+Key Insights:
+- Formal lecture style (John Tsitsiklis) — whiteboard with mathematical derivation
+- Covers the three Kolmogorov axioms rigorously: non-negativity, normalization, additivity
+- Derives basic consequences: P(empty) = 0, P(A^c) = 1 - P(A), inclusion-exclusion
+- Very strong mathematical content but low visual appeal
+- No animations, no visual metaphors — pure lecture
+- Good for reference but not engaging as a standalone educational video
+
+Techniques to Adopt:
+- The three axioms as a "foundation" metaphor — present them as the rules everything else builds from
+- Derive P(A^c) = 1 - P(A) from the axioms — shows the axioms are powerful
+- Inclusion-exclusion as a visual Venn diagram with shaded regions
+
+Techniques to Avoid:
+- Don't start with the axioms cold — build motivation first (why do we need axioms?)
+- Don't use pure lecture format — our audience expects animations
+- Avoid the dry mathematical-only approach — connect to intuition at every step
+
+---
+
+**Source 4: 3Blue1Brown — "Bayes theorem, the geometry of changing beliefs"**
+Video ID: HZGCoVF3YvM | Views: 5,758,152 | Duration: 911s (15:11)
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+Key Insights:
+- NOT about probability spaces directly, but his visual approach to probability is the gold standard
+- Uses geometric area model for conditional probability — rectangles whose areas represent probabilities
+- Storytelling arc: medical test example → geometric intuition → formal Bayes' theorem
+- Color-coded proportions that change dynamically as beliefs update
+- "Aha moment" when the viewer sees Bayes as just re-partitioning a rectangle
+- The key technique: represent probabilities as areas, not just numbers
+- This is what we should aspire to visually, even for the simpler topic of probability spaces
+
+Techniques to Adopt:
+- Area/region model for sample spaces — the Omega rectangle divided into event regions
+- Dynamic color changes to show how probabilities relate to each other
+- Story-first approach: start with a puzzle, then reveal the formal framework
+- The "geometric intuition" philosophy: every formula should have a visual counterpart
+
+Techniques to Avoid:
+- Don't try to match 3B1B's production complexity on a foundational video
+- Don't jump to advanced topics — our video is the FOUNDATION, not the punchline
+
+---
+
+**Source 5: Khan Academy — "Probability explained | Independent and dependent events"**
+Video ID: uzkc-qNVoOk | Views: 5,746,990 | Duration: 498s (8:18)
+Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Modular format — covers basics quickly then moves to independence
+- Simple visual style with basic shapes and text (not Manim-quality)
+- Good at explaining "why" before "how" — starts with real-world motivation
+- Covers the basics but never reaches formal axiom presentation
+- Very accessible to beginners — good for building intuition but not rigorous
+
+Techniques to Adopt:
+- Real-world motivation before any formalism (weather, sports, games)
+- Simple, clear language when introducing new terminology
+- The "why do we care?" question answered before definitions
+
+Techniques to Avoid:
+- Don't skip the axioms — Khan avoids formalism entirely, leaving a gap
+- Don't stay at the purely informal level — our audience is math students
+
+---
+
+### Competitive Gap Analysis
+
+**The Opportunity:**
+No Manim-animated channel has created a visually rich, rigorous introduction to probability spaces that covers:
+1. Sample spaces (Omega) with visual representation
+2. Events as subsets (with Venn diagrams)
+3. The Kolmogorov axioms with geometric intuition
+4. Basic consequences derived from axioms
+5. Worked examples with visual flair
+
+3B1B covers probability through specific topics (Bayes, CLT) but never does the foundations. Trefor is closest but has moderate views (45K) and doesn't use the area/geometry metaphor. The OCT video has 3.8M views showing massive demand but terrible production quality.
+
+**Our Differentiation:**
+- Visual area model for sample spaces (inspired by 3B1B's Bayes geometry)
+- Progressive structure: puzzle → intuition → formalism → consequences → examples
+- Animation-rich: Venn diagrams that morph, probabilities that fill regions, axioms that "build" the framework
+- Playlist opener: this is Video 1 of 12 — needs to set the tone for the whole series
+- Duration: 10-12 min (tighter than OCT's 17 min, more visual than MIT's lecture)
+
+### Video 67 Production Notes (from competitive analysis)
+1. **Opening puzzle**: "If you flip a coin 10 times, what's the probability of getting at least one head?" — answer by complement: 1 - P(no heads) = 1 - (1/2)^10
+2. **Area model**: Omega as a unit rectangle, events as shaded regions whose areas = probabilities
+3. **Kolmogorov axioms**: Present as three "rules of the game" — everything else is derived
+4. **Venn diagrams**: Colored, animated — show union/intersection/complement visually
+5. **Color scheme**: PRIMARY=sample space/Omega, SECONDARY=events, ACCENT=axioms/key results, RED=counterexamples/warnings
+6. **Duration target**: 10-12 minutes
+7. **Tease**: "Next video — conditional probability: how evidence changes your beliefs"

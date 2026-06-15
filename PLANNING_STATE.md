@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-06-14
 
-**Completed Videos (65 total)**
+**Completed Videos (65 complete + 1 script pending render)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -86,14 +86,32 @@
 | 61 | Variation of Parameters | ✅ | ✅ |
 | 62 | Power Series Solutions | ✅ | ✅ |
 | 63 | Laplace Transforms | ✅ | ✅ |
-| 64 | Systems of ODEs | ✅ | ⏳ (render timeout — retry next cycle) |
+| 64 | Systems of ODEs | ✅ | ✅ |
 | 65 | Phase Portraits | ✅ | ✅ |
 | 66 | Numerical Methods (Euler, RK4) | ✅ | ✅ |
 
 ## In Progress
-- **Video 64: Systems of ODEs** — Render timed out on CPU (775-line script, 28+ min). Script needs shortening or splitting before retry.
+- **Video 68: Conditional Probability** — Needs plan + script.
 
 ## Completed Playlists
-- Differential Equations (Videos 55–63 + 65–66): 12 of 13 complete; Video 64 render pending
+- Differential Equations (Videos 55–66): COMPLETE (13 videos)
+- Linear Algebra (Videos 25–40): COMPLETE (16 videos)
+- Calculus III (Videos 41–54): COMPLETE (14 videos)
 
 ## Upcoming — Next Playlist: Probability & Statistics
+
+### Probability & Statistics (Videos 67–78)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 67 | Probability Spaces | ✅ | ✅ |
+| 68 | Conditional Probability | BACKLOG | |
+| 69 | Independence and Bayes' Theorem | BACKLOG | |
+| 70 | Random Variables | BACKLOG | |
+| 71 | Expectation and Variance | BACKLOG | |
+| 72 | Common Distributions (Discrete) | BACKLOG | |
+| 73 | Common Distributions (Continuous) | BACKLOG | |
+| 74 | Law of Large Numbers | BACKLOG | |
+| 75 | Central Limit Theorem | BACKLOG | |
+| 76 | Estimation and Confidence Intervals | BACKLOG | |
+| 77 | Hypothesis Testing | BACKLOG | |
+| 78 | Regression Basics | BACKLOG | |

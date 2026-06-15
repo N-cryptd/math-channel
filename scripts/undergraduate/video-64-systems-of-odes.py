@@ -52,7 +52,7 @@ class Video64_SystemsOfODEs(Scene):
                    "Ordinary Differential Equations")
 
         title = self.ly.title("Why Systems?")
-        self.wait(3)
+        self.wait(1)
 
         self.add_subcaption(
             "Imagine two tanks connected by pipes. The amount of salt in "
@@ -104,7 +104,7 @@ class Video64_SystemsOfODEs(Scene):
             run_time=NORMAL,
         )
         self.play(Create(arrow_ab), Create(arrow_ba), run_time=NORMAL)
-        self.wait(4)
+        self.wait(2)
 
         self.add_subcaption(
             "Each tank's rate of change depends on the other tank. "
@@ -122,7 +122,7 @@ class Video64_SystemsOfODEs(Scene):
         coupled[2].set_color(SECONDARY)
         self.ly.safe_place(coupled, DOWN, anchor=diagram, buff=0.5)
         self.play(Write(coupled), run_time=NORMAL)
-        self.wait(4)
+        self.wait(2)
 
         self.add_subcaption(
             "We need a method that handles both equations at once. "
@@ -136,7 +136,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(FadeIn(question, shift=LEFT * 0.15), run_time=NORMAL)
         self.ly.safe_place(question, DOWN, anchor=coupled, buff=0.3)
-        self.wait(4)
+        self.wait(2)
 
         self.ly.clear()
 
@@ -162,7 +162,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(Write(comp), run_time=NORMAL)
         self.ly.safe_place(comp, DOWN, anchor=title)
-        self.wait(3)
+        self.wait(1)
 
         self.add_subcaption(
             "Let x be the vector x, y. Then the system becomes "
@@ -187,7 +187,7 @@ class Video64_SystemsOfODEs(Scene):
         vec[3].set_color(DIM)
         vec[4].set_color(PRIMARY)
         self.play(Transform(comp, vec), run_time=NORMAL)
-        self.wait(5)
+        self.wait(2)
 
         self.add_subcaption(
             "This compact matrix form x prime equals A x hides all "
@@ -203,7 +203,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(FadeIn(insight, shift=LEFT * 0.15), run_time=NORMAL)
         self.ly.safe_place(insight, DOWN, anchor=vec, buff=0.3)
-        self.wait(5)
+        self.wait(2)
 
         self.ly.clear()
 
@@ -231,7 +231,7 @@ class Video64_SystemsOfODEs(Scene):
         assumption[2].set_color(ACCENT)
         self.play(Write(assumption), run_time=NORMAL)
         self.ly.safe_place(assumption, DOWN, anchor=title)
-        self.wait(4)
+        self.wait(2)
 
         self.add_subcaption(
             "Substitute into x prime equals A x. The derivative of "
@@ -249,7 +249,7 @@ class Video64_SystemsOfODEs(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         self.play(Transform(assumption, subst), run_time=NORMAL)
-        self.wait(3)
+        self.wait(1)
 
         self.add_subcaption(
             "Cancel the common factor e to the lambda t from both "
@@ -267,7 +267,7 @@ class Video64_SystemsOfODEs(Scene):
         cancel[0].set_color(PRIMARY)
         cancel[2].set_color(ACCENT)
         self.play(Transform(subst, cancel), run_time=NORMAL)
-        self.wait(5)
+        self.wait(2)
 
         # Box the eigenvalue equation
         box = SurroundingRectangle(
@@ -289,7 +289,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(FadeIn(label, shift=LEFT * 0.15), run_time=NORMAL)
         self.ly.safe_place(label, DOWN, anchor=cancel, buff=0.3)
-        self.wait(4)
+        self.wait(2)
 
         self.play(FadeOut(box), FadeOut(label), run_time=FAST)
 
@@ -306,7 +306,7 @@ class Video64_SystemsOfODEs(Scene):
             font_size=HEADING_SIZE, color=SECONDARY,
         )
         self.play(Transform(cancel, char_eq), run_time=NORMAL)
-        self.wait(4)
+        self.wait(2)
 
         self.add_subcaption(
             "For each eigenvalue, we find the corresponding eigenvector. "
@@ -325,7 +325,7 @@ class Video64_SystemsOfODEs(Scene):
         gen_sol[1].set_color(DIM)
         gen_sol[2].set_color(SECONDARY)
         self.play(Transform(char_eq, gen_sol), run_time=NORMAL)
-        self.wait(5)
+        self.wait(2)
 
         self.ly.clear()
 
@@ -353,7 +353,7 @@ class Video64_SystemsOfODEs(Scene):
         system[2].set_color(SECONDARY)
         self.play(Write(system), run_time=NORMAL)
         self.ly.safe_place(system, DOWN, anchor=title)
-        self.wait(4)
+        self.wait(2)
 
         self.add_subcaption(
             "In matrix form, x prime equals A x where A is the "
@@ -368,7 +368,7 @@ class Video64_SystemsOfODEs(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         self.play(Transform(system, mat), run_time=NORMAL)
-        self.wait(4)
+        self.wait(2)
 
         # Step 1: Characteristic equation
         self.add_subcaption(
@@ -385,7 +385,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(FadeIn(step1, shift=LEFT * 0.15), run_time=NORMAL)
         self.ly.safe_place(step1, DOWN, anchor=mat, buff=0.3)
-        self.wait(2)
+        self.wait(1)
 
         char_eq = MathTex(
             r"\lambda^2 + 7\lambda + 10 = 0",
@@ -397,7 +397,7 @@ class Video64_SystemsOfODEs(Scene):
         char_eq[2].set_color(ACCENT)
         self.play(Write(char_eq), run_time=NORMAL)
         self.ly.safe_place(char_eq, DOWN, anchor=step1, buff=0.3)
-        self.wait(4)
+        self.wait(2)
 
         eigenvalues = MathTex(
             r"\lambda_1 = -2",
@@ -408,7 +408,7 @@ class Video64_SystemsOfODEs(Scene):
         eigenvalues[0].set_color(PRIMARY)
         eigenvalues[2].set_color(SECONDARY)
         self.play(Transform(char_eq, eigenvalues), run_time=NORMAL)
-        self.wait(5)
+        self.wait(2)
 
         self.play(FadeOut(step1), run_time=FAST)
 
@@ -426,7 +426,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(Transform(step1, step2), run_time=FAST)
         self.ly.safe_place(step2, DOWN, anchor=mat, buff=0.3)
-        self.wait(2)
+        self.wait(1)
 
         eigvec1 = MathTex(
             r"\lambda_1 = -2:",
@@ -437,7 +437,7 @@ class Video64_SystemsOfODEs(Scene):
         eigvec1[0].set_color(PRIMARY)
         eigvec1[2].set_color(PRIMARY)
         self.play(Transform(eigenvalues, eigvec1), run_time=NORMAL)
-        self.wait(4)
+        self.wait(2)
 
         self.add_subcaption(
             "For lambda 2 equals negative 5, we solve A plus 5 I "
@@ -455,7 +455,7 @@ class Video64_SystemsOfODEs(Scene):
         eigvec2[0].set_color(SECONDARY)
         eigvec2[2].set_color(SECONDARY)
         self.play(Transform(eigvec1, eigvec2), run_time=NORMAL)
-        self.wait(5)
+        self.wait(2)
 
         self.play(FadeOut(step2), run_time=FAST)
 
@@ -473,7 +473,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(Transform(step2, step3), run_time=FAST)
         self.ly.safe_place(step3, DOWN, anchor=mat, buff=0.3)
-        self.wait(2)
+        self.wait(1)
 
         general = MathTex(
             r"\vec{x}(t) = c_1 e^{-2t}\!\begin{bmatrix}1\\1\end{bmatrix}",
@@ -485,7 +485,7 @@ class Video64_SystemsOfODEs(Scene):
         general[1].set_color(DIM)
         general[2].set_color(SECONDARY)
         self.play(Transform(eigvec2, general), run_time=NORMAL)
-        self.wait(4)
+        self.wait(2)
 
         self.add_subcaption(
             "Since both eigenvalues are negative, as t goes to "
@@ -500,7 +500,7 @@ class Video64_SystemsOfODEs(Scene):
         )
         self.play(FadeIn(stable, shift=LEFT * 0.15), run_time=NORMAL)
         self.ly.safe_place(stable, DOWN, anchor=general, buff=0.3)
-        self.wait(5)
+        self.wait(2)
 
         self.ly.clear()
 
@@ -529,7 +529,6 @@ class Video64_SystemsOfODEs(Scene):
                 "stroke_opacity": 0.5,
             },
             axis_config={
-                "include_numbers": True,
                 "font_size": LABEL_SIZE,
                 "color": DIM,
             },
@@ -550,7 +549,7 @@ class Video64_SystemsOfODEs(Scene):
 
         self.play(Create(plane), run_time=NORMAL)
         self.play(FadeIn(x_label), FadeIn(y_label), run_time=FAST)
-        self.wait(3)
+        self.wait(1)
 
         # Eigenvector directions
         self.add_subcaption(
@@ -572,7 +571,7 @@ class Video64_SystemsOfODEs(Scene):
 
         self.play(Create(ev1_line), run_time=NORMAL)
         self.play(Write(ev1_label), run_time=FAST)
-        self.wait(3)
+        self.wait(1)
 
         # Eigenvector v2 = [1,-2] direction
         ev2_line = Line(
@@ -585,12 +584,12 @@ class Video64_SystemsOfODEs(Scene):
 
         self.play(Create(ev2_line), run_time=NORMAL)
         self.play(Write(ev2_label), run_time=FAST)
-        self.wait(4)
+        self.wait(2)
 
         # Origin dot
         origin_dot = Dot(plane.c2p(0, 0), color=WHITE, radius=0.06)
         self.play(FadeIn(origin_dot), run_time=FAST)
-        self.wait(2)
+        self.wait(1)
 
         # Trajectories along eigenvector directions
         self.add_subcaption(
@@ -600,56 +599,54 @@ class Video64_SystemsOfODEs(Scene):
             duration=18,
         )
 
-        # Trajectory along v1 (straight line, slow decay)
-        tr1 = TracedPath(
-            Dot(plane.c2p(2.0, 2.0), color=PRIMARY, radius=0.04),
-            stroke_color=PRIMARY, stroke_width=2,
-            dissipating_time=0.1,
+        # Trajectories along eigenvector directions (static curves)
+        self.add_subcaption(
+            "Solutions along the eigenvectors are straight lines. "
+            "Other solutions are curves that are pulled toward the "
+            "slower decaying eigenvector direction as t increases.",
+            duration=14,
         )
-        dummy1 = Dot(plane.c2p(2.0, 2.0), color=PRIMARY, radius=0.04)
-        self.add(tr1, dummy1)
-        self.play(
-            dummy1.animate.move_to(plane.c2p(0.1, 0.1)),
-            run_time=3.0, rate_func=exponential_decay,
-        )
-        self.remove(tr1, dummy1)
 
-        # Trajectory along v2 (straight line, fast decay)
-        tr2 = TracedPath(
-            Dot(plane.c2p(-1.0, 2.0), color=SECONDARY, radius=0.04),
-            stroke_color=SECONDARY, stroke_width=2,
-            dissipating_time=0.1,
+        # Pre-drawn trajectories instead of TracedPath
+        tr1 = Line(
+            plane.c2p(2.0, 2.0), plane.c2p(0.1, 0.1),
+            color=PRIMARY, stroke_width=2,
         )
-        dummy2 = Dot(plane.c2p(-1.0, 2.0), color=SECONDARY, radius=0.04)
-        self.add(tr2, dummy2)
-        self.play(
-            dummy2.animate.move_to(plane.c2p(0.05, -0.1)),
-            run_time=1.8, rate_func=exponential_decay,
+        dot1 = Dot(plane.c2p(0.1, 0.1), color=PRIMARY, radius=0.04)
+        self.play(Create(tr1), FadeIn(dot1), run_time=1.5)
+        self.wait(1)
+
+        tr2 = Line(
+            plane.c2p(-1.0, 2.0), plane.c2p(0.05, -0.1),
+            color=SECONDARY, stroke_width=2,
         )
-        self.remove(tr2, dummy2)
+        dot2 = Dot(plane.c2p(0.05, -0.1), color=SECONDARY, radius=0.04)
+        self.play(Create(tr2), FadeIn(dot2), run_time=1.2)
+        self.wait(1)
 
         # Curved trajectory (general solution)
         self.add_subcaption(
             "A general solution is a combination of both eigenvectors. "
             "The trajectory curves toward the origin, asymptotically "
             "approaching the slower eigenvector direction.",
-            duration=18,
+            duration=14,
         )
 
-        tr3 = TracedPath(
-            Dot(plane.c2p(2.0, -1.0), color=ACCENT, radius=0.04),
-            stroke_color=ACCENT, stroke_width=2,
-            dissipating_time=0.1,
-        )
-        dummy3 = Dot(plane.c2p(2.0, -1.0), color=ACCENT, radius=0.04)
-        self.add(tr3, dummy3)
-        self.play(
-            dummy3.animate.move_to(plane.c2p(0.05, 0.08)),
-            run_time=3.5, rate_func=exponential_decay,
-        )
-        self.remove(tr3, dummy3)
+        # Pre-drawn curved trajectory using ParametricFunction
+        def curved_traj(t_val):
+            # x(t) = c1*e^{-2t} + c2*e^{-5t}, y(t) = c1*e^{-2t} - 2*c2*e^{-5t}
+            c1, c2 = 1.0, 0.8
+            x = c1 * np.exp(-2 * t_val) + c2 * np.exp(-5 * t_val)
+            y = c1 * np.exp(-2 * t_val) - 2 * c2 * np.exp(-5 * t_val)
+            return plane.c2p(x, y)
 
-        self.wait(3)
+        tr3 = ParametricFunction(
+            curved_traj, t_range=[0, 1.2],
+            color=ACCENT, stroke_width=2,
+        )
+        dot3 = Dot(curved_traj(1.2), color=ACCENT, radius=0.04)
+        self.play(Create(tr3), FadeIn(dot3), run_time=1.5)
+        self.wait(1)
 
         # Classification
         self.add_subcaption(
@@ -673,7 +670,7 @@ class Video64_SystemsOfODEs(Scene):
         class_group.next_to(plane, DOWN, buff=0.4)
 
         self.play(Write(class_text), Create(box), run_time=NORMAL)
-        self.wait(4)
+        self.wait(2)
 
         # Brief classification overview
         self.add_subcaption(
@@ -693,7 +690,7 @@ class Video64_SystemsOfODEs(Scene):
         classifications.next_to(class_group, DOWN, buff=0.3)
 
         self.play(FadeIn(classifications, shift=UP * 0.15), run_time=NORMAL)
-        self.wait(5)
+        self.wait(2)
 
         self.ly.clear()
 
@@ -714,7 +711,7 @@ class Video64_SystemsOfODEs(Scene):
             ),
         ]
         self.ly.progressive_reveal(points1, start_from=title)
-        self.wait(3)
+        self.wait(1)
 
         self.add_subcaption(
             "The eigenvalue method transforms the matrix system into "
@@ -729,7 +726,7 @@ class Video64_SystemsOfODEs(Scene):
             ),
         ]
         self.ly.progressive_reveal(points2, start_from=title)
-        self.wait(3)
+        self.wait(1)
 
         self.add_subcaption(
             "Each eigenvalue-eigenvector pair gives one solution. "
@@ -744,7 +741,7 @@ class Video64_SystemsOfODEs(Scene):
             ),
         ]
         self.ly.progressive_reveal(points3, start_from=title)
-        self.wait(3)
+        self.wait(1)
 
         self.add_subcaption(
             "The phase plane visualizes all solutions as trajectories "
@@ -760,7 +757,7 @@ class Video64_SystemsOfODEs(Scene):
             ),
         ]
         self.ly.progressive_reveal(points4, start_from=title)
-        self.wait(4)
+        self.wait(2)
 
         self.ly.clear()
 
