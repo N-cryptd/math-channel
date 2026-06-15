@@ -1817,3 +1817,49 @@ No Manim-animated channel has created a visually rich, rigorous introduction to 
 5. **Color scheme**: PRIMARY=sample space/Omega, SECONDARY=events, ACCENT=axioms/key results, RED=counterexamples/warnings
 6. **Duration target**: 10-12 minutes
 7. **Tease**: "Next video — conditional probability: how evidence changes your beliefs"
+
+---
+
+## 2026-06-15 — Conditional Probability (Video 68)
+
+### Source: 3Blue1Brown — "Bayes theorem, the geometry of changing beliefs"
+- Video ID: HZGCoVF3YvM | Views: 5.76M | Date: Dec 2019 | Duration: 15:11
+- **Structure: 9/10** — Opens with Steve's profile puzzle (Kahneman & Tversky study), generalizes to formula at 4:09, geometric intuition at 10:13, discusses issues at 13:35
+- **Pacing: 10/10** — Builds from concrete example to abstract formula naturally; 5+ minutes on geometric intuition alone
+- **Visual Techniques: 10/10** — Rectangles whose areas = probabilities; nested rectangles show P(H|E) = P(H∩E)/P(E); color-coded regions; interactive version made by a viewer
+- **Narration Style: 10/10** — Conversational, curiosity-driven ("Perhaps the most important formula in probability"); references real research (Kahneman)
+- **Engagement Hooks: 10/10** — Steve puzzle immediately creates cognitive dissonance; geometric proof is an "aha moment"
+- **Thumbnail**: Black background, white text "This is Bayes' rule", nested rectangles with P(E|H) and P(H) labels. High quality. Rating: 9/10
+- **Key insight for us**: Use the area/rectangle model for conditional probability — it's the most intuitive visual. 3B1B uses it for Bayes' theorem specifically, but we can adapt it for conditional probability as a stepping stone.
+
+### Source: Dr. Trefor Bazett — "Intro to Conditional Probability"
+- Video ID: ibINrxJLvlM | Views: 1.67M | Date: Nov 2017 | Duration: 6:14
+- **Structure: 7/10** — Direct formula presentation, then single worked example (alcoholism given gender)
+- **Pacing: 6/10** — Very fast for 6 minutes; formula appears early with minimal motivation
+- **Visual Techniques: 7/10** — Venn diagram with red/yellow circles; clean formula presentation
+- **Narration Style: 7/10** — Clear lecture style but no hook or motivation beyond "what is this formula"
+- **Engagement Hooks: 4/10** — No curiosity gap; starts with definition, not motivation
+- **Thumbnail**: Blackboard background, white text, Venn diagram with red/yellow circles, formula. Rating: 7/10
+- **What to avoid**: Jumping straight to formula without motivation; viewers disengage without context
+
+### Source: StatQuest — "Conditional Probabilities, Clearly Explained!!!"
+- Video ID: _IgyaD7vOOA | Views: 323K | Date: Jul 2021 | Duration: 10:56
+- **Structure: 8/10** — Fills in contingency table from raw data (0:00-4:45), calculates from counts (4:45-8:00), calculates from unconditional probs (8:00+)
+- **Pacing: 8/10** — Builds from concrete data → counts → probabilities; good progression
+- **Visual Techniques: 8/10** — Contingency table animations; colored dots in Venn diagram; clear step-by-step
+- **Narration Style: 9/10** — Josh's signature energetic style ("BAM!"); engaging and memorable
+- **Engagement Hooks: 7/10** — Music intro, energy; but no "puzzle" style hook
+- **Thumbnail**: Venn diagram with colored dots, bold "Clearly Explained!!!" text. Rating: 8/10
+- **What to adopt**: The contingency-table-first approach for the worked example — it grounds conditional probability in real data before going abstract
+
+### Techniques to Adopt in Video 68
+1. **Area/rectangle model** (from 3B1B): Show Omega as a unit square, events as regions, P(A|B) as the fraction of B's area that's also in A
+2. **Motivation before formula**: Open with a real-world puzzle that requires conditional thinking (medical test, or the "two children" problem)
+3. **Two worked examples**: (a) contingency-table approach with concrete counts, (b) Venn/area model with abstract probabilities
+4. **Venn diagrams**: Animated, colored — show intersection shrinking/growing relative to B
+5. **Formula motivation**: Derive P(A|B) = P(A∩B)/P(B) from "what fraction of B is in A?" using the area model
+
+### Techniques to Avoid
+1. Don't start with the formula — start with a puzzle (Trefor Bazett's approach is too dry)
+2. Don't rush through the geometric intuition — give it at least 2-3 minutes (3B1B spent 5+ minutes)
+3. Don't overload with too many examples — one thorough example with the area model beats several surface-level ones

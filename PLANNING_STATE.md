@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-14
+**Last updated:** 2026-06-15
 
-**Completed Videos (65 complete + 1 script pending render)**
+**Completed Videos (66 complete + 1 script pending render)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -91,7 +91,7 @@
 | 66 | Numerical Methods (Euler, RK4) | ✅ | ✅ |
 
 ## In Progress
-- **Video 68: Conditional Probability** — Needs plan + script.
+- **Video 69: Independence and Bayes' Theorem** — Needs plan + script.
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -104,7 +104,7 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 67 | Probability Spaces | ✅ | ✅ |
-| 68 | Conditional Probability | BACKLOG | |
+| 68 | Conditional Probability | ✅ | ✅ |
 | 69 | Independence and Bayes' Theorem | BACKLOG | |
 | 70 | Random Variables | BACKLOG | |
 | 71 | Expectation and Variance | BACKLOG | |
