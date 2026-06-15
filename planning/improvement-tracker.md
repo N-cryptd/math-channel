@@ -96,6 +96,14 @@ Videos 41+ created with v2 templates from the start.
 | 61 | Variation of Parameters | 555 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(5), SANS(9), ly.clear(7), formula_box(3), zero .shift()/.to_edge() |
 | 62 | Power Series Solutions | 605 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(5), SANS(13), ly.clear(12), formula_box(5), zero .shift()/.to_edge() |
 | 63 | Laplace Transforms | 678 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(1), SANS(14), ly.clear(9), zero .shift()/.to_edge() |
+| 64 | Systems of ODEs | 771 | YES | YES (shortened) | YES | Script shortened from 830→771 lines (reduce wait times, remove TracedPath). Narrated. 2:23 duration. |
+
+### Probability & Statistics (scripts/undergraduate/) — NEW PIPELINE
+Videos 67+ created with v2 templates from the start.
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 67 | Probability Spaces | 790 | YES | N/A (already v2) | N/A | Created with v2: competitive analysis done, plan+script+render. 3:45 duration. |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -109,4 +117,4 @@ Videos 41+ created with v2 templates from the start.
 All 63 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-63 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed. Video 55 re-rendered after minor fix (.to_edge() → clamp_position).
 
 ## Last Updated
-2026-06-14 (Videos 61-63 added to tracker — all verified v2-compliant. All 63 videos analyzed.)
+2026-06-15 (Video 64 narrated+finalized, Video 67 rendered+narrated. All 66 videos analyzed. Differential Equations playlist COMPLETE.)
