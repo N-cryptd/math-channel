@@ -91,7 +91,7 @@
 | 66 | Numerical Methods (Euler, RK4) | ✅ | ✅ |
 
 ## In Progress
-- **Video 69: Independence and Bayes' Theorem** — Needs plan + script.
+- **Video 70: Random Variables** — Plan ✅, Script ✅, needs render.
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -105,8 +105,8 @@
 |---|-------|--------|----------|
 | 67 | Probability Spaces | ✅ | ✅ |
 | 68 | Conditional Probability | ✅ | ✅ |
-| 69 | Independence and Bayes' Theorem | BACKLOG | |
-| 70 | Random Variables | BACKLOG | |
+| 69 | Independence and Bayes' Theorem | ✅ | ✅ |
+| 70 | Random Variables | ✅ | ⏳ |
 | 71 | Expectation and Variance | BACKLOG | |
 | 72 | Common Distributions (Discrete) | BACKLOG | |
 | 73 | Common Distributions (Continuous) | BACKLOG | |

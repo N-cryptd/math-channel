@@ -5,6 +5,7 @@ rendered/
 # Python cache
 __pycache__/
 *.pyc
+.venv/
 
 # OS files
 .DS_Store

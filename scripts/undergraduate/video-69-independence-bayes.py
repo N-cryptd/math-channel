@@ -126,7 +126,7 @@ class Video69_IndependenceBayes(Scene):
 
         # Formal definition with formula box
         def_eq = MathTex(
-            r"A", r",", r"B", r"\text{ independent }"
+            r"A", r",", r"B", r"\text{ independent }",
             r"\iff",
             r"P(A \cap B)", r"=", r"P(A)", r"\cdot", r"P(B)",
             font_size=HEADING_SIZE, color=WHITE,
@@ -600,15 +600,12 @@ class Video69_IndependenceBayes(Scene):
         title2 = self.ly.title("Full Form")
 
         full = MathTex(
-            r"P(A|B)", r"=", r"\frac{P(B|A) \cdot P(A)}",
-            r"{P(B|A) \cdot P(A)", r"+",
-            r"P(B|A^c) \cdot P(A^c)}",
+            r"P(A|B)", r"=",
+            r"\frac{P(B|A) \cdot P(A)}{P(B|A) \cdot P(A) + P(B|A^c) \cdot P(A^c)}",
             font_size=HEADING_SIZE, color=WHITE,
         )
         full[0].set_color(PRIMARY)
         full[2].set_color(PRIMARY)
-        full[3].set_color(PRIMARY)
-        full[5].set_color(DIM)
         self.ly.center_in_content(full)
         self.play(Write(full), run_time=SLOW)
         self.wait(0.5)
@@ -622,7 +619,7 @@ class Video69_IndependenceBayes(Scene):
         prior_label = Text(
             "Prior", font_size=LABEL_SIZE, color=SECONDARY, font=SANS,
         )
-        prior_label.next_to(full[3], DOWN, buff=0.6)
+        prior_label.next_to(full[2], DOWN, buff=0.6)
         self.play(FadeIn(prior_label, shift=UP * 0.1), run_time=FAST)
         self.wait(0.3)
 
