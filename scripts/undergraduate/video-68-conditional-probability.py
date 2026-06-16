@@ -138,7 +138,7 @@ class Video68_ConditionalProbability(Scene):
             fill_color=PRIMARY, fill_opacity=0.15,
         )
         bag_a_label = Text("Bag A", font_size=LABEL_SIZE, color=PRIMARY, font=MONO)
-        bag_a_label.next_to(bag_a_rect, UP, buff=0.15)
+        bag_a_label.move_to(bag_a_rect.get_center() + UP * 1.5)
         bag_a_group = VGroup(bag_a_rect, bag_a_label)
 
         bag_b_rect = Rectangle(
@@ -146,7 +146,7 @@ class Video68_ConditionalProbability(Scene):
             fill_color=SECONDARY, fill_opacity=0.15,
         )
         bag_b_label = Text("Bag B", font_size=LABEL_SIZE, color=SECONDARY, font=MONO)
-        bag_b_label.next_to(bag_b_rect, UP, buff=0.15)
+        bag_b_label.move_to(bag_b_rect.get_center() + UP * 1.5)
         bag_b_group = VGroup(bag_b_rect, bag_b_label)
 
         left_col, right_col = self.ly.two_columns(
@@ -233,7 +233,8 @@ class Video68_ConditionalProbability(Scene):
             r"P(A \mid B) = \frac{P(A \cap B)}{P(B)}",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(formula, DOWN, anchor=title, buff=0.6)
+        formula_bg = self.ly.formula_box(formula, ACCENT)
+        self.ly.safe_place(formula_bg, DOWN, anchor=title, buff=0.5)
         self.play(Write(formula), run_time=SLOW)
         self.wait(4)
 
@@ -250,16 +251,18 @@ class Video68_ConditionalProbability(Scene):
         venn_omega_label = Text(
             "Omega", font_size=SMALL_SIZE, color=DIM, font=SANS,
         )
-        venn_omega_label.next_to(venn_omega, RIGHT, buff=0.1)
+        venn_omega_label.move_to(venn_omega.get_center() + RIGHT * 2.0 + UP * 0.3)
 
         venn_a = Circle(
             radius=0.9, stroke_color=PRIMARY, stroke_width=2,
             fill_color=PRIMARY, fill_opacity=0.3,
-        ).shift(LEFT * 0.5)
+        )
+        venn_a.move_to(venn_omega.get_center() + LEFT * 0.5)
         venn_b = Circle(
             radius=0.9, stroke_color=SECONDARY, stroke_width=2,
             fill_color=SECONDARY, fill_opacity=0.3,
-        ).shift(RIGHT * 0.5)
+        )
+        venn_b.move_to(venn_omega.get_center() + RIGHT * 0.5)
 
         venn_a_label = Text("A", font_size=LABEL_SIZE, color=PRIMARY, font=MONO)
         venn_a_label.move_to(venn_a.get_center() + UP * 0.5 + LEFT * 0.15)
@@ -282,7 +285,6 @@ class Video68_ConditionalProbability(Scene):
                              venn_a, venn_b,
                              venn_a_label, venn_b_label)
         self.ly.center_in_content(venn_group)
-        venn_group.shift(UP * 0.3)
 
         self.play(
             *[FadeOut(m) for m in self.mobjects if m not in [venn_group]],
@@ -312,7 +314,7 @@ class Video68_ConditionalProbability(Scene):
             r"= \frac{\text{overlap}}{\text{area of } B}",
             font_size=HEADING_SIZE, color=ACCENT,
         )
-        formula2.to_edge(DOWN, buff=0.8)
+        self.ly.safe_place(formula2, DOWN, anchor=venn_group, buff=0.3)
         self.play(Write(formula2), run_time=SLOW)
         self.wait(4)
 
@@ -327,7 +329,7 @@ class Video68_ConditionalProbability(Scene):
             "Rescale: zoom into region B, measure what fraction is A.",
             font_size=BODY_SIZE, color=SECONDARY, font=SANS,
         )
-        insight.next_to(formula2, UP, buff=0.2)
+        self.ly.safe_place(insight, UP, anchor=formula2, buff=0.2)
         self.play(FadeIn(insight, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(3)
 
@@ -380,7 +382,7 @@ class Video68_ConditionalProbability(Scene):
         self.wait(3)
 
         # Remove question to make room for steps
-        self.remove(question)
+        self.play(FadeOut(question), run_time=FAST)
 
         self.add_subcaption(
             "Step one: find P of B. The outcomes in B are "
@@ -558,8 +560,7 @@ class Video68_ConditionalProbability(Scene):
         self.play(FadeIn(example1, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(4)
 
-        self.remove(prop1)
-        self.remove(example1)
+        self.play(FadeOut(prop1), FadeOut(example1), run_time=FAST)
 
         # Property 2: Complement
         self.add_subcaption(
@@ -577,7 +578,7 @@ class Video68_ConditionalProbability(Scene):
         self.play(Write(prop2), run_time=NORMAL)
         self.wait(4)
 
-        self.remove(prop2)
+        self.play(FadeOut(prop2), run_time=FAST)
 
         # Property 3: Law of total probability teaser
         self.add_subcaption(

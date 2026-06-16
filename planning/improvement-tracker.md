@@ -97,6 +97,10 @@ Videos 41+ created with v2 templates from the start.
 | 62 | Power Series Solutions | 605 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(5), SANS(13), ly.clear(12), formula_box(5), zero .shift()/.to_edge() |
 | 63 | Laplace Transforms | 678 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(1), SANS(14), ly.clear(9), zero .shift()/.to_edge() |
 | 64 | Systems of ODEs | 771 | YES | YES (shortened) | YES | Script shortened from 830→771 lines (reduce wait times, remove TracedPath). Narrated. 2:23 duration. |
+| 65 | Phase Portraits | 586 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(6), SANS(24), ly.clear(8), zero .shift()/.to_edge() for content. next_to only on axis labels. |
+| 66 | Numerical Methods | 523 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(5), SANS(18), MONO(3, table), ly.clear(8), zero .shift()/.to_edge() for content. next_to only on axis labels. |
+| 67 | Probability Spaces | 790 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(6), SANS(19), ly.clear(16), formula_box(5). Minor: 2 next_to+shift on axis labels (acceptable for shapes). Zero content .shift()/.to_edge(). |
+| 68 | Conditional Probability | 649 | YES | YES (minor) | N/A | v2-compliant. Fixed 5 .shift()/.to_edge()/next_to → safe_place/move_to. 3 self.remove() → FadeOut. Added formula_box for core definition. setup_bg(2), section_divider(5), SANS(19), ly.clear(7), progressive_reveal(1). |
 
 ### Probability & Statistics (scripts/undergraduate/) — NEW PIPELINE
 Videos 67+ created with v2 templates from the start.
@@ -114,7 +118,7 @@ Videos 67+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 63 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-63 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed. Video 55 re-rendered after minor fix (.to_edge() → clamp_position).
+All 68 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-63 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed. Video 55 re-rendered after minor fix (.to_edge() → clamp_position). Videos 65-66 analyzed and verified v2-compliant (created with v2). Videos 67-68 analyzed (67 verified v2-compliant, 68 received minor fixes: 5 positioning violations fixed, 3 self.remove→FadeOut, formula_box added).
 
 ## Last Updated
-2026-06-15 (Video 64 narrated+finalized, Video 67 rendered+narrated. All 66 videos analyzed. Differential Equations playlist COMPLETE.)
+2026-06-16 (Video 68 improved: fixed 5 .shift()/.to_edge()/next_to violations, added formula_box, replaced self.remove() with FadeOut. Videos 65-67 analyzed and verified v2-compliant.)
