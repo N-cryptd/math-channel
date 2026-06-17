@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-06-17
 
-**Completed Videos (71 complete)**
+**Completed Videos (72 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -107,7 +107,7 @@
 | 69 | Independence and Bayes' Theorem | ✅ | ✅ |
 | 70 | Random Variables | ✅ | ✅ |
 | 71 | Expectation and Variance | ✅ | ✅ |
-| 72 | Common Distributions (Discrete) | BACKLOG | |
+| 72 | Common Distributions (Discrete) | ✅ | ✅ |
 | 73 | Common Distributions (Continuous) | BACKLOG | |
 | 74 | Law of Large Numbers | BACKLOG | |
 | 75 | Central Limit Theorem | BACKLOG | |
