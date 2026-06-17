@@ -108,6 +108,9 @@ Videos 67+ created with v2 templates from the start.
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
 | 67 | Probability Spaces | 790 | YES | N/A (already v2) | N/A | Created with v2: competitive analysis done, plan+script+render. 3:45 duration. |
+| 69 | Independence/Bayes | 931 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(1), section_divider(6), SANS(30), MONO(1), ly.clear(8), formula_box(3), safe_place(24). zero .shift()/.to_edge(). 11 .next_to()+.move_to() all acceptable (Venn diagram, area model, grid, diagram labels). |
+| 70 | Random Variables | 584 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(5), section_divider(6), SANS(34), ly.clear(10), formula_box(5), safe_place(8), two_columns(1). zero .shift()/.to_edge()/.move_to(). 1 .next_to() minor (score_text below quiz boxes). |
+| 71 | Expectation/Variance | 799 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(6), SANS(20), MONO(2), ly.clear(10), formula_box(7), safe_place(21). zero .shift()/.to_edge(). 6 .next_to()+4 .move_to() all acceptable (bar chart, fulcrum, math term layout, box alignment). |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -118,7 +121,7 @@ Videos 67+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 68 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-63 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed. Video 55 re-rendered after minor fix (.to_edge() → clamp_position). Videos 65-66 analyzed and verified v2-compliant (created with v2). Videos 67-68 analyzed (67 verified v2-compliant, 68 received minor fixes: 5 positioning violations fixed, 3 self.remove→FadeOut, formula_box added).
+All 71 existing videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-47 were created with v2 standards and verified compliant. Videos 48-57 analyzed and verified v2-compliant (minor fixes to 48 and 55). Videos 58-63 analyzed and verified v2-compliant. Re-render tasks for Videos 1-29 completed. Video 55 re-rendered after minor fix (.to_edge() → clamp_position). Videos 65-66 analyzed and verified v2-compliant (created with v2). Videos 67-68 analyzed (67 verified v2-compliant, 68 received minor fixes: 5 positioning violations fixed, 3 self.remove→FadeOut, formula_box added). Videos 69-71 analyzed and verified v2-compliant (created with v2). Video 71 render pending (script exists).
 
 ## Last Updated
-2026-06-16 (Video 68 improved: fixed 5 .shift()/.to_edge()/next_to violations, added formula_box, replaced self.remove() with FadeOut. Videos 65-67 analyzed and verified v2-compliant.)
+2026-06-17 (Videos 69-71 analyzed and verified v2-compliant. All 71 videos analyzed. Video 71 render pending.)

@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-16
+**Last updated:** 2026-06-17
 
-**Completed Videos (67 complete + 1 script pending render)**
+**Completed Videos (71 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -91,7 +91,6 @@
 | 66 | Numerical Methods (Euler, RK4) | ✅ | ✅ |
 
 ## In Progress
-- **Video 70: Random Variables** — Plan ✅, Script ✅, needs render.
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -106,8 +105,8 @@
 | 67 | Probability Spaces | ✅ | ✅ |
 | 68 | Conditional Probability | ✅ | ✅ |
 | 69 | Independence and Bayes' Theorem | ✅ | ✅ |
-| 70 | Random Variables | ✅ | ⏳ |
-| 71 | Expectation and Variance | BACKLOG | |
+| 70 | Random Variables | ✅ | ✅ |
+| 71 | Expectation and Variance | ✅ | ✅ |
 | 72 | Common Distributions (Discrete) | BACKLOG | |
 | 73 | Common Distributions (Continuous) | BACKLOG | |
 | 74 | Law of Large Numbers | BACKLOG | |

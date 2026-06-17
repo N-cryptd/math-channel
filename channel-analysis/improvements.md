@@ -1863,3 +1863,482 @@ No Manim-animated channel has created a visually rich, rigorous introduction to 
 1. Don't start with the formula — start with a puzzle (Trefor Bazett's approach is too dry)
 2. Don't rush through the geometric intuition — give it at least 2-3 minutes (3B1B spent 5+ minutes)
 3. Don't overload with too many examples — one thorough example with the area model beats several surface-level ones
+
+---
+
+### [2026-06-16] Video 71: Expectation and Variance — Full Analysis
+
+**Source 1: jbstatistics — "Expected Value and Variance of Discrete Random Variables"**
+URL: https://www.youtube.com/watch?v=OvTEhNL96v0
+Views: 1,454,660 | Date: Nov 16, 2012 | Channel: jbstatistics (228K subs)
+Captions: True | Duration: 7:57
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 4/10 | Narration 7/10 | Hooks 5/10
+
+Thumbnail Analysis: Black background with green text, table listing x and p(x) values with E(X) formula equations. Clear and organized but visually plain — no Manim animations, whiteboard-style presentation.
+
+Key Insights:
+- Covers both expected value AND variance in a single 8-minute video — compact but rushes variance
+- Uses a die roll example: E(X) = 1(1/6) + 2(1/6) + ... + 6(1/6) = 3.5 — clean, concrete
+- Derives variance as E[(X - mu)^2] with clear step-by-step computation
+- Shows the computational shortcut: Var(X) = E[X^2] - (E[X])^2
+- Very formula-focused — minimal visual appeal, relies on static slides
+
+Techniques to Adopt:
+- The die roll example is the gold standard for introducing E[X] — concrete, relatable, computable
+- Showing the computational shortcut Var(X) = E[X^2] - mu^2 alongside the definition is practical
+- Step-by-step computation with a table is pedagogically effective
+
+Techniques to Avoid:
+- Static whiteboard style — we should animate the computation table building row by row
+- Covering both E[X] and Var(X) in 8 minutes is too rushed — we should give each ~5 minutes
+- Minimal visual engagement — no color coding, no geometric intuition for variance
+
+---
+
+**Source 2: StatQuest with Josh Starmer — "Expected Values, Main Ideas!!!"**
+URL: https://www.youtube.com/watch?v=KLs_7b7SKi4
+Views: 279,782 | Date: Mar 29, 2021 | Channel: StatQuest (1.65M subs)
+Captions: True | Duration: 13:39
+Dimensions: Structure 8/10 | Pacing 9/10 | Visuals 6/10 | Narration 9/10 | Hooks 9/10
+
+Thumbnail Analysis: White background with black and blue text. Large "Expected Values..." title, blue formula "Σ x P(X = x)" below. Clean, professional, high contrast.
+
+Key Insights:
+- Opens with a casino/lottery metaphor: "Why do casinos always make money?" — immediately compelling
+- Uses the lottery example: ticket costs $2, prizes range from $0 to $10, computes expected net gain
+- Spends significant time on notation: E[X] = Σ x · p(x) — breaks down each symbol
+- Emphasizes that E[X] is NOT a value X will take — it's the long-run average
+- Shows a second, more complex example with a weighted die
+- BAM! catchphrase and enthusiastic narration — very engaging style
+
+Techniques to Adopt:
+- Casino/gambling hook is THE best opening for expected value — instant motivation
+- "E[X] is the long-run average, NOT a predicted single outcome" is a crucial student misconception to address
+- Breaking down the notation symbol-by-symbol before computing is good pedagogy
+- Two examples: one simple (lottery), one more complex (weighted die) — progressive difficulty
+
+Techniques to Avoid:
+- StatQuest is a talking-head style — we should use full Manim animation instead
+- Very little visual representation of the concept — no bar chart showing the "balance point"
+- Doesn't cover variance — we need to add that ourselves
+
+---
+
+**Source 3: Steve Brunton (Eigensteve) — "The Expected Value (Mean) of a Probability Distribution"**
+URL: https://www.youtube.com/watch?v=CBgCR1kHSUI
+Views: 44,829 | Date: Jun 6, 2025 | Channel: Steve Brunton (532K subs)
+Captions: True | Duration: 15:24
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 8/10 | Hooks 6/10
+
+Thumbnail Analysis: Black background with white and colored text. Mix of cursive and print fonts. Graph and equations visible. Professional but text-heavy design.
+
+Key Insights:
+- Places expected value in the context of "moments" — E[X] is the first moment, E[X^2] is the second moment
+- Distinguishes between sample mean (from data) and expected value (from distribution)
+- "Misleading expected values" section — shows how E[X] can be impossible as a single outcome (e.g., 2.5 children)
+- Covers mode, mean, and median comparison
+- Good for showing the connection between statistics and probability theory
+- Board-style presentation with annotations — no Manim
+
+Techniques to Adopt:
+- The "misleading expected value" idea is powerful: E[X] = 3.5 for a die but you can never roll 3.5
+- Connecting mean to "first moment" sets up variance as "second central moment" elegantly
+- The sample mean vs population mean distinction is important for bridging probability to statistics
+
+Techniques to Avoid:
+- Very academic tone — too dry for a YouTube math audience
+- Board/paper style — no animation, hard to follow for visual learners
+- Doesn't cover variance at all in this video
+- Spends too long on data estimation — our video should focus on the probability theory
+
+---
+
+**Source 4: Khan Academy — "Mean (expected value) of a discrete random variable"**
+URL: https://www.youtube.com/watch?v=qafPcWNUiM8
+Views: 457,043 | Date: Jul 14, 2017 | Channel: Khan Academy (9.38M subs)
+Captions: True | Duration: 4:32
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 3/10
+
+Thumbnail Analysis: Black background with white text. Large title, table with probabilities and expected values, handwritten-style annotations. Standard KA design.
+
+Key Insights:
+- Very short (4:32) — covers ONLY expected value computation, no variance
+- Uses a traffic ticket example: P($0 fine) = 0.75, P($50 fine) = 0.20, P($200 fine) = 0.05
+- Computes E[X] = 0(0.75) + 50(0.20) + 200(0.05) = $20 — straightforward
+- Digital blackboard style — Sal Khan writing on screen
+- Very computation-focused, minimal conceptual explanation
+
+Techniques to Adopt:
+- The traffic ticket example is relatable and practical (money-based examples are universally understood)
+- Starting from a PMF table and building the computation is pedagogically sound
+
+Techniques to Avoid:
+- Too short and formulaic — no intuition, no visual understanding
+- Pure computation without the "why" — students learn to calculate but not understand
+- No discussion of what E[X] means geometrically or conceptually
+- KA style is visually plain — no engagement hooks
+
+---
+
+### Video 71 Production Notes (from analysis)
+- **Hook**: Use StatQuest's casino metaphor — "Why does the house always win?" is the perfect opener
+- **Structure**: Hook (casino) → E[X] definition → Die roll example → "Misleading" insight → Variance definition → Variance of die → Properties (linearity) → Summary
+- **Visual approach**: Animate PMF bar chart with a "balance point" marker showing E[X]; for variance, show spread with animated distance bars from the mean
+- **Key pedagogical moments**: (1) E[X] = 3.5 but you can't roll 3.5, (2) Variance measures spread, not center, (3) Linearity of expectation: E[X+Y] = E[X] + E[Y]
+- **Color scheme**: PRIMARY (#5BC0EB) for PMF bars, ACCENT (#FFD166) for E[X] marker/line, SECONDARY (#7BC950) for variance bars, RED (#EF476F) for "you can't roll 3.5" warning
+- **Duration target**: 12-15 minutes
+- **3B1B gap**: 3B1B doesn't have a dedicated expectation/variance video — major competitive opportunity. His CLT video uses these concepts but assumes the viewer already knows them.
+- **Unique angle**: Animate the "balance point" of a PMF — show bars with weights and a fulcrum finding E[X] visually. This geometric intuition is missing from ALL competitors.
+
+---
+
+## [2026-06-17] Video 72: Common Distributions (Discrete) — Full Competitive Analysis
+
+**Topic:** Discrete probability distributions — Bernoulli, Binomial, Geometric, Negative Binomial, Hypergeometric, Poisson
+**Playlist:** Probability & Statistics (Videos 67–78)
+**Predecessor:** Video 71 (Expectation and Variance)
+
+### Competitive Landscape Summary
+- **3Blue1Brown**: Has a dedicated Binomial Distribution video (2.58M views) — the gold standard for this topic. No videos covering Geometric, Negative Binomial, Hypergeometric, or Poisson as standalone animated content.
+- **StatQuest**: Has a "Main Ideas behind Probability Distributions" overview (608K views) — energetic, talking-head style with simple graphics. No Manim-quality animation.
+- **jbstatistics**: The most comprehensive coverage — has individual videos for Bernoulli (599K), Negative Binomial (584K), Hypergeometric (419K), and an overview of all discrete distributions (333K). Whiteboard style, no animations.
+- **Organic Chemistry Tutor (OCT)**: Has Geometric Distribution (597K views, 32 min) — massive demand but pure lecture. Also covers Poisson and Binomial individually.
+- **Primer**: "Overexplaining the Binomial Distribution" (1.52M views) — Unity-based animated simulation, very visual but focused only on binomial.
+- **Khan Academy**: "Introduction to Discrete Probability Distributions" (553K views) — basic PMF visualization, very short (5:29).
+- **Steve Brunton**: Geometric Distribution (32K views, Mar 2025) — recent, board-style.
+- **GAP IDENTIFIED**: No single Manim-animated video covers ALL common discrete distributions in one systematic, animated overview. jbstatistics has separate whiteboard videos for each but no visual polish. This is a major opportunity.
+
+### Thumbnail Trends for This Topic
+- **3B1B (Binomial)**: Black background, white "Binomial Distribution" text, animated bar chart showing binomial PMF. Clean, minimal, mathematical. Rating: 8/10.
+- **Primer (Binomial)**: Dark gray background, white text, bar chart + basketball hoop image. Unique visual hook with real-world object. Rating: 8/10.
+- **StatQuest (Distributions)**: White background, black text, red bell curve with dots. Clean but uses normal curve (continuous) for a distributions overview. Rating: 7/10.
+- **jbstatistics (Discrete overview)**: Black background, green/white text, simple diagrams with arrows. Clean but text-heavy. Rating: 6/10.
+- **jbstatistics (Bernoulli)**: Black background, white text with handwritten-style formula. Simple and focused. Rating: 7/10.
+- **OCT (Geometric)**: Black background, yellow handwritten-style text, graph with curve. Standard OCT formula-heavy style. Rating: 6/10.
+- **Emerging pattern**: Dark backgrounds dominate (5/6 thumbnails). Bar charts are the most common visual element. Formula highlights are standard. Question-based titles ("Why does...?") are absent — most use direct topic names.
+
+---
+
+### Source 1: 3Blue1Brown — "Binomial distributions | Probabilities of probabilities, part 1"
+URL: https://www.youtube.com/watch?v=8idr1WZ1A7Q
+Views: 2,580,905 | Date: Mar 15, 2020 | Channel: 3Blue1Brown (8.41M subs)
+Captions: True | Duration: 12:34
+Dimensions: Structure 10/10 | Pacing 10/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+Thumbnail Analysis: Black background, white "Binomial Distribution" text at top. Bar graph showing binomial distribution shape with x-axis 0–20, y-axis 0%–30%. Clean, minimal, mathematical. Quality: 8/10.
+
+Key Insights:
+- Opens with the motivation: "what's the probability of getting exactly k heads in n flips?" — immediately concrete
+- Visualizes the binomial PMF growing dynamically as n increases — the bars animate into existence
+- Shows how the distribution SHIFTS and CHANGES SHAPE as p changes — animated p-slider effect
+- Builds the formula C(n,k) · p^k · (1-p)^(n-k) from combinatorics FIRST, then shows the distribution
+- Beautiful visualization of "probabilities of probabilities" — the PMF itself is a probability distribution over outcomes
+- Connects to Pascal's triangle — shows binomial coefficients growing from the triangle structure
+- Discusses the "probability of 0 doesn't mean impossible" insight — deep conceptual point
+- Uses smooth Manim animations throughout — bars grow, distributions morph, formulas build character by character
+- The Part 2 video extends to the normal approximation and large-n behavior
+
+Techniques to Adopt:
+- Animate the PMF bars growing dynamically as parameters change — this is THE key visual
+- Show how the distribution shape changes when you vary p (skew right for small p, symmetric for p=0.5, skew left for large p)
+- Build the formula step-by-step from first principles (Bernoulli → n trials → choose k successes)
+- Connect to Pascal's triangle as a visual bridge from combinatorics
+- Use progressive animation: start with n=1 (Bernoulli), then n=2, n=3, ... building up to general n
+- Color-code: one color for success probability p, another for failure (1-p)
+
+Techniques to Avoid:
+- 3B1B only covers Binomial — we need to cover 5-6 distributions in one video, so we can't go as deep on any single one
+- 3B1B spends 12+ min on just binomial — we need ~2-3 min per distribution
+- 3B1B doesn't show formulas for mean/variance — our students need these (they learned E[X] and Var(X) in Video 71)
+
+---
+
+### Source 2: Primer — "Overexplaining the binomial distribution"
+URL: https://www.youtube.com/watch?v=6YzrVUVO9M0
+Views: 1,523,228 | Date: Jun 17, 2023 | Channel: Primer (1.94M subs)
+Captions: True | Duration: 15:18
+Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 9/10 | Narration 7/10 | Hooks 8/10
+
+Thumbnail Analysis: Dark gray background, white text, bar chart visualization and a basketball hoop image. Creative real-world visual hook. Quality: 8/10.
+
+Key Insights:
+- Uses a SIMULATION approach: animates actual trials (basketball free throws) and builds the histogram in real-time
+- The basketball metaphor grounds the abstract concept in something physical and relatable
+- Shows Pascal's triangle being built from scratch — each row grows with animation
+- Derives the binomial coefficient formula n!/(k!(n-k)!) from Pascal's triangle — elegant visual proof
+- Does an "empirical test" at the end — runs actual simulation to verify the theoretical distribution
+- Very hands-on and experimental — viewers can "see" the distribution emerge from individual trials
+- Unity-based animations (not Manim) — different visual style but equally effective
+
+Techniques to Adopt:
+- Real-world example (basketball free throws) as the running example throughout
+- Building Pascal's triangle visually — animate each row growing from the previous
+- Empirical simulation: show that theoretical PMF matches actual data in the long run
+- The "let's calculate by hand for small n first" approach — builds intuition before general formula
+
+Techniques to Avoid:
+- 15 minutes for just binomial is too long for our multi-distribution video
+- The basketball metaphor is specific to binomial — harder to extend to geometric/Poisson
+- Unity animations are harder to replicate in Manim — stick to Manim's strengths
+
+---
+
+### Source 3: jbstatistics — "Overview of Some Discrete Probability Distributions"
+URL: https://www.youtube.com/watch?v=UrOXRvG9oYE
+Views: 332,675 | Date: Nov 7, 2013 | Channel: jbstatistics (228K subs)
+Captions: True | Duration: 6:21
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 5/10
+
+Thumbnail Analysis: Black background with green and white text. Simple diagrams and arrows. Clean but text-heavy, minimal visual appeal. Quality: 6/10.
+
+Key Insights:
+- Covers ALL major discrete distributions in ONE video: Bernoulli, Binomial, Geometric, Negative Binomial, Hypergeometric, Poisson
+- Focuses on WHEN each distribution arises — the conditions and real-world scenarios
+- Shows the RELATIONSHIPS between distributions — how binomial reduces to Bernoulli when n=1, how geometric is a special case of negative binomial when r=1
+- Does NOT do calculations — purely conceptual overview of when to use which distribution
+- 6:21 is very tight for 6 distributions — each gets ~1 minute
+- Whiteboard-style with simple diagrams — no animations
+
+Techniques to Adopt:
+- The "decision tree" or "when to use which" framework is extremely valuable for students
+- Showing relationships between distributions (Bernoulli → Binomial, Geometric → Negative Binomial) as a family tree
+- Covering the CONDITIONS for each distribution alongside the formula — "when does this apply?"
+- The overview format — showing all distributions side by side for comparison
+
+Techniques to Avoid:
+- 6:21 is way too short — each distribution deserves at least 2 minutes
+- No formulas or calculations — students need to see the PMF and compute at least one example
+- Pure whiteboard with no visual distinction between distributions — we should use color-coding
+- jbstatistics doesn't show E[X] and Var(X) for each distribution — our students learned these in Video 71 and need to see them applied
+
+---
+
+### Source 4: StatQuest — "The Main Ideas behind Probability Distributions"
+URL: https://www.youtube.com/watch?v=oI3hZJqXJuc
+Views: 607,712 | Date: Apr 17, 2017 | Channel: StatQuest (1.65M subs)
+Captions: True | Duration: 5:15
+Dimensions: Structure 7/10 | Pacing 8/10 | Visuals 6/10 | Narration 9/10 | Hooks 8/10
+
+Thumbnail Analysis: White background, black text, red bell curve with dots. Uses a normal curve even though the video covers general distributions. Quality: 7/10.
+
+Key Insights:
+- Focuses on the CONCEPT of a distribution (PMF/PDF/CDF) rather than specific named distributions
+- Josh Starmer's enthusiastic narration ("BAM!") is very engaging — high energy
+- Uses a dot plot → histogram → smooth curve progression to show how distributions emerge from data
+- Explains the difference between discrete (PMF) and continuous (PDF) — good conceptual bridge
+- Very accessible — assumes minimal background
+- Short (5:15) — more of a teaser than a complete lesson
+
+Techniques to Adopt:
+- The "dots → histogram → distribution" animation is a great opening — shows data becoming a distribution
+- High-energy narration style — we should maintain engaging TTS pacing
+- Clear distinction between discrete and continuous at the start
+
+Techniques to Avoid:
+- Only 5:15 — far too short for our comprehensive needs
+- Doesn't cover specific named distributions (Bernoulli, Binomial, etc.)
+- Uses a normal curve thumbnail for a general distributions video — misleading
+
+---
+
+### Source 5: Khan Academy — "Introduction to discrete probability distributions"
+URL: https://www.youtube.com/watch?v=mrCxwEZ_22o
+Views: 552,825 | Date: Dec 7, 2012 | Channel: Khan Academy (9.38M subs)
+Captions: True | Duration: 5:29
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 3/10
+
+Key Insights:
+- Focuses on the PMF (probability mass function) concept — shows a simple discrete distribution table
+- Very basic — just a table of x values and P(X=x) probabilities
+- Digital chalkboard style — Sal Khan drawing on screen
+- Covers the "sum of all probabilities = 1" rule
+- Good for absolute beginners but too simple for our audience (they've already seen random variables in Video 70)
+
+Techniques to Adopt:
+- The PMF table as a concrete starting point is pedagogically sound
+- "Sum of all probabilities = 1" verification is a good quick check
+
+Techniques to Avoid:
+- Too basic for our audience — they've already had Videos 67-71
+- No named distributions covered
+- Chalkboard-only, no animations
+- No hook or motivation
+
+---
+
+### Source 6: Organic Chemistry Tutor — "Geometric Distribution"
+URL: https://www.youtube.com/watch?v=d5iAWPnrH6w
+Views: 596,521 | Date: Jun 9, 2019 | Channel: OCT (10.7M subs)
+Captions: True | Duration: 32:13
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 3/10
+
+Thumbnail Analysis: Black background, yellow handwritten-style text "Geometric Distribution", graph with curve and formulas. Standard OCT style. Quality: 6/10.
+
+Key Insights:
+- Very thorough: covers probability formula, mean, variance, standard deviation, cumulative probabilities
+- Multiple worked examples with different scenarios
+- Shows the "at least", "at most", "more than" probability variations (P(X ≥ n), P(X > n))
+- Covers the "first success on trial n" interpretation clearly
+- 32 minutes is extremely long — covers geometric distribution in exhaustive detail
+- Massive view count (597K) shows HUGE demand for this specific distribution
+
+Techniques to Adopt:
+- Cover P(X ≥ n) and P(X ≤ n) variations — students always encounter these on exams
+- Show E[X] = 1/p and Var(X) = (1-p)/p² derivations or at least the formulas
+- Multiple worked examples (different scenarios) for at least one distribution
+- The "what is the probability you need MORE THAN n trials?" question is practical
+
+Techniques to Avoid:
+- 32 minutes for one distribution is absurd — we cover it in ~2-3 minutes
+- No visual/animation content — pure digital whiteboard
+- No hook or motivation — starts with the formula immediately
+
+---
+
+### Source 7: jbstatistics — Individual Distribution Videos (Bernoulli, Negative Binomial, Hypergeometric)
+
+**Bernoulli (bT1p5tJwn_0):** 599K views, 5:02. Defines the simplest discrete distribution: X ∈ {0,1} with P(X=1)=p. Shows E[X]=p, Var(X)=p(1-p). Clean whiteboard style.
+
+**Negative Binomial (BPlmjp2ymxw):** 584K views, 7:33. Defines as "number of trials needed to get r successes." Shows PMF, works through examples. Notes the alternative definition (number of failures before r-th success).
+
+**Hypergeometric (L2KMttDm3aY):** 419K views, 15:35. Covers sampling WITHOUT replacement. Shows formula with combinations, works examples (red/yellow balls, sampling students). Compares to binomial (with replacement). Shows the binomial approximation condition (N large, n small relative to N).
+
+Key Insights from jbstatistics:
+- Each distribution video follows a consistent pattern: definition → conditions → PMF → worked example → properties
+- The comparison between hypergeometric and binomial (with vs without replacement) is a key teaching moment
+- The "alternative definition" note for negative binomial is important — students encounter different conventions in different textbooks
+- These videos have 400-600K views EACH — demonstrating massive per-topic demand
+
+Techniques to Adopt:
+- The "conditions checklist" for each distribution: What makes this Bernoulli? What makes this Binomial? (fixed n, fixed p, independence, two outcomes)
+- The with-replacement vs without-replacement distinction (Binomial vs Hypergeometric)
+- Note about negative binomial alternative definitions — clarify which convention we use
+- Consistent structure per distribution: definition → PMF → E[X]/Var(X) → example
+
+Techniques to Avoid:
+- jbstatistics doesn't show relationships between distributions visually — we should use a "family tree" diagram
+- No animated PMF shapes — we should animate each distribution's PMF bars
+- No color-coding to distinguish distributions — we should assign a unique color to each
+
+---
+
+### Competitive Gap Analysis for Video 72
+
+**The Opportunity:**
+No Manim-animated video covers all common discrete distributions in one systematic, visually rich overview. The landscape is:
+- **3B1B**: Only covers Binomial (2.58M views) — single distribution, 12+ min, gold standard quality
+- **jbstatistics**: Covers each individually (333-599K views each) but whiteboard-only, no animations
+- **OCT**: Covers individual distributions (400-600K views each) but lecture-style, 20-32 min each
+- **StatQuest**: General overview only (608K views), no specific distributions
+- **Khan Academy**: PMF basics only (553K views), no named distributions
+
+**Combined demand across competitors**: 2.58M (3B1B binomial) + 1.52M (Primer binomial) + 608K (StatQuest) + 553K (KA) + 597K (OCT geometric) + 599K (jbstats Bernoulli) + 584K (jbstats neg binomial) + 419K (jbstats hypergeometric) + 333K (jbstats overview) = **~8.2M total views** across competitor videos on these topics. This is a MASSIVE demand signal.
+
+**Our Differentiation:**
+1. **Single animated video** covering ALL discrete distributions with consistent visual style
+2. **Distribution "family tree"** — showing how Bernoulli → Binomial → Geometric → Negative Binomial are related
+3. **Animated PMF shapes** — each distribution's PMF bars animate into existence, morph when parameters change
+4. **Color-coded distributions** — each distribution gets a unique color for consistent visual identity throughout the video
+5. **Conditions checklist** visual — animated checklist showing what assumptions each distribution requires
+6. **Quick reference table** at the end — PMF, E[X], Var[X] for all distributions side by side
+7. **Spanish narration** — major market gap for animated probability content
+
+---
+
+### Video 72 Production Notes (from competitive analysis)
+
+**Recommended Structure (12-15 minutes):**
+
+1. **Hook (0:45):** "You've learned what random variables are and how to compute expectation and variance. Now the question is: which specific distributions do we actually USE in practice?" → Preview the "zoo" of discrete distributions as colored bars
+
+2. **Bernoulli Distribution (1:30):** The simplest case — one trial, success/failure. X ∈ {0,1}, P(X=1)=p. PMF table. E[X]=p, Var(X)=p(1-p). Coin flip example. Color: PRIMARY (#5BC0EB).
+
+3. **Binomial Distribution (2:30):** n independent Bernoulli trials. PMF: C(n,k)p^k(1-p)^(n-k). Animate PMF bars for n=10, varying p. Connect to Pascal's triangle (3B1B technique). E[X]=np, Var(X)=np(1-p). Example: 10 coin flips, P(exactly 7 heads). Color: SECONDARY (#7BC950).
+
+4. **Geometric Distribution (1:30):** Number of trials until FIRST success. PMF: (1-p)^(k-1)·p. Exponential decay shape. E[X]=1/p. Example: rolling a die until you get a 6. "Memoryless property" teaser. Color: ACCENT (#FFD166).
+
+5. **Negative Binomial Distribution (1:30):** Number of trials until r-th success. Generalization of geometric (r=1). PMF: C(k-1,r-1)·p^r·(1-p)^(k-r). E[X]=r/p. Color: RED (#EF476F).
+
+6. **Hypergeometric Distribution (1:30):** Sampling WITHOUT replacement. PMF with combinations formula. Compare to Binomial (with replacement). Example: drawing cards from a deck. "Use when N is small relative to n." Color: DIM (#6B6B8D) or WHITE.
+
+7. **Poisson Distribution (1:30):** Limit of binomial when n→∞, p→0, λ=np fixed. PMF: (λ^k · e^(-λ))/k!. Approximation rule: n ≥ 20, np ≤ 5. E[X]=λ, Var(X)=λ. Example: emails per hour, radioactive decays. Color: a distinct color (e.g., #FF8C42 orange).
+
+8. **Distribution Family Tree (1:00):** Animated diagram showing relationships: Bernoulli → Binomial (n trials), Bernoulli → Geometric (first success), Geometric → Negative Binomial (r successes), Binomial → Poisson (n→∞ limit), Binomial ≈ Hypergeometric (with vs without replacement). This is the KEY visual that NO competitor provides.
+
+9. **Quick Reference Table (1:00):** Side-by-side table: Distribution | PMF | E[X] | Var(X) | When to use. Animated row-by-row.
+
+10. **Summary + Outro (0:45):** Recap — these 6 distributions cover most practical discrete scenarios. Tease Video 73: Continuous distributions (Normal, Exponential, Uniform).
+
+**Key Visual Techniques for Video 72:**
+1. Animate PMF bar charts for each distribution — bars grow dynamically
+2. Color-code each distribution consistently throughout the video
+3. Show how PMF shape changes when parameters vary (p-slider effect for binomial)
+4. Use the "distribution family tree" diagram as the unifying visual
+5. Progressive disclosure: one distribution at a time, remove previous PMF before showing next
+6. Quick reference table builds row-by-row at the end (ly.progressive_reveal or ly.stack_down)
+
+**Thumbnail Recommendation:**
+- Dark BG (#1A1832), multiple colored bar charts arranged in a grid (one per distribution)
+- Large white title text: "Discrete Distributions"
+- Subtitle in ACCENT: "Bernoulli · Binomial · Geometric · Poisson"
+- Each mini-chart in a different color matching the video's color scheme
+- Clean, mathematical aesthetic — 3B1B-inspired minimalism
+
+**Color Coding Scheme for Video 72:**
+- Bernoulli: PRIMARY (#5BC0EB) — the foundational one
+- Binomial: SECONDARY (#7BC950) — the most common
+- Geometric: ACCENT (#FFD166) — warm for "waiting"
+- Negative Binomial: RED (#EF476F) — emphasis on "multiple successes"
+- Hypergeometric: DIM (#6B6B8D) — the "sampling without replacement" caveat
+- Poisson: ORANGE (#FF8C42) — distinct from others, the "limit" distribution
+
+**What NOT to do:**
+- Don't try to match 3B1B's 12-minute binomial deep-dive — we have 5+ distributions to cover
+- Don't start with formulas — start with the "why" (what scenario produces this distribution?)
+- Don't skip the family tree — it's our key differentiator from ALL competitors
+- Don't use whiteboard/static style — we have Manim, use it for animated PMF bars
+- Don't cover continuous distributions — that's Video 73
+
+---
+
+## 2026-06-17 — Channel Landscape Update (June Sweep #2)
+
+### Sweep: @3blue1brown recent uploads (top 5)
+| Video | Views | Date | Topic |
+|-------|-------|------|-------|
+| Reinventing Entropy | Compression is Intelligence Part 1 | 921K | 9 days ago | Information theory / ML |
+| How (and why) to take a logarithm of an image | 1.8M | 2mo ago | Image processing |
+| The most beautiful formula not enough people understand | 1.2M | 3mo ago | Complex analysis / math beauty |
+| The Hairy Ball Theorem | 2.8M | 4mo ago | Topology |
+| Why Laplace transforms are so useful | 750K | 7mo ago | Diff Eq |
+
+**Insight:** 3B1B continues producing standalone "beautiful math" videos. His newest (Entropy/Compression) ties math to ML/intelligence — trending direction. Still no recent probability/statistics curriculum content. His Binomial Distribution video (2.58M views, 2020) remains the only animated probability distribution video at scale. **No competitor has created a comprehensive animated discrete distributions overview.**
+
+### Sweep: @jbstatistics recent uploads (top 5)
+| Video | Date | Topic |
+|-------|------|-------|
+| Inference for one mean: Worked examples | 3mo ago | Hypothesis testing |
+| Hypothesis testing: Rejection regions and p-values | 3mo ago | Hypothesis testing |
+| Hypothesis tests for one mean: Introduction | 3mo ago | Hypothesis testing |
+| Hypothesis Testing: Introduction | 3mo ago | Hypothesis testing |
+| Continuous Probability Distributions: Normal | 3mo ago | Normal distribution |
+
+**Insight:** jbstatistics is now producing "Full Lecture" format videos (30+ min) focused on hypothesis testing and introductory statistics. This is directly relevant to our Videos 76-78 (Estimation, Hypothesis Testing, Regression). jbstatistics is pivoting from individual distribution videos to full-lecture format — this leaves a gap for concise, animated overview videos that we can fill.
+
+### StatQuest Recent Probability Content
+- "The Binomial Distribution and Test, Clearly Explained!!!" (345K views, 2018) — combines binomial PMF with the binomial test
+- No recent dedicated discrete distributions overview from StatQuest
+- StatQuest's probability content is aging (7-9 years old) — opportunity for fresh animated content
+
+### Thumbnail Trends Update (June 2026)
+- **Dominant pattern**: Dark backgrounds (black/dark gray) with white/light text — 5/7 relevant thumbnails use dark BGs
+- **Visual elements**: Bar charts/PMF visualizations are the most common (3B1B, Primer, OCT)
+- **Text style**: Direct topic names dominate ("Binomial Distribution", "Geometric Distribution") — question-based titles are absent for this topic
+- **Quality gap**: Most competitor thumbnails are 6-7/10 — no one is producing really high-quality thumbnails for discrete distributions. Opportunity to stand out.
+- **Emerging**: 3B1B's newest thumbnails use more complex visual elements (entropy diagram, sphere grid) while maintaining the dark BG + clean text pattern
+
+### Probability & Statistics Playlist Positioning (June 2026)
+- **Videos 67-71 complete** — Probability Spaces through Expectation/Variance
+- **Video 72 (next)**: Discrete Distributions — massive demand (~8.2M combined competitor views)
+- **Opportunity**: No animated channel has done a systematic "tour of discrete distributions" video. jbstatistics has separate whiteboard videos (333-599K views each). 3B1B only did Binomial. We can create the definitive animated overview.
+- **Videos 76-78 (upcoming)**: jbstatistics is NOW producing hypothesis testing content — we should analyze those videos when we reach Videos 76-78
