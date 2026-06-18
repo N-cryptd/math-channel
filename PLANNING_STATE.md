@@ -108,8 +108,8 @@
 | 70 | Random Variables | ✅ | ✅ |
 | 71 | Expectation and Variance | ✅ | ✅ |
 | 72 | Common Distributions (Discrete) | ✅ | ✅ |
-| 73 | Common Distributions (Continuous) | BACKLOG | |
-| 74 | Law of Large Numbers | BACKLOG | |
+| 73 | Common Distributions (Continuous) | ✅ | ✅ |
+| 74 | Law of Large Numbers | ✅ | ✅ |
 | 75 | Central Limit Theorem | BACKLOG | |
 | 76 | Estimation and Confidence Intervals | BACKLOG | |
 | 77 | Hypothesis Testing | BACKLOG | |

@@ -2448,3 +2448,194 @@ Showing how mu/sigma reshape the Normal bell, or how lambda stretches the Expone
 - Reference Video 72's discrete distributions as "partners" — same structure
 - Duration target: 12-15 minutes
 - Use smooth curve plotting for PDFs (function-based, not sampled points)
+
+---
+
+## 2026-06-18 — Video 74: Law of Large Numbers
+
+### Overview
+Searched for LLN-specific videos across major channels. LLN is typically covered as a prelude to CLT rather than a standalone topic. Key finding: no high-production Manim-animated video focuses on LLN as its primary subject — most cover it in passing while heading toward CLT.
+
+### Competitor Videos Analyzed
+
+**Source 1: 3Blue1Brown — "But what is the Central Limit Theorem?"**
+Views: 4.44M | Date: Mar 2023 | Duration: 31:15 | Subs: 8.41M
+Covers: CLT as main topic, touches on LLN as a stepping stone
+Style: Manim (custom manimlib), dark background, geometric intuition-first
+
+Key Insights:
+- LLN appears briefly (~1-2 min) as motivation before diving into CLT
+- Uses Galton board simulation as the central visual metaphor
+- Progressive build-up: simplified board → general idea → formal distributions
+- 31-minute format allows deep exploration but LLN gets short shrift
+- Timestamps show LLN is mentioned at 0:00-1:53 before pivoting to CLT proper
+
+Dimensions: Structure 10/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+### Thumbnail Analysis
+- Black background with colorful bar charts and yellow arrows
+- Progressive convergence visualization (small graphs → main graph)
+- High quality, clean layout with clear visual metaphor
+- Rating: 9/10
+
+Techniques to Adopt:
+- Galton board / binomial simulation as visual anchor
+- Progressive sample size increase (10 → 100 → 1000 → 10000)
+- Show sample mean converging to true mean with animated line
+- Use color coding: theoretical mean vs observed mean
+
+Techniques to Avoid:
+- Don't give LLN only 2 minutes — this IS our main topic
+- Don't skip straight to CLT; our next video (75) handles that
+
+---
+
+**Source 2: The Organic Chemistry Tutor — "Law of Large Numbers"**
+Views: 153K | Date: Sep 2019 | Duration: 6:14 | Subs: 10.7M
+Covers: LLN as standalone topic (coin flip examples)
+Style: Digital whiteboard, problem-solution format
+
+Key Insights:
+- Pure coin flip probability examples — very concrete
+- Shows theoretical vs experimental probability convergence
+- 6-minute format is too short for depth but good for basics
+- No formal weak/strong distinction
+- No connection to CLT or deeper implications
+- Focus on P(hands) → 1/n as n → infinity
+
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+### Thumbnail Analysis
+- Black background with yellow/white text, coin illustrations
+- Equations visible, somewhat cluttered
+- Rating: 7/10
+
+Techniques to Adopt:
+- Coin flip as accessible first example
+- Show fraction of heads converging to 0.5 explicitly
+- Numerical table showing trials vs observed probability
+
+Techniques to Avoid:
+- Don't stay at purely informal level — add formal weak/strong definitions
+- Don't use static whiteboard — leverage Manim animation
+
+---
+
+**Source 3: Khan Academy — "Law of large numbers"**
+Views: 676K | Date: 2009 | Duration: 9:00 | Subs: 9.38M
+Covers: LLN introduction with rolling die simulation
+Style: Digital blackboard, Sal Khan's conversational style
+
+Key Insights:
+- Rolling die example — frequency of outcomes converging
+- Explains the difference between "average of outcomes" and "probability"
+- Gentle pace, good for beginners
+- Very basic — no formal definitions, no weak vs strong distinction
+- 17 years old but still relevant for the core idea
+
+Dimensions: Structure 5/10 | Pacing 7/10 | Visuals 2/10 | Narration 7/10 | Hooks 4/10
+
+### Thumbnail Analysis
+- Black background with green/white text, math equations
+- Clean but dated style
+- Rating: 6/10
+
+Techniques to Adopt:
+- Die roll as second example (non-binary distribution)
+- Emphasize the "average of outcomes converging to expected value"
+- Simple language: "as you repeat more, your average gets closer to the true average"
+
+Techniques to Avoid:
+- Don't use 17-year-old blackboard style
+- Don't skip the formal mathematical statement
+
+---
+
+**Source 4: Steve Brunton — "The Law of Large Numbers"**
+Views: 24.4K | Date: Jul 2025 | Duration: 12:44 | Subs: 532K
+Covers: LLN with formal definitions, proof sketch, connection to CLT
+Style: Whiteboard + light math overlay
+
+Key Insights:
+- NEWEST competitor (Jul 2025) — recent content
+- Covers both informal statement and formal definition
+- Includes proof sketch (informal + formal approach)
+- Connects LLN to CLT as "baby step"
+- 12-minute format is closest to our target
+- Chapters: Intro → Statement → Formal Definition → Informal Proof → Formal Proof → Outro
+
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 6/10
+
+### Thumbnail Analysis
+- Black background with white/colored text, graph with peak and line
+- Pink, blue, yellow highlights on text
+- Clean, modern style
+- Rating: 8/10
+
+Techniques to Adopt:
+- Formal definition after intuition (weak form first, then strong)
+- Bridge to CLT explicitly at the end
+- Proof sketch — show WHY it works, not just THAT it works
+- Clean chapter structure (12 min fits our target)
+
+Techniques to Avoid:
+- Whiteboard-only approach — we should use full Manim animation
+- Dense proof section — keep it visual, not wall-of-text
+
+---
+
+**Source 5: Veritasium — "The Strange Math That Predicts (Almost) Anything"**
+Views: 12.2M | Date: Jul 2025 | Duration: 32:32 | Subs: 20.9M
+Covers: Markov chains / Monte Carlo, opens with LLN motivation
+Style: High-production documentary, live action + animation
+
+Key Insights:
+- LLN used as a 5-minute motivational intro before Markov chains
+- Historical narrative: Russian mathematicians, Ulam, nuclear fission
+- Storytelling-first approach — "how a feud led to prediction algorithms"
+- Shows LLN through casino/gambling intuition
+- Massive views (12.2M) — LLN topic resonates with general audience
+- Not a teaching video per se, more of a science documentary
+
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 8/10 | Narration 9/10 | Hooks 10/10
+
+### Thumbnail Analysis
+- Not LLN-specific — shows Markov chain concept
+- High production value, documentary style
+
+Techniques to Adopt:
+- Opening with a compelling real-world question (gambling, insurance, polling)
+- Historical context adds engagement
+- Connect LLN to "why statistics works at all" — philosophical angle
+
+Techniques to Avoid:
+- Don't go full documentary — stay educational/math-focused
+- Don't bury LLN under Markov chains — this IS our main topic
+
+---
+
+### Competitive Gaps for Video 74
+
+**GAP 1: No Manim-animated LLN video exists.**
+3B1B covers LLT en route to CLT (2 min). All others use whiteboard/blackboard. A dedicated Manim-animated LLN video fills a clear gap.
+
+**GAP 2: No video combines weak + strong LLN with visual simulation.**
+OCT and KA cover only informal version. Brunton covers both but without animation. An animated coin-flip simulation showing convergence with formal definitions layered on top would be unique.
+
+**GAP 3: No visual proof/sketch of WHY LLN works.**
+Brunton has a formal proof but it's whiteboard. An animated proof sketch (variance of sample mean shrinking as n grows) would be novel.
+
+**GAP 4: No video connects LLN → CLT as a two-part narrative.**
+Most videos either do LLN only or CLT only. Since our Video 74 (LLN) → Video 75 (CLT) form a natural pair, we can build a stronger narrative arc than any competitor.
+
+### Video 74 Production Notes (from analysis)
+- Lead with coin flip simulation — most accessible example
+- Progressive sample sizes: 10 → 50 → 200 → 1000 → 10000
+- Animate sample mean line converging to true mean
+- Show variance shrinking visually (band narrowing)
+- Formal weak LLN statement after intuition
+- Brief strong LLN mention (almost sure convergence)
+- Visual proof sketch: Var(X̄) = σ²/n → 0
+- Bridge to Video 75 (CLT) at the end
+- Color coding: theoretical mean = ACCENT, observed = PRIMARY
+- Duration target: 12 minutes
