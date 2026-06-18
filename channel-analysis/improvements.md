@@ -2342,3 +2342,109 @@ No Manim-animated video covers all common discrete distributions in one systemat
 - **Video 72 (next)**: Discrete Distributions — massive demand (~8.2M combined competitor views)
 - **Opportunity**: No animated channel has done a systematic "tour of discrete distributions" video. jbstatistics has separate whiteboard videos (333-599K views each). 3B1B only did Binomial. We can create the definitive animated overview.
 - **Videos 76-78 (upcoming)**: jbstatistics is NOW producing hypothesis testing content — we should analyze those videos when we reach Videos 76-78
+
+---
+
+### [2026-06-17] Video 73: Common Distributions (Continuous) — Full Analysis
+
+**Source 1: 3Blue1Brown — "But what is the Central Limit Theorem?"**
+URL: https://www.youtube.com/watch?v=zeJD6dqJ5lo
+Views: ~7M+ | Date: 2018 | Channel: 3Blue1Brown (8.5M subs)
+Covers: Normal only (via CLT narrative, not a standalone Normal distribution video)
+Dimensions: Structure 10/10 | Pacing 10/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+Style: Fully Manim-animated, beautiful bell curve visuals, dice simulation animation
+
+Key Insights:
+- ONLY covers Normal distribution — no Exponential or Uniform
+- The CLT narrative is the lens: shows distributions converging to Normal
+- Beautiful animated bell curves with parameter variation
+- Doesn't define Normal formally — more about CLT as a phenomenon
+- One of the highest-viewed statistics videos on YouTube
+
+Techniques to Adopt:
+- Animated bell curve drawing (smooth PDF plot) — the defining visual for Normal
+- Show how parameters (mu, sigma) reshape the distribution in real time
+- Color-code the distribution consistently throughout
+
+Techniques to Avoid:
+- 3B1B skips formal PDF definition — our audience needs the formula
+- 3B1B doesn't cover Exponential or Uniform — we need all three
+
+---
+
+**Source 2: jbstatistics — "Continuous Probability Distributions: Normal"**
+Views: ~350K (recent, ~3 months ago) | Channel: jbstatistics
+Covers: Normal distribution in depth (full lecture format, ~30 min)
+Style: PDF slides, not animated — thorough but visually static
+
+Key Insights:
+- Full formal treatment: PDF, CDF, E[X], Var(X), standardization
+- Uses real-world examples: heights, test scores
+- Separate videos for each distribution — no unified overview
+- Recent upload confirms ongoing demand for this content
+
+Techniques to Adopt:
+- Include real-world applications for each distribution
+- Cover the standardization Z = (X - mu) / sigma explicitly
+
+Techniques to Avoid:
+- Don't use 30-minute lecture format — keep to 12-15 min overview
+- Slide-based presentations lack animation engagement
+
+---
+
+**Source 3: StatQuest — "Normal Distributions, Statistical Moments"**
+Views: ~600K+ | Date: 2018 | Channel: StatQuest (1.8M subs)
+Covers: Normal distribution deep-dive (moments, shape)
+Style: Hand-drawn tablet (Josh's signature style)
+
+Key Insights:
+- Covers Normal + moments (skewness, kurtosis) — deeper than needed for overview
+- Exponential/Uniform mentioned only briefly
+- Josh's energy and "BAM!" moments are engaging but content is fragmented
+
+---
+
+**Source 4: Khan Academy — Continuous Probability Distributions**
+Covers: Each distribution as separate ~10-15 min video
+Style: Digital blackboard, thorough but dry
+
+Key Insights:
+- Normal, Exponential, Uniform each get their own video
+- Very thorough formal treatment
+- No unified overview connecting the distributions
+- No animation — just static notation on blackboard
+
+---
+
+**Source 5: Organic Chemistry Tutor — Various continuous distribution videos**
+Covers: Normal (1M+ views), Exponential (200K+ views) separately
+Style: Whiteboard problem-solution format
+
+Key Insights:
+- Each distribution is a separate 15-25 min video
+- Problem-solving focus, not visual intuition
+- High individual view counts show strong demand
+
+### Competitive Gaps for Video 73
+
+**GAP 1: No animated video covers Normal + Exponential + Uniform together.**
+Competitors either go deep on one (3B1B/StatQuest on Normal) or cover all three superficially (KA/OCT). A unified Manim-animated overview fills a clear gap.
+
+**GAP 2: No "family tree" visual for continuous distributions.**
+Video 72's family tree for discrete distributions was unique. A similar continuous relationships diagram would be a strong differentiator.
+
+**GAP 3: No animated side-by-side PDF comparison.**
+Showing Normal, Exponential, and Uniform PDF curves simultaneously with color coding — no competitor does this.
+
+**GAP 4: No animated parameter intuition.**
+Showing how mu/sigma reshape the Normal bell, or how lambda stretches the Exponential — animated parameter sweeps are absent from all competitors.
+
+### Video 73 Production Notes (from analysis)
+- Color-code each distribution: Normal=PRIMARY, Exponential=SECONDARY, Uniform=ACCENT
+- Animate PDF curves (smooth parametric plots, NOT bar charts like discrete)
+- Include a "relationships" diagram connecting to Video 72's family tree
+- Show real-world scenarios for each distribution
+- Reference Video 72's discrete distributions as "partners" — same structure
+- Duration target: 12-15 minutes
+- Use smooth curve plotting for PDFs (function-based, not sampled points)
