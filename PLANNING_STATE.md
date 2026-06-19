@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-06-19
 
-**Completed Videos (75 complete)**
+**Completed Videos (76 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -111,6 +111,6 @@
 | 73 | Common Distributions (Continuous) | ✅ | ✅ |
 | 74 | Law of Large Numbers | ✅ | ✅ |
 | 75 | Central Limit Theorem | ✅ | ✅ |
-| 76 | Estimation and Confidence Intervals | BACKLOG | |
+| 76 | Estimation and Confidence Intervals | ✅ | ✅ |
 | 77 | Hypothesis Testing | BACKLOG | |
 | 78 | Regression Basics | BACKLOG | |
