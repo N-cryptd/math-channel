@@ -226,7 +226,7 @@ class Video74_LawOfLargeNumbers(Scene):
             "The Weak Law of Large Numbers says that for any positive epsilon, "
             "the probability that the sample mean deviates from mu by more than "
             "epsilon goes to zero as n grows.",
-            duration=9,
+            duration=12,
         )
 
         self.ly.section_divider(4, "Weak Law of Large Numbers")
@@ -292,7 +292,7 @@ class Video74_LawOfLargeNumbers(Scene):
         self.add_subcaption(
             "The Strong Law goes further: the sample mean doesn't just get "
             "probably close — it converges to mu with probability one.",
-            duration=7,
+            duration=9,
         )
 
         self.ly.section_divider(5, "Strong Law of Large Numbers")
@@ -373,7 +373,7 @@ class Video74_LawOfLargeNumbers(Scene):
         self.add_subcaption(
             "The Law of Large Numbers explains why insurance works, "
             "why polls need large samples, and why Monte Carlo simulations converge.",
-            duration=7,
+            duration=10,
         )
 
         title = self.ly.title("Applications")
@@ -412,7 +412,7 @@ class Video74_LawOfLargeNumbers(Scene):
             "The Law of Large Numbers tells you where the sample mean converges. "
             "The Central Limit Theorem, coming up next, tells you how it fluctuates "
             "along the way.",
-            duration=9,
+            duration=12,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -445,7 +445,7 @@ class Video74_LawOfLargeNumbers(Scene):
         self.add_subcaption(
             "In the next video, we explore the Central Limit Theorem, "
             "which reveals the beautiful bell curve shape of sample means.",
-            duration=7,
+            duration=9,
         )
 
         next_title = self.ly.title("Coming Up Next")

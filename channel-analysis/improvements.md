@@ -2639,3 +2639,157 @@ Most videos either do LLN only or CLT only. Since our Video 74 (LLN) → Video 7
 - Bridge to Video 75 (CLT) at the end
 - Color coding: theoretical mean = ACCENT, observed = PRIMARY
 - Duration target: 12 minutes
+
+---
+
+## 2026-06-18 — Video 75: Central Limit Theorem
+
+### Overview
+CLT is THE most viewed probability topic on YouTube. 3B1B's CLT video alone has 4.44M views — the most popular probability video on any math channel. CLT is covered by nearly every statistics channel. Our key differentiator: Manim-animated CLT with multiple population distributions, LLN connection from Video 74, and the Galton board as visual anchor.
+
+### Competitor Videos Analyzed
+
+**Source 1: 3Blue1Brown — "But what is the Central Limit Theorem?"**
+Views: 4.44M | Date: Mar 2023 | Duration: 31:15 | Subs: 8.41M
+Covers: Full CLT treatment with Galton board, dice simulation, formal statement, normal approximation
+Style: Custom Manim (manimlib), dark background, geometric intuition-first
+
+Key Insights:
+- Galton board is the central visual metaphor — bean drop → binomial → normal convergence
+- Progressive build: simplified board → general idea → dice → formal distributions → formula → examples
+- 31-minute deep dive — covers CLT from every angle
+- Timestamps: 0:00 Intro, 1:53 Simplified Galton Board, 4:14 General idea, 6:15 Dice sims, 11:41 Mean/variance, 15:54 Gaussian formula, 20:47 Elegant formulation, 27:10 Sample means, 28:10 Underlying assumptions
+- Shows convergence from NON-normal populations (uniform dice → sum becomes normal)
+- Derives the Gaussian formula visually
+- Connects to real-world example at 25:01
+
+Dimensions: Structure 10/10 | Pacing 8/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+Thumbnail: Black background, colorful bar charts converging to bell curve, yellow arrows. High quality. Rating: 9/10
+
+Techniques to Adopt:
+- Galton board simulation as visual anchor (simplified version for our ~15 min format)
+- Show sum/sample mean distribution converging to normal from different population shapes
+- Progressive sample sizes (n=2 → n=10 → n=50 → n=100)
+- Color-code population distribution vs sampling distribution
+- Show the Gaussian formula but don't derive it (save time)
+- Connect to real-world example (polling, quality control)
+- Explicitly mention i.i.d. assumption
+
+Techniques to Avoid:
+- Don't attempt 31-minute deep dive — our target is 15 min
+- Don't derive the Gaussian formula visually (too long) — state it and show it fits
+- Don't cover characteristic functions/moment generating functions as proof
+
+---
+
+**Source 2: StatQuest with Josh Starmer — "The Central Limit Theorem, Clearly Explained!!!"**
+Views: 1.10M | Date: Sep 2018 | Duration: 7:35 | Subs: 1.65M
+Covers: CLT statement, why it's useful, simple visualization
+Style: Marker-on-whiteboard, enthusiastic narration, stats-focused
+
+Key Insights:
+- 7.5-minute format — very compressed
+- Starts by sampling from a distribution and building the sampling distribution
+- Shows: original distribution → take samples → compute means → plot means → bell curve
+- Emphasis on "why this is useful" — connects to statistics immediately
+- Enthusiastic, accessible narration style
+- 7 years old but still getting views — evergreen topic
+
+Dimensions: Structure 7/10 | Pacing 8/10 | Visuals 5/10 | Narration 9/10 | Hooks 7/10
+
+Thumbnail: White background, bold text "Central Limit Theorem", graph and bar chart. Clean. Rating: 7/10
+
+Techniques to Adopt:
+- "Why this matters" framing — CLT enables inference about populations from samples
+- Simple step-by-step: sample → compute mean → repeat → observe bell curve
+- Connect CLT to practical statistics immediately
+- Enthusiastic narration pace
+
+Techniques to Avoid:
+- Don't use whiteboard style — Manim is our advantage
+- Don't stay at such informal level — we should state the formal theorem
+
+---
+
+**Source 3: Steve Brunton — "The Central Limit Theorem"**
+Views: 27.5K | Date: Jul 2025 | Duration: 10:57 | Subs: 532K
+Covers: CLT statement, proof sketch (Fourier), sum and sample mean formulations
+Style: Whiteboard + math overlay, academic lecture compressed
+
+Key Insights:
+- Most recent dedicated CLT video (Jul 2025)
+- Covers both sum formulation and sample mean formulation
+- Includes proof sketch using characteristic functions (Fourier approach)
+- Chapters: Intro → Statement (sample mean) → Proof sketch → Statement (sum) → Outro
+- 10:57 is close to our target duration
+- Connects to survey sampling application
+- Links to companion video "Normal Approximation to Sample Mean" (Arbj9SoU9Cs, 12.6K views, 19:41) for deeper treatment
+
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 6/10
+
+Thumbnail: Black background, colored text with "Probability & Statistics" header, CLT statement highlighted. Rating: 8/10
+
+Techniques to Adopt:
+- Both sum and sample mean formulations side by side
+- Brief proof sketch (don't prove, but sketch WHY convergence happens)
+- Survey sampling as real-world application
+- Explicit assumptions stated at end
+- Duration ~10-12 min is appropriate
+
+Techniques to Avoid:
+- Don't use Fourier/characteristic function proof — too advanced for our audience
+- Don't use whiteboard — we animate
+- Don't make proof the focus — visualization first
+
+---
+
+**Source 4: Steve Brunton — "Normal Approximation to Sample Mean"**
+Views: 12.6K | Date: Aug 2025 | Duration: 19:41 | Subs: 532K
+Covers: Sample mean as normally distributed, CLT application, code demo, confidence interval preview
+Style: Whiteboard + Python code demos, data science angle
+
+Key Insights:
+- Companion to Brunton's CLT video — extends CLT to practical inference
+- Shows code demo: sampling from a distribution and plotting sample means
+- Previews confidence intervals (our Video 76 content)
+- Code-driven approach — shows Python sampling simulation
+- 19:41 is longer than our target but has valuable application content
+
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+
+Techniques to Adopt:
+- Simulation-based visualization: show actual code generating samples and plotting
+- Preview of what CLT enables (confidence intervals, hypothesis testing)
+- Connection between CLT and practical data science
+
+Techniques to Avoid:
+- Code-heavy approach — we're Manim-first, not Python demo
+- 19+ minute duration for a single topic
+
+---
+
+### Competitive Gaps for Video 75
+
+**GAP 1: No 12-15 minute Manim-animated CLT video with Galton board + multiple distributions.**
+3B1B's video is 31 minutes — too long for a curriculum slot. StatQuest and Brunton are whiteboard. A focused 15-min Manim-animated CLT with Galton board simulation, multiple population distributions, and clean formal statement fills a gap.
+
+**GAP 2: No video explicitly bridges LLN → CLT as a two-part narrative.**
+Most channels cover CLT standalone. Our Video 74 (LLN) → Video 75 (CLT) can create a unique narrative arc: "LLN tells us WHERE the sample mean converges. CLT tells us the SHAPE of that convergence."
+
+**GAP 3: No CLT video shows 4+ different population shapes all converging to normal.**
+3B1B shows dice and uniform. We can show: uniform → normal, exponential → normal, bimodal → normal, skewed → normal — demonstrating CLT's universality.
+
+**GAP 4: No CLT video simultaneously presents sampling distribution visualization + formal theorem + practical application in 15 minutes.**
+Bridging intuition (simulation) → formal (theorem statement) → application (polling/quality control) in one video.
+
+### Video 75 Production Notes (from analysis)
+- Lead with Galton board as visual hook (simplified from 3B1B's 31-min version)
+- Show 3-4 different population distributions all converging to normal
+- LLN → CLT bridge: LLN = where, CLT = shape
+- Formal CLT statement with both sum and mean formulations
+- Brief "why it works" sketch (not proof, just intuition)
+- Real-world applications: polling, quality control, medical trials
+- Preview of Video 76 (confidence intervals)
+- Color coding: population = SECONDARY, sampling distribution = PRIMARY, normal curve = ACCENT
+- Duration target: 15 minutes (our most important probability video — worth the full length)

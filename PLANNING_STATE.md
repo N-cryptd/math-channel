@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-17
+**Last updated:** 2026-06-19
 
-**Completed Videos (72 complete)**
+**Completed Videos (75 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -110,7 +110,7 @@
 | 72 | Common Distributions (Discrete) | ✅ | ✅ |
 | 73 | Common Distributions (Continuous) | ✅ | ✅ |
 | 74 | Law of Large Numbers | ✅ | ✅ |
-| 75 | Central Limit Theorem | BACKLOG | |
+| 75 | Central Limit Theorem | ✅ | 🔄 |
 | 76 | Estimation and Confidence Intervals | BACKLOG | |
 | 77 | Hypothesis Testing | BACKLOG | |
 | 78 | Regression Basics | BACKLOG | |
