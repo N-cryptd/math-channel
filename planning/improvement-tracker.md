@@ -114,7 +114,7 @@ Videos 67+ created with v2 templates from the start.
 | 72 | Common Dist. (Discrete) | 508 | YES | N/A (already v2) | YES | Created with v2. setup_bg(1), progressive_reveal(8), section_divider(6), SANS(30+), MONO(5), ly.clear(10), safe_place(3). 3 .shift() + 6 .next_to() all in diagram/table scenes (acceptable). |
 | 73 | Common Dist. (Continuous) | 577 | YES | N/A (already v2) | YES | Created with v2. setup_bg(1), progressive_reveal(5), section_divider(3), SANS(20+), MONO(8), ly.clear(8), safe_place(6). 3 .shift() + 1 .move_to() + 7 .next_to() all in diagram/table/visual scenes (acceptable). Rendered. |
 | 74 | Law of Large Numbers | 461 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(5), section_divider(3), SANS(25), ly.clear(8), formula_box(4), safe_place(2), two_columns(1). Zero .shift()/.to_edge()/.move_to()/.next_to(). Competitive analysis done. Rendered. |
-| 75 | Central Limit Theorem | 751 | YES | N/A (already v2) | PENDING | Created with v2. setup_bg(2), progressive_reveal(8), section_divider(1), SANS(46), ly.clear(16), formula_box(5), safe_place(2), two_columns(1). Zero .shift()/.to_edge()/.move_to()/.next_to(). Competitive analysis done. |
+| 75 | Central Limit Theorem | 754 | YES | YES (timing) | YES | Created with v2. Narration timing fixed: increased caption durations (18 segments), added explicit waits between subcaptions to prevent overlap. Video: 4:02 duration. Minor speedup warnings remain (1.5-2.3x on 5 of 18 segments). |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension

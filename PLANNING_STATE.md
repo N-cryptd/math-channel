@@ -110,7 +110,7 @@
 | 72 | Common Distributions (Discrete) | ✅ | ✅ |
 | 73 | Common Distributions (Continuous) | ✅ | ✅ |
 | 74 | Law of Large Numbers | ✅ | ✅ |
-| 75 | Central Limit Theorem | ✅ | 🔄 |
+| 75 | Central Limit Theorem | ✅ | ✅ |
 | 76 | Estimation and Confidence Intervals | BACKLOG | |
 | 77 | Hypothesis Testing | BACKLOG | |
 | 78 | Regression Basics | BACKLOG | |
