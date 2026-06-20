@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-19
+**Last updated:** 2026-06-20
 
-**Completed Videos (76 complete)**
+**Completed Videos (78 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -90,27 +90,10 @@
 | 65 | Phase Portraits | ✅ | ✅ |
 | 66 | Numerical Methods (Euler, RK4) | ✅ | ✅ |
 
-## In Progress
-
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
 - Linear Algebra (Videos 25–40): COMPLETE (16 videos)
 - Calculus III (Videos 41–54): COMPLETE (14 videos)
+- Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
-## Upcoming — Next Playlist: Probability & Statistics
-
-### Probability & Statistics (Videos 67–78)
-| # | Title | Script | Rendered |
-|---|-------|--------|----------|
-| 67 | Probability Spaces | ✅ | ✅ |
-| 68 | Conditional Probability | ✅ | ✅ |
-| 69 | Independence and Bayes' Theorem | ✅ | ✅ |
-| 70 | Random Variables | ✅ | ✅ |
-| 71 | Expectation and Variance | ✅ | ✅ |
-| 72 | Common Distributions (Discrete) | ✅ | ✅ |
-| 73 | Common Distributions (Continuous) | ✅ | ✅ |
-| 74 | Law of Large Numbers | ✅ | ✅ |
-| 75 | Central Limit Theorem | ✅ | ✅ |
-| 76 | Estimation and Confidence Intervals | ✅ | ✅ |
-| 77 | Hypothesis Testing | BACKLOG | |
-| 78 | Regression Basics | BACKLOG | |
+## In Progress
