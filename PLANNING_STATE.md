@@ -109,7 +109,8 @@
 ### Discrete Mathematics (Videos 79+)
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
-| 79 | Propositional Logic | ✅ | ⏳ |
+| 79 | Propositional Logic | ✅ | ✅ |
+| 80 | Predicate Logic | ✅ | ✅ |
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -118,4 +119,4 @@
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): IN PROGRESS — Video 79 script complete, render pending
+- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-80 complete, Video 81 (Sets and Operations) next

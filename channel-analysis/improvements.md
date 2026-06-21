@@ -2793,3 +2793,49 @@ Bridging intuition (simulation) → formal (theorem statement) → application (
 - Preview of Video 76 (confidence intervals)
 - Color coding: population = SECONDARY, sampling distribution = PRIMARY, normal curve = ACCENT
 - Duration target: 15 minutes (our most important probability video — worth the full length)
+
+---
+
+## 2026-06-21 — Video 80: Predicate Logic
+
+### Competitive Landscape
+- **3Blue1Brown:** NO predicate logic content. No discrete math coverage at all.
+- **Mathologer:** NO predicate logic content. Covers logic tangentially in number theory proofs.
+- **Reducible:** NO predicate logic content. CS-focused (algorithms, information theory).
+- **Dr. Trefor Bazett:** Has discrete math content but recent 50 videos show pivot to viral shorts/essays. Legacy discrete math playlist may exist but not discoverable via API.
+- **TrevTutor:** PIVOTED entirely to linguistics content. Legacy discrete math playlist existed (~500K views on logic videos) but channel completely rebranded.
+- **Zach Star:** PIVOTED to sketch comedy (2024+). No longer producing math education.
+- **Socratica:** PIVOTED to Python/quant finance tutorials. Legacy abstract algebra playlist existed.
+- **Neso Academy:** PIVOTED to VHDL and ML content. Legacy discrete math playlist may exist but not discoverable.
+- **The Math Sorcerer:** Has proof-based content but focused on integration problems and motivational content, not discrete math.
+- **Khan Academy:** Has logic content in traditional lecture format (slides + annotations). Thorough but dry, no Manim animations.
+
+### Key Insight: MASSIVE GAP
+**There is NO high-quality Manim-animated predicate logic / first-order logic video on YouTube.** The topic is covered only by:
+1. Legacy whiteboard lectures (TrevTutor, Khan Academy) — now outdated or pivoted
+2. University lecture recordings
+3. Textbook-style slide presentations
+
+This is the same gap we identified for Video 79 (Propositional Logic) — and we filled it. Video 80 continues our unique market position as the only Manim-animated discrete math series.
+
+### Techniques to Adopt
+1. **Color-coded quantifiers:** ∀ in PRIMARY (blue), ∃ in SECONDARY (green) — visual distinction is critical since these symbols look similar
+2. **Domain visualization:** Show a set of objects as dots/circles, then overlay quantified statements to illustrate scope
+3. **Negation transformation animation:** Animated push-through of NOT past quantifiers (De Morgan's for quantifiers: ¬∀x P(x) → ∃x ¬P(x))
+4. **Free vs bound variable coloring:** Free variables in ACCENT (yellow), bound variables in DIM — helps students see the difference
+
+### Techniques to Avoid
+1. Don't start with formal definition — most competitors do this and it's dry
+2. Don't overwhelm with nested quantifiers in the first examples
+3. Don't skip the connection back to propositional logic (Video 79)
+
+### Video 79 Analysis Reference (for continuity)
+- From Video 79 analysis: "No high-quality Manim-animated pure math propositional logic video exists"
+- Our color scheme for propositional variables: p = PRIMARY, q = SECONDARY
+- This extends naturally: predicate variables use P(x) with the same coloring
+
+### Production Notes
+- Predicate Logic builds directly on Propositional Logic (Video 79)
+- Key new concepts: predicates, domains, universal quantifier (∀), existential quantifier (∃), free/bound variables, negation of quantifiers, nested quantifiers
+- Target: 12 minutes
+- Color coding: ∀ = PRIMARY, ∃ = SECONDARY, predicates = ACCENT, free vars = RED, bound vars = DIM
