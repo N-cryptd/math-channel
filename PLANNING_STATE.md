@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-21
+**Last updated:** 2026-06-22
 
-**Completed Videos (79 complete)**
+**Completed Videos (82 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -111,7 +111,8 @@
 |---|-------|--------|----------|
 | 79 | Propositional Logic | ✅ | ✅ |
 | 80 | Predicate Logic | ✅ | ✅ |
-| 81 | Sets and Operations | ✅ | 🔲 |
+| 81 | Sets and Operations | ✅ | ✅ |
+| 82 | Relations and Functions | ✅ | ✅ |
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -120,4 +121,4 @@
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-80 complete, Video 81 script written, pending render. Next: Video 82 (Relations and Functions)
+- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-82 complete. Next: Video 83 (Equivalence Relations)
