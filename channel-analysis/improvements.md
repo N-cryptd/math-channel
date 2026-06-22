@@ -2839,3 +2839,192 @@ This is the same gap we identified for Video 79 (Propositional Logic) — and we
 - Key new concepts: predicates, domains, universal quantifier (∀), existential quantifier (∃), free/bound variables, negation of quantifiers, nested quantifiers
 - Target: 12 minutes
 - Color coding: ∀ = PRIMARY, ∃ = SECONDARY, predicates = ACCENT, free vars = RED, bound vars = DIM
+
+---
+
+### [2026-06-21] Video 81: Sets and Operations
+
+**Source 1: TrevTutor — "INTRODUCTION to SET THEORY - DISCRETE MATHEMATICS"**
+URL: https://www.youtube.com/watch?v=tyDKR4FG3Yw
+Views: 2.79M | Date: Jul 11, 2017 | Duration: 16:38 | Captions: True
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+Thumbnail Analysis: Dark blue background with white graduation cap + glasses icon (education branding). Large white text "Introduction to Set Theory." Clean but static — no mathematical content shown. Text-heavy, no visual hook.
+
+Key Insights:
+- Pen-on-paper style (tablet recording) — no animation at all
+- Covers: set notation, roster method, set builder notation, subsets, empty set, equality
+- Dense delivery — crams many concepts into 16 minutes without visual aids
+- 2.79M views proves massive demand for this content despite low production value
+- Uses Rosen textbook as reference — aligns with standard discrete math curriculum
+
+Techniques to Adopt:
+- Cover all core set notation in a single video (students prefer consolidated content)
+- Use Rosen-style progression: notation → subsets → operations → special sets
+
+Techniques to Avoid:
+- Don't use static pen-on-paper style — we have Manim, use it
+- Don't cram too many topics without visual breathing room
+
+---
+
+**Source 2: Dr. Trefor Bazett — "Intro to Sets | Examples, Notation & Properties"**
+URL: https://www.youtube.com/watch?v=B1v2-nGXNzs
+Views: 338K | Date: Apr 25, 2017 | Duration: 7:12 | Captions: True
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 7/10 | Narration 7/10 | Hooks 5/10
+
+Thumbnail Analysis: Black background with pink chalk-drawn set notation (curly braces, elements). White text "Intro to Sets | Examples, Notation & Properties." Semi-animated style with handwritten math. Clean, educational feel.
+
+Key Insights:
+- Uses some animations (zooming, highlighting) with a chalkboard aesthetic
+- Focuses on examples and notation — practical approach
+- Short (7 min) — good for a single concept but incomplete for our scope
+- Has a full discrete math playlist — organized curriculum approach
+- 338K views despite being more polished than TrevTutor
+
+Techniques to Adopt:
+- Example-driven approach: show real sets first, then generalize
+- Clear section-by-section organization with learning objectives upfront
+
+Techniques to Avoid:
+- Chalkboard aesthetic limits visual possibilities — we should use clean digital visuals
+- Very narrow scope (only notation, no operations) — we need broader coverage
+
+---
+
+**Source 3: The Organic Chemistry Tutor — "Intersection of Sets, Union of Sets and Venn Diagrams"**
+URL: https://www.youtube.com/watch?v=xZELQc11ACY
+Views: 2.93M | Date: Feb 7, 2018 | Duration: 11:49 | Captions: True
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 5/10 | Narration 6/10 | Hooks 4/10
+
+Thumbnail Analysis: Black background, yellow text "Union & Intersection." Central Venn diagram with two labeled overlapping circles (A, B) with numbers inside. Classic, clear, immediately communicates the topic.
+
+Key Insights:
+- 2.93M views — highest-performing set operations video on YouTube
+- Uses digital whiteboard (not Manim) with Venn diagrams as primary visual
+- Focuses on union and intersection only — narrow scope
+- Goes straight to examples without building much intuition
+- Venn diagrams are the core visual metaphor
+
+Techniques to Adopt:
+- Venn diagrams as THE primary visual for set operations
+- Yellow accent for highlighting (mirrors our ACCENT color)
+- Start with concrete number examples before abstract notation
+
+Techniques to Avoid:
+- Don't just show formulas — competitors lack animated proofs of properties
+- Don't restrict to only union/intersection — our video covers the full picture
+
+---
+
+**Source 4: The Organic Chemistry Tutor — "Set Builder Notation and Roster Method"**
+URL: https://www.youtube.com/watch?v=FLgiccWl434
+Views: 1.35M | Date: Feb 7, 2018 | Duration: 14:41 | Captions: True
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 3/10
+
+Thumbnail Analysis: Black background with white text. Shows set notation examples visually. Straightforward but not visually compelling.
+
+Key Insights:
+- 1.35M views — strong demand for set builder notation specifically
+- Covers: roster method vs set builder notation conversion
+- Many practice problems with natural numbers, evens, odds, primes
+- No visual animation — pure whiteboard/pen
+
+Techniques to Adopt:
+- Convert between roster and set-builder notation with clear animated transitions
+- Use familiar sets (evens, odds, primes) as examples
+
+Techniques to Avoid:
+- Don't rely on pure notation exercises without visual representation
+
+---
+
+**Source 5: TrevTutor — "SUBSETS AND POWER SETS"**
+URL: https://www.youtube.com/watch?v=H5D6EAezsXQ
+Views: 723K | Date: Jan 21, 2018 | Duration: 15:02 | Captions: True
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+Key Insights:
+- Covers subsets, proper subsets, empty set, power sets
+- Shows the |P(A)| = 2^n pattern with examples
+- Pen-on-paper style, no animation
+- Power set of empty set = {empty set} is a nice aha moment
+
+Techniques to Adopt:
+- The |P(A)| = 2^n reveal is a great "aha moment" to build toward
+- Show power set construction visually as a tree/branching diagram
+
+---
+
+**Source 6: TrevTutor — "CARTESIAN PRODUCTS and ORDERED PAIRS"**
+URL: https://www.youtube.com/watch?v=NnEkVooAsxk
+Views: 571K | Date: Jan 21, 2018 | Duration: 10:34 | Captions: True
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+Key Insights:
+- Covers ordered pairs, Cartesian product A × B, n-tuples
+- |A × B| = |A| × |B| pattern
+- Visual representation as a grid/table — we can animate this beautifully
+- Connects to coordinate geometry (x, y pairs)
+
+Techniques to Adopt:
+- Animate the Cartesian product as a grid forming from two sets
+- Show the connection to coordinates/graphing
+
+---
+
+**Source 7: Dr. Trefor Bazett — "Cartesian Product of Two Sets A × B"**
+URL: https://www.youtube.com/watch?v=ufjEv-5nmcA
+Views: 228K | Date: May 5, 2017 | Duration: 7:10 | Captions: True
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Uses zoom/highlight animations (semi-animated)
+- Defines ordered pair, then Cartesian product, then finds all elements
+- Learning objectives upfront — good pedagogical practice
+- Short and focused
+
+---
+
+**Source 8: Teach Me Animated Math — "Sets & Symbols in Math"**
+URL: https://www.youtube.com/watch?v=Lo_HZj-0uq8
+Views: 52K | Date: Jul 27, 2020 | Duration: 3:31 | Captions: True
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 6/10 | Narration 5/10 | Hooks 4/10
+
+Thumbnail Analysis: Vibrant orange background. Large white "SETS" text. Colorful simple illustrations (animals, symbols). Designed for young/pre-algebra audience — not our target but shows what's possible with animation.
+
+Key Insights:
+- Genuinely animated (not just pen-on-paper)
+- Very basic level (pre-algebra) — our video will be more advanced
+- Shows that animated set theory content is rare and underserved
+
+---
+
+### Competitive Analysis Summary — Video 81
+
+**MAJOR GAPS IDENTIFIED:**
+1. NO high-quality Manim-animated video covers ALL these topics in one place
+2. Competitors split set content across 4-6 separate videos (notation, operations, subsets/power set, Cartesian product)
+3. De Morgan's laws for sets have NO animated/visual treatment on YouTube (only whiteboard)
+4. No competitor animates the 2^n power set growth pattern visually
+5. No competitor shows Venn diagram animations for all operations simultaneously
+
+**Our Competitive Advantage:**
+- We consolidate ALL set theory basics into a single comprehensive, beautifully animated video
+- Manim enables Venn diagram animations, set builder notation transitions, and grid visualizations that no competitor has
+- Our systematic curriculum approach (building from Video 80: Predicate Logic) is unique
+
+**Techniques for Our Video:**
+1. Venn diagrams as primary visual (color-coded: A = PRIMARY, B = SECONDARY)
+2. Animate operations on Venn diagrams: union (fill both), intersection (fill overlap), difference (fill A minus overlap), complement (fill outside)
+3. Animated set builder ↔ roster notation transformation
+4. Power set as a branching tree diagram showing 2^n growth
+5. Cartesian product as an animated grid forming from two axes
+6. De Morgan's laws: animated Venn diagram proof (shade complement regions)
+7. Bridge from predicate logic (Video 80): show how sets relate to predicates with domain visualization
+
+**Production Notes — Video 81: Sets and Operations**
+- Builds on Video 80 (Predicate Logic): predicates define sets
+- Topics: set notation, set builder notation, set operations (union, intersection, difference, complement), power set, Cartesian product, De Morgan's laws for sets
+- Target: 10 minutes (curriculum map), aim for 12-13 minutes with animations
+- Color coding: Set A = PRIMARY, Set B = SECONDARY, universal set U = ACCENT, empty set = RED, operations = WHITE
