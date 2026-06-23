@@ -3028,3 +3028,77 @@ Key Insights:
 - Topics: set notation, set builder notation, set operations (union, intersection, difference, complement), power set, Cartesian product, De Morgan's laws for sets
 - Target: 10 minutes (curriculum map), aim for 12-13 minutes with animations
 - Color coding: Set A = PRIMARY, Set B = SECONDARY, universal set U = ACCENT, empty set = RED, operations = WHITE
+
+## 2026-06-22 — Video 83: Equivalence Relations
+
+### Dr. Trefor Bazett — "Equivalence Relations - Reflexive, Symmetric, and Transitive" (T6RUxvJR8i4)
+- 194K views, 4:36, 605K subscribers, Jul 2017
+- iPad whiteboard style, no Manim animations
+- Thumbnail: man in dark polo, black bg, white/blue text overlays — medium quality (6/10)
+- Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+- Covers: definition (reflexive+symmetric+transitive), equality as example, proof example
+- Very short (4:36), covers only the definition and basic examples
+- No equivalence classes, no partitions, no modular arithmetic
+- Narration is clear and conversational but rushes through the definition
+
+### Kimberly Brehm — "Discrete Math - 9.5.1 Equivalence Relations" (ZgcTX16borA)
+- 144K views, 22:30, 126K subscribers, Apr 2020
+- Tablet whiteboard with handwritten text, structured lecture format
+- Thumbnail: black bg, white text "Discrete Mathematics Equivalence Relations", handwritten font — 6/10
+- Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 2/10 | Narration 6/10 | Hooks 3/10
+- Covers: equivalence relations definition, yes/no examples, equivalence classes, partitions, mod 4 integers
+- Well-structured with video chapters, covers the full topic
+- But visually static — all handwritten notes, no animations, no digraph visuals
+- 22 minutes is quite long, pacing could be tighter
+
+### Neso Academy — "Equivalence Relation" (RexPywlCmV8) + "Equivalence Classes" (TbCk79SoCYw)
+- Equivalence Relation: 316K views, 6:29, 3.2M subscribers, Sep 2021
+- Equivalence Classes: 403K views, 7:19, Sep 2021
+- Slide-based with bullet points and definitions on black background
+- Thumbnails: black bg, white text listing relations; yellow/green/white color scheme — 8/10
+- Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 2/10 | Narration 5/10 | Hooks 3/10
+- Two separate videos for equivalence relations and classes — fragmented coverage
+- Covers examples: "is equal to", "has same birthday", "is congruent mod n"
+- Uses static text-based slides, no animations or visual proofs
+- High views due to large subscriber base, not content quality
+
+### TrevTutor — "RELATIONS - DISCRETE MATHEMATICS" (FI6j5QZNVx0)
+- 1M+ views, 15:36, 328K subscribers, Dec 2014
+- Screen whiteboard, older production quality
+- Covers: all relation properties in one video (reflexive, symmetric, transitive, equivalence relations)
+- Dimensions: Structure 5/10 | Pacing 5/10 | Visuals 2/10 | Narration 4/10 | Hooks 3/10
+- Very broad coverage, shallow treatment of equivalence relations specifically
+- No equivalence classes or partitions
+
+### Wrath of Math — "What is an Equivalence Relation?" (unvT3HDa6Rw)
+- 41K views, 5:01, 404K subscribers, Feb 2019
+- Thumbnail: red diamond shape, yellow highlights, handwritten style — 7/10
+- Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 2/10 | Narration 6/10 | Hooks 4/10
+- Good conversational tone, uses = (equality) as the canonical example
+- Discusses non-examples: < on reals, "is the father of", set membership
+- Short and focused, but only covers the definition — no classes or partitions
+
+### Key Insights for Video 83
+
+**GAP IDENTIFIED:** No high-quality animated video covers equivalence relations with equivalence classes, partitions, AND modular arithmetic in a unified visual presentation. Existing content is:
+- Whiteboard/slide-based (no animations)
+- Fragmented (relations, classes, partitions in separate videos)
+- Definition-heavy without visual intuition
+
+**Techniques to Adopt:**
+1. Dr. Trefor Bazett's conversational definition-first approach — start with "what does it mean for two things to be equivalent?"
+2. Kimberly Brehm's structured coverage — she covers the full topic (definition → examples → classes → partitions) in one video
+3. Wrath of Math's non-examples approach — show what is NOT an equivalence relation to sharpen the definition
+4. Neso Academy's "same birthday" example — intuitive non-mathematical example
+
+**Techniques to Avoid or Improve:**
+1. Don't separate equivalence classes and partitions into different videos — unify them
+2. Don't rely on static text — use animated digraphs to show the three properties visually
+3. Don't skip modular arithmetic — it's the canonical payoff example
+4. Don't rush the partition theorem — this is the deep connection that makes equivalence relations important
+
+**Visual Strategy (Our Differentiator):**
+- Animated digraph showing all three properties simultaneously with color coding
+- Visual partition of a set into colored equivalence class "buckets"
+- Number line animation for mod 3 equivalence classes on Z
+- Progressive reveal: start with relation properties review → combine them → show what emerges
