@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-23
+**Last updated:** 2026-06-24
 
-**Completed Videos (83 complete)**
+**Completed Videos (84 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -114,7 +114,8 @@
 | 81 | Sets and Operations | ✅ | ✅ |
 | 82 | Relations and Functions | ✅ | ✅ |
 | 83 | Equivalence Relations | ✅ | ✅ |
-| 84 | Counting Principles | ✅ (plan+script) | 🔄 pending render |
+| 84 | Counting Principles | ✅ | ✅ |
+| 85 | Pigeonhole Principle | 🔲 BACKLOG | 🔲 |
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -123,4 +124,4 @@
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-83 complete. Video 84 (Counting Principles) has plan+script, pending render. Next: Video 85 (Pigeonhole Principle)
+- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-84 complete. Video 85 (Pigeonhole Principle) is next in backlog.
