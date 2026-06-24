@@ -62,21 +62,12 @@ class Video83_EquivalenceRelations(Scene):
 
         title = self.ly.title("The Power of \"Same As\"")
 
-        # Bridge from last video
-        bridge = Text(
-            "Last video: reflexive, symmetric, transitive -- separately.",
-            font_size=BODY_SIZE, color=DIM, font=SANS,
-        )
-        self.ly.safe_place(bridge, direction=DOWN, anchor=title, buff=0.5)
-        self.play(FadeIn(bridge, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.2)
-
         # Real-world example 1
         ex1 = Text(
             "\"same birthday\"  --  groups people by birth date",
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
-        self.ly.safe_place(ex1, direction=DOWN, anchor=bridge, buff=0.4)
+        self.ly.safe_place(ex1, direction=DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(ex1, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(2.5)
 
@@ -98,7 +89,7 @@ class Video83_EquivalenceRelations(Scene):
         self.play(FadeIn(ex3, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(2.5)
 
-        # Key insight
+        # Key insight (5 items max: title + ex1 + ex2 + ex3 + insight)
         insight = Text(
             "These relations share a deep structure: they split the "
             "world into groups of equivalent items.",
@@ -218,12 +209,13 @@ class Video83_EquivalenceRelations(Scene):
         self.play(Write(checks3), run_time=FAST)
         self.wait(1.2)
 
-        # Verdict
+        # Verdict (FadeOut checks to stay within 5-item budget)
+        self.play(FadeOut(checks1, checks2, checks3), run_time=FAST)
         verdict1 = Text(
             "YES -- equals is an equivalence relation!",
             font_size=BODY_SIZE, color=SECONDARY, font=SANS,
         )
-        self.ly.safe_place(verdict1, direction=DOWN, anchor=checks3, buff=0.4)
+        self.ly.safe_place(verdict1, direction=DOWN, anchor=ex1_label, buff=0.4)
         self.play(FadeIn(verdict1, shift=LEFT * 0.15), run_time=FAST)
         self.wait(3.8)
 
@@ -336,13 +328,14 @@ class Video83_EquivalenceRelations(Scene):
 
         title = self.ly.title("Grouping Related Elements")
 
-        # Definition
+        # Definition (highlighted with formula_box)
         definition = MathTex(
             r"[a] = \{b \in A : b \sim a\}",
             font_size=HEADING_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(definition, direction=DOWN, anchor=title, buff=0.6)
-        self.play(Write(definition), run_time=NORMAL)
+        boxed_def = self.ly.formula_box(definition, color=ACCENT)
+        self.ly.safe_place(boxed_def, direction=DOWN, anchor=title, buff=0.6)
+        self.play(Write(boxed_def), run_time=NORMAL)
         self.wait(1.2)
 
         desc = Text(
@@ -371,6 +364,9 @@ class Video83_EquivalenceRelations(Scene):
         self.play(Write(class1), run_time=FAST)
         self.wait(0.8)
 
+        # FadeOut accumulated items to make room (content budget)
+        self.play(FadeOut(desc, example_set, boxed_def), run_time=FAST)
+
         # Class of 2 (even numbers)
         class2 = MathTex(
             r"[2] = \{2, 4\}",
@@ -378,14 +374,17 @@ class Video83_EquivalenceRelations(Scene):
         )
         self.ly.safe_place(class2, direction=DOWN, anchor=class1, buff=0.3)
         self.play(Write(class2), run_time=FAST)
-        self.wait(1.2)
+        self.wait(0.8)
+
+        # FadeOut class1 before showing insight (content budget)
+        self.play(FadeOut(class1), run_time=FAST)
 
         # Key insight
         insight = MathTex(
             r"[a] = [b] \iff a \sim b",
             font_size=BODY_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(insight, direction=DOWN, anchor=class2, buff=0.4)
+        self.ly.safe_place(insight, direction=DOWN, anchor=title, buff=0.6)
         self.play(Write(insight), run_time=NORMAL)
         self.wait(5)
 
@@ -412,13 +411,14 @@ class Video83_EquivalenceRelations(Scene):
 
         title = self.ly.title("The Canonical Example: Mod n")
 
-        # Definition of congruence
+        # Definition of congruence (highlighted with formula_box)
         congruence_def = MathTex(
             r"a \equiv b \pmod{n} \iff n \mid (a - b)",
             font_size=HEADING_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(congruence_def, direction=DOWN, anchor=title, buff=0.6)
-        self.play(Write(congruence_def), run_time=NORMAL)
+        boxed_cong = self.ly.formula_box(congruence_def, color=ACCENT)
+        self.ly.safe_place(boxed_cong, direction=DOWN, anchor=title, buff=0.6)
+        self.play(Write(boxed_cong), run_time=NORMAL)
         self.wait(1.2)
 
         # Quick property check
@@ -426,7 +426,7 @@ class Video83_EquivalenceRelations(Scene):
             "Check: reflexive (n|0), symmetric (n|(a-b) -> n|(b-a)), transitive",
             font_size=BODY_SIZE, color=WHITE, font=SANS,
         )
-        self.ly.safe_place(prop_check, direction=DOWN, anchor=congruence_def, buff=0.4)
+        self.ly.safe_place(prop_check, direction=DOWN, anchor=boxed_cong, buff=0.4)
         self.play(FadeIn(prop_check, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1.2)
 
@@ -447,6 +447,9 @@ class Video83_EquivalenceRelations(Scene):
         self.ly.safe_place(class0, direction=DOWN, anchor=mod3_title, buff=0.3)
         self.play(Write(class0), run_time=FAST)
         self.wait(0.8)
+
+        # FadeOut earlier items to make room (content budget: 5 max)
+        self.play(FadeOut(boxed_cong, prop_check), run_time=FAST)
 
         class1 = MathTex(
             r"[1] = \{\ldots, -5, -2, 1, 4, 7, 10, \ldots\}",
@@ -517,12 +520,13 @@ class Video83_EquivalenceRelations(Scene):
         self.play(FadeIn(req3, shift=LEFT * 0.15), run_time=FAST)
         self.wait(1.2)
 
-        # Formal notation
+        # Formal notation (FadeOut reqs to stay within 5-item budget)
+        self.play(FadeOut(req1, req2, req3), run_time=FAST)
         formal = MathTex(
             r"A = B_1 \sqcup B_2 \sqcup \cdots \sqcup B_k",
             font_size=HEADING_SIZE, color=WHITE,
         )
-        self.ly.safe_place(formal, direction=DOWN, anchor=req3, buff=0.5)
+        self.ly.safe_place(formal, direction=DOWN, anchor=definition, buff=0.5)
         self.play(Write(formal), run_time=NORMAL)
         self.wait(5)
 
@@ -652,12 +656,15 @@ class Video83_EquivalenceRelations(Scene):
         self.play(FadeIn(part2_proof, shift=LEFT * 0.15), run_time=FAST)
         self.wait(1.2)
 
+        # FadeOut parts 1-2 to make room for part 3 (content budget: 5 max)
+        self.play(FadeOut(part1, part2, part2_detail, part2_proof), run_time=FAST)
+
         # Part 3
         part3 = Text(
             "3. Union covers A:  every a in A is in [a]",
             font_size=BODY_SIZE, color=ACCENT, font=SANS,
         )
-        self.ly.safe_place(part3, direction=DOWN, anchor=part2_proof, buff=0.4)
+        self.ly.safe_place(part3, direction=DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(part3, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(2.5)
 

@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-22
+**Last updated:** 2026-06-23
 
 **Completed Videos (83 complete)**
 
@@ -114,6 +114,7 @@
 | 81 | Sets and Operations | ✅ | ✅ |
 | 82 | Relations and Functions | ✅ | ✅ |
 | 83 | Equivalence Relations | ✅ | ✅ |
+| 84 | Counting Principles | ✅ (plan+script) | 🔄 pending render |
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -122,4 +123,4 @@
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-83 complete. Next: Video 84 (Counting Principles)
+- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-83 complete. Video 84 (Counting Principles) has plan+script, pending render. Next: Video 85 (Pigeonhole Principle)
