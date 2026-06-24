@@ -3102,3 +3102,179 @@ Key Insights:
 - Visual partition of a set into colored equivalence class "buckets"
 - Number line animation for mod 3 equivalence classes on Z
 - Progressive reveal: start with relation properties review → combine them → show what emerges
+
+## 2026-06-23 — Counting Principles (Video 84)
+Source: Competitive landscape analysis for permutations, combinations, binomial coefficients
+
+### Competitor Videos Analyzed
+
+**1. Kimberly Brehm — "Permutations and Combinations"** (~350K views, 22 min, tablet whiteboard)
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+- Full textbook-style coverage of P(n,k) and C(n,k) with many examples
+- Systematic approach: defines each, shows formula, works through problems
+- Visually static (whiteboard), no animations or visual proofs
+- Good pace for university students but visually flat
+- No treatment of binomial coefficient properties or Pascal's identity
+
+**2. Neso Academy — "Permutations & Combinations"** (~1.2M views combined, slide-based)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 5/10 | Hooks 3/10
+- Multiple videos split across permutations, combinations, and applications
+- High view count driven by large subscriber base and exam-prep demand
+- Uses static slides with worked examples
+- Good systematic coverage but no visual intuition building
+- Lacks unifying narrative connecting the concepts
+
+**3. TrevTutor — "Discrete Math: Counting"** (~200K views, whiteboard)
+Dimensions: Structure 5/10 | Pacing 5/10 | Visuals 2/10 | Narration 6/10 | Hooks 4/10
+- Covers multiplication rule, permutations, combinations in a single video
+- CS-focused with programming-relevant examples
+- Minimal visual quality (screen-recorded whiteboard)
+- Too fast on formulas, not enough intuition building
+
+**4. Wrath of Math — "Fundamental Counting Principle"** (~150K views, 5-10 min)
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 3/10 | Narration 7/10 | Hooks 6/10
+- Good conversational tone, focuses on the fundamental counting principle
+- Simple examples (outfits, meals) — accessible but shallow
+- Doesn't reach permutations/combinations depth
+- Good hook style: relatable real-world counting problems
+
+**5. Dr. Trefor Bazett — "Combinatorics"** (~200K views, iPad whiteboard, 8-12 min)
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 4/10 | Narration 7/10 | Hooks 5/10
+- Energetic delivery with color-coded examples
+- Covers permutations and combinations with good motivation
+- iPad whiteboard — better than slides but not animated
+- Good "why order matters / doesn't matter" distinction
+- Misses binomial coefficient identities and Pascal's triangle
+
+### Key Insights
+- **MAJOR GAP:** No high-quality animated video systematically covers the full counting principles arc (product rule → permutations → combinations → binomial coefficients → Pascal's identity) in one visual presentation
+- All competitors use static whiteboards or slides — zero animated counting visuals
+- Nobody visualizes the "tree diagram → formula" derivation with animation
+- Nobody shows Pascal's triangle building up with animation
+- The "order matters vs. doesn't matter" distinction is handled verbally everywhere — we can make it VISUAL
+
+### Techniques to Adopt
+- Wrath of Math's conversational hook style: start with a relatable counting problem (password, outfits)
+- Kimberly Brehm's systematic structure: define → formula → examples
+- Dr. Trefor's energy and color-coded examples
+
+### Techniques to Adapt / Improve
+- Instead of static formulas, ANIMATE the counting process (tree diagrams, arrangement animations)
+- Show permutations vs. combinations as a VISUAL transformation: "now forget the order..."
+- Build Pascal's triangle row by row with animation
+- Use our color system: PRIMARY for permutations, SECONDARY for combinations, ACCENT for binomial coefficients
+
+### Techniques to Avoid
+- Kimberly Brehm's 22-minute length for a single topic — keep it 12-15 min
+- Neso Academy's exam-prep tone — stay conceptual
+- TrevTutor's speed through formulas without intuition
+
+### Visual Strategy (Our Differentiator)
+- Animated tree diagrams showing the multiplication principle branching out
+- Visual "arrangement" animations: objects moving into slots for permutations
+- Animated transform: permutation arrangement → collapse order → combination selection
+- Pascal's triangle row-by-row build with color-coded entries
+- Poker hand example with animated card selection showing C(52,5)
+- Progressive reveal: product rule → permutations → combinations → binomial properties → applications
+
+## 2026-06-24 — Pigeonhole Principle (Video 85)
+Source: Competitive landscape analysis for pigeonhole principle, Dirichlet's box principle
+
+### Competitor Videos Analyzed
+
+**1. Spanning Tree — "What Is the Pigeonhole Principle?"** (3.5M views, 8:23, Aug 2020)
+Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 7/10 | Narration 8/10 | Hooks 8/10
+- Thumbnail: 3D animated pigeons in pigeonholes, light blue/beige gradient background, bold black title text. Click-worthiness: 8/10 — the literal pigeon visual immediately communicates the topic.
+- Clean animated explainer using custom visuals (3D pigeons, chessboard, globe)
+- Starts with the classic "hairy twins" puzzle as a hook
+- Covers: basic principle → chessboard puzzle → planet puzzle → data compression → formal definition
+- Structure: Intro → Puzzle hooks → Applications → Formal statement
+- Good balance of intuition-first with concrete examples before abstraction
+- Relatively short (8 min) — covers the core idea efficiently
+- Weakness: Doesn't cover the generalized pigeonhole principle or the proof techniques for contest problems
+
+**2. Mathologer — "The Pigeon Hole Principle: 7 gorgeous proofs"** (191K views, 33:32, Apr 2021)
+Dimensions: Structure 9/10 | Pacing 6/10 | Visuals 8/10 | Narration 9/10 | Hooks 10/10
+- Thumbnail: Mirrored Einstein photo with bold question "DO YOU HAVE A HAIR DOPPELGÄNGER?" — attention-grabbing curiosity gap. Click-worthiness: 9/10.
+- Deep dive into 7 diverse applications: hairy twins, pigeons on a sphere, recurring decimals, party maths, Rubik's cube, IMO 1972 problem, mathematical card trick
+- Each proof is a standalone mini-chapter with distinct visual treatment
+- Uses Mathologer's signature colorful animations and historical context
+- Very strong engagement: the "best mathematical card trick ever" as closer is brilliant
+- Weakness: 33 minutes is long — casual viewers may drop off. Not suitable as a first introduction.
+- No Manim-style animations — uses traditional 2D graphics
+
+**3. Up and Atom — "Simple Principle Solves Seemingly IMPOSSIBLE Math Problems"** (237K views, 15:50, Jan 2023)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 7/10 | Narration 8/10 | Hooks 9/10
+- Thumbnail: Birds flying in sky, bold uppercase title "THE PIGEONHOLE PRINCIPLE". Click-worthiness: 7/10 — clear but less creative than competitors.
+- Brilliant sponsorship integration (infinity course)
+- Structure: Intro → Hair twins → Data compression → Different sizes of infinity
+- Good conversational narration style (Jade Tan-Holmes is engaging)
+- Connects pigeonhole to CS concepts (compression) and advanced topics (infinity)
+- Professional editing with animated segments between talking head
+- Weakness: Only 3 examples in 16 min — could cover more ground. Less formal than academic channels.
+
+**4. Kimberly Brehm — "Discrete Math II - 6.2.1 The Pigeonhole Principle"** (122K views, 14:23, Mar 2022)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 2/10 | Narration 7/10 | Hooks 3/10
+- Thumbnail: Black background, white handwritten text, course number "6.2.1" in box. Click-worthiness: 3/10 — academic, not designed for discovery.
+- Tablet whiteboard with handwritten notation — systematic but visually flat
+- Covers both basic and generalized pigeonhole principle with worked examples
+- Good for exam preparation — follows Rosen textbook structure
+- Multiple practice problems with step-by-step solutions
+- Weakness: No animations, no visual intuition. Pure lecture format. Zero hooks.
+- The "6.2.1" numbering signals a course lecture, not a standalone video
+
+**5. Eddie Woo — "Pigeonhole Principle (1 of 2: Establishing a pattern)"** (32K views, 10:12, May 2023)
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 6/10
+- Thumbnail: Whiteboard screenshot with blue/black handwriting, people diagram with arrows. Click-worthiness: 5/10 — classroom feel, authentic but not click-worthy.
+- Real classroom recording — Eddie Woo teaching live students
+- Excellent pedagogical progression: starts with tangible examples (people in rooms)
+- Natural conversational style with student interaction moments
+- Part 1 of 2 — doesn't cover advanced applications
+- Weakness: Whiteboard-only, no animations. Classroom format limits visual quality.
+
+**6. Prime Newtons — "First Pigeonhole Principle"** (9K views, Jul 2024)
+Dimensions: Structure 5/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks 4/10
+- Thumbnail: Honeycomb pattern background with stylized pigeon icons in brown squares, blue border. Clean and on-topic. Click-worthiness: 6/10.
+- Animated explanation using geometric visuals
+- Covers the basic statement with a few examples
+- Relatively new channel (457K subs) — video hasn't gained much traction yet
+- Short, focused explanation
+
+### Key Insights
+- **TOP GAP:** No high-quality Manim-animated video covers the pigeonhole principle systematically. Spanning Tree uses 3D (not Manim), Mathologer uses 2D graphics, all others use whiteboards.
+- **Spanning Tree dominates** with 3.5M views — their literal pigeon animation is the most clicked approach
+- **Mathologer's "7 proofs" format** is the gold standard for depth but at 33 min it's too long for most viewers
+- **The "hairy twins" problem** (someone in the room has the same number of hairs as you) is universally used as the #1 hook — it's become the canonical pigeonhole example
+- **Curiosity gap titles work best:** "Simple Principle Solves IMPOSSIBLE Problems" (Up and Atom), "DO YOU HAVE A HAIR DOPPELGÄNGER?" (Mathologer)
+- **The generalized pigeonhole principle** is only covered by Kimberly Brehm and TrevTutor — most popular videos skip it entirely
+- **Thumbnail patterns:** Literal pigeons/holes imagery gets the most clicks; academic thumbnails (course numbers, whiteboard screenshots) underperform
+
+### Techniques to Adopt
+- **Spanning Tree's visual-first approach:** Use actual pigeon/box animations to introduce the concept literally before abstracting
+- **Mathologer's multi-chapter structure:** 3-4 distinct applications, each with its own visual treatment, keeps engagement high
+- **The "hairy twins" hook:** Start with this universally compelling example — it immediately demonstrates the power of a seemingly trivial principle
+- **Up and Atom's connection to real applications:** Show how pigeonhole connects to data compression and CS
+- **Progressive complexity:** Basic statement → simple example → surprising application → generalized principle → advanced application
+
+### Techniques to Adapt / Improve
+- Instead of 3D pigeons (Spanning Tree), use our Manim animations: show circles (pigeons) moving into boxes (holes) with color coding
+- Unlike Mathologer's 33-minute format, keep it 10-12 min with 3 tightly-edited applications
+- Instead of Up and Atom's talking-head format, stay fully animated with narration
+- Add the generalized pigeonhole principle (⌈n/m⌉) — most competitors skip this and it's the key to harder problems
+- Show the Fitch Cheney card trick as a finale — Mathologer called it "the best mathematical card trick ever" and it perfectly demonstrates the principle's surprising power
+
+### Techniques to Avoid
+- Kimberly Brehm's static whiteboard format — no animations, no visual intuition
+- Course numbering in thumbnails ("6.2.1") — signals lecture, not entertainment
+- Starting with the formal definition before intuition (Kimberly Brehm, TrevTutor)
+- 33-minute length (Mathologer) — too long for the topic at an introductory level
+- Eddie Woo's classroom format for a standalone video — classroom authenticity doesn't translate to YouTube discovery
+
+### Visual Strategy (Our Differentiator)
+- **Opening:** Animated pigeons (circles with PRIMARY color) flying into holes (rectangles with SECONDARY color) — literal visual of the principle
+- **Hairy twins scene:** Show a crowd of stick figures, highlight two with the same hair count — use ACCENT color for the "match"
+- **Generalized principle:** Visual of n items into m boxes, with one box overflowing — animated accumulation effect
+- **Surprise application:** Choose 2-3 of: (1) recurring decimals via pigeonhole, (2) compression, (3) handshakes at a party
+- **Color coding:** Pigeons = PRIMARY (#5BC0EB), Holes = SECONDARY (#7BC950), the "match" = ACCENT (#FFD166), impossible situation = RED (#EF476F)
+- **Progressive reveal:** Statement → literal example → abstraction → generalized form → surprising application → summary
+- Use our LayoutEngine v2: animated box diagrams with items flowing in, progressive overflow showing the principle in action
