@@ -115,7 +115,7 @@
 | 82 | Relations and Functions | ✅ | ✅ |
 | 83 | Equivalence Relations | ✅ | ✅ |
 | 84 | Counting Principles | ✅ | ✅ |
-| 85 | Pigeonhole Principle | 🔲 BACKLOG | 🔲 |
+| 85 | Pigeonhole Principle | ✅ | ✅ |
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -124,4 +124,4 @@
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-84 complete. Video 85 (Pigeonhole Principle) is next in backlog.
+- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-85 complete. Video 86 (Graph Theory Basics) next in queue.
