@@ -117,6 +117,8 @@
 | 84 | Counting Principles | ✅ | ✅ |
 | 85 | Pigeonhole Principle | ✅ | ✅ |
 | 86 | Graph Theory Basics | ✅ | ✅ |
+| 87 | Trees | ✅ | ✅ |
+| 88 | Planarity & Euler's Formula | ✅ | ⏳ |
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -125,4 +127,4 @@
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-86 complete. Video 87 (Trees) next in queue.
+- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-87 complete (rendered). Video 88 (Planarity & Euler's Formula) script ready, render pending. Video 89+ next in queue.

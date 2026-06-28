@@ -3,8 +3,7 @@ Video 88: Planarity and Euler's Formula
 Discrete Mathematics -- Video 11 of 12
 
 Covers: Planar graphs, planar embeddings, Euler's formula (V - E + F = 2),
-consequences (E <= 3V-6, bipartite bound), Kuratowski's theorem (K5, K3,3),
-and applications to graph drawing and map coloring.
+consequences (edge bounds), K5 and K3,3 non-planarity, Kuratowski's theorem.
 
 Plan: planning/video-88-planarity-euler.md
 
@@ -25,7 +24,7 @@ from layout import LayoutEngine, ensure_fits
 
 
 class Video88_PlanarityEuler(Scene):
-    """Planarity and Euler's Formula: the geometry of drawing graphs flat."""
+    """Planarity and Euler's Formula: when graphs can live in the plane."""
 
     def construct(self):
         self.camera.background_color = BG
@@ -33,356 +32,307 @@ class Video88_PlanarityEuler(Scene):
         self._bg_dots, self._bg_gradient = setup_background(self)
 
         self.scene1_hook()
-        self.scene2_planar_definition()
-        self.scene3_eulers_formula()
-        self.scene4_consequences()
+        self.scene2_definition()
+        self.scene3_euler_formula()
+        self.scene4_applications()
         self.scene5_kuratowski()
-        self.scene6_applications()
-        self.scene7_summary()
-        self.scene8_outro()
+        self.scene6_summary()
+        self.scene7_outro()
 
     # ------------------------------------------------------------------
     # Scene 1: Hook — Can You Draw Without Crossing? (45s)
     # ------------------------------------------------------------------
     def scene1_hook(self):
         self.add_subcaption(
-            "Imagine three houses and three utilities: gas, water, and electricity. "
-            "Each house needs to connect to every utility, but no lines can cross. "
-            "Is it possible? This is the famous utility graph puzzle.",
-            duration=18,
+            "Can you draw three houses connected to three utilities without "
+            "any pipes crossing? This classic puzzle reveals a deep property "
+            "of graphs called planarity.",
+            duration=16,
         )
         play_intro(self, "Planarity and Euler's Formula", "Discrete Mathematics")
 
-        title = self.ly.title("The Crossing Puzzle")
+        title = self.ly.title("Can You Draw Without Crossing?")
 
-        # Draw K3,3 — 3 houses on left, 3 utilities on right
-        houses = VGroup(
-            Dot(UP * 1.5 + LEFT * 3, color=WHITE, radius=0.15),
-            Dot(UP * 0 + LEFT * 3, color=WHITE, radius=0.15),
-            Dot(DOWN * 1.5 + LEFT * 3, color=WHITE, radius=0.15),
+        # Draw K3,3 (utility graph) — simple version with crossing visible
+        left_verts = VGroup(
+            Dot(LEFT * 2 + UP * 1.5, color=PRIMARY, radius=0.13),
+            Dot(LEFT * 2, color=PRIMARY, radius=0.13),
+            Dot(LEFT * 2 + DOWN * 1.5, color=PRIMARY, radius=0.13),
         )
-        utils = VGroup(
-            Dot(UP * 1.5 + RIGHT * 3, color=SECONDARY, radius=0.15),
-            Dot(UP * 0 + RIGHT * 3, color=SECONDARY, radius=0.15),
-            Dot(DOWN * 1.5 + RIGHT * 3, color=SECONDARY, radius=0.15),
-        )
-        # Labels
-        h_labels = VGroup(
-            Text("H1", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(houses[0], LEFT, buff=0.15),
-            Text("H2", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(houses[1], LEFT, buff=0.15),
-            Text("H3", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(houses[2], LEFT, buff=0.15),
-        )
-        u_labels = VGroup(
-            Text("G", font_size=LABEL_SIZE, color=SECONDARY, font=SANS).next_to(utils[0], RIGHT, buff=0.15),
-            Text("W", font_size=LABEL_SIZE, color=SECONDARY, font=SANS).next_to(utils[1], RIGHT, buff=0.15),
-            Text("E", font_size=LABEL_SIZE, color=SECONDARY, font=SANS).next_to(utils[2], RIGHT, buff=0.15),
+        right_verts = VGroup(
+            Dot(RIGHT * 2 + UP * 1.5, color=SECONDARY, radius=0.13),
+            Dot(RIGHT * 2, color=SECONDARY, radius=0.13),
+            Dot(RIGHT * 2 + DOWN * 1.5, color=SECONDARY, radius=0.13),
         )
 
-        # Edges (all 9 connections — some will cross)
-        edges = VGroup(
-            Line(houses[0].get_center(), utils[0].get_center(), color=DIM, stroke_width=2),
-            Line(houses[0].get_center(), utils[1].get_center(), color=DIM, stroke_width=2),
-            Line(houses[0].get_center(), utils[2].get_center(), color=DIM, stroke_width=2),
-            Line(houses[1].get_center(), utils[0].get_center(), color=DIM, stroke_width=2),
-            Line(houses[1].get_center(), utils[1].get_center(), color=DIM, stroke_width=2),
-            Line(houses[1].get_center(), utils[2].get_center(), color=DIM, stroke_width=2),
-            Line(houses[2].get_center(), utils[0].get_center(), color=DIM, stroke_width=2),
-            Line(houses[2].get_center(), utils[1].get_center(), color=DIM, stroke_width=2),
-            Line(houses[2].get_center(), utils[2].get_center(), color=DIM, stroke_width=2),
-        )
+        # Draw all edges — some will cross
+        edges = VGroup()
+        for lv in left_verts:
+            for rv in right_verts:
+                edges.add(Line(lv.get_center(), rv.get_center(), color=DIM, stroke_width=2))
 
-        graph_group = VGroup(houses, utils, h_labels, u_labels, edges)
-        self.ly.center_in_content(graph_group)
+        k33 = VGroup(left_verts, right_verts, edges)
+        self.ly.center_in_content(k33)
         self.play(
-            LaggedStartMap(FadeIn, houses, scale=0.5, lag_ratio=0.1),
-            LaggedStartMap(FadeIn, utils, scale=0.5, lag_ratio=0.1),
-            LaggedStartMap(FadeIn, h_labels, scale=0.5, lag_ratio=0.1),
-            LaggedStartMap(FadeIn, u_labels, scale=0.5, lag_ratio=0.1),
-            run_time=FAST,
+            LaggedStartMap(FadeIn, left_verts, scale=0.5, lag_ratio=0.15),
+            LaggedStartMap(FadeIn, right_verts, scale=0.5, lag_ratio=0.15),
+            Create(edges),
+            run_time=NORMAL,
         )
-        self.play(Create(edges), run_time=NORMAL)
         self.wait(1)
 
-        # Highlight crossings
-        question = Text(
-            "Can you redraw this with NO crossings?",
-            font_size=HEADING_SIZE, color=RED, font=SANS,
-        )
-        self.ly.safe_place(question, direction=DOWN, anchor=graph_group, buff=0.6)
-        self.play(FadeIn(question, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(2)
-
-        key = Text(
-            "Hint: the answer reveals a deep property of graphs.",
+        # Label the puzzle
+        puzzle = Text(
+            "The Utility Graph: can we redraw with no crossings?",
             font_size=BODY_SIZE, color=ACCENT, font=SANS,
         )
-        self.ly.safe_place(key, direction=DOWN, anchor=question, buff=0.4)
-        self.play(FadeIn(key, shift=LEFT * 0.15), run_time=NORMAL)
+        self.ly.safe_place(puzzle, direction=DOWN, anchor=k33, buff=0.5)
+        self.play(FadeIn(puzzle, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(2)
+
+        # Real-world motivation
+        motivation = Text(
+            "Applications: circuit boards, map coloring, network layout",
+            font_size=BODY_SIZE, color=WHITE, font=SANS,
+        )
+        self.ly.safe_place(motivation, direction=DOWN, anchor=puzzle, buff=0.3)
+        self.play(FadeIn(motivation, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
     # Scene 2: Planar Graphs Definition (60s)
     # ------------------------------------------------------------------
-    def scene2_planar_definition(self):
+    def scene2_definition(self):
         self.add_subcaption(
-            "A graph is planar if it can be drawn in the plane so that no edges "
-            "cross. The same graph can have many different drawings, but a planar "
-            "graph always has at least one drawing with no edge crossings.",
+            "A graph is planar if it can be drawn in the plane with no edge "
+            "crossings. Different drawings of the same graph might look "
+            "different, but if one can be redrawn without crossings, the "
+            "graph itself is planar.",
             duration=18,
         )
-        self.ly.section_divider(1, "What is a Planar Graph?")
+        self.ly.section_divider(1, "What Are Planar Graphs?")
 
         # Definition
         defn = Text(
-            "A graph is PLANAR if it can be drawn with no edge crossings.",
+            "A graph is planar if it can be drawn in the plane with no edge crossings.",
             font_size=HEADING_SIZE, color=ACCENT, font=SANS,
         )
         self.ly.center_in_content(defn)
         self.play(Write(defn), run_time=NORMAL)
         self.wait(2)
-
         self.ly.clear()
 
-        # K4 planar example — redraw showing it can be planar
-        k4_title = Text("K4: Planar (can redraw without crossings)", font_size=BODY_SIZE, color=SECONDARY, font=SANS)
-        self.ly.center_in_content(k4_title)
-        self.play(FadeIn(k4_title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1)
+        # K4 is planar — show planar drawing
+        k4_title = Text("K4: planar (can be redrawn flat)", font_size=BODY_SIZE, color=PRIMARY, font=SANS)
+        k4_title.move_to(UP * 1.8)
+        self.play(FadeIn(k4_title, shift=LEFT * 0.15), run_time=FAST)
+        self.wait(0.5)
 
-        # K4 vertices in a diamond/square with diagonals drawn outside
-        k4_v = VGroup(
-            Dot(UP * 1.5, color=WHITE, radius=0.13),
-            Dot(LEFT * 1.5, color=WHITE, radius=0.13),
-            Dot(RIGHT * 1.5, color=WHITE, radius=0.13),
-            Dot(DOWN * 1.5, color=WHITE, radius=0.13),
+        # Planar K4: square + diagonal, with one vertex inside
+        k4_a = Dot(LEFT * 1.5 + UP * 1, color=WHITE, radius=0.13)
+        k4_b = Dot(RIGHT * 1.5 + UP * 1, color=WHITE, radius=0.13)
+        k4_c = Dot(RIGHT * 1.5 + DOWN * 1, color=WHITE, radius=0.13)
+        k4_d = Dot(LEFT * 1.5 + DOWN * 1, color=WHITE, radius=0.13)
+        k4_verts = VGroup(k4_a, k4_b, k4_c, k4_d)
+
+        k4_edges = VGroup(
+            Line(k4_a.get_center(), k4_b.get_center(), color=SECONDARY, stroke_width=3),
+            Line(k4_b.get_center(), k4_c.get_center(), color=SECONDARY, stroke_width=3),
+            Line(k4_c.get_center(), k4_d.get_center(), color=SECONDARY, stroke_width=3),
+            Line(k4_d.get_center(), k4_a.get_center(), color=SECONDARY, stroke_width=3),
+            Line(k4_a.get_center(), k4_c.get_center(), color=SECONDARY, stroke_width=3),
+            Line(k4_b.get_center(), k4_d.get_center(), color=SECONDARY, stroke_width=3),
         )
-        k4_labels = VGroup(
-            Text("1", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(k4_v[0], UP, buff=0.1),
-            Text("2", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(k4_v[1], LEFT, buff=0.1),
-            Text("3", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(k4_v[2], RIGHT, buff=0.1),
-            Text("4", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(k4_v[3], DOWN, buff=0.1),
-        )
-        # Outer cycle (no crossings)
-        k4_outer = VGroup(
-            Line(k4_v[0].get_center(), k4_v[1].get_center(), color=PRIMARY, stroke_width=3),
-            Line(k4_v[0].get_center(), k4_v[2].get_center(), color=PRIMARY, stroke_width=3),
-            Line(k4_v[1].get_center(), k4_v[3].get_center(), color=PRIMARY, stroke_width=3),
-            Line(k4_v[2].get_center(), k4_v[3].get_center(), color=PRIMARY, stroke_width=3),
-        )
-        # Diagonals drawn as curved arcs to avoid crossings
-        k4_diag1 = ArcBetweenPoints(
-            k4_v[1].get_center(), k4_v[2].get_center(),
-            color=SECONDARY, stroke_width=3, angle=-TAU / 4,
-        )
-        k4_diag2 = ArcBetweenPoints(
-            k4_v[0].get_center(), k4_v[3].get_center(),
-            color=SECONDARY, stroke_width=3, angle=-TAU / 4,
-        )
-        k4_group = VGroup(k4_v, k4_labels, k4_outer, k4_diag1, k4_diag2)
-        self.ly.center_in_content(k4_group)
+        k4_graph = VGroup(k4_verts, k4_edges)
+        self.ly.center_in_content(k4_graph)
         self.play(
-            Create(k4_outer), LaggedStartMap(FadeIn, k4_v, scale=0.5, lag_ratio=0.1),
-            LaggedStartMap(FadeIn, k4_labels, scale=0.5, lag_ratio=0.1),
+            Create(k4_edges), LaggedStartMap(FadeIn, k4_verts, scale=0.5, lag_ratio=0.15),
             run_time=NORMAL,
         )
-        self.play(Create(k4_diag1), Create(k4_diag2), run_time=NORMAL)
         self.wait(2)
         self.ly.clear()
 
-        # K5 not planar
-        k5_title = Text("K5: NOT planar — every drawing has crossings", font_size=BODY_SIZE, color=RED, font=SANS)
-        self.ly.center_in_content(k5_title)
-        self.play(FadeIn(k5_title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1)
+        # K5 is NOT planar
+        k5_title = Text("K5: NOT planar (always has crossings)", font_size=BODY_SIZE, color=RED, font=SANS)
+        k5_title.move_to(UP * 1.8)
+        self.play(FadeIn(k5_title, shift=LEFT * 0.15), run_time=FAST)
+        self.wait(0.5)
 
-        # Pentagon with all diagonals (K5)
-        k5_positions = [
-            UP * 2,
-            UP * 0.6 + RIGHT * 1.9,
-            DOWN * 1.2 + RIGHT * 1.2,
-            DOWN * 1.2 + LEFT * 1.2,
-            UP * 0.6 + LEFT * 1.9,
-        ]
-        k5_v = VGroup(*[Dot(p, color=WHITE, radius=0.13) for p in k5_positions])
+        # Pentagon K5
+        k5_verts_list = []
+        for i in range(5):
+            angle = PI / 2 + i * 2 * PI / 5
+            k5_verts_list.append(Dot(
+                np.array([np.cos(angle) * 1.5, np.sin(angle) * 1.5, 0]),
+                color=WHITE, radius=0.13,
+            ))
+        k5_verts = VGroup(*k5_verts_list)
+
         k5_edges = VGroup()
         for i in range(5):
             for j in range(i + 1, 5):
-                k5_edges.add(Line(k5_positions[i], k5_positions[j], color=DIM, stroke_width=2))
-        k5_graph = VGroup(k5_v, k5_edges)
+                k5_edges.add(Line(
+                    k5_verts[i].get_center(), k5_verts[j].get_center(),
+                    color=DIM, stroke_width=2,
+                ))
+
+        k5_graph = VGroup(k5_verts, k5_edges)
         self.ly.center_in_content(k5_graph)
         self.play(
-            LaggedStartMap(FadeIn, k5_v, scale=0.5, lag_ratio=0.1),
-            Create(k5_edges),
+            Create(k5_edges), LaggedStartMap(FadeIn, k5_verts, scale=0.5, lag_ratio=0.1),
             run_time=NORMAL,
         )
-        self.wait(1)
-
-        note = Text(
-            "Every edge must connect two vertices — crossings are unavoidable!",
-            font_size=BODY_SIZE, color=RED, font=SANS,
-        )
-        self.ly.safe_place(note, direction=DOWN, anchor=k5_graph, buff=0.5)
-        self.play(FadeIn(note, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(2)
         self.ly.clear()
 
     # ------------------------------------------------------------------
     # Scene 3: Euler's Formula (90s)
     # ------------------------------------------------------------------
-    def scene3_eulers_formula(self):
+    def scene3_euler_formula(self):
         self.add_subcaption(
-            "For any connected planar graph, the number of vertices V, edges E, "
-            "and faces F satisfy V minus E plus F equals 2. Faces are the regions "
-            "created when you draw the graph, including the unbounded outer face.",
-            duration=18,
+            "For any connected planar graph, the number of vertices minus "
+            "edges plus faces always equals 2. This is Euler's formula: "
+            "V minus E plus F equals 2. A face is any region enclosed by "
+            "edges, including the unbounded outer face.",
+            duration=20,
         )
         self.ly.section_divider(2, "Euler's Formula")
 
         # The formula
         formula = MathTex(r"V - E + F = 2", font_size=HEADING_SIZE, color=ACCENT)
-        formula_box = self.ly.formula_box(formula, ACCENT)
-        self.ly.center_in_content(formula_box)
-        self.play(Write(formula_box), run_time=NORMAL)
+        fbox = self.ly.formula_box(formula, ACCENT)
+        self.ly.center_in_content(fbox)
+        self.play(Write(fbox), run_time=NORMAL)
         self.wait(1)
 
-        # Explain variables
-        vars_text = VGroup(
-            Text("V = Vertices (points)", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("E = Edges (connections)", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("F = Faces (regions, including outer face)", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-        )
-        self.ly.progressive_reveal(vars_text, start_from=formula_box)
-        self.wait(1.5)
+        # Variable definitions
+        items = [
+            Text("V = number of vertices", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("E = number of edges", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("F = number of faces (regions, including outer face)", font_size=BODY_SIZE, color=WHITE, font=SANS),
+        ]
+        self.ly.progressive_reveal(items, start_from=fbox)
+        self.wait(2)
         self.ly.clear()
 
-        # Example: cube graph (Q3) or simpler triangle-based
-        example_title = Text("Example: A Planar Graph", font_size=BODY_SIZE, color=ACCENT, font=SANS)
+        # Worked example: a simple planar graph
+        self.add_subcaption(
+            "Let's verify with a simple graph: a square with a diagonal. "
+            "We have 4 vertices, 5 edges, and counting the triangular "
+            "regions plus the outer region, we get 3 faces.",
+            duration=14,
+        )
+        example_title = Text("Example: square with diagonal", font_size=BODY_SIZE, color=PRIMARY, font=SANS)
         self.ly.center_in_content(example_title)
         self.play(FadeIn(example_title, shift=LEFT * 0.15), run_time=FAST)
         self.wait(0.5)
 
-        # A planar graph: triangle with one extra vertex connected to all three
-        p_v = VGroup(
-            Dot(UP * 1.5 + LEFT * 1, color=WHITE, radius=0.15),
-            Dot(UP * 1.5 + RIGHT * 1, color=WHITE, radius=0.15),
-            Dot(DOWN * 0.5, color=WHITE, radius=0.15),
-            Dot(DOWN * 1.5, color=WHITE, radius=0.15),
+        # Draw the graph
+        ea = Dot(LEFT * 1.5 + UP * 0.8, color=WHITE, radius=0.13)
+        eb = Dot(RIGHT * 1.5 + UP * 0.8, color=WHITE, radius=0.13)
+        ec = Dot(RIGHT * 1.5 + DOWN * 0.8, color=WHITE, radius=0.13)
+        ed = Dot(LEFT * 1.5 + DOWN * 0.8, color=WHITE, radius=0.13)
+        everts = VGroup(ea, eb, ec, ed)
+
+        eedges = VGroup(
+            Line(ea.get_center(), eb.get_center(), color=SECONDARY, stroke_width=3),
+            Line(eb.get_center(), ec.get_center(), color=SECONDARY, stroke_width=3),
+            Line(ec.get_center(), ed.get_center(), color=SECONDARY, stroke_width=3),
+            Line(ed.get_center(), ea.get_center(), color=SECONDARY, stroke_width=3),
+            Line(ea.get_center(), ec.get_center(), color=RED, stroke_width=3),
         )
-        p_edges = VGroup(
-            Line(p_v[0].get_center(), p_v[1].get_center(), color=PRIMARY, stroke_width=3),
-            Line(p_v[1].get_center(), p_v[2].get_center(), color=PRIMARY, stroke_width=3),
-            Line(p_v[2].get_center(), p_v[0].get_center(), color=PRIMARY, stroke_width=3),
-            Line(p_v[3].get_center(), p_v[0].get_center(), color=SECONDARY, stroke_width=3),
-            Line(p_v[3].get_center(), p_v[1].get_center(), color=SECONDARY, stroke_width=3),
-            Line(p_v[3].get_center(), p_v[2].get_center(), color=SECONDARY, stroke_width=3),
-        )
-        p_graph = VGroup(p_v, p_edges)
-        self.ly.center_in_content(p_graph)
+        egraph = VGroup(everts, eedges)
+        self.ly.center_in_content(egraph)
         self.play(
-            Create(p_edges), LaggedStartMap(FadeIn, p_v, scale=0.5, lag_ratio=0.1),
+            Create(eedges), LaggedStartMap(FadeIn, everts, scale=0.5, lag_ratio=0.15),
             run_time=NORMAL,
         )
         self.wait(1)
 
-        # Count: V=4, E=6, F=4
-        counts = VGroup(
-            MathTex(r"V = 4", font_size=BODY_SIZE, color=PRIMARY),
-            MathTex(r"E = 6", font_size=BODY_SIZE, color=PRIMARY),
-            MathTex(r"F = 4", font_size=BODY_SIZE, color=PRIMARY),
+        # Count V, E, F
+        count = VGroup(
+            Text("V = 4", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("E = 5", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("F = 3", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("V - E + F = 4 - 5 + 3 = 2  \u2713", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         )
-        self.ly.progressive_reveal(counts, start_from=p_graph, spacing=0.3)
-        self.wait(1)
-
-        # Verify formula
-        check = MathTex(r"4 - 6 + 4 = 2 \;\checkmark", font_size=HEADING_SIZE, color=ACCENT)
-        self.ly.safe_place(check, direction=DOWN, anchor=counts[-1] if hasattr(self, '_last_visible') else counts[2], buff=0.4)
-        self.play(Write(check), run_time=NORMAL)
+        self.ly.progressive_reveal(count, start_from=egraph)
         self.wait(2)
         self.ly.clear()
 
-        # Intuition: proof sketch via tree growing
-        proof_title = Text("Proof idea: grow a spanning tree", font_size=BODY_SIZE, color=ACCENT, font=SANS)
-        self.ly.center_in_content(proof_title)
-        self.play(FadeIn(proof_title, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
-
-        proof_steps = [
-            Text("Start with one vertex: V=1, E=0, F=1 (outer face)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Add edges one at a time (spanning tree): V-E+F stays 2", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Each new edge either adds 1 vertex (+1V,+1E) or 1 face (+1E,+1F)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("In both cases: V - E + F is unchanged!", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-        ]
-        self.ly.progressive_reveal(proof_steps, start_from=proof_title)
-        self.wait(1.5)
-        self.ly.clear()
-
     # ------------------------------------------------------------------
-    # Scene 4: Consequences of Euler's Formula (60s)
+    # Scene 4: Applications of Euler's Formula (60s)
     # ------------------------------------------------------------------
-    def scene4_consequences(self):
+    def scene4_applications(self):
         self.add_subcaption(
-            "Euler's formula gives us powerful tools. For simple planar graphs, "
-            "each face has at least 3 edges, so we can derive E is at most "
-            "3V minus 6. This inequality lets us prove that K5 is not planar.",
-            duration=18,
+            "Euler's formula lets us prove that planar graphs have limited "
+            "edges. For simple planar graphs, E is at most 3V minus 6. "
+            "This means K5 with 5 vertices and 10 edges cannot be planar, "
+            "since it would need at most 9 edges.",
+            duration=20,
         )
         self.ly.section_divider(3, "Consequences")
 
-        # Bound for simple planar graphs
-        bound_title = self.ly.title("Edge Bound for Simple Planar Graphs")
+        # Edge bound for simple planar graphs
+        title = self.ly.title("Edge Bound")
 
-        bound1 = MathTex(r"E \leq 3V - 6", font_size=HEADING_SIZE, color=ACCENT)
-        bound1_box = self.ly.formula_box(bound1, ACCENT)
-        self.ly.safe_place(bound1_box, direction=DOWN, anchor=bound_title, buff=0.8)
-        self.play(Write(bound1_box), run_time=NORMAL)
+        bound = MathTex(r"E \leq 3V - 6", font_size=HEADING_SIZE, color=ACCENT)
+        bound_box = self.ly.formula_box(bound, ACCENT)
+        self.ly.safe_place(bound_box, direction=DOWN, anchor=title, buff=1)
+        self.play(Write(bound_box), run_time=NORMAL)
         self.wait(1)
 
-        # Reasoning
-        reasoning = [
-            Text("Each face borders at least 3 edges (simple graph, no loops)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Each edge borders at most 2 faces", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("So: 2E >= 3F, plug into Euler's formula", font_size=BODY_SIZE, color=WHITE, font=SANS),
-        ]
-        self.ly.progressive_reveal(reasoning, start_from=bound1_box)
-        self.wait(2)
-        self.ly.clear()
-
-        # Apply to K5
-        k5_proof = self.ly.title("K5 is NOT planar")
-
-        k5_check = VGroup(
-            MathTex(r"K_5:\; V=5,\; E=\binom{5}{2}=10", font_size=BODY_SIZE, color=WHITE),
+        note1 = Text(
+            "(for simple, connected planar graphs with V >= 3)",
+            font_size=SMALL_SIZE, color=DIM, font=SANS,
         )
-        self.ly.safe_place(k5_check[0], direction=DOWN, anchor=k5_proof, buff=0.8)
-        self.play(Write(k5_check[0]), run_time=NORMAL)
-        self.wait(0.5)
+        self.ly.safe_place(note1, direction=DOWN, anchor=bound_box, buff=0.3)
+        self.play(FadeIn(note1), run_time=FAST)
+        self.wait(1)
+        self.ly.clear()
 
-        k5_contra = MathTex(r"10 \leq 3(5) - 6 = 9 \;\;\text{CONTRADICTION!}", font_size=HEADING_SIZE, color=RED)
-        self.ly.safe_place(k5_contra, direction=DOWN, anchor=k5_check[0], buff=0.6)
-        self.play(Write(k5_contra), run_time=NORMAL)
+        # K5 contradiction
+        k5_title = self.ly.title("K5 is NOT Planar")
+        k5_check = VGroup(
+            Text("K5 has V = 5, E = 10", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Bound: E <= 3(5) - 6 = 9", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("But 10 > 9  —  CONTRADICTION!", font_size=BODY_SIZE, color=RED, font=SANS),
+        )
+        self.ly.progressive_reveal(k5_check, start_from=k5_title)
         self.wait(2)
         self.ly.clear()
 
-        # Apply to K3,3 with bipartite bound
-        bip_title = self.ly.title("K3,3 is NOT planar")
+        # K3,3 contradiction (bipartite bound)
+        k33_title = self.ly.title("K3,3 is NOT Planar")
 
-        bip_bound = MathTex(r"E \leq 2V - 4 \;\;\text{(bipartite planar)}", font_size=HEADING_SIZE, color=ACCENT)
-        bip_box = self.ly.formula_box(bip_bound, ACCENT)
-        self.ly.safe_place(bip_box, direction=DOWN, anchor=bip_title, buff=0.8)
+        self.add_subcaption(
+            "For bipartite planar graphs, the edge bound is even tighter: "
+            "E is at most 2V minus 4. K3,3 has 6 vertices and 9 edges, "
+            "but the bound says at most 8. Contradiction!",
+            duration=16,
+        )
+
+        bipartite_bound = MathTex(r"E \leq 2V - 4", font_size=HEADING_SIZE, color=ACCENT)
+        bip_box = self.ly.formula_box(bipartite_bound, ACCENT)
+        self.ly.safe_place(bip_box, direction=DOWN, anchor=k33_title, buff=1)
         self.play(Write(bip_box), run_time=NORMAL)
         self.wait(1)
 
-        k33_check = VGroup(
-            MathTex(r"K_{3,3}:\; V=6,\; E=9", font_size=BODY_SIZE, color=WHITE),
+        note2 = Text(
+            "(for bipartite planar graphs with V >= 3)",
+            font_size=SMALL_SIZE, color=DIM, font=SANS,
         )
-        self.ly.safe_place(k33_check[0], direction=DOWN, anchor=bip_box, buff=0.5)
-        self.play(Write(k33_check[0]), run_time=NORMAL)
+        self.ly.safe_place(note2, direction=DOWN, anchor=bip_box, buff=0.3)
+        self.play(FadeIn(note2), run_time=FAST)
         self.wait(0.5)
 
-        k33_contra = MathTex(r"9 \leq 2(6) - 4 = 8 \;\;\text{CONTRADICTION!}", font_size=HEADING_SIZE, color=RED)
-        self.ly.safe_place(k33_contra, direction=DOWN, anchor=k33_check[0], buff=0.5)
-        self.play(Write(k33_contra), run_time=NORMAL)
+        k33_check = VGroup(
+            Text("K3,3 has V = 6, E = 9", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Bound: E <= 2(6) - 4 = 8", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("But 9 > 8  —  CONTRADICTION!", font_size=BODY_SIZE, color=RED, font=SANS),
+        )
+        self.ly.progressive_reveal(k33_check, start_from=note2)
         self.wait(2)
         self.ly.clear()
 
@@ -391,172 +341,118 @@ class Video88_PlanarityEuler(Scene):
     # ------------------------------------------------------------------
     def scene5_kuratowski(self):
         self.add_subcaption(
-            "Kuratowski's theorem gives a complete characterization: a graph is "
-            "planar if and only if it contains no subdivision of K5 or K3,3. "
-            "A subdivision replaces edges with paths, inserting extra vertices.",
-            duration=18,
+            "Kuratowski's theorem gives a complete characterization: a graph "
+            "is planar if and only if it contains no subdivision of K5 or "
+            "K3,3. A subdivision is formed by inserting extra vertices along "
+            "edges, which doesn't change the essential structure.",
+            duration=20,
         )
         self.ly.section_divider(4, "Kuratowski's Theorem")
 
-        # The theorem
-        theorem = VGroup(
-            Text("A graph is planar if and only if it contains", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("NO subdivision of K5 or K3,3", font_size=HEADING_SIZE, color=ACCENT, font=SANS),
+        title = self.ly.title("Kuratowski's Theorem")
+
+        theorem = Text(
+            "A graph is planar iff it contains no subdivision of K5 or K3,3",
+            font_size=HEADING_SIZE, color=ACCENT, font=SANS,
         )
-        theorem_group = VGroup(*theorem).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        self.ly.center_in_content(theorem_group)
-        self.play(LaggedStartMap(FadeIn, theorem, shift=LEFT * 0.15, lag_ratio=0.15), run_time=NORMAL)
-        self.wait(2)
+        theorem_box = self.ly.formula_box(theorem, ACCENT)
+        self.ly.safe_place(theorem_box, direction=DOWN, anchor=title, buff=1)
+        self.play(Write(theorem_box), run_time=NORMAL)
+        self.wait(1)
         self.ly.clear()
 
-        # Subdivision explanation
-        sub_title = Text("What is a subdivision?", font_size=HEADING_SIZE, color=PRIMARY, font=SANS)
-        self.ly.center_in_content(sub_title)
-        self.play(Write(sub_title), run_time=FAST)
+        # Explain subdivision
+        self.add_subcaption(
+            "A subdivision adds vertices of degree 2 along edges. "
+            "Think of it as placing dots on a line. The topology "
+            "doesn't change — the graph is still essentially the same.",
+            duration=16,
+        )
+
+        sub_title = self.ly.title("What is a Subdivision?")
+
+        # Show original edge, then subdivided
+        orig_a = Dot(LEFT * 2, color=WHITE, radius=0.13)
+        orig_b = Dot(RIGHT * 2, color=WHITE, radius=0.13)
+        orig_edge = Line(orig_a.get_center(), orig_b.get_center(), color=PRIMARY, stroke_width=3)
+        orig_group = VGroup(orig_a, orig_b, orig_edge)
+        self.ly.center_in_content(orig_group)
+        self.play(Create(orig_edge), FadeIn(orig_a), FadeIn(orig_b), run_time=FAST)
         self.wait(0.5)
 
-        sub_items = [
-            Text("Replace an edge with a path (insert vertices)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("The graph's topology does not change", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("If the original is non-planar, so is the subdivision", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-        ]
-        self.ly.progressive_reveal(sub_items, start_from=sub_title)
-        self.wait(1.5)
-        self.ly.clear()
-
-        # Show K5 and K3,3 as the forbidden minors
-        forbidden_title = Text("The Two Forbidden Subgraphs", font_size=HEADING_SIZE, color=RED, font=SANS)
-        self.ly.center_in_content(forbidden_title)
-        self.play(Write(forbidden_title), run_time=NORMAL)
-        self.wait(0.5)
-
-        # K5 on left
-        k5_verts = [
-            UP * 1.2 + LEFT * 3.5,
-            UP * 0.3 + LEFT * 5,
-            DOWN * 0.6 + LEFT * 4.2,
-            DOWN * 0.6 + LEFT * 2.8,
-            UP * 0.3 + LEFT * 2,
-        ]
-        k5v = VGroup(*[Dot(p, color=WHITE, radius=0.11) for p in k5_verts])
-        k5e = VGroup()
-        for i in range(5):
-            for j in range(i + 1, 5):
-                k5e.add(Line(k5_verts[i], k5_verts[j], color=PRIMARY, stroke_width=2))
-        k5_label = Text("K5", font_size=HEADING_SIZE, color=RED, font=SANS).next_to(k5v, DOWN, buff=0.3)
-        k5_group = VGroup(k5v, k5e, k5_label)
-
-        # K3,3 on right
-        k33_left = [UP * 1.2 + RIGHT * 3.5, UP * 0 + RIGHT * 3.5, DOWN * 1.2 + RIGHT * 3.5]
-        k33_right = [UP * 1.2 + RIGHT * 5.5, UP * 0 + RIGHT * 5.5, DOWN * 1.2 + RIGHT * 5.5]
-        k33v = VGroup(*[Dot(p, color=WHITE, radius=0.11) for p in k33_left + k33_right])
-        k33e = VGroup()
-        for l in k33_left:
-            for r in k33_right:
-                k33e.add(Line(l, r, color=PRIMARY, stroke_width=2))
-        k33_label = Text("K3,3", font_size=HEADING_SIZE, color=RED, font=SANS).next_to(k33v, DOWN, buff=0.3)
-        k33_group = VGroup(k33v, k33e, k33_label)
-
-        # Position side by side
-        combined = VGroup(k5_group, k33_group).arrange(RIGHT, buff=1.5)
-        self.ly.center_in_content(combined)
+        # Subdivide: add a vertex in the middle
+        mid = Dot(ORIGIN, color=ACCENT, radius=0.13)
+        sub_edge1 = Line(orig_a.get_center(), ORIGIN, color=PRIMARY, stroke_width=3)
+        sub_edge2 = Line(ORIGIN, orig_b.get_center(), color=PRIMARY, stroke_width=3)
         self.play(
-            LaggedStartMap(FadeIn, k5v, scale=0.5, lag_ratio=0.05),
-            Create(k5e),
-            FadeIn(k5_label),
-            LaggedStartMap(FadeIn, k33v, scale=0.5, lag_ratio=0.05),
-            Create(k33e),
-            FadeIn(k33_label),
+            FadeOut(orig_edge),
+            FadeIn(mid, scale=0.5),
+            Create(sub_edge1), Create(sub_edge2),
             run_time=NORMAL,
         )
         self.wait(1)
 
-        # Check mark
-        check_text = Text(
-            "Contains K5 or K3,3 subdivision? NOT planar!",
-            font_size=BODY_SIZE, color=RED, font=SANS,
+        sub_label = Text(
+            "Adding a degree-2 vertex preserves the essential structure",
+            font_size=BODY_SIZE, color=WHITE, font=SANS,
         )
-        self.ly.safe_place(check_text, direction=DOWN, anchor=combined, buff=0.5)
-        self.play(FadeIn(check_text, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(2)
-        self.ly.clear()
-
-    # ------------------------------------------------------------------
-    # Scene 6: Applications (45s)
-    # ------------------------------------------------------------------
-    def scene6_applications(self):
-        self.add_subcaption(
-            "Planarity has real applications everywhere. Circuit board designers "
-            "need to lay out connections without crossings. The famous four color "
-            "theorem says every planar map needs at most four colors to color "
-            "countries so no two adjacent countries share a color.",
-            duration=18,
-        )
-        self.ly.section_divider(5, "Applications")
-
-        title = self.ly.title("Where Planarity Matters")
-
-        apps = [
-            Text("Circuit boards: route wires without crossings", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Map coloring: four color theorem (max 4 colors)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Graph drawing: algorithms for nice visualizations", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Network design: planar overlays reduce interference", font_size=BODY_SIZE, color=WHITE, font=SANS),
-        ]
-        self.ly.progressive_reveal(apps, start_from=title)
+        self.ly.safe_place(sub_label, direction=DOWN, anchor=orig_group, buff=0.5)
+        self.play(FadeIn(sub_label, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1.5)
+        self.ly.clear()
 
-        # Four color theorem preview
-        fcc = Text(
-            "Four Color Theorem: every planar map needs at most 4 colors!",
-            font_size=HEADING_SIZE, color=ACCENT, font=SANS,
+        # Summary of the theorem significance
+        significance = VGroup(
+            Text("K5 and K3,3 are the only obstructions to planarity", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Any non-planar graph contains one of these as a substructure", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("This gives an algorithmic way to test planarity", font_size=BODY_SIZE, color=WHITE, font=SANS),
         )
-        last_item = apps[-1] if hasattr(self, '_last_visible') else apps[3]
-        self.ly.safe_place(fcc, direction=DOWN, anchor=last_item, buff=0.6)
-        self.play(FadeIn(fcc, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(2)
+        self.ly.progressive_reveal(significance)
+        self.wait(1.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
-    # Scene 7: Summary (45s)
+    # Scene 6: Applications and Summary (45s)
     # ------------------------------------------------------------------
-    def scene7_summary(self):
+    def scene6_summary(self):
         self.add_subcaption(
-            "Let's recap: planar graphs can be drawn without edge crossings. "
-            "Euler's formula V minus E plus F equals 2 connects vertices, edges, "
-            "and faces. Kuratowski's theorem tells us K5 and K3,3 are the obstacles.",
+            "Planarity has real applications. Circuit board layout requires "
+            "planar connections. Map coloring needs planar graphs. "
+            "Euler's formula is one of the most beautiful results in "
+            "graph theory, connecting vertices, edges, and faces.",
             duration=16,
         )
 
         title = self.ly.title("Planarity: Summary")
 
         points = [
-            Text("Planar graph: drawable with no edge crossings", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Euler's formula: V - E + F = 2", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Edge bound: E <= 3V - 6 (simple planar)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("K5 and K3,3 are NOT planar (proved by inequalities)", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Planar graph: can be drawn with no edge crossings", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Euler's formula: V - E + F = 2", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("Simple planar bound: E <= 3V - 6", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("K5 and K3,3 are NOT planar", font_size=BODY_SIZE, color=RED, font=SANS),
             Text("Kuratowski: planar iff no K5/K3,3 subdivision", font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(points, start_from=title)
         self.wait(2)
 
-        # Bridge to next video
-        next_note = Text(
-            "Next: Graph Coloring",
-            font_size=BODY_SIZE, color=ACCENT, font=SANS,
+        # Applications note
+        apps = Text(
+            "Applications: circuit boards, map coloring, graph drawing algorithms",
+            font_size=BODY_SIZE, color=SECONDARY, font=SANS,
         )
-        last_pt = points[-1] if hasattr(self, '_last_visible') else points[4]
-        self.ly.safe_place(next_note, direction=DOWN, anchor=last_pt, buff=0.6)
-        self.play(FadeIn(next_note, shift=LEFT * 0.15), run_time=NORMAL)
+        self.ly.safe_place(apps, direction=DOWN, anchor=points[-1] if hasattr(self, '_last_visible') else points[4], buff=0.5)
+        self.play(FadeIn(apps, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
-    # Scene 8: Outro
+    # Scene 7: Outro
     # ------------------------------------------------------------------
-    def scene8_outro(self):
+    def scene7_outro(self):
         self.add_subcaption(
-            "Thanks for watching! Planarity is one of the most visual topics "
-            "in graph theory. If you found this helpful, please like and subscribe.",
-            duration=10,
+            "Thanks for watching! Planarity and Euler's formula reveal "
+            "beautiful structure in graphs. In the next video, we'll explore "
+            "graph coloring and the famous four color theorem.",
+            duration=14,
         )
         play_outro(self, "Graph Coloring", "Discrete Mathematics")

@@ -1,14 +1,25 @@
 """
-Video 87: Trees
+Video 87: Trees in Discrete Mathematics
 Discrete Mathematics -- Video 10 of 12
 
-Covers: Tree definition, properties, rooted trees, binary trees,
-tree traversals, spanning trees, and minimum spanning trees.
+Covers: Tree definition, visual proof of |E| = |V| - 1, forests, rooted trees,
+binary trees, tree traversals (pre/in/post-order), spanning trees, Kruskal's MST,
+and applications of trees.
 
 Plan: planning/video-87-trees.md
 
 Render draft:  manim -ql scripts/undergraduate/video-87-trees.py Video87_Trees
 Render final:  manim -qh scripts/undergraduate/video-87-trees.py Video87_Trees
+
+v2 Quality Standards (MANDATORY):
+  1. setup_background for dot grid + gradient
+  2. LayoutEngine v2 for all positioning
+  3. progressive_reveal for multi-item scenes (5-item max)
+  4. section_divider between major concepts
+  5. formula_box for key theorems
+  6. Source Sans 3 (SANS) for all body text/titles
+  7. play_intro/play_outro branding
+  8. ly.clear() between scenes
 """
 
 from manim import *
@@ -24,7 +35,7 @@ from layout import LayoutEngine, ensure_fits
 
 
 class Video87_Trees(Scene):
-    """Trees: the simplest connected acyclic structures in graph theory."""
+    """Trees in Discrete Mathematics: properties, traversals, spanning trees, and MST."""
 
     def construct(self):
         self.camera.background_color = BG
@@ -33,447 +44,980 @@ class Video87_Trees(Scene):
 
         self.scene1_hook()
         self.scene2_definition()
-        self.scene3_properties()
-        self.scene4_rooted_trees()
+        self.scene3_visual_proof()
+        self.scene4_forests_rooted()
         self.scene5_binary_trees()
-        self.scene6_traversals()
-        self.scene7_spanning_trees()
-        self.scene8_summary()
-        self.scene9_outro()
+        self.scene6_traversals_overview()
+        self.scene7_preorder()
+        self.scene8_inorder_postorder()
+        self.scene9_spanning_trees()
+        self.scene10_kruskals()
+        self.scene11_applications()
+        self.scene12_summary_outro()
 
     # ------------------------------------------------------------------
-    # Scene 1: Hook — Why Trees Matter (45s)
+    # Scene 1: Hook -- From Graphs to Trees (1:00)
     # ------------------------------------------------------------------
     def scene1_hook(self):
         self.add_subcaption(
-            "Trees are everywhere: family trees organize genealogy, file systems structure your computer, "
-            "decision trees guide choices, and network routing relies on tree structures. "
-            "They are the simplest connected graphs without cycles.",
+            "In our last video, we explored graphs — vertices connected by edges. "
+            "Today we look at a special kind of graph: one with no cycles. "
+            "Remove all the cycles from a connected graph, and you get a tree.",
             duration=18,
         )
         play_intro(self, "Trees", "Discrete Mathematics")
 
-        title = self.ly.title("Trees Are Everywhere")
+        title = self.ly.title("From Graphs to Trees")
 
-        items = [
-            Text("Family trees — organize genealogy", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("File systems — folders and subfolders", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Decision trees — guide algorithmic choices", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Network routing — efficient data paths", font_size=BODY_SIZE, color=WHITE, font=SANS),
+        # Build a connected graph with a cycle (pentagon + chord)
+        positions = [
+            UP * 2 + LEFT * 2,      # 0
+            UP * 2 + RIGHT * 2,     # 1
+            DOWN * 1.5 + RIGHT * 2, # 2
+            DOWN * 1.5 + LEFT * 2,  # 3
+            DOWN * 0.5,             # 4
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        verts = VGroup(*[Dot(p, color=WHITE, radius=0.12) for p in positions])
+        labels = VGroup(
+            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(verts[0], UP),
+            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(verts[1], UP),
+            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(verts[2], DOWN),
+            Text("D", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(verts[3], DOWN),
+            Text("E", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(verts[4], DOWN),
+        )
+        # Edges: A-B, B-C, C-E, E-D, D-A (cycle) + A-C (chord)
+        edge_pairs = [(0,1), (1,2), (2,4), (4,3), (3,0), (0,2)]
+        all_edges = VGroup(*[
+            Line(verts[i].get_center(), verts[j].get_center(), color=PRIMARY, stroke_width=3)
+            for i, j in edge_pairs
+        ])
+
+        self.ly.safe_place(verts, direction=DOWN, anchor=title, buff=1)
+        self.play(
+            LaggedStartMap(FadeIn, verts, scale=0.4, lag_ratio=0.15),
+            LaggedStartMap(FadeIn, labels, scale=0.4, lag_ratio=0.15),
+            run_time=NORMAL,
+        )
+        self.play(Create(all_edges), run_time=NORMAL)
+        self.wait(1)
+
+        # Highlight and remove cycle edges one by one
+        note1 = Text("Remove edges that break cycles...",
+                      font_size=BODY_SIZE, color=ACCENT, font=SANS)
+        self.ly.safe_place(note1, direction=DOWN, anchor=verts, buff=0.8)
+        self.play(FadeIn(note1, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(1)
+
+        # Remove chord edge A-C (index 5), then edge C-E (index 2)
+        # This breaks both cycles
+        self.play(
+            all_edges[5].animate.set_color(RED),
+            run_time=FAST,
+        )
+        self.play(FadeOut(all_edges[5]), run_time=FAST)
+        self.play(
+            all_edges[2].animate.set_color(RED),
+            run_time=FAST,
+        )
+        self.play(FadeOut(all_edges[2]), run_time=FAST)
         self.wait(0.5)
 
-        key = Text(
-            "Key insight: trees balance connectivity and efficiency.",
-            font_size=BODY_SIZE, color=ACCENT, font=SANS,
+        self.play(FadeOut(note1), run_time=FAST)
+
+        tree_label = Text(
+            "A Tree: connected, acyclic graph",
+            font_size=BODY_SIZE, color=SECONDARY, font=SANS,
         )
-        self.ly.safe_place(key, direction=DOWN, anchor=items[-1] if hasattr(self, '_last_visible') else items[3], buff=0.6)
-        self.play(FadeIn(key, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.5)
+        self.ly.safe_place(tree_label, direction=DOWN, anchor=verts, buff=0.8)
+        self.play(FadeIn(tree_label, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(2)
+
         self.ly.clear()
 
     # ------------------------------------------------------------------
-    # Scene 2: Definition and Properties (90s)
+    # Scene 2: Tree Definition and Properties (1:30)
     # ------------------------------------------------------------------
     def scene2_definition(self):
         self.add_subcaption(
-            "A tree is a connected graph with no cycles. That simple definition "
-            "has powerful consequences. A tree with n vertices always has exactly "
-            "n minus 1 edges, and every edge is a bridge.",
+            "A tree is a connected acyclic graph. Equivalently, a graph where "
+            "every pair of vertices has exactly one simple path between them. "
+            "The key property: a tree with n vertices has exactly n minus one edges.",
             duration=18,
         )
+
         self.ly.section_divider(1, "What is a Tree?")
+        title = self.ly.title("Tree Definition")
 
-        # Draw a sample tree
-        v1 = Dot(UP * 1.5, color=WHITE, radius=0.13)
-        v2 = Dot(UP * 1.5 + LEFT * 1.5, color=WHITE, radius=0.13)
-        v3 = Dot(UP * 1.5 + RIGHT * 1.5, color=WHITE, radius=0.13)
-        v4 = Dot(UP * 0 + LEFT * 0.8, color=WHITE, radius=0.13)
-        v5 = Dot(UP * 0 + RIGHT * 0.8, color=WHITE, radius=0.13)
-        v6 = Dot(DOWN * 1.2, color=WHITE, radius=0.13)
-        tree_verts = VGroup(v1, v2, v3, v4, v5, v6)
-
-        tree_edges = VGroup(
-            Line(v1.get_center(), v2.get_center(), color=PRIMARY, stroke_width=3),
-            Line(v1.get_center(), v3.get_center(), color=PRIMARY, stroke_width=3),
-            Line(v2.get_center(), v4.get_center(), color=PRIMARY, stroke_width=3),
-            Line(v2.get_center(), v5.get_center(), color=PRIMARY, stroke_width=3),
-            Line(v4.get_center(), v6.get_center(), color=PRIMARY, stroke_width=3),
-        )
-        tree_graph = VGroup(tree_verts, tree_edges)
-        self.ly.center_in_content(tree_graph)
-        self.play(Create(tree_edges), LaggedStartMap(FadeIn, tree_verts, scale=0.5, lag_ratio=0.15), run_time=NORMAL)
-        self.wait(1)
-
-        # Definition
-        defn = VGroup(
-            Text("A tree is a connected, acyclic graph.", font_size=HEADING_SIZE, color=ACCENT, font=SANS),
-        )
-        self.ly.safe_place(defn, direction=DOWN, anchor=tree_graph, buff=0.8)
-        self.play(FadeIn(defn[0], shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(2)
-
-        # Remove tree, show equivalent characterizations
-        self.play(FadeOut(tree_graph), run_time=FAST)
-
-        equivs = [
-            Text("Connected + acyclic", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Connected + |E| = |V| - 1", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Acyclic + |E| = |V| - 1", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Any two vertices share exactly one path", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Connected + every edge is a bridge", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+        # Show a small tree (5 vertices, 4 edges)
+        t_positions = [
+            UP * 1.5 + LEFT * 3,  # A
+            UP * 1.5 + LEFT * 1,  # B
+            UP * 0.5 + LEFT * 2,  # C
+            DOWN * 0.5 + LEFT * 1, # D
+            UP * 0.5 + LEFT * 4,  # E
         ]
-        equiv_title = Text("Equivalent definitions:", font_size=BODY_SIZE, color=ACCENT, font=SANS)
-        self.ly.safe_place(equiv_title, direction=UP, anchor=defn[0])
-        self.ly.safe_place(equiv_title, direction=UP)
-        # Place equiv_title at center content area
-        equiv_title.move_to(UP * 1.5)
-        self.play(FadeOut(defn[0]), run_time=FAST)
-        self.ly.safe_place(equiv_title, direction=UP)
-        self.play(FadeIn(equiv_title, shift=LEFT * 0.15), run_time=NORMAL)
-
-        self.ly.progressive_reveal(equivs, start_from=equiv_title)
-        self.wait(2)
-        self.ly.clear()
-
-    # ------------------------------------------------------------------
-    # Scene 3: Properties of Trees (60s)
-    # ------------------------------------------------------------------
-    def scene3_properties(self):
-        self.add_subcaption(
-            "Trees have elegant properties. With n vertices, there are exactly "
-            "n minus 1 edges. Removing any single edge disconnects the tree, "
-            "and adding any edge creates a cycle. Every pair of vertices is "
-            "connected by a unique path.",
-            duration=18,
+        tree_v = VGroup(*[Dot(p, color=PRIMARY, radius=0.15) for p in t_positions])
+        tree_l = VGroup(
+            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(tree_v[0], UP),
+            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(tree_v[1], UP),
+            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(tree_v[2], LEFT),
+            Text("D", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(tree_v[3], DOWN),
+            Text("E", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(tree_v[4], LEFT),
         )
+        tree_e_pairs = [(0,1), (0,4), (1,2), (2,3)]
+        tree_edges = VGroup(*[
+            Line(tree_v[i].get_center(), tree_v[j].get_center(), color=SECONDARY, stroke_width=4)
+            for i, j in tree_e_pairs
+        ])
 
-        title = self.ly.title("Properties of Trees")
-
-        # Formula box
-        formula = MathTex(r"|E| = |V| - 1", font_size=HEADING_SIZE, color=ACCENT)
-        formula_box = self.ly.formula_box(formula, ACCENT)
-        self.ly.safe_place(formula_box, direction=DOWN, anchor=title, buff=1)
-        self.play(Write(formula_box), run_time=NORMAL)
-        self.wait(1)
-
-        props = [
-            Text("Every edge is a bridge (removal disconnects)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Adding any edge creates a cycle", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Unique path between every pair of vertices", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Tree with n vertices has exactly n-1 edges", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-        ]
-        self.ly.progressive_reveal(props, start_from=formula_box)
-        self.wait(1.5)
-        self.ly.clear()
-
-    # ------------------------------------------------------------------
-    # Scene 4: Rooted Trees and Terminology (75s)
-    # ------------------------------------------------------------------
-    def scene4_rooted_trees(self):
-        self.add_subcaption(
-            "When we pick one vertex as the root, a tree gains direction and hierarchy. "
-            "The root sits at the top. Vertices directly below are children, and the "
-            "one above is the parent. Vertices with no children are leaves.",
-            duration=18,
+        self.ly.safe_place(tree_v, direction=DOWN, anchor=title, buff=1)
+        self.play(
+            LaggedStartMap(FadeIn, tree_v, scale=0.4, lag_ratio=0.15),
+            LaggedStartMap(FadeIn, tree_l, scale=0.4, lag_ratio=0.15),
+            run_time=NORMAL,
         )
-        self.ly.section_divider(2, "Rooted Trees")
-
-        # Draw a rooted tree
-        root = Dot(UP * 2, color=ACCENT, radius=0.15)
-        c1 = Dot(UP * 0.5 + LEFT * 1.5, color=WHITE, radius=0.13)
-        c2 = Dot(UP * 0.5 + RIGHT * 1.5, color=WHITE, radius=0.13)
-        gc1 = Dot(DOWN * 0.8 + LEFT * 2.2, color=WHITE, radius=0.13)
-        gc2 = Dot(DOWN * 0.8 + LEFT * 0.8, color=WHITE, radius=0.13)
-        gc3 = Dot(DOWN * 0.8 + RIGHT * 0.8, color=WHITE, radius=0.13)
-        leaf = Dot(DOWN * 0.8 + RIGHT * 2.2, color=SECONDARY, radius=0.13)
-
-        rverts = VGroup(root, c1, c2, gc1, gc2, gc3, leaf)
-        redges = VGroup(
-            Line(root.get_center(), c1.get_center(), color=PRIMARY, stroke_width=3),
-            Line(root.get_center(), c2.get_center(), color=PRIMARY, stroke_width=3),
-            Line(c1.get_center(), gc1.get_center(), color=PRIMARY, stroke_width=3),
-            Line(c1.get_center(), gc2.get_center(), color=PRIMARY, stroke_width=3),
-            Line(c2.get_center(), gc3.get_center(), color=PRIMARY, stroke_width=3),
-            Line(c2.get_center(), leaf.get_center(), color=PRIMARY, stroke_width=3),
-        )
-        rtree = VGroup(rverts, redges)
-        self.ly.center_in_content(rtree)
-        self.play(Create(redges), LaggedStartMap(FadeIn, rverts, scale=0.5, lag_ratio=0.15), run_time=NORMAL)
-        self.wait(1)
-
-        # Label root
-        root_label = Text("Root", font_size=LABEL_SIZE, color=ACCENT, font=SANS).next_to(root, UP, buff=0.2)
-        self.play(FadeIn(root_label), run_time=FAST)
+        self.play(Create(tree_edges), run_time=NORMAL)
         self.wait(0.5)
 
-        # Label internal vs leaves
-        leaf_label = Text("Leaves", font_size=LABEL_SIZE, color=SECONDARY, font=SANS).next_to(leaf, RIGHT, buff=0.2)
-        self.play(FadeIn(leaf_label), run_time=FAST)
-        self.wait(0.5)
-
-        # Terminology list
-        terms = [
-            Text("Root: top of the tree", font_size=BODY_SIZE, color=ACCENT, font=SANS),
-            Text("Parent/Child: one level above/below", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Leaves: vertices with no children", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("Height: longest root-to-leaf path", font_size=BODY_SIZE, color=WHITE, font=SANS),
+        # Progressive reveal of definitions
+        def_items = [
+            Text("Connected acyclic graph (no cycles)", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Every pair of vertices: exactly one simple path",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("5 vertices, 4 edges: |E| = |V| - 1",
+                 font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
+        self.ly.progressive_reveal(def_items, start_from=title)
+        self.wait(2)
 
-        # Remove tree, show terms
-        self.play(FadeOut(rtree), FadeOut(root_label), FadeOut(leaf_label), run_time=FAST)
-        self.ly.progressive_reveal(terms)
-        self.wait(1.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
-    # Scene 5: Binary Trees (60s)
+    # Scene 3: Visual Proof -- Edges = Vertices - 1 (1:30)
     # ------------------------------------------------------------------
-    def scene5_binary_trees(self):
+    def scene3_visual_proof(self):
         self.add_subcaption(
-            "A binary tree is a rooted tree where each node has at most two children: "
-            "a left child and a right child. Full binary trees have exactly two children "
-            "for every internal node, and complete binary trees fill all levels left to right.",
+            "Why does a tree with n vertices have exactly n minus one edges? "
+            "Start with a single vertex and zero edges. Each time you add a new vertex, "
+            "you connect it with exactly one edge. After adding n minus one vertices, "
+            "you have n vertices and n minus one edges.",
             duration=18,
         )
-        self.ly.section_divider(3, "Binary Trees")
 
-        # Draw a binary tree
-        b_root = Dot(UP * 2, color=WHITE, radius=0.13)
-        b_l = Dot(UP * 0.7 + LEFT * 1.2, color=WHITE, radius=0.13)
-        b_r = Dot(UP * 0.7 + RIGHT * 1.2, color=WHITE, radius=0.13)
-        b_ll = Dot(DOWN * 0.5 + LEFT * 2, color=WHITE, radius=0.13)
-        b_lr = Dot(DOWN * 0.5 + LEFT * 0.4, color=WHITE, radius=0.13)
-        b_rl = Dot(DOWN * 0.5 + RIGHT * 0.4, color=WHITE, radius=0.13)
-        b_rr = Dot(DOWN * 0.5 + RIGHT * 2, color=SECONDARY, radius=0.13)
+        self.ly.section_divider(2, "Why |E| = |V| - 1")
+        title = self.ly.title("Visual Proof: Build a Tree")
 
-        bverts = VGroup(b_root, b_l, b_r, b_ll, b_lr, b_rl, b_rr)
-        bedges = VGroup(
-            Line(b_root.get_center(), b_l.get_center(), color=PRIMARY, stroke_width=3),
-            Line(b_root.get_center(), b_r.get_center(), color=PRIMARY, stroke_width=3),
-            Line(b_l.get_center(), b_ll.get_center(), color=PRIMARY, stroke_width=3),
-            Line(b_l.get_center(), b_lr.get_center(), color=PRIMARY, stroke_width=3),
-            Line(b_r.get_center(), b_rl.get_center(), color=PRIMARY, stroke_width=3),
-            Line(b_r.get_center(), b_rr.get_center(), color=PRIMARY, stroke_width=3),
+        # Start with 1 vertex
+        v_positions = [ORIGIN]
+        step_verts = [Dot(ORIGIN, color=PRIMARY, radius=0.15)]
+        step_labels = [Text("v1", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(step_verts[0], UP)]
+        step_edges = VGroup()
+
+        self.ly.center_in_content(step_verts[0])
+        self.play(
+            FadeIn(step_verts[0], scale=0.5),
+            FadeIn(step_labels[0], scale=0.5),
+            run_time=NORMAL,
         )
-        btree = VGroup(bverts, bedges)
-        self.ly.center_in_content(btree)
-        self.play(Create(bedges), LaggedStartMap(FadeIn, bverts, scale=0.5, lag_ratio=0.1), run_time=NORMAL)
+
+        counter = Text("|V| = 1, |E| = 0", font_size=BODY_SIZE, color=ACCENT, font=SANS)
+        self.ly.safe_place(counter, direction=DOWN, anchor=step_verts[0], buff=1)
+        self.play(FadeIn(counter, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1)
 
-        self.play(FadeOut(btree), run_time=FAST)
+        # Add 5 more vertices one at a time
+        new_positions = [
+            UP * 1.5,                # v2
+            UP * 1.5 + RIGHT * 2,   # v3
+            UP * 0.5 + RIGHT * 1,    # v4
+            DOWN * 1 + RIGHT * 0.5,  # v5
+            DOWN * 2,                # v6
+        ]
+        connect_to = [0, 1, 1, 2, 3]
 
-        # Key formula
-        formula = MathTex(r"\text{Max nodes at level } k = 2^k", font_size=HEADING_SIZE, color=ACCENT)
+        for idx, (pos, parent) in enumerate(zip(new_positions, connect_to)):
+            new_v = Dot(pos, color=PRIMARY, radius=0.15)
+            new_label = Text(f"v{idx+2}", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(new_v, UP if pos[1] > 0 else DOWN)
+            new_edge = Line(step_verts[parent].get_center(), pos, color=SECONDARY, stroke_width=4)
+
+            self.play(
+                FadeOut(counter),
+                run_time=FAST,
+            )
+            self.play(
+                Create(new_edge),
+                FadeIn(new_v, scale=0.5),
+                FadeIn(new_label, scale=0.5),
+                run_time=NORMAL,
+            )
+
+            step_verts.add(new_v)
+            step_labels.add(new_label)
+            step_edges.add(new_edge)
+
+            counter = Text(f"|V| = {idx+2}, |E| = {idx+1}", font_size=BODY_SIZE, color=ACCENT, font=SANS)
+            self.ly.safe_place(counter, direction=DOWN, anchor=new_v if pos[1] < 0 else step_verts[0], buff=1)
+            self.play(FadeIn(counter, shift=LEFT * 0.15), run_time=NORMAL)
+            self.wait(0.5)
+
+        # Final formula
+        self.play(FadeOut(counter), run_time=FAST)
+        formula = MathTex(r"|E|", r" = |V| - 1", color=WHITE)
         fbox = self.ly.formula_box(formula, ACCENT)
         self.ly.center_in_content(fbox)
         self.play(Write(fbox), run_time=NORMAL)
         self.wait(1)
 
-        items = [
-            Text("Binary tree: each node has at most 2 children", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Full binary tree: every internal node has 2 children", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Complete binary tree: all levels filled left to right", font_size=BODY_SIZE, color=WHITE, font=SANS),
-        ]
-        self.ly.progressive_reveal(items, start_from=fbox)
-        self.wait(1.5)
-        self.ly.clear()
-
-    # ------------------------------------------------------------------
-    # Scene 6: Tree Traversals (90s)
-    # ------------------------------------------------------------------
-    def scene6_traversals(self):
-        self.add_subcaption(
-            "How do we visit every node in a binary tree systematically? "
-            "Three standard traversals: pre-order visits root first, "
-            "in-order visits left subtree then root then right subtree, "
-            "and post-order visits children before the root.",
-            duration=18,
-        )
-        self.ly.section_divider(4, "Tree Traversals")
-
-        # Build a small binary tree with values
-        t_root = Dot(UP * 2, color=ACCENT, radius=0.13)
-        t_l = Dot(UP * 0.7 + LEFT * 1.2, color=WHITE, radius=0.13)
-        t_r = Dot(UP * 0.7 + RIGHT * 1.2, color=WHITE, radius=0.13)
-        t_ll = Dot(DOWN * 0.5 + LEFT * 2, color=WHITE, radius=0.13)
-        t_lr = Dot(DOWN * 0.5 + LEFT * 0.4, color=WHITE, radius=0.13)
-
-        labels = VGroup(
-            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(t_root, UP, buff=0.15),
-            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(t_l, LEFT, buff=0.15),
-            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(t_r, RIGHT, buff=0.15),
-            Text("D", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(t_ll, LEFT, buff=0.15),
-            Text("E", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(t_lr, RIGHT, buff=0.15),
-        )
-
-        tverts = VGroup(t_root, t_l, t_r, t_ll, t_lr)
-        tedges = VGroup(
-            Line(t_root.get_center(), t_l.get_center(), color=PRIMARY, stroke_width=3),
-            Line(t_root.get_center(), t_r.get_center(), color=PRIMARY, stroke_width=3),
-            Line(t_l.get_center(), t_ll.get_center(), color=PRIMARY, stroke_width=3),
-            Line(t_l.get_center(), t_lr.get_center(), color=PRIMARY, stroke_width=3),
-        )
-
-        ttree = VGroup(tverts, tedges, labels)
-        self.ly.center_in_content(ttree)
-        self.play(Create(tedges), LaggedStartMap(FadeIn, tverts, scale=0.5, lag_ratio=0.1), LaggedStartMap(FadeIn, labels, scale=0.5, lag_ratio=0.1), run_time=NORMAL)
-        self.wait(1)
-
-        # Pre-order
-        pre_title = Text("Pre-order: Root → Left → Right", font_size=BODY_SIZE, color=ACCENT, font=SANS)
-        self.ly.safe_place(pre_title, direction=DOWN, anchor=ttree, buff=0.6)
-        self.play(FadeIn(pre_title, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
-
-        pre_order = Text("Visit order: A, B, D, E, C", font_size=BODY_SIZE, color=WHITE, font=SANS)
-        self.ly.safe_place(pre_order, direction=DOWN, anchor=pre_title, buff=0.3)
-        self.play(FadeIn(pre_order, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.5)
-
-        # Transition to in-order
-        self.play(FadeOut(pre_title), FadeOut(pre_order), run_time=FAST)
-
-        in_title = Text("In-order: Left → Root → Right", font_size=BODY_SIZE, color=SECONDARY, font=SANS)
-        self.ly.safe_place(in_title, direction=DOWN, anchor=ttree, buff=0.6)
-        self.play(FadeIn(in_title, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
-
-        in_order = Text("Visit order: D, B, E, A, C", font_size=BODY_SIZE, color=WHITE, font=SANS)
-        self.ly.safe_place(in_order, direction=DOWN, anchor=in_title, buff=0.3)
-        self.play(FadeIn(in_order, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.5)
-
-        # Transition to post-order
-        self.play(FadeOut(in_title), FadeOut(in_order), run_time=FAST)
-
-        post_title = Text("Post-order: Left → Right → Root", font_size=BODY_SIZE, color=RED, font=SANS)
-        self.ly.safe_place(post_title, direction=DOWN, anchor=ttree, buff=0.6)
-        self.play(FadeIn(post_title, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
-
-        post_order = Text("Visit order: D, E, B, C, A", font_size=BODY_SIZE, color=WHITE, font=SANS)
-        self.ly.safe_place(post_order, direction=DOWN, anchor=post_title, buff=0.3)
-        self.play(FadeIn(post_order, shift=LEFT * 0.15), run_time=NORMAL)
+        iff = Text("This is if-and-only-if: connected AND acyclic",
+                   font_size=BODY_SIZE, color=DIM, font=SANS)
+        self.ly.safe_place(iff, direction=DOWN, anchor=fbox, buff=0.5)
+        self.play(FadeIn(iff, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(2)
+
         self.ly.clear()
 
     # ------------------------------------------------------------------
-    # Scene 7: Spanning Trees (75s)
+    # Scene 4: Forests and Rooted Trees (1:30)
     # ------------------------------------------------------------------
-    def scene7_spanning_trees(self):
+    def scene4_forests_rooted(self):
         self.add_subcaption(
-            "A spanning tree of a connected graph is a subgraph that includes all vertices "
-            "and forms a tree. Every connected graph has at least one spanning tree. "
-            "When edges have weights, we seek a minimum spanning tree with the smallest total weight.",
+            "A forest is a disconnected collection of trees. If you pick any vertex "
+            "in a tree as the root, it becomes a rooted tree with parent-child relationships. "
+            "Leaves have no children, and the height measures the longest root-to-leaf path.",
             duration=18,
         )
-        self.ly.section_divider(5, "Spanning Trees")
 
-        # Draw a connected graph
-        g1 = Dot(UP * 1.5 + LEFT * 1.5, color=WHITE, radius=0.13)
-        g2 = Dot(UP * 1.5 + RIGHT * 1.5, color=WHITE, radius=0.13)
-        g3 = Dot(DOWN * 0.5 + LEFT * 2, color=WHITE, radius=0.13)
-        g4 = Dot(DOWN * 0.5, color=WHITE, radius=0.13)
-        g5 = Dot(DOWN * 0.5 + RIGHT * 2, color=WHITE, radius=0.13)
+        self.ly.section_divider(3, "Rooted Trees and Forests")
+        title = self.ly.title("Rooted Trees and Forests")
 
-        gverts = VGroup(g1, g2, g3, g4, g5)
-        # Complete graph edges (some to remove later)
-        g_all_edges = VGroup(
-            Line(g1.get_center(), g2.get_center(), color=DIM, stroke_width=2),
-            Line(g1.get_center(), g3.get_center(), color=DIM, stroke_width=2),
-            Line(g1.get_center(), g4.get_center(), color=DIM, stroke_width=2),
-            Line(g2.get_center(), g4.get_center(), color=DIM, stroke_width=2),
-            Line(g2.get_center(), g5.get_center(), color=DIM, stroke_width=2),
-            Line(g3.get_center(), g4.get_center(), color=DIM, stroke_width=2),
-            Line(g4.get_center(), g5.get_center(), color=DIM, stroke_width=2),
-            Line(g3.get_center(), g5.get_center(), color=DIM, stroke_width=2),
+        # Show a forest: two disconnected trees
+        # Tree 1: left side
+        f1_v = VGroup(
+            Dot(LEFT * 3 + UP * 1, color=PRIMARY, radius=0.12),
+            Dot(LEFT * 4 + UP * 0, color=PRIMARY, radius=0.12),
+            Dot(LEFT * 2 + UP * 0, color=PRIMARY, radius=0.12),
+            Dot(LEFT * 3 + DOWN * 1, color=PRIMARY, radius=0.12),
+        )
+        f1_e = VGroup(
+            Line(f1_v[0].get_center(), f1_v[1].get_center(), color=SECONDARY, stroke_width=3),
+            Line(f1_v[0].get_center(), f1_v[2].get_center(), color=SECONDARY, stroke_width=3),
+            Line(f1_v[0].get_center(), f1_v[3].get_center(), color=SECONDARY, stroke_width=3),
         )
 
-        graph_group = VGroup(gverts, g_all_edges)
-        self.ly.center_in_content(graph_group)
-        self.play(LaggedStartMap(FadeIn, gverts, scale=0.5, lag_ratio=0.1), Create(g_all_edges), run_time=NORMAL)
+        # Tree 2: right side
+        f2_v = VGroup(
+            Dot(RIGHT * 3 + UP * 0.5, color=PRIMARY, radius=0.12),
+            Dot(RIGHT * 2 + DOWN * 0.5, color=PRIMARY, radius=0.12),
+            Dot(RIGHT * 4 + DOWN * 0.5, color=PRIMARY, radius=0.12),
+        )
+        f2_e = VGroup(
+            Line(f2_v[0].get_center(), f2_v[1].get_center(), color=SECONDARY, stroke_width=3),
+            Line(f2_v[0].get_center(), f2_v[2].get_center(), color=SECONDARY, stroke_width=3),
+        )
+
+        self.ly.safe_place(f1_v, direction=DOWN, anchor=title, buff=1)
+        self.play(
+            LaggedStartMap(FadeIn, f1_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, f2_v, scale=0.3, lag_ratio=0.1),
+            run_time=NORMAL,
+        )
+        self.play(Create(f1_e), Create(f2_e), run_time=NORMAL)
+
+        forest_label = Text("Forest: two disconnected trees", font_size=BODY_SIZE, color=WHITE, font=SANS)
+        self.ly.safe_place(forest_label, direction=DOWN, anchor=f1_v[0], buff=1.5)
+        self.play(FadeIn(forest_label, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(1)
+        self.play(FadeOut(forest_label), run_time=FAST)
+
+        # Root the left tree at vertex 0 (top) -- mark as root
+        root_marker = MathTex(r"\star", font_size=36, color=ACCENT).next_to(f1_v[0], UP, buff=0.15)
+        self.play(FadeIn(root_marker), run_time=FAST)
+
+        # Label parent-child relationships
+        terms = [
+            Text("Parent of D = C  (root)", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Children of root: A, B, E", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Leaves: A, B, E (no children)", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+        ]
+        self.ly.progressive_reveal(terms, start_from=title)
+        self.wait(2)
+
+        self.ly.clear()
+
+    # ------------------------------------------------------------------
+    # Scene 5: Binary Trees (1:30)
+    # ------------------------------------------------------------------
+    def scene5_binary_trees(self):
+        self.add_subcaption(
+            "A binary tree is a rooted tree where each node has at most two children: "
+            "a left child and a right child. A full binary tree has nodes with zero or two children. "
+            "A complete binary tree fills all levels left-to-right.",
+            duration=18,
+        )
+
+        self.ly.section_divider(4, "Binary Trees")
+        title = self.ly.title("Binary Trees")
+
+        # Three small binary tree examples side by side
+
+        # 1. Full binary tree (each node 0 or 2 children)
+        full_v = VGroup(
+            Dot(LEFT * 4 + UP * 1.5, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 5 + UP * 0, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 3 + UP * 0, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 5.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 4.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 3.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 2.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+        )
+        full_e = VGroup(
+            Line(full_v[0].get_center(), full_v[1].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(full_v[0].get_center(), full_v[2].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(full_v[1].get_center(), full_v[3].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(full_v[1].get_center(), full_v[4].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(full_v[2].get_center(), full_v[5].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(full_v[2].get_center(), full_v[6].get_center(), color=SECONDARY, stroke_width=2.5),
+        )
+        full_label = Text("Full", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(full_v[0], UP, buff=0.3)
+
+        # 2. Complete binary tree
+        comp_v = VGroup(
+            Dot(UP * 1.5, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 1 + UP * 0, color=PRIMARY, radius=0.1),
+            Dot(RIGHT * 1 + UP * 0, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 1.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+            Dot(LEFT * 0.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+            Dot(RIGHT * 0.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+        )
+        comp_e = VGroup(
+            Line(comp_v[0].get_center(), comp_v[1].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(comp_v[0].get_center(), comp_v[2].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(comp_v[1].get_center(), comp_v[3].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(comp_v[1].get_center(), comp_v[4].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(comp_v[2].get_center(), comp_v[5].get_center(), color=SECONDARY, stroke_width=2.5),
+        )
+        comp_label = Text("Complete", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(comp_v[0], UP, buff=0.3)
+
+        # 3. Perfect binary tree (small)
+        perf_v = VGroup(
+            Dot(RIGHT * 4 + UP * 1.5, color=PRIMARY, radius=0.1),
+            Dot(RIGHT * 3 + UP * 0, color=PRIMARY, radius=0.1),
+            Dot(RIGHT * 5 + UP * 0, color=PRIMARY, radius=0.1),
+            Dot(RIGHT * 3.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+            Dot(RIGHT * 4.5 + DOWN * 1.5, color=PRIMARY, radius=0.1),
+        )
+        perf_e = VGroup(
+            Line(perf_v[0].get_center(), perf_v[1].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(perf_v[0].get_center(), perf_v[2].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(perf_v[1].get_center(), perf_v[3].get_center(), color=SECONDARY, stroke_width=2.5),
+            Line(perf_v[2].get_center(), perf_v[4].get_center(), color=SECONDARY, stroke_width=2.5),
+        )
+        perf_label = Text("Perfect", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(perf_v[0], UP, buff=0.3)
+
+        self.ly.safe_place(full_v, direction=DOWN, anchor=title, buff=0.8)
+        self.play(
+            LaggedStartMap(FadeIn, full_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, comp_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, perf_v, scale=0.3, lag_ratio=0.1),
+            run_time=NORMAL,
+        )
+        self.play(
+            Create(full_e), Create(comp_e), Create(perf_e),
+            run_time=NORMAL,
+        )
+        self.play(
+            FadeIn(full_label, shift=LEFT * 0.1),
+            FadeIn(comp_label, shift=LEFT * 0.1),
+            FadeIn(perf_label, shift=LEFT * 0.1),
+            run_time=NORMAL,
+        )
         self.wait(1)
 
-        # Show spanning tree edges highlighted
-        st_edges = VGroup(
-            Line(g1.get_center(), g3.get_center(), color=SECONDARY, stroke_width=4),
-            Line(g1.get_center(), g2.get_center(), color=SECONDARY, stroke_width=4),
-            Line(g3.get_center(), g4.get_center(), color=SECONDARY, stroke_width=4),
-            Line(g4.get_center(), g5.get_center(), color=SECONDARY, stroke_width=4),
+        # Definitions below
+        defs = [
+            Text("Each node has at most 2 children (left, right)",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Full: every node has 0 or 2 children",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Complete: all levels filled, last level left-to-right",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Perfect: all internal nodes have 2 children, same depth",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+        ]
+        self.ly.progressive_reveal(defs, start_from=title)
+        self.wait(2)
+
+        self.ly.clear()
+
+    # ------------------------------------------------------------------
+    # Scene 6: Tree Traversals -- Overview (1:00)
+    # ------------------------------------------------------------------
+    def scene6_traversals_overview(self):
+        self.add_subcaption(
+            "How do we visit every node in a tree systematically? "
+            "There are three fundamental traversal orders, defined by when we process "
+            "the current node relative to its children: pre-order, in-order, and post-order.",
+            duration=18,
         )
+
+        self.ly.section_divider(5, "Tree Traversals")
+        title = self.ly.title("Exploring Trees: Traversals")
+
+        # Show a reference tree
+        ref_positions = [
+            UP * 2,                  # root F
+            UP * 0.5 + LEFT * 1.5,  # B
+            UP * 0.5 + RIGHT * 1.5, # G
+            DOWN * 1 + LEFT * 2.5,  # A
+            DOWN * 1 + LEFT * 0.5,  # D
+            DOWN * 1 + RIGHT * 0.5, # C (right child of B - actually G's left)
+            DOWN * 1 + RIGHT * 2.5, # I
+        ]
+        ref_names = ["F", "B", "G", "A", "D", "C", "I"]
+        ref_v = VGroup(*[Dot(p, color=PRIMARY, radius=0.15) for p in ref_positions])
+        ref_l = VGroup(*[
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
+            for i, n in enumerate(ref_names)
+        ])
+        # Edges: F-B, F-G, B-A, B-D, G-C, G-I
+        ref_pairs = [(0,1), (0,2), (1,3), (1,4), (2,5), (2,6)]
+        ref_edges = VGroup(*[
+            Line(ref_v[i].get_center(), ref_v[j].get_center(), color=SECONDARY, stroke_width=3)
+            for i, j in ref_pairs
+        ])
+
+        self.ly.safe_place(ref_v, direction=DOWN, anchor=title, buff=0.8)
+        self.play(
+            LaggedStartMap(FadeIn, ref_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, ref_l, scale=0.3, lag_ratio=0.1),
+            run_time=NORMAL,
+        )
+        self.play(Create(ref_edges), run_time=NORMAL)
+        self.wait(0.5)
+
+        # Three traversal names
+        orders = [
+            Text("Pre-order:  Root, Left, Right", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("In-order:   Left, Root, Right", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Post-order: Left, Right, Root", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+        ]
+        self.ly.progressive_reveal(orders, start_from=title)
+        self.wait(2)
+
+        self.ly.clear()
+
+    # ------------------------------------------------------------------
+    # Scene 7: Pre-order Traversal (1:00)
+    # ------------------------------------------------------------------
+    def scene7_preorder(self):
+        self.add_subcaption(
+            "Pre-order traversal visits the root first, then the left subtree, then the right subtree. "
+            "For our tree: F, then B, A, D, then G, C, I. Pre-order is useful for copying "
+            "a tree structure or evaluating expression trees.",
+            duration=18,
+        )
+
+        self.ly.section_divider(6, "Pre-Order Traversal")
+        title = self.ly.title("Pre-Order: Root, Left, Right")
+
+        # Same tree as before
+        ref_positions = [
+            UP * 1.5,                   # F (root)
+            UP * 0 + LEFT * 1.5,       # B
+            UP * 0 + RIGHT * 1.5,      # G
+            DOWN * 1.5 + LEFT * 2.5,   # A
+            DOWN * 1.5 + LEFT * 0.5,   # D
+            DOWN * 1.5 + RIGHT * 0.5,  # C
+            DOWN * 1.5 + RIGHT * 2.5,  # I
+        ]
+        ref_names = ["F", "B", "G", "A", "D", "C", "I"]
+        ref_v = VGroup(*[Dot(p, color=PRIMARY, radius=0.15) for p in ref_positions])
+        ref_l = VGroup(*[
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
+            for i, n in enumerate(ref_names)
+        ])
+        ref_pairs = [(0,1), (0,2), (1,3), (1,4), (2,5), (2,6)]
+        ref_edges = VGroup(*[
+            Line(ref_v[i].get_center(), ref_v[j].get_center(), color=SECONDARY, stroke_width=3)
+            for i, j in ref_pairs
+        ])
+
+        self.ly.safe_place(ref_v, direction=DOWN, anchor=title, buff=0.8)
+        self.play(
+            LaggedStartMap(FadeIn, ref_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, ref_l, scale=0.3, lag_ratio=0.1),
+            run_time=NORMAL,
+        )
+        self.play(Create(ref_edges), run_time=NORMAL)
+        self.wait(0.5)
+
+        # Animate pre-order visit: F(0), B(1), A(3), D(4), G(2), C(5), I(6)
+        preorder_order = [0, 1, 3, 4, 2, 5, 6]
+        visit_seq = Text("", font_size=BODY_SIZE, color=ACCENT, font=SANS)
+        self.ly.safe_place(visit_seq, direction=DOWN, anchor=ref_v[0], buff=1.5)
+
+        for step, idx in enumerate(preorder_order):
+            self.play(
+                ref_v[idx].animate.set_color(ACCENT).scale(1.4),
+                run_time=FAST,
+            )
+            # Update sequence text
+            name = ref_names[idx]
+            if step == 0:
+                seq_text = f"Visit: {name}"
+            else:
+                seq_text = f"{visit_seq.text.text}, {name}"
+            new_seq = Text(seq_text, font_size=BODY_SIZE, color=ACCENT, font=SANS)
+            new_seq.move_to(visit_seq.get_center())
+            self.play(FadeOut(visit_seq), FadeIn(new_seq, shift=LEFT * 0.1), run_time=FAST)
+            visit_seq = new_seq
+            self.wait(0.3)
+
+        # Reset colors
+        self.play(
+            *[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v],
+            run_time=NORMAL,
+        )
+
+        app_text = Text("Useful for: copying trees, expression trees (prefix notation)",
+                        font_size=BODY_SIZE, color=DIM, font=SANS)
+        self.ly.safe_place(app_text, direction=DOWN, anchor=visit_seq, buff=0.4)
+        self.play(FadeIn(app_text, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(2)
+
+        self.ly.clear()
+
+    # ------------------------------------------------------------------
+    # Scene 8: In-order and Post-order (1:30)
+    # ------------------------------------------------------------------
+    def scene8_inorder_postorder(self):
+        self.add_subcaption(
+            "In-order traversal visits the left subtree, then the root, then the right subtree. "
+            "For a binary search tree, this gives sorted output. Post-order visits children first, "
+            "then the root, and is used for computing directory sizes or deleting a tree.",
+            duration=18,
+        )
+
+        title = self.ly.title("In-Order and Post-Order")
+
+        # Same tree structure
+        ref_positions = [
+            UP * 1.5,
+            UP * 0 + LEFT * 1.5,
+            UP * 0 + RIGHT * 1.5,
+            DOWN * 1.5 + LEFT * 2.5,
+            DOWN * 1.5 + LEFT * 0.5,
+            DOWN * 1.5 + RIGHT * 0.5,
+            DOWN * 1.5 + RIGHT * 2.5,
+        ]
+        ref_names = ["F", "B", "G", "A", "D", "C", "I"]
+        ref_v = VGroup(*[Dot(p, color=PRIMARY, radius=0.15) for p in ref_positions])
+        ref_l = VGroup(*[
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
+            for i, n in enumerate(ref_names)
+        ])
+        ref_pairs = [(0,1), (0,2), (1,3), (1,4), (2,5), (2,6)]
+        ref_edges = VGroup(*[
+            Line(ref_v[i].get_center(), ref_v[j].get_center(), color=SECONDARY, stroke_width=3)
+            for i, j in ref_pairs
+        ])
+
+        self.ly.safe_place(ref_v, direction=DOWN, anchor=title, buff=0.6)
+        self.play(
+            LaggedStartMap(FadeIn, ref_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, ref_l, scale=0.3, lag_ratio=0.1),
+            run_time=NORMAL,
+        )
+        self.play(Create(ref_edges), run_time=NORMAL)
+        self.wait(0.3)
+
+        # In-order: A, B, D, F, C, G, I
+        inorder_order = [3, 1, 4, 0, 5, 2, 6]
+        in_label = Text("In-order: ", font_size=BODY_SIZE, color=PRIMARY, font=SANS)
+        self.ly.safe_place(in_label, direction=DOWN, anchor=ref_v[0], buff=1.5)
+
+        for step, idx in enumerate(inorder_order):
+            self.play(
+                ref_v[idx].animate.set_color(PRIMARY).scale(1.4),
+                run_time=FAST,
+            )
+            name = ref_names[idx]
+            if step == 0:
+                seq_text = f"In-order: {name}"
+            else:
+                seq_text = f"{in_label.text.text}, {name}"
+            new_l = Text(seq_text, font_size=BODY_SIZE, color=PRIMARY, font=SANS)
+            new_l.move_to(in_label.get_center())
+            self.play(FadeOut(in_label), FadeIn(new_l, shift=LEFT * 0.1), run_time=FAST)
+            in_label = new_l
+            self.wait(0.2)
 
         self.play(
-            *[Transform(g_all_edges[i], st_edges[i]) for i in range(len(g_all_edges))],
-            run_time=SLOW,
+            *[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v],
+            run_time=NORMAL,
         )
-        self.wait(1)
+        self.play(FadeOut(in_label), run_time=FAST)
 
-        # Definition
-        defn = Text(
-            "Spanning tree: includes ALL vertices, forms a TREE",
-            font_size=BODY_SIZE, color=ACCENT, font=SANS,
+        # Post-order: A, D, B, C, I, G, F
+        postorder_order = [3, 4, 1, 5, 6, 2, 0]
+        post_label = Text("Post-order: ", font_size=BODY_SIZE, color=SECONDARY, font=SANS)
+        self.ly.safe_place(post_label, direction=DOWN, anchor=ref_v[0], buff=1.5)
+
+        for step, idx in enumerate(postorder_order):
+            self.play(
+                ref_v[idx].animate.set_color(SECONDARY).scale(1.4),
+                run_time=FAST,
+            )
+            name = ref_names[idx]
+            if step == 0:
+                seq_text = f"Post-order: {name}"
+            else:
+                seq_text = f"{post_label.text.text}, {name}"
+            new_l = Text(seq_text, font_size=BODY_SIZE, color=SECONDARY, font=SANS)
+            new_l.move_to(post_label.get_center())
+            self.play(FadeOut(post_label), FadeIn(new_l, shift=LEFT * 0.1), run_time=FAST)
+            post_label = new_l
+            self.wait(0.2)
+
+        self.play(
+            *[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v],
+            run_time=NORMAL,
         )
-        self.ly.safe_place(defn, direction=DOWN, anchor=graph_group, buff=0.6)
-        self.play(FadeIn(defn, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.5)
+        self.play(FadeOut(post_label), run_time=FAST)
 
-        # MST note
-        self.play(FadeOut(graph_group), FadeOut(defn), run_time=FAST)
-
-        mst_items = [
-            Text("Minimum Spanning Tree (MST):", font_size=HEADING_SIZE, color=ACCENT, font=SANS),
-            Text("Edges have weights (costs)", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Find spanning tree with minimum total weight", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Kruskal: add cheapest edges, skip cycles", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("Prim: grow tree from a vertex, add cheapest", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+        # Key insight
+        insights = [
+            Text("In-order on BST gives sorted output",
+                 font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Post-order: directory sizes, tree deletion",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
-        self.ly.progressive_reveal(mst_items)
-        self.wait(1.5)
+        self.ly.progressive_reveal(insights, start_from=title)
+        self.wait(2)
+
         self.ly.clear()
 
     # ------------------------------------------------------------------
-    # Scene 8: Summary (45s)
+    # Scene 9: Spanning Trees (1:30)
     # ------------------------------------------------------------------
-    def scene8_summary(self):
+    def scene9_spanning_trees(self):
         self.add_subcaption(
-            "Let's recap: trees are connected acyclic graphs with powerful properties. "
-            "A tree with n vertices has exactly n minus 1 edges, every edge is a bridge, "
-            "and there's a unique path between any two vertices.",
-            duration=14,
+            "A spanning tree of a connected graph includes every vertex but only enough edges "
+            "to keep it connected, forming a tree. A graph can have many spanning trees. "
+            "What if edges have weights and we want the cheapest one?",
+            duration=18,
+        )
+
+        self.ly.section_divider(7, "Spanning Trees")
+        title = self.ly.title("Spanning Trees")
+
+        # Original graph: 5 vertices, 6 edges
+        g_positions = [
+            UP * 1.5 + LEFT * 2,     # A
+            UP * 1.5 + RIGHT * 2,    # B
+            DOWN * 1 + RIGHT * 2,     # C
+            DOWN * 1 + LEFT * 2,      # D
+            DOWN * 0.5,               # E
+        ]
+        g_names = ["A", "B", "C", "D", "E"]
+        g_v = VGroup(*[Dot(p, color=WHITE, radius=0.13) for p in g_positions])
+        g_l = VGroup(*[
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(g_v[i], UP if g_positions[i][1] > 0 else DOWN)
+            for i, n in enumerate(g_names)
+        ])
+        g_pairs = [(0,1), (1,2), (2,3), (3,0), (0,4), (2,4)]
+        g_edges = VGroup(*[
+            Line(g_v[i].get_center(), g_v[j].get_center(), color=PRIMARY, stroke_width=3)
+            for i, j in g_pairs
+        ])
+
+        self.ly.safe_place(g_v, direction=DOWN, anchor=title, buff=1)
+        self.play(
+            LaggedStartMap(FadeIn, g_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, g_l, scale=0.3, lag_ratio=0.1),
+            run_time=NORMAL,
+        )
+        self.play(Create(g_edges), run_time=NORMAL)
+        self.wait(0.5)
+
+        # Highlight spanning tree 1: edges 0,1,2,3 (A-B-C-D-A... no, that's a cycle)
+        # Spanning tree: 0,1,2,4 (A-B, B-C, C-E, D-A) -- that's 4 edges for 5 verts
+        # Actually edges 0,1,2,3 is A-B-C-D which is 4 edges but only 4 verts
+        # Let's use: 0(A-B), 1(B-C), 2(C-E), 3(D-A), 5(C-E duplicated)...
+        # Correct spanning tree edges: 0(A-B), 1(B-C), 3(D-A), 4(A-E) = 4 edges, 5 verts, connected
+        st1_indices = [0, 1, 3, 4]
+        for idx in st1_indices:
+            g_edges[idx].animate.set_color(SECONDARY)
+        self.play(
+            *[g_edges[idx].animate.set_color(SECONDARY).set_stroke(width=5) for idx in st1_indices],
+            *[g_edges[idx].animate.set_color(DIM).set_opacity(0.3) for idx in range(len(g_edges)) if idx not in st1_indices],
+            run_time=NORMAL,
+        )
+        st1_text = Text("Spanning Tree 1", font_size=BODY_SIZE, color=SECONDARY, font=SANS)
+        self.ly.safe_place(st1_text, direction=DOWN, anchor=g_v[0], buff=1.5)
+        self.play(FadeIn(st1_text, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(1)
+
+        self.play(FadeOut(st1_text), run_time=FAST)
+
+        # Reset and highlight spanning tree 2
+        st2_indices = [0, 1, 2, 5]
+        self.play(
+            *[g_edges[idx].animate.set_color(PRIMARY).set_stroke(width=3).set_opacity(1) for idx in range(len(g_edges))],
+            run_time=FAST,
+        )
+        self.play(
+            *[g_edges[idx].animate.set_color(SECONDARY).set_stroke(width=5) for idx in st2_indices],
+            *[g_edges[idx].animate.set_color(DIM).set_opacity(0.3) for idx in range(len(g_edges)) if idx not in st2_indices],
+            run_time=NORMAL,
+        )
+        st2_text = Text("Spanning Tree 2 (different edges)", font_size=BODY_SIZE, color=SECONDARY, font=SANS)
+        self.ly.safe_place(st2_text, direction=DOWN, anchor=g_v[0], buff=1.5)
+        self.play(FadeIn(st2_text, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(1)
+
+        self.play(FadeOut(st2_text), run_time=FAST)
+        self.play(
+            *[g_edges[idx].animate.set_color(PRIMARY).set_stroke(width=3).set_opacity(1) for idx in range(len(g_edges))],
+            run_time=FAST,
+        )
+
+        # Bridge to MST
+        bridge = Text(
+            "What if edges have weights? Find the cheapest spanning tree.",
+            font_size=BODY_SIZE, color=ACCENT, font=SANS,
+        )
+        self.ly.safe_place(bridge, direction=DOWN, anchor=g_v[0], buff=1.5)
+        self.play(FadeIn(bridge, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(2)
+
+        self.ly.clear()
+
+    # ------------------------------------------------------------------
+    # Scene 10: Kruskal's Algorithm (2:00)
+    # ------------------------------------------------------------------
+    def scene10_kruskals(self):
+        self.add_subcaption(
+            "Kruskal's algorithm finds the minimum spanning tree. Sort all edges by weight, "
+            "then add the cheapest edge that doesn't create a cycle. Repeat until all vertices "
+            "are connected. Let's see it in action.",
+            duration=18,
+        )
+
+        self.ly.section_divider(8, "Minimum Spanning Tree")
+        title = self.ly.title("Kruskal's Algorithm: MST")
+
+        # Weighted graph: 6 vertices, 8 edges
+        k_positions = [
+            UP * 2 + LEFT * 2,       # A (0)
+            UP * 2 + RIGHT * 2,      # B (1)
+            DOWN * 1 + RIGHT * 2,    # C (2)
+            DOWN * 1 + LEFT * 2,     # D (3)
+            DOWN * 0.5,              # E (4)
+            UP * 0.5 + RIGHT * 5,    # F (5) -- too far right, let me recenter
+        ]
+        # Use 6 vertices in a nice layout
+        k_positions = [
+            LEFT * 3 + UP * 2,   # A (0)
+            RIGHT * 3 + UP * 2,  # B (1)
+            RIGHT * 3,          # C (2)
+            LEFT * 3,           # D (3)
+            LEFT * 0 + DOWN * 1, # E (4)
+            RIGHT * 0 + DOWN * 1, # F (5) -- use better positions
+        ]
+        k_names = ["A", "B", "C", "D", "E", "F"]
+        k_v = VGroup(*[Dot(p, color=WHITE, radius=0.12) for p in k_positions])
+        k_l = VGroup(*[
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(k_v[i], UP if k_positions[i][1] > 0 else DOWN)
+            for i, n in enumerate(k_names)
+        ])
+
+        # Edges with weights: (from, to, weight)
+        k_edges_data = [
+            (0, 1, 4),  # A-B: 4
+            (1, 2, 8),  # B-C: 8
+            (2, 3, 7),  # C-D: 7
+            (3, 0, 2),  # D-A: 2
+            (0, 4, 5),  # A-E: 5
+            (1, 5, 1),  # B-F: 1
+            (4, 5, 3),  # E-F: 3
+            (2, 5, 6),  # C-F: 6
+        ]
+        k_edges = VGroup()
+        k_weights = VGroup()
+        for i, j, w in k_edges_data:
+            edge = Line(k_v[i].get_center(), k_v[j].get_center(), color=PRIMARY, stroke_width=3)
+            mid = (k_v[i].get_center() + k_v[j].get_center()) / 2
+            # Offset label slightly to avoid overlapping edge
+            offset = UP * 0.25 if abs(k_v[i].get_center()[1] - k_v[j].get_center()[1]) > 1 else RIGHT * 0.25
+            wt = Text(str(w), font_size=LABEL_SIZE, color=ACCENT, font=MONO).move_to(mid + offset)
+            k_edges.add(edge)
+            k_weights.add(wt)
+
+        self.ly.safe_place(k_v, direction=DOWN, anchor=title, buff=0.8)
+        self.play(
+            LaggedStartMap(FadeIn, k_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, k_l, scale=0.3, lag_ratio=0.1),
+            run_time=NORMAL,
+        )
+        self.play(Create(k_edges), run_time=NORMAL)
+        self.play(LaggedStartMap(FadeIn, k_weights, scale=0.3, lag_ratio=0.05), run_time=NORMAL)
+        self.wait(1)
+
+        # Kruskal's: sort by weight, add if no cycle
+        # Sorted edges: B-F(1), D-A(2), E-F(3), A-B(4), A-E(5), C-F(6), C-D(7), B-C(8)
+        sorted_indices = [5, 3, 6, 0, 4, 7, 2, 1]
+        accepted = []  # indices of accepted edges
+        rejected = []  # indices of rejected edges (would create cycle)
+
+        # Union-Find simple tracking (connected components)
+        parent = list(range(len(k_v)))
+
+        def find(x):
+            while parent[x] != x:
+                parent[x] = parent[parent[x]]
+                x = parent[x]
+            return x
+
+        def union(x, y):
+            px, py = find(x), find(y)
+            if px == py:
+                return False  # cycle
+            parent[px] = py
+            return True
+
+        step_label = Text("", font_size=BODY_SIZE, color=WHITE, font=SANS)
+        self.ly.safe_place(step_label, direction=DOWN, anchor=k_v[0], buff=2)
+
+        for sort_step, eidx in enumerate(sorted_indices):
+            i, j, w = k_edges_data[eidx]
+            can_add = union(i, j)
+
+            e_name = f"{k_names[i]}-{k_names[j]}"
+            if sort_step == 0:
+                step_text = f"Step {sort_step+1}: Add {e_name} (w={w})"
+            else:
+                step_text = f"Step {sort_step+1}: Add {e_name} (w={w})"
+            new_label = Text(step_text, font_size=BODY_SIZE, color=WHITE, font=SANS)
+            new_label.move_to(step_label.get_center())
+            self.play(FadeOut(step_label), FadeIn(new_label, shift=LEFT * 0.1), run_time=FAST)
+            step_label = new_label
+
+            if can_add:
+                accepted.append(eidx)
+                self.play(
+                    k_edges[eidx].animate.set_color(SECONDARY).set_stroke(width=5),
+                    run_time=NORMAL,
+                )
+            else:
+                rejected.append(eidx)
+                self.play(
+                    k_edges[eidx].animate.set_color(RED).set_stroke(width=2),
+                    k_weights[eidx].animate.set_color(RED),
+                    run_time=NORMAL,
+                )
+            self.wait(0.3)
+
+            # Stop once we have |V|-1 = 5 edges
+            if len(accepted) == len(k_v) - 1:
+                self.play(FadeOut(step_label), run_time=FAST)
+
+                # Show MST total weight
+                total_w = sum(k_edges_data[idx][2] for idx in accepted)
+                mst_text = Text(
+                    f"MST total weight: {total_w}",
+                    font_size=BODY_SIZE, color=SECONDARY, font=SANS,
+                )
+                self.ly.safe_place(mst_text, direction=DOWN, anchor=k_v[0], buff=2)
+                self.play(FadeIn(mst_text, shift=LEFT * 0.15), run_time=NORMAL)
+                self.wait(2)
+                break
+        else:
+            self.play(FadeOut(step_label), run_time=FAST)
+
+        self.ly.clear()
+
+    # ------------------------------------------------------------------
+    # Scene 11: Applications of Trees (1:30)
+    # ------------------------------------------------------------------
+    def scene11_applications(self):
+        self.add_subcaption(
+            "Trees appear everywhere in science and technology. File systems use directory trees. "
+            "Decision trees classify data with yes-no questions. Phylogenetic trees show "
+            "evolutionary relationships. Huffman coding uses trees for optimal data compression.",
+            duration=18,
+        )
+
+        title = self.ly.title("Where Trees Appear")
+
+        apps = [
+            Text("File Systems: directories and files as a rooted tree",
+                 font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Decision Trees: yes/no questions lead to classifications",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Phylogenetic Trees: evolutionary relationships",
+                 font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("Network Routing: spanning trees connect all nodes minimally",
+                 font_size=BODY_SIZE, color=RED, font=SANS),
+            Text("Huffman Coding: optimal compression via binary trees",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+        ]
+        self.ly.progressive_reveal(apps, start_from=title)
+        self.wait(2)
+
+        self.ly.clear()
+
+    # ------------------------------------------------------------------
+    # Scene 12: Summary and Outro (1:00)
+    # ------------------------------------------------------------------
+    def scene12_summary_outro(self):
+        self.add_subcaption(
+            "Trees are connected acyclic graphs with exactly n minus one edges. "
+            "We explored rooted trees, binary trees, three traversal orders, spanning trees, "
+            "and Kruskal's algorithm for the minimum spanning tree. Next up: Graph Coloring.",
+            duration=18,
         )
 
         title = self.ly.title("Trees: Summary")
 
         points = [
-            Text("Tree = connected + acyclic graph", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("With n vertices: exactly n-1 edges", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Every edge is a bridge", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Unique path between any two vertices", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Binary trees: at most 2 children per node", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Spanning trees: minimum weight subgraphs", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Tree: connected, acyclic, |E| = |V| - 1",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Rooted tree: parent, child, leaf, height",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Binary tree: at most 2 children per node",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Traversals: pre-order, in-order, post-order",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Spanning tree: all vertices, minimal edges",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("MST via Kruskal's: cheapest edges, no cycles",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(points, start_from=title)
         self.wait(2)
 
-        # Bridge to next video
-        next_note = Text(
-            "Next: Planarity and Euler's Formula",
+        # Key formula
+        formula = MathTex(r"|E| = |V| - 1", color=WHITE)
+        fbox = self.ly.formula_box(formula, ACCENT)
+        self.ly.safe_place(fbox, direction=DOWN, buff=0.5)
+        self.play(Write(fbox), run_time=NORMAL)
+        self.wait(1.5)
+
+        # Bridge to next
+        next_text = Text(
+            "Next: Graph Coloring — assigning colors under constraints",
             font_size=BODY_SIZE, color=ACCENT, font=SANS,
         )
-        self.ly.safe_place(next_note, direction=DOWN, anchor=points[-1] if hasattr(self, '_last_visible') else points[5], buff=0.6)
-        self.play(FadeIn(next_note, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.5)
+        self.ly.safe_place(next_text, direction=DOWN, anchor=fbox, buff=0.4)
+        self.play(FadeIn(next_text, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(1)
+
         self.ly.clear()
 
-    # ------------------------------------------------------------------
-    # Scene 9: Outro
-    # ------------------------------------------------------------------
-    def scene9_outro(self):
+        # Outro
         self.add_subcaption(
-            "Thanks for watching! Trees are a fundamental structure in both mathematics "
-            "and computer science. If you found this helpful, please like and subscribe.",
-            duration=10,
+            "Thank you for watching! Subscribe for more visual math explanations.",
+            duration=8,
         )
-        play_outro(self, "Planarity and Euler's Formula", "Discrete Mathematics")
+        play_outro(self, "Graph Coloring", "Discrete Mathematics")
