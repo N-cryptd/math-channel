@@ -40,3 +40,40 @@ Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 5/10 | Narration 6/10 | Hooks
 - Static node-link diagrams that don't leverage animation for understanding
 - Lack of narrative flow - jumping between concepts without clear connections
 - Ignoring the proof aspect entirely and only showing examples
+
+### [2026-06-27] Trees (Video 87)
+
+**Source 1: TrevTutor — "[Discrete Mathematics] Trees"**
+URL: https://www.youtube.com/watch?v=zEQZpTizgLo
+Subscribers: 328K | Views: 242K | Date: Aug 2015 | Captions: True
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+**Source 2: Bro Code — "Tree data structures in 2 minutes"**
+URL: https://www.youtube.com/watch?v=Etpc_-br5rI
+Subscribers: 3.28M | Views: 174K | Date: Nov 2021 | Captions: True
+Dimensions: Structure 5/10 | Pacing 3/10 | Visuals 6/10 | Narration 5/10 | Hooks 6/10
+
+**Source 3: Michael Sambol — "Prim's algorithm in 2 minutes"**
+URL: https://www.youtube.com/watch?v=cplfcGZmX7I
+Subscribers: ~50K | Views: 1.58M | Date: ~2013 | Captions: True
+Dimensions: Structure 6/10 | Pacing 4/10 | Visuals 8/10 | Narration 4/10 | Hooks 7/10
+
+### Key Insights
+- TrevTutor's 242K views proves demand, but 10-year-old static-slide style is showing age
+- Bro Code's fast-paced CS implementation approach gets views but sacrifices depth
+- Michael Sambol's 1.6M views on Prim's alone shows massive demand for tree algorithm visualization
+- No competitor combines rigorous discrete math definitions with Manim-quality animations for trees
+- Tree traversals (pre/in/post-order) are the most searched subtopic
+
+### Techniques to Adopt
+- Visual tree traversal animations: color nodes as they're visited (like Sambol's visual style)
+- Build trees incrementally on screen (edges appear one by one)
+- Show spanning tree extraction from a graph (highlight selected edges, fade non-tree edges)
+- Contrast three traversal orders side-by-side using the same example tree
+- Connect mathematical definition to CS applications briefly
+
+### Techniques to Avoid
+- Pure lecture/whiteboard style (TrevTutor) — no animations means no engagement
+- CS-code-heavy focus (Bro Code) — this is a math channel, not LeetCode
+- Skipping mathematical rigor entirely — define tree precisely, not just "a hierarchical structure"
+- Rushing traversal explanations — each needs 15-20 seconds minimum for understanding

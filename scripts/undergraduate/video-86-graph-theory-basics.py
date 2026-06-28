@@ -1,4 +1,5 @@
-"Video 86: Graph Theory Basics
+"""
+Video 86: Graph Theory Basics
 Discrete Mathematics -- Video 8 of 12
 
 Covers: Graph definition, vertices and edges, degree, paths and cycles, connectedness, trees, and basic graph algorithms (BFS/DFS).
@@ -7,7 +8,17 @@ Plan: planning/video-86-graph-theory-basics.md
 
 Render draft:  manim -ql scripts/undergraduate/video-86-graph-theory-basics.py Video86_GraphTheoryBasics
 Render final:  manim -qh scripts/undergraduate/video-86-graph-theory-basics.py Video86_GraphTheoryBasics
-"
+
+v2 Quality Standards (MANDATORY):
+  1. setup_background for dot grid + gradient
+  2. LayoutEngine v2 for all positioning
+  3. progressive_reveal for multi-item scenes (5-item max)
+  4. section_divider between major concepts
+  5. formula_box for key theorems
+  6. Source Sans 3 (SANS) for all body text/titles
+  7. play_intro/play_outro branding
+  8. ly.clear() between scenes
+"""
 
 from manim import *
 import sys, os
@@ -18,6 +29,9 @@ from channel_branding import (
     FAST, NORMAL, SLOW,
     play_intro, play_outro, setup_background,
 )
+
+# Custom colors not in channel_branding
+BROWN = "#8B4513"  # SaddleBrown for bridges and paths
 from layout import LayoutEngine, ensure_fits
 
 
@@ -85,7 +99,7 @@ class Video86_GraphTheoryBasics(Scene):
         self.wait(2)
 
         question = Text(
-            "Can you cross each bridge exactly once?", font_size=HEADING_SIZE, color=YELLOW
+            "Can you cross each bridge exactly once?", font_size=HEADING_SIZE, color=YELLOW, font=SANS
         )
         self.ly.safe_place(question, direction=DOWN, anchor=bridges, buff=0.8)
         self.play(FadeIn(question, shift=LEFT * 0.15), run_time=NORMAL)
@@ -95,6 +109,7 @@ class Video86_GraphTheoryBasics(Scene):
             "Euler proved it's impossible... and invented graph theory to do it.",
             font_size=BODY_SIZE,
             color=WHITE,
+            font=SANS,
         )
         self.ly.safe_place(euler_note, direction=DOWN, anchor=question, buff=0.6)
         self.play(FadeIn(euler_note, shift=LEFT * 0.15), run_time=NORMAL)
@@ -111,9 +126,8 @@ class Video86_GraphTheoryBasics(Scene):
             duration=16,
         )
 
+        self.ly.section_divider(2, "Definitions")
         title = self.ly.title("What is a Graph?")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
         # Simple graph: 4 vertices, 4 edges
         vertices = VGroup(
@@ -123,10 +137,10 @@ class Video86_GraphTheoryBasics(Scene):
             Dot(DOWN * 2 + RIGHT * 2, color=WHITE, radius=0.15),
         )
         labels = VGroup(
-            Text("A", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[0], LEFT),
-            Text("B", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[1], RIGHT),
-            Text("C", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[2], LEFT),
-            Text("D", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[3], RIGHT),
+            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[0], LEFT),
+            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[1], RIGHT),
+            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[2], LEFT),
+            Text("D", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[3], RIGHT),
         )
         edges = VGroup(
             Line(vertices[0].get_center(), vertices[1].get_center(), color=PRIMARY, stroke_width=4),
@@ -144,20 +158,13 @@ class Video86_GraphTheoryBasics(Scene):
         self.play(Create(edges), run_time=NORMAL)
         self.wait(1)
 
-        definition = VGroup(
-            Text("Vertex (node):", font_size=BODY_SIZE, color=YELLOW),
-            Text("A point in the graph", font_size=BODY_SIZE, color=WHITE),
-            Text("Edge (link):", font_size=BODY_SIZE, color=YELLOW),
-            Text("A connection between two vertices", font_size=BODY_SIZE, color=WHITE),
-        ).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
-        definition[0::2].set_color(YELLOW)  # Labels
-        definition[1::2].set_color(WHITE)  # Definitions
-
-        self.ly.safe_place(definition, direction=DOWN, anchor=vertices, buff=0.8)
-        self.play(
-            LaggedStartMap(FadeIn, definition, shift=LEFT * 0.15, lag_ratio=0.3),
-            run_time=NORMAL,
-        )
+        # Progressive reveal of definitions (5-item budget)
+        def_items = [
+            Text("Vertex (node): a point in the graph", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Edge (link): a connection between two vertices", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Graph G = (V, E): vertices V and edges E", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+        ]
+        self.ly.progressive_reveal(def_items, start_from=title)
         self.wait(2)
 
         self.ly.clear()
@@ -172,11 +179,9 @@ class Video86_GraphTheoryBasics(Scene):
         )
 
         title = self.ly.title("Graph Examples")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
         # Example 1: Cycle
-        cycle_title = Text("Cycle C₄", font_size=LABEL_SIZE, color=GREEN)
+        cycle_title = Text("Cycle C₄", font_size=LABEL_SIZE, color=GREEN, font=SANS)
         cycle_vertices = VGroup(
             Dot(LEFT * 3 + UP * 1, color=WHITE, radius=0.12),
             Dot(LEFT * 1 + UP * 1, color=WHITE, radius=0.12),
@@ -192,7 +197,7 @@ class Video86_GraphTheoryBasics(Scene):
         cycle_label = VGroup(cycle_title, cycle_vertices, cycle_edges).arrange(DOWN, buff=0.3)
 
         # Example 2: Complete graph
-        complete_title = Text("Complete K₃", font_size=LABEL_SIZE, color=GREEN)
+        complete_title = Text("Complete K₃", font_size=LABEL_SIZE, color=GREEN, font=SANS)
         complete_vertices = VGroup(
             Dot(RIGHT * 2 + UP * 1, color=WHITE, radius=0.12),
             Dot(RIGHT * 3 + UP * 0.5, color=WHITE, radius=0.12),
@@ -236,9 +241,8 @@ class Video86_GraphTheoryBasics(Scene):
             duration=18,
         )
 
+        self.ly.section_divider(3, "Vertex Degree")
         title = self.ly.title("Vertex Degree")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
         # Graph for degree demonstration
         vertices = VGroup(
@@ -248,10 +252,10 @@ class Video86_GraphTheoryBasics(Scene):
             Dot(RIGHT * 3, color=WHITE, radius=0.15), # D
         )
         labels = VGroup(
-            Text("A", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[0], LEFT),
-            Text("B", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[1], LEFT),
-            Text("C", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[2], RIGHT),
-            Text("D", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[3], RIGHT),
+            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[0], LEFT),
+            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[1], LEFT),
+            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[2], RIGHT),
+            Text("D", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[3], RIGHT),
         )
         edges = VGroup(
             Line(vertices[0].get_center(), vertices[1].get_center(), color=PRIMARY, stroke_width=4),  # A-B
@@ -278,7 +282,7 @@ class Video86_GraphTheoryBasics(Scene):
             edges[2].animate.set_color(YELLOW).scale(1.2),
             run_time=NORMAL,
         )
-        deg_label = Text("deg(A) = 3", font_size=BODY_SIZE, color=YELLOW)
+        deg_label = Text("deg(A) = 3", font_size=BODY_SIZE, color=YELLOW, font=SANS)
         self.ly.safe_place(deg_label, direction=DOWN, anchor=vertices[0], buff=0.5)
         self.play(FadeIn(deg_label, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1)
@@ -291,34 +295,23 @@ class Video86_GraphTheoryBasics(Scene):
             run_time=NORMAL,
         )
 
-        # Show degree calculation
-        degree_label = Text("Degree = number of incident edges", font_size=BODY_SIZE, color=WHITE)
-        self.ly.safe_place(degree_label, direction=DOWN, anchor=title, buff=1.8)
-        self.play(FadeIn(degree_label, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1)
+        # Sum of degrees = 2 * |E|  -- progressive reveal
+        deg_items = [
+            Text("deg(A)+deg(B)+deg(C)+deg(D)", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("= 3 + 2 + 2 + 3 = 10", font_size=BODY_SIZE, color=YELLOW, font=SANS),
+            Text("2 × |E| = 2 × 5 = 10", font_size=BODY_SIZE, color=YELLOW, font=SANS),
+        ]
+        self.ly.progressive_reveal(deg_items, start_from=title)
+        self.wait(2)
 
-        # Sum of degrees = 2 * |E|
-        deg_sum = VGroup(
-            Text("deg(A) + deg(B) + deg(C) + deg(D) = ", font_size=BODY_SIZE, color=WHITE),
-            Text("3 + 2 + 2 + 3 = 10", font_size=BODY_SIZE, color=YELLOW),
-            Text("2 × |E| = 2 × 5 = 10", font_size=BODY_SIZE, color=YELLOW),
-        ).arrange(RIGHT, buff=0.3)
-        self.ly.safe_place(deg_sum, direction=DOWN, anchor=degree_label, buff=0.5)
-
-        self.play(FadeIn(deg_sum[0], shift=LEFT * 0.15), run_time=NORMAL)
-        self.play(FadeIn(deg_sum[1], shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
-        self.play(FadeIn(deg_sum[2], shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.5)
-
-        # Handshaking lemma
-        hlemma = Text(
-            "Handshaking Lemma: Σ deg(v) = 2|E|\n(Each edge contributes 2 to the degree sum)",
-            font_size=BODY_SIZE,
-            color=GREEN,
-        )
-        self.ly.safe_place(hlemma, direction=DOWN, anchor=deg_sum, buff=0.6)
-        self.play(FadeIn(hlemma, shift=LEFT * 0.15), run_time=NORMAL)
+        # Handshaking lemma with formula_box
+        hlemma_tex = MathTex(r"\sum_{v \in V} \deg(v)", r" = 2|E|", color=WHITE)
+        hlemma_box = self.ly.formula_box(hlemma_tex, SECONDARY)
+        hlemma_note = Text("Handshaking Lemma: each edge contributes 2 to the sum",
+                           font_size=BODY_SIZE, color=SECONDARY, font=SANS)
+        self.ly.safe_place(hlemma_note, direction=DOWN, anchor=hlemma_box, buff=0.4)
+        self.play(Write(hlemma_box), run_time=NORMAL)
+        self.play(FadeIn(hlemma_note, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(2)
 
         self.ly.clear()
@@ -333,8 +326,6 @@ class Video86_GraphTheoryBasics(Scene):
         )
 
         title = self.ly.title("Paths and Cycles")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
         # Create a graph
         vertices = VGroup(
@@ -345,11 +336,11 @@ class Video86_GraphTheoryBasics(Scene):
             Dot(RIGHT * 2 + DOWN * 1, color=WHITE, radius=0.12),
         )
         labels = VGroup(
-            Text("A", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[0], UP),
-            Text("B", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[1], UP),
-            Text("C", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[2], UP),
-            Text("D", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[3], DOWN),
-            Text("E", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[4], DOWN),
+            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[0], UP),
+            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[1], UP),
+            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[2], UP),
+            Text("D", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[3], DOWN),
+            Text("E", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[4], DOWN),
         )
         edges = VGroup(
             Line(vertices[0].get_center(), vertices[1].get_center(), color=BLUE, stroke_width=3),  # A-B
@@ -377,7 +368,7 @@ class Video86_GraphTheoryBasics(Scene):
             path_edges.animate.set_color(YELLOW).scale(1.2),
             run_time=NORMAL,
         )
-        path_label = Text("Path: A→B→C→E", font_size=BODY_SIZE, color=YELLOW)
+        path_label = Text("Path: A→B→C→E", font_size=BODY_SIZE, color=YELLOW, font=SANS)
         self.ly.safe_place(path_label, direction=DOWN, anchor=title, buff=2.2)
         self.play(FadeIn(path_label, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1)
@@ -396,7 +387,7 @@ class Video86_GraphTheoryBasics(Scene):
             cycle_edges.animate.set_color(GREEN).scale(1.2),
             run_time=NORMAL,
         )
-        cycle_label = Text("Cycle: A→B→C→E→D→A", font_size=BODY_SIZE, color=GREEN)
+        cycle_label = Text("Cycle: A→B→C→E→D→A", font_size=BODY_SIZE, color=GREEN, font=SANS)
         self.ly.safe_place(cycle_label, direction=DOWN, anchor=title, buff=2.2)
         self.play(FadeIn(cycle_label, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1.5)
@@ -419,11 +410,9 @@ class Video86_GraphTheoryBasics(Scene):
         )
 
         title = self.ly.title("Connected Graphs and Trees")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
         # Connected graph (with cycle)
-        conn_title = Text("Connected (has cycle)", font_size=LABEL_SIZE, color=BLUE)
+        conn_title = Text("Connected (has cycle)", font_size=LABEL_SIZE, color=BLUE, font=SANS)
         conn_vertices = VGroup(
             Dot(LEFT * 3 + UP * 1, color=WHITE, radius=0.12),
             Dot(LEFT * 1 + UP * 1, color=WHITE, radius=0.12),
@@ -440,7 +429,7 @@ class Video86_GraphTheoryBasics(Scene):
         conn_group = VGroup(conn_title, conn_vertices, conn_edges).arrange(DOWN, buff=0.3)
 
         # Tree (connected, no cycles)
-        tree_title = Text("Tree (connected, no cycles)", font_size=LABEL_SIZE, color=GREEN)
+        tree_title = Text("Tree (connected, no cycles)", font_size=LABEL_SIZE, color=GREEN, font=SANS)
         tree_vertices = VGroup(
             Dot(RIGHT * 3 + UP * 1.5, color=WHITE, radius=0.12),
             Dot(RIGHT * 2 + UP * 0.5, color=WHITE, radius=0.12),
@@ -479,17 +468,16 @@ class Video86_GraphTheoryBasics(Scene):
         self.play(FadeIn(tree_title, shift=LEFT * 0.1), run_time=NORMAL)
         self.wait(1)
 
-        # Property: For a tree, |E| = |V| - 1
-        tree_prop = VGroup(
-            Text("For any tree:", font_size=BODY_SIZE, color=YELLOW),
-            Text("|E| = |V| - 1", font_size=BODY_SIZE, color=WHITE),
-            Text("(6 vertices → 5 edges)", font_size=BODY_SIZE, color=WHITE),
-        ).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
-        self.ly.safe_place(tree_prop, direction=DOWN, anchor=tree_group, buff=0.6)
-        self.play(
-            LaggedStartMap(FadeIn, tree_prop, shift=LEFT * 0.15, lag_ratio=0.2),
-            run_time=NORMAL,
-        )
+        # Property: For a tree, |E| = |V| - 1  (formula_box)
+        tree_formula = MathTex(r"|E|", r" = ", r"|V|", r" - 1", color=WHITE)
+        tree_box = self.ly.formula_box(tree_formula, ACCENT)
+        self.ly.safe_place(tree_box, direction=DOWN, anchor=groups, buff=0.6)
+        self.play(Write(tree_box), run_time=NORMAL)
+        self.wait(1)
+
+        tree_note = Text("(6 vertices → 5 edges)", font_size=BODY_SIZE, color=ACCENT, font=SANS)
+        self.ly.safe_place(tree_note, direction=DOWN, anchor=tree_box, buff=0.4)
+        self.play(FadeIn(tree_note, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(2)
 
         self.ly.clear()
@@ -503,9 +491,8 @@ class Video86_GraphTheoryBasics(Scene):
             duration=18,
         )
 
+        self.ly.section_divider(4, "Traversal Algorithms")
         title = self.ly.title("Graph Traversal: BFS vs DFS")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
         # Create a binary tree-like graph for traversal
         vertices = VGroup(
@@ -520,15 +507,15 @@ class Video86_GraphTheoryBasics(Scene):
             Dot(LEFT * 0 + DOWN * 2, color=WHITE, radius=0.12), # I (8)
         )
         labels = VGroup(
-            Text("A", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[0], UP),
-            Text("B", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[1], UP),
-            Text("C", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[2], UP),
-            Text("D", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[3], DOWN),
-            Text("E", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[4], DOWN),
-            Text("F", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[5], DOWN),
-            Text("G", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[6], DOWN),
-            Text("H", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[7], DOWN),
-            Text("I", font_size=LABEL_SIZE, color=WHITE).next_to(vertices[8], DOWN),
+            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[0], UP),
+            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[1], UP),
+            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[2], UP),
+            Text("D", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[3], DOWN),
+            Text("E", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[4], DOWN),
+            Text("F", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[5], DOWN),
+            Text("G", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[6], DOWN),
+            Text("H", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[7], DOWN),
+            Text("I", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(vertices[8], DOWN),
         )
         edges = VGroup(
             Line(vertices[0].get_center(), vertices[1].get_center(), color=BLUE, stroke_width=3),  # A-B
@@ -552,7 +539,8 @@ class Video86_GraphTheoryBasics(Scene):
         self.wait(0.5)
 
         # BFS demonstration
-        bfs_title = Text("BFS: Visit A, then B,C, then D,E,F, then G,H,I", font_size=BODY_SIZE, color=GREEN)
+        bfs_title = Text("BFS: Visit A, then B,C, then D,E,F, then G,H,I",
+                         font_size=BODY_SIZE, color=GREEN, font=SANS)
         self.ly.safe_place(bfs_title, direction=DOWN, anchor=title, buff=2.2)
         self.play(FadeIn(bfs_title, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(0.5)
@@ -564,12 +552,11 @@ class Video86_GraphTheoryBasics(Scene):
         level4 = VGroup(vertices[6], vertices[7], vertices[8])  # G, H, I
 
         self.play(
-            lagged_start=lag_ratio=0.1,
+            LaggedStart(
+                *[v.animate.set_color(YELLOW).scale(1.3) for v in level1],
+                lag_ratio=0.1,
+            ),
             run_time=NORMAL,
-            *[
-                v.animate.set_color(YELLOW).scale(1.3)
-                for v in level1
-            ]
         )
         self.wait(0.5)
         self.play(
@@ -597,52 +584,50 @@ class Video86_GraphTheoryBasics(Scene):
         self.play(FadeOut(bfs_title), run_time=NORMAL)
 
         # DFS demonstration
-        dfs_title = Text("DFS: Go deep A→B→D→G, backtrack, then B→E→H, etc.", font_size=BODY_SIZE, color=YELLOW)
+        dfs_title = Text("DFS: Go deep A→B→D→G, backtrack, then B→E→H, etc.",
+                         font_size=BODY_SIZE, color=YELLOW, font=SANS)
         self.ly.safe_place(dfs_title, direction=DOWN, anchor=title, buff=2.2)
         self.play(FadeIn(dfs_title, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(0.5)
 
-        # Simple DFS-like path (not full algorithm, just illustration)
-        dfs_path = VGroup(
-            vertices[0], vertices[1], vertices[3], vertices[6],  # A-B-D-G
-            vertices[4], vertices[7],  # B-E-H
-            vertices[5], vertices[8],  # C-F-I
-        )
-        dfs_edges = VGroup(
-            edges[0], edges[3], edges[6],  # A-B, B-D, D-G
-            edges[4], edges[7],  # B-E, E-H
-            edges[1], edges[5],  # A-C, C-F
-            edges[8],  # F-I
-        )
+        # Simple DFS-like path animation (not full algorithm, just illustration)
+        dfs_path_order = [
+            (vertices[0], edges[0]),  # A-B
+            (vertices[1], edges[3]),  # B-E
+            (vertices[4], edges[7]),  # E-H
+            (vertices[7], None),  # H
+            (vertices[3], edges[6]),  # D-G
+            (vertices[2], edges[1]),  # A-C
+            (vertices[5], edges[8]),  # F-I
+        ]
+
+        # Animate DFS path as sequential color changes
+        prev_v = None
+        for i, (v, e) in enumerate(dfs_path_order):
+            if prev_v is not None:
+                # Color the edge connecting prev to current
+                for edge in edges:
+                    v_start, v_end = edge.get_start_and_end()
+                    dist = np.linalg.norm(v_start - prev_v.get_center()) + np.linalg.norm(v_end - v.get_center())
+                    dist2 = np.linalg.norm(v_start - v.get_center()) + np.linalg.norm(v_end - prev_v.get_center())
+                    if dist < 0.5 or dist2 < 0.5:
+                        self.play(
+                            edge.animate.set_color(RED).scale(1.2),
+                            run_time=FAST,
+                        )
+                        break
+            self.play(
+                v.animate.set_color(RED).scale(1.3),
+                run_time=NORMAL,
+            )
+            self.wait(0.2)
+            prev_v = v
 
         self.play(
-            LaggedStart(
-                lambda m: m.animate.set_color(RED).scale(1.3),
-                dfs_path,
-                lag_ratio=0.2,
-            ),
-            LaggedStart(
-                lambda m: m.animate.set_color(RED).scale(1.2),
-                dfs_edges,
-                lag_ratio=0.2,
-            ),
+            *[v.animate.set_color(WHITE).scale(1/1.3) for v in vertices],
+            *[e.animate.set_color(BLUE).scale(1/1.2) for e in edges],
             run_time=NORMAL,
         )
-        self.wait(1.5)
-        self.play(
-            LaggedStart(
-                lambda m: m.animate.set_color(WHITE).scale(1/1.3),
-                dfs_path,
-                lag_ratio=0.2,
-            ),
-            LaggedStart(
-                lambda m: m.animate.set_color(BLUE).scale(1/1.2),
-                dfs_edges,
-                lag_ratio=0.2,
-            ),
-            run_time=NORMAL,
-        )
-        self.wait(0.5)
         self.play(FadeOut(dfs_title), run_time=NORMAL)
 
         self.ly.clear()
@@ -657,122 +642,20 @@ class Video86_GraphTheoryBasics(Scene):
         )
 
         title = self.ly.title("Graphs in the Real World")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
-        # Social network
-        social_title = Text("Social Network", font_size=LABEL_SIZE, color=RED)
-        social_people = VGroup(
-            Dot(LEFT * 4 + UP * 1, color=WHITE, radius=0.1),
-            Dot(LEFT * 2 + UP * 1, color=WHITE, radius=0.1),
-            Dot(LEFT * 0 + UP * 1, color=WHITE, radius=0.1),
-            Dot(LEFT * 2 + DOWN * 1, color=WHITE, radius=0.1),
-            Dot(LEFT * 4 + DOWN * 1, color=WHITE, radius=0.1),
-        )
-
-        social_friends = VGroup(
-            Line(social_people[0].get_center(), social_people[1].get_center(), color=RED, stroke_width=2),
-            Line(social_people[0].get_center(), social_people[2].get_center(), color=RED, stroke_width=2),
-            Line(social_people[1].get_center(), social_people[3].get_center(), color=RED, stroke_width=2),
-            Line(social_people[2].get_center(), social_people[4].get_center(), color=RED, stroke_width=2),
-            Line(social_people[3].get_center(), social_people[4].get_center(), color=RED, stroke_width=2),
-        )
-        social_group = VGroup(social_title, social_people, social_friends).arrange(DOWN, buff=0.2)
-<tool_call>
-<function=terminal>
-<parameter=command>
-cat >> ~/math-channel/scripts/undergraduate/video-86-graph-theory-basics.py << 'EOF'
-
-        social_friends = VGroup(
-            Line(social_people[0].get_center(), social_people[1].get_center(), color=RED, stroke_width=2),
-            Line(social_people[0].get_center(), social_people[2].get_center(), color=RED, stroke_width=2),
-            Line(social_people[1].get_center(), social_people[3].get_center(), color=RED, stroke_width=2),
-            Line(social_people[2].get_center(), social_people[4].get_center(), color=RED, stroke_width=2),
-            Line(social_people[3].get_center(), social_people[4].get_center(), color=RED, stroke_width=2),
-        )
-        social_group = VGroup(social_title, social_people, social_friends).arrange(DOWN, buff=0.2)
-
-        # Transportation network
-        transport_title = Text("Transportation Network", font_size=LABEL_SIZE, color=BLUE)
-        transport_stops = VGroup(
-            Dot(LEFT * 2, color=WHITE, radius=0.08),
-            Dot(ORIGIN, color=WHITE, radius=0.08),
-            Dot(RIGHT * 2, color=WHITE, radius=0.08),
-            Dot(UP * 1.5, color=WHITE, radius=0.08),
-            Dot(DOWN * 1.5, color=WHITE, radius=0.08),
-        )
-        transport_routes = VGroup(
-            Line(transport_stops[0].get_center(), transport_stops[1].get_center(), color=BLUE, stroke_width=2),
-            Line(transport_stops[1].get_center(), transport_stops[2].get_center(), color=BLUE, stroke_width=2),
-            Line(transport_stops[1].get_center(), transport_stops[3].get_center(), color=BLUE, stroke_width=2),
-            Line(transport_stops[1].get_center(), transport_stops[4].get_center(), color=BLUE, stroke_width=2),
-            Line(transport_stops[0].get_center(), transport_stops[3].get_center(), color=BLUE, stroke_width=1, stroke_opacity=0.5),
-            Line(transport_stops[2].get_center(), transport_stops[4].get_center(), color=BLUE, stroke_width=1, stroke_opacity=0.5),
-        )
-        transport_group = VGroup(transport_title, transport_stops, transport_routes).arrange(DOWN, buff=0.2)
-
-        # Internet/network
-        tech_title = Text("Internet / Computer Network", font_size=LABEL_SIZE, color=GREEN)
-        tech_devices = VGroup(
-            Dot(LEFT * 3 + UP * 1, color=WHITE, radius=0.1),
-            Dot(LEFT * 1 + UP * 1, color=WHITE, radius=0.1),
-            Dot(RIGHT * 1 + UP * 1, color=WHITE, radius=0.1),
-            Dot(RIGHT * 3 + UP * 1, color=WHITE, radius=0.1),
-            Dot(LEFT * 2 + DOWN * 1, color=WHITE, radius=0.1),
-            Dot(RIGHT * 2 + DOWN * 1, color=WHITE, radius=0.1),
-        )
-        tech_connections = VGroup(
-            Line(tech_devices[0].get_center(), tech_devices[1].get_center(), color=GREEN, stroke_width=2),
-            Line(tech_devices[0].get_center(), tech_devices[2].get_center(), color=GREEN, stroke_width=2),
-            Line(tech_devices[1].get_center(), tech_devices[3].get_center(), color=GREEN, stroke_width=2),
-            Line(tech_devices[2].get_center(), tech_devices[3].get_center(), color=GREEN, stroke_width=2),
-            Line(tech_devices[1].get_center(), tech_devices[4].get_center(), color=GREEN, stroke_width=2),
-            Line(tech_devices[2].get_center(), tech_devices[5].get_center(), color=GREEN, stroke_width=2),
-            Line(tech_devices[4].get_center(), tech_devices[5].get_center(), color=GREEN, stroke_width=2),
-        )
-        tech_group = VGroup(tech_title, tech_devices, tech_connections).arrange(DOWN, buff=0.2)
-
-        # Molecular structure
-        bio_title = Text("Molecular Structure", font_size=LABEL_SIZE, color=YELLOW)
-        bio_atoms = VGroup(
-            Dot(LEFT * 2, color=RED, radius=0.12),  # Carbon
-            Dot(LEFT * 1, color=WHITE, radius=0.08), # H
-            Dot(LEFT * 3, color=WHITE, radius=0.08), # H
-            Dot(RIGHT * 1, color=WHITE, radius=0.08), # H
-            Dot(RIGHT * 3, color=WHITE, radius=0.08), # H
-        )
-        bio_bonds = VGroup(
-            Line(bio_atoms[0].get_center(), bio_atoms[1].get_center(), color=YELLOW, stroke_width=3),
-            Line(bio_atoms[0].get_center(), bio_atoms[2].get_center(), color=YELLOW, stroke_width=3),
-            Line(bio_atoms[0].get_center(), bio_atoms[3].get_center(), color=YELLOW, stroke_width=3),
-            Line(bio_atoms[0].get_center(), bio_atoms[4].get_center(), color=YELLOW, stroke_width=3),
-        )
-        bio_group = VGroup(bio_title, bio_atoms, bio_bonds).arrange(DOWN, buff=0.2)
-
-        examples = VGroup(social_group, transport_group, tech_group, bio_group).arrange_in_grid(
-            rows=2, cols=2, buff=0.8
-        )
-        self.ly.safe_place(examples, direction=DOWN, anchor=title, buff=0.8)
-
-        # Animate each example
-        for group in [social_group, transport_group, tech_group, bio_group]:
-            self.play(
-                FadeIn(group[0], shift=LEFT * 0.1),  # title
-                run_time=NORMAL / 2,
-            )
-            self.wait(0.2)
-            self.play(
-                FadeIn(group[1], scale=0.5),  # nodes/dots
-                run_time=NORMAL / 2,
-            )
-            self.wait(0.2)
-            self.play(
-                Create(group[2]),  # connections/lines
-                run_time=NORMAL / 2,
-            )
-            self.wait(0.3)
-
-        self.wait(1)
+        # Use progressive_reveal for the 4 application examples (5-item budget)
+        app_items = [
+            Text("Social Networks: people as vertices, friendships as edges",
+                 font_size=BODY_SIZE, color=RED, font=SANS),
+            Text("Transportation: cities as vertices, roads as edges",
+                 font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Computer Networks: devices as vertices, connections as edges",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Molecules: atoms as vertices, bonds as edges",
+                 font_size=BODY_SIZE, color=ACCENT, font=SANS),
+        ]
+        self.ly.progressive_reveal(app_items, start_from=title)
+        self.wait(2)
 
         self.ly.clear()
 
@@ -786,34 +669,28 @@ cat >> ~/math-channel/scripts/undergraduate/video-86-graph-theory-basics.py << '
         )
 
         title = self.ly.title("Graph Theory Basics: Summary")
-        self.play(FadeIn(title, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
 
-        # Key points in a vertical list
-        points = VGroup(
-            Text("• Vertices (nodes) and edges (links)", font_size=BODY_SIZE, color=WHITE),
-            Text("• Degree: edges touching a vertex", font_size=BODY_SIZE, color=WHITE),
-            Text("• Paths and cycles: walks through the graph", font_size=BODY_SIZE, color=WHITE),
-            Text("• Connected: path between every vertex pair", font_size=BODY_SIZE, color=WHITE),
-            Text("• Tree: connected + no cycles → |E| = |V|-1", font_size=BODY_SIZE, color=WHITE),
-            Text("• BFS/DFS: fundamental graph traversal algorithms", font_size=BODY_SIZE, color=WHITE),
-            Text("• Real-world: social, transportation, molecular networks", font_size=BODY_SIZE, color=WHITE),
-        ).arrange(DOWN, aligned_edge=LEFT, buff=0.4)
-        self.ly.safe_place(points, direction=DOWN, anchor=title, buff=0.8)
-
-        self.play(
-            LaggedStartMap(FadeIn, points, shift=LEFT * 0.15, lag_ratio=0.2),
-            run_time=NORMAL,
-        )
+        # Key points via progressive_reveal (5-item budget auto-enforced)
+        points = [
+            Text("Vertices and edges: the building blocks", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Degree: edges touching a vertex", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Paths and cycles: walks through the graph", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Connected: path between every vertex pair", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Tree: connected + no cycles, |E| = |V| − 1", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("BFS/DFS: fundamental traversal algorithms", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Real-world: social, transport, molecular networks", font_size=BODY_SIZE, color=WHITE, font=SANS),
+        ]
+        self.ly.progressive_reveal(points, start_from=title)
         self.wait(2)
 
         # Bridge to next video
         next_preview = Text(
-            "Next: Trees - special graphs with unique properties and applications",
+            "Next: Trees - special graphs with unique properties",
             font_size=BODY_SIZE,
-            color=YELLOW,
+            color=ACCENT,
+            font=SANS,
         )
-        self.ly.safe_place(next_preview, direction=DOWN, anchor=points, buff=0.8)
+        self.ly.safe_place(next_preview, direction=DOWN, buff=0.8)
         self.play(FadeIn(next_preview, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1.5)
 
@@ -828,13 +705,3 @@ cat >> ~/math-channel/scripts/undergraduate/video-86-graph-theory-basics.py << '
             duration=10,
         )
         play_outro(self, "Trees and Forest Structures", "Discrete Mathematics")
-```
-
-This means that when I did my patch, it didn't remove all the corrupted text - it left the terminal command text that was after the corrupted section.
-
-I need to remove that corrupted terminal command text and everything from there until the correct content resumes. Looking at the output, after that terminal command text, I should see the social_friends definition.
-
-Let me check what comes after that terminal command text<tool_call>
-<function=terminal>
-<parameter=command>
-head -n 690 /root/math-channel/scripts/undergraduate/video-86-graph-theory-basics.py | tail -n 20

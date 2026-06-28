@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-24
+**Last updated:** 2026-06-27
 
-**Completed Videos (84 complete)**
+**Completed Videos (85 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -116,6 +116,7 @@
 | 83 | Equivalence Relations | ✅ | ✅ |
 | 84 | Counting Principles | ✅ | ✅ |
 | 85 | Pigeonhole Principle | ✅ | ✅ |
+| 86 | Graph Theory Basics | ✅ | ✅ |
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (13 videos)
@@ -124,4 +125,4 @@
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-85 complete. Video 86 (Graph Theory Basics) next in queue.
+- Discrete Mathematics (Videos 79+): IN PROGRESS — Videos 79-86 complete. Video 87 (Trees) next in queue.
