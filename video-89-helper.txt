@@ -1,0 +1,39 @@
+"""Helper to rename .txt to .py, compile-check, and clean up."""
+import shutil, os, sys
+
+result_lines = []
+
+# 1. Copy .txt -> .py
+src = "/root/math-channel/scripts/undergraduate/video-89-graph-coloring.txt"
+dst = "/root/math-channel/scripts/undergraduate/video-89-graph-coloring.py"
+shutil.copy2(src, dst)
+result_lines.append(f"COPY_OK: {os.path.getsize(dst)} bytes")
+
+# 2. Compile check
+try:
+    import py_compile
+    py_compile.compile(dst, doraise=True)
+    result_lines.append("COMPILE_OK")
+except py_compile.PyCompileError as e:
+    result_lines.append(f"COMPILE_FAIL: {e}")
+
+# 3. Clean junk files
+junk = [
+    "/root/math-channel/zz_test.txt",
+    "/root/math-channel/scripts/zz_test.txt",
+    "/root/math-channel/scripts/undergraduate/zz_test.txt",
+    "/root/math-channel/scripts/undergraduate/.gitkeep",
+    "/root/test123.txt",
+    "/tmp/test_write.txt",
+]
+for f in junk:
+    if os.path.exists(f):
+        os.remove(f)
+        result_lines.append(f"REMOVED: {f}")
+result_lines.append("CLEANUP_DONE")
+
+# Write result
+with open("/root/math-channel/video-89-result.txt", "w") as out:
+    out.write("\n".join(result_lines))
+
+print("\n".join(result_lines))

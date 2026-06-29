@@ -255,7 +255,7 @@ class Video88_PlanarityEuler(Scene):
             Text("V = 4", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
             Text("E = 5", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
             Text("F = 3", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("V - E + F = 4 - 5 + 3 = 2  \u2713", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            MathTex(r"V - E + F = 4 - 5 + 3 = 2", font_size=BODY_SIZE, color=SECONDARY),
         )
         self.ly.progressive_reveal(count, start_from=egraph)
         self.wait(2)

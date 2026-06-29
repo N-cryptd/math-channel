@@ -60,7 +60,7 @@ class Video87_Trees(Scene):
     # ------------------------------------------------------------------
     def scene1_hook(self):
         self.add_subcaption(
-            "In our last video, we explored graphs — vertices connected by edges. "
+            "In our last video, we explored graphs. "
             "Today we look at a special kind of graph: one with no cycles. "
             "Remove all the cycles from a connected graph, and you get a tree.",
             duration=18,
@@ -71,11 +71,11 @@ class Video87_Trees(Scene):
 
         # Build a connected graph with a cycle (pentagon + chord)
         positions = [
-            UP * 2 + LEFT * 2,      # 0
-            UP * 2 + RIGHT * 2,     # 1
-            DOWN * 1.5 + RIGHT * 2, # 2
-            DOWN * 1.5 + LEFT * 2,  # 3
-            DOWN * 0.5,             # 4
+            UP * 2 + LEFT * 2,      # 0: A
+            UP * 2 + RIGHT * 2,     # 1: B
+            DOWN * 1.5 + RIGHT * 2, # 2: C
+            DOWN * 1.5 + LEFT * 2,  # 3: D
+            DOWN * 0.5,             # 4: E
         ]
         verts = VGroup(*[Dot(p, color=WHITE, radius=0.12) for p in positions])
         labels = VGroup(
@@ -101,7 +101,6 @@ class Video87_Trees(Scene):
         self.play(Create(all_edges), run_time=NORMAL)
         self.wait(1)
 
-        # Highlight and remove cycle edges one by one
         note1 = Text("Remove edges that break cycles...",
                       font_size=BODY_SIZE, color=ACCENT, font=SANS)
         self.ly.safe_place(note1, direction=DOWN, anchor=verts, buff=0.8)
@@ -109,16 +108,9 @@ class Video87_Trees(Scene):
         self.wait(1)
 
         # Remove chord edge A-C (index 5), then edge C-E (index 2)
-        # This breaks both cycles
-        self.play(
-            all_edges[5].animate.set_color(RED),
-            run_time=FAST,
-        )
+        self.play(all_edges[5].animate.set_color(RED), run_time=FAST)
         self.play(FadeOut(all_edges[5]), run_time=FAST)
-        self.play(
-            all_edges[2].animate.set_color(RED),
-            run_time=FAST,
-        )
+        self.play(all_edges[2].animate.set_color(RED), run_time=FAST)
         self.play(FadeOut(all_edges[2]), run_time=FAST)
         self.wait(0.5)
 
@@ -148,7 +140,6 @@ class Video87_Trees(Scene):
         self.ly.section_divider(1, "What is a Tree?")
         title = self.ly.title("Tree Definition")
 
-        # Show a small tree (5 vertices, 4 edges)
         t_positions = [
             UP * 1.5 + LEFT * 3,  # A
             UP * 1.5 + LEFT * 1,  # B
@@ -179,7 +170,6 @@ class Video87_Trees(Scene):
         self.play(Create(tree_edges), run_time=NORMAL)
         self.wait(0.5)
 
-        # Progressive reveal of definitions
         def_items = [
             Text("Connected acyclic graph (no cycles)", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Every pair of vertices: exactly one simple path",
@@ -207,10 +197,10 @@ class Video87_Trees(Scene):
         self.ly.section_divider(2, "Why |E| = |V| - 1")
         title = self.ly.title("Visual Proof: Build a Tree")
 
-        # Start with 1 vertex
-        v_positions = [ORIGIN]
-        step_verts = [Dot(ORIGIN, color=PRIMARY, radius=0.15)]
-        step_labels = [Text("v1", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(step_verts[0], UP)]
+        step_verts = VGroup(Dot(ORIGIN, color=PRIMARY, radius=0.15))
+        step_labels = VGroup(
+            Text("v1", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(step_verts[0], UP)
+        )
         step_edges = VGroup()
 
         self.ly.center_in_content(step_verts[0])
@@ -225,7 +215,6 @@ class Video87_Trees(Scene):
         self.play(FadeIn(counter, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1)
 
-        # Add 5 more vertices one at a time
         new_positions = [
             UP * 1.5,                # v2
             UP * 1.5 + RIGHT * 2,   # v3
@@ -237,13 +226,11 @@ class Video87_Trees(Scene):
 
         for idx, (pos, parent) in enumerate(zip(new_positions, connect_to)):
             new_v = Dot(pos, color=PRIMARY, radius=0.15)
-            new_label = Text(f"v{idx+2}", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(new_v, UP if pos[1] > 0 else DOWN)
+            label_dir = UP if pos[1] > 0 else DOWN
+            new_label = Text(f"v{idx+2}", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(new_v, label_dir)
             new_edge = Line(step_verts[parent].get_center(), pos, color=SECONDARY, stroke_width=4)
 
-            self.play(
-                FadeOut(counter),
-                run_time=FAST,
-            )
+            self.play(FadeOut(counter), run_time=FAST)
             self.play(
                 Create(new_edge),
                 FadeIn(new_v, scale=0.5),
@@ -255,12 +242,12 @@ class Video87_Trees(Scene):
             step_labels.add(new_label)
             step_edges.add(new_edge)
 
+            anchor_for_counter = new_v if pos[1] < 0 else step_verts[0]
             counter = Text(f"|V| = {idx+2}, |E| = {idx+1}", font_size=BODY_SIZE, color=ACCENT, font=SANS)
-            self.ly.safe_place(counter, direction=DOWN, anchor=new_v if pos[1] < 0 else step_verts[0], buff=1)
+            self.ly.safe_place(counter, direction=DOWN, anchor=anchor_for_counter, buff=1)
             self.play(FadeIn(counter, shift=LEFT * 0.15), run_time=NORMAL)
             self.wait(0.5)
 
-        # Final formula
         self.play(FadeOut(counter), run_time=FAST)
         formula = MathTex(r"|E|", r" = |V| - 1", color=WHITE)
         fbox = self.ly.formula_box(formula, ACCENT)
@@ -290,13 +277,17 @@ class Video87_Trees(Scene):
         self.ly.section_divider(3, "Rooted Trees and Forests")
         title = self.ly.title("Rooted Trees and Forests")
 
-        # Show a forest: two disconnected trees
-        # Tree 1: left side
         f1_v = VGroup(
             Dot(LEFT * 3 + UP * 1, color=PRIMARY, radius=0.12),
             Dot(LEFT * 4 + UP * 0, color=PRIMARY, radius=0.12),
             Dot(LEFT * 2 + UP * 0, color=PRIMARY, radius=0.12),
             Dot(LEFT * 3 + DOWN * 1, color=PRIMARY, radius=0.12),
+        )
+        f1_l = VGroup(
+            Text("C", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(f1_v[0], UP),
+            Text("A", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(f1_v[1], LEFT),
+            Text("B", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(f1_v[2], RIGHT),
+            Text("E", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(f1_v[3], DOWN),
         )
         f1_e = VGroup(
             Line(f1_v[0].get_center(), f1_v[1].get_center(), color=SECONDARY, stroke_width=3),
@@ -304,11 +295,15 @@ class Video87_Trees(Scene):
             Line(f1_v[0].get_center(), f1_v[3].get_center(), color=SECONDARY, stroke_width=3),
         )
 
-        # Tree 2: right side
         f2_v = VGroup(
             Dot(RIGHT * 3 + UP * 0.5, color=PRIMARY, radius=0.12),
             Dot(RIGHT * 2 + DOWN * 0.5, color=PRIMARY, radius=0.12),
             Dot(RIGHT * 4 + DOWN * 0.5, color=PRIMARY, radius=0.12),
+        )
+        f2_l = VGroup(
+            Text("R", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(f2_v[0], UP),
+            Text("S", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(f2_v[1], LEFT),
+            Text("T", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(f2_v[2], RIGHT),
         )
         f2_e = VGroup(
             Line(f2_v[0].get_center(), f2_v[1].get_center(), color=SECONDARY, stroke_width=3),
@@ -318,7 +313,9 @@ class Video87_Trees(Scene):
         self.ly.safe_place(f1_v, direction=DOWN, anchor=title, buff=1)
         self.play(
             LaggedStartMap(FadeIn, f1_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, f1_l, scale=0.3, lag_ratio=0.1),
             LaggedStartMap(FadeIn, f2_v, scale=0.3, lag_ratio=0.1),
+            LaggedStartMap(FadeIn, f2_l, scale=0.3, lag_ratio=0.1),
             run_time=NORMAL,
         )
         self.play(Create(f1_e), Create(f2_e), run_time=NORMAL)
@@ -329,13 +326,11 @@ class Video87_Trees(Scene):
         self.wait(1)
         self.play(FadeOut(forest_label), run_time=FAST)
 
-        # Root the left tree at vertex 0 (top) -- mark as root
         root_marker = MathTex(r"\star", font_size=36, color=ACCENT).next_to(f1_v[0], UP, buff=0.15)
         self.play(FadeIn(root_marker), run_time=FAST)
 
-        # Label parent-child relationships
         terms = [
-            Text("Parent of D = C  (root)", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Parent of A = C (root)", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Children of root: A, B, E", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
             Text("Leaves: A, B, E (no children)", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
@@ -358,9 +353,6 @@ class Video87_Trees(Scene):
         self.ly.section_divider(4, "Binary Trees")
         title = self.ly.title("Binary Trees")
 
-        # Three small binary tree examples side by side
-
-        # 1. Full binary tree (each node 0 or 2 children)
         full_v = VGroup(
             Dot(LEFT * 4 + UP * 1.5, color=PRIMARY, radius=0.1),
             Dot(LEFT * 5 + UP * 0, color=PRIMARY, radius=0.1),
@@ -380,7 +372,6 @@ class Video87_Trees(Scene):
         )
         full_label = Text("Full", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(full_v[0], UP, buff=0.3)
 
-        # 2. Complete binary tree
         comp_v = VGroup(
             Dot(UP * 1.5, color=PRIMARY, radius=0.1),
             Dot(LEFT * 1 + UP * 0, color=PRIMARY, radius=0.1),
@@ -398,7 +389,6 @@ class Video87_Trees(Scene):
         )
         comp_label = Text("Complete", font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(comp_v[0], UP, buff=0.3)
 
-        # 3. Perfect binary tree (small)
         perf_v = VGroup(
             Dot(RIGHT * 4 + UP * 1.5, color=PRIMARY, radius=0.1),
             Dot(RIGHT * 3 + UP * 0, color=PRIMARY, radius=0.1),
@@ -421,10 +411,7 @@ class Video87_Trees(Scene):
             LaggedStartMap(FadeIn, perf_v, scale=0.3, lag_ratio=0.1),
             run_time=NORMAL,
         )
-        self.play(
-            Create(full_e), Create(comp_e), Create(perf_e),
-            run_time=NORMAL,
-        )
+        self.play(Create(full_e), Create(comp_e), Create(perf_e), run_time=NORMAL)
         self.play(
             FadeIn(full_label, shift=LEFT * 0.1),
             FadeIn(comp_label, shift=LEFT * 0.1),
@@ -433,7 +420,6 @@ class Video87_Trees(Scene):
         )
         self.wait(1)
 
-        # Definitions below
         defs = [
             Text("Each node has at most 2 children (left, right)",
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
@@ -463,23 +449,22 @@ class Video87_Trees(Scene):
         self.ly.section_divider(5, "Tree Traversals")
         title = self.ly.title("Exploring Trees: Traversals")
 
-        # Show a reference tree
         ref_positions = [
-            UP * 2,                  # root F
-            UP * 0.5 + LEFT * 1.5,  # B
-            UP * 0.5 + RIGHT * 1.5, # G
-            DOWN * 1 + LEFT * 2.5,  # A
-            DOWN * 1 + LEFT * 0.5,  # D
-            DOWN * 1 + RIGHT * 0.5, # C (right child of B - actually G's left)
-            DOWN * 1 + RIGHT * 2.5, # I
+            UP * 2,
+            UP * 0.5 + LEFT * 1.5,
+            UP * 0.5 + RIGHT * 1.5,
+            DOWN * 1 + LEFT * 2.5,
+            DOWN * 1 + LEFT * 0.5,
+            DOWN * 1 + RIGHT * 0.5,
+            DOWN * 1 + RIGHT * 2.5,
         ]
         ref_names = ["F", "B", "G", "A", "D", "C", "I"]
         ref_v = VGroup(*[Dot(p, color=PRIMARY, radius=0.15) for p in ref_positions])
         ref_l = VGroup(*[
-            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(
+                ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
             for i, n in enumerate(ref_names)
         ])
-        # Edges: F-B, F-G, B-A, B-D, G-C, G-I
         ref_pairs = [(0,1), (0,2), (1,3), (1,4), (2,5), (2,6)]
         ref_edges = VGroup(*[
             Line(ref_v[i].get_center(), ref_v[j].get_center(), color=SECONDARY, stroke_width=3)
@@ -495,7 +480,6 @@ class Video87_Trees(Scene):
         self.play(Create(ref_edges), run_time=NORMAL)
         self.wait(0.5)
 
-        # Three traversal names
         orders = [
             Text("Pre-order:  Root, Left, Right", font_size=BODY_SIZE, color=ACCENT, font=SANS),
             Text("In-order:   Left, Root, Right", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
@@ -520,20 +504,20 @@ class Video87_Trees(Scene):
         self.ly.section_divider(6, "Pre-Order Traversal")
         title = self.ly.title("Pre-Order: Root, Left, Right")
 
-        # Same tree as before
         ref_positions = [
-            UP * 1.5,                   # F (root)
-            UP * 0 + LEFT * 1.5,       # B
-            UP * 0 + RIGHT * 1.5,      # G
-            DOWN * 1.5 + LEFT * 2.5,   # A
-            DOWN * 1.5 + LEFT * 0.5,   # D
-            DOWN * 1.5 + RIGHT * 0.5,  # C
-            DOWN * 1.5 + RIGHT * 2.5,  # I
+            UP * 1.5,
+            UP * 0 + LEFT * 1.5,
+            UP * 0 + RIGHT * 1.5,
+            DOWN * 1.5 + LEFT * 2.5,
+            DOWN * 1.5 + LEFT * 0.5,
+            DOWN * 1.5 + RIGHT * 0.5,
+            DOWN * 1.5 + RIGHT * 2.5,
         ]
         ref_names = ["F", "B", "G", "A", "D", "C", "I"]
         ref_v = VGroup(*[Dot(p, color=PRIMARY, radius=0.15) for p in ref_positions])
         ref_l = VGroup(*[
-            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(
+                ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
             for i, n in enumerate(ref_names)
         ])
         ref_pairs = [(0,1), (0,2), (1,3), (1,4), (2,5), (2,6)]
@@ -551,17 +535,12 @@ class Video87_Trees(Scene):
         self.play(Create(ref_edges), run_time=NORMAL)
         self.wait(0.5)
 
-        # Animate pre-order visit: F(0), B(1), A(3), D(4), G(2), C(5), I(6)
         preorder_order = [0, 1, 3, 4, 2, 5, 6]
         visit_seq = Text("", font_size=BODY_SIZE, color=ACCENT, font=SANS)
         self.ly.safe_place(visit_seq, direction=DOWN, anchor=ref_v[0], buff=1.5)
 
         for step, idx in enumerate(preorder_order):
-            self.play(
-                ref_v[idx].animate.set_color(ACCENT).scale(1.4),
-                run_time=FAST,
-            )
-            # Update sequence text
+            self.play(ref_v[idx].animate.set_color(ACCENT).scale(1.4), run_time=FAST)
             name = ref_names[idx]
             if step == 0:
                 seq_text = f"Visit: {name}"
@@ -573,11 +552,7 @@ class Video87_Trees(Scene):
             visit_seq = new_seq
             self.wait(0.3)
 
-        # Reset colors
-        self.play(
-            *[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v],
-            run_time=NORMAL,
-        )
+        self.play(*[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v], run_time=NORMAL)
 
         app_text = Text("Useful for: copying trees, expression trees (prefix notation)",
                         font_size=BODY_SIZE, color=DIM, font=SANS)
@@ -600,7 +575,6 @@ class Video87_Trees(Scene):
 
         title = self.ly.title("In-Order and Post-Order")
 
-        # Same tree structure
         ref_positions = [
             UP * 1.5,
             UP * 0 + LEFT * 1.5,
@@ -613,7 +587,8 @@ class Video87_Trees(Scene):
         ref_names = ["F", "B", "G", "A", "D", "C", "I"]
         ref_v = VGroup(*[Dot(p, color=PRIMARY, radius=0.15) for p in ref_positions])
         ref_l = VGroup(*[
-            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(
+                ref_v[i], UP if ref_positions[i][1] > 0.5 else DOWN)
             for i, n in enumerate(ref_names)
         ])
         ref_pairs = [(0,1), (0,2), (1,3), (1,4), (2,5), (2,6)]
@@ -631,16 +606,12 @@ class Video87_Trees(Scene):
         self.play(Create(ref_edges), run_time=NORMAL)
         self.wait(0.3)
 
-        # In-order: A, B, D, F, C, G, I
         inorder_order = [3, 1, 4, 0, 5, 2, 6]
-        in_label = Text("In-order: ", font_size=BODY_SIZE, color=PRIMARY, font=SANS)
+        in_label = Text("", font_size=BODY_SIZE, color=PRIMARY, font=SANS)
         self.ly.safe_place(in_label, direction=DOWN, anchor=ref_v[0], buff=1.5)
 
         for step, idx in enumerate(inorder_order):
-            self.play(
-                ref_v[idx].animate.set_color(PRIMARY).scale(1.4),
-                run_time=FAST,
-            )
+            self.play(ref_v[idx].animate.set_color(PRIMARY).scale(1.4), run_time=FAST)
             name = ref_names[idx]
             if step == 0:
                 seq_text = f"In-order: {name}"
@@ -652,22 +623,15 @@ class Video87_Trees(Scene):
             in_label = new_l
             self.wait(0.2)
 
-        self.play(
-            *[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v],
-            run_time=NORMAL,
-        )
+        self.play(*[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v], run_time=NORMAL)
         self.play(FadeOut(in_label), run_time=FAST)
 
-        # Post-order: A, D, B, C, I, G, F
         postorder_order = [3, 4, 1, 5, 6, 2, 0]
-        post_label = Text("Post-order: ", font_size=BODY_SIZE, color=SECONDARY, font=SANS)
+        post_label = Text("", font_size=BODY_SIZE, color=SECONDARY, font=SANS)
         self.ly.safe_place(post_label, direction=DOWN, anchor=ref_v[0], buff=1.5)
 
         for step, idx in enumerate(postorder_order):
-            self.play(
-                ref_v[idx].animate.set_color(SECONDARY).scale(1.4),
-                run_time=FAST,
-            )
+            self.play(ref_v[idx].animate.set_color(SECONDARY).scale(1.4), run_time=FAST)
             name = ref_names[idx]
             if step == 0:
                 seq_text = f"Post-order: {name}"
@@ -679,13 +643,9 @@ class Video87_Trees(Scene):
             post_label = new_l
             self.wait(0.2)
 
-        self.play(
-            *[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v],
-            run_time=NORMAL,
-        )
+        self.play(*[v.animate.set_color(PRIMARY).scale(1/1.4) for v in ref_v], run_time=NORMAL)
         self.play(FadeOut(post_label), run_time=FAST)
 
-        # Key insight
         insights = [
             Text("In-order on BST gives sorted output",
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
@@ -711,18 +671,18 @@ class Video87_Trees(Scene):
         self.ly.section_divider(7, "Spanning Trees")
         title = self.ly.title("Spanning Trees")
 
-        # Original graph: 5 vertices, 6 edges
         g_positions = [
-            UP * 1.5 + LEFT * 2,     # A
-            UP * 1.5 + RIGHT * 2,    # B
-            DOWN * 1 + RIGHT * 2,     # C
-            DOWN * 1 + LEFT * 2,      # D
-            DOWN * 0.5,               # E
+            UP * 1.5 + LEFT * 2,
+            UP * 1.5 + RIGHT * 2,
+            DOWN * 1 + RIGHT * 2,
+            DOWN * 1 + LEFT * 2,
+            DOWN * 0.5,
         ]
         g_names = ["A", "B", "C", "D", "E"]
         g_v = VGroup(*[Dot(p, color=WHITE, radius=0.13) for p in g_positions])
         g_l = VGroup(*[
-            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(g_v[i], UP if g_positions[i][1] > 0 else DOWN)
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(
+                g_v[i], UP if g_positions[i][1] > 0 else DOWN)
             for i, n in enumerate(g_names)
         ])
         g_pairs = [(0,1), (1,2), (2,3), (3,0), (0,4), (2,4)]
@@ -740,14 +700,7 @@ class Video87_Trees(Scene):
         self.play(Create(g_edges), run_time=NORMAL)
         self.wait(0.5)
 
-        # Highlight spanning tree 1: edges 0,1,2,3 (A-B-C-D-A... no, that's a cycle)
-        # Spanning tree: 0,1,2,4 (A-B, B-C, C-E, D-A) -- that's 4 edges for 5 verts
-        # Actually edges 0,1,2,3 is A-B-C-D which is 4 edges but only 4 verts
-        # Let's use: 0(A-B), 1(B-C), 2(C-E), 3(D-A), 5(C-E duplicated)...
-        # Correct spanning tree edges: 0(A-B), 1(B-C), 3(D-A), 4(A-E) = 4 edges, 5 verts, connected
         st1_indices = [0, 1, 3, 4]
-        for idx in st1_indices:
-            g_edges[idx].animate.set_color(SECONDARY)
         self.play(
             *[g_edges[idx].animate.set_color(SECONDARY).set_stroke(width=5) for idx in st1_indices],
             *[g_edges[idx].animate.set_color(DIM).set_opacity(0.3) for idx in range(len(g_edges)) if idx not in st1_indices],
@@ -757,15 +710,14 @@ class Video87_Trees(Scene):
         self.ly.safe_place(st1_text, direction=DOWN, anchor=g_v[0], buff=1.5)
         self.play(FadeIn(st1_text, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1)
-
         self.play(FadeOut(st1_text), run_time=FAST)
 
-        # Reset and highlight spanning tree 2
-        st2_indices = [0, 1, 2, 5]
         self.play(
             *[g_edges[idx].animate.set_color(PRIMARY).set_stroke(width=3).set_opacity(1) for idx in range(len(g_edges))],
             run_time=FAST,
         )
+
+        st2_indices = [0, 1, 2, 3]
         self.play(
             *[g_edges[idx].animate.set_color(SECONDARY).set_stroke(width=5) for idx in st2_indices],
             *[g_edges[idx].animate.set_color(DIM).set_opacity(0.3) for idx in range(len(g_edges)) if idx not in st2_indices],
@@ -775,14 +727,13 @@ class Video87_Trees(Scene):
         self.ly.safe_place(st2_text, direction=DOWN, anchor=g_v[0], buff=1.5)
         self.play(FadeIn(st2_text, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(1)
-
         self.play(FadeOut(st2_text), run_time=FAST)
+
         self.play(
             *[g_edges[idx].animate.set_color(PRIMARY).set_stroke(width=3).set_opacity(1) for idx in range(len(g_edges))],
             run_time=FAST,
         )
 
-        # Bridge to MST
         bridge = Text(
             "What if edges have weights? Find the cheapest spanning tree.",
             font_size=BODY_SIZE, color=ACCENT, font=SANS,
@@ -800,55 +751,44 @@ class Video87_Trees(Scene):
         self.add_subcaption(
             "Kruskal's algorithm finds the minimum spanning tree. Sort all edges by weight, "
             "then add the cheapest edge that doesn't create a cycle. Repeat until all vertices "
-            "are connected. Let's see it in action.",
+            "are connected. Let us see it in action.",
             duration=18,
         )
 
         self.ly.section_divider(8, "Minimum Spanning Tree")
         title = self.ly.title("Kruskal's Algorithm: MST")
 
-        # Weighted graph: 6 vertices, 8 edges
         k_positions = [
-            UP * 2 + LEFT * 2,       # A (0)
-            UP * 2 + RIGHT * 2,      # B (1)
-            DOWN * 1 + RIGHT * 2,    # C (2)
-            DOWN * 1 + LEFT * 2,     # D (3)
-            DOWN * 0.5,              # E (4)
-            UP * 0.5 + RIGHT * 5,    # F (5) -- too far right, let me recenter
-        ]
-        # Use 6 vertices in a nice layout
-        k_positions = [
-            LEFT * 3 + UP * 2,   # A (0)
-            RIGHT * 3 + UP * 2,  # B (1)
-            RIGHT * 3,          # C (2)
-            LEFT * 3,           # D (3)
-            LEFT * 0 + DOWN * 1, # E (4)
-            RIGHT * 0 + DOWN * 1, # F (5) -- use better positions
+            LEFT * 3 + UP * 2,
+            RIGHT * 3 + UP * 2,
+            RIGHT * 3,
+            LEFT * 3,
+            DOWN * 1 + LEFT * 0.5,
+            DOWN * 1 + RIGHT * 0.5,
         ]
         k_names = ["A", "B", "C", "D", "E", "F"]
         k_v = VGroup(*[Dot(p, color=WHITE, radius=0.12) for p in k_positions])
         k_l = VGroup(*[
-            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(k_v[i], UP if k_positions[i][1] > 0 else DOWN)
+            Text(n, font_size=LABEL_SIZE, color=WHITE, font=SANS).next_to(
+                k_v[i], UP if k_positions[i][1] > 0 else DOWN)
             for i, n in enumerate(k_names)
         ])
 
-        # Edges with weights: (from, to, weight)
         k_edges_data = [
-            (0, 1, 4),  # A-B: 4
-            (1, 2, 8),  # B-C: 8
-            (2, 3, 7),  # C-D: 7
-            (3, 0, 2),  # D-A: 2
-            (0, 4, 5),  # A-E: 5
-            (1, 5, 1),  # B-F: 1
-            (4, 5, 3),  # E-F: 3
-            (2, 5, 6),  # C-F: 6
+            (0, 1, 4),
+            (1, 2, 8),
+            (2, 3, 7),
+            (3, 0, 2),
+            (0, 4, 5),
+            (1, 5, 1),
+            (4, 5, 3),
+            (2, 5, 6),
         ]
         k_edges = VGroup()
         k_weights = VGroup()
         for i, j, w in k_edges_data:
             edge = Line(k_v[i].get_center(), k_v[j].get_center(), color=PRIMARY, stroke_width=3)
             mid = (k_v[i].get_center() + k_v[j].get_center()) / 2
-            # Offset label slightly to avoid overlapping edge
             offset = UP * 0.25 if abs(k_v[i].get_center()[1] - k_v[j].get_center()[1]) > 1 else RIGHT * 0.25
             wt = Text(str(w), font_size=LABEL_SIZE, color=ACCENT, font=MONO).move_to(mid + offset)
             k_edges.add(edge)
@@ -864,13 +804,8 @@ class Video87_Trees(Scene):
         self.play(LaggedStartMap(FadeIn, k_weights, scale=0.3, lag_ratio=0.05), run_time=NORMAL)
         self.wait(1)
 
-        # Kruskal's: sort by weight, add if no cycle
-        # Sorted edges: B-F(1), D-A(2), E-F(3), A-B(4), A-E(5), C-F(6), C-D(7), B-C(8)
         sorted_indices = [5, 3, 6, 0, 4, 7, 2, 1]
-        accepted = []  # indices of accepted edges
-        rejected = []  # indices of rejected edges (would create cycle)
 
-        # Union-Find simple tracking (connected components)
         parent = list(range(len(k_v)))
 
         def find(x):
@@ -882,22 +817,21 @@ class Video87_Trees(Scene):
         def union(x, y):
             px, py = find(x), find(y)
             if px == py:
-                return False  # cycle
+                return False
             parent[px] = py
             return True
 
         step_label = Text("", font_size=BODY_SIZE, color=WHITE, font=SANS)
         self.ly.safe_place(step_label, direction=DOWN, anchor=k_v[0], buff=2)
 
+        accepted = []
+
         for sort_step, eidx in enumerate(sorted_indices):
             i, j, w = k_edges_data[eidx]
             can_add = union(i, j)
 
             e_name = f"{k_names[i]}-{k_names[j]}"
-            if sort_step == 0:
-                step_text = f"Step {sort_step+1}: Add {e_name} (w={w})"
-            else:
-                step_text = f"Step {sort_step+1}: Add {e_name} (w={w})"
+            step_text = f"Step {sort_step+1}: Add {e_name} (w={w})"
             new_label = Text(step_text, font_size=BODY_SIZE, color=WHITE, font=SANS)
             new_label.move_to(step_label.get_center())
             self.play(FadeOut(step_label), FadeIn(new_label, shift=LEFT * 0.1), run_time=FAST)
@@ -905,12 +839,8 @@ class Video87_Trees(Scene):
 
             if can_add:
                 accepted.append(eidx)
-                self.play(
-                    k_edges[eidx].animate.set_color(SECONDARY).set_stroke(width=5),
-                    run_time=NORMAL,
-                )
+                self.play(k_edges[eidx].animate.set_color(SECONDARY).set_stroke(width=5), run_time=NORMAL)
             else:
-                rejected.append(eidx)
                 self.play(
                     k_edges[eidx].animate.set_color(RED).set_stroke(width=2),
                     k_weights[eidx].animate.set_color(RED),
@@ -918,11 +848,8 @@ class Video87_Trees(Scene):
                 )
             self.wait(0.3)
 
-            # Stop once we have |V|-1 = 5 edges
             if len(accepted) == len(k_v) - 1:
                 self.play(FadeOut(step_label), run_time=FAST)
-
-                # Show MST total weight
                 total_w = sum(k_edges_data[idx][2] for idx in accepted)
                 mst_text = Text(
                     f"MST total weight: {total_w}",
@@ -932,8 +859,6 @@ class Video87_Trees(Scene):
                 self.play(FadeIn(mst_text, shift=LEFT * 0.15), run_time=NORMAL)
                 self.wait(2)
                 break
-        else:
-            self.play(FadeOut(step_label), run_time=FAST)
 
         self.ly.clear()
 
@@ -997,16 +922,14 @@ class Video87_Trees(Scene):
         self.ly.progressive_reveal(points, start_from=title)
         self.wait(2)
 
-        # Key formula
         formula = MathTex(r"|E| = |V| - 1", color=WHITE)
         fbox = self.ly.formula_box(formula, ACCENT)
         self.ly.safe_place(fbox, direction=DOWN, buff=0.5)
         self.play(Write(fbox), run_time=NORMAL)
         self.wait(1.5)
 
-        # Bridge to next
         next_text = Text(
-            "Next: Graph Coloring — assigning colors under constraints",
+            "Next: Graph Coloring - assigning colors under constraints",
             font_size=BODY_SIZE, color=ACCENT, font=SANS,
         )
         self.ly.safe_place(next_text, direction=DOWN, anchor=fbox, buff=0.4)
@@ -1015,7 +938,6 @@ class Video87_Trees(Scene):
 
         self.ly.clear()
 
-        # Outro
         self.add_subcaption(
             "Thank you for watching! Subscribe for more visual math explanations.",
             duration=8,
