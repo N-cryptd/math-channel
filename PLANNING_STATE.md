@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-06-29
+**Last updated:** 2026-06-30
 
-**Completed Videos (89 complete)**
+**Completed Videos (91 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -126,6 +126,15 @@
 - Linear Algebra (Videos 25–40): COMPLETE (16 videos)
 - Calculus III (Videos 41–54): COMPLETE (14 videos)
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
+- Discrete Mathematics (Videos 79–89): COMPLETE (11 videos)
+
+
 
 ## In Progress
-- Discrete Mathematics (Videos 79+): Videos 79-89 complete and rendered. Video 90+ next in queue.
+- Proof-Based Mathematics (Videos 90+): Video 92 (Proof by Contrapositive) next in queue.
+
+## Proof-Based Mathematics (Videos 90+)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 90 | Why Proofs? | ✅ | ✅ |
+| 91 | Direct Proof | ✅ | ✅ |

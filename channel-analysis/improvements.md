@@ -175,3 +175,36 @@ Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 4/10 | Narration 6/10 | Hooks
 - Overly historical focus that delays actual math content (Numberphile spends too long on story).
 - Definition-heavy format without visual demonstration (Wrath of Math).
 - No competitor animates — we should make animation our differentiator throughout.
+
+### [2026-06-30] Direct Proof (Video 91)
+
+**Competitive Landscape:**
+The "Direct Proof" topic is covered almost exclusively within broader "Introduction to Proofs" courses. No major channel has a dedicated, animated standalone video on direct proof techniques.
+
+- **Socratica** (formerly had an "Introduction to Proofs" playlist with Manim-style animations) — now pivoted to Python/ML tutorials. Historical content covered direct proof in a lecture-style format with minimal animation.
+- **The Math Sorcerer** — has pivot away from educational math content. Previously covered proofs with whiteboard style.
+- **TrevTutor** — pivoted to linguistics content.
+- **3Blue1Brown** — covers proof-like reasoning within series (Essence of Calculus/Linear Algebra) but never a standalone "How to Write a Proof" video.
+- **Mathologer** — visual proofs of specific theorems (Pi, e, topology) but not a tutorial on proof methodology.
+
+**Analysis:** Direct proof as a pedagogical topic is underserved on YouTube. Most content is:
+1. Embedded in 30+ minute university lectures (low engagement)
+2. Whiteboard-only (no animation advantage)
+3. Purely lecture-style without visual demonstration of the proof-writing process
+
+**Key Opportunity:** Our Manim-animated approach to the *structure* of a direct proof (hypothesis → logical chain → conclusion) with step-by-step visual reveals fills a genuine gap.
+
+**Dimensions (competitor average):**
+- Structure: 6/10 | Pacing: 5/10 | Visuals: 3/10 | Narration: 6/10 | Hooks: 4/10
+
+### Techniques to Adopt
+- **Visual proof structure**: Show the logical flow (If P → P implies Q → therefore Q) as an animated diagram before writing formal proof
+- **Step-by-step reveal**: Each proof line appears one at a time with justification highlighted — mimics the "thinking out loud" process
+- **Multiple examples**: Start simple (sum of evens), then medium (product of evens), then build to something requiring algebraic manipulation
+- **Common mistakes**: Show what a BAD proof looks like (circular reasoning, assuming the conclusion) to teach by contrast
+
+### Techniques to Avoid
+- 30+ minute lecture format (standard university upload)
+- Pure whiteboard with no visual structure
+- Jumping straight to formal proofs without showing the logical structure diagram first
+- Too many examples without variety (all number theory — we should mix domains)
