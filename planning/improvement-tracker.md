@@ -119,6 +119,14 @@ Videos 67+ created with v2 templates from the start.
 | 77 | Hypothesis Testing | 931 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(8), section_divider(7), SANS(48), ly.clear(21), formula_box(4), safe_place(12). Zero .shift()/.to_edge(). 1 .move_to() (label at content_top, minor), 4 .move_to() on axes coordinates, 7 .next_to() all diagram/axis labels (acceptable). Rendered. |
 | 78 | Regression Basics | 548 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(7), section_divider(6), SANS(29), ly.clear(13), safe_place(16). 2 .shift() + 3 .next_to() all on Axes/diagram labels (acceptable). Zero .to_edge(). Rendered. |
 
+### Proof-Based Mathematics (Videos 90+) — NEW PIPELINE
+Videos 90+ created with v2 templates from the start.
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 90 | Why Proofs? | 238 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(18), ly.clear(5), safe_place(9), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
+| 91 | Direct Proof | 398 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(17), ly.clear(11), safe_place(21), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
+
 ### Discrete Mathematics (Videos 79+) — NEW PIPELINE
 Videos 79+ created with v2 templates from the start.
 
@@ -145,7 +153,7 @@ Videos 79+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 89 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-86 were created with v2 standards or received targeted improvements. All analyzed and verified v2-compliant. Videos 87-89 (Trees, Planarity, Graph Coloring) created with v2 and rendered. No videos remain that need improvement work.
+All 91 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-86 were created with v2 standards or received targeted improvements. Videos 87-89 (Discrete Math) created with v2 and rendered. Videos 90-91 (Proof-Based Math) created with v2. No videos remain that need improvement work.
 
 ## Last Updated
-2026-06-29 (Updated Video 86 Re-rendered→YES. Added Videos 87-89 to tracker. All 89 videos analyzed, improvement cycle complete.)
+2026-07-01 (Added Videos 90-91 to tracker — Proof-Based Mathematics. Both v2-compliant, no improvement needed. All 91 videos analyzed, improvement cycle complete.)
