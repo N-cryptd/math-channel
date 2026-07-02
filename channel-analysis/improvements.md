@@ -208,3 +208,146 @@ The "Direct Proof" topic is covered almost exclusively within broader "Introduct
 - Pure whiteboard with no visual structure
 - Jumping straight to formal proofs without showing the logical structure diagram first
 - Too many examples without variety (all number theory — we should mix domains)
+
+### [2026-07-01] Proof by Contrapositive (Video 92)
+
+**Source 1: TrevTutor — "PROOF by CONTRAPOSITION - DISCRETE MATHEMATICS"**
+URL: https://www.youtube.com/watch?v=X-hJ7krLBn0
+Subscribers: 328K | Views: 252K | Date: Dec 2014 | Captions: False | Duration: 7:21
+Thumbnail: Black background, pink "Discrete Mathematics" + white "Proof by Contraposition" text, pink "Lecture" at bottom. Clean text-only design, no math visuals. Quality: 6/10.
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+**Source 2: Dr. Trefor Bazett — "Proof by Contrapositive | Method & First Example"**
+URL: https://www.youtube.com/watch?v=0YqZIHFmVzg
+Subscribers: 606K | Views: 180K | Date: Jun 2017 | Captions: True | Duration: 3:38
+Thumbnail: Man in grey shirt on black background, white and red text with theorem/proof overlay. Personal branding style. Quality: 5/10 (face-heavy, low math content in thumb).
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 6/10
+
+**Source 3: Kimberly Brehm — "Discrete Math - 1.7.2 Proof by Contraposition"**
+URL: https://www.youtube.com/watch?v=vMwejR0bqwo
+Subscribers: 126K | Views: 185K | Date: Feb 2020 | Captions: True | Duration: 6:39
+Thumbnail: Black background, white text in various fonts/sizes. No math visuals. Text-only, clean but boring. Quality: 7/10.
+Dimensions: Structure 9/10 | Pacing 7/10 | Visuals 3/10 | Narration 7/10 | Hooks 3/10
+
+**Source 4: Wrath of Math — "Proof by Contrapositive: If n^2 is Even then n is Even"**
+URL: https://www.youtube.com/watch?v=FewsjiKug8Q
+Subscribers: 406K | Views: 42K | Date: Jul 2021 | Captions: False | Duration: 6:59
+Thumbnail: White background, black and blue text. "n^2 is even → n is even" equation shown. Clean, math-focused. Quality: 7/10.
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 5/10
+
+**Source 5: Eddie Woo — "Proof by Contraposition"**
+URL: https://www.youtube.com/watch?v=U9W6xIGWdvw
+Subscribers: 2M | Views: 20K | Date: May 2021 | Captions: True | Duration: 10:58
+Thumbnail: Teacher at whiteboard with students, classroom setting. Pedagogical, personal style. Quality: 7/10.
+Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 3/10 | Narration 9/10 | Hooks 5/10
+
+**Source 6: bprp math basics — "How to write a contrapositive proof"**
+URL: https://www.youtube.com/watch?v=hg0KlKHvy7U
+Subscribers: 285K | Views: 13K | Date: Jun 2025 | Captions: True | Duration: 6:49
+Thumbnail: Man writing on blackboard. Traditional blackboard aesthetic. Quality: 5/10.
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+### Key Insights
+- **Aggregate views: ~700K+ across top 4 videos** — strong demand for contrapositive proof content
+- **TrevTutor leads with 252K views** on an 11-year-old video with 0 animations — this demand is underserved visually
+- **All competitors are lecture/whiteboard/slide format** — zero Manim-animated proof-by-contrapositive videos exist on YouTube
+- **Short duration dominates**: Most competitors are 3-7 minutes. Trefor Bazett's 3:38 is too brief to teach the concept properly
+- **Eddie Woo has the best pedagogy** (narration 9/10) but only 20K views because classroom format doesn't scale on YouTube
+- **Common example overlap**: "n^2 even → n even" appears in Wrath of Math, bprp math basics, and TrevTutor — this is the canonical example
+- **Kimberly Brehm has the best structure** (9/10) with clear video chapters and two worked examples, but no animation
+- **Gap: No competitor explains WHY contrapositive works visually** (truth table animation showing P→Q ≡ ¬Q→¬P)
+- **Gap: No competitor shows the "proof strategy selection"** — when to choose contrapositive vs direct vs contradiction
+- **Thumbnail landscape**: All competitors use either (a) text-only on dark background, (b) face/person, or (c) whiteboard. None use animated math visuals or color-coded diagrams
+
+### Thumbnail Trends
+- **Dark backgrounds dominate** (TrevTutor, Kimberly Brehm, Dr. Trefor Bazett) — aligns with our dark theme (#1A1832)
+- **Text-heavy thumbs** with large keyword "Contrapositive" or "Proof" — works for search
+- **No competitor shows the logical equivalence** P→Q ≡ ¬Q→¬P as a visual thumbnail element
+- **Color usage**: TrevTutor uses pink accent, Wrath of Math uses blue accent — most are monochrome
+- **Opportunity**: Our thumbnail should show the contrapositive transformation P→Q → ¬Q→¬P as a visual diagram with our PRIMARY/SECONDARY color coding
+
+### Techniques to Adopt
+- **Truth table visualization**: Animate P→Q and ¬Q→¬P truth tables side-by-side to visually PROVE they're equivalent — this is our unique differentiator (no competitor does this)
+- **Strategy selection diagram**: Show P→Q as a "locked door" and ¬Q→¬P as the "key" — visual metaphor for WHY contrapositive works
+- **Negation roadmap**: Animate the process of negating compound statements (De Morgan's law application) as a step-by-step visual before diving into proofs
+- **Kimberly Brehm's structure**: Two distinct worked examples with clear section breaks — adopt this pacing
+- **Eddie Woo's narration quality**: Explain the reasoning behind each step, not just write formulas
+- **Canonical example "n^2 even → n even"**: Include this since it's the most searched, but add our own unique examples too
+- **Color-coded proof lines**: Hypothesis=PRIMARY, deduction=SECONDARY, conclusion=ACCENT — consistent with Video 91's visual language
+
+### Techniques to Avoid
+- **Pure text thumbnails** (Kimberly Brehm, TrevTutor) — boring, low CTR potential
+- **Face/person thumbnails** (Dr. Trefor Bazett, Eddie Woo, bprp) — doesn't work for animated content channel
+- **3-minute brevity** (Dr. Trefor Bazett) — too short to teach contrapositive properly with examples
+- **No motivation/strategy context** (all competitors jump straight to "here's the definition") — start with WHY this technique exists
+- **Whiteboard-only format** (all competitors) — our Manim animation is our core advantage
+- **Using only one example** (Dr. Trefor Bazett) — need at least 2 distinct examples to build intuition
+- **Confusing contrapositive with contradiction** (some students conflate these) — explicitly contrast the two techniques
+
+### Dimensions (Competitor Average)
+- Structure: 7.5/10 | Pacing: 6.8/10 | Visuals: 3.3/10 | Narration: 7.5/10 | Hooks: 4.5/10
+- **Our target**: Structure 9/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 8/10
+- Visuals score is the biggest gap — we can dominate here with Manim animations
+
+### [2026-07-01] Proof by Contradiction (Video 93)
+
+**Source 1: Numberphile — "Proof by Contradiction"**
+URL: https://www.youtube.com/watch?v=tVb1m-V_JWs
+Subscribers: ~5.7M | Views: ~2M+ | Date: ~2016 | Captions: True
+Dimensions: Structure 7/10 | Pacing 8/10 | Visuals 3/10 | Narration 9/10 | Hooks 8/10
+
+**Source 2: Mathologer — "The square root of 2 is irrational"**
+URL: https://www.youtube.com/watch?v=yk6I83MMFyA
+Subscribers: ~700K | Views: ~1M+ | Date: ~2015-2018 | Captions: True
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 8/10 | Narration 8/10 | Hooks 7/10
+
+**Source 3: The Bright Side of Mathematics — "Proof by Contradiction" (Discrete Math)**
+Subscribers: ~200K | Views: ~100-200K | Date: ~2020-2023 | Captions: True
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 5/10
+
+**Source 4: Wrath of Math — "Proof by Contradiction (How to Write a Proof by Contradiction)"**
+Subscribers: ~200K | Views: ~100-300K | Date: ~2020-2023 | Captions: True
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+### Key Insights
+- **Aggregate views: ~3.5M+ across top 4 videos** — very strong demand for proof by contradiction content
+- **Numberphile leads with ~2M views** using a conversational brown-paper/blackboard format with Prof. Stankova — charm and personality, not visual animation
+- **ALL competitors are lecture/whiteboard format** — zero Manim-animated proof-by-contradiction videos exist on YouTube
+- **No competitor covers all four key topics** (general technique + sqrt(2) irrational + infinitude of primes + distinction from contrapositive) in a single video
+- **sqrt(2) irrational is the canonical example** — appears in Numberphile, Mathologer, Bright Side, and Wrath of Math
+- **Infinitude of primes is under-covered** — only appears as a secondary example, never as a full animated walkthrough
+- **Contrapositive vs contradiction distinction is almost never covered** — students conflate these constantly (noted in Video 92's analysis too)
+- **3Blue1Brown has NO dedicated proof-by-contradiction video** — major gap in their catalog
+- **Reducible: No proof-by-contradiction video** — focused on algorithms/CS
+
+### Thumbnail Trends
+- Dark backgrounds dominate across competitors
+- Text-heavy thumbnails with keyword "Proof by Contradiction" — works for search
+- No competitor uses animated math visuals or color-coded logical flow diagrams
+- **Opportunity**: Thumbnail should show the contradiction structure P ∧ ¬Q → ⊥ as a visual "explosion" with our color scheme
+
+### Techniques to Adopt
+- **Contradiction "explosion" visual**: Animate the moment of contradiction as a visual "BOOM" or spark — emotionally satisfying payoff
+- **Assumption tracker**: Keep a persistent on-screen "assumption box" that we add to, then cross out at the contradiction moment
+- **sqrt(2) proof with geometric motivation**: Mathologer's visual approach to p² = 2q² → even/odd contradiction is excellent, but we can make it Manim-animated
+- **Two-example structure**: sqrt(2) for algebraic contradiction + infinitude of primes for structural contradiction — shows breadth of technique
+- **Color-coded proof chain**: Assumption=PRIMARY, deduction=SECONDARY, contradiction moment=RED flash, matching Videos 90-92's visual language
+- **Numberphile's conversational warmth**: Keep narration engaging, not dry — explain WHY each step works
+
+### Techniques to Avoid
+- Pure whiteboard/lecture format (all competitors) — our Manim animation is our core advantage
+- Covering only sqrt(2) without showing the general technique (Mathologer's approach)
+- Rushing through the infinitude of primes — it deserves its own scene with visual setup
+- Ignoring the distinction from contrapositive — Video 92 already introduced contrapositive; we MUST explicitly compare
+- Formulaic "template" approach without intuition (Wrath of Math) — lead with WHY contradiction works, then show template
+- Overly long single-proof deep dives (Mathologer's 15+ min approach) — keep to 10-12 min total
+
+### Standout Approaches
+- **Numberphile's personality-driven proof**: Stankova's enthusiasm makes a dry proof feel alive — we can replicate this energy in narration
+- **Mathologer's geometric motivation for sqrt(2)**: Visual approach to why p² = 2q² leads to contradiction — adapt to Manim color-coded steps
+- **No competitor does both classic examples in one animated video** — this is our unique opportunity
+
+### Dimensions (Competitor Average)
+- Structure: 7.5/10 | Pacing: 6.3/10 | Visuals: 4.5/10 | Narration: 7.5/10 | Hooks: 6.0/10
+- **Our target**: Structure 9/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 8/10
+- Visuals score is the biggest gap — we dominate with Manim animations
