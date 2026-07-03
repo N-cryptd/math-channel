@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-02
 
-**Completed Videos (93 complete)**
+**Completed Videos (94 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -131,7 +131,7 @@
 
 
 ## In Progress
-- Proof-Based Mathematics (Videos 90+): Video 94 (Proof by Induction) next in queue.
+- Proof-Based Mathematics (Videos 90+): Video 95 (Proof by Cases) next in queue.
 
 ## Proof-Based Mathematics (Videos 90+)
 | # | Title | Script | Rendered |
@@ -140,3 +140,4 @@
 | 91 | Direct Proof | ✅ | ✅ |
 | 92 | Proof by Contrapositive | ✅ | ✅ |
 | 93 | Proof by Contradiction | ✅ | ✅ |
+| 94 | Proof by Induction | ✅ | ⏳ |

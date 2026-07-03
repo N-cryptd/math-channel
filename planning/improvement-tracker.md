@@ -126,6 +126,9 @@ Videos 90+ created with v2 templates from the start.
 |---|-------|-----------|----------|----------|-------------|-------|
 | 90 | Why Proofs? | 238 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(18), ly.clear(5), safe_place(9), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
 | 91 | Direct Proof | 398 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(17), ly.clear(11), safe_place(21), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
+| 92 | Contrapositive | 513 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(21), ly.clear(14), safe_place(20). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
+| 93 | Contradiction | 708 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(34), ly.clear(15), safe_place(25). Zero .shift()/.to_edge() for content. 4 .next_to() all diagram/VGroup assembly (⊥ below eq, label above box). — no improvement needed |
+| 94 | Induction | 741 | YES | YES (minor) | N/A | Fixed Scene 2: replaced .to_edge(LEFT/RIGHT) + .shift(UP) on two-column layout with ly.two_columns(). Remaining: 1 .shift() on domino diagram (line 67, acceptable), 5 .move_to() within card/VGroup assembly (acceptable). setup_bg(1), progressive_reveal(2), SANS(26), ly.clear(17), safe_place(15). Script not yet rendered — fix applies before first render. |
 
 ### Discrete Mathematics (Videos 79+) — NEW PIPELINE
 Videos 79+ created with v2 templates from the start.
@@ -153,7 +156,7 @@ Videos 79+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 91 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-86 were created with v2 standards or received targeted improvements. Videos 87-89 (Discrete Math) created with v2 and rendered. Videos 90-91 (Proof-Based Math) created with v2. No videos remain that need improvement work.
+All 94 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-86 were created with v2 standards or received targeted improvements. Videos 87-89 (Discrete Math) created with v2 and rendered. Videos 90-91 (Proof-Based Math) created with v2. Videos 92-94 (Contrapositive, Contradiction, Induction) analyzed — 92-93 v2-compliant, 94 received minor fix (two_columns in Scene 2). No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-01 (Added Videos 90-91 to tracker — Proof-Based Mathematics. Both v2-compliant, no improvement needed. All 91 videos analyzed, improvement cycle complete.)
+2026-07-03 (Added Videos 92-94 to tracker — Proof-Based Mathematics. Videos 92-93 v2-compliant. Video 94: fixed Scene 2 .to_edge()/.shift() → ly.two_columns(). All 94 videos analyzed, improvement cycle complete.)
