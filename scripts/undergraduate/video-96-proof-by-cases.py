@@ -366,11 +366,16 @@ class Video96_ProofByCases(Scene):
         split_label = Text("x = 1/2", font_size=SMALL_SIZE, color=ACCENT, font=SANS)
         split_label.next_to(split_dot, UP, buff=0.15)
 
-        # Color the zones
-        zone_right = line.copy().set_color(PRIMARY)
-        zone_right.get_pieces_by_x_values(0, 3).set_color(PRIMARY)
-        zone_right.get_pieces_by_x_values(-3, 0).set_opacity(0.2)
-        zone_right.set_opacity(0.3)
+        # Color the zones — use simple overlapping lines instead of get_pieces_by_x_values
+        zone_right = NumberLine(
+            x_range=[0, 3, 1], length=3,
+            color=PRIMARY, stroke_width=3,
+        ).move_to(line.n2p(1.5))
+        zone_left = NumberLine(
+            x_range=[-3, 0, 1], length=3,
+            color=RED, stroke_width=3,
+        ).move_to(line.n2p(-1.5))
+        zone_left.set_opacity(0.4)
 
         self.ly.safe_place(line, direction=DOWN, anchor=claim, buff=0.4)
         self.play(Create(line), run_time=NORMAL)

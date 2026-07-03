@@ -1,3 +1,130 @@
+### [2026-07-03] Existence and Uniqueness Proofs (Video 97)
+
+**Market Gap Analysis:** No high-production Manim-animated videos exist on this topic. All competitors use lecture/slide format. This is a significant opportunity for our channel — the first animated visual explanation of existence and uniqueness proofs.
+
+**Source 1: Kimberly Brehm — "Discrete Math - 1.8.2 Proofs of Existence And Uniqueness"**
+URL: https://www.youtube.com/watch?v=uNbt-ABKpj4
+Subscribers: 126K | Views: 95,111 | Date: Feb 2020 | Duration: 8:59 | Captions: True
+Thumbnail: Black background, white text (formal + handwritten font mix), clean high-contrast design
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 6/10 | Hooks 5/10
+
+Key Insights:
+- Covers both constructive and non-constructive existence proofs, plus uniqueness proofs in 9 minutes
+- Uses a slide-based format with handwritten annotations — functional but visually plain
+- Good chapter structure: Intro → Constructive Existence → Non-Constructive Existence → Uniqueness → Up Next
+- Works through textbook examples from Rosen's Discrete Mathematics (standard curriculum reference)
+- 95K views shows strong demand for this exact topic in discrete math context
+
+Techniques to Adopt:
+- Clear three-part structure (existence constructive → existence non-constructive → uniqueness) is pedagogically sound
+- Textbook-aligned examples give viewers immediate practical application
+
+Techniques to Avoid:
+- Slide format is static — we can animate the proof steps for much better comprehension
+- No visual distinction between existence and uniqueness concepts — we can use color coding
+
+**Source 2: Dr. Trefor Bazett — "The Big Theorem of Differential Equations: Existence & Uniqueness"**
+URL: https://www.youtube.com/watch?v=_WpncZ3RkTg
+Subscribers: 606K | Views: 322,595 | Date: Feb 2021 | Duration: 12:22 | Captions: True
+Thumbnail: Black background with white chalk-style "EXISTENCE" and "UNIQUENESS" text, presenter visible
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 8/10 | Hooks 8/10
+
+Key Insights:
+- Strong hook: "The Big Theorem" framing creates curiosity and importance
+- Excellent narrative arc: existence failing example → uniqueness failing example → formal theorem statement
+- Uses counterexamples to motivate why the theorem matters — very effective pedagogically
+- 322K views shows massive demand for existence/uniqueness content, even in ODE context
+- "Why do we even need this theorem?" framing before formal statement
+
+Techniques to Adopt:
+- Counterexample-first approach: show when existence/uniqueness FAILS before proving they hold
+- "Big Theorem" framing creates importance and anticipation
+- Clear visual examples of failure cases before formal statement
+
+Techniques to Avoid:
+- ODE-focused — our video is pure proof technique, not applied to a specific domain
+- Talking-head format won't work for our animated channel
+
+**Source 3: Center of Math — "Existence Proofs"**
+URL: https://www.youtube.com/watch?v=c2NvvvI3yjw
+Subscribers: 46.7K | Views: 14,451 | Date: Dec 2016 | Duration: 6:36 | Captions: True
+Thumbnail: Presenter standing in front of blackboard with "Non-Constructive" and "Constructive" written
+Dimensions: Structure 5/10 | Pacing 5/10 | Visuals 3/10 | Narration 5/10 | Hooks 3/10
+
+Key Insights:
+- Very short at 6:36 — covers only existence proofs (no uniqueness)
+- Constructs examples on a physical blackboard — interactive but low production quality
+- "Ben discusses" format is conversational but lacks visual structure
+- Distinguishes constructive vs non-constructive with separate examples
+
+Techniques to Adopt:
+- Keeping examples concrete and specific rather than abstract
+- Explicitly labeling proof types as "constructive" vs "non-constructive" with visual distinction
+
+Techniques to Avoid:
+- Too short to cover both existence AND uniqueness — our video needs the full scope
+- Blackboard-only format with no visual aids beyond handwriting
+
+**Source 4: Learn with Sreyas — "Existence Proof : Constructive & Non-Constructive | Explained with Examples"**
+URL: https://www.youtube.com/watch?v=AnYBMq5BfVk
+Subscribers: 1.94K | Views: 7,157 | Date: May 2021 | Duration: 5:50 | Captions: True
+Thumbnail: White background, black text, red border — simple text-only design, bold sans-serif "EXISTENCE PROOF"
+Dimensions: Structure 5/10 | Pacing 6/10 | Visuals 3/10 | Narration 5/10 | Hooks 4/10
+
+Key Insights:
+- Very focused at 5:50 — existence proofs only, cleanly separates constructive and non-constructive
+- Simple slide-based presentation with example proofs worked through
+- Clean thumbnail design (text-only, high contrast) — readable at small sizes
+
+Techniques to Adopt:
+- Clean text hierarchy in examples — separate the proof type label from the proof content
+
+Techniques to Avoid:
+- Text-only thumbnail with no visual hook — we should include a mathematical visual element
+
+**Source 5: David Covert — "Proof of Existence (Constructive and Nonconstructive)"**
+URL: https://www.youtube.com/watch?v=NhgpJBSk79o
+Subscribers: 1.27K | Views: 4,591 | Date: Oct 2020 | Duration: 3:14 | Captions: True
+Dimensions: Structure 4/10 | Pacing 4/10 | Visuals 2/10 | Narration 5/10 | Hooks 3/10
+
+Key Insights:
+- Ultra-short at 3:14 — barely scratches the surface
+- Covers only existence, not uniqueness
+- Very basic slide format
+
+Techniques to Adopt:
+- Nothing specific to adopt from this source
+
+### Synthesis: Opportunities for Video 97
+
+**Competitive Landscape:**
+- ALL existing content is lecture/slide-based — NO animated visual explanations exist
+- Kimberly Brehm dominates with 95K views for the discrete math treatment
+- Combined audience across all videos: 500K+ views — clear demand
+- No video combines high-quality animation with clear proof technique exposition
+
+**Our Unique Position:**
+- First Manim-animated visual explanation of existence and uniqueness proofs
+- Animated proof steps will show the LOGIC FLOW (highlight assumptions, show derivation path, mark conclusion)
+- Color-code existence vs uniqueness throughout the video
+- Use geometric/visual metaphors (e.g., existence = finding a point in a space; uniqueness = only one point satisfies)
+
+**Recommended Video Structure:**
+1. Hook: "Some things exist but are hard to find. Some things are guaranteed to be one-of-a-kind. How do we PROVE that?" — inspired by Trefor's "Big Theorem" framing
+2. What is an existence proof? — define with visual metaphor (searching a space)
+3. Constructive existence — animate finding the actual solution step by step (color: PRIMARY blue)
+4. Non-constructive existence — show proving something exists without finding it (color: ACCENT yellow) — contrast with constructive
+5. What is a uniqueness proof? — define with visual metaphor (narrowing down to single point)
+6. Uniqueness proof technique — assume two solutions, show they're equal (color: SECONDARY green)
+7. Combined existence + uniqueness example — full proof with both parts
+8. Common pitfalls and proof-writing tips — visual checklist
+
+**Visual Techniques:**
+- Use PRIMARY blue for existence proofs, SECONDARY green for uniqueness proofs, ACCENT yellow for the "found it!" moments
+- Animate proof structure: box for assumptions, arrow for implications, star for conclusion
+- Show a "search space" visualization for non-constructive proofs (dark space with a hidden star)
+- Progressive reveal of proof steps (our standard quality practice)
+
 ### [2026-06-25] Graph Theory Basics (Video 86)
 
 **Source 1: Reducible — "Graph Theory Basics"**  
