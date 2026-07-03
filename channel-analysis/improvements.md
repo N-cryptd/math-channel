@@ -351,3 +351,101 @@ Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks
 - Structure: 7.5/10 | Pacing: 6.3/10 | Visuals: 4.5/10 | Narration: 7.5/10 | Hooks: 6.0/10
 - **Our target**: Structure 9/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 8/10
 - Visuals score is the biggest gap — we dominate with Manim animations
+
+### [2026-07-03] Strong Induction (Video 95)
+
+**Source 1: Dr. Trefor Bazett — "Strong Induction // Intro and Full Example"**
+URL: https://www.youtube.com/watch?v=rfA0h9udl7E
+Subscribers: 606K | Views: 307K | Date: Jun 2017 | Captions: True
+Thumbnail: Black background, white "Strong Induction" title, yellow recurrence relation formula. Clean and focused.
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 8/10 | Hooks 6/10
+
+**Source 2: Dr. Valerie Hower — "Proof by Strong Induction (full lecture)"**
+URL: https://www.youtube.com/watch?v=USOsVbEbOIg
+Subscribers: 9.4K | Views: 58K | Date: Nov 2020 | Captions: True
+Thumbnail: Whiteboard with black/red writing, traditional lecture style.
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 3/10
+
+**Source 3: Numberphile — "The Magic of Induction"**
+URL: https://www.youtube.com/watch?v=DhZORrqL3xI
+Subscribers: 4.76M | Views: 206K | Date: Nov 2024 | Captions: True
+Thumbnail: Blue/purple gradient, bold yellow "INDUCTION" text, domino visual metaphor. Very engaging.
+Dimensions: Structure 7/10 | Pacing 8/10 | Visuals 7/10 | Narration 9/10 | Hooks 9/10
+
+### Key Insights
+- Trefor Bazett's approach: Clean explanation with recurrence relation example, good visual clarity, well-paced. His example of "every integer ≥ 2 is a product of primes" is excellent for showing when strong induction is needed.
+- Hower's approach: Traditional lecture format, whiteboard-heavy, slow-paced. Not competitive visually.
+- Numberphile's approach: Storytelling-driven, uses domino metaphor beautifully, engaging presenter. Focuses on the "magic" of induction — the philosophical beauty of proving infinitely many things in finite steps. Doesn't distinguish weak vs strong induction.
+- Common weakness: None of the competitors clearly visualize the KEY difference between weak and strong induction — the inductive hypothesis scope (P(k) alone vs P(1)∧P(2)∧...∧P(k)).
+- Missing: Visual comparison of weak vs strong induction hypothesis range (single step vs. full staircase foundation).
+- Missing: The classic "coin denomination" or "stamping problem" as an intuitive strong induction example.
+- Missing: Animated visualization showing how strong induction builds on ALL previous cases, not just the immediately preceding one.
+
+### Techniques to Adopt
+- **Visual metaphor**: Numberphile's domino chain is excellent — we'll adapt it to show a staircase where each step needs ALL previous steps to be solid (not just the one below).
+- **Recurrence relation example**: Trefor's Fibonacci example shows why strong induction is necessary — adopt this with animated Fibonacci sequence visualization.
+- **Clear comparison structure**: Side-by-side weak vs strong induction, showing the hypothesis scope visually as highlighted ranges.
+- **Color coding**: Green for base cases, blue for weak hypothesis (single), red/orange for strong hypothesis (full range), yellow for conclusion.
+- **The "Aha" moment**: Show that weak induction FAILS for Fibonacci because each term depends on TWO previous terms, making the single-step assumption insufficient.
+
+### Techniques to Avoid
+- Pure whiteboard/lecture format (Hower style) — no animation, low engagement
+- Overly philosophical framing without concrete examples (Numberphile style doesn't teach the technique)
+- Rushing through the formal statement without visual annotation
+- Not clearly showing WHY strong induction is sometimes necessary (the key pedagogical point)
+
+### Our Unique Visual Contribution
+- **Staircase animation**: Show a staircase where each step (weak induction) only needs the step below, vs. an arch/bridge where each segment needs ALL previous segments to be solid (strong induction).
+- **Fibonacci growth visualization**: Animated growing sequence with arrows showing dependencies (f_n depends on f_{n-1} AND f_{n-2}).
+- **Hypothesis scope diagram**: Horizontal number line with highlighted ranges showing P(k) only vs. P(1) through P(k).
+
+---
+
+## 2026-07-03 — Proof by Cases (Video 96)
+
+**Source 1: Kimberly Brehm — "Discrete Math - 1.8.1 Proof by Cases"**
+URL: https://www.youtube.com/watch?v=dheuJkuSNyI
+Subscribers: 126K | Views: 146K | Date: Feb 2020 | Captions: True
+Duration: ~18 min | 3 examples (basic, implication, challenging)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 6/10 | Hooks 4/10
+
+**Source 2: Dr. Trefor Bazett — "Proof by Division Into Cases"**
+URL: https://www.youtube.com/watch?v=2A-EaY78bwc
+Subscribers: 606K | Views: 40K | Date: Jun 2017 | Captions: True
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+**Source 3: TrevTutor — "[Discrete Mathematics] Proof by Cases Examples"**
+URL: https://www.youtube.com/watch?v=QjvQQMaoKyQ
+Subscribers: 328K | Views: 89K | Date: May 2016 | Captions: True
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 2/10 | Narration 5/10 | Hooks 3/10
+
+### Key Insights
+- All three competitors use a lecture-style approach with handwritten/digital whiteboard — no Manim animations
+- Kimberly Brehm has the most structured approach (chapter markers, 3 progressive examples), but the video is too long (18 min) with slow pacing
+- Trefor Bazett focuses on the logical structure: (P v Q) => R means prove (P=>R) and (Q=>R) — clean theoretical framing but lacks visual intuition
+- TrevTutor jumps straight into examples without explaining WHY proof by cases is useful or when to use it
+- None of the competitors provide a visual/metaphorical introduction to the concept — they go straight to definitions
+- Kimberly Brehm's "challenging example" (inequality with |x|) is a good difficulty ramp but the explanation is too fast
+- No competitor shows the connection to case splitting in computer science (if/else branching as the computational analog)
+- Missing: visual diagram showing the case-split tree or decision flowchart
+
+### Techniques to Adopt
+- **Progressive example difficulty**: Follow Kimberly Brehm's approach of 3 examples (easy → medium → challenging) but compress into a 10-min video
+- **Logical structure clarity**: Adopt Trefor Bazett's clean framing of (P v Q) => R as the formal basis
+- **Motivational hook**: Start with a puzzle that naturally requires case analysis before introducing the formal technique (competitors skip this entirely)
+- **Visual case-split diagram**: Show a flowchart/tree where the hypothesis splits into cases, each leading to the same conclusion — competitors have no visual representation of this structure
+- **Real-world connection**: Connect proof by cases to if/else branching in programming — a natural bridge for the target audience
+
+### Techniques to Avoid
+- Whiteboard-only approach without animations (all competitors)
+- Starting with definitions before motivation (TrevTutor)
+- 18+ minute videos for a topic the curriculum maps to 10 min (Kimberly Brehm)
+- Jumping between cases too fast without visually distinguishing them (all competitors use same writing style for all cases)
+- No visual differentiation between cases — all competitors write them as sequential text without color-coding
+
+### Our Unique Visual Contribution
+- **Decision tree animation**: Show the hypothesis branching into mutually exclusive cases with color-coded paths that all converge on the conclusion
+- **Is the number even or odd? puzzle**: Start with a real puzzle that requires case analysis to hook viewers
+- **Color-coded cases**: Use PRIMARY, SECONDARY, ACCENT to visually distinguish different cases so viewers can track which case is being proven
+- **min/max proof visualization**: Animate how |x| splits into x>=0 and x<0 cases with the number line showing the split point
+

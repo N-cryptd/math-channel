@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-07-02
+**Last updated:** 2026-07-03
 
-**Completed Videos (94 complete)**
+**Completed Videos (95 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -131,7 +131,7 @@
 
 
 ## In Progress
-- Proof-Based Mathematics (Videos 90+): Video 95 (Proof by Cases) next in queue.
+- Proof-Based Mathematics (Videos 90+): Video 96 (Proof by Cases) next in queue.
 
 ## Proof-Based Mathematics (Videos 90+)
 | # | Title | Script | Rendered |
@@ -140,4 +140,6 @@
 | 91 | Direct Proof | ✅ | ✅ |
 | 92 | Proof by Contrapositive | ✅ | ✅ |
 | 93 | Proof by Contradiction | ✅ | ✅ |
-| 94 | Proof by Induction | ✅ | ⏳ |
+| 94 | Proof by Induction | ✅ | ✅ |
+| 95 | Strong Induction | ✅ | ✅ |
+| 96 | Proof by Cases | ✅ | ⏳ |

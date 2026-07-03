@@ -382,7 +382,7 @@ class Video94_ProofByInduction(Scene):
         # Label: "10 dots = 4(5)/2"
         label_sum = MathTex(
             r"1+2+3+4 = 10 = \frac{4 \cdot 5}{2}",
-            font_size=LABEL_SIZE, color=ACCENT, font=SANS,
+            font_size=LABEL_SIZE, color=ACCENT,
         )
         self.ly.safe_place(label_sum, direction=DOWN, anchor=dot_groups, buff=0.5)
         self.play(Write(label_sum), run_time=NORMAL)
