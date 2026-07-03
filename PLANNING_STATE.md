@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-03
 
-**Completed Videos (96 complete)**
+**Completed Videos (97 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -131,7 +131,7 @@
 
 
 ## In Progress
-- Proof-Based Mathematics (Videos 90+): Video 97 (Existence and Uniqueness Proofs) next in queue.
+- Proof-Based Mathematics (Videos 90+): Video 98 (Proof Writing Style) next in queue.
 
 ## Proof-Based Mathematics (Videos 90+)
 | # | Title | Script | Rendered |
@@ -143,3 +143,4 @@
 | 94 | Proof by Induction | ✅ | ✅ |
 | 95 | Strong Induction | ✅ | ✅ |
 | 96 | Proof by Cases | ✅ | ✅ |
+| 97 | Existence and Uniqueness | ✅ | ✅ |
