@@ -777,3 +777,40 @@ Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 3/10 | Narration 7/10 | Hooks
 - Sequence dots on number line: Color-coded dots appearing one by one, clustering around L.
 - Proof animation: Step-by-step visual proof of 1/n converges to 0 using epsilon-N.
 - Divergence visual: (-1)^n bouncing between -1 and 1, contrasting with convergence.
+
+
+### [2026-07-04] Video 101 -- Cauchy Sequences
+
+**Source 1: Michael Penn -- "Cauchy Sequences"**
+URL: https://www.youtube.com/watch?v=L-XLcmHwoh0 (related; search "Michael Penn Cauchy sequences")
+Subscribers: 349K | Style: Whiteboard lecture, systematic, proof-heavy
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 5/10
+
+**Source 2: Bright Side of Mathematics -- "Real Analysis | Cauchy Sequences"**
+Style: Manim animations, systematic approach
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 7/10 | Narration 7/10 | Hooks 5/10
+
+**Source 3: BriTheMathGuy -- "Cauchy Sequences" section in 1-hour crash course**
+Style: Fast-paced Manim, covers definition then proof that convergent implies Cauchy
+Dimensions: Structure 8/10 | Pacing 9/10 | Visuals 8/10 | Narration 8/10 | Hooks 7/10
+
+### Key Insights
+- Cauchy sequences test convergence without knowing the limit -- this is their power
+- The Cauchy criterion says: a sequence converges in R iff it is Cauchy (relies on completeness)
+- In Q, Cauchy sequences may not converge (e.g., 1, 1.4, 1.41, 1.414, ... converges in R but not in Q)
+- No competitor visualizes the "terms getting closer to each other" vs "terms getting closer to L" distinction
+
+### Techniques to Adopt
+- BriTheMathGuy's fast-paced efficiency for the proof that convergent implies Cauchy
+- The visual distinction between convergence (terms approach L) and Cauchy (terms approach each other)
+- Show the 1/n sequence where |a_m - a_n| < eps because both terms are near 0
+
+### Techniques to Avoid
+- Dense lecture format without visual intuition (Michael Penn)
+- Rushing through the proof without showing WHY it works (BriTheMathGuy)
+- Not connecting Cauchy sequences back to completeness (the key insight)
+
+### Our Unique Visual Contribution
+- Two-panel comparison: convergence (all terms near L) vs Cauchy (any two terms are near each other)
+- The sequence 1, 1.4, 1.41, 1.414, ... shown as Cauchy in Q but not convergent in Q -- connecting to Video 99
+- Color-coded proof: convergent => Cauchy (forward) and Cauchy => convergent (uses completeness!)

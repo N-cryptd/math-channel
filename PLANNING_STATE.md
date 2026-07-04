@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-04
 
-**Completed Videos (100 complete)**
+**Completed Videos (101 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -132,7 +132,7 @@
 
 
 ## In Progress
-- Real Analysis I (Videos 99-110): Videos 99-100 complete. Next: Video 101 (Cauchy Sequences).
+- Real Analysis I (Videos 99-110): Videos 99-101 complete (scripts). Next: Video 102 (Limits of Functions).
 
 ## Proof-Based Mathematics (Videos 90+)
 | # | Title | Script | Rendered |
@@ -152,7 +152,7 @@
 |---|-------|--------|----------|
 | 99 | The Real Numbers (Completeness) | ✅ | ✅ |
 | 100 | Sequences and Convergence | ✅ | ✅ |
-| 101 | Cauchy Sequences | | |
+| 101 | Cauchy Sequences | ✅ | ✅ |
 | 102 | Limits of Functions | | |
 | 103 | Continuity (epsilon-delta) | | |
 | 104 | Uniform Continuity | | |
