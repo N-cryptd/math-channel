@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-07-03
+**Last updated:** 2026-07-04
 
-**Completed Videos (97 complete)**
+**Completed Videos (99 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -127,11 +127,12 @@
 - Calculus III (Videos 41–54): COMPLETE (14 videos)
 - Probability & Statistics (Videos 67–78): COMPLETE (12 videos)
 - Discrete Mathematics (Videos 79–89): COMPLETE (11 videos)
+- Proof-Based Mathematics (Videos 90–98): COMPLETE (9 videos)
 
 
 
 ## In Progress
-- Proof-Based Mathematics (Videos 90+): Video 98 (Proof Writing Style) next in queue.
+- Real Analysis I (Videos 99–110): Video 99 complete. Next: Video 100 (Sequences and Convergence).
 
 ## Proof-Based Mathematics (Videos 90+)
 | # | Title | Script | Rendered |
@@ -144,3 +145,20 @@
 | 95 | Strong Induction | ✅ | ✅ |
 | 96 | Proof by Cases | ✅ | ✅ |
 | 97 | Existence and Uniqueness | ✅ | ✅ |
+| 98 | Proof Writing Style | ✅ | ✅ |
+
+### Real Analysis I (Videos 99–110)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 99 | The Real Numbers (Completeness) | ✅ | ✅ |
+| 100 | Sequences and Convergence | | |
+| 101 | Cauchy Sequences | | |
+| 102 | Limits of Functions | | |
+| 103 | Continuity (epsilon-delta) | | |
+| 104 | Uniform Continuity | | |
+| 105 | The Derivative (Rigorous) | | |
+| 106 | Mean Value Theorem (Proof) | | |
+| 107 | The Riemann Integral | | |
+| 108 | Fundamental Theorem of Calculus (Proof) | | |
+| 109 | Pointwise vs Uniform Convergence | | |
+| 110 | Series of Functions | | |

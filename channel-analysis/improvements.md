@@ -576,3 +576,109 @@ Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 2/10 | Narration 5/10 | Hooks
 - **Color-coded cases**: Use PRIMARY, SECONDARY, ACCENT to visually distinguish different cases so viewers can track which case is being proven
 - **min/max proof visualization**: Animate how |x| splits into x>=0 and x<0 cases with the number line showing the split point
 
+
+### [2026-07-03] Proof Writing Style (Video 98)
+
+**Source 1: Dr. Trefor Bazett — "9 tips to help you PROVE MATH THEOREMS"**
+URL: https://www.youtube.com/watch?v=-6b-tQEBUT8
+Subscribers: 606K | Views: 161K | Date: Jul 2020 | Captions: True
+Thumbnail: Person in plaid shirt pointing at table with text boxes explaining proof methods. Clean, professional, high quality.
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 8/10 | Hooks 7/10
+
+**Source 2: The Math Sorcerer — "Mathematical Proof Writing"**
+URL: https://www.youtube.com/watch?v=vdMsuZ-8DWU
+Subscribers: 1.36M | Views: 96K | Date: Sep 2023 | Captions: True
+Thumbnail: Person with curly hair in front of bookshelf, "MASTER MATH PROOFS" in bold blue/white. High quality, personal branding.
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 5/10
+
+**Source 3: The Math Sorcerer — "Advice For Writing Math Proofs"**
+URL: https://www.youtube.com/watch?v=aEaOo7X4PmE
+Subscribers: 1.36M | Views: 13K | Date: Oct 2022 | Captions: True
+Thumbnail: Simple text-focused, bookish style.
+Dimensions: Structure 5/10 | Pacing 5/10 | Visuals 2/10 | Narration 6/10 | Hooks 4/10
+
+**Source 4: Graphicode — "All of MATHEMATICAL PROOFS explained in 11 Minutes"**
+URL: https://www.youtube.com/watch?v=e1j2-2Ax65M
+Subscribers: 3K | Views: 30K | Date: Apr 2025 | Captions: True
+Thumbnail: Dark blue background, "PROVE ANYTHING" in glowing white, math symbols and visual elements (Venn diagram, number line). Modern, polished.
+Dimensions: Structure 7/10 | Pacing 9/10 | Visuals 7/10 | Narration 7/10 | Hooks 8/10
+
+### Key Insights
+- Trefor Bazett's approach: Best structured — 9 concrete tips with logical progression: logical structure → proof methods → write definitions → aim for conclusion → understand claim → geometric picture → concrete example → relevant theorems → play around. Great template concept (assumptions → definitions → manipulations → conclusion). Weakness: no visual animation, just talking head + text boxes.
+- Math Sorcerer's approach: Book recommendations + general advice, conversational tone. Lacks visual demonstration of actual proof writing. Weak structure — no template or framework.
+- Graphicode's approach: Rapid-fire overview, very fast pacing, covers all proof types in 11 minutes. Good engagement hooks and visual style but too surface-level for actual proof writing guidance. Not about "style" — more about "types."
+- Common weakness: No competitor focuses specifically on PROOF WRITING STYLE — the conventions, structure, language, and formatting of a well-written mathematical proof. They cover proof types or tips but not the craft of writing clearly.
+- Missing: Side-by-side comparison of a bad proof vs a good proof (same argument, different presentation).
+- Missing: Visual walkthrough of proof structure (Claim → Proof: → Let → Then → Therefore → QED).
+- Missing: Common notation conventions and when to use formal vs informal language.
+
+### Techniques to Adopt
+- **Trefor Bazett's template framework**: Assumptions → Definitions → Manipulations → Conclusion — adapt this as a visual proof skeleton.
+- **Graphicode's visual style**: Dark backgrounds with glowing text, modern feel — our Manim palette already does this.
+- **Concrete before/after examples**: Show a "messy" proof rewritten into a clean proof — this is the most powerful teaching technique.
+- **Numbered proof structure**: Visual proof skeleton that appears step by step.
+
+### Techniques to Avoid
+- Pure talking head without visual demonstrations (Math Sorcerer)
+- Covering proof TYPES instead of proof STYLE (Graphicode's approach is a recap, not about writing quality)
+- Book recommendations instead of teaching (Math Sorcerer's longer video)
+- Rushing through tips without concrete proof examples
+
+### Our Unique Visual Contribution
+- **Bad proof → Good proof transformation**: Animate rewriting a messy proof into a polished one, showing each improvement.
+- **Proof skeleton template**: Animated structural diagram showing the standard parts of a well-written proof.
+- **Notation convention cards**: Quick-reference visual cards for common symbols and phrases.
+- **Playlist recap montage**: Since this is the final video, a visual timeline of all 9 proof techniques we covered.
+
+### [2026-07-04] Video 99 — The Real Numbers (Completeness)
+
+**Source 1: Michael Penn — "Real Analysis | The Supremum and Completeness of ℝ"**
+URL: https://www.youtube.com/watch?v=L-XLcmHwoh0
+Subscribers: 349K | Views: 211K | Date: May 2020 | Captions: True
+Thumbnail: Dark blue background, white text, number line with dots. High quality, clean.
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 8/10 | Hooks 6/10
+
+**Source 2: Jan-Fredrik Olsen — "The Completeness axiom and a proof by contradiction"**
+URL: https://www.youtube.com/watch?v=5K0hwpmfCP0
+Subscribers: 595 | Views: 18.8K | Date: Aug 2020 | Captions: True
+Thumbnail: Whiteboard with handwritten math, blue ink, number line diagrams. Professional lecture style.
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 4/10
+
+**Source 3: Bill Kinney — "The AXIOM That Makes CALCULUS Possible"**
+URL: https://www.youtube.com/watch?v=6s0EJo1DSqc
+Subscribers: 38.7K | Views: 593 | Date: Aug 2025 | Captions: True
+Thumbnail: White background, playful multicolored font, no math visuals. Low quality (2/10).
+Dimensions: Structure 7/10 | Pacing 8/10 | Visuals 3/10 | Narration 8/10 | Hooks 9/10
+
+**Source 4: Bari Science Lab — "Lec 1: Real Analysis | Infimum and Supremum | Hunter College"**
+URL: https://www.youtube.com/watch?v=3Hjcj_i0g3M
+Subscribers: 1.42M | Views: 7.7K | Date: May 2024 | Captions: True
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 4/10
+
+### Key Insights
+- Michael Penn's video is the gold standard: 211K views, clear lecture style, covers upper/lower bounds, least upper bounds, classification lemma, and completeness axiom in one coherent lecture. Starts from definitions and builds systematically.
+- Jan-Fredrik Olsen takes a proof-first approach: states completeness axiom, then immediately proves a supremum example by contradiction. Good for students who already know definitions.
+- Bill Kinney has the best hook: "The AXIOM That Makes CALCULUS Possible" — connects completeness to why calculus works. Explains why rationals fail (no cube root of 10) and why reals succeed. Very engaging motivational framing.
+- All competitors use lecture/whiteboard style — no Manim animations, no visual proofs of why Q is incomplete.
+- Common weakness: No visual demonstration of the "holes" in the rational number line — they describe it verbally but never show it.
+- Missing: Visual proof that sqrt(2) is not rational (classic cut in Q example).
+- Missing: Animated number line showing how Q has gaps and R fills them.
+
+### Techniques to Adopt
+- **Bill Kinney's hook**: Start with "What makes calculus possible?" — the completeness axiom as the hidden foundation. This connects to the audience's existing calculus knowledge.
+- **Michael Penn's systematic structure**: Definitions (upper bound, least upper bound) → Properties (classification lemma) → Completeness axiom → Application. But compress from 20 min to 15 min.
+- **Visual Q vs R comparison**: Show Q as a number line with visible gaps (animated dots with gaps) vs R as continuous (no gaps). None of the competitors do this visually.
+- **sqrt(2) proof visualization**: Animate the classic proof that sqrt(2) is irrational, showing the "hole" it creates in Q.
+
+### Techniques to Avoid
+- Whiteboard/lecture-only approach (all competitors)
+- Jumping into proofs before explaining WHY completeness matters (Olsen)
+- 20+ minute lecture format (Michael Penn)
+- Low-quality thumbnails with no math visuals (Bill Kinney)
+- Starting with abstract definitions before motivation
+
+### Our Unique Visual Contribution
+- **Number line comparison animation**: Animated Q number line with visible "holes" where irrationals should be, then R number line filled in — this is the core visual metaphor that NO competitor provides
+- **Color-coded bound visualization**: Show a set on a number line, then animate upper bounds (above, in red), then show them shrinking down to the supremum (highlighted in PRIMARY)
+- **sqrt(2) as the "missing piece"**: Visual proof that sqrt(2) is irrational, showing the Dedekind cut it creates in Q
+- **Completeness as the "no holes" guarantee**: Visually show that ANY bounded-above set of reals has a supremum (the number line is always complete)
