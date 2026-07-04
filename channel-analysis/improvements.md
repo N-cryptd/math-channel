@@ -682,3 +682,98 @@ Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks
 - **Color-coded bound visualization**: Show a set on a number line, then animate upper bounds (above, in red), then show them shrinking down to the supremum (highlighted in PRIMARY)
 - **sqrt(2) as the "missing piece"**: Visual proof that sqrt(2) is irrational, showing the Dedekind cut it creates in Q
 - **Completeness as the "no holes" guarantee**: Visually show that ANY bounded-above set of reals has a supremum (the number line is always complete)
+
+
+### [2026-07-04] Video 100 -- Sequences and Convergence
+
+**Source 1: The Bright Side of Mathematics -- "Real Analysis 2 | Sequences and Limits"**
+URL: https://www.youtube.com/watch?v=1SguKALJji8
+Subscribers: 233K | Views: 209K | Date: Mar 2021 | Captions: True
+Thumbnail: Yellow background, blue rectangle, handwritten font, sequence of circles. Quality 7/10.
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+
+**Source 2: BriTheMathGuy -- "Learn Real Analysis In 1 Hour"**
+URL: https://www.youtube.com/watch?v=5X4pmmFWwKQ
+Subscribers: 399K | Views: 16.5K | Date: Jan 2026 | Captions: True
+Thumbnail: Chalkboard background, scholarly atmosphere. High quality.
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 8/10 | Narration 8/10 | Hooks 9/10
+
+**Source 3: blackpenredpen -- "epsilon-N definition for a limit at infinity"**
+URL: https://www.youtube.com/watch?v=9JMFLzHtljA
+Subscribers: 1.43M | Views: 115K | Date: Aug 2023 | Captions: True
+Thumbnail: White background, black/red text, clean. High quality.
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 7/10 | Narration 8/10 | Hooks 6/10
+
+### Key Insights
+- BriTheMathGuy's crash course covers sequences, epsilon-N, boundedness, Squeeze theorem, Monotonic Convergence, subsequences, Bolzano-Weierstrass, Cauchy sequences -- all in one Manim video. Very high production quality.
+- Bright Side has the most views (210K): systematic approach -- definition of sequence then examples then convergence definition then proofs.
+- blackpenredpen focuses on epsilon-N with a "given, choose, suppose, check" proof framework. Very practical.
+- No competitor animates the epsilon-N definition visually with a funnel/target zone. They all describe it verbally.
+
+### Techniques to Adopt
+- BriTheMathGuy's motivational intro connecting sequences to why Real Analysis matters
+- Bright Side's systematic flow: Definition then Examples then Convergence then Proofs
+- blackpenredpen's proof framework: Given epsilon, choose N, suppose n>N, verify
+
+### Techniques to Avoid
+- 1-hour video format (too dense)
+- Starting with examples before defining what a sequence IS
+- Jumping into epsilon-N proofs without visual intuition first
+
+### Our Unique Visual Contribution
+- Epsilon-N funnel animation: show target zone narrowing and sequence converging into it
+- Sequence as a graph: dots at (n, a_n) approaching horizontal asymptote L
+- Color-coded 4-step proof template: Given (PRIMARY) then Choose (SECONDARY) then Suppose (ACCENT) then Verify (WHITE)
+
+### [2026-07-04] Video 100 -- Sequences and Convergence (Real Analysis I)
+
+**Source 1: Michael Penn -- Real Analysis | Sequences and the epsilon-N definition of convergence**
+URL: https://www.youtube.com/watch?v=RFsQHVFLxVQ
+Subscribers: 349K | Views: 53,679 | Date: Jun 2020 | Duration: 8:01 | Captions: True
+Thumbnail: Dark purple background with large EN-to-L notation, arrow showing convergence. High quality.
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 8/10 | Hooks 5/10
+
+**Source 2: Wrath of Math -- Definition of the Limit of a Sequence | Real Analysis**
+URL: https://www.youtube.com/watch?v=cTnlHZD5ss4
+Subscribers: 406K | Views: 241,385 | Date: Jul 2020 | Duration: 13:59 | Captions: True
+Thumbnail: White background with definition text, purple limit notation. Text-heavy, no visual hook.
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+**Source 3: Infinium -- Sequences and Convergence (Real Analysis)**
+URL: https://www.youtube.com/watch?v=qQPNoq-G0e0
+Subscribers: 2.09K | Views: 12,934 | Date: Jul 2022 | Duration: 6:39 | Captions: True
+Thumbnail: Black background with colored dots in a line pattern. Good visual metaphor.
+Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 7/10 | Narration 6/10 | Hooks 6/10
+
+**Source 4: Wrath of Math -- Proof: Sequence (3n+1)/(n+2) Converges to 3**
+URL: https://www.youtube.com/watch?v=lUQOAJSGLyc
+Subscribers: 406K | Views: 54,048 | Date: Jan 2023 | Duration: 6:53 | Captions: True
+Thumbnail: White background with limit expression, blue highlights. Clean and formula-focused.
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+### Key Insights
+- Michael Penn (53K views): Most systematic -- defines sequences, introduces epsilon-N definition, works through examples. Starts with notation, builds to formal definition. Good pacing at 8 min. Weakness: lecture-only, no visual animation.
+- Wrath of Math (241K views): Highest views -- covers definition + proof in one video. Lecture style with whiteboard notes. Very thorough on the definition but visually static.
+- Infinium (12K views): Best structure for beginners -- 4 sections: Sequences Recap, Visualization of Convergence, Formal Definition, Example. Uses colored dots converging visually. Short (6:39) and well-paced.
+- ALL competitors use lecture/whiteboard or static text style -- NO ONE uses Manim animations to visualize the epsilon-N definition dynamically.
+- Common weakness: No visual demonstration of what epsilon and N look like on a number line.
+- Missing: Animated number line showing terms clustering around the limit with an epsilon-band shrinking.
+- Missing: Visual proof of epsilon-N definition showing the tail of a sequence inside the epsilon-neighborhood.
+
+### Techniques to Adopt
+- Infinium 4-part structure: Sequences recap, Visualization, Formal definition, Example.
+- Infinium visual approach: Colored dots converging on a line -- superior with Manim animation.
+- Michael Penn systematic coverage: Define object, state epsilon-N definition, prove basic example, state convergence rules.
+- Visual epsilon-band: Animate shrinking epsilon-band around limit on number line with sequence terms landing inside.
+
+### Techniques to Avoid
+- Pure lecture without visual animation (all competitors)
+- Starting with formal epsilon-N definition before building intuition (Michael Penn)
+- Whiteboard-only presentation (Wrath of Math)
+- Very short 6-minute format that cannot cover enough depth (Infinium)
+
+### Our Unique Visual Contribution
+- Animated epsilon-band: Manim number line with sequence terms, shrinking epsilon-neighborhood, point N beyond which all terms fall inside.
+- Sequence dots on number line: Color-coded dots appearing one by one, clustering around L.
+- Proof animation: Step-by-step visual proof of 1/n converges to 0 using epsilon-N.
+- Divergence visual: (-1)^n bouncing between -1 and 1, contrasting with convergence.
