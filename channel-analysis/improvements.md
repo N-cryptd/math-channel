@@ -814,3 +814,140 @@ Dimensions: Structure 8/10 | Pacing 9/10 | Visuals 8/10 | Narration 8/10 | Hooks
 - Two-panel comparison: convergence (all terms near L) vs Cauchy (any two terms are near each other)
 - The sequence 1, 1.4, 1.41, 1.414, ... shown as Cauchy in Q but not convergent in Q -- connecting to Video 99
 - Color-coded proof: convergent => Cauchy (forward) and Cauchy => convergent (uses completeness!)
+
+
+### [2026-07-04] Video 102 -- Limits of Functions (Epsilon-Delta)
+
+**Market Gap Analysis:** This is one of the most searched real analysis topics. The epsilon-delta definition of a limit is notoriously difficult for students. There is high demand -- Dr. Trefor Bazett's intro limits video has 600K+ views, and epsilon-delta videos routinely get 50K-500K views. Most content is calculus-focused, not rigorous real analysis. Our video targets the gap: rigorous epsilon-delta from first principles with Manim animation.
+
+**Source 1: Michael Penn -- "Real Analysis | Precise definition of a limit."**
+URL: https://www.youtube.com/watch?v=PzsWhDlTcqY
+Style: Whiteboard lecture, systematic, proof-heavy (349K subs)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 5/10
+
+Key Insights:
+- Covers the formal epsilon-delta definition and works through examples
+- Systematic approach: define, explain each part, then prove
+- Uses whiteboard only -- no visual animation of the epsilon-delta concept
+- Good for students who already have some intuition
+- Weakness: No visual representation of the delta-tube around x = a
+
+**Source 2: Michael Penn -- "Real Analysis | Sequential limits in functions."**
+URL: https://www.youtube.com/watch?v=aVeKuMPFv8s
+Style: Whiteboard lecture (349K subs)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 4/10 | Narration 7/10 | Hooks 4/10
+
+Key Insights:
+- Covers the sequential characterization of limits: lim f(x) = L iff for every sequence x_n -> a, f(x_n) -> L
+- This is an important theorem connecting sequences (Video 100) to function limits
+- Pure lecture, no visual demonstration of the concept
+- Good proof technique: using the contrapositive to show a limit does NOT exist
+
+**Source 3: Wrath of Math -- "Epsilon-Delta Definition of Functional Limits | Real Analysis"**
+URL: https://www.youtube.com/watch?v=kVQNhAIFZYc
+Style: Lecture with annotated slides (241K+ views on similar content)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Direct coverage of epsilon-delta for functional limits
+- Uses annotated equations/notes rather than pure whiteboard
+- Higher views than Michael Penn on similar topics -- epsilon-delta content has strong demand
+- Covers definition + examples but no visual animation
+
+**Source 4: Wrath of Math -- "Connecting Function Limits and Sequence Limits | Real Analysis"**
+URL: https://www.youtube.com/watch?v=7svyCaVjH6w
+Style: Lecture format
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+Key Insights:
+- Connects the two definitions: sequence-based vs epsilon-delta for function limits
+- This is a key pedagogical bridge that our video should include
+
+**Source 5: Dr. Trefor Bazett -- "A Tale of Three Functions | Intro to Limits Part I"**
+URL: https://www.youtube.com/watch?v=Qspc6uBMdEY
+Style: Manim-like animations, colorful, example-driven (606K subs)
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 8/10 | Narration 9/10 | Hooks 9/10
+
+Key Insights:
+- Excellent hook: three different functions approaching the same point with different behaviors
+- Uses animated graphs to show the limit concept visually before formal definition
+- Calm, conversational narration style -- very accessible
+- 600K+ views shows massive demand for limits content
+- Focuses on calculus-level intuition rather than rigorous epsilon-delta proofs
+- Best hook of any competitor: the "tale" framing creates narrative tension
+
+### Key Insights Across All Competitors
+- Epsilon-delta definition of limits is HIGH demand content (50K-600K views per video)
+- ALL competitors use lecture/whiteboard format -- NO ONE uses Manim to animate the delta-tube shrinking around x = a
+- The sequential characterization of limits (connecting sequences to function limits) is rarely covered but very important
+- Trefor Bazett's "three functions" hook is excellent and should inspire our opening
+- No competitor visualizes the relationship: "for every epsilon, there exists a delta" as a dynamic shrinking/growing animation
+- Missing: Animated epsilon-band on the y-axis and delta-tube on the x-axis with the function graph between them
+
+### Techniques to Adopt
+- Trefor Bazett's "three functions" hook approach: show 3 different functions and ask which have the same limit
+- Animated delta-tube: Show a vertical band around x = a (width 2*delta) and a horizontal band around L (height 2*epsilon), with the function passing through
+- The sequential characterization as a bridge from Video 100 (sequences) to function limits
+- Part-by-part definition breakdown: unpack each quantifier visually
+
+### Techniques to Avoid
+- Pure lecture without visual demonstration of what epsilon and delta mean geometrically (all competitors except Trefor)
+- Starting with the formal definition before building intuition (Michael Penn)
+- Rushing through the proof without showing WHY the delta choice works (Wrath of Math)
+- Calculus-level treatment without rigor (Trefor Bazett) -- we need the formal definition
+
+### Our Unique Visual Contribution
+- Animated epsilon-delta box: function graph visible, epsilon-band (horizontal) and delta-tube (vertical) shown simultaneously, shrinking/growing interactively
+- The "three functions" hook: three animated graphs approaching the same point, revealing which ones have the same limit
+- Sequential limit bridge: animate sequences x_n converging to a, with f(x_n) converging to L, visual proof
+- Color-coded proof: each part of the definition highlighted with a different channel color
+- The connection diagram: sequences (Video 100) -> Cauchy (Video 101) -> limits of functions (Video 102) -> continuity (Video 103)
+
+---
+
+## Video 103: Continuity (Epsilon-Delta) — Analysis (2026-07-05)
+
+**Competitor search unavailable** (web search blocked this cycle). Analysis based on known competitor patterns from prior research.
+
+### Key Competitors (Continuity Topic)
+
+**Dr. Trefor Bazett (606K subs):**
+- Covers continuity at calculus level with Manim-like animations
+- Strong engagement hooks, visual intuition focused (9/10 hooks)
+- Typically calculus-level: geometric intuition > rigorous proofs
+- Avoid:缺乏 rigorous epsilon-delta proofs for continuity
+
+**Michael Penn (349K subs):**
+- Whiteboard, systematic proof-based approach
+- Covers continuity proofs rigorously (8/10 structure, 4/10 visuals)
+- Adopt: the systematic proof structure
+- Avoid: dense whiteboard without visual aids
+
+**Wrath of Math (241K+ views):**
+- Lecture with annotated slides
+- Covers epsilon-delta continuity proofs (7/10 structure, 4/10 visuals)
+- Adopt: clear step-by-step proof breakdown
+- Avoid: static slides without animation
+
+### Market Gap
+NO competitor fully animates the epsilon-delta definition of continuity with the "tube" visualization showing:
+1. The delta-tube around x=a mapping inside the epsilon-band around f(a) for a continuous function
+2. The tube "breaking" for a discontinuous function
+3. The key difference between limit (excludes x=a) and continuity (includes x=a)
+
+### Our Unique Visual Contribution
+- Animated epsilon-delta "tube" on continuous function: shrink epsilon → delta shrinks → tube always fits inside band
+- Side-by-side contrast: continuous vs discontinuous (sign function) with tube visualization
+- Sequential criterion connecting back to Videos 100-101
+- Classification of 4 discontinuity types with visual examples: removable, jump, infinite, oscillation
+- The "no pen lifting" hook: two graphs side by side (x^2 vs |x|/x)
+
+### Techniques to Adopt
+- Trefor Bazett's visual-first approach: show the geometric picture before the formal definition
+- Michael Penn's proof rigor: complete epsilon-delta proof with clear justification
+- Progressive reveal: definition → visualization → proof → classification
+
+### Techniques to Avoid
+- Starting with the formal definition without intuition (Michael Penn's weakness)
+- Calculus-level treatment without connecting to the rigorous epsilon-delta (Trefor Bazett's weakness)
+- Static slides without animation (Wrath of Math's weakness)
