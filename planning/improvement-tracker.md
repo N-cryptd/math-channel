@@ -128,7 +128,11 @@ Videos 90+ created with v2 templates from the start.
 | 91 | Direct Proof | 398 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(17), ly.clear(11), safe_place(21), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
 | 92 | Contrapositive | 513 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(21), ly.clear(14), safe_place(20). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
 | 93 | Contradiction | 708 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(34), ly.clear(15), safe_place(25). Zero .shift()/.to_edge() for content. 4 .next_to() all diagram/VGroup assembly (⊥ below eq, label above box). — no improvement needed |
-| 94 | Induction | 741 | YES | YES (minor) | N/A | Fixed Scene 2: replaced .to_edge(LEFT/RIGHT) + .shift(UP) on two-column layout with ly.two_columns(). Remaining: 1 .shift() on domino diagram (line 67, acceptable), 5 .move_to() within card/VGroup assembly (acceptable). setup_bg(1), progressive_reveal(2), SANS(26), ly.clear(17), safe_place(15). Script not yet rendered — fix applies before first render. |
+| 94 | Proof by Induction | 741 | YES | YES (minor) | N/A | Fixed Scene 2: replaced .to_edge(LEFT/RIGHT) + .shift(UP) on two-column layout with ly.two_columns(). Remaining: 1 .shift() on domino diagram (line 67, acceptable), 5 .move_to() within card/VGroup assembly (acceptable). setup_bg(1), progressive_reveal(2), SANS(26), ly.clear(17), safe_place(15). Script not yet rendered — fix applies before first render. |
+| 95 | Strong Induction | 474 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(3), ly.clear(8), safe_place(8), two_columns(2), SANS(15). Zero .shift()/.to_edge() for content. 1 .move_to() on bridge VGroup assembly, 2 .next_to() on arrow labels — all acceptable. |
+| 96 | Proof by Cases | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(3), ly.clear(8), SANS(32), safe_place(28). Zero .shift()/.to_edge() for content. 17 .move_to() + 2 .next_to() all within diagram/VGroup assembly — acceptable. |
+| 97 | Existence/Uniqueness | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(5), ly.clear(9), SANS(20), safe_place(22), two_columns(1). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
+| 98 | Proof Writing Style | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(3), ly.clear(8), SANS(35), safe_place(7), two_columns(2). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
 
 ### Discrete Mathematics (Videos 79+) — NEW PIPELINE
 Videos 79+ created with v2 templates from the start.
@@ -147,6 +151,16 @@ Videos 79+ created with v2 templates from the start.
 | 88 | Planarity & Euler's Formula | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(5), SANS(25), ly.clear(10), safe_place(18), formula_box(4). Zero .shift()/.to_edge()/.move_to() for content. 6 .next_to() on graph labels (acceptable). Rendered Jun 28. |
 | 89 | Graph Coloring | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(5), section_divider(6), SANS(30), ly.clear(12), safe_place(15), formula_box(3), two_columns(1). Zero .shift()/.to_edge()/.move_to() for content. 4 .next_to() on graph labels (acceptable). Rendered Jun 28. |
 
+### Real Analysis I (Videos 99–110)
+Videos 99+ created with v2 templates from the start.
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 99 | Real Numbers (Completeness) | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(3), ly.clear(9), SANS(14), safe_place(13), two_columns(1), formula_box(1). Zero .to_edge() for content. 1 .shift() on gap_marker (0.05, diagram), 2 .move_to() on number line labels, 12 .next_to() all diagram labels — all acceptable. |
+| 100 | Sequences and Convergence | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(3), ly.clear(13), SANS(15), safe_place(19), formula_box(1). Zero .shift()/.to_edge()/.move_to() for content. 11 .next_to() all diagram labels (number line, axes) — acceptable. |
+| 101 | Cauchy Sequences | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(4), ly.clear(14), SANS(20), safe_place(16), two_columns(1), formula_box(2). Zero .to_edge() for content. 5 .shift() (1 center+clamp, 4 diagram arrows), 5 .move_to() (2 number line placement, 2 dot animation, 1 diagram mark), 21 .next_to() all diagram/axis labels — all acceptable. |
+| 102 | Limits of Functions | — | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(4), ly.clear(11), SANS(10), safe_place(12). Zero .to_edge() for content. 7 .shift() (5 center+clamp on formula/axes, 2 diagram arrows), 6 .move_to() (3 graph placement, 1 open dot, 2 dot animation), 8 .next_to() all diagram labels — all acceptable. Not yet rendered. |
+
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
 2. **Competitive check** — See channel-analysis/improvements.md for topic insights
@@ -156,7 +170,7 @@ Videos 79+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 94 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-86 were created with v2 standards or received targeted improvements. Videos 87-89 (Discrete Math) created with v2 and rendered. Videos 90-91 (Proof-Based Math) created with v2. Videos 92-94 (Contrapositive, Contradiction, Induction) analyzed — 92-93 v2-compliant, 94 received minor fix (two_columns in Scene 2). No videos remain that need improvement work.
+All 102 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-98 (Proof-Based Math) created with v2; 94 received minor fix. Videos 99-102 (Real Analysis I) created with v2 — all v2-compliant. No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-03 (Added Videos 92-94 to tracker — Proof-Based Mathematics. Videos 92-93 v2-compliant. Video 94: fixed Scene 2 .to_edge()/.shift() → ly.two_columns(). All 94 videos analyzed, improvement cycle complete.)
+2026-07-05 (Added Videos 95-98 to Proof-Based Math section and Videos 99-102 to new Real Analysis I section. All 8 videos v2-compliant — no improvements needed. Total: 102 videos analyzed, improvement cycle complete.)
