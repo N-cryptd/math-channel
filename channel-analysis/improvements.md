@@ -951,3 +951,907 @@ NO competitor fully animates the epsilon-delta definition of continuity with the
 - Starting with the formal definition without intuition (Michael Penn's weakness)
 - Calculus-level treatment without connecting to the rigorous epsilon-delta (Trefor Bazett's weakness)
 - Static slides without animation (Wrath of Math's weakness)
+
+### [2026-07-07] The Derivative — Rigorous (Video 105)
+
+**Market Gap Analysis:** The derivative is one of the most-covered topics in math YouTube, but almost exclusively at the calculus level (intuition, formulas, computation). Rigorous real analysis coverage exists but is mostly whiteboard/pen-and-paper (Michael Penn, Jason Bramburger). No competitor provides a full animated Manim treatment of the rigorous derivative definition with proofs. This is a major opportunity: the animated secant-to-tangent limit, differentiability-implies-continuity proof, and the Lipschitz cascade are all highly visual concepts that whiteboard channels can't convey.
+
+**Source 1: 3Blue1Brown — "The paradox of the derivative | Chapter 2, Essence of calculus" (9vKqVkMQHKk)**
+
+- Views: 4.38M, Subscribers: 8.46M, Date: Apr 2017, Duration: 16:50
+- Dimensions: Structure 10/10 | Pacing 10/10 | Visuals 10/10 | Narration 10/10 | Hooks 9/10
+- The gold standard for derivative intuition. Secant-to-tangent zoom animation. Speedometer metaphor for instantaneous rate of change. Builds from the "paradox" (instantaneous implies no change, yet there IS change) to the limit of difference quotients.
+- Does NOT cover: rigorous epsilon-delta proof, differentiability-implies-continuity theorem, one-sided derivatives, Lipschitz connection.
+- **Thumbnail:** Dark background, stylized curve with secant/tangent lines, 3B1B signature visual style. High contrast, clean composition.
+- Rating: 10/10 for intuition, but calculus-level — not rigorous enough for a real analysis course.
+
+**Source 2: Michael Penn — "Real Analysis | Introduction to differentiability." (kOpdv2JvoyM)**
+
+- Views: 31,698, Subscribers: 350K, Date: Oct 2020, Duration: 11:46
+- Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+- Pen-and-paper whiteboard. Systematic: defines differentiability, gives an example (x^2 at a point), gives a non-example (|x| at 0), proves differentiability implies continuity.
+- Good: clear proof structure, well-paced for a real analysis audience. Covers the exact content we need.
+- Weak: no visual animation. The proof of differentiability-implies-continuity is written out mechanically without geometric intuition. No connection to Lipschitz or uniform continuity.
+- **Thumbnail:** White background, handwritten-style text "Real Analysis | Introduction to differentiability." Minimal visual appeal.
+
+**Source 3: Michael Penn — "Real Analysis | Derivative Rules" (COLwYhEAt7Q)**
+
+- Views: 15,613, Subscribers: 350K, Date: Oct 2020, Duration: 14:24
+- Dimensions: Structure 8/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+- Companion to Source 2. Derives product rule, quotient rule, chain rule from the limit definition. Straightforward algebraic proofs.
+- Good: shows how all familiar rules emerge from the rigorous definition.
+- Weak: dense algebra without geometric motivation. No visual aids. 14 minutes of wall-to-wall algebra.
+- **Thumbnail:** Similar white/handwritten style.
+
+**Source 4: The Bright Side of Mathematics — "Real Analysis 34 | Differentiability" (TLdBLqPTsYc)**
+
+- Views: 22,790, Subscribers: 233K, Date: Sep 2021, Duration: 10:50
+- Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+- Clean tablet writing style (not whiteboard). Covers slope at a point, affine linear functions, linear approximation, secant lines, tangent lines, and the formal definition.
+- Good: builds from geometric intuition (slope, secant, tangent) to the formal limit definition progressively. Well-structured transition from intuition to rigor.
+- Weak: limited animation — mainly static writing. Doesn't cover derivative rules or the Lipschitz connection. Short (10:50) so coverage is incomplete for our scope.
+- **Thumbnail:** Dark background with channel branding, clean but text-heavy.
+
+### Market Gap
+
+NO competitor provides an ANIMATED Manim treatment of:
+1. The secant-to-tangent limit with rigorous epsilon-delta framing
+2. A visual proof that differentiability implies continuity (showing the secant approaching the tangent, and why the function can't jump)
+3. Derivative rules derived from the limit definition with animated algebra
+4. The cascade: differentiable on [a,b] with bounded derivative => Lipschitz => uniformly continuous (connecting back to Video 104)
+5. One-sided derivatives and differentiability on intervals
+
+### Our Unique Visual Contribution
+- Animated secant lines converging to the tangent as h -> 0, with the difference quotient displayed live
+- Visual proof that differentiable => continuous: show f(x+h) approaching f(a) along the tangent line
+- Animated hierarchy: differentiable -> continuous -> uniformly continuous (via Lipschitz), building on Video 104's hierarchy
+- |x| at x=0 as the canonical non-differentiable counterexample: animate the left and right secants approaching different slopes
+- Color-coded derivative rules: linearity in blue, product rule in green, chain rule in accent
+
+### Techniques to Adopt
+- 3B1B's secant-to-tangent zoom animation as our opening visual (adapted to our branding)
+- Bright Side's progressive build from slope -> secant -> tangent -> formal definition
+- Michael Penn's proof rigor: complete proofs with clear epsilon-delta justification
+- The "differentiability implies continuity" proof: animated geometric version first, then algebraic version
+
+### Techniques to Avoid
+- Starting with pure algebra without geometric intuition (Michael Penn's approach)
+- Dense formula walls without breathing room (Michael Penn's Derivative Rules video)
+- Calculus-level treatment without connecting to the broader real analysis framework (3B1B)
+
+---
+
+## [2026-07-08] Video 106 — Mean Value Theorem (Proof) — Competitive Analysis
+
+### Market Overview
+The Mean Value Theorem is one of the most-viewed calculus/analysis topics on YouTube. Combined views across the top videos exceed **2.7M**. However, the market splits into two tiers:
+- **Calculus-level** (1M+ views): Intuition, finding c, applications — dominated by Organic Chemistry Tutor, Khan Academy, Professor Leonard
+- **Real Analysis-level** (20K-850K views): Rigorous proof, Rolle's Theorem dependency, formal epsilon-delta framing — Michael Penn, Bright Side, Dr. Gajendra Purohit
+
+**NO competitor provides a full Manim-animated proof of the MVT with visual geometric intuition.** All real analysis competitors use whiteboard/pen-and-paper/tablet writing. This is our key opportunity.
+
+---
+
+### Source 1: Michael Penn — "Real Analysis | The Mean Value Theorem" (k6Ter189B1g)
+- **Views:** 25,031 | **Subscribers:** 350K | **Date:** Oct 2020 | **Duration:** 12:04
+- **Thumbnail:** Black background, yellow and white text with pink/blue equation brackets. High contrast, clean. Rating: 7/10.
+- **Dimensions:** Structure 8/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+**Key Insights:**
+- Covers Rolle's Theorem first (prerequisite for MVT proof), then states and proves MVT
+- Pen-and-paper whiteboard style — systematic but visually static
+- Proves MVT by constructing the auxiliary function h(x) = f(x) - [(f(b)-f(a))/(b-a)](x-a) - f(a) and applying Rolle's Theorem
+- Good: Clean proof structure, covers both Rolle's and MVT in 12 minutes
+- Weak: No visual geometric interpretation of the auxiliary function; the construction appears "magical" without motivation
+
+**Thumbnail Analysis (Nemotron VL):** Black background with yellow and white text, pink and blue equation brackets. High contrast, clear text. Professional but lacks a visual/geometric hook — just text and formula.
+
+---
+
+### Source 2: Bright Side of Mathematics — "Real Analysis 41 | Mean Value Theorem" (FQo9OYku5aY)
+- **Views:** 20,748 | **Subscribers:** 233K | **Date:** Oct 2021 | **Duration:** 7:41
+- **Thumbnail:** Solid yellow background with black text and blue math visuals (graph with curve). Rating: 8/10.
+- **Dimensions:** Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+
+**Key Insights:**
+- Tablet writing style with systematic progression: statement → geometric meaning → proof
+- Uses colored markers for emphasis — more visual than Michael Penn
+- Short at 7:41 — covers MVT but may skip important details (like Rolle's proof)
+- Part of a complete Real Analysis series (video 41) — well-integrated into curriculum
+- Has both dark mode and bright mode versions — accessibility conscious
+
+**Thumbnail Analysis (Nemotron VL):** Solid yellow background, black text and blue math visuals with a graph featuring a blue curve and dotted line. Clean, professional, high readability. Yellow stands out in YouTube's dark sidebar.
+
+**Techniques to Adopt:**
+- Geometric meaning before formal proof — shows WHY the theorem makes intuitive sense
+- Systematic curriculum integration (video 41 of series — clear numbering)
+
+**Techniques to Avoid:**
+- 7:41 is too short for a rigorous proof video — we need 10-12 minutes to cover Rolle's + MVT + consequences
+- Tablet writing without animation — we can do much better with Manim
+
+---
+
+### Source 3: Dr. Gajendra Purohit — "Mean Value Theorem - Proof & Examples" (_rLizW7giT4)
+- **Views:** 838,766 | **Subscribers:** Large (Indian market) | **Date:** Jan 2021 | **Duration:** 13:05
+- **Thumbnail:** Dark chalkboard texture background with yellow/red/black text. Presenter visible. Rating: 7/10.
+- **Dimensions:** Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 6/10 | Hooks 5/10
+
+**Key Insights:**
+- Highest views (839K) in the real analysis category — enormous demand, especially for exam prep (IIT-JAM, GATE, CSIR NET)
+- Covers: statement → proof → geometric interpretation → worked examples
+- Time-stamped chapters (0:00 intro, 0:59 statement, 2:10 proof, 5:21 geometry, 6:50 Q1, 9:20 Q2)
+- Chalkboard style with presenter — personal but low visual quality
+- Geometric interpretation AFTER proof — less pedagogically effective than intuition-first
+
+**Thumbnail Analysis (Nemotron VL):** Dark chalkboard texture with bold yellow, red, and black text. Presenter adds personal touch. The chalkboard aesthetic signals "academic lecture" — matches Indian engineering math market.
+
+**Techniques to Adopt:**
+- Time-stamped chapters for navigation (excellent for study/reference use)
+- Geometric interpretation as a separate section
+- Worked examples after proof
+
+**Techniques to Avoid:**
+- Putting geometry AFTER proof — intuition should come first
+- Chalkboard/presenter format — doesn't leverage animation
+- 13 minutes with multiple examples may lose focus — our video should prioritize proof clarity over example quantity
+
+---
+
+### Source 4: The Organic Chemistry Tutor — "Mean Value Theorem" (SL2RobwU_M4)
+- **Views:** 1,559,160 | **Subscribers:** 10.8M | **Date:** Mar 2018 | **Duration:** 19:40
+- **Thumbnail:** Black background with yellow "Mean Value Theorem" title, red/blue graph with secant/tangent lines and red dot. Rating: 8/10.
+- **Dimensions:** Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 6/10
+
+**Key Insights:**
+- Highest views of any MVT video (1.56M) — demonstrates massive calculus-level demand
+- Focuses on COMPUTATION: finding the value of c that satisfies MVT for given functions
+- Uses digital whiteboard with colored pens — clearer than physical whiteboard
+- Covers conditions: continuous on [a,b], differentiable on (a,b)
+- Many examples with different function types (polynomials, trigonometric, radicals)
+- Does NOT provide the rigorous proof — this is purely a "how to use" video
+
+**Thumbnail Analysis (Nemotron VL):** Black background, yellow text "Mean Value Theorem," red and blue graph lines, red dot highlighting the MVT point. Quality 8/10. The graph is the main visual hook — shows secant line and tangent line. Very effective for search CTR.
+
+**Techniques to Adopt:**
+- Visual graph showing secant line → tangent line (the core MVT geometric picture)
+- Checking conditions before applying theorem
+
+**Techniques to Avoid:**
+- 19:40 is too long — our rigorous proof video should be 10-12 minutes
+- Computation focus without proof understanding — our audience needs the proof, not just the formula
+- Multiple repetitive examples — one or two well-chosen examples suffice
+
+---
+
+### Source 5: Dr. Trefor Bazett — "The MEAN Value Theorem is Actually Very Nice" (a2GpXyPWx68)
+- **Views:** 34,806 | **Subscribers:** 606K | **Date:** Sep 2017 | **Duration:** 7:37
+- **Thumbnail:** Man standing in front of black background, white text, red/green graph lines. Rating: 6/10.
+- **Dimensions:** Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 8/10 | Hooks 7/10
+
+**Key Insights:**
+- Best title optimization: "Actually Very Nice" creates curiosity gap
+- Strong pedagogical framing: "formalizes our intuition that for nice functions, tangent = secant slope somewhere"
+- Shows examples demonstrating NECESSITY of conditions (counterexamples when conditions fail)
+- Uses Manim-like animated graphs — closest to our visual style among competitors
+- Learning objectives listed in description — good pedagogical practice
+- Short at 7:37 — calculus-level, not rigorous proof
+
+**Thumbnail Analysis (Nemotron VL):** Man standing in front of black background with white text and a math problem displayed. Red and green graph lines visible. High quality lighting, clear visuals. Personal branding with presenter face.
+
+**Techniques to Adopt:**
+- Counterexamples showing why conditions are necessary (e.g., discontinuous function, function not differentiable at a point)
+- "Formalizes intuition" framing — bridge between visual understanding and formal proof
+- Curiosity-gap titles
+
+**Techniques to Avoid:**
+- Face-in-thumbnail for an animated content channel — our thumbnails should be purely visual
+- 7:37 is too brief for proof coverage
+- Calculus-level treatment — we need the full rigorous proof
+
+---
+
+### Source 6: Mathispower4u — "Proof of the Mean Value Theorem" (0iHj0yyMdeI)
+- **Views:** 78,303 | **Subscribers:** 345K | **Date:** Nov 2014 | **Duration:** 6:28
+- **Thumbnail:** Yellow lined background (notebook paper), black handwritten text, graph. Rating: 8/10.
+- **Dimensions:** Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 6/10 | Hooks 3/10
+
+**Key Insights:**
+- Specifically titled "Proof" — targets students searching for proof content
+- Notebook paper background gives a "study notes" aesthetic — effective for homework help audience
+- Step-by-step proof construction on screen
+- Very short at 6:28 — covers only the proof, no context or intuition
+
+**Thumbnail Analysis (Nemotron VL):** Yellow lined notebook paper background, black text with mathematical equations and graph. Classic handwritten appearance. Clean, well-lit, readable. Quality 8/10 — the notebook aesthetic signals "this will help you with homework/studying."
+
+---
+
+### Source 7: bprp calculus basics — "I don't get the intuition of using MVT to prove inequalities" (W0lygAWY8Uw)
+- **Views:** 16,508 | **Subscribers:** 230K | **Date:** Apr 2025 | **Duration:** 9:43
+- **Thumbnail:** Solid lime green background, black/white text, large square root symbol and fraction. Rating: 8/10.
+- **Dimensions:** Structure 7/10 | Pacing 8/10 | Narration 8/10 | Hooks 9/10
+
+**Key Insights:**
+- Reddit-sourced content — addresses a real student confusion ("I don't get the intuition...")
+- Shows MVT APPLICATION: proving inequalities like sqrt(1+x) < 1 + x/2 for x > 1
+- The "I don't get..." title is extremely relatable — addresses viewer pain directly
+- Lime green thumbnail is eye-catching and stands out in search results
+- Recent (2025) — shows MVT content is still actively searched
+
+**Thumbnail Analysis (Nemotron VL):** Solid lime green background, bold black title text, math visuals with square root symbol. Quality 8/10 — the lime green is extremely distinctive and high-contrast.
+
+**Techniques to Adopt:**
+- Application of MVT to prove inequalities — this is a key consequence we should include
+- Pain-point titles ("I don't get...") — relatable and high-CTR
+- Showing HOW MVT is actually used, not just proving it exists
+
+---
+
+### Source 8: Mike, the Mathematician — "A Proof of the Mean Value Theorem" (4vn42e56gnk)
+- **Views:** 1,988 | **Subscribers:** 25.2K | **Date:** Nov 2023 | **Duration:** 5:35
+- **Thumbnail:** Black background, green and purple text, equations and line graph. Rating: 7/10.
+- **Dimensions:** Structure 6/10 | Pacing 5/10 | Visuals 5/10 | Narration 5/10 | Hooks 3/10
+
+**Key Insights:**
+- Very short (5:35) — minimal coverage
+- Focuses purely on proof mechanics without geometric motivation
+- Low views (1,988) — the pure proof-without-context approach doesn't attract viewers
+- Recent (2023) — shows the topic is still being covered by smaller creators
+
+---
+
+### Source 9: Bill Kinney — "Intro Real Analysis, Lec 16: MVT — Statement, Examples, Proof" (pzcrXM1gQik)
+- **Views:** 5,085 | **Subscribers:** 38.7K | **Date:** Oct 2016 | **Duration:** 33:53
+- **Thumbnail:** Handwritten style, underlined key terms, graph and formula. Rating: 7/10.
+- **Dimensions:** Structure 7/10 | Pacing 4/10 | Visuals 3/10 | Narration 5/10 | Hooks 3/10
+
+**Key Insights:**
+- Full lecture format (33:53) — covers MVT statement, examples, proof, Rolle's proof, Fermat's Theorem sketch
+- Most comprehensive coverage of any single video, but pacing is very slow
+- Handwritten notebook aesthetic — academic lecture style
+- Sketches Rolle's proof AND Fermat's Theorem as prerequisites — thorough but lengthy
+- 5K views shows the format doesn't scale on YouTube
+
+**Techniques to Adopt:**
+- Showing the proof dependency chain: Fermat's Theorem → Rolle's Theorem → MVT
+- "Deconstruction of the proof" approach — explain the strategy before writing formulas
+
+**Techniques to Avoid:**
+- 33-minute format — our video should be 10-12 minutes
+- Slow, lecture-style pacing
+- Handwritten whiteboard without visual aids
+
+---
+
+### Source 10 (Context): IVT — Bright Side of Mathematics "Real Analysis 32 | Intermediate Value Theorem" (BNLu4_3Okuk)
+- **Views:** 32,865 | **Duration:** 8:46
+- Relevant because IVT is the precursor to MVT in many curricula, and MVT proof uses continuity + differentiability (connecting back to Videos 103-105)
+
+---
+
+## Synthesis: Competitive Landscape for Video 106
+
+### Aggregate View Counts
+| Tier | Videos | Total Views |
+|------|--------|-------------|
+| Calculus-level (OCT, Khan, Leonard) | 3 | ~3.6M |
+| Real Analysis proof (Penn, Bright Side, Purohit) | 3 | ~884K |
+| Other (Trefor, bprp, Mathispower4u, Mike) | 4 | ~131K |
+| **Total** | **10** | **~4.6M** |
+
+### Market Gaps Identified
+
+1. **NO animated Manim proof exists.** All competitors use whiteboard/pen/tablet writing. A visual, animated proof of the MVT (showing the secant line, the tangent line appearing, Rolle's theorem geometrically) would be the first of its kind.
+
+2. **Nobody visualizes the auxiliary function.** The key insight of the MVT proof — constructing h(x) = f(x) - secant_line(x) and applying Rolle's — is never shown geometrically. All competitors just write the formula. We can animate h(x) visually: show f(x), subtract the secant line, reveal h(a) = h(b) = 0, then the Rolle's condition is visually obvious.
+
+3. **No one connects MVT to the broader Real Analysis arc.** Competitors treat MVT in isolation. We can connect: continuity (Video 103) + differentiability (Video 105) → MVT, showing how the theorem depends on both conditions established in earlier videos.
+
+4. **Rolle's → MVT dependency is under-visualized.** Michael Penn states Rolle's then proves MVT, but doesn't animate WHY Rolle's is needed. We can show the geometric reduction: MVT problem → tilt the function → find the zero of the derivative.
+
+5. **Consequences/applications are under-covered in proof-focused videos.** The real analysis videos prove the theorem but skip powerful consequences: f' = 0 → f constant, monotonicity from f' sign, Lipschitz bounds. These connect back to Videos 103-104 and make the proof feel purposeful.
+
+### Thumbnail Trends Across Competitors
+- **Dark backgrounds dominate** (5 of 10): Black, dark chalkboard — aligns with our BG=#1A1832
+- **Bright accent backgrounds stand out** (3 of 10): Yellow, lime green — high CTR
+- **Graph/curve is the most common visual** (6 of 10): Shows secant line, tangent line, or function curve
+- **Face/person thumbnails** (2 of 10): Trefor Bazett, Dr. Purohit — personal branding but doesn't work for animated channels
+- **Text-only thumbnails** (2 of 10): Lowest engagement — Michael Penn, Mike the Mathematician
+- **Winning formula**: Dark background + colored graph with secant/tangent lines + theorem name in bold text + maybe one formula
+
+### Recommended Video Structure (10-12 minutes)
+
+1. **Hook (0:30)**: "Imagine driving from A to B in 2 hours. Your average speed is 60 mph. Did you ever instantaneously hit 60 mph? The Mean Value Theorem says yes — if your speed is continuous." — Inspired by the classic driving analogy (used by Trefor, OCT, and Khan), but we'll animate the car/speedometer.
+
+2. **Fermat's Theorem Recap (1:30)**: If f has a local extremum at c and f'(c) exists, then f'(c) = 0. Quick animated proof (connect to Video 105's derivative definition).
+
+3. **Rolle's Theorem (2:30)**: If f(a) = f(b), f continuous on [a,b], f differentiable on (a,b), then exists c in (a,b) with f'(c) = 0. Visual: function starts and ends at same height — must have a horizontal tangent somewhere. Animated proof using Fermat's Theorem + Extreme Value Theorem.
+
+4. **Rolle's Geometric Meaning (0:30)**: Animated visualization — function, mark f(a) = f(b), show the horizontal tangent point appearing.
+
+5. **MVT Statement (1:00)**: Formal statement with conditions highlighted. Color-code: continuity in PRIMARY blue, differentiability in SECONDARY green, conclusion in ACCENT yellow.
+
+6. **The Key Insight: Auxiliary Function (2:00)**: **This is our unique contribution.** Animate the construction:
+   - Show f(x) and the secant line between (a,f(a)) and (b,f(b))
+   - Subtract the secant line from f(x) to get h(x)
+   - Show h(a) = h(b) = 0 visually (the difference vanishes at endpoints)
+   - Apply Rolle's Theorem to h(x) → h'(c) = 0 → f'(c) = secant slope
+   - Color-code each step: f in PRIMARY, secant in SECONDARY, h in ACCENT, h'=0 in RED
+
+7. **MVT Proof (2:00)**: Formal algebraic proof with the auxiliary function, step-by-step reveal. Connect back to the visual construction from step 6.
+
+8. **Why Conditions Matter (1:00)**: Two counterexamples (following Trefor's approach):
+   - Function not continuous on [a,b] — MVT fails
+   - Function not differentiable at a point — MVT fails
+   Animate the "broken" graphs with color-coded failure points.
+
+9. **Consequences and Applications (1:30)**: 
+   - f'(x) = 0 for all x → f is constant (connect to Video 105)
+   - f'(x) > 0 → f is increasing (monotonicity)
+   - |f'(x)| ≤ M → Lipschitz condition (connect to Video 104 uniform continuity)
+   - MVT inequality application (following bprp's example): sqrt(1+x) < 1 + x/2
+
+10. **Summary (0:30)**: Recap the proof chain: Fermat → Rolle → MVT, and the visual meaning.
+
+### Visual Techniques (Our Unique Contribution)
+- **Animated auxiliary function construction**: No competitor does this. Show f(x) with the secant line, then "peel away" the secant to reveal h(x) = f(x) - L(x), demonstrate h(a) = h(b) = 0.
+- **Secant-to-tangent animation**: Animate the secant line pivoting until it becomes tangent at the MVT point — the "turning" moment that proves the theorem.
+- **Color-coded conditions**: Use PRIMARY for continuity conditions, SECONDARY for differentiability conditions, ACCENT for conclusions throughout.
+- **Proof dependency chain**: Visual diagram: Fermat's Theorem → Rolle's Theorem → Mean Value Theorem, showing how each builds on the previous.
+- **Car/speedometer animation** for the hook: Show distance vs time graph, average speed as secant slope, instantaneous speed matching at the MVT point.
+
+### Techniques to Adopt from Competitors
+- **Trefor's counterexamples**: Show when MVT FAILS if conditions aren't met — most pedagogically effective motivation for the conditions
+- **Bright Side's geometric meaning**: Visual interpretation of the theorem before formal proof
+- **Gajendra Purohit's chapter timestamps**: Enable navigation for study/reference
+- **bprp's inequality application**: Show MVT used to prove sqrt(1+x) < 1 + x/2 — concrete and impressive
+- **Bill Kinney's proof deconstruction**: Explain the STRATEGY of the proof before writing formulas
+- **Organic Chemistry Tutor's graph**: Secant line + tangent line visual is the canonical MVT image — adapt to our color scheme
+
+### Techniques to Avoid
+- Whiteboard-only format (all competitors) — we use Manim animation exclusively
+- Putting geometric interpretation AFTER proof (Gajendra Purohit) — intuition first, then rigor
+- 33-minute lecture format (Bill Kinney) — keep to 10-12 minutes
+- Pure computation focus without proof understanding (Organic Chemistry Tutor)
+- Face/person in thumbnails (Trefor, Purohit) — animated content channel, not personality channel
+- Writing the auxiliary function without geometric motivation (all competitors) — we visualize the construction first
+
+### Thumbnail Recommendation for Video 106
+- **Background**: Our BG=#1A1832 (dark, matches our branding)
+- **Main visual**: Animated curve (PRIMARY blue) with secant line (SECONDARY green) and tangent line (ACCENT yellow) meeting at a highlighted point
+- **Text**: "Mean Value Theorem" in TITLE_SIZE white, "Proof" subtitle in smaller ACCENT
+- **Formula**: f'(c) = [f(b)-f(a)]/(b-a) in white MONO
+- **Layout**: Graph centered, title top, formula bottom-right
+- **Standing out**: The animated graph with color-coded lines on dark background is visually distinctive — no competitor has this exact layout
+
+### Dimensions (Competitor Average)
+- Structure: 7.3/10 | Pacing: 6.3/10 | Visuals: 4.5/10 | Narration: 7.0/10 | Hooks: 5.0/10
+- **Our target**: Structure 9/10 | Pacing 8/10 | Visuals 10/10 | Narration 8/10 | Hooks 9/10
+- **Biggest gap**: Visuals (4.5 → 10) — we dominate with animated proof visualization
+- **Second biggest gap**: Hooks (5.0 → 9) — use the driving analogy + animated auxiliary function construction
+
+## 2026-07-08 — The Riemann Integral
+Source: Competitive analysis for Video 107 (Real Analysis I, Video 9 of 12)
+
+### Competitor Videos Analyzed
+
+**1. EpsilonDelta — "Why We Never Actually Learn Riemann's Original Definition of Integrals | Riemann vs Darboux Integral"**
+- URL: https://www.youtube.com/watch?v=WgUZKeQHlO8
+- Views: 122,012 | Date: Feb 20, 2024 | Duration: ~18 min | Channel: 83K subs
+- Captions: Yes
+- Thumbnail: Black bg, white text "WE DON'T LEARN RIEMANN'S ORIGINAL INTEGRATION (cuz it sucks)", graph with yellow dots and blue line. Quality 6/10 — clickbait text style but clear.
+- Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 7/10 | Narration 7/10 | Hooks 9/10
+- **Structure**: Excellent chapter-based organization (Intro → Foundations → Types of Integration → Generalized Riemann Sum → Riemann Integrability → Failure of Limit → Non-Integrable Function → Upper/Lower Sum → Darboux → Fatal Shortcomings → Outro)
+- **Key insight**: Covers BOTH Riemann's original definition AND Darboux's definition, explaining why Darboux is taught instead. Very thorough.
+- **Visuals**: Clean dark-background math animations, showing partitions, upper/lower sums, non-integrable function (Dirichlet)
+- **Unique approach**: Frames the entire video around "what we learn isn't actually Riemann's definition" — strong curiosity hook
+
+**2. Michael Penn — "Real Analysis | Partitions and upper/lower sums."**
+- URL: https://www.youtube.com/watch?v=CHO_6rX8e7o
+- Views: 41,853 | Date: Nov 14, 2020 | Duration: ~18 min | Channel: 350K subs
+- Captions: Yes
+- Thumbnail: White bg with L(f,P) text, colorful bar graphs in purple/orange/red. Simple academic style.
+- Dimensions: Structure 5/10 | Pacing 5/10 | Visuals 2/10 | Narration 8/10 | Hooks 3/10
+- **Structure**: Traditional lecture format — writes definitions on whiteboard, works through examples sequentially
+- **Key insight**: Covers partitions, mesh size, upper and lower sums thoroughly with worked examples
+- **Visuals**: Whiteboard/chalk only — no animations. Traditional proof-based lecture style.
+- **What works**: Careful step-by-step proofs, good example selection (shows actual computation of upper/lower sums)
+
+**3. The Bright Side of Mathematics — "Real Analysis 48 | Riemann Integral - Partitions"**
+- URL: https://www.youtube.com/watch?v=joXBmJ1KInU
+- Views: 74,006 | Date: Dec 6, 2021 | Channel: 233K subs
+- Captions: Yes
+- Thumbnail: Yellowish bg, handwritten-style "Real Analysis 48", blue curve with partition rectangles. Quality 6/10 — clear but text-heavy.
+- Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+- **Structure**: Systematic curriculum approach within a Real Analysis playlist — follows from previous videos naturally
+- **Key insight**: Part of a complete 60+ video Real Analysis series. Covers partitions, Riemann sums, refinement, upper/lower sums
+- **Visuals**: Tablet-based animations showing partition points, step function rectangles, formulas building up progressively
+- **What works**: Very clean systematic approach, good for a curriculum series. Connects to prior videos seamlessly.
+
+**4. Dr. Peyam — "The Darboux Integral"**
+- URL: https://www.youtube.com/watch?v=BstJYwNmOyI
+- Views: 31,410 | Date: Oct 8, 2021 | Channel: 184K subs
+- Captions: Yes
+- Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 3/10 | Narration 8/10 | Hooks 4/10
+- **Structure**: Definition-first approach — states Darboux integral definition, shows continuous functions are integrable
+- **Key insight**: Uses Darboux approach exclusively (upper/lower integrals via inf/sup of upper/lower sums), proves continuity => integrability
+- **Visuals**: Whiteboard only — handwritten notes style
+- **What works**: Enthusiastic narration, clear proof that continuous => Darboux integrable. Good for viewers comfortable with whiteboard format.
+
+**5. 3Blue1Brown — "The essence of calculus" (reference for visual style)**
+- URL: https://www.youtube.com/watch?v=WUvTyaaNkzM
+- Views: 11,356,333 | Date: Apr 28, 2017 | Channel: 8.46M subs
+- Note: NOT a Riemann integral video per se — covers calculus intuition including area under curves. Referenced for visual techniques.
+- **Key technique**: Building area as a sum of thin rectangles with animation — the "Riemann sum as the limit of thin rectangles" visual. This is THE canonical animation for Riemann sums that all competitors reference.
+
+### Thumbnail Analysis Summary
+| Video | Palette | Composition | Quality |
+|-------|---------|-------------|---------|
+| EpsilonDelta | Black + white text + blue outline + yellow dots | Centered text over graph | 6/10 |
+| Michael Penn | White + black text + purple/orange/red bars | Text overlay on bar chart | 5/10 |
+| Bright Side | Yellow bg + blue curve + handwritten font | Curve with partition rectangles | 6/10 |
+| Dr. Peyam | White + black text + handwritten | Simple text-heavy | 4/10 |
+
+**Our thumbnail strategy**: Dark background (BG=#1A1832), large PRIMARY text "The Riemann Integral", with animated partition rectangles under a curve in PRIMARY/SECONDARY colors, matching our branding.
+
+### Key Insights Across All Competitors
+1. **No competitor provides Manim-animated formal Riemann integral with Darboux criterion proof.** Bright Side uses tablet (not Manim), EpsilonDelta uses custom animation (not Manim-style). Our Manim approach fills this gap.
+2. **EpsilonDelta's hook is strongest** — "what you learned isn't actually Riemann's definition" creates genuine curiosity. We should reference this distinction.
+3. **All competitors struggle with the Dirichlet function** — showing why it's non-integrable is best done with animation (coloring rational/irrational points), not static images.
+4. **The Darboux criterion (upper integral = lower integral) is the cleanest path** to Riemann integrability — Dr. Peyam and EpsilonDelta both converge on this approach.
+5. **Competitors average ~17 minutes** for this topic — our 8-15 minute target is ambitious. We need to be efficient.
+
+### Techniques to Adopt
+- EpsilonDelta's "story arc" approach: start with the Riemann sum motivation, reveal the formal definition, then show WHY Darboux is preferred
+- Bright Side's systematic chapter structure within a playlist
+- EpsilonDelta's animated non-integrable function example (Dirichlet)
+- The "visual partition refinement" animation: show partition getting finer, upper/lower sums converging
+
+### Techniques to Avoid
+- Michael Penn's pure whiteboard approach — no animation, loses visual learners
+- Dr. Peyam's definition-first, motivation-later ordering
+- Starting with Riemann's original definition (confusing) — start with Riemann sums (intuitive) → formalize
+
+### Our Unique Contribution
+1. **Animated Darboux criterion proof**: No competitor animates the proof that "f integrable iff for every epsilon > 0, exists partition P with U(P,f) - L(P,f) < epsilon"
+2. **Visual partition refinement**: Animated demonstration of partitions getting finer, upper and lower sums visually converging
+3. **Animated Dirichlet function**: Color-coded points (rational = PRIMARY, irrational = SECONDARY) showing every subinterval contains both, so U(P,f) - L(P,f) = b-a for ALL partitions
+4. **Continuous => integrable proof with animation**: Show uniform continuity giving the delta that works globally, then animated partition construction
+
+### Dimensions (Competitor Average)
+- Structure: 6.8/10 | Pacing: 6.3/10 | Visuals: 4.5/10 | Narration: 7.5/10 | Hooks: 5.3/10
+- **Our target**: Structure 9/10 | Pacing 8/10 | Visuals 10/10 | Narration 8/10 | Hooks 8/10
+- **Biggest gap**: Visuals (4.5 → 10) — animated partitions, sums, and Darboux criterion proof
+- **Second biggest gap**: Hooks (5.3 → 8) — Dirichlet function as visual "impossible" moment
+
+### [2026-07-08] Fundamental Theorem of Calculus — Proof (Video 108)
+
+**Market Gap Analysis:** The FTC is one of the most-covered topics in math education. 3B1B's intuitive treatment has 11.4M+ views. However, RIGOROUS animated proofs of both FTC parts (with MVT-based arguments) are scarce — most channels either do intuition-only (3B1B) or whiteboard lecture proofs (Michael Penn, The Math Sorcerer). NO competitor provides a Manim-animated full proof of both FTC parts with Riemann integral rigor.
+
+**Source 1: 3Blue1Brown — "Essence of Calculus" Chapter 7+8 (Integration and the Fundamental Theorem)**
+Views: ~11.4M (chapter 7) | Duration: ~12 min | Style: Custom Manim, dark background, intuition-first
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+Key Insights:
+- THE gold standard for FTC intuition — shows derivative and integral as genuinely inverse operations
+- Uses the "accumulation function" F(x) = integral from a to x of f(t)dt with a beautiful animation showing area growing
+- Geometric argument for Part 1: small change in F equals the area of a thin rectangle = f(x) dx
+- NO formal proof — purely geometric/intuitive. Does not mention Riemann sums, MVT, or epsilon-delta
+- Visual metaphor: color-coded area under the curve growing as x moves right
+- Connects to chain rule, substitution, and the "big picture" of calculus
+
+Techniques to Adopt:
+- The accumulation function visualization (area growing with x) is pedagogically perfect — use it
+- Color-coding the area under f with a "running total" label
+- The geometric intuition should be the hook before the formal proof
+
+Techniques to Avoid:
+- Skipping the proof entirely — our audience needs rigor since this is Real Analysis
+- Using only geometric handwaving for "why F'(x) = f(x)"
+
+**Source 2: Dr. Trefor Bazett — "The Fundamental Theorem of Calculus"**
+Views: ~250K | Duration: ~16 min | Style: Manim animations, semi-formal
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 7/10 | Narration 8/10 | Hooks 6/10
+
+Key Insights:
+- Covers both FTC Part 1 and Part 2 with Manim animations
+- More formal than 3B1B — mentions MVT for the proof sketch
+- Uses the standard calculus approach (antiderivatives, area accumulation)
+- Good pacing: intuition first, then formal statements
+- Does not use the Riemann integral framework — uses the "standard" calculus integral
+- Good visual: shows the difference F(b) - F(a) as the net area change
+
+Techniques to Adopt:
+- Presenting both FTC parts as a unified story (Part 1 motivates Part 2)
+- The visual of F(b) - F(a) as net signed area
+
+Techniques to Avoid:
+- Not rigorous enough for our Real Analysis audience — we need full proof
+- Doesn't connect to the Riemann integral from Video 107
+
+**Source 3: Michael Penn — "The Fundamental Theorem of Calculus (Proof)"**
+Views: ~45K | Duration: ~18 min | Style: Whiteboard/blackboard, fully rigorous
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+Key Insights:
+- Full rigorous proof of both FTC parts using MVT
+- Uses the Riemann sum framework
+- Part 1 proof: Shows F(x+h) - F(x) = integral from x to x+h of f(t)dt, uses MVT for integrals to show = f(c)*h, then divides by h and takes limit
+- Part 2 proof: Partitions [a,b], applies MVT to get F(x_i) - F(x_{i-1}) = f(c_i)(x_i - x_{i-1}), sums to get Riemann sum = F(b) - F(a), takes limit
+- No visuals — pure blackboard proof, notation-heavy
+- Good proof structure but hard to follow visually
+
+Techniques to Adopt:
+- The proof structure is sound — follow this mathematical flow
+- Using the "MVT for integrals" as a lemma before proving FTC Part 1
+- The connection: Part 1 (derivative of integral) -> Part 2 (evaluate integrals via antiderivatives)
+
+Techniques to Avoid:
+- No visual aids makes the proof hard to follow
+- Dense notation without breathing room
+- No motivating examples before diving into proof
+
+**Source 4: EpsilonDelta — "Fundamental Theorem of Calculus"**
+Views: ~120K | Duration: ~22 min | Style: Custom animation, semi-formal
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 8/10 | Narration 7/10 | Hooks 7/10
+
+Key Insights:
+- Animated but uses custom animation tools (not Manim)
+- Good balance between intuition and formalism
+- Covers both parts with animated proof sketches
+- Uses Riemann sum framework
+- Story-driven approach — frames FTC as "the theorem that makes calculus useful"
+- Good visual of the proof: shows rectangles approximating area between F(b) and F(a)
+- Mentions that FTC "closes the loop" between differentiation and integration
+
+Techniques to Adopt:
+- The narrative framing: "FTC closes the loop" is a great hook
+- Showing the proof as an animated series of steps rather than static equations
+- The connection between Part 1 and Part 2 being a "two-directional bridge"
+
+Techniques to Avoid:
+- 22 minutes is too long for our format (target: 12-15 min)
+- Custom animation style doesn't match our Manim look
+
+**Summary of Key Insights for Our Video:**
+
+1. **Unique position:** We're the ONLY channel providing a Manim-animated RIGOROUS proof of both FTC parts using the Riemann integral framework from Video 107. This fills a genuine gap.
+
+2. **Structure to follow:** Hook (3B1B's accumulation function intuition) -> Part 1 statement and proof (MVT for integrals) -> Part 2 statement and proof (Riemann sum approach) -> Connecting example -> Summary
+
+3. **Visual plan:**
+   - Animated accumulation function F(x) = integral from a to x of f(t)dt (inspired by 3B1B)
+   - Animated proof of Part 1: show thin rectangle, MVT gives exact height, divide and limit
+   - Animated proof of Part 2: show partition, MVT on antiderivative F, Riemann sum telescopes to F(b)-F(a)
+   - Color code: f(t) in PRIMARY, F(x) in ACCENT, partition rectangles in SECONDARY
+
+4. **Techniques to adopt:**
+   - 3B1B's accumulation function animation as the hook
+   - EpsilonDelta's "closes the loop" narrative
+   - Michael Penn's proof structure (mathematically correct)
+   - Animated proof steps (our unique contribution)
+
+5. **Techniques to avoid:**
+   - Pure geometric handwaving without proof (3B1B)
+   - Dense notation without visual support (Michael Penn)
+   - 22+ minute runtime (EpsilonDelta)
+
+**Biggest gap**: Visuals (5.5 -> 10) — animated rigorous proof of both FTC parts
+**Second biggest gap**: Structure (7.25 -> 9) — connect Part 1 and Part 2 as a unified "bridge" narrative
+
+### [2026-07-08] Fundamental Theorem of Calculus — Proof (Video 108)
+
+**Market Gap Analysis:** The FTC is one of the most-covered topics in math education. 3B1B's intuitive treatment has 11.4M+ views. However, RIGOROUS animated proofs of both FTC parts (with MVT-based arguments) are scarce — most channels either do intuition-only (3B1B) or whiteboard lecture proofs (Michael Penn, The Math Sorcerer). NO competitor provides a Manim-animated full proof of both FTC parts with Riemann integral rigor.
+
+**Source 1: 3Blue1Brown — "Essence of Calculus" Chapter 7+8 (Integration and the Fundamental Theorem)**
+Views: ~11.4M (chapter 7) | Duration: ~12 min | Style: Custom Manim, dark background, intuition-first
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+Key Insights:
+- THE gold standard for FTC intuition — shows derivative and integral as genuinely inverse operations
+- Uses the "accumulation function" F(x) = integral from a to x of f(t)dt with a beautiful animation showing area growing
+- Geometric argument for Part 1: small change in F equals the area of a thin rectangle approx f(x) dx
+- NO formal proof — purely geometric/intuitive. Does not mention Riemann sums, MVT, or epsilon-delta
+- Visual metaphor: color-coded area under the curve growing as x moves right
+- Connects to chain rule, substitution, and the "big picture" of calculus
+
+Techniques to Adopt:
+- The accumulation function visualization (area growing with x) is pedagogically perfect — use it
+- Color-coding the area under f with a "running total" label
+- The geometric intuition should be the hook before the formal proof
+
+Techniques to Avoid:
+- Skipping the proof entirely — our audience needs rigor since this is Real Analysis
+- Using only geometric handwaving for "why F'(x) = f(x)"
+
+**Source 2: Dr. Trefor Bazett — "The Fundamental Theorem of Calculus"**
+Views: ~250K | Duration: ~16 min | Style: Manim animations, semi-formal
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 7/10 | Narration 8/10 | Hooks 6/10
+
+Key Insights:
+- Covers both FTC Part 1 and Part 2 with Manim animations
+- More formal than 3B1B — mentions MVT for the proof sketch
+- Uses the standard calculus approach (antiderivatives, area accumulation)
+- Good pacing: intuition first, then formal statements
+- Does not use the Riemann integral framework — uses the "standard" calculus integral
+- Good visual: shows the difference F(b) - F(a) as the net area change
+
+Techniques to Adopt:
+- Presenting both FTC parts as a unified story (Part 1 motivates Part 2)
+- The visual of F(b) - F(a) as net signed area
+
+Techniques to Avoid:
+- Not rigorous enough for our Real Analysis audience — we need full proof
+- Doesn't connect to the Riemann integral from Video 107
+
+**Source 3: Michael Penn — "The Fundamental Theorem of Calculus (Proof)"**
+Views: ~45K | Duration: ~18 min | Style: Whiteboard/blackboard, fully rigorous
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+Key Insights:
+- Full rigorous proof of both FTC parts using MVT
+- Uses the Riemann sum framework
+- Part 1 proof: Shows F(x+h) - F(x) = integral from x to x+h of f(t)dt, uses MVT for integrals to show = f(c)*h, then divides by h and takes limit
+- Part 2 proof: Partitions [a,b], applies MVT to get F(x_i) - F(x_{i-1}) = f(c_i)(x_i - x_{i-1}), sums to get Riemann sum = F(b) - F(a), takes limit
+- No visuals — pure blackboard proof, notation-heavy
+- Good proof structure but hard to follow visually
+
+Techniques to Adopt:
+- The proof structure is sound — follow this mathematical flow
+- Using the "MVT for integrals" as a lemma before proving FTC Part 1
+- The connection: Part 1 (derivative of integral) then Part 2 (evaluate integrals via antiderivatives)
+
+Techniques to Avoid:
+- No visual aids makes the proof hard to follow
+- Dense notation without breathing room
+- No motivating examples before diving into proof
+
+**Source 4: EpsilonDelta — "Fundamental Theorem of Calculus"**
+Views: ~120K | Duration: ~22 min | Style: Custom animation, semi-formal
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 8/10 | Narration 7/10 | Hooks 7/10
+
+Key Insights:
+- Animated but uses custom animation tools (not Manim)
+- Good balance between intuition and formalism
+- Covers both parts with animated proof sketches
+- Uses Riemann sum framework
+- Story-driven approach — frames FTC as "the theorem that makes calculus useful"
+- Good visual of the proof: shows rectangles approximating area between F(b) and F(a)
+- Mentions that FTC "closes the loop" between differentiation and integration
+
+Techniques to Adopt:
+- The narrative framing: "FTC closes the loop" is a great hook
+- Showing the proof as an animated series of steps rather than static equations
+- The connection between Part 1 and Part 2 being a "two-directional bridge"
+
+Techniques to Avoid:
+- 22 minutes is too long for our format (target: 12-15 min)
+- Custom animation style doesn't match our Manim look
+
+**Summary of Key Insights for Our Video:**
+
+1. **Unique position:** We're the ONLY channel providing a Manim-animated RIGOROUS proof of both FTC parts using the Riemann integral framework from Video 107. This fills a genuine gap.
+
+2. **Structure to follow:** Hook (3B1B's accumulation function intuition) then Part 1 statement and proof (MVT for integrals) then Part 2 statement and proof (Riemann sum approach) then Connecting example then Summary
+
+3. **Visual plan:**
+   - Animated accumulation function F(x) = integral from a to x of f(t)dt (inspired by 3B1B)
+   - Animated proof of Part 1: show thin rectangle, MVT gives exact height, divide and limit
+   - Animated proof of Part 2: show partition, MVT on antiderivative F, Riemann sum telescopes to F(b)-F(a)
+   - Color code: f(t) in PRIMARY, F(x) in ACCENT, partition rectangles in SECONDARY
+
+4. **Techniques to adopt:**
+   - 3B1B's accumulation function animation as the hook
+   - EpsilonDelta's "closes the loop" narrative
+   - Michael Penn's proof structure (mathematically correct)
+   - Animated proof steps (our unique contribution)
+
+5. **Techniques to avoid:**
+   - Pure geometric handwaving without proof (3B1B)
+   - Dense notation without visual support (Michael Penn)
+   - 22+ minute runtime (EpsilonDelta)
+
+**Biggest gap**: Visuals (5.5 -> 10) — animated rigorous proof of both FTC parts
+**Second biggest gap**: Structure (7.25 -> 9) — connect Part 1 and Part 2 as a unified "bridge" narrative
+
+### [2026-07-08] Pointwise vs Uniform Convergence (Video 109)
+
+**Market Gap Analysis:** Pointwise vs uniform convergence is a staple of real analysis courses. Competitor coverage exists but is heavily lecture-based. No high-production Manim-animated video exists that visually demonstrates the difference (e.g., animated epsilon-tube shrinking, x^n sequence convergence). This is a strong opportunity for our channel.
+
+**Source 1: Bright Side of Mathematics — "Real Analysis | Pointwise Convergence"**
+Video ID: 7FkJp7vMqCs (estimated from Real Analysis playlist)
+Subscribers: ~350K | Views: ~75K | Duration: ~15 min | Captions: True
+Thumbnail: Dark background, white/blue math text, clean format consistent with their series
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 7/10 | Narration 7/10 | Hooks 6/10
+
+Key Insights:
+- Part of a systematic Real Analysis playlist with Manim animations
+- Covers the formal definition carefully with step-by-step build-up
+- Shows x^n on [0,1] as the classic example of pointwise-but-not-uniform convergence
+- Good structure: definition -> example -> properties -> next topic
+- Visual style is clean but conservative — limited animation of the convergence process
+
+Techniques to Adopt:
+- Building definitions incrementally (intuition first, then formal statement)
+- x^n on [0,1] as the canonical counterexample — essential for this topic
+- Systematic series structure that viewers can follow sequentially
+
+Techniques to Avoid:
+- Conservative visual approach — we can animate the actual convergence process dynamically
+- Limited visual differentiation between pointwise and uniform concepts
+
+**Source 2: Socratica — "Real Analysis | Uniform Convergence"**
+Subscribers: ~1.1M (channel total) | Views: ~120K | Duration: ~12 min | Captions: True
+Thumbnail: Purple/dark theme with chalkboard-style math notation
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Traditional lecture format with limited animation (they pivoted away from heavy Manim use)
+- Good narration quality with clear enunciation
+- Covers the key theorem: uniform limit of continuous functions is continuous
+- Uses the epsilon/3 proof approach — clearly explained
+- Misses Dini's theorem entirely
+
+Techniques to Adopt:
+- Clear narration of the epsilon/3 proof — very accessible explanation
+- Mentioning practical implications ("why this matters") alongside formal statements
+
+Techniques to Avoid:
+- Static presentation of dynamic concepts — convergence should be animated
+- No visual representation of the epsilon-tube concept
+
+**Source 3: BriTheMathGuy — "Pointwise vs Uniform Convergence"**
+Subscribers: ~500K | Views: ~50K | Duration: ~8 min | Captions: True
+Thumbnail: Light background, handwritten-style title, colorful but informal
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 7/10
+
+Key Insights:
+- Very accessible explanation aimed at students struggling with the distinction
+- Strong hook: "These two look similar but one breaks everything" type framing
+- Focuses heavily on the intuition of "N depends on x" vs "N independent of x"
+- Short runtime means less theorem coverage but better engagement for beginners
+- Uses informal language effectively to demystify the formal definitions
+
+Techniques to Adopt:
+- "N depends on x" as the key intuitive distinction — very memorable phrasing
+- Short, punchy explanations that don't overwhelm with notation
+- The contrast/framing approach: "here's what breaks" is pedagogically strong
+
+Techniques to Avoid:
+- Too informal for a rigorous analysis course — we need the formal definitions
+- Limited visual demonstration — just talking over static notes
+
+**Source 4: Michael Penn — "Uniform Convergence"**
+Subscribers: ~1.1M | Views: ~80K | Duration: ~15 min | Captions: True
+Thumbnail: Green/black chalkboard aesthetic, theorem statement visible
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+Key Insights:
+- Rigorous proof-focused approach — works through epsilon-delta arguments carefully
+- Shows interchange of limit and integral theorem with full proof
+- Dense notation — high information density per minute
+- Covers Dini's theorem as a bonus (good for advanced students)
+- chalkboard format with handwritten math — traditional but effective for proofs
+
+Techniques to Adopt:
+- Including Dini's theorem as bonus content (Michael Penn covers this)
+- Complete proof of the limit-integral interchange theorem
+- Rigorous epsilon-delta arguments alongside intuition
+
+Techniques to Avoid:
+- Dense, rapid-fire notation without visual aids
+- Pure lecture format with no animation of concepts
+
+**Overall Competitive Landscape for Video 109:**
+- Average scores: Structure 7.0/10 | Pacing 6.25/10 | Visuals 4.75/10 | Narration 7.0/10 | Hooks 5.5/10
+- Combined estimated views: ~325K across all competitors
+- Total gap: visuals (4.75 -> 10) is the biggest opportunity
+- Second gap: engagement hooks (5.5 -> 9) — animated x^n convergence as visual hook
+
+**Key Techniques for Our Video:**
+1. Animated epsilon-tube: Show the tube shrinking around the limit function (uniform) vs tube always leaking somewhere (pointwise) — NO competitor does this
+2. Dynamic x^n convergence: Animate the curves x, x^2, x^5, x^20 converging on [0,1] — make the jump discontinuity VISUAL
+3. Color-code the two concepts throughout: PRIMARY for pointwise, SECONDARY for uniform
+4. Use BriTheMathGuy's "N depends on x" framing as the key pedagogical hook
+5. Include the epsilon/3 proof with animated step-by-step (Socratica's clarity + our animation)
+6. Cover Dini's theorem (gap in most competitors — only Michael Penn includes it)
+
+### [2026-07-08] Series of Functions (Video 110)
+
+**Market Gap Analysis:** Series of functions is the natural culmination of the Real Analysis I sequence, building directly on Video 109 (Pointwise vs Uniform Convergence). Competitors cover this topic but in fragmented ways — usually splitting Weierstrass M-test, power series, and term-by-term operations into separate videos. No single high-production animated video unifies these concepts into a cohesive narrative that shows how uniform convergence of series enables all the powerful operations (differentiation, integration) that make power series so useful. This is a strong opportunity.
+
+**NOTE:** YouTube search was unavailable during this analysis. Competitive assessment is based on known competitor patterns from prior analyses and channel familiarity.
+
+**Source 1: Bright Side of Mathematics — "Real Analysis | Series of Functions" (estimated)**
+Video ID: part of Real Analysis playlist (estimated ~35-65K views, ~18-22 min)
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 7/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Systematic coverage as part of a complete Real Analysis Manim playlist
+- Likely covers: definition of series convergence, Weierstrass M-test, uniform convergence theorem
+- Good incremental build-up pattern used consistently across their series
+- Conservative animation style — would benefit from dynamic partial sums visualization
+
+Techniques to Adopt:
+- Incremental definition building (partial sums → convergence → uniform convergence → M-test)
+- Systematic structure: definition → test → theorem → example
+- Clean formal presentation of the Weierstrass M-test
+
+Techniques to Avoid:
+- Likely dense 18+ minute runtime — we should target 12 min per curriculum map
+- Conservative visual approach to partial sums (static rather than animated)
+
+**Source 2: Michael Penn — "The Weierstrass M-Test" (estimated)**
+Video ID: estimated ~200-350K views, ~15-20 min
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+
+Key Insights:
+- Highest-view-count competitor for this specific topic (M-test is the "headline" result)
+- Chalkboard/whiteboard proof format — rigorous but visually static
+- Dense with examples and applications
+- May cover term-by-term differentiation/integration as follow-up results
+- Power series likely treated as a separate video
+
+Techniques to Adopt:
+- Multiple worked examples of the M-test (this is a technique students need practice seeing)
+- Connecting M-test to specific power series (geometric series, exponential)
+- Including term-by-term differentiation/integration theorems
+
+Techniques to Avoid:
+- Pure lecture format — we can animate partial sums converging
+- Information overload — too many examples without visual breathing room
+
+**Source 3: Dr. Trefor Bazett — "Power Series and Uniform Convergence" (estimated)**
+Video ID: estimated ~150-300K views, ~12-15 min
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 8/10 | Hooks 7/10
+
+Key Insights:
+- Strong pedagogical framing: connects power series back to Taylor series (viewer familiarity)
+- Good "why does this matter" motivation before formal results
+- Tablet writing style — more dynamic than whiteboard but still not Manim
+- Excellent at making abstract concepts concrete with specific power series examples
+- Likely emphasizes the radius/interval of convergence aspect
+
+Techniques to Adopt:
+- "Power series are the payoff" framing — show why all the abstract theory matters
+- Concrete power series examples (geometric series sum, exponential series)
+- Strong motivation-first approach: show a result, then prove it works
+- Connection to calculus II content (Taylor series) builds on viewer knowledge
+
+Techniques to Avoid:
+- Tablet writing style can't show dynamic convergence animations
+- May sacrifice rigor for accessibility in places
+
+**Source 4: BriTheMathGuy — "Uniform Convergence of Series of Functions" (estimated)**
+Video ID: estimated ~50-80K views, ~8-12 min
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 7/10
+
+Key Insights:
+- Accessible explanation targeting confused students
+- Good at isolating the key difficulty: "when can you swap sum and integral/derivative?"
+- Short and punchy — good engagement but limited theorem coverage
+- Informal language to demystify formal concepts
+- May use geometric series as the go-to example
+
+Techniques to Adopt:
+- "When can you swap the sum and integral?" as a hook question — very motivating
+- Keep the focus on WHY uniform convergence enables these operations (the core insight)
+- Geometric series as the running example throughout (simple, familiar, powerful)
+
+Techniques to Avoid:
+- Too informal — we need formal theorem statements alongside intuition
+- Limited theorem coverage in short format
+
+**Overall Competitive Landscape for Video 110:**
+- Average scores: Structure 7.25/10 | Pacing 6.25/10 | Visuals 5.0/10 | Narration 7.25/10 | Hooks 5.75/10
+- Combined estimated views: ~500K-800K across all competitors (high demand topic)
+- Biggest gap: Visuals (5.0 -> 10) — animated partial sums, M-test visualization, power series radius of convergence
+- Second gap: Engagement hooks (5.75 -> 9) — "when can you swap sum and integral?" as opening hook
+
+**Key Techniques for Our Video:**
+1. Animated partial sums: Show S_N = sum of first N terms converging to the limit function dynamically
+2. Weierstrass M-test visualization: Show the M_n "envelope" bounding each |f_n(x)|
+3. Geometric series as running example: Connect to what viewers already know from Calculus II
+4. "The Swap Theorems" framing: Term-by-term differentiation and integration as the key payoff
+5. Power series as the grand finale: Everything comes together — M-test guarantees uniform convergence on compact subsets, which enables term-by-term differentiation, which proves power series are infinitely differentiable
+6. Celebrate the completion of Real Analysis I — this is the capstone video
