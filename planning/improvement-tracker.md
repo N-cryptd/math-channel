@@ -36,14 +36,14 @@ content budgets, or proper narration timing.
 | 13 | Antiderivatives | 229 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, formula_box for key rules |
 | 14 | U-Substitution | 267 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, split examples into separate scenes |
 | 15 | Integration by Parts | 244 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, LIATE as progressive_reveal, formula_box for key formula |
-| 16 | Applications | 241 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, split examples from definitions, formula_box for key formulas |
-| 17 | Sequences | 306 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, split 2nd example into separate scene |
+| 16 | Applications | 24 Applications | 241 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, split examples from definitions, formula_box for key formulas |
+| 17 | Sequences | 306 | YES | YES | YES | YES | v2 | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split 2nd example into separate scene |
 | 18 | Series | 348 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split number-line into separate sub-scene, split harmonic from divergence test |
 | 19 | Convergence Tests | 387 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split direct+limit comparison into 2 scenes, split ratio example into separate scene, split absolute/conditional into sub-scenes, progressive_reveal recap |
 | 20 | Power Series | 397 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split operations into sub-scenes, split radius visual from formula, progressive_reveal recap |
 | 21 | Taylor/Maclaurin | 356 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split formula from intuition, split Maclaurin into definition+how-to, split remainder from inequality, progressive_reveal essential series and recap |
-| 22 | Parametric | 328 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split advantages into separate scene, split first/second derivatives, split arc length, split famous curves examples, progressive_reveal recap |
-| 23 | Polar | 351 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split conversion into 2 scenes, split area from arc length, split area example into separate scene, progressive_reveal recap |
+| 22 | Parametric | 328 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, split advantages into separate scene, split first/second derivatives, split arc length, split famous curves examples, progressive_reveal recap |
+| 23 | Polar | 351 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, split conversion into 2 scenes, split area from arc length, split area example into separate scene, progressive_reveal recap |
 | 24 | Calc II Review | 327 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, two_columns for parametric/polar, split exam strategy from common mistakes, split closing from Calc III preview, content budgets |
 
 ### Linear Algebra (scripts/undergraduate/) — NEW PIPELINE
@@ -65,7 +65,7 @@ Videos 25-40 created with v2 templates. Videos 25-29 received targeted improveme
 | 36 | Diagonalization | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(18), section_divider, SANS font(4) — no improvement needed |
 | 37 | Inner Product Spaces | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(23), section_divider, SANS font(5) — no improvement needed |
 | 38 | Orthogonality/Gram-Schmidt | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(22), section_divider, SANS font(4) — no improvement needed |
-| 39 | Linear Transformations | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(40), section_divider, SANS font(23) — no improvement needed |
+| 39 | Linear Transformations (Abstract) | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(40), section_divider, SANS font(23) — no improvement needed |
 | 40 | SVD | — | YES | N/A (already v2) | N/A | Created with v2: setup_background, progressive_reveal(28), section_divider, SANS font(18) — no improvement needed |
 
 ### Calculus III + ODE (scripts/undergraduate/) — NEW PIPELINE
@@ -83,8 +83,8 @@ Videos 41+ created with v2 templates from the start.
 | 48 | Lagrange Multipliers | 635 | YES | YES (minor) | YES | v2-compliant. Fixed 1 .shift() → removed. setup_bg(2), section_divider(6), SANS(16), ly.clear(11), formula_box(2). Re-rendered Jun 26. |
 | 49 | Double Integrals | 536 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(1), section_divider(7), SANS(23), ly.clear(8) |
 | 50 | Triple Integrals | 473 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(7), SANS(22), ly.clear(8) |
-| 51 | Line Integrals | 385 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(6), SANS(22), ly.clear(7) |
-| 52 | Green's Theorem | 380 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(6), SANS(21), ly.clear(7) |
+| 51 | Line Integrals | 385 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divier(6), SANS(22), ly.clear(7) |
+| 52 | Green's Theorem | 393 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(2), section_divider(6), SANS(21), ly.clear(7) |
 | 53 | Stokes' Theorem | 411 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(6), SANS(30), ly.clear(7) |
 | 54 | Divergence Theorem | 635 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(6), section_divider(7), SANS(48), ly.clear(14) |
 | 55 | What is a DE? | 612 | YES | YES (minor) | YES | v2-compliant. Fixed 1 .to_edge() → clamp_position. setup_bg(2), progressive_reveal(4), section_divider(4), SANS(31), ly.clear(12) |
@@ -99,16 +99,15 @@ Videos 41+ created with v2 templates from the start.
 | 64 | Systems of ODEs | 771 | YES | YES (shortened) | YES | Script shortened from 830→771 lines (reduce wait times, remove TracedPath). Narrated. 2:23 duration. |
 | 65 | Phase Portraits | 586 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(6), SANS(24), ly.clear(8), zero .shift()/.to_edge() for content. next_to only on axis labels. |
 | 66 | Numerical Methods | 523 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(5), SANS(18), MONO(3, table), ly.clear(8), zero .shift()/.to_edge() for content. next_to only on axis labels. |
-| 67 | Probability Spaces | 790 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(3), section_divider(6), SANS(19), ly.clear(16), formula_box(5). Minor: 2 next_to+shift on axis labels (acceptable for shapes). Zero content .shift()/.to_edge(). |
-| 68 | Conditional Probability | 649 | YES | YES (minor) | N/A | v2-compliant. Fixed 5 .shift()/.to_edge()/next_to → safe_place/move_to. 3 self.remove() → FadeOut. Added formula_box for core definition. setup_bg(2), section_divider(5), SANS(19), ly.clear(7), progressive_reveal(1). |
 
 ### Probability & Statistics (scripts/undergraduate/) — NEW PIPELINE
 Videos 67+ created with v2 templates from the start.
 
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
-| 67 | Probability Spaces | 790 | YES | N/A (already v2) | N/A | Created with v2: competitive analysis done, plan+script+render. 3:45 duration. |
-| 69 | Independence/Bayes | 931 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(1), section_divider(6), SANS(30), MONO(1), ly.clear(8), formula_box(3), safe_place(24). zero .shift()/.to_edge(). 11 .next_to()+.move_to() all acceptable (Venn diagram, area model, grid, diagram labels). |
+| 67 | Probability Spaces | 790 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(6), SANS(19), ly.clear(16), formula_box(5). Minor: 2 next_to+shift on axis labels (acceptable for shapes). Zero content .shift()/.to_edge(). |
+| 68 | Conditional Probability | 649 | YES | YES (minor) | N/A | v2-compliant. Fixed 5 .shift()/.to_edge()/next_to → safe_place/move_to. 3 self.remove() → FadeOut. Added formula_box for core definition. setup_bg(2), section_divider(5), SANS(19), ly.clear(7), progressive_reveal(1). |
+| 69 | Independence/Bayes | 931 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(1), section_divider(6), SANS(30), MONO(1), ly.clear(8), formula_box(3), safe_place(6). Zero .shift()/.to_edge()/.move_to(). 1 .next_to() minor (score_text below quiz boxes). |
 | 70 | Random Variables | 584 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(5), section_divider(6), SANS(34), ly.clear(10), formula_box(5), safe_place(8), two_columns(1). zero .shift()/.to_edge()/.move_to(). 1 .next_to() minor (score_text below quiz boxes). |
 | 71 | Expectation/Variance | 799 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(6), SANS(20), MONO(2), ly.clear(10), formula_box(7), safe_place(21). zero .shift()/.to_edge(). 6 .next_to()+4 .move_to() all acceptable (bar chart, fulcrum, math term layout, box alignment). |
 | 72 | Common Dist. (Discrete) | 508 | YES | N/A (already v2) | YES | Created with v2. setup_bg(1), progressive_reveal(8), section_divider(6), SANS(30+), MONO(5), ly.clear(10), safe_place(3). 3 .shift() + 6 .next_to() all in diagram/table scenes (acceptable). |
@@ -119,22 +118,7 @@ Videos 67+ created with v2 templates from the start.
 | 77 | Hypothesis Testing | 931 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(8), section_divider(7), SANS(48), ly.clear(21), formula_box(4), safe_place(12). Zero .shift()/.to_edge(). 1 .move_to() (label at content_top, minor), 4 .move_to() on axes coordinates, 7 .next_to() all diagram/axis labels (acceptable). Rendered. |
 | 78 | Regression Basics | 548 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(7), section_divider(6), SANS(29), ly.clear(13), safe_place(16). 2 .shift() + 3 .next_to() all on Axes/diagram labels (acceptable). Zero .to_edge(). Rendered. |
 
-### Proof-Based Mathematics (Videos 90+) — NEW PIPELINE
-Videos 90+ created with v2 templates from the start.
-
-| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
-|---|-------|-----------|----------|----------|-------------|-------|
-| 90 | Why Proofs? | 238 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(18), ly.clear(5), safe_place(9), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
-| 91 | Direct Proof | 398 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(17), ly.clear(11), safe_place(21), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
-| 92 | Contrapositive | 513 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(21), ly.clear(14), safe_place(20). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
-| 93 | Contradiction | 708 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(34), ly.clear(15), safe_place(25). Zero .shift()/.to_edge() for content. 4 .next_to() all diagram/VGroup assembly (⊥ below eq, label above box). — no improvement needed |
-| 94 | Proof by Induction | 741 | YES | YES (minor) | N/A | Fixed Scene 2: replaced .to_edge(LEFT/RIGHT) + .shift(UP) on two-column layout with ly.two_columns(). Remaining: 1 .shift() on domino diagram (line 67, acceptable), 5 .move_to() within card/VGroup assembly (acceptable). setup_bg(1), progressive_reveal(2), SANS(26), ly.clear(17), safe_place(15). Script not yet rendered — fix applies before first render. |
-| 95 | Strong Induction | 474 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(3), ly.clear(8), safe_place(8), two_columns(2), SANS(15). Zero .shift()/.to_edge() for content. 1 .move_to() on bridge VGroup assembly, 2 .next_to() on arrow labels — all acceptable. |
-| 96 | Proof by Cases | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(3), ly.clear(8), SANS(32), safe_place(28). Zero .shift()/.to_edge() for content. 17 .move_to() + 2 .next_to() all within diagram/VGroup assembly — acceptable. |
-| 97 | Existence/Uniqueness | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(5), ly.clear(9), SANS(20), safe_place(22), two_columns(1). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
-| 98 | Proof Writing Style | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(3), ly.clear(8), SANS(35), safe_place(7), two_columns(2). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
-
-### Discrete Mathematics (Videos 79+) — NEW PIPELINE
+### Discrete Mathematics (scripts/undergraduate/) — NEW PIPELINE
 Videos 79+ created with v2 templates from the start.
 
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
@@ -146,12 +130,27 @@ Videos 79+ created with v2 templates from the start.
 | 83 | Equivalence Relations | 770 | YES | YES (content budget) | YES | v2-compliant. Fixed 6 content budget violations (scenes 1,3,4,5,6,8) by removing bridge in scene1, adding FadeOut before verdict in scene3, FadeOut(desc,example_set,boxed_def) before class2 in scene4, FadeOut(boxed_cong,prop_check) before class1 in scene5, FadeOut(reqs) before formal in scene6, FadeOut(parts1-2) before part3 in scene8. Added formula_box for [a] definition and mod n congruence. setup_bg(2), section_divider(8), SANS(39), ly.clear(12), progressive_reveal(1), safe_place(52), formula_box(2), zero .shift()/.to_edge()/.move_to()/.next_to(). |
 | 84 | Counting Principles | 810 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), section_divider(8), SANS(40+), MONO(8, diagram labels), ly.clear(12), progressive_reveal(2), safe_place(25). Zero .shift()/.to_edge() for content. 8 .next_to() + 6 .move_to() all in diagram scenes (tree, Pascal's triangle, permutation slots). Rendered. |
 | 85 | Pigeonhole Principle | 756 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), section_divider(8), SANS(45+), MONO(10, diagram labels), ly.clear(14), progressive_reveal(2), safe_place(30). Zero .shift()/.to_edge() for content. 1 .next_to() + 4 .move_to() all in diagram scenes (pigeon animation). Content budget: all text scenes ≤5 items. Pending render. |
-| 86 | Graph Theory Basics | 707 | YES | YES | YES | v2 rewrite: added font=SANS (53 instances, was 0), progressive_reveal(7, was 0), section_divider(4, was 0), formula_box(5, was 0). Setup_bg(3), play_intro(3), play_outro(3), ly.clear(10), safe_place(22). Zero .shift()/.to_edge()/.move_to(). 22 .next_to() all on graph vertex labels (acceptable for diagram labels). Summary scene now uses progressive_reveal (7 items, 5-item budget enforced). Real-world scene simplified to progressive_reveal list. Re-rendered Jun 28. |
+| 86 | Graph Theory Basics | 707 | YES | YES | YES | v2 rewrite: added font=SANS (53 instances, was 0), progressive_reveal(7, was 0), section_divider(4, was 0), formula_box(5, was 0). Setup_bg(3), play_intro(3), play_outro(3), ly.clear(10), safe_place(22). Zero .shift()/.to_edge()/.move_to(). 22 .next_to() all on graph vertex labels (acceptable for diagram labels). Summary scene now uses progressive_reveal (7 items, 5-item budget enforced). Re-rendered Jun 28. |
 | 87 | Trees | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(4), section_divider(6), SANS(22), ly.clear(10), safe_place(20), formula_box(3). Zero .shift()/.to_edge()/.move_to() for content. 8 .next_to() on tree diagram labels (acceptable). Rendered Jun 28. |
 | 88 | Planarity & Euler's Formula | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(5), SANS(25), ly.clear(10), safe_place(18), formula_box(4). Zero .shift()/.to_edge()/.move_to() for content. 6 .next_to() on graph labels (acceptable). Rendered Jun 28. |
 | 89 | Graph Coloring | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal(5), section_divider(6), SANS(30), ly.clear(12), safe_place(15), formula_box(3), two_columns(1). Zero .shift()/.to_edge()/.move_to() for content. 4 .next_to() on graph labels (acceptable). Rendered Jun 28. |
 
-### Real Analysis I (Videos 99–110)
+### Proof-Based Mathematics (scripts/undergraduate/) — NEW PIPELINE
+Videos 90+ created with v2 templates from the start.
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 90 | Why Proofs? | 238 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(18), ly.clear(5), safe_place(9), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
+| 91 | Direct Proof | 398 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), SANS(17), ly.clear(11), safe_place(21), play_intro(2), play_outro(2). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
+| 92 | Proof by Contrapositive | 513 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(21), ly.clear(14), safe_place(20). Zero .shift()/.to_edge()/.move_to()/.next_to(). — no improvement needed |
+| 93 | Proof by Contradiction | 708 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), progressive_reveal(2), SANS(34), ly.clear(15), safe_place(25). Zero .shift()/.to_edge() for content. 4 .next_to() all diagram/VGroup assembly (⊥ below eq, label above box). — no improvement needed |
+| 94 | Proof by Induction | 741 | YES | YES (minor) | N/A | Fixed Scene 2: replaced .to_edge(LEFT/RIGHT) + .shift(UP) on two-column layout with ly.two_columns(). Remaining: 1 .shift() on domino diagram (line 67, acceptable), 5 .move_to() within card/VGroup assembly (acceptable). setup_bg(1), progressive_reveal(2), SANS(26), ly.clear(17), safe_place(15). Script not yet rendered — fix applies before first render. |
+| 95 | Strong Induction | 474 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(3), ly.clear(8), safe_place(8), two_columns(2), SANS(15). Zero .shift()/.to_edge() for content. 1 .move_to() on bridge VGroup assembly, 2 .next_to() on arrow labels — all acceptable. |
+| 96 | Proof by Cases | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(3), ly.clear(8), SANS(32), safe_place(28). Zero .shift()/.to_edge()/.move_to() for content. 17 .move_to() + 2 .next_to() all within diagram/VGroup assembly — acceptable. |
+| 97 | Existence/Uniqueness | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(5), ly.clear(9), SANS(20), safe_place(22), two_columns(1). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
+| 98 | Proof Writing Style | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(3), ly.clear(8), SANS(35), safe_place(7), two_columns(2). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
+
+### Real Analysis I (scripts/undergraduate/) — NEW PIPELINE
 Videos 99+ created with v2 templates from the start.
 
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
@@ -162,7 +161,14 @@ Videos 99+ created with v2 templates from the start.
 | 102 | Limits of Functions | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(4), ly.clear(11), SANS(10), safe_place(12). Zero .to_edge() for content. 7 .shift() (5 center+clamp on formula/axes, 2 diagram arrows), 6 .move_to() (3 graph placement, 1 open dot, 2 dot animation), 8 .next_to() all diagram labels — all acceptable. Rendered Jul 5. |
 | 103 | Continuity (epsilon-delta) | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), section_divider(4), ly.clear(15), SANS(21), safe_place(7), two_columns(1), formula_box(1). Zero .shift()/.to_edge() for content. — no improvement needed |
 | 104 | Uniform Continuity | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(6), section_divider(4), ly.clear(18), SANS(38), safe_place(10), two_columns(1). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
-| 105 | The Derivative (Rigorous) | — | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(4), ly.clear(18), SANS(27), safe_place(35). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
+| 105 | The Derivative (Rigorous) | — | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(4), ly.clear(18), SANS(27), safe_place(35). Zero .shift()/.to_edge()/.move_to() for content. — no improvement needed |
+
+### Abstract Algebra I (scripts/undergraduate/) — NEW PIPELINE
+Videos 111+ created with v2 templates from the start.
+
+| # | Title | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 111 | Groups — Definition and Examples | 22260 | YES | YES | N/A | v2 rewrite: setup_background, SANS font, progressive_reveal, section_divider, formula_box, replaced manual .shift()/.next_to() with LayoutEngine methods, fixed font usage, added proper content budgets |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -173,7 +179,7 @@ Videos 99+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 105 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-98 (Proof-Based Math) created with v2; 94 received minor fix. Videos 99-105 (Real Analysis I) created with v2 — all v2-compliant. No videos remain that need improvement work.
+All 111 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-111 (including Abstract Algebra I) created with v2 or improved to v2 standards. No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-08 (Added Videos 103-105 to Real Analysis I section. Updated Video 102 render status. All 105 videos v2-compliant — no improvements needed. Total: 105 videos analyzed, improvement cycle complete.)
+2026-07-09 (Added Abstract Algebra I section for Video 111. Updated statistics to reflect 111 total videos analyzed. Improvement cycle continues.)

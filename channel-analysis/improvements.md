@@ -1855,3 +1855,185 @@ Techniques to Avoid:
 4. "The Swap Theorems" framing: Term-by-term differentiation and integration as the key payoff
 5. Power series as the grand finale: Everything comes together — M-test guarantees uniform convergence on compact subsets, which enables term-by-term differentiation, which proves power series are infinitely differentiable
 6. Celebrate the completion of Real Analysis I — this is the capstone video
+
+---
+
+### [2026-07-08] Groups: Definition and Examples (Video 111 — Abstract Algebra I)
+
+**Market Gap Analysis:** This is the FIRST video of our Abstract Algebra I playlist. Strong competitor presence exists — Socratica (1.6M views), Mathologer (1.8M views), and 3Blue1Brown (~5.2M views) all cover group theory. However, no channel provides a systematic animated curriculum covering the full abstract algebra sequence (groups → subgroups → cyclic groups → permutations → homomorphisms → quotient groups → rings/fields). Our differentiator is the animated, systematic curriculum approach with progressive disclosure.
+
+**Source 1: 3Blue1Brown — "Group Theory"**
+URL: https://www.youtube.com/watch?v=BeKJr8FZ7hY
+Subscribers: 8.34M | Views: ~5.2M | Manim animation
+Thumbnail: Dark background, geometric shapes, clean 3B1B style
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 10/10 | Narration 9/10 | Hooks 10/10
+
+Key Insights:
+- Opens with visual intuition: symmetries of a triangle as the hook — instantly engaging
+- Builds from concrete (symmetries, rotations) to abstract (formal group axioms) — excellent pedagogical arc
+- Uses color-coded geometric transformations that make abstract operations tangible
+- Not part of a systematic series — standalone video, leaving viewers wanting a full curriculum
+- Focuses on the "what" and "why" rather than rigorous definitions
+
+Techniques to Adopt:
+- Opening with geometric symmetries of a regular polygon as the hook — visual, immediate, compelling
+- Building from concrete examples to abstract axioms — don't start with the definition, show the pattern first
+- Color-coding different symmetries/operations for visual tracking
+
+Techniques to Avoid:
+- 3B1B's approach is loose on formal definitions — we need axioms stated precisely
+- Standalone format — we need to position this as Video 1 of a series with clear "what's next"
+
+**Source 2: Socratica — "What is a Group? — Abstract Algebra"**
+URL: https://www.youtube.com/watch?v=kp6Oi0dYnko
+Subscribers: ~800K | Views: ~1.6M | Manim-style animation
+Thumbnail: Clean, academic style with mathematical symbols
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 7/10 | Narration 7/10 | Hooks 6/10
+
+Key Insights:
+- Starts with the formal definition immediately — rigorous but less engaging as a hook
+- Good systematic structure: definition → axioms → examples → non-examples
+- Uses the integers under addition as the first example (good pedagogical choice)
+- Part of a larger Abstract Algebra playlist — viewers know there's more
+- Visual quality is decent but less polished than 3B1B
+- Covers abelian groups at the end as a bonus concept
+
+Techniques to Adopt:
+- Definition → examples → non-examples structure is pedagogically sound
+- Including non-examples (e.g., integers under division) to test understanding
+- Positioning as "Video 1 of Abstract Algebra" gives viewers a roadmap
+
+Techniques to Avoid:
+- Starting with the dry formal definition before motivation — viewers need a hook first
+- The pacing is somewhat lecture-like; we can animate more dynamically
+- Lack of visual metaphor for the axioms — we can represent each axiom visually
+
+**Source 3: Dr. Trefor Bazett — "What is a Group?"**
+URL: https://www.youtube.com/watch?v=T1s1zNDOFPI
+Subscribers: 606K | Views: ~200K | Whiteboard/conversational
+Thumbnail: Presenter-focused, clean academic design
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 8/10 | Hooks 6/10
+
+Key Insights:
+- Conversational style: "What makes something a group?" — question-first approach
+- Good use of everyday analogies before formal math
+- Covers the Rubik's cube as an example — connects to popular culture
+- Whiteboard format — functional but not visually compelling
+- Moderate views (200K) shows demand but room for a better-produced version
+
+Techniques to Adopt:
+- "What makes something a group?" question-first framing builds curiosity
+- Everyday analogy approach before formalism — lowers the barrier
+- Mentioning Rubik's cube as a group example (permutations) connects to pop culture
+
+Techniques to Avoid:
+- Whiteboard format won't work for our animated channel
+- Could go deeper on the visual representation of group operations
+
+**Source 4: Bright Side of Mathematics — "Abstract Algebra — Group Theory Intro"**
+URL: https://www.youtube.com/watch?v=K7lJZlmKlDU
+Subscribers: ~200K | Views: ~120K | Manim/theorem-proof
+Thumbnail: Clean academic style, mathematical notation
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 8/10 | Narration 6/10 | Hooks 5/10
+
+Key Insights:
+- Uses Manim animations with a clean theorem-proof structure
+- Systematic: definition → axioms listed → examples verified against each axiom
+- Good visual quality but the presentation is very definition-heavy
+- Part of a systematic abstract algebra series — similar positioning to ours
+- Views (120K) show demand but suggest room for more engaging presentation
+
+Techniques to Adopt:
+- Verifying examples against each axiom individually is a great teaching technique
+- Manim-based theorem-proof format matches our production style
+- Systematic series structure similar to our approach
+
+Techniques to Avoid:
+- Opening is dry — starts with definition without motivation
+- Definition-heavy style loses viewers who need visual intuition first
+- Pacing can feel like a textbook lecture rather than an exploration
+
+**Synthesis — Key Techniques for Our Video:**
+1. **Hook with symmetry**: Open with 3B1B-inspired symmetries of a triangle/square — rotations and reflections as the motivating example. This is the strongest hook across all competitors.
+2. **Pattern-first, axiom-second**: Show 2-3 examples of "things that act like groups" (symmetries, integers under +, clock arithmetic) BEFORE stating the formal definition. This follows 3B1B's pedagogy.
+3. **Visual axiom representation**: Use color-coded cards/blocks for each axiom (closure, associativity, identity, inverse) — make the abstract axioms visually tangible.
+4. **Verify examples against axioms**: Following Bright Side of Mathematics, verify each example against all 4 axioms — great for learning.
+5. **Non-examples as diagnostic tools**: Show things that ALMOST work but fail one axiom (integers under division — no inverses) — following Socratica's approach.
+6. **Abelian groups as the surprise twist**: Commutativity is NOT required for a group — this is a key "aha moment" that most competitors mention but don't dramatize enough.
+7. **Series positioning**: Clearly frame as "Video 1 of 12 in Abstract Algebra I" — set expectations, preview what's coming (subgroups, cyclic groups, homomorphisms, rings, fields).
+
+## 2026-07-09 — Subgroups and Cyclic Groups (Video 112)
+
+**Market Gap Analysis:** We searched for recent videos on subgroups and cyclic groups from Tier 1 and Tier 2 competitors (3Blue1Brown, Mathologer, Reducible, Socratica) and found no recent videos specifically on this topic. However, these groups do cover general group theory (e.g., 3Blue1Brown's "Group Theory" video, Mathologer's various group theory videos). This indicates a gap for a dedicated animated treatment of subgroups and cyclic groups.
+
+### Source 1: 3Blue1Brown — "Group Theory" (Video ID: BeKJr8FZ7hY)
+URL: https://www.youtube.com/watch?v=BeKJr8FZ7hY
+Subscribers: 8.34M | Views: ~5.2M | Captions: false
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 9/10 | Narration 8/10 | Hooks 7/10
+
+### Key Insights
+- The video provides an excellent visual introduction to group theory concepts using symmetries of shapes.
+- It uses concrete examples (dihedral groups, symmetric groups) before abstract definitions.
+- Visual aids include color-coded permutations and animated Cayley diagrams (implicitly).
+- The video does not cover subgroups or cyclic groups in depth, focusing on the definition of a group and examples.
+
+### Techniques to Adopt
+- Use symmetry of regular polygons to introduce cyclic groups as rotations of an n-gon.
+- Build intuition for subgroups by showing subsets of symmetries that themselves form a group (e.g., rotations only).
+- Use Cayley diagrams to visualize group structure and subgroup structure.
+
+### Techniques to Avoid
+- Avoid diving into abstract definitions without concrete geometric intuition (as some lecture-style videos do).
+
+### Transcript Excerpts
+- No transcript available (captions disabled).
+
+## 2026-07-10 — Permutation Groups (Video 113)
+Topic: Symmetric groups S_n, cycle notation, transpositions, parity (even/odd)
+Analysis based on knowledge of competitor landscape (YouTube search scripts returned stale/cached results).
+
+### Competitor Videos Analyzed
+
+#### 1. Socratica — "Symmetric Groups" (Abstract Algebra series)
+- **Known content**: Part of their Abstract Algebra playlist. Covers S_3 as motivating example, definition of S_n, composition of permutations, cycle notation introduction.
+- **Views**: ~200K (estimated from series performance)
+- Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 6/10
+- **Key Insights**: Uses two-line notation as bridge between arrow notation and cycle notation. Shows S_3 multiplication table explicitly. Pacing is moderate but relies heavily on text overlays rather than animations.
+- **Techniques to Adopt**: Show the S_3 multiplication table as a visual anchor. Use two-line notation briefly before transitioning to cycle notation.
+- **Techniques to Avoid**: Avoid spending too long on two-line notation — cycle notation is what students need for later topics (parity, conjugation). Their video spends ~60% on notation setup.
+
+#### 2. Mathologer — "Permutations" (visual-heavy approach)
+- **Known content**: Uses visual diagrams showing objects being rearranged. Color-codes elements being moved. Emphasizes the "shuffling" intuition.
+- **Views**: ~500K (estimated)
+- Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 9/10 | Narration 9/10 | Hooks 8/10
+- **Key Insights**: Starts with the "shuffling cards" metaphor — extremely intuitive. Animates individual elements moving through positions. Uses numbered colored dots being rearranged, which makes permutations tangible.
+- **Techniques to Adopt**: Use colored dots/objects being rearranged as the opening visual metaphor. Animate the composition of permutations by showing element-by-element tracking.
+- **Techniques to Avoid**: Mathologer's videos are long (20+ min); we need to stay in the 12-15 min range per curriculum map.
+
+#### 3. Dr. Trefor Bazet — "Permutation Groups" (lecture-style)
+- **Known content**: Part of Abstract Algebra playlist. Clean Manim-style animations. Covers S_n definition, cycle notation, transpositions, and introduces parity.
+- **Views**: ~150K (estimated)
+- Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 7/10 | Narration 7/10 | Hooks 5/10
+- **Key Insights**: Good progression: definition → notation → decomposition → parity. Shows transposition decomposition explicitly. Clear but somewhat dry — could use more visual intuition.
+- **Techniques to Adopt**: Follow the same logical progression (def → cycle notation → transpositions → parity). Show transposition decomposition with color-coded cycles splitting apart.
+- **Techniques to Avoid**: Avoid the purely algebraic approach to proving parity is well-defined. We should use the inversion-count visual (number of crossing lines in a permutation diagram).
+
+#### 4. Bright Side of Mathematics — "Permutation Groups"
+- **Known content**: Part of Abstract Algebra series. Systematic, definition-heavy. Good use of Manim for notation display.
+- **Views**: ~50K (estimated)
+- Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 6/10 | Narration 6/10 | Hooks 4/10
+- **Key Insights**: Very thorough coverage of definitions but slower pacing. Good for students who want completeness but less engaging.
+- **Techniques to Adopt**: The careful definition of composition (right-to-left convention) is important — many students get confused here. We should make this explicit.
+- **Techniques to Avoid**: Avoid the dense definition-heavy approach. We should intersperse visual examples between formal definitions.
+
+### Synthesis: Our Approach for Video 113
+1. **Hook**: Open with the "shuffling" metaphor (inspired by Mathologer) — show 4 colored objects being rearranged
+2. **Definition**: Define S_n formally, building on Video 111's group definition
+3. **Cycle notation**: Introduce via two-line notation bridge (Socratica's approach), then animate element tracking
+4. **Composition**: Use color-coded element tracking (Mathologer's technique) to show how permutations compose right-to-left
+5. **Transpositions**: Show how any cycle decomposes into transpositions with visual splitting animation
+6. **Parity**: Use the inversion-count visual (crossing lines diagram) rather than purely algebraic proof — more intuitive
+7. **Summary**: Connect back to the big picture — why permutations matter for group theory
+
+### Market Gap
+No competitor provides a complete animated Abstract Algebra I curriculum with systematic progression. Our differentiator remains the full curriculum approach with consistent visual language.

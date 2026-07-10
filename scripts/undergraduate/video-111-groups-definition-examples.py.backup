@@ -1,0 +1,37 @@
+"""Video 111: Groups -- Definition and Examples
+TEMPLATE v2 -- Professional quality Manim script
+
+Playlist: Abstract Algebra I (Video 1 of 12)
+Class: Video111_GroupsDefinitionExamples
+"""
+
+from manim import *
+import numpy as np
+import sys, os
+_template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "templates"))
+if _template_dir not in sys.path:
+    sys.path.insert(0, _template_dir)
+from channel_branding import (
+    BG, PRIMARY, SECONDARY, ACCENT, RED, DIM, WHITE, SANS, MONO,
+    TITLE_SIZE, HEADING_SIZE, BODY_SIZE, LABEL_SIZE, SMALL_SIZE, FAST, NORMAL, SLOW,
+    play_intro, play_outro, setup_background,
+)
+from layout import LayoutEngine, ensure_fits, clamp_position
+
+
+class Video111_GroupsDefinitionExamples(Scene):
+
+    def construct(self):
+        self.camera.background_color = BG
+        self.ly = LayoutEngine(self)
+        self._bg_dots, self._bg_gradient = setup_background(self)
+
+        self.scene1_hook()
+        self.scene2_pattern()
+        self.scene3_axioms()
+        self.scene4_integers()
+        self.scene5_modular()
+        self.scene6_nonexamples()
+        self.scene7_abelian()
+        self.scene8_big_picture()
+        self.scene9_summary()
