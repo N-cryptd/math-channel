@@ -201,7 +201,7 @@ class Video110_SeriesOfFunctions(Scene):
         self.play(FadeOut(insight), run_time=FAST)
 
         example_title = Text(
-            "Example: $\\sum x^n / n!$ on $[0,1]$",
+            r"Example: $\sum x^n / n!$ on $[0,1]$",
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(example_title, direction=DOWN, anchor=stmt, buff=0.4)
@@ -389,7 +389,7 @@ class Video110_SeriesOfFunctions(Scene):
 
         # Key result
         key = MathTex(
-            r"\sum a_n x^n \text{ converges uniformly on } [-r, r] \text{ for any } r < R",
+            r"\sum a_n x^n \text{ uniformly convergent on } [-r, r],\ r < R",
             font_size=SMALL_SIZE, color=SECONDARY,
         )
         self.ly.safe_place(key, direction=DOWN, anchor=radius, buff=0.3)
@@ -418,7 +418,7 @@ class Video110_SeriesOfFunctions(Scene):
     # --- Scene 7: The Big Picture ---
     def scene7_big_picture(self):
         self.add_subcaption(
-            "Let's see how everything connects. "
+            "Let us see how everything connects. "
             "The Weierstrass M-test gives us uniform "
             "convergence. "
             "Uniform convergence of the series lets us swap "

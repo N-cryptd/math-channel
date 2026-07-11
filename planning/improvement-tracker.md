@@ -158,10 +158,15 @@ Videos 99+ created with v2 templates from the start.
 | 99 | Real Numbers (Completeness) | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(3), ly.clear(9), SANS(14), safe_place(13), two_columns(1), formula_box(1). Zero .to_edge() for content. 1 .shift() on gap_marker (0.05, diagram), 2 .move_to() on number line labels, 12 .next_to() all diagram labels — all acceptable. |
 | 100 | Sequences and Convergence | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(3), ly.clear(13), SANS(15), safe_place(19), formula_box(1). Zero .shift()/.to_edge()/.move_to() for content. 11 .next_to() all diagram labels (number line, axes) — acceptable. |
 | 101 | Cauchy Sequences | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(4), ly.clear(14), SANS(20), safe_place(16), two_columns(1), formula_box(2). Zero .to_edge() for content. 5 .shift() (1 center+clamp, 4 diagram arrows), 5 .move_to() (2 number line placement, 2 dot animation, 1 diagram mark), 21 .next_to() all diagram/axis labels — all acceptable. |
-| 102 | Limits of Functions | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(4), ly.clear(11), SANS(10), safe_place(12). Zero .to_edge() for content. 7 .shift() (5 center+clamp on formula/axes, 2 diagram arrows), 6 .move_to() (3 graph placement, 1 open dot, 2 dot animation), 8 .next_to() all diagram labels — all acceptable. Rendered Jul 5. |
+| 102 | Limits of Functions | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(1), section_divider(4), ly.clear(11), SANS(10), safe_place(12). Zero .to_edge() for content. 7 .shift() (5 center+clamp on formula/axes, 2 diagram arrows), 6 .move_to() (3 graph placement, 1 open dot, 2 dot animation), 8 .next_to() all diagram labels — all acceptable. |
 | 103 | Continuity (epsilon-delta) | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), section_divider(4), ly.clear(15), SANS(21), safe_place(7), two_columns(1), formula_box(1). Zero .shift()/.to_edge() for content. — no improvement needed |
 | 104 | Uniform Continuity | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(6), section_divider(4), ly.clear(18), SANS(38), safe_place(10), two_columns(1). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
 | 105 | The Derivative (Rigorous) | — | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(4), ly.clear(18), SANS(27), safe_place(35). Zero .shift()/.to_edge()/.move_to() for content. — no improvement needed |
+| 106 | MVT (Proof) | 902 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(3), SANS(33), ly.clear(22), safe_place(41), clamp_position(9). Zero .shift()/.to_edge()/.move_to() for content. 8 .next_to() all diagram labels — acceptable. — no improvement needed |
+| 107 | Riemann Integral | 772 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), section_divider(7), SANS(16), ly.clear(22), safe_place(34), clamp_position(7). Zero .shift()/.to_edge() for content. 2 .next_to() + 6 .move_to() all diagram (Riemann rectangles, axes labels) — acceptable. — no improvement needed |
+| 108 | FTC Proof | 727 | YES | YES (minor) | N/A | v2-compliant. Fixed 2 .shift(UP*0.5) → removed (adjusting buff instead) on diff/int labels in scene 1. setup_bg(2), progressive_reveal(1), section_divider(5), SANS(12), ly.clear(19), safe_place(34), clamp_position(10). 6 .next_to() + 1 .move_to() all diagram labels — acceptable. |
+| 109 | Pointwise/Uniform Conv. | 477 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), section_divider(6), SANS(18), ly.clear(15), safe_place(21), clamp_position(3). 1 .shift() (comment only), 1 .to_edge() (comment only), 1 .next_to() (graph label) — all acceptable. — no improvement needed |
+| 110 | Series of Functions | 522 | YES | N/A (already v2) | N/A | Created with v2. Script restored from git (was accidentally overwritten with placeholder). setup_bg(2), progressive_reveal(2), section_divider(5), SANS(23), ly.clear(14), safe_place(27), clamp_position(2). Zero .shift()/.to_edge()/.next_to()/.move_to() for content (1 .shift match is docstring). — no improvement needed |
 
 ### Abstract Algebra I (scripts/undergraduate/) — NEW PIPELINE
 Videos 111+ created with v2 templates from the start.
@@ -169,6 +174,7 @@ Videos 111+ created with v2 templates from the start.
 | # | Title | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
 | 111 | Groups — Definition and Examples | 22260 | YES | YES | N/A | v2 rewrite: setup_background, SANS font, progressive_reveal, section_divider, formula_box, replaced manual .shift()/.next_to() with LayoutEngine methods, fixed font usage, added proper content budgets |
+| 112 | Subgroups and Cyclic Groups | 669 | YES | YES (minor) | N/A | v2-compliant. Added 2 section_divider calls (Subgroups, Cyclic Groups) to mark topic transitions. setup_bg(2), progressive_reveal(1), SANS(23), ly.clear(11), safe_place(35), clamp_position(2). Zero .shift()/.to_edge()/.next_to(). 2 .move_to() in lattice/clock diagram (acceptable). |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -179,7 +185,7 @@ Videos 111+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 111 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-111 (including Abstract Algebra I) created with v2 or improved to v2 standards. No videos remain that need improvement work.
+All 112 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-112 (including Abstract Algebra I) created with v2 or improved to v2 standards. No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-09 (Added Abstract Algebra I section for Video 111. Updated statistics to reflect 111 total videos analyzed. Improvement cycle continues.)
+2026-07-11 (Added Videos 106-110, 112 to tracker. Fixed Video 108 (.shift→buff), Video 112 (added section_divider). Restored Video 110 from git. All 112 videos now tracked.)

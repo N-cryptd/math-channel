@@ -69,16 +69,14 @@ class Video108_FTCProof(Scene):
         diff_label = Text(
             "Differentiation", font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
-        self.ly.safe_place(diff_label, direction=LEFT, anchor=title, buff=1.5)
-        diff_label.shift(UP * 0.5)
+        self.ly.safe_place(diff_label, direction=LEFT, anchor=title, buff=1.0)
         clamp_position(diff_label)
         self.play(Write(diff_label), run_time=NORMAL)
 
         int_label = Text(
             "Integration", font_size=BODY_SIZE, color=ACCENT, font=SANS,
         )
-        self.ly.safe_place(int_label, direction=RIGHT, anchor=title, buff=1.5)
-        int_label.shift(UP * 0.5)
+        self.ly.safe_place(int_label, direction=RIGHT, anchor=title, buff=1.0)
         clamp_position(int_label)
         self.play(Write(int_label), run_time=NORMAL)
 

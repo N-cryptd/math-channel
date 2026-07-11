@@ -90,6 +90,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
     # --- Scene 2: Subgroup Definition ---
 
     def scene2_subgroup_def(self):
+        self.ly.section_divider(1, "Subgroups")
+
         self.add_subcaption(
             "The formal definition is clean. "
             "A subset H of a group G is a subgroup "
@@ -289,6 +291,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
     # --- Scene 5: Cyclic Groups Definition ---
 
     def scene5_cyclic_def(self):
+        self.ly.section_divider(2, "Cyclic Groups")
+
         self.add_subcaption(
             "Now for cyclic groups. "
             "A group G is cyclic if there exists an element g "
