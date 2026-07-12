@@ -164,7 +164,7 @@ Videos 99+ created with v2 templates from the start.
 | 105 | The Derivative (Rigorous) | — | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(4), ly.clear(18), SANS(27), safe_place(35). Zero .shift()/.to_edge()/.move_to() for content. — no improvement needed |
 | 106 | MVT (Proof) | 902 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(3), SANS(33), ly.clear(22), safe_place(41), clamp_position(9). Zero .shift()/.to_edge()/.move_to() for content. 8 .next_to() all diagram labels — acceptable. — no improvement needed |
 | 107 | Riemann Integral | 772 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), section_divider(7), SANS(16), ly.clear(22), safe_place(34), clamp_position(7). Zero .shift()/.to_edge() for content. 2 .next_to() + 6 .move_to() all diagram (Riemann rectangles, axes labels) — acceptable. — no improvement needed |
-| 108 | FTC Proof | 727 | YES | YES (minor) | N/A | v2-compliant. Fixed 2 .shift(UP*0.5) → removed (adjusting buff instead) on diff/int labels in scene 1. setup_bg(2), progressive_reveal(1), section_divider(5), SANS(12), ly.clear(19), safe_place(34), clamp_position(10). 6 .next_to() + 1 .move_to() all diagram labels — acceptable. |
+| 108 | FTC Proof | 727 | YES | YES (minor) | YES | v2-compliant. Fixed 2 .shift(UP*0.5) → removed (adjusting buff instead) on diff/int labels in scene 1. Re-rendered 2026-07-11 (223 anims, 150s, 9 TTS segs). setup_bg(2), progressive_reveal(1), section_divider(5), SANS(12), ly.clear(19), safe_place(34), clamp_position(10). 6 .next_to() + 1 .move_to() all diagram labels — acceptable. |
 | 109 | Pointwise/Uniform Conv. | 477 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), section_divider(6), SANS(18), ly.clear(15), safe_place(21), clamp_position(3). 1 .shift() (comment only), 1 .to_edge() (comment only), 1 .next_to() (graph label) — all acceptable. — no improvement needed |
 | 110 | Series of Functions | 522 | YES | N/A (already v2) | N/A | Created with v2. Script restored from git (was accidentally overwritten with placeholder). setup_bg(2), progressive_reveal(2), section_divider(5), SANS(23), ly.clear(14), safe_place(27), clamp_position(2). Zero .shift()/.to_edge()/.next_to()/.move_to() for content (1 .shift match is docstring). — no improvement needed |
 
@@ -174,7 +174,9 @@ Videos 111+ created with v2 templates from the start.
 | # | Title | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
 | 111 | Groups — Definition and Examples | 22260 | YES | YES | N/A | v2 rewrite: setup_background, SANS font, progressive_reveal, section_divider, formula_box, replaced manual .shift()/.next_to() with LayoutEngine methods, fixed font usage, added proper content budgets |
-| 112 | Subgroups and Cyclic Groups | 669 | YES | YES (minor) | N/A | v2-compliant. Added 2 section_divider calls (Subgroups, Cyclic Groups) to mark topic transitions. setup_bg(2), progressive_reveal(1), SANS(23), ly.clear(11), safe_place(35), clamp_position(2). Zero .shift()/.to_edge()/.next_to(). 2 .move_to() in lattice/clock diagram (acceptable). |
+| 112 | Subgroups and Cyclic Groups | 669 | YES | YES (minor) | YES | v2-compliant. Added 2 section_divider calls (Subgroups, Cyclic Groups) to mark topic transitions. setup_bg(2), progressive_reveal(1), SANS(23), ly.clear(11), safe_place(35), clamp_position(2). Zero .shift()/.to_edge()/.next_to(). 2 .move_to() in lattice/clock diagram (acceptable). |
+| 113 | Permutation Groups | 949 | YES | YES (minor) | N/A | v2-compliant. Added 6 section_divider calls, 3 formula_box calls (|S_n|=n!, sgn, |A_n|=n!/2). Fixed scene 4 content budget (7→3 items: FadeOut diagram before formula). Removed duplicate dot_lbls VGroup creation. setup_bg(2), progressive_reveal(1), SANS(37), MONO(6), ly.clear(18), safe_place(57), clamp_position(2). Zero .shift()/.to_edge()/.next_to(). 8 .move_to() all diagram assembly (acceptable). |
+| 114 | Cosets and Lagrange's Theorem | 822 | YES | YES (minor) | N/A | v2-compliant. Added 7 section_divider calls, 1 formula_box (|G|=[G:H]·|H|). Fixed scene 4 content budget (9→3 items: split 4 cards into 2 sub-scenes of 2). Removed 2 absolute .move_to() positions (replaced with VGroup arrange). setup_bg(2), progressive_reveal(1), SANS(25), MONO(1), ly.clear(19), safe_place(50), clamp_position(1). Zero .shift()/.to_edge()/.next_to(). 2 .move_to() all diagram/box assembly (acceptable). |
 
 ## Improvement Process
 1. **Analyze** — Read script, check against v2 quality standards, score each dimension
@@ -185,7 +187,7 @@ Videos 111+ created with v2 templates from the start.
 6. **Track** — Update this file and PLANNING_STATE.md
 
 ## Status: COMPLETE ✓
-All 112 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-112 (including Abstract Algebra I) created with v2 or improved to v2 standards. No videos remain that need improvement work.
+All 114 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-112 (including Abstract Algebra I) created with v2 or improved to v2 standards. Videos 113-114 received minor v2 improvements (section_divider, formula_box, content budget fixes). No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-11 (Added Videos 106-110, 112 to tracker. Fixed Video 108 (.shift→buff), Video 112 (added section_divider). Restored Video 110 from git. All 112 videos now tracked.)
+2026-07-12 (Added Videos 113-114 to tracker. Video 113: +6 section_divider, +3 formula_box, fixed scene 4 content budget. Video 114: +7 section_divider, +1 formula_box, split scene 4 properties into 2 sub-scenes.)

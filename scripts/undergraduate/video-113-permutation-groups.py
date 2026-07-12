@@ -38,6 +38,7 @@ class Video113_PermutationGroups(Scene):
     # --- Scene 1: Hook ---
 
     def scene1_hook(self):
+        self.ly.section_divider(1, "Permutation Groups")
         self.add_subcaption(
             "Imagine four objects in a row. "
             "A red one, a blue one, a green one, and a yellow one. "
@@ -156,8 +157,9 @@ class Video113_PermutationGroups(Scene):
             r"|S_n| = n!",
             color=ACCENT, font_size=36,
         )
-        self.ly.safe_place(order, anchor=op, direction=DOWN, buff=0.4)
-        self.play(Write(order), run_time=NORMAL)
+        boxed_order = self.ly.formula_box(order)
+        self.ly.safe_place(boxed_order, anchor=op, direction=DOWN, buff=0.4)
+        self.play(Write(order), Create(boxed_order[1]), run_time=NORMAL)
         self.wait(0.2)
 
         # Group axioms check
@@ -289,6 +291,7 @@ class Video113_PermutationGroups(Scene):
     # --- Scene 4: Cycle Notation ---
 
     def scene4_cycle_notation(self):
+        self.ly.section_divider(2, "Cycle Notation")
         self.add_subcaption(
             "Cycle notation is the standard way to write permutations. "
             "Instead of two rows, we track the movement of each element. "
@@ -326,49 +329,41 @@ class Video113_PermutationGroups(Scene):
         }
         dot_colors_map = {1: RED, 2: PRIMARY, 3: SECONDARY, 4: ACCENT}
 
-        dots = VGroup()
-        dot_lbls = VGroup()
+        # Build dots and labels as single VGroup (counts as 1 item for budget)
+        dots_and_labels = VGroup()
         for i in range(1, 5):
             d = Dot(dot_positions[i], color=dot_colors_map[i], radius=0.18)
             l = Text(str(i), font_size=LABEL_SIZE, color=WHITE, font=MONO)
             l.move_to(dot_positions[i])
-            dots.add(d)
-            labels.add(l) if i == 1 else None
-        dot_lbls = VGroup()
-        for i in range(1, 5):
-            l = Text(str(i), font_size=LABEL_SIZE, color=WHITE, font=MONO)
-            l.move_to(dot_positions[i])
-            dot_lbls.add(l)
+            dots_and_labels.add(d, l)
 
-        self.ly.center_in_content(dots)
-        self.play(*[Create(d) for d in dots], run_time=FAST)
-        self.play(*[Write(l) for l in dot_lbls], run_time=FAST)
+        self.ly.center_in_content(dots_and_labels)
+        self.play(Create(dots_and_labels), run_time=NORMAL)
         self.wait(0.2)
 
-        # Arrows: 1->2, 2->4, 4->1 (cycle), 3->3 (self-loop)
-        arrows = VGroup()
-        # 1 -> 2
+        # Arrows: 1->2, 2->4, 4->1 (cycle) — single VGroup (counts as 1 item)
         arr1 = Arrow(dot_positions[1] + RIGHT * 0.25, dot_positions[2] + LEFT * 0.25,
                      color=PRIMARY, stroke_width=2, buff=0.05, max_tip_length_to_length_ratio=0.15)
-        # 2 -> 4
         arr2 = CurvedArrow(dot_positions[2] + RIGHT * 0.25, dot_positions[4] + LEFT * 0.25,
                             color=SECONDARY, stroke_width=2, angle=-TAU / 8)
-        # 4 -> 1
         arr3 = CurvedArrow(dot_positions[4] + UP * 0.3, dot_positions[1] + UP * 0.3,
                             color=ACCENT, stroke_width=2, angle=-TAU / 6)
-        arrows.add(arr1, arr2, arr3)
+        arrows = VGroup(arr1, arr2, arr3)
 
-        self.play(Create(arr1), run_time=FAST)
-        self.play(Create(arr2), run_time=FAST)
-        self.play(Create(arr3), run_time=FAST)
+        self.play(Create(arrows), run_time=NORMAL)
         self.wait(0.3)
+        # Budget check: title(1) + defn(2) + dots_and_labels(3) + arrows(4) = 4 items ✓
+
+        # Fade out diagram to make room for formula
+        self.play(FadeOut(dots_and_labels), FadeOut(arrows), run_time=FAST)
+        self.wait(0.2)
 
         # Show cycle notation
         cycle = MathTex(
             r"\sigma = (1\; 2\; 4)(3)",
             color=ACCENT, font_size=34,
         )
-        self.ly.safe_place(cycle, anchor=dots, direction=DOWN, buff=0.5)
+        self.ly.safe_place(cycle, anchor=title, direction=DOWN, buff=0.6)
         self.play(Write(cycle), run_time=NORMAL)
         self.wait(0.2)
 
@@ -423,6 +418,7 @@ class Video113_PermutationGroups(Scene):
     # --- Scene 5: Composition of Permutations ---
 
     def scene5_composition(self):
+        self.ly.section_divider(3, "Composition")
         self.add_subcaption(
             "Composing permutations means applying one, then the other. "
             "The key point: we use function composition convention, "
@@ -508,8 +504,9 @@ class Video113_PermutationGroups(Scene):
             color=ACCENT, font_size=36,
         )
         self.ly.safe_place(result, anchor=steps_vg, direction=DOWN, buff=0.4)
-        boxed = SurroundingRectangle(result, color=ACCENT, buff=0.2, stroke_width=2)
-        self.play(Write(result), Create(boxed), run_time=NORMAL)
+        boxed_result = self.ly.formula_box(result)
+        self.ly.safe_place(boxed_result, anchor=steps_vg, direction=DOWN, buff=0.4)
+        self.play(Write(result), Create(boxed_result[1]), run_time=NORMAL)
         self.wait(0.3)
 
         self.ly.clear()
@@ -546,6 +543,7 @@ class Video113_PermutationGroups(Scene):
     # --- Scene 6: Transpositions ---
 
     def scene6_transpositions(self):
+        self.ly.section_divider(4, "Transpositions")
         self.add_subcaption(
             "A transposition is a permutation that swaps exactly two elements "
             "and fixes everything else. "
@@ -629,9 +627,9 @@ class Video113_PermutationGroups(Scene):
             r"(1\; 2\; 3\; 4) = (1\; 4)(1\; 3)(1\; 2)",
             color=PRIMARY, font_size=34,
         )
-        self.ly.safe_place(cycle_input, anchor=title3, direction=DOWN, buff=0.5)
-        boxed = SurroundingRectangle(cycle_input, color=PRIMARY, buff=0.15, stroke_width=2)
-        self.play(Write(cycle_input), Create(boxed), run_time=NORMAL)
+        boxed_cycle = self.ly.formula_box(cycle_input, color=PRIMARY)
+        self.ly.safe_place(boxed_cycle, anchor=title3, direction=DOWN, buff=0.5)
+        self.play(Write(cycle_input), Create(boxed_cycle[1]), run_time=NORMAL)
         self.wait(0.2)
 
         # Verify step by step
@@ -675,6 +673,7 @@ class Video113_PermutationGroups(Scene):
     # --- Scene 7: Parity ---
 
     def scene7_parity(self):
+        self.ly.section_divider(5, "Parity")
         self.add_subcaption(
             "Although a permutation can be decomposed into transpositions "
             "in many different ways, "
@@ -721,8 +720,9 @@ class Video113_PermutationGroups(Scene):
             r"\text{sgn}(\sigma) = (-1)^k",
             color=ACCENT, font_size=34,
         )
-        self.ly.safe_place(sign, anchor=theorem2, direction=DOWN, buff=0.4)
-        self.play(Write(sign), run_time=NORMAL)
+        boxed_sign = self.ly.formula_box(sign)
+        self.ly.safe_place(boxed_sign, anchor=theorem2, direction=DOWN, buff=0.4)
+        self.play(Write(sign), Create(boxed_sign[1]), run_time=NORMAL)
         self.wait(0.1)
 
         sign_note = Text(
@@ -896,9 +896,9 @@ class Video113_PermutationGroups(Scene):
             r"|A_n| = \frac{n!}{2}",
             color=ACCENT, font_size=36,
         )
-        self.ly.safe_place(order, anchor=subgroup, direction=DOWN, buff=0.4)
-        boxed = SurroundingRectangle(order, color=ACCENT, buff=0.2, stroke_width=2)
-        self.play(Write(order), Create(boxed), run_time=NORMAL)
+        boxed_order_an = self.ly.formula_box(order)
+        self.ly.safe_place(boxed_order_an, anchor=subgroup, direction=DOWN, buff=0.4)
+        self.play(Write(order), Create(boxed_order_an[1]), run_time=NORMAL)
         self.wait(0.3)
 
         half_note = Text(

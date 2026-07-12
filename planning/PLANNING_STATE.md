@@ -1,30 +1,34 @@
 # Math Channel — Planning State
 
-Last updated: 2026-07-08
+Last updated: 2026-07-11
 
 ## Completed Videos
 - Videos 1-24: Calculus I/II (scripts in scripts/pre-university/)
 - Videos 25-29: Linear Algebra (scripts in scripts/undergraduate/)
-- Videos 30-99: Various (see filesystem)
-- Videos 100-109: Real Analysis I (Videos 1-11 of 12)
+- Videos 30-109: Various (see filesystem)
+- Videos 100-110: Real Analysis I (12 videos)
   - All scripts in scripts/undergraduate/video-10*.py
   - All plans in planning/video-10*.md
+- Videos 111-113: Abstract Algebra I (Videos 1-3)
+  - Video 111: Groups — Definition and Examples (competitive analysis done, script done)
+  - Video 112: Subgroups and Cyclic Groups (script done)
+  - Video 113: Permutation Groups (script done)
 
 ## In Progress
-- Video 110: Series of Functions (Video 12 of 12 — FINAL)
-  - Plan: planning/video-110-series-of-functions.md — DONE
-  - Competitive analysis: channel-analysis/improvements.md — DONE
-  - Script: scripts/undergraduate/video-110-series-of-functions.py — Written as .txt, needs rename to .py (lint issue during this session)
-  - Compile check: PENDING (terminal unavailable)
+- Video 114: Cosets and Lagrange's Theorem (Abstract Algebra I, Video 5 of 12)
+  - Plan: planning/video-114-cosets-and-lagranges-theorem.md — DONE
+  - Script: scripts/undergraduate/video-114-cosets-and-lagranges-theorem.py — DONE (9 scenes, compile-checked)
   - Render: PENDING
 
 ## Completed Playlists
 - Calculus I: Limits & Derivatives
 - Calculus II: Integrals & Series
 - Linear Algebra
-- Real Analysis I: COMPLETE after Video 110 renders (all content done)
+- Real Analysis I: COMPLETE (all content done)
+
+## Active Playlists
+- Abstract Algebra I (in progress, Videos 111-114 done, 115+ remaining)
 
 ## Upcoming Playlists
-- Abstract Algebra I
 - Complex Analysis
 - Calculus III (Multivariable)
