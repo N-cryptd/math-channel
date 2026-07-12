@@ -156,10 +156,10 @@
 | 111 | Groups — Definition and Examples | ✅ | ✅ |
 | 112 | Subgroups and Cyclic Groups | ✅ | ✅ |
 | 113 | Permutation Groups | ✅ | ✅ |
-| 114 | Cosets and Lagrange's Theorem | ✅ | ⬜ |
-| 115 | Normal Subgroups and Quotient Groups | ⬜ | ⬜ |
+| 114 | Cosets and Lagrange's Theorem | ✅ | ✅ |
+| 115 | Normal Subgroups and Quotient Groups | ✅ | ✅ |
 | 116 | Group Homomorphisms | ⬜ | ⬜ |
-| 117 | Isomorphism | Isomorphism Theorams | ⬜ | ⬜ |
+| 117 | Isomorphism Theorems | ⬜ | ⬜ |
 | 118 | Direct Products and Finite Abelian Groups | ⬜ | ⬜ |
 | 119 | Group Actions | ⬜ | ⬜ |
 | 120 | Sylow Theorems | ⬜ | ⬜ |
@@ -167,7 +167,7 @@
 | 122 | Introduction to Rings | ⬜ | ⬜ |
 
 ## In Progress
-- Abstract Algebra I (Videos 111-122): Video 111 script enhanced to v2 standards, ready for render
+- Abstract Algebra I (Videos 111-122): Video 115 rendered and narrated. Next: Video 116 (Group Homomorphisms)
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
