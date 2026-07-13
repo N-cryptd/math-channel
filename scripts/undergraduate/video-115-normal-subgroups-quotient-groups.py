@@ -16,7 +16,7 @@ from channel_branding import (
     TITLE_SIZE, HEADING_SIZE, BODY_SIZE, LABEL_SIZE, SMALL_SIZE, FAST, NORMAL, SLOW,
     play_intro, play_outro, setup_background,
 )
-from layout import LayoutEngine, ensure_fits, clamp_position
+from layout import LayoutEngine, ensure_fits
 
 
 class Video115_NormalSubgroupsQuotientGroups(Scene):
@@ -101,6 +101,10 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.play(Write(coset_text), run_time=NORMAL)
         self.wait(0.3)
 
+        # Remove Z and nZ labels before quotient formula (content budget: 5)
+        self.play(FadeOut(g_label), FadeOut(h_label), run_time=FAST)
+        self.wait(0.2)
+
         # The quotient group
         boxed_q = self.ly.formula_box(
             MathTex(r"\mathbb{Z}/n\mathbb{Z}", color=ACCENT, font_size=36),
@@ -174,6 +178,10 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.play(Write(right_coset), run_time=NORMAL)
         self.wait(0.3)
 
+        # Remove h_text and left_coset before conclusion (content budget: 5)
+        self.play(FadeOut(h_text), FadeOut(left_coset), run_time=FAST)
+        self.wait(0.2)
+
         # Not equal
         not_eq = MathTex(
             r"(13)H \neq H(13)",
@@ -233,29 +241,40 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.play(Write(iff), Write(def1b), run_time=NORMAL)
         self.wait(0.3)
 
-        # Conjugation condition
-        conj_label = Text(
-            "Conjugation perspective:",
-            font_size=LABEL_SIZE, color=DIM, font=SANS,
-        )
-        conj_def = MathTex(
-            r"gHg^{-1} \subseteq H \quad \forall\, g \in G",
-            color=PRIMARY, font_size=28,
-        )
-        boxed_conj = self.ly.formula_box(conj_def, color=PRIMARY)
-        self.ly.safe_place(conj_label, anchor=def1b, direction=DOWN, buff=0.5)
-        self.ly.safe_place(boxed_conj, anchor=conj_label, direction=DOWN, buff=0.3)
-        self.play(FadeIn(conj_label, shift=LEFT * 0.15), run_time=FAST)
-        self.play(Write(conj_def), Create(boxed_conj[1]), run_time=NORMAL)
-        self.wait(0.3)
-
         # Note about meaning
         meaning = Text(
             "Normal = left cosets = right cosets = conjugation closed",
             font_size=BODY_SIZE, color=SECONDARY, font=SANS,
         )
-        self.ly.safe_place(meaning, anchor=boxed_conj, direction=DOWN, buff=0.4)
+        self.ly.safe_place(meaning, anchor=def1b, direction=DOWN, buff=0.4)
         self.play(FadeIn(meaning, shift=LEFT * 0.15), run_time=FAST)
+        self.wait(0.5)
+
+        self.ly.clear()
+
+        # Conjugation sub-scene
+        title2 = self.ly.title("Conjugation Perspective")
+
+        conj_label = Text(
+            "An equivalent and often more useful form:",
+            font_size=BODY_SIZE, color=WHITE, font=SANS,
+        )
+        conj_def = MathTex(
+            r"gHg^{-1} \subseteq H \quad \forall\, g \in G",
+            color=PRIMARY, font_size=30,
+        )
+        boxed_conj = self.ly.formula_box(conj_def, color=PRIMARY)
+
+        conj_note = Text(
+            "Every conjugate of h by g stays inside H",
+            font_size=LABEL_SIZE, color=DIM, font=SANS,
+        )
+        self.ly.safe_place(conj_label, anchor=title2, direction=DOWN, buff=0.5)
+        self.ly.safe_place(boxed_conj, anchor=conj_label, direction=DOWN, buff=0.4)
+        self.ly.safe_place(conj_note, anchor=boxed_conj, direction=DOWN, buff=0.3)
+        self.play(FadeIn(conj_label, shift=LEFT * 0.15), run_time=FAST)
+        self.play(Write(conj_def), Create(boxed_conj[1]), run_time=NORMAL)
+        self.play(FadeIn(conj_note, shift=LEFT * 0.15), run_time=FAST)
         self.wait(0.5)
 
         self.ly.clear()
@@ -288,11 +307,14 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.ly.progressive_reveal(conditions, start_from=title, run_time=0.7)
         self.wait(0.3)
 
-        # Why 2 ↔ 3
+        # Why 2 ↔ 3 (progressive_reveal keeps this within 5-item budget)
         why = Text(
             "2 ↔ 3: conjugation by g is a bijection, so same size",
             font_size=LABEL_SIZE, color=DIM, font=SANS,
         )
+        # FadeOut oldest condition to stay within 5 items
+        if len(self.ly._visible_mobjects) > 4:
+            self.play(FadeOut(conditions[0]), run_time=FAST)
         self.ly.safe_place(why, anchor=conditions[-1], direction=DOWN, buff=0.3)
         self.play(FadeIn(why, shift=LEFT * 0.15), run_time=FAST)
         self.wait(0.3)
@@ -356,6 +378,10 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.play(Write(elements), run_time=NORMAL)
         self.play(Write(operation), Create(boxed_op[1]), run_time=NORMAL)
         self.wait(0.3)
+
+        # Remove elements formula before axioms (content budget: 5)
+        self.play(FadeOut(elements), run_time=FAST)
+        self.wait(0.2)
 
         # Group axioms
         axioms = [
@@ -475,7 +501,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         h2 = VGroup(r2l, r2a, r2b).arrange(RIGHT, buff=col_gap)
 
         table = VGroup(h0, h1, h2).arrange(DOWN, buff=row_gap)
-        table.move_to(ORIGIN + UP * 0.3)
+        self.ly.safe_place(table, anchor=title2, direction=DOWN, buff=0.5)
 
         # Fade in table row by row
         self.play(FadeIn(table[0]), run_time=FAST)
@@ -531,12 +557,14 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.ly.progressive_reveal(takeaways, start_from=title, run_time=0.6)
         self.wait(0.3)
 
+        self.ly.clear()
+
+        # Closing
         closing = Text(
             "Next: Group Homomorphisms",
             font_size=HEADING_SIZE, color=WHITE, font=SANS, weight=BOLD,
         )
-        self.ly.safe_place(closing, anchor=takeaways[-1], direction=DOWN, buff=0.5)
-        clamp_position(closing)
+        self.ly.center_in_content(closing)
         self.play(FadeIn(closing, scale=1.05), run_time=NORMAL)
         self.wait(0.5)
 
