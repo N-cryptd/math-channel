@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-07-12
+**Last updated:** 2026-07-13
 
-## Completed Videos (113 complete + 1 in progress)
+## Completed Videos (114 complete)
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -158,7 +158,7 @@
 | 113 | Permutation Groups | ✅ | ✅ |
 | 114 | Cosets and Lagrange's Theorem | ✅ | ✅ |
 | 115 | Normal Subgroups and Quotient Groups | ✅ | ✅ |
-| 116 | Group Homomorphisms | ⬜ | ⬜ |
+| 116 | Group Homomorphisms | ✅ | ✅ |
 | 117 | Isomorphism Theorems | ⬜ | ⬜ |
 | 118 | Direct Products and Finite Abelian Groups | ⬜ | ⬜ |
 | 119 | Group Actions | ⬜ | ⬜ |
@@ -167,7 +167,7 @@
 | 122 | Introduction to Rings | ⬜ | ⬜ |
 
 ## In Progress
-- Abstract Algebra I (Videos 111-122): Video 115 rendered and narrated. Next: Video 116 (Group Homomorphisms)
+- Abstract Algebra I (Videos 111-122): Video 116 rendered and narrated. Next: Video 117 (Isomorphism Theorems)
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)

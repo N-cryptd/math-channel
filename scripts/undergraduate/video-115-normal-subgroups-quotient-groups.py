@@ -313,8 +313,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             font_size=LABEL_SIZE, color=DIM, font=SANS,
         )
         # FadeOut oldest condition to stay within 5 items
-        if len(self.ly._visible_mobjects) > 4:
-            self.play(FadeOut(conditions[0]), run_time=FAST)
+        self.play(FadeOut(conditions[0]), run_time=FAST)
         self.ly.safe_place(why, anchor=conditions[-1], direction=DOWN, buff=0.3)
         self.play(FadeIn(why, shift=LEFT * 0.15), run_time=FAST)
         self.wait(0.3)

@@ -186,10 +186,10 @@ Videos 111+ created with v2 templates from the start.
 5. **Verify** — Check output file exists and plays correctly
 6. **Track** — Update this file and PLANNING_STATE.md
 
-| 115 | Normal Subgroups/Quotient Groups | 568 | YES | YES (content budget) | N/A | v2-compliant. Fixed 5 content budget violations (scenes 2,3,4,5,6,8): FadeOut before new items, split scene4 definition+conjugation into 2 sub-scenes, ly.clear before closing. Fixed 1 .move_to()→ly.safe_place (table). Removed unused clamp_position import. setup_bg(1), section_divider(6), progressive_reveal(4), formula_box(5), SANS font, ly.clear(9), safe_place(20+). |
+| 115 | Normal Subgroups/Quotient Groups | 568 | YES | YES (content budget) | YES | v2-compliant. Fixed 5 content budget violations (scenes 2,3,4,5,6,8): FadeOut before new items, split scene4 definition+conjugation into 2 sub-scenes, ly.clear before closing. Fixed 1 .move_to()→ly.safe_place (table). Removed unused clamp_position import. setup_bg(1), section_divider(6), progressive_reveal(4), formula_box(5), SANS font, ly.clear(9), safe_place(20+). |
 
 ## Status: COMPLETE ✓
 All 115 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-112 (including Abstract Algebra I) created with v2 or improved to v2 standards. Videos 113-114 received minor v2 improvements. Video 115 received content budget fixes. No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-13 (Added Video 115 to tracker. Fixed 5 content budget violations across scenes 2,3,4,5,6,8. Replaced .move_to() with ly.safe_place. Split scene 4 into 2 sub-scenes for definition+conjugation.)
+2026-07-13 (Re-rendered Video 115. Fixed _visible_mobjects AttributeError — replaced broken budget check with unconditional FadeOut of oldest condition. 211 anims, 110.8s video, 8 TTS segments.)
