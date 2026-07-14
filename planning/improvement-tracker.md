@@ -188,8 +188,12 @@ Videos 111+ created with v2 templates from the start.
 
 | 115 | Normal Subgroups/Quotient Groups | 568 | YES | YES (content budget) | YES | v2-compliant. Fixed 5 content budget violations (scenes 2,3,4,5,6,8): FadeOut before new items, split scene4 definition+conjugation into 2 sub-scenes, ly.clear before closing. Fixed 1 .move_to()→ly.safe_place (table). Removed unused clamp_position import. setup_bg(1), section_divider(6), progressive_reveal(4), formula_box(5), SANS font, ly.clear(9), safe_place(20+). |
 
+| 116 | Group Homomorphisms | 666 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(6), formula_box(6), SANS(35), ly.clear(17), safe_place(39), two_columns(1), play_intro(2), play_outro(2), add_subcaption(9). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
+
+| 117 | Isomorphism Theorems | 681 | YES | YES (minor) | N/A | v2-compliant. Added 6 section_divider calls (was 0) for major theorem transitions. Wrapped 9 .move_to() in diamond/tower diagrams with clamp_position. setup_bg(2), progressive_reveal(3), formula_box(6), SANS(29), ly.clear(11), safe_place(31). 4 .next_to() all diagram arrow labels (acceptable). Zero .shift()/.to_edge(). |
+
 ## Status: COMPLETE ✓
-All 115 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-112 (including Abstract Algebra I) created with v2 or improved to v2 standards. Videos 113-114 received minor v2 improvements. Video 115 received content budget fixes. No videos remain that need improvement work.
+All 117 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-115 created with v2 or improved to v2 standards. Video 116 confirmed v2-compliant at creation. Video 117 received minor v2 improvements (6 section_dividers, clamp_position on diagrams). No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-13 (Re-rendered Video 115. Fixed _visible_mobjects AttributeError — replaced broken budget check with unconditional FadeOut of oldest condition. 211 anims, 110.8s video, 8 TTS segments.)
+2026-07-14 (Analyzed Videos 116-117 for v2 compliance. Video 116 already v2. Video 117: added 6 section_dividers, wrapped 9 .move_to() with clamp_position. Compile check passed.)

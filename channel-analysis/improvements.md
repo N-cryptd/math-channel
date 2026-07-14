@@ -2037,3 +2037,43 @@ Analysis based on knowledge of competitor landscape (YouTube search scripts retu
 
 ### Market Gap
 No competitor provides a complete animated Abstract Algebra I curriculum with systematic progression. Our differentiator remains the full curriculum approach with consistent visual language.
+
+## 2026-07-13 — Isomorphism Theorems (Abstract Algebra)
+Source: Multiple channels — see isomorphism-theorems-analysis.md for full report
+Dimensions averaged across 7 videos: Structure 6.9/10 | Pacing 6.1/10 | Visuals 4.9/10 | Narration 6.4/10 | Hooks 4.4/10
+
+### Competitor Videos Analyzed
+1. Michael Penn — First Isomorphism Theorem (48K views, 15:35) — chalkboard proof
+2. Michael Penn — Second Isomorphism Theorem (22K views, 16:42) — chalkboard proof
+3. Michael Penn — Third Isomorphism Theorem (17K views, 9:18) — chalkboard proof
+4. Mathemaniac — Homomorphism + First Isomorphism Theorem (60K views, 12:47) — animated intuition-first
+5. Socratica — Isomorphisms concept (408K views, 5:04) — animated Manim
+6. Mu Prime Math — Natural Proof of First Iso Thm (16K views, 13:08) — alternative proof
+7. Prof. Macauley — Visual Group Theory 4.5 (31K views, 46:19) — full lecture, all theorems
+
+### Key Insights
+- No channel produces a single animated video covering ALL THREE isomorphism theorems with unified visual treatment — this is our market gap
+- Mathemaniac's intuition-first animated approach gets highest ratings but only covers the first theorem
+- Michael Penn's chalkboard approach gets 3/10 on visuals — students lose geometric intuition
+- Subgroup lattice diagrams (Prof. Macauley) are missing from ALL animated competitors
+- All three theorems reduce to applying the first theorem with a clever homomorphism — this unifying message is underused
+
+### Techniques to Adopt
+- Coset partitioning visualization (color-coded domain elements, same coset maps to same image)
+- Animated subgroup lattice diagrams for second/third theorem relationships
+- "All derive from the first" unifying narrative
+- Function arrow diagrams with highlighted kernel/image regions
+- Address the "magic map" concern briefly — why the constructed homomorphism feels natural
+- Concrete examples after each theorem
+
+### Techniques to Avoid
+- Don't present proofs without visual motivation first (Michael Penn's weakness)
+- Don't split into three separate videos (market already has this)
+- Don't exceed 22 minutes (Prof. Macauley's 46min is too long)
+- Don't cover the fourth isomorphism theorem (non-standard, confusing)
+- Don't use purely algebraic presentation without subgroup lattice diagrams for 2nd/3rd theorems
+
+### Standout Approaches
+- Mu Prime Math's opening: "The standard proof may seem artificial" — addresses real student frustration
+- Socratica's Cayley table transformation for showing group equivalence
+- Mathemaniac's color-coded coset partitioning building to the isomorphism theorem
