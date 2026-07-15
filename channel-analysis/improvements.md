@@ -2077,3 +2077,249 @@ Dimensions averaged across 7 videos: Structure 6.9/10 | Pacing 6.1/10 | Visuals 
 - Mu Prime Math's opening: "The standard proof may seem artificial" — addresses real student frustration
 - Socratica's Cayley table transformation for showing group equivalence
 - Mathemaniac's color-coded coset partitioning building to the isomorphism theorem
+
+---
+
+### [2026-07-15] Direct Products and Finite Abelian Groups (Video 118)
+
+**Market Gap Analysis:** "Direct Products and Finite Abelian Groups" is covered almost exclusively by lecture-format channels (chalkboard, slides, whiteboard). No high-production Manim-animated video combines both topics — external/internal direct products AND the classification theorem for finite abelian groups — in a single coherent visual narrative. The closest competitor (Prof. Macauley's "Visual Group Theory" series) uses slides with Cayley diagrams but has no Manim-style animation. This is a significant opportunity.
+
+**Search Results Summary:**
+- "Direct products groups abstract algebra": 15 results, top views 24K (Prof. Macauley, visual but slides)
+- "Finite abelian groups classification theorem": 15 results, top views 24K (MathDoctorBob)
+- No animated/Manim competitors found for either topic
+- Combined "direct products + finite abelian" coverage: Only lecture courses (Kimberly Brehm, MathMajor)
+
+---
+
+**Source 1: Michael Penn — "Abstract Algebra | Direct product of groups."**
+URL: https://www.youtube.com/watch?v=ako25Pghxa8
+Subscribers: 350K | Views: 16,727 | Date: Feb 2020 | Duration: 12:57 | Captions: True
+Thumbnail: Blue background, red bold text, black equations. Clean, textbook-style. High contrast.
+Thumbnail analysis: "Blue background with red text and black mathematical equations. The text is in a bold, sans-serif font. The overall quality is clear and visually appealing, with high contrast between the blue background and the red and black text."
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 6/10
+
+Key Insights:
+- Focuses on a specific problem: "When is the direct product of cyclic groups itself cyclic?"
+- Answers with Z_m × Z_n ≅ Z_{mn} iff gcd(m,n)=1 — the key theorem connecting direct products to classification
+- Chalkboard format, worked through at a steady pace with clear step-by-step derivation
+- 16.7K views shows solid demand for direct product content
+- Short (12:57) — focused and efficient
+
+Techniques to Adopt:
+- Problem-first approach: pose a specific question ("when is the product cyclic?") then solve it
+- The gcd(m,n)=1 theorem is the essential bridge between direct products and classification — must include
+- Keep the focus tight — one main theorem per scene
+
+Techniques to Avoid:
+- Chalkboard only — no visual aids beyond handwriting (we can do Cayley table animations, grid diagrams)
+- Jumps straight into the proof without visual motivation for what a direct product "looks like"
+
+---
+
+**Source 2: Professor Macauley — "Visual Group Theory, Lecture 3.4: Direct products"**
+URL: https://www.youtube.com/watch?v=HXyWHihSepY
+Subscribers: 29.5K | Views: 24,577 | Date: Mar 2016 | Duration: 23:16 | Captions: True
+Thumbnail: White background, centered text, graph and numbers below. Clean, professional, academic.
+Thumbnail analysis: "White background with black text in standard sans-serif font. Math visuals include a graph and numbers, presented in a clear and organized manner. The overall quality is high, with a clean and professional design."
+Dimensions: Structure 9/10 | Pacing 7/10 | Visuals 8/10 | Narration 7/10 | Hooks 6/10
+
+Key Insights:
+- BEST visual competitor — uses Cayley diagrams, multiplication tables, and geometric visualizations
+- Covers both external direct product definition AND internal direct product
+- Shows Cayley diagram of Z_2 × Z_3 as a torus — powerful geometric intuition
+- Shows subgroups and normal subgroups of direct products visually
+- 24.6K views — highest for "direct products" topic specifically
+- Follows Nathan Carter's "Visual Group Theory" textbook
+
+Techniques to Adopt:
+- Cayley diagram for direct product: Z_m × Z_n visualized as a 2D grid of colored nodes
+- Show the direct product of cyclic groups geometrically (grid structure) before algebraically
+- Multiplication table animation for small direct products (Z_2 × Z_2 = Klein four-group)
+- Internal vs external distinction with visual subgroup diagram
+- The torus visualization for Z_m × Z_n when gcd(m,n)=1 is beautiful — adapt to Manim
+
+Techniques to Avoid:
+- 23 minutes is too long — our target is 12-15 minutes
+- Lecture format with slides — we need smooth animations between concepts
+- Dense content in one sitting — split into progressive scenes with clear breaks
+
+---
+
+**Source 3: Kimberly Brehm — "Abstract Algebra - 8.1 External Direct Products"**
+URL: https://www.youtube.com/watch?v=v11oJwBxZpM
+Subscribers: 127K | Views: 8,394 | Date: Nov 2022 | Duration: 18:56 | Captions: True
+Thumbnail: Black background, white text only. Simple, no visual elements.
+Thumbnail analysis: "Black background with white text. Simple sans-serif font, no additional graphics or visual aids. Clear and easy to read, focus on title."
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 4/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Follows Gallian's textbook — standard curriculum reference for this topic
+- Excellent chapter structure with timestamps: External Direct Products → U(8)×U(10) → Z_2×Z_3 → Z_2×Z_2 → Properties → Isomorphisms
+- Works through concrete examples: U(8)×U(10) (order 32), Z_2×Z_3 ≅ Z_6, Z_2×Z_2 (Klein four-group, NOT cyclic)
+- Covers isomorphisms between direct products and Z_n
+- Slide-based with handwritten annotations — functional but not visually engaging
+
+Techniques to Adopt:
+- Concrete examples structure: Z_2×Z_3 (cyclic) vs Z_2×Z_2 (non-cyclic) is the perfect contrast
+- Properties list: order of product, cyclic test, subgroup structure
+- The Z_2 × Z_2 = Klein four-group is an essential example every student encounters
+
+Techniques to Avoid:
+- Text-only thumbnail — no visual hook
+- Slide format is static
+- 19 minutes for just external direct products — we need to cover both direct products AND classification theorem in ≤15 min
+
+---
+
+**Source 4: EpsilonDelta — "How to Construct Every Symmetry | Decomposition, Extension, and Classification of Groups"**
+URL: https://www.youtube.com/watch?v=n-YrdmlcNQ4
+Subscribers: 83.2K | Views: 55,760 | Date: Nov 2023 | Duration: 45:07 | Captions: True
+Thumbnail: Black background, white+orange text "MULTIPLYING GROUPS TO GET EVERY SYMMETRY". Green polyhedron, multicolored ring, Rubik's cube centered. Quality: 8/10.
+Thumbnail analysis: "Black background with white and orange text in bold sans-serif. Math visuals include a green polyhedron, a multicolored ring, and a Rubik's cube, all centered on the image. Overall quality is 8 out of 10."
+Dimensions: Structure 10/10 | Pacing 9/10 | Visuals 9/10 | Narration 9/10 | Hooks 10/10
+
+Key Insights:
+- HIGHEST QUALITY competitor — 55.8K views, modern animated visual style
+- Covers direct product in the broader context of group decomposition: "How to construct every symmetry"
+- Beautiful visual metaphors: polyhedra, rings, Rubik's cube as symmetry objects
+- Sections: Intro → Examples → Isomorphism → Automorphism → Decomposition → Simple Groups → Direct Product → Semidirect Product → Non-split Extensions → Cohomology
+- The "chemistry analogy" (groups = atoms, direct product = molecules) at 43:32 is brilliant
+- Proves that direct product of abelian groups is abelian — and that classifying ALL finite abelian groups reduces to direct products of cyclic groups
+
+Techniques to Adopt:
+- **The chemistry analogy is MUST-USE**: "Groups are like atoms; direct products combine them like molecules" — builds powerful intuition
+- Visual demonstration of group decomposition: show a complex group "splitting apart" into simpler components
+- Direct product as the "simplest way to combine groups" — contrast with semidirect product later
+- "Why can't we classify ALL groups?" motivation — connects to the fundamental theorem's significance
+- Opening hook: "How to construct every symmetry" — curiosity-driven, not topic-name-driven
+
+Techniques to Avoid:
+- 45 minutes is far too long for our format
+- Covers way more than we need (extensions, cohomology, sporadic groups)
+- Assumes significant prior knowledge — we should be self-contained
+
+---
+
+**Source 5: Kimberly Brehm — "Abstract Algebra - 11.1 Fundamental Theorem of Finite Abelian Groups"**
+URL: https://www.youtube.com/watch?v=VzTFXcbB9_s
+Subscribers: 127K | Views: 11,343 | Date: Nov 2022 | Duration: 13:59 | Captions: True
+Thumbnail: Black background, white handwritten-style font. "11.1 Abstract Algebra" + "Fundamental Theorem of Finite Abelian Groups."
+Thumbnail analysis: "Black background with white text. Title '11.1 Abstract Algebra' at top, subtitle 'Fundamental Theorem of Finite Abelian Groups.' Handwritten-style font gives personal and approachable feel."
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Perfect duration for our target (13:59)
+- Directly covers the classification theorem with worked examples
+- Structure: Before the theorem → Statement → Example 1 → Example 2 → Example 3 → Practice problems
+- Shows classification of specific groups: all abelian groups of order 36, order 720, etc.
+- Connects to prime factorization: the classification mirrors integer factorization
+- "Every finite abelian group is a direct product of cyclic groups of prime-power order"
+
+Techniques to Adopt:
+- The prime factorization analogy: "Classifying abelian groups is like factoring integers"
+- Worked examples with specific group orders (36, 720) — students need to see the algorithm in action
+- The two forms of the classification (invariant factor decomposition vs. elementary divisor decomposition)
+- Step-by-step algorithm: given |G|, find all abelian groups of that order using partitions of exponents
+
+Techniques to Avoid:
+- Handwritten font on thumbnail looks unprofessional for a math channel
+- Pure slide format — no animations between steps
+- Could use more visual motivation for WHY the theorem matters before stating it
+
+---
+
+**Source 6: Professor Macauley — "Visual Group Theory, Lecture 4.4: Finitely generated abelian groups"**
+URL: https://www.youtube.com/watch?v=TQSv17MIP8o
+Subscribers: 29.5K | Views: 19,438 | Date: Mar 2016 | Duration: 24:47 | Captions: True
+Thumbnail: White background, black text, color-coded elements. Clean and professional.
+Thumbnail analysis: "White background with black text. Math visuals are simple and easy to understand, with clear labeling and color-coding to differentiate between various elements."
+Dimensions: Structure 9/10 | Pacing 7/10 | Visuals 8/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Visual treatment of the classification theorem — Cayley diagrams for cyclic products
+- Proves: Z_{mn} ≅ Z_m × Z_n iff gcd(m,n) = 1 using Cayley diagram argument
+- Shows the two forms of decomposition visually:
+  (i) prime power orders: Z_4 × Z_2 × Z_3
+  (ii) invariant factors: Z_12 × Z_2
+- Visual demonstration that these are the SAME group written differently
+- 19.4K views — strong demand for visual classification content
+
+Techniques to Adopt:
+- Visual proof that Z_{mn} ≅ Z_m × Z_n using Cayley diagram lattice structure
+- Color-coded Cayley diagrams showing how the same group can be decomposed in two ways
+- The lattice/grid visualization of direct products as 2D arrays is intuitive and adaptable to Manim
+
+Techniques to Avoid:
+- 25 minutes is too long
+- Lecture format limits visual appeal
+- Starts too slowly — could use a stronger opening hook
+
+---
+
+### Synthesis: Opportunities for Video 118
+
+**Competitive Landscape:**
+| Channel | Format | Views | Duration | Visuals Score |
+|---------|--------|-------|----------|--------------|
+| Michael Penn | Chalkboard | 16.7K | 12:57 | 5/10 |
+| Prof. Macauley | Slides+Cayley | 24.6K | 23:16 | 8/10 |
+| Kimberly Brehm | Slides | 8.4K+11.3K | 19+14min | 4-5/10 |
+| EpsilonDelta | Animated | 55.8K | 45:07 | 9/10 |
+| MathDoctorBob | Whiteboard | 24.7K | 8:57 | 3/10 |
+| Others | Various | <10K | 6-59min | 2-5/10 |
+
+**Total addressable views:** ~165K across all competitors — strong but underserved market.
+
+**Key Market Gaps:**
+1. **NO animated (Manim) video** covers direct products AND finite abelian classification in one coherent video
+2. EpsilonDelta comes closest in visual quality but covers too much scope (45 min, includes extensions, cohomology)
+3. No competitor uses Manim-style animations for Cayley diagrams or group decomposition visuals
+4. All competitors use static formats (slides, chalkboard, whiteboard)
+5. No competitor makes the "chemistry analogy" (groups as atoms, products as molecules) the central teaching metaphor
+
+**Recommended Video 118 Structure (12-15 min):**
+
+1. **Hook (1 min):** "How do we build complex groups from simple ones?" — chemistry analogy (atoms → molecules). Show Z_2 × Z_3 = Z_6 as teaser.
+2. **Direct Product Definition (2 min):** External direct product of groups. Show Z_2 × Z_3 as ordered pairs. Cayley table animation. Klein four-group Z_2 × Z_2 as counterexample.
+3. **When is the Product Cyclic? (2 min):** gcd(m,n)=1 theorem with visual proof via Cayley diagram lattice. Z_6 ≅ Z_2 × Z_3 but Z_4 ≇ Z_2 × Z_2.
+4. **Properties of Direct Products (1.5 min):** Order, subgroups, abelian-ness. If G and H are abelian, G×H is abelian.
+5. **Internal Direct Products (1.5 min):** Normal subgroups that "split" a group. H×K ⊆ G when H∩K={e} and HK=G.
+6. **Classification Theorem Statement (2 min):** Every finite abelian group is a product of cyclic p-groups. Two forms: invariant factor vs elementary divisor.
+7. **Classification Examples (2.5 min):** All abelian groups of order 36. All abelian groups of order 8. Step-by-step algorithm using partitions.
+8. **Summary + Outro (1 min):** Direct products as the "building blocks" of abelian groups.
+
+**Specific Techniques to Adopt:**
+1. EpsilonDelta's "chemistry analogy" — groups as atoms, products as molecules (central metaphor)
+2. Prof. Macauley's Cayley diagram lattice for direct products — adapt to animated Manim 2D grid of colored nodes
+3. Michael Penn's problem-first approach: "When is Z_m × Z_n cyclic?"
+4. Kimberly Brehm's concrete examples: Z_2×Z_2 (Klein four) vs Z_2×Z_3 ≅ Z_6
+5. The prime factorization analogy: "Classifying abelian groups ≈ factoring integers"
+6. Visual demonstration of the two decomposition forms (same group, different products)
+
+**Specific Techniques to Avoid:**
+1. Don't exceed 15 minutes — EpsilonDelta's 45 min is way too long
+2. Don't use text-only thumbnails — include a visual element (animated grid/diagram)
+3. Don't jump to the classification theorem without first building intuition for direct products
+4. Don't present proofs without visual motivation (Michael Penn's weakness)
+5. Don't cover semidirect products or extensions (save for later videos)
+6. Don't use the handwritten-style font (Kimberly Brehm's thumbnail) — our channel uses Source Sans 3
+
+**Thumbnail Recommendation:**
+- Dark background (#1A1832, matching our brand)
+- Central visual: animated 2D grid of colored nodes representing Z_3 × Z_4 (or similar)
+- Title text: "Direct Products" in PRIMARY (#5BC0EB), subtitle "Building Groups from Simpler Ones" in WHITE
+- Contrast with EpsilonDelta's polyhedra/Rubik's cube approach — we use pure geometric abstraction
+- Include "=" or "×" symbol between two small Cayley diagrams
+
+**Thumbnail Trends from Competitors:**
+- Math channels overwhelmingly use dark backgrounds (black, dark blue) with white text
+- Top performers include a visual element beyond text (EpsilonDelta: 8/10 with polyhedra; Prof. Macauley: 7/10 with diagrams)
+- Low performers use text-only thumbnails (Kimberly Brehm: 4/10)
+- Color-coded elements increase click-through: the EpsilonDelta thumbnail uses 4+ colors and gets 55.8K views
+- Our channel should use our PRIMARY/SECONDARY/ACCENT palette on a consistent dark background
+
+**Standout Approaches to Reference in Video 118 Plan:**
+- EpsilonDelta's "chemistry analogy" for group decomposition — cite explicitly in the hook
+- Prof. Macauley's visual proof that Z_{mn} ≅ Z_m × Z_n via Cayley diagrams — adapt to Manim
+- Michael Penn's focused question: "When is the product cyclic?" — use as scene transition prompt

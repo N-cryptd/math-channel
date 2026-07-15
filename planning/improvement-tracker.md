@@ -37,7 +37,7 @@ content budgets, or proper narration timing.
 | 14 | U-Substitution | 267 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, split examples into separate scenes |
 | 15 | Integration by Parts | 244 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, LIATE as progressive_reveal, formula_box for key formula |
 | 16 | Applications | 24 Applications | 241 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, content budgets, split examples from definitions, formula_box for key formulas |
-| 17 | Sequences | 306 | YES | YES | YES | YES | v2 | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split 2nd example into separate scene |
+| 17 | Sequences | 306 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split 2nd example into separate scene |
 | 18 | Series | 348 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split number-line into separate sub-scene, split harmonic from divergence test |
 | 19 | Convergence Tests | 387 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split direct+limit comparison into 2 scenes, split ratio example into separate scene, split absolute/conditional into sub-scenes, progressive_reveal recap |
 | 20 | Power Series | 397 | YES | YES | YES | v2 rewrite: setup_bg, SANS font, progressive_reveal, section_dividers, formula_box, content budgets, split operations into sub-scenes, split radius visual from formula, progressive_reveal recap |
@@ -190,7 +190,7 @@ Videos 111+ created with v2 templates from the start.
 
 | 116 | Group Homomorphisms | 666 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(6), formula_box(6), SANS(35), ly.clear(17), safe_place(39), two_columns(1), play_intro(2), play_outro(2), add_subcaption(9). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
 
-| 117 | Isomorphism Theorems | 681 | YES | YES (minor) | N/A | v2-compliant. Added 6 section_divider calls (was 0) for major theorem transitions. Wrapped 9 .move_to() in diamond/tower diagrams with clamp_position. setup_bg(2), progressive_reveal(3), formula_box(6), SANS(29), ly.clear(11), safe_place(31). 4 .next_to() all diagram arrow labels (acceptable). Zero .shift()/.to_edge(). |
+|| 117 | Isomorphism Theorems | 681 | YES | YES (minor) | YES | v2-compliant. Added 6 section_divider calls (was 0) for major theorem transitions. Wrapped 9 .move_to() in diamond/tower diagrams with clamp_position. setup_bg(2), progressive_reveal(3), formula_box(6), SANS(29), ly.clear(11), safe_place(31). 4 .next_to() all diagram arrow labels (acceptable). Zero .shift()/.to_edge(). |
 
 ## Status: COMPLETE ✓
 All 117 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-115 created with v2 or improved to v2 standards. Video 116 confirmed v2-compliant at creation. Video 117 received minor v2 improvements (6 section_dividers, clamp_position on diagrams). No videos remain that need improvement work.
