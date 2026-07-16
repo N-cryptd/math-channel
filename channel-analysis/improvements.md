@@ -2323,3 +2323,139 @@ Techniques to Avoid:
 - EpsilonDelta's "chemistry analogy" for group decomposition — cite explicitly in the hook
 - Prof. Macauley's visual proof that Z_{mn} ≅ Z_m × Z_n via Cayley diagrams — adapt to Manim
 - Michael Penn's focused question: "When is the product cyclic?" — use as scene transition prompt
+
+
+### [2026-07-15] Group Actions (Video 119)
+
+**Market Gap Analysis:** Group actions are covered by several channels, but no one provides a concise animated Manim explanation focused specifically on the definition, orbits, stabilizers, and orbit-stabilizer theorem in a standalone video format. Mathemaniac covers it as part of a series with a non-pedagogical disclaimer. Professor Macauley uses a "Visual Group Theory" lecture format with SAGE animations. 3B1B touches group actions in his monster group video but only briefly. Our video fills the gap: a focused, curriculum-aligned, animated explanation with clear visual examples.
+
+**Source 1: Mathemaniac -- "Chapter 7: Group actions, symmetric group and Cayley's theorem | Essence of Group Theory"**
+URL: https://www.youtube.com/watch?v=sNX3txN9zc4
+Subscribers: 275K | Views: 42,346 | Date: Jun 2020 | Duration: 10:51 | Captions: True
+Thumbnail: Light beige background with faint grid pattern, geometric shape with colored dots and arrows. Bold sans-serif text with shadow effect. Quality: 8/10.
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 9/10 | Narration 7/10 | Hooks 6/10
+
+Key Insights:
+- Treats group action as a homomorphism to Sym(S) -- elegant unified framework
+- Visualizes the correspondence between group elements and permutations
+- Includes Cayley's theorem as a direct application
+- Uses color-coded dots and arrows for orbit/stabilizer visualization
+- 10:51 is excellent target length for this topic
+- 42K views shows moderate demand; topic is niche but important
+
+Techniques to Adopt:
+- Group action = homomorphism viewpoint: this is the "unifying perspective" that connects to our previous homomorphism video
+- Color-coded orbit visualization with arrows showing how group elements map elements
+- Cayley's theorem as a payoff/example at the end
+
+Techniques to Avoid:
+- Mathemaniac explicitly disclaims pedagogical intent -- we should be pedagogical
+- Dense approach covering too many topics (actions + symmetric group + Cayley) -- we should split focus
+
+**Source 2: Mathemaniac -- "Chapter 2: Orbit-Stabiliser Theorem | Essence of Group Theory"**
+URL: https://www.youtube.com/watch?v=BfgMdi0OkPU
+Subscribers: 275K | Views: 86,220 | Date: Feb 2020 | Duration: 12:27 | Captions: True
+Thumbnail: Blue background with purple "Orbit" rectangle and green arrow to "Stabiliser." Yellow title text. Clean and well-organized. Quality: 8/10.
+Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 9/10 | Narration 7/10 | Hooks 7/10
+
+Key Insights:
+- Intuitive "counting symmetries" approach motivates the orbit-stabilizer theorem
+- Uses polygons/objects with symmetry groups as concrete examples
+- Visual: shows elements partitioning into orbits with color coding
+- 86K views is the highest for orbit-stabilizer content -- strong demand
+- 12:27 duration aligns with our 8-15 min target
+
+Techniques to Adopt:
+- Counting-based motivation: "how many symmetries map vertex i to vertex j?" naturally leads to the orbit-stabilizer formula
+- Polygon rotation examples for concrete orbits
+- Partition-into-orbits visual: color-code different orbits
+
+Techniques to Avoid:
+- Assumes viewer has seen Chapter 1 (symmetries as groups) -- we need to be self-contained within our playlist
+- No formal definition of group action before jumping to orbits -- we should define first
+
+**Source 3: 3Blue1Brown -- "Group theory, abstraction, and the 196,883-dimensional monster"**
+URL: https://www.youtube.com/watch?v=mH0oCDa74tE
+Subscribers: 8.48M | Views: 3,710,662 | Date: Aug 2020 | Duration: 21:58 | Captions: True
+Thumbnail: Black background, white text, geometric shape and cartoon monster. Simple sans-serif font. Quality: 9/10.
+Dimensions: Structure 10/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+Key Insights:
+- Opens with the Monster group as a hook -- builds curiosity and motivation
+- Introduces groups through ACTIONS first, then abstracts to definitions
+- "Groups as actions" = group action perspective even before formal definition
+- Uses physical symmetries (Rubik's cube, face rotations) as intuition builders
+- Excellent pacing: concrete example → abstraction → deep theorem → payoff
+- 3.7M views shows massive general interest in group theory with engaging presentation
+
+Techniques to Adopt:
+- Action-first approach: show a group acting on something concrete BEFORE giving the formal definition
+- Use the Rubik's cube / polygon rotation as a visual metaphor for "what a group action looks like"
+- Curiosity hook at the start (connect to why group actions matter)
+
+Techniques to Avoid:
+- This video covers group theory broadly, not group actions specifically -- too wide a scope for our video
+- 22 minutes is too long for our format
+
+**Source 4: Professor Macauley -- "Visual Group Theory, Lecture 5.1: Groups acting on sets"**
+URL: https://www.youtube.com/watch?v=1oReZXEhvX0
+Subscribers: 29.5K | Views: 27,471 | Date: Apr 2016 | Duration: 32:35 | Captions: True
+Thumbnail: Traditional lecture capture style. Quality: 5/10.
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 7/10 | Narration 6/10 | Hooks 4/10
+
+Key Insights:
+- Uses "group switchboard" metaphor: each group element is a button that permutes elements of S
+- Covers left vs right group actions distinction
+- Lots of visual examples using Cayley diagrams (SAGE-based)
+- 32 minutes is too long -- university lecture format
+
+Techniques to Adopt:
+- "Group switchboard" metaphor is excellent for intuition -- each group element "presses a button" that permutes things
+- Distinguish between the group G and the set X being acted upon visually (different colors)
+- Show multiple examples of the SAME group acting on DIFFERENT sets
+
+Techniques to Avoid:
+- 32-minute university lecture format -- too long and lecture-capture quality
+- Covers left vs right actions which is too advanced for our video
+- Assumes students have Cayley diagram background
+
+**Source 5: MathDoctorBob -- "GT15. Group Actions"**
+URL: https://www.youtube.com/watch?v=RTEX87QNz00
+Subscribers: 66.9K | Views: 47,479 | Date: Jan 2012 | Duration: 20:19 | Captions: True
+Thumbnail: Traditional whiteboard capture. Quality: 3/10.
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 3/10
+
+Key Insights:
+- Whiteboard-based lecture: no animations
+- Defines group action formally and derives orbits as equivalence classes
+- 47K views despite being 12+ years old shows persistent demand
+- Covers orbits as cosets perspective
+
+Techniques to Adopt:
+- The orbit-as-equivalence-class viewpoint is worth including briefly
+- Show that stabilizer is always a subgroup
+
+Techniques to Avoid:
+- Whiteboard format -- our channel uses Manim animation
+- No visual examples -- we should have rich polygon/diagram animations
+
+**Thumbnail Analysis Summary:**
+- Top thumbnails use dark backgrounds with colorful mathematical visuals (3B1B: 9/10, Mathemaniac: 8/10)
+- MathDoctorBob's text-only whiteboard capture rates 3/10
+- Color-coded elements (orbits in purple, stabilizers in green) increase visual appeal
+- Our thumbnail should use our PRIMARY/ACCENT palette on dark background with a polygon + orbit arrows
+
+**Key Insights for Video 119 Plan:**
+1. Following 3B1B: Start with action-first intuition (polygon rotation) before formal definition
+2. Following Mathemaniac: Connect group action to homomorphisms (builds on Video 116)
+3. Following Mathemaniac's orbit-stabilizer video: Use counting motivation for the theorem
+4. Following Prof. Macauley: "Switchboard" metaphor for understanding what an action looks like
+5. Following 3B1B: Multiple concrete examples (polygon rotation, permutation action) before abstraction
+6. End with Cayley's theorem as a payoff connecting everything together
+7. Target 10-12 minutes to match the Mathemaniac sweet spot
+
+**Standout Approaches to Reference in Video 119 Plan:**
+- Mathemaniac's "group action as homomorphism to Sym(S)" unifying framework
+- 3B1B's "groups are fundamentally about actions" perspective
+- The counting argument that makes orbit-stabilizer feel natural rather than arbitrary
+

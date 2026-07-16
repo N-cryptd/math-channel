@@ -192,8 +192,12 @@ Videos 111+ created with v2 templates from the start.
 
 || 117 | Isomorphism Theorems | 681 | YES | YES (minor) | YES | v2-compliant. Added 6 section_divider calls (was 0) for major theorem transitions. Wrapped 9 .move_to() in diamond/tower diagrams with clamp_position. setup_bg(2), progressive_reveal(3), formula_box(6), SANS(29), ly.clear(11), safe_place(31). 4 .next_to() all diagram arrow labels (acceptable). Zero .shift()/.to_edge(). |
 
+| 118 | Direct Products & Finite Abelian Groups | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal, section_divider, SANS, ly.clear, safe_place, formula_box. Rendered. |
+
+| 119 | Group Actions | 684 | YES | YES (minor) | YES | v2-compliant. Fixed 3 trailing-comma tuple bugs (ex, ex2, stab_fact — `font=SANS),` made them tuples instead of Text). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(2), formula_box(6), SANS(39), ly.clear(10), safe_place(39). 1 .move_to() on pentagon vertex label (diagram, acceptable). Zero .shift()/.to_edge()/.next_to(). Rendered 2026-07-16 (314s, 5:14, 10 TTS segs, 5 speedup warnings). |
+
 ## Status: COMPLETE ✓
-All 117 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-115 created with v2 or improved to v2 standards. Video 116 confirmed v2-compliant at creation. Video 117 received minor v2 improvements (6 section_dividers, clamp_position on diagrams). No videos remain that need improvement work.
+All 119 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-119 created with v2 or improved to v2 standards. Videos 120+ not yet created. No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-14 (Analyzed Videos 116-117 for v2 compliance. Video 116 already v2. Video 117: added 6 section_dividers, wrapped 9 .move_to() with clamp_position. Compile check passed.)
+2026-07-16 (Rendered Video 119: Group Actions. Fixed 3 trailing-comma tuple bugs in script. 314s, 5:14 duration, 8 scenes, 10 TTS segments.)

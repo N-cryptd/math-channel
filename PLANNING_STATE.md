@@ -161,13 +161,13 @@
 | 116 | Group Homomorphisms | ✅ | ✅ |
 || 117 | Isomorphism Theorems | ✅ | ✅ |
 | 118 | Direct Products & Finite Abelian Groups | ✅ | ✅ |
-| 119 | Group Actions | ⬜ | ⬜ |
+|| 119 | Group Actions | ✅ | ✅ |
 | 120 | Sylow Theorems | ⬜ | ⬜ |
 | 121 | Finite Simple Groups | ⬜ | ⬜ |
 | 122 | Introduction to Rings | ⬜ | ⬜ |
 
 ## In Progress
-- Abstract Algebra I (Videos 111-122): Video 118 rendered and narrated. Next: Video 119 (Group Actions)
+- Abstract Algebra I (Videos 111-122): Video 119 rendered. Next: Video 120 (Sylow Theorems)
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
