@@ -2459,3 +2459,178 @@ Techniques to Avoid:
 - 3B1B's "groups are fundamentally about actions" perspective
 - The counting argument that makes orbit-stabilizer feel natural rather than arbitrary
 
+
+---
+
+## 2026-07-16 — Sylow Theorems (Video 120)
+Source: Multiple channels — topic-aligned competitive analysis
+Dimensions averaged across 4 videos: Structure 6.5/10 | Pacing 6.0/10 | Visuals 5.5/10 | Narration 6.3/10 | Hooks 4.0/10
+
+### Competitor Videos Analyzed
+1. Professor Macauley — Visual Group Theory, Lecture 5.6 (60K views, 48:37) — slides + Cayley diagrams, full lecture
+2. Richard E Borcherds — Group theory 14: Sylow theorems (15K views, 19:44) — Fields medalist, chalkboard
+3. VisualMath — What are...the Sylow theorems? (1.9K views, 15:35) — animated slides, intuition-first
+4. Mohamed Omar — Sylow Theorem Part 1 (27K views, 11:56) — chalkboard, multi-part series
+
+### Key Insights
+- NO high-production Manim-animated video exists for the Sylow Theorems — this is a major market gap. The best visual treatment is Prof. Macauley's slide-based approach with Cayley diagrams (8/10 visuals among competitors, but still slides not animation)
+- Sylow Theorems are almost always taught in lecture/chalkboard format — even VisualMath uses slides, not true animation. This is our opportunity to differentiate
+- Competitors split coverage across multiple videos (Mohamed Omar: 3 parts; Prof. Macauley: multiple lectures). A single well-structured animated video covering all three theorems would be unique
+- The most-viewed video (Prof. Macauley, 60K) succeeds because it ties Sylow theorems to visual group theory — Cayley diagrams, subgroups as visual structures
+- Borcherds' video (19 min) is the best length but uses pure chalkboard — students lose the visual intuition for what a p-subgroup "looks like"
+- All competitors assume the viewer already understands group actions and conjugacy well — our Video 119 on Group Actions gives us a sequencing advantage
+
+### Techniques to Adopt
+- **Cayley diagram visualization of p-subgroups**: Highlight elements whose orders are powers of p in a Cayley diagram, show how they form nested subgroups (Prof. Macauley's key technique, upgrade to animation)
+- **Conjugacy as visual "rotation"**: Animate conjugating a subgroup to show all Sylow p-subgroups are conjugate — this makes the Second Theorem intuitive rather than abstract
+- **"Counting argument" visual for Third Theorem**: Show n_p ≡ 1 (mod p) by coloring the set of Sylow p-subgroups and applying the orbit-stabilizer theorem visually
+- **Worked example progression**: Start with a simple group (order 6), then order 12, then order pq — build complexity gradually (Mohamed Omar's approach)
+- **Subgroup lattice diagrams**: Show where Sylow p-subgroups sit in the subgroup lattice, animated with p-subgroups in a distinct color (red for 2-subgroups, blue for 3-subgroups)
+- **Application teaser**: "Can we classify all groups of order 15? Order 21? Order 6?" — Sylow theorems make this possible
+
+### Techniques to Avoid
+- Don't present all three theorems as dry numbered statements right away (Borcherds does this — low engagement)
+- Don't exceed 20 minutes (Prof. Macauley at 48 min is a full lecture, not a video)
+- Don't split into multiple parts for the core theorems (Mohamed Omar's 3-part split fragments the experience)
+- Don't skip visual motivation and go straight to proof (all chalkboard competitors do this)
+- Don't assume deep group action familiarity without brief recap — tie back to Video 119
+
+---
+
+**Source 1: Professor Macauley — "Visual Group Theory, Lecture 5.6: The Sylow theorems"**
+URL: https://www.youtube.com/watch?v=MVojEjXdVgA
+Subscribers: 29.5K | Views: 60,212 | Date: Apr 2016 | Duration: 48:37 | Captions: True
+Thumbnail: White background, blue header "Lecture 5.6: The Sylow theorems", two mathematical diagrams below. Clean, academic, 8/10 quality.
+Thumbnail analysis: "White background with blue header reading 'Lecture 5.6: The Sylow theorems' in bold sans-serif. Two mathematical diagrams illustrating Sylow subgroups and their relationships. Quality 8/10 — effectively conveys topic with visual aids but diagrams could be larger."
+Dimensions: Structure 9/10 | Pacing 6/10 | Visuals 8/10 | Narration 7/10 | Hooks 5/10
+
+### Key Insights
+- BEST visual competitor for Sylow theorems — uses Nathan Carter's Visual Group Theory framework with Cayley diagrams
+- Covers all three Sylow theorems in a single lecture with clear section breaks
+- Uses subgroup lattice diagrams and Cayley diagrams to show where Sylow p-subgroups live
+- Explains the relationship between p-subgroups and normalizers visually
+- 60K views — highest for Sylow content, showing strong demand for visual treatments
+- Full lecture format with homework references — academic completeness but long
+
+### Techniques to Adopt
+- Cayley diagram approach: show elements colored by their order (p-power vs. not), reveal p-subgroups visually
+- Subgroup lattice with Sylow p-subgroups highlighted in distinct colors
+- Connect all three theorems through a single visual example group (e.g., S_3, A_4)
+- Show the conjugacy action on subgroups to motivate the Second Theorem
+
+### Techniques to Avoid
+- 48 minutes is far too long — compress to ≤18 minutes for our format
+- Slide-based presentation — we should animate the Cayley diagrams, not just show them statically
+- Lecture-heavy: spends significant time on preliminaries that our Video 119 already covered
+
+---
+
+**Source 2: Richard E Borcherds — "Group theory 14: Sylow theorems"**
+URL: https://www.youtube.com/watch?v=DtHfwkOyNUc
+Subscribers: 81.4K | Views: 15,351 | Date: Jun 2020 | Duration: 19:44 | Captions: True
+Thumbnail: White background, black text only. No math visuals. Simple, academic, 7/10 quality.
+Thumbnail analysis: "White background with black text. No math visuals included. Quality 7/10."
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 3/10 | Narration 7/10 | Hooks 3/10
+
+### Key Insights
+- Fields medalist lecturer — academic authority but purely chalkboard presentation
+- Ideal length at 19:44 — covers all three theorems with proofs in a single video
+- Starts with definitions then states all three theorems before proving them — traditional structure
+- Includes a correction note (D4 should be D8) — shows even experts make notation mistakes
+- Proof of First Sylow Theorem uses the class equation approach (orbit-stabilizer counting)
+- Brief application at the end: shows groups of order pq are not simple
+- 15K views despite 81K subscriber channel — Sylow theorems are niche but steady demand
+
+### Techniques to Adopt
+- Length: 19 minutes is about right for a comprehensive Sylow theorems video
+- Brief application at the end (groups of order pq) — gives immediate payoff for learning the theorems
+- The class equation proof approach for the First Theorem is elegant — ties back to group actions (our Video 119)
+
+### Techniques to Avoid
+- Pure chalkboard with no visual aids — visual score 3/10, students lose geometric intuition
+- States all three theorems upfront before any motivation — dry "definition → theorem → proof" format
+- No worked examples until the very end — students need examples woven throughout
+- Weak hook — no question, problem, or motivation to start
+
+---
+
+**Source 3: VisualMath — "What are...the Sylow theorems?"**
+URL: https://www.youtube.com/watch?v=TZJl6-TBYYU
+Subscribers: 33.5K | Views: 1,886 | Date: May 2021 | Duration: 15:35 | Captions: True
+Thumbnail: Pink-purple gradient, blue and white geometric shapes. Bold text "Good substructures?" with speech bubble "What is... algebra?". Nested ovals labeled p to p^r. Quality 7/10.
+Thumbnail analysis: "Pink-purple gradient with blue and white geometric shapes. Main title 'Good substructures?' in large letters, speech bubble 'What is... algebra?'. Series of nested ovals labeled p to p^r. Quality 7/10 — visually appealing and communicates topic but could benefit from more contrast."
+Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 6/10 | Narration 5/10 | Hooks 5/10
+
+### Key Insights
+- Intuition-first approach: frames Sylow theorems as answering "what good substructures exist?"
+- Uses animated slides (not Manim but a step above static slides) with nested diagrams
+- The "Good substructures?" framing is interesting but doesn't land — too vague for students who need to know WHY these matter
+- Part of a series "What are...the [theorems]?" — consistent branding
+- References multiple sources including Daniel Litt's blog and groupprops wiki
+- Low views (1.9K) despite 33.5K subscribers — the vague framing doesn't attract clicks
+- 15:35 is a good length, but pacing is uneven — rushes through proofs
+
+### Techniques to Adopt
+- The "what substructures can we guarantee exist?" framing is good motivation before stating theorems
+- Nested p-subgroup diagram (p → p² → p³ → ... → p^r) is a clean visual for the First Theorem
+- Providing reference links (wiki, blogs) in description for further reading
+
+### Techniques to Avoid
+- Vague title "What are...the Sylow theorems?" — doesn't signal what the viewer gains
+- Slide-based animation — feels cheap compared to full Manim animation
+- Rushes through proofs without visual intuition — defeats the purpose of an "intuition" video
+- The "Good substructures?" label is too abstract — students need concrete motivation (e.g., "classifying groups of order pq")
+
+---
+
+**Source 4: Mohamed Omar — "Sylow Theorem Part 1 | The Sylow Theorems"**
+URL: https://www.youtube.com/watch?v=xTCxmr4ISU4
+Subscribers: 18K | Views: 26,638 | Date: May 2020 | Duration: 11:56 | Captions: True
+Thumbnail: Light blue background, black outline text "Sylow Theorem Part 1". Equations |G| = p^k·m and |H| = p^k in dark blue font. Clean and legible, 7/10 quality.
+Thumbnail analysis: "Light blue background with bold black outline text 'Sylow Theorem Part 1'. Equations |G| = p^k·m and |H| = p^k displayed clearly. Simple, straightforward design that communicates content effectively."
+Dimensions: Structure 7/10 | Pacing 8/10 | Visuals 4/10 | Narration 7/10 | Hooks 4/10
+
+### Key Insights
+- Multi-part series (3 videos: Part 1 = First Theorem, Part 2 = Second, Part 3 = Third) — 27K views on Part 1 alone
+- Best pacing among competitors: 11:56 focused entirely on the First Sylow Theorem
+- Chalkboard but well-organized: statement of theorem → proof → example → discussion
+- Shows the proof intuition before diving into rigor — explains "why" the proof strategy works
+- Uses a specific example group to illustrate — makes abstract theorem concrete
+- "Intuition behind proofs" approach is excellent for pedagogy
+- High views (27K on Part 1) show demand for focused, well-paced Sylow content
+
+### Techniques to Adopt
+- Intuition-before-rigor: explain the proof strategy before writing it out
+- Single-theorem focus: spend real time on each theorem before moving on (we'll adapt this to cover all three but with clear section breaks)
+- Concrete example immediately after stating each theorem
+- The |G| = p^k·m notation displayed prominently — anchor the viewer's understanding
+- "What does this mean?" moments after each proof step
+
+### Techniques to Avoid
+- Chalkboard-only — no visual aids for understanding what p-subgroups "look like" in a group
+- Splitting across 3 videos fragments the learning — students may not watch all three
+- Weak hook: starts directly with theorem statement, no motivation for WHY we care about p-subgroups
+- Thumbnail only shows Part 1 — doesn't convey the full scope of Sylow theorems
+
+---
+
+### Synthesis: Competitive Landscape for Video 120 (Sylow Theorems)
+
+**Market Gap:** No high-production Manim-animated video exists that covers the Sylow Theorems with visual intuition. All competitors use either chalkboard (Borcherds, Omar), slides (Prof. Macauley, VisualMath), or static diagrams. The best visual competitor (Prof. Macauley) uses Cayley diagrams but in a 48-minute lecture format with slides, not animation. Our video can own this space by combining 3B1B-quality animation with the visual group theory framework.
+
+**Recommended Structure for Our Video (target: 15-18 minutes):**
+1. **Hook (0:30-1:00)**: "There are only two groups of order 15 up to isomorphism. How do we know? The Sylow theorems let us count subgroups and force group structures." — concrete, motivating question
+2. **Motivation (1:00-2:30)**: Why p-subgroups matter — Lagrange's theorem gives necessary conditions, Sylow gives sufficient conditions. Visual: show a Cayley diagram of S_3, highlight the 2-Sylow and 3-Sylow subgroups in different colors
+3. **First Sylow Theorem (2:30-6:00)**: Statement → visual proof sketch using class equation / group action counting → animated nested p-subgroup diagram (p → p² → ... → maximal)
+4. **Second Sylow Theorem (6:00-9:00)**: Statement → conjugacy as "visual rotation" animation → all Sylow p-subgroups are conjugate
+5. **Third Sylow Theorem (9:00-12:00)**: Statement → counting argument visual (n_p divides m and n_p ≡ 1 mod p) → color-coded counting on orbit-stabilizer
+6. **Application (12:00-15:00)**: Classify groups of order pq using all three theorems together → "see, only two groups of order 15!"
+7. **Conclusion (15:00-16:00)**: Teaser for deeper applications (simple groups, classification of finite groups)
+
+**Key Differentiator:** Animated Cayley diagrams with color-coded p-subgroups — no competitor does this with Manim-quality animation.
+
+**Visual Strategy:**
+- Color coding: RED = 2-Sylow subgroups, BLUE = 3-Sylow subgroups, GREEN = 5-Sylow subgroups (consistent with 3B1B convention)
+- Animated subgroup lattice growing from the identity
+- Conjugacy action animated as a "rotation" of the Cayley diagram
+- The |G| = p^k · m equation as a persistent on-screen reference (like 3B1B's persistent notation boxes)

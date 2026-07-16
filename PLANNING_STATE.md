@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-07-15
+**Last updated:** 2026-07-16
 
-## Completed Videos (115 complete)
+**Completed Videos (116 complete)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -162,12 +162,12 @@
 || 117 | Isomorphism Theorems | ✅ | ✅ |
 | 118 | Direct Products & Finite Abelian Groups | ✅ | ✅ |
 || 119 | Group Actions | ✅ | ✅ |
-| 120 | Sylow Theorems | ⬜ | ⬜ |
+| 120 | Sylow Theorems | ✅ | ✅ |
 | 121 | Finite Simple Groups | ⬜ | ⬜ |
 | 122 | Introduction to Rings | ⬜ | ⬜ |
 
 ## In Progress
-- Abstract Algebra I (Videos 111-122): Video 119 rendered. Next: Video 120 (Sylow Theorems)
+- Abstract Algebra I (Videos 111-122): Video 120 rendered. Next: Video 121 (Finite Simple Groups)
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
