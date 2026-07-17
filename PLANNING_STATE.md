@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-17
 
-**Completed Videos (121 scripts, 120 renders)**
+**Completed Videos (122 scripts, 121 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -163,11 +163,18 @@
 | 118 | Direct Products & Finite Abelian Groups | ✅ | ✅ |
 || 119 | Group Actions | ✅ | ✅ |
 | 120 | Sylow Theorems | ✅ | ✅ |
-| 121 | Finite Simple Groups | ✅ | ⬜ |
-| 122 | Introduction to Rings | ⬜ | ⬜ |
+| 121 | Finite Simple Groups | ✅ | ✅ |
+| 122 | Introduction to Rings | ✅ | ⬜ |
+
+### Abstract Algebra I cont. (Videos 123–125)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 123 | Polynomial Rings | ⬜ | ⬜ |
+| 124 | Ideals | ⬜ | ⬜ |
+| 125 | Quotient Rings | ⬜ | ⬜ |
 
 ## In Progress
-- Abstract Algebra I (Videos 111-122): Video 121 script written. Next: render Video 121, then Video 122 (Introduction to Rings).
+- Abstract Algebra I (Videos 111-125): Video 122 render in progress. Videos 123-125 scripts planned via kanban (Polynomial Rings, Ideals, Quotient Rings).
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
