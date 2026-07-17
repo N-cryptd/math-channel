@@ -235,7 +235,7 @@ class Video120_SylowTheorems(Scene):
         self.play(FadeIn(subtitle, shift=LEFT * 0.15), run_time=FAST)
         self.wait(4)
 
-        # Proof sketch
+        # Proof sketch (part 1)
         proof_title = Text(
             "Proof sketch: action on subsets",
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
@@ -245,18 +245,28 @@ class Video120_SylowTheorems(Scene):
         self.play(Write(proof_title), run_time=NORMAL)
         self.wait(3)
 
-        steps = [
+        steps1 = [
             MathTex(r"\Omega = \{S \subseteq G : |S| = p^k\}", color=WHITE, font_size=28),
             Text("G acts on Omega by left multiplication", font_size=SMALL_SIZE, color=SECONDARY, font=SANS),
-            Text("Orbit sizes divide |G| = p^k . m", font_size=SMALL_SIZE, color=WHITE, font=SANS),
-            Text("Some orbit has size coprime to p => stabilizer has order p^k", font_size=SMALL_SIZE, color=ACCENT, font=SANS),
         ]
-        self.ly.stack_down(steps, start_from=proof_title, spacing=0.3)
-        for i, s in enumerate(steps):
+        self.ly.stack_down(steps1, start_from=proof_title, spacing=0.3)
+        for s in steps1:
             if isinstance(s, MathTex):
                 self.play(Write(s), run_time=FAST)
             else:
                 self.play(FadeIn(s, shift=LEFT * 0.1), run_time=FAST)
+            self.wait(2)
+        self.wait(4)
+
+        # Proof sketch (part 2) — FadeOut first 2 steps to stay within budget
+        self.play(FadeOut(steps1[0]), FadeOut(steps1[1]), run_time=FAST)
+        steps2 = [
+            Text("Orbit sizes divide |G| = p^k . m", font_size=SMALL_SIZE, color=WHITE, font=SANS),
+            Text("Some orbit coprime to p => stabilizer has order p^k", font_size=SMALL_SIZE, color=ACCENT, font=SANS),
+        ]
+        self.ly.stack_down(steps2, start_from=proof_title, spacing=0.3)
+        for s in steps2:
+            self.play(FadeIn(s, shift=LEFT * 0.1), run_time=FAST)
             self.wait(2)
         self.wait(6)
 
@@ -267,7 +277,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.play(
             FadeOut(proof_title),
-            *[FadeOut(s) for s in steps],
+            *[FadeOut(s) for s in steps2],
             run_time=FAST,
         )
         self.ly.safe_place(insight, anchor=title, direction=DOWN, buff=0.6)

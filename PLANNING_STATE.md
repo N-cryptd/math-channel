@@ -163,11 +163,11 @@
 | 118 | Direct Products & Finite Abelian Groups | ✅ | ✅ |
 || 119 | Group Actions | ✅ | ✅ |
 | 120 | Sylow Theorems | ✅ | ✅ |
-| 121 | Finite Simple Groups | ⬜ | ⬜ |
+| 121 | Finite Simple Groups | ✅ | ⬜ |
 | 122 | Introduction to Rings | ⬜ | ⬜ |
 
 ## In Progress
-- Abstract Algebra I (Videos 111-122): Video 120 rendered. Next: Video 121 (Finite Simple Groups)
+- Abstract Algebra I (Videos 111-122): Video 121 script written. Next: render Video 121, then Video 122 (Introduction to Rings).
 
 ## Completed Playlists
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)

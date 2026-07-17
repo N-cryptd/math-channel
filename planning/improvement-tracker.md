@@ -195,9 +195,11 @@ Videos 111+ created with v2 templates from the start.
 | 118 | Direct Products & Finite Abelian Groups | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), progressive_reveal, section_divider, SANS, ly.clear, safe_place, formula_box. Rendered. |
 
 | 119 | Group Actions | 684 | YES | YES (minor) | YES | v2-compliant. Fixed 3 trailing-comma tuple bugs (ex, ex2, stab_fact — `font=SANS),` made them tuples instead of Text). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(2), formula_box(6), SANS(39), ly.clear(10), safe_place(39). 1 .move_to() on pentagon vertex label (diagram, acceptable). Zero .shift()/.to_edge()/.next_to(). Rendered 2026-07-16 (314s, 5:14, 10 TTS segs, 5 speedup warnings). |
+| 120 | Sylow Theorems | 735 | YES | YES (content budget) | N/A | v2-compliant. Fixed Scene 3 content budget (6→5 items: split proof sketch into 2 sub-scenes of 2 steps each). setup_bg(1), play_intro(1), play_outro(1), progressive_reveal(3), section_divider(2), formula_box(6), SANS(37), ly.clear(10), safe_place(42). Zero .shift()/.to_edge() for content. |
+| 121 | Finite Simple Groups | 557 | YES | YES (content budget + docstring) | N/A | v2-compliant. Fixed broken docstring delimiters (escaped quotes). Fixed 3 content budget violations: Scene 2 (FadeOut progressive items before note/tease), Scene 4 (FadeOut columns before monster_group, FadeOut monster before scale), Scene 7 (reduced 6→5 two_columns items, total line separate). setup_bg(1), play_intro(1), play_outro(1), progressive_reveal(7), section_divider(6), formula_box(5), SANS(38), ly.clear(16), safe_place(11). Zero .shift()/.to_edge() for content. |
 
 ## Status: COMPLETE ✓
-All 119 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-119 created with v2 or improved to v2 standards. Videos 120+ not yet created. No videos remain that need improvement work.
+All 121 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-119 created with v2 or improved to v2 standards. Videos 120-121 analyzed and received content budget fixes. Video 122 not yet created. No videos remain that need improvement work.
 
 ## Last Updated
-2026-07-16 (Rendered Video 119: Group Actions. Fixed 3 trailing-comma tuple bugs in script. 314s, 5:14 duration, 8 scenes, 10 TTS segments.)
+2026-07-17 (Analyzed Videos 120-121. Fixed content budget violations in both: Video 120 Scene 3 split proof into 2 sub-scenes; Video 121 fixed broken docstring delimiters + 3 content budget violations in Scenes 2, 4, 7.)
