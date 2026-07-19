@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-19
 
-**Completed Videos (125 scripts, 123 renders)**
+**Completed Videos (126 scripts, 126 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -132,7 +132,7 @@
 | 95 | Strong Induction | ✅ | ✅ |
 | 96 | Proof by Cases | ✅ | ✅ |
 | 97 | Existence and Uniqueness | ✅ | ✅ |
-| 98 | Proof Writing Style | ✅ | ⚠️ (render missing) |
+| 98 | Proof Writing Style | ✅ | ✅ |
 
 ### Real Analysis I (Videos 99–110)
 | # | Title | Script | Rendered |
@@ -161,7 +161,7 @@
 | 116 | Group Homomorphisms | ✅ | ✅ |
 || 117 | Isomorphism Theorems | ✅ | ✅ |
 | 118 | Direct Products & Finite Abelian Groups | ✅ | ✅ |
-|| 119 | Group Actions | ✅ | ⚠️ (render missing) |
+|| 119 | Group Actions | ✅ | ✅ |
 | 120 | Sylow Theorems | ✅ | ✅ |
 | 121 | Finite Simple Groups | ✅ | ✅ |
 | 122 | Introduction to Rings | ✅ | ✅ |
@@ -173,10 +173,14 @@
 | 124 | Ideals | ✅ | ✅ |
 | 125 | Quotient Rings | ✅ | ✅ |
 
+### Complex Analysis (Videos 126–138)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 126 | Complex Numbers Revisited | ✅ | ✅ |
+
 ## In Progress
-- Abstract Algebra I (Videos 111-125): COMPLETE (15 videos). All videos scripted.
-- Videos 98 and 119 have renders missing from rendered/ directory — need re-render.
-- Ready for next playlist: Abstract Algebra II (Ring Theory, Fields, Galois Theory) or Complex Analysis.
+- Complex Analysis (Videos 126-138): Video 126 scripted and rendered. Videos 127+ pending.
+- Next: Video 127 — Complex Functions
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
