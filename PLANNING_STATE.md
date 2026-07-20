@@ -179,8 +179,8 @@
 | 126 | Complex Numbers Revisited | ✅ | ✅ |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Video 126 scripted and rendered. Videos 127+ pending.
-- Next: Video 127 — Complex Functions
+- Complex Analysis (Videos 126-138): Videos 126-127 scripted and rendered. Video 128+ pending.
+- Next: Video 128 — Limits and Continuity in C
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)

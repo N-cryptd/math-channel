@@ -448,7 +448,7 @@ class Video126_ComplexAnalysisIntro(Scene):
             font_size=HEADING_SIZE,
             color=ACCENT,
         )
-        euler_formula.to_edge(UP, buff=0.4)
+        self.ly.formula_box(euler_formula)
         self.play(Write(euler_formula), run_time=NORMAL)
         self.wait(3)
 

@@ -202,12 +202,20 @@ Videos 111+ created with v2 templates from the start.
 | 124 | Ideals | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(7), section_divider(5), formula_box(11), SANS(35), ly.clear(18), safe_place(21), two_columns(1), center_in_content(3). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
 | 125 | Quotient Rings | 719 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(2), SANS(20+), ly.clear(7), safe_place(30+), formula_box(5). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. Rendered. |
 
+### Complex Analysis (scripts/undergraduate/) — NEW PIPELINE
+Videos 126+ created with v2 templates from the start.
+
+| # | Title | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 126 | Complex Numbers Revisited | 652 | YES | YES (minor) | N/A | v2-compliant. Fixed 1 .to_edge() → formula_box (Euler's formula). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(6), section_divider(7), formula_box(1), SANS(12), ly.clear(13), safe_place(2). 1 .move_to() (diagram center), 7 .next_to() all diagram labels — acceptable. |
+| 127 | Complex Functions | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), section_divider(7), formula_box(0), SANS(24), ly.clear(22), safe_place(14), two_columns(1). Zero .shift()/.to_edge()/.move_to() for content. 7 .next_to() all diagram labels — acceptable. Rendered. |
+
 ## Status: COMPLETE ✓
-All 125 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-119 created with v2 or improved to v2 standards. Videos 120-121 analyzed and received content budget fixes, now rendered. Videos 122-124 created with v2 templates — fully compliant. Video 125 created with v2 templates — fully compliant. No videos remain that need improvement work.
+All 127 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-127 created with v2 templates — fully compliant (Video 126 received minor fix). No videos remain that need improvement work.
 
 ## Videos Needing Re-render
 - Video 98 (Proof Writing Style): Script improved but NOT rendered (render missing from rendered/)
-- Video 119 (Group Actions): Script improved and rendered, but render file missing from rendered/ directory
+- Video 119 (Group Actions): Script improved and rendered — render NOW EXISTS in rendered/ directory (Video119_GroupActions_narrated.mp4)
 
 ## Last Updated
-2026-07-19 (Updated render status for Videos 120-121 to YES. Analyzed Video 125 — v2-compliant.)
+2026-07-20 (Analyzed Videos 126-127. Fixed Video 126 euler_formula .to_edge() → formula_box. Confirmed Video 119 render exists.)
