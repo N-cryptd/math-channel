@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-07-19
+**Last updated:** 2026-07-20
 
-**Completed Videos (126 scripts, 126 renders)**
+**Completed Videos (127 scripts, 127 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -177,10 +177,12 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 126 | Complex Numbers Revisited | ✅ | ✅ |
+| 127 | Complex Functions | ✅ | ✅ |
+| 128 | Limits and Continuity in C | ✅ | ✅ |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Videos 126-127 scripted and rendered. Video 128+ pending.
-- Next: Video 128 — Limits and Continuity in C
+- Complex Analysis (Videos 126-138): Videos 126-128 scripted and rendered. Video 129+ pending.
+- Next: Video 129 — Complex Differentiation
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
