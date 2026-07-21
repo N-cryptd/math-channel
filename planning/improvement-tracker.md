@@ -207,14 +207,14 @@ Videos 126+ created with v2 templates from the start.
 
 | # | Title | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
-| 126 | Complex Numbers Revisited | 652 | YES | YES (minor) | N/A | v2-compliant. Fixed 1 .to_edge() → formula_box (Euler's formula). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(6), section_divider(7), formula_box(1), SANS(12), ly.clear(13), safe_place(2). 1 .move_to() (diagram center), 7 .next_to() all diagram labels — acceptable. |
+| 126 | Complex Numbers Revisited | 652 | YES | YES (minor) | YES | v2-compliant. Fixed 1 .to_edge() → formula_box (Euler's formula). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(6), section_divider(7), formula_box(1), SANS(12), ly.clear(13), safe_place(2). 1 .move_to() (diagram center), 7 .next_to() all diagram labels — acceptable. Re-rendered 2026-07-21. |
 | 127 | Complex Functions | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), section_divider(7), formula_box(0), SANS(24), ly.clear(22), safe_place(14), two_columns(1). Zero .shift()/.to_edge()/.move_to() for content. 7 .next_to() all diagram labels — acceptable. Rendered. |
 
 ## Status: COMPLETE ✓
 All 127 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-127 created with v2 templates — fully compliant (Video 126 received minor fix). No videos remain that need improvement work.
 
 ## Videos Needing Re-render
-- Video 119 (Group Actions): Script improved and rendered — render NOW EXISTS in rendered/ directory (Video119_GroupActions_narrated.mp4)
+None — all improved videos have been re-rendered.
 
 ## Last Updated
-2026-07-20 (Re-rendered Video 98 ProofWritingStyle. Updated tracker.)
+2026-07-21 (Re-rendered Video 126 Complex Numbers Revisited. Cleaned up stale entries.)
