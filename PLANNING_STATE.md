@@ -179,10 +179,11 @@
 | 126 | Complex Numbers Revisited | ✅ | ✅ |
 | 127 | Complex Functions | ✅ | ✅ |
 | 128 | Limits and Continuity in C | ✅ | ✅ |
+| 129 | Complex Differentiation | ✅ | ✅ |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Videos 126-128 scripted and rendered. Video 129+ pending.
-- Next: Video 129 — Complex Differentiation
+- Complex Analysis (Videos 126-138): Videos 126-129 scripted and rendered.
+- Next: Video 130 — Complex Integration
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
