@@ -28,7 +28,14 @@ Last updated: 2026-07-11
 
 ## Active Playlists
 - Abstract Algebra I (in progress, Videos 111-114 done, 115+ remaining)
+- Complex Analysis (in progress, Videos 126-129 done)
 
 ## Upcoming Playlists
-- Complex Analysis
 - Calculus III (Multivariable)
+
+## Complex Analysis Progress
+- Video 126: Complex Numbers Revisited — plan + script done
+- Video 127: Complex Functions — plan + script done
+- Video 128: Limits and Continuity in C — plan + script done
+- Video 129: Complex Differentiation — plan + script done
+- Video 130: Contour Integrals — plan + script done (2026-07-21)

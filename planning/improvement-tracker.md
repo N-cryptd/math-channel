@@ -210,11 +210,17 @@ Videos 126+ created with v2 templates from the start.
 | 126 | Complex Numbers Revisited | 652 | YES | YES (minor) | YES | v2-compliant. Fixed 1 .to_edge() → formula_box (Euler's formula). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(6), section_divider(7), formula_box(1), SANS(12), ly.clear(13), safe_place(2). 1 .move_to() (diagram center), 7 .next_to() all diagram labels — acceptable. Re-rendered 2026-07-21. |
 | 127 | Complex Functions | — | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), section_divider(7), formula_box(0), SANS(24), ly.clear(22), safe_place(14), two_columns(1). Zero .shift()/.to_edge()/.move_to() for content. 7 .next_to() all diagram labels — acceptable. Rendered. |
 
+| 128 | Limits/Continuity in C | 643 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(5), section_divider(6), SANS(19), ly.clear(17), safe_place(9), two_columns(2), center_in_content(0), formula_box(0). Zero .shift()/.to_edge() for content (1 .to_edge is docstring only). 8 .move_to() all diagram (Axes, Circle, NumberLine placed on column centers). 13 .next_to() all diagram labels (dot labels, disk labels, axis labels). clamp_position(5). add_subcaption(10). |
+
+| 129 | Complex Differentiation | 810 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(3), section_divider(7), SANS(28), ly.clear(25), safe_place(21), two_columns(1), center_in_content(22), formula_box(0). Zero .shift()/.to_edge() for content (both in docstring only). 2 .move_to() all diagram (NumberLine/Axes on column centers). 4 .next_to() all diagram labels (point labels, axis labels). clamp_position(3). add_subcaption(11). |
+
+| 130 | Complex Integration | 686 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), progressive_reveal(2), section_divider(6), SANS(16), ly.clear(23), safe_place(12), two_columns(0), center_in_content(20), formula_box(1). Zero .shift()/.to_edge() for content (both in docstring only). Zero .move_to(). 8 .next_to() all diagram labels (contour labels, point labels). clamp_position(1). add_subcaption(9). |
+
 ## Status: COMPLETE ✓
-All 127 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-127 created with v2 templates — fully compliant (Video 126 received minor fix). No videos remain that need improvement work.
+All 130 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-130 created with v2 templates — fully compliant (Video 126 received minor fix). No videos remain that need improvement work.
 
 ## Videos Needing Re-render
 None — all improved videos have been re-rendered.
 
 ## Last Updated
-2026-07-21 (Re-rendered Video 126 Complex Numbers Revisited. Cleaned up stale entries.)
+2026-07-22 (Analyzed Videos 128-130 Complex Analysis — all v2-compliant.)
