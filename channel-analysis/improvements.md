@@ -3201,3 +3201,296 @@ Dimensions: Structure 4/10 | Pacing 4/10 | Visuals 2/10 | Narration 3/10 | Hooks
 - Jumping into irreducibility too fast → Build up from basics
 
 **Our Differentiator:** Animated polynomial multiplication showing term-by-term distribution, color-coded degree tracking, and the "ring factory" metaphor where taking R[x] builds a new ring from any ring R.
+
+## [2026-07-29 10:02] @3blue1brown — But what is cross-entropy? | Compression is Intelligence Part 2
+
+**URL:** https://www.youtube.com/watch?v=GlYgs6v2YfU
+**Views:** 501K views | **Date:** 12 days ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The YouTube math thumbnail features a black background with white text and blue vertical bars. The text "Loss = Information" is prominently displayed at the top in large white letters. The math visuals include blue vertical bars that represent the concept of loss and information, with words such as "smart," "best," and "of" scattered throughout the bars. The overall quality of the thumbnail is 8 out of 10, with the clear and concise text and visually appealing blue bars making it effective for attracting viewers interested in math and information theory.
+
+---
+
+## [2026-07-29 10:02] @3blue1brown — Reinventing Entropy | Compression is Intelligence Part 1
+
+**URL:** https://www.youtube.com/watch?v=l6DKRf-fAAM
+**Views:** 1.3M views | **Date:** 1 month ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The background of the thumbnail is black, with the word "Entropy" written in large white letters. The math visuals feature a robot with a pair of binoculars for eyes and a lever on its head, suggesting a playful and engaging approach to the topic. The overall quality of the thumbnail is high, with clear and vibrant visuals that are likely to attract viewers interested in math and science.
+
+---
+
+## [2026-07-29 10:02] @3blue1brown — How (and why) to take a logarithm of an image
+
+**URL:** https://www.youtube.com/watch?v=ldxFjLJ3rVY
+**Views:** 1.9M views | **Date:** 4 months ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The thumbnail features a black background with white text, including an arrow pointing from the left side to the right, indicating a transformation. The visuals include a detailed cityscape on the left and a patterned tessellation on the right, both in black and white. The overall quality is high, with clear and well-organized elements that effectively convey the mathematical concept being illustrated.
+
+---
+
+## [2026-07-29 10:02] @mathologer — Parity of permutations, impossible puzzles and the magical determinant
+
+**URL:** https://www.youtube.com/watch?v=rUiulWItECQ
+**Views:** 42K views | **Date:** 3 months ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The YouTube math thumbnail features a cosmic background with a vibrant lightning bolt running through the center, creating a striking contrast between the cool blue and fiery orange hues. The text is presented in bold, white capital letters, making it easily readable against the colorful backdrop. The math visuals include two Rubik's cubes, one labeled "EVEN" and the other "ODD," symbolizing the concept of even and odd numbers. The overall quality of the thumbnail is high, with clear and engaging visuals that effectively convey the mathematical theme.
+
+---
+
+## [2026-07-29 10:02] @mathologer — I Built an Original One-Glance Proof from Dice
+
+**URL:** https://www.youtube.com/watch?v=8q95eiq-y-Q
+**Views:** 38K views | **Date:** 9 months ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The YouTube thumbnail features a yellow background with a black dice image on the left and a text box on the right. The text box has yellow text that reads "What does this prove?" with a red question mark. The thumbnail has a low quality rating of 2 out of 10.
+
+---
+
+## [2026-07-29 10:02] @mathologer — How to build and solve a 4D Rubik's cubes in physical 3D (no simulator!)
+
+**URL:** https://www.youtube.com/watch?v=d-Yy-ILjM3k
+**Views:** 35K views | **Date:** 11 months ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The YouTube thumbnail features a black background with text in orange, yellow, and white. The text poses a mathematical challenge related to solving 4D Rubik's Cubes in physical 3D space without the use of a simulator. The visual elements include a Rubik's Cube being manipulated by hands, symbolizing the complexity of the task. The overall quality of the thumbnail is high, with clear and engaging visuals that effectively communicate the mathematical theme.
+
+---
+
+## [2026-07-29 10:03] @drpeyam — Craving some complex integrals 
+
+**URL:** https://www.youtube.com/watch?v=1_Qi_N_-61I
+**Views:** 7.5K views | **Date:** 6 months ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The thumbnail features a white background with green and blue text. It displays an integral sign with infinity on top, followed by the expression "1/(x^4 + 1)" and the variable "dx". The text "Complex Integral Fun" is written in green at the top, and "Dr Peyam" in blue at the bottom. The overall quality of the thumbnail is 8 out of 10.
+
+---
+
+## [2026-07-29 10:03] @drpeyam — Laplace Equation Applications
+
+**URL:** https://www.youtube.com/watch?v=3OFxXnBFf9s
+**Views:** 3.4K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The YouTube thumbnail features a clean, white background with blue and black text. The text "Applications" is prominently displayed at the top in blue, followed by a mathematical equation in black, "Δu = 0," which likely represents a concept in calculus or differential equations. The overall quality of the thumbnail is high, with clear and legible text, making it visually appealing and easy to read.
+
+---
+
+## [2026-07-29 10:03] @drpeyam — Laplace transform of jumps
+
+**URL:** https://www.youtube.com/watch?v=AwTwycSSxRY
+**Views:** 1.5K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+**Visual Analysis (nvidia/llama-3.1-nemotron-nano-vl-8b-v1):**
+The image features a white background with black and blue text. It displays the notation "L{u2(t)}," which likely represents a mathematical expression or function. The text is clear and legible, and the overall quality of the image is high, making it suitable for educational or instructional purposes.
+
+---
+
+---
+
+### [2026-07-29] Video 132 — Cauchy's Integral Formula (Topic-Aligned Analysis)
+
+**Market Gap Analysis:** Cauchy's Integral Formula (CIF) is one of the central results in complex analysis, with massive search demand. The top video has 1.49M views (Dr. Gajendra Purohit — exam-prep style). However, the landscape is dominated by either (a) traditional chalkboard/lecture recordings, or (b) broad crash courses that cover CIF as one section of a 40-minute video. **No dedicated Manim-animated video exists that focuses purely on Cauchy's Integral Formula with deep visual intuition.** This is a significant opportunity — our Video 132 can fill this gap by providing the first high-production animated explanation of CIF with progressive disclosure, contour visualizations, and the geometric intuition that static lectures can't convey.
+
+---
+
+**Source 1: Mathemaniac — "Complex integration, Cauchy and residue theorems | Essence of Complex Analysis #6" (EyBDtUtyshk)**
+URL: https://www.youtube.com/watch?v=EyBDtUtyshk
+Subscribers: 276K | Views: 469K | Date: Jan 2022 | Duration: 40:45 | Captions: True
+Thumbnail: Black background with central circle transitioning through colors, surrounded by arrows pointing inward. Text "Complex integration" at top in white serif font. Quality: 8/10.
+Thumbnail analysis: "The thumbnail features a black background with a central circle transitioning through colors, surrounded by arrows pointing inward, symbolizing complex integration. The text 'Complex integration' is prominently displayed at the top in white, serif font. The overall quality of the thumbnail is high, with clear visuals and a professional layout, scoring 8/10."
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 8/10
+
+Key Insights:
+- **Highest quality animated explanation** of complex integration on YouTube — 3B1B-inspired but uses custom animation (not Manim)
+- Uses **Pólya vector field** to give geometric intuition for complex integrals (converting complex integral to 2D flux + circulation) — this is a UNIQUE and powerful visual technique
+- Covers CIF at 28:26 in a 40-min video — gives it ~3 minutes of focus within a broader narrative
+- Builds up from complex integration basics → Cauchy's theorem → integrating 1/z → CIF → residue theorem — excellent progression
+- 469K views on a 40-min complex analysis video proves there IS a large audience willing to watch deep complex analysis content
+- Chapter markers in description (00:00, 06:01, 08:18, 12:27, 18:39, 22:28, 28:26, 31:43, 36:14)
+- Self-aware about pacing: "I have made this slower in comparison with some of my other videos"
+- Based on Tristan Needham's "Visual Complex Analysis" — explicitly visual/geometric approach
+
+Techniques to Adopt:
+- **Pólya vector field visualization**: Split f(z)dz into (u+iv)(dx+idy) and show as 2D vector field → this gives genuine geometric intuition for WHY Cauchy's theorem works
+- **Progressive build-up**: Integration → Cauchy's theorem → 1/z integral → CIF → consequences — each step motivates the next
+- **"Why?" section at the end (36:14)**: Step back and explain why this all works — meta-reflection is powerful
+- **Contour deformation animation**: Show the contour shrinking around the singularity — visually demonstrates why only the value at the point matters
+- **Chapter structure with timestamps**: Audience expects this for 10+ minute videos
+
+Techniques to Avoid:
+- 40 minutes is too long for a single video on our channel (we target 8-15 min) — but the progressive structure is perfect to adapt
+- Covers CIF too briefly (3 min out of 40) — we need to dedicate the full video to CIF
+- No worked examples of evaluating integrals with CIF — we should include at least one concrete computation
+
+---
+
+**Source 2: Steve Brunton — "Complex Analysis L10: Cauchy Integral Formula" (4epESGF3qcU)**
+URL: https://www.youtube.com/watch?v=4epESGF3qcU
+Subscribers: 544K | Views: 64K | Date: Mar 2023 | Duration: 16:43 | Captions: True
+Thumbnail: Black background with red text "Cauchy Integral Formula" at bottom in large bold letters. Chalkboard with equations and a contour graph labeled "C". Man gesturing toward the board. Quality: 8/10.
+Thumbnail analysis: "The thumbnail features a black background with red text, a chalkboard with mathematical equations, and a man gesturing towards the board. The text 'Cauchy Integral Formula' is prominently displayed in large, bold red letters at the bottom. The chalkboard includes a complex mathematical equation and a graph with a contour line labeled 'C'. The overall quality of the thumbnail is high, with clear visuals and a professional appearance."
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- Hybrid format: talking head + chalkboard — personal connection but limited visual animation
+- Academic lecture style compressed into 16 minutes — covers the theorem statement, proof sketch, and key consequences
+- 544K subscribers but only 64K views on this video — complex analysis is a niche even for large channels
+- Contour graph in thumbnail shows a simple closed curve C — directly communicates the visual concept
+- Red text on black is high contrast — stands out in search results
+
+Techniques to Adopt:
+- **Contour graph in thumbnail**: Immediately communicates what the video is about — contour + formula = instant recognition for students searching this topic
+- **16-minute duration is the sweet spot** for this topic — enough for theorem + proof + example
+- **Clear theorem statement on screen**: Write the formula prominently as a focal point
+
+Techniques to Avoid:
+- Chalkboard format loses the geometric intuition that animation provides
+- Talking head interrupts visual flow — our pure-animation approach is better for mathematical concepts
+- Lecture-style proof presentation without visual motivation — we should motivate BEFORE proving
+
+---
+
+**Source 3: The Bright Side of Mathematics — "Complex Analysis 27 | Cauchy's Integral Formula" (hll0DAilhoA)**
+URL: https://www.youtube.com/watch?v=hll0DAilhoA
+Subscribers: 245K | Views: 24K | Date: Sep 2022 | Duration: 10:55 | Captions: True
+Thumbnail: Yellow background with black text and green circle. Mathematical equations and visual representation of a function. Quality: 7/10.
+Thumbnail analysis: "The thumbnail features a yellow background with black text and a green circle. It includes mathematical equations and a visual representation of a function. The quality is clear, with a simple and informative design."
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 7/10 | Narration 7/10 | Hooks 5/10
+
+Key Insights:
+- **Manim-animated** — our most direct competitor in terms of production style
+- Part of a systematic series ("Complex Analysis 27") — numbered curriculum approach identical to ours
+- Offers both dark mode and bright mode versions of every video — interesting accessibility choice
+- 245K subscribers, 24K views — lower engagement than Mathemaniac but consistent audience
+- Yellow background thumbnail is distinctive but less professional than dark themes
+- 10:55 duration is well within our 8-15 minute target range
+
+Techniques to Adopt:
+- **Systematic numbering ("Complex Analysis 27")**: Creates series loyalty and clear ordering — we already do this
+- **Dual mode (dark/bright)**: Consider if there's demand for bright-mode versions of our videos
+- **Clean Manim style**: Proves that Manim complex analysis content has an audience
+
+Techniques to Avoid:
+- Yellow thumbnail background looks less premium than dark themes — our BG=#1A1832 is superior
+- Formula-dense without enough visual/geometric intuition — we should show WHY the formula works, not just state it
+- 24K views vs Mathemaniac's 469K suggests that just animating equations isn't enough — you need unique visual insight
+
+---
+
+**Source 4: Faculty of Khan — "Cauchy's Integral Formula and Proof" (0JZMyutBk9o)**
+URL: https://www.youtube.com/watch?v=0JZMyutBk9o
+Subscribers: 104K | Views: 145K | Date: Aug 2016 | Duration: 8:50 | Captions: True
+Thumbnail: Black background with colorful math visuals (equations and graphs). Text "Cauchy Integral Formula" in white font on green rectangle. Quality: 7/10.
+Thumbnail analysis: "The YouTube thumbnail features a black background with colorful math visuals, including equations and graphs. The text 'Cauchy Integral Formula' is prominently displayed in white font on a green rectangle. The overall quality is 7 out of 10, with a clear focus on the text, but some of the math visuals are slightly blurred."
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+Key Insights:
+- 145K views with only 104K subscribers — very high view-to-subscriber ratio (1.4x), indicating strong search traffic
+- Traditional format: handwritten math on black background — simple but effective for search-driven traffic
+- Covers both the formula AND the proof in under 9 minutes — very concise
+- Also derives the generalized formula for nth derivative: f^(n)(z₀) = n!/(2πi) ∮ f(z)/(z-z₀)^(n+1) dz
+- Provides lecture notes via Google Drive link — supplementary material is valued by students
+
+Techniques to Adopt:
+- **Include the generalized (nth derivative) version** — this extends the formula's power and is often tested in courses
+- **Under 9 minutes for a concise treatment** — proves this topic can be covered well in our 8-15 min range
+- **Provide supplementary notes** — consider adding a description link to key formulas
+
+Techniques to Avoid:
+- Static handwritten visuals — no animation, no contour movement, no geometric insight
+- Goes straight to proof without building geometric intuition — we should animate the contour shrinking first
+- No examples of actually evaluating an integral — formula + proof without application is incomplete
+
+---
+
+**Source 5: Dr. Gajendra Purohit — "Cauchy's Integral Formula For Analytic Function | Example & Solution" (fSoQxuVdKIs)**
+URL: https://www.youtube.com/watch?v=fSoQxuVdKIs
+Subscribers: 1.83M | Views: 1.49M | Date: Nov 2018 | Duration: 20:41 | Captions: True
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 2/10 | Narration 6/10 | Hooks 3/10
+
+Key Insights:
+- **Highest viewed CIF video on YouTube (1.49M views)** — proves massive demand, especially from exam prep (GATE, IIT JAM, CSIR NET)
+- Exam-focused: Covers formula → identifies singular points → works through 6 examples with increasing complexity
+- Indian academic style: fast-paced, formula application, minimal intuition
+- Timestamps for each example (5:20, 7:19, 11:41, 13:12, 15:44, 18:02)
+- 1.83M subscribers shows the massive market for exam-prep mathematics content
+
+Techniques to Adopt:
+- **Multiple worked examples with increasing complexity**: Start simple, build to harder cases — this is what students actually need
+- **Identifying singular points** as a preliminary step before applying CIF — practical skill students need
+- **Timestamp markers for examples** — students use these to navigate to specific problems
+
+Techniques to Avoid:
+- Zero visual/geometric intuition — pure computation
+- No motivation for WHY the formula works — just "here it is, now use it"
+- 20+ minutes of repetitive examples — our animation approach is more efficient per minute
+
+---
+
+### Cross-Competitor Thumbnail Trends for Complex Analysis
+
+| Channel | BG Color | Text Style | Math Visual | Quality | Views |
+|---------|----------|------------|-------------|---------|-------|
+| Mathemaniac | Black | White serif, top | Color circle + arrows (8/10) | 8/10 | 469K |
+| Steve Brunton | Black | Red bold, bottom | Chalkboard + contour graph | 8/10 | 64K |
+| Bright Side | Yellow | Black, standard | Green circle + equations | 7/10 | 24K |
+| Faculty of Khan | Black | White on green rect | Equations + graphs (blurred) | 7/10 | 145K |
+| Dr. Purohit | White/light | Dark, standard | Standard exam style | 5/10 | 1.49M |
+
+**Thumbnail Pattern:** Black/dark backgrounds dominate (3/5 top results). The most visually striking thumbnails combine a dark background with a SINGLE geometric element (circle/contour) + bold text. The highest-viewed video (Purohit) succeeds on search SEO despite weak visuals — proving that topic targeting matters more than thumbnail quality for exam-prep audiences.
+
+**Our thumbnail strategy:** Dark BG (#1A1832) with a prominent animated contour loop in PRIMARY (#5BC0EB), the CIF formula in ACCENT (#FFD166), and the video title in WHITE. Show the contour C with point z₀ inside and the integral symbol — this instantly communicates the topic to anyone who's seen the formula.
+
+---
+
+### Synthesis: Actionable Recommendations for Video 132
+
+**What makes this topic unique:** Cauchy's Integral Formula is where complex analysis becomes "magical" — the value of an analytic function at ANY interior point is determined entirely by its values on the boundary. This is the perfect moment for a visual "aha" moment that static lectures can never deliver.
+
+**Recommended Video Structure (12-14 minutes):**
+1. **Hook (1 min):** "What if I told you that knowing a function's values on the edge of a circle tells you EVERYTHING about the function inside?" → Animate a contour where boundary values "flow" inward to determine interior values
+2. **Recap + Motivation (1.5 min):** Quick reminder of Cauchy's theorem (zero integral for analytic f on simply connected domain) → "But what if there's a singularity?"
+3. **The key integral ∮ 1/(z-z₀) dz = 2πi (2 min):** Visualize the contour shrinking around z₀ — this is the crux. Use color-coded contour deformation.
+4. **CIF Statement (1.5 min):** f(z₀) = (1/2πi) ∮ f(z)/(z-z₀) dz — write it prominently, explain each component
+5. **Proof sketch (2.5 min):** Don't do the full epsilon-delta — use the "keyhole contour" visual argument. Show how Cauchy's theorem + the 1/(z-z₀) result combine. Animate the deformation.
+6. **Worked example (2 min):** Evaluate ∮ e^z/(z-1) dz around |z|=2 → answer is 2πi·e. Simple but satisfying.
+7. **Generalized form (1 min):** f^(n)(z₀) = n!/(2πi) ∮ f(z)/(z-z₀)^(n+1) dz — show how CIF gives ALL derivatives
+8. **Consequences preview + Outro (1.5 min):** Tease Liouville's theorem, Fundamental Theorem of Algebra, maximum modulus principle — "CIF is the engine that powers all of complex analysis"
+
+**Visual Techniques to Use (not used by any single competitor):**
+- **Animated contour deformation** (from Mathemaniac's idea but dedicated to CIF): Show the contour C shrinking to tightly wrap around z₀ while the integral value converges to 2πi·f(z₀)
+- **Color-coded integrand decomposition**: f(z)/(z-z₀) — show f(z) in PRIMARY color and 1/(z-z₀) in SECONDARY, then show how they interact on the contour
+- **"Information flow" animation**: Particles along the contour representing f(z) values, flowing inward to reconstruct f(z₀) at the center — this is our UNIQUE visual metaphor
+- **Comparison chart**: Side-by-side — what the integral equals when z₀ is INSIDE vs OUTSIDE the contour (CIF vs Cauchy's theorem = 0)
+
+**What NOT to do:**
+- Don't start with the formal proof — Mathemaniac's success shows intuition-first beats rigor-first
+- Don't skip the contour deformation visualization — this is what makes the video worthwhile vs. a textbook
+- Don't do 6 repetitive examples like Purohit — one well-animated example is worth more
+- Don't use a bright/yellow thumbnail — dark backgrounds dominate this niche
+- Don't cover CIF as a brief section of a broader video — dedicate the FULL video to it (unlike Mathemaniac's 3-minute treatment)
+
+**Our Differentiator:** The first Manim-animated video dedicated entirely to Cauchy's Integral Formula with (1) the Pólya vector field intuition from Mathemaniac adapted for our style, (2) the contour deformation animation that no static lecture can provide, and (3) a single well-animated worked example that demonstrates the formula's power. We combine the rigor of Faculty of Khan with the visual insight of Mathemaniac — something no existing video achieves.
+
+**SEO Title Options:**
+- "Cauchy's Integral Formula — Why the Boundary Determines the Interior" (curiosity gap)
+- "Cauchy's Integral Formula | Complex Analysis #7" (series-aligned, like Bright Side)
+- "The Most Powerful Formula in Complex Analysis" (clickbaity but accurate)
+
+---
