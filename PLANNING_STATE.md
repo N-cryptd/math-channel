@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-07-20
+**Last updated:** 2026-07-30
 
-**Completed Videos (127 scripts, 127 renders)**
+**Completed Videos (129 scripts, 128 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -180,10 +180,13 @@
 | 127 | Complex Functions | ✅ | ✅ |
 | 128 | Limits and Continuity in C | ✅ | ✅ |
 | 129 | Complex Differentiation | ✅ | ✅ |
+| 130 | Complex Integration | ✅ | ✅ |
+| 131 | Cauchy's Theorem | ✅ | |
+| 132 | Cauchy's Integral Formula | ✅ | |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Videos 126-129 scripted and rendered.
-- Next: Video 130 — Complex Integration
+- Complex Analysis (Videos 126-138): Videos 126-132 scripted. Videos 126-130 rendered.
+- Next: Video 133 — Cauchy Integral Formula Consequences (TBD)
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)

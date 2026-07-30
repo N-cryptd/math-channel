@@ -1,4 +1,65 @@
 
+
+### [2026-07-30] Cauchy's Integral Formula (Video 132)
+
+**Market Gap Analysis:** Cauchy's Integral Formula is covered by several complex analysis educators, but ALL existing content uses chalkboard/whiteboard formats or theorem-statement-first approaches. No high-production Manim-animated video exists that visually explains WHY the formula works -- why boundary values determine interior values for analytic functions, how the contour deformation proof actually looks, and what the 1/(z-a) kernel does geometrically. This is a significant gap -- CIF is arguably the most important result in complex analysis, and visual intuition of the "probe" interpretation and contour shrinking would dramatically improve comprehension.
+
+**Source 1: Faculty of Khan -- "Cauchy's Integral Formula (Complex Analysis)"**
+Whiteboard style (~150K views). Covers the formula statement, proof using Cauchy's theorem, and computation examples. Clean theorem-proof-example structure but NO visual geometric intuition of why the formula works. Good pacing for a proof-oriented video.
+
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 3/10 | Narration 8/10 | Hooks 5/10
+
+Techniques to Adopt:
+- Clear theorem-proof-example structure is pedagogically solid
+- Computation examples show practical power of the formula
+
+Techniques to Avoid:
+- Pure chalkboard with no visual aids -- students lose geometric intuition
+- Stating theorem before motivation -- we motivate with the boundary-values concept first
+- No visualization of contour deformation -- this is the key geometric insight we animate
+
+**Source 2: Michael Penn -- "Cauchy's Integral Formula"**
+Whiteboard, rapid computation focus. Shows how to use CIF to evaluate integrals. Computation-heavy, no visualization.
+
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 2/10 | Narration 7/10 | Hooks 4/10
+
+Techniques to Adopt:
+- Multiple computation examples showing the formula's range
+
+Techniques to Avoid:
+- Dense algebra without geometric context
+- No visualization of what 1/(z-a) does
+
+**Source 3: Dr. Peyam -- "Cauchy's Integral Formula"**
+Traditional blackboard lecture. Good algebraic exposition but no visual intuition.
+
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 2/10 | Narration 7/10 | Hooks 3/10
+
+**Source 4: BriTheMathGuy -- Complex Analysis CIF coverage**
+Manim-based but fast-paced and computation-focused.
+
+Dimensions: Structure 7/10 | Pacing 4/10 | Visuals 6/10 | Narration 6/10 | Hooks 5/10
+
+**Source 5: The Bright Side of Mathematics -- Complex Analysis series**
+Clean Manim style, theorem-statement-first approach.
+
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 7/10 | Narration 7/10 | Hooks 5/10
+
+**Market gap:** No video visually explains WHY Cauchy's Integral Formula works. The connection between the 1/(z-a) kernel and the "probe" interpretation is almost never animated. The geometric picture of shrinking a contour around a point to isolate the value at that point is powerful but rarely shown.
+
+**Techniques to adopt:**
+- Following 3B1B's boundary-encodes-interior philosophy: animate how integrating around a boundary "reads out" function values at interior points
+- Visualize the key deformation: start with a large contour, then show it shrinking to a tiny circle around z=a
+- Show 1/(z-a) as a "probe kernel" that detects the value f(a)
+- Color-code the integrand decomposition: f(z)/(z-a) = f(a)/(z-a) + [f(z)-f(a)]/(z-a)
+- Animate the second term vanishing as the circle shrinks
+
+**Techniques to avoid:**
+- Stating the formal theorem before motivating WHY it's remarkable
+- Dense algebra in the proof without geometric context
+- Going straight to computation examples without first showing what the formula means
+- Skipping the connection to Cauchy's theorem (key bridge from Video 131)
+
 ### [2026-07-17] Quotient Rings (Video 125)
 
 **Market Gap Analysis:** Quotient rings / factor rings are covered across several abstract algebra channels, but ALL existing content uses chalkboard or slide-based formats. No high-production Manim-animated video exists explaining quotient ring construction R/I, coset operations, or the first isomorphism theorem for rings with visual intuition. This is a significant gap — quotient rings are one of the hardest topics in undergraduate algebra, and visual explanation of coset arithmetic and the correspondence theorem would dramatically improve comprehension.
