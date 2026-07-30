@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-30
 
-**Completed Videos (131 scripts, 131 renders)**
+**Completed Videos (132 scripts, 132 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -185,10 +185,11 @@
 | 132 | Cauchy's Integral Formula | ✅ | ✅ |
 | 133 | Consequences of CIF | ✅ | ✅ |
 | 134 | Taylor Series in C | ✅ | ✅ |
+| 135 | Laurent Series | ✅ | ✅ |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Videos 126-134 scripted and rendered.
-- Next: Video 135 — Laurent Series
+- Complex Analysis (Videos 126-138): Videos 126-135 scripted and rendered.
+- Next: Video 136 — The Residue Theorem
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
