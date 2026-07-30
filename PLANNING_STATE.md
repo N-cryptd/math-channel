@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-30
 
-**Completed Videos (132 scripts, 132 renders)**
+**Completed Videos (133 scripts, 133 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -186,10 +186,12 @@
 | 133 | Consequences of CIF | ✅ | ✅ |
 | 134 | Taylor Series in C | ✅ | ✅ |
 | 135 | Laurent Series | ✅ | ✅ |
+| 136 | Residue Theorem | ✅ | ✅ |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Videos 126-135 scripted and rendered.
-- Next: Video 136 — The Residue Theorem
+- Complex Analysis (Videos 126-138): Videos 126-136 scripted and rendered. COMPLEX ANALYSIS COMPLETE (11 videos).
+- Next: Video 137-138 topics TBD (possibly Zeros and Poles, Conformal Mappings, or Riemann Mapping)
+- PLANNING STATE for Videos 137-138 to be determined
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
