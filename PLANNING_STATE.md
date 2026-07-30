@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-30
 
-**Completed Videos (129 scripts, 128 renders)**
+**Completed Videos (131 scripts, 131 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -181,12 +181,14 @@
 | 128 | Limits and Continuity in C | ✅ | ✅ |
 | 129 | Complex Differentiation | ✅ | ✅ |
 | 130 | Complex Integration | ✅ | ✅ |
-| 131 | Cauchy's Theorem | ✅ | |
-| 132 | Cauchy's Integral Formula | ✅ | |
+| 131 | Cauchy's Theorem | ✅ | ✅ |
+| 132 | Cauchy's Integral Formula | ✅ | ✅ |
+| 133 | Consequences of CIF | ✅ | ✅ |
+| 134 | Taylor Series in C | ✅ | ✅ |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Videos 126-132 scripted. Videos 126-130 rendered.
-- Next: Video 133 — Cauchy Integral Formula Consequences (TBD)
+- Complex Analysis (Videos 126-138): Videos 126-134 scripted and rendered.
+- Next: Video 135 — Laurent Series
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
