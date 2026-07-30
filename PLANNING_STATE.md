@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-30
 
-**Completed Videos (134 scripts, 134 renders)**
+**Completed Videos (135 scripts, 135 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -188,10 +188,11 @@
 | 135 | Laurent Series | ✅ | ✅ |
 | 136 | Residue Theorem | ✅ | ✅ |
 | 137 | Zeros and Poles | ✅ | ✅ |
+| 138 | Conformal Mappings | ✅ | ✅ |
 
 ## In Progress
-- Complex Analysis (Videos 126-138): Videos 126-137 scripted and rendered. Video 138 remaining.
-- Next: Video 138 — Conformal Mappings (final video in playlist)
+- Complex Analysis (Videos 126-138): **COMPLETE** (13 videos, all scripted and rendered)
+- Next playlist TBD (considering Topology, Measure Theory, or Numerical Analysis)
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
@@ -202,6 +203,7 @@
 - Discrete Mathematics (Vectors 79–89): COMPLETE (11 videos)
 - Proof-Based Mathematics (Videos 90–98): COMPLETE (9 videos)
 - Real Analysis I (Videos 99–110): COMPLETE (12 videos)
+- Complex Analysis (Videos 126–138): COMPLETE (13 videos)
 
 ## Notes
 - Video 111 script has been enhanced to v2 quality standards
