@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-30
 
-**Completed Videos (135 scripts, 135 renders)**
+**Completed Videos (138 scripts, 138 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -190,9 +190,24 @@
 | 137 | Zeros and Poles | ✅ | ✅ |
 | 138 | Conformal Mappings | ✅ | ✅ |
 
+### Topology (Videos 139–150)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 139 | Introduction to Topology | ✅ | ✅ |
+| 140 | Connectedness | ✅ | ✅ |
+| 141 | Compactness | 🔲 | 🔲 |
+| 142 | Separation Axioms (Hausdorff) | 🔲 | 🔲 |
+| 143 | Product Topology | 🔲 | 🔲 |
+| 144 | Quotient Topology | 🔲 | 🔲 |
+| 145 | Metric Spaces and Metrization | 🔲 | 🔲 |
+| 146 | Completeness and Completion | 🔲 | 🔲 |
+| 147 | Fundamental Group Intro | 🔲 | 🔲 |
+| 148 | Covering Spaces | 🔲 | 🔲 |
+| 149 | Surfaces and Classification | 🔲 | 🔲 |
+| 150 | Topology Recap & What's Next | 🔲 | 🔲 |
+
 ## In Progress
-- Complex Analysis (Videos 126-138): **COMPLETE** (13 videos, all scripted and rendered)
-- Next playlist TBD (considering Topology, Measure Theory, or Numerical Analysis)
+- Topology (Videos 139-150): **IN PROGRESS** — Videos 139-140 complete, Video 141 next
 
 ## Completed Playlists
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)

@@ -3555,3 +3555,132 @@ Techniques to Avoid:
 - "The Most Powerful Formula in Complex Analysis" (clickbaity but accurate)
 
 ---
+
+### [2026-07-30] Introduction to Topology (Video 139)
+
+**Market Gap Analysis:** Introduction to topology is a well-covered topic but with a clear quality gap. Existing content splits into two extremes: (1) informal/visual-only (Mathologer's coffee-mug=donut) with no formal definitions, or (2) dry definition-heavy lectures (Socratica, Faculty of Khan) with no visual intuition. NO existing video combines beautiful Manim animation with both intuitive motivation AND formal definitions of topological spaces, open sets, and continuity. 3Blue1Brown has NOT published a dedicated topology introduction video. This is a significant gap and competitive opportunity.
+
+**Source 1: Mathologer -- "Topological shapes" (~1.2M views)**
+Hand-drawn animation style, covers the coffee mug=donut classic, Euler characteristic, orientability. Very intuitive and accessible but entirely visual -- no formal definitions, no metric spaces vs topological spaces distinction, no continuity in topological terms. Skews toward recreational/surface topology.
+
+Dimensions: Structure 7/10 | Pacing 8/10 | Visuals 8/10 | Narration 9/10 | Hooks 7/10
+
+Techniques to Adopt:
+- Start with the famous "coffee mug = donut" morphing -- it's the universal topology hook
+- Use humor and storytelling to make abstract concepts accessible
+- Show physical intuition before formalism
+
+Techniques to Avoid:
+- No formal definitions at all -- students leave entertained but unable to work with topology
+- Hand-drawn style doesn't scale to formal definitions (can't animate open sets cleanly)
+
+**Source 2: Socratica -- "Topology #1: Introduction to Topology" (~500K views)**
+Clean whiteboard style, covers formal definition of topology, open sets, examples (discrete, trivial, standard topologies). Definition-first approach. Multi-part series. Good for rigor but visually unengaging.
+
+Dimensions: Structure 8/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+Techniques to Adopt:
+- Clear multi-part series structure with progressive complexity
+- Covers the formal axioms properly
+- Good examples of different topologies on the same set
+
+Techniques to Avoid:
+- Definition-first without motivation
+- Static presentation -- topology needs animation
+- Dense notation without geometric context
+
+**Source 3: Faculty of Khan -- "What is a Topological Space?" (~200K views)**
+Handwritten tutorial style, bridges metric spaces to general topological spaces. Concise but visually plain. Good bridge from Real Analysis to topology.
+
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 2/10 | Narration 6/10 | Hooks 3/10
+
+Techniques to Adopt:
+- The metric-space-to-topological-space bridge is pedagogically excellent
+- Show why topology generalizes metric spaces
+
+Techniques to Avoid:
+- Handwritten notes on screen are hard to read
+- Rushes through examples without visualization
+
+**Source 4: Reducible -- "The Insane Math of Knots" (~800K views)**
+Beautiful Manim animations applied to knot theory. Demonstrates the animation style we should target.
+
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 10/10 | Narration 9/10 | Hooks 9/10
+
+Techniques to Adopt:
+- High-production Manim animation style -- this is our visual quality target
+- Story-driven structure with clear narrative arc
+
+**Our Differentiator:** The first Manim-animated topology introduction that combines (1) the visual intuition of Mathologer (deformation, morphing, the coffee-mug concept), (2) the formal rigor of Socratica/Faculty of Khan (topological space definition, open set axioms, continuity), and (3) the metric-space bridge that motivates WHY topology exists. We bridge the two extremes that currently dominate.
+
+**Key Visual Concepts to Animate:**
+- Coffee mug morphing to donut (hook) -- deform but don't tear
+- Open sets as "elastic neighborhoods" -- show epsilon-ball to general open set
+- Homeomorphism as continuous deformation -- animate the stretching
+- Metric space to topological space abstraction -- show what we gain by dropping the metric
+
+---
+
+### [2026-07-31] Connectedness (Video 140)
+
+**Market Gap Analysis:** Connectedness is a fundamental topology concept covered by several channels, but almost exclusively in formal/lecture style. No high-production Manim-animated video exists that visually motivates WHY connectedness matters before diving into the formal definition. The concept of "a space that cannot be split into two open parts" is inherently visual, yet existing videos present it as a theorem-proof exercise. There is a clear opportunity to create a video that bridges visual intuition with formal rigor using animated demonstrations of connected vs disconnected spaces.
+
+**Source 1: Faculty of Khan — "Connectedness in Topology"**
+Whiteboard style, ~50K views. Covers the definition of connected space (cannot be expressed as disjoint union of nonempty open sets), examples of connected/disconnected spaces, and the Intermediate Value Theorem as a topological consequence. Theorem-proof structure is solid but visually static.
+
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+
+Techniques to Adopt:
+- Clean progression: definition → examples → important theorems (IVT)
+- Clear distinction between "connected" and "path-connected"
+- Examples include (0,1) vs (0,1)∪(2,3), Q as a subspace
+
+Techniques to Avoid:
+- Pure chalkboard with no visual demonstration of what "splitting" looks like
+- Definition-first approach without visual motivation
+- Dense theorem statements without geometric context
+
+**Source 2: Dr. Peyam — "Connected Spaces"**
+Traditional blackboard lecture. Covers definitions and proves basic results. Good mathematical rigor but no visual aids at all.
+
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 2/10 | Narration 7/10 | Hooks 3/10
+
+Techniques to Avoid:
+- Definition without any visual intuition
+- No animated demonstrations
+
+**Source 3: Mathologer — Visual topology content (general)**
+Mathologer covers visual topology concepts (Klein bottles, Möbius strips, torus deformations) with excellent animation but does NOT have a dedicated connectedness video. His strength is in making abstract concepts tangible through physical analogies and visual metaphors.
+
+Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 9/10 | Narration 9/10 | Hooks 8/10
+
+Techniques to Adopt:
+- Visual hook at the start (physical analogy)
+- "Show, don't tell" approach — demonstrate the concept before defining it
+- Rich visual metaphors that stick in memory
+
+**Source 4: Bright Side of Mathematics — Topology playlist**
+Clean Manim style, covers connectedness formally. Good quality animations but theorem-statement-first approach. Does not emphasize visual intuition of what "connected" means geometrically.
+
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 7/10 | Narration 7/10 | Hooks 5/10
+
+Techniques to Adopt:
+- Clean Manim animations as a baseline
+- Systematic topic progression
+
+Techniques to Avoid:
+- Purely formal approach without geometric motivation
+
+**Market gap:** No video visually demonstrates connectedness before defining it. The concept is perfect for animation: show a connected space, animate it splitting into two disjoint open pieces (which is impossible for connected spaces), contrast with disconnected spaces that CAN be split. The key insight — "a space is connected if and only if the only subsets that are both open and closed are ∅ and X" — is almost never animated visually.
+
+**Techniques to adopt for Video 140:**
+1. Mathologer's approach: Start with a VISUAL demonstration before the definition
+2. Animate the "splitting" concept — show what it would look like to split a connected space
+3. Use color coding: one color for one "half", another color for the other "half"
+4. Visual proof of IVT as a consequence of connectedness
+5. Progressive: connected → disconnected → path-connected → components → theorems
+
+**Techniques to avoid:**
+1. Definition-first without visual motivation
+2. Dense theorem proofs without geometric context
+3. Rushing through examples without letting the viewer absorb the visual
