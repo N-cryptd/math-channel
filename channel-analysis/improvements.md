@@ -1,5 +1,39 @@
 
 
+### [2026-07-31] Connectedness (Video 140)
+
+**Market Gap Analysis:** No major animation channel (3B1B, Mathologer, Numberphile) has a dedicated Manim-animated video on connectedness in topology. All existing content is lecture-style whiteboard/blackboard. The topologist's sine curve (the canonical connected-but-not-path-connected example) is rarely well-visualized. This is a significant opportunity for the first high-production animated treatment.
+
+**Source 1: Socratica — "Connected vs Path Connected"** (~45K views)
+Clean slides but static. Good explanation of the distinction between connected and path-connected. No animated visualization of the topologist's sine curve.
+
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 3/10 | Narration 8/10 | Hooks 5/10
+
+Techniques to Adopt:
+- Clear distinction between connected and path-connected (our video does this with two separate scenes)
+- Examples-first approach before formal definitions
+
+Techniques to Avoid:
+- Static slides with no animation
+- No visualization of the topologist's sine curve
+
+**Source 2: Various lecture channels (Michael Penn, Faculty of Khan)**
+Traditional chalkboard format. Formal definitions with proofs but no visual intuition for what connectedness "looks like."
+
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 2/10 | Narration 7/10 | Hooks 3/10
+
+**Market gap confirmed:** No animated visual-first treatment exists. Our video fills this gap with:
+- Animated walking metaphor (Scene 1)
+- Visual connected vs disconnected comparison (Scene 2)
+- Animated path drawing (Scene 5)
+- Full visualization of the topologist's sine curve with the key "connected but NOT path-connected" result (Scene 6)
+
+**Techniques adopted in our video:**
+- Start with physical intuition ("can you walk from here to there?") before formal clopen definition
+- Animated topologist's sine curve as the centerpiece visual
+- Color-code connected (green) vs disconnected (red) vs paths (accent blue)
+- Path-connected => connected theorem with explicit counterexample
+
 ### [2026-07-30] Cauchy's Integral Formula (Video 132)
 
 **Market Gap Analysis:** Cauchy's Integral Formula is covered by several complex analysis educators, but ALL existing content uses chalkboard/whiteboard formats or theorem-statement-first approaches. No high-production Manim-animated video exists that visually explains WHY the formula works -- why boundary values determine interior values for analytic functions, how the contour deformation proof actually looks, and what the 1/(z-a) kernel does geometrically. This is a significant gap -- CIF is arguably the most important result in complex analysis, and visual intuition of the "probe" interpretation and contour shrinking would dramatically improve comprehension.

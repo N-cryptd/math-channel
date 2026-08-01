@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-Last updated: 2026-07-11
+Last updated: 2026-07-31
 
 ## Completed Videos
 - Videos 1-24: Calculus I/II (scripts in scripts/pre-university/)
@@ -30,12 +30,18 @@ Last updated: 2026-07-11
 - Abstract Algebra I (in progress, Videos 111-114 done, 115+ remaining)
 - Complex Analysis (in progress, Videos 126-129 done)
 
+## Active Playlists
+|- Topology (in progress, Videos 139-140 done)
+  - Video 139: Introduction to Topology — plan + script + render done
+  - Video 140: Connectedness — plan + script + render done (2026-07-31)
+  - Scripts in scripts/graduate/
+
 ## Upcoming Playlists
-- Calculus III (Multivariable)
+|- Calculus III (Multivariable)
 
 ## Complex Analysis Progress
-- Video 126: Complex Numbers Revisited — plan + script done
-- Video 127: Complex Functions — plan + script done
-- Video 128: Limits and Continuity in C — plan + script done
-- Video 129: Complex Differentiation — plan + script done
-- Video 130: Contour Integrals — plan + script done (2026-07-21)
+|- Video 126: Complex Numbers Revisited — plan + script done
+|- Video 127: Complex Functions — plan + script done
+|- Video 128: Limits and Continuity in C — plan + script done
+|- Video 129: Complex Differentiation — plan + script done
+|- Video 130-138: Contour Integrals through Conformal Mappings — all done

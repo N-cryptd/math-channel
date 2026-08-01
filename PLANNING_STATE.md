@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-07-30
+**Last updated:** 2026-08-01
 
-**Completed Videos (138 scripts, 138 renders)**
+**Completed Videos (150 scripts, 150 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -195,21 +195,22 @@
 |---|-------|--------|----------|
 | 139 | Introduction to Topology | ✅ | ✅ |
 | 140 | Connectedness | ✅ | ✅ |
-| 141 | Compactness | 🔲 | 🔲 |
-| 142 | Separation Axioms (Hausdorff) | 🔲 | 🔲 |
-| 143 | Product Topology | 🔲 | 🔲 |
-| 144 | Quotient Topology | 🔲 | 🔲 |
-| 145 | Metric Spaces and Metrization | 🔲 | 🔲 |
-| 146 | Completeness and Completion | 🔲 | 🔲 |
-| 147 | Fundamental Group Intro | 🔲 | 🔲 |
-| 148 | Covering Spaces | 🔲 | 🔲 |
-| 149 | Surfaces and Classification | 🔲 | 🔲 |
-| 150 | Topology Recap & What's Next | 🔲 | 🔲 |
+| 141 | Compactness | ✅ | ✅ |
+| 142 | Separation Axioms (Hausdorff) | ✅ | ✅ |
+| 143 | Product Topology | ✅ | ✅ |
+| 144 | Quotient Topology | ✅ | ✅ |
+| 145 | Metric Spaces and Metrization | ✅ | ✅ |
+| 146 | Completeness and Completion | ✅ | ✅ |
+| 147 | Fundamental Group Intro | ✅ | ✅ |
+| 148 | Covering Spaces | ✅ | ✅ |
+| 149 | Surfaces and Classification | ✅ | ✅ |
+| 150 | Topology Recap & What's Next | ✅ | ✅ |
 
 ## In Progress
-- Topology (Videos 139-150): **IN PROGRESS** — Videos 139-140 complete, Video 141 next
+- Topology (Videos 139-150): **COMPLETE** (12 videos)
 
 ## Completed Playlists
+- Topology (Videos 139–150): COMPLETE (12 videos)
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
 - Linear Algebra (Videos 25–40): COMPLETE (16 videos)
