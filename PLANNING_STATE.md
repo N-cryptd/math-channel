@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-01
+**Last updated:** 2026-08-02
 
-**Completed Videos (150 scripts, 150 renders)**
+**Completed Videos (152 scripts, 152 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -206,8 +206,15 @@
 | 149 | Surfaces and Classification | ✅ | ✅ |
 | 150 | Topology Recap & What's Next | ✅ | ✅ |
 
+### Measure Theory (Videos 151+)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 151 | Measure Theory Introduction | ✅ | ✅ |
+| 152 | Sigma-Algebras | ✅ | ✅ |
+
 ## In Progress
-- Topology (Videos 139-150): **COMPLETE** (12 videos)
+- Measure Theory (Videos 151+): Videos 151-152 complete, Video 153 (Measures) needs script
+
 
 ## Completed Playlists
 - Topology (Videos 139–150): COMPLETE (12 videos)

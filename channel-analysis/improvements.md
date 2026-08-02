@@ -3718,3 +3718,42 @@ Techniques to Avoid:
 1. Definition-first without visual motivation
 2. Dense theorem proofs without geometric context
 3. Rushing through examples without letting the viewer absorb the visual
+
+### [2026-08-02] Measure Theory Introduction (Video 151)
+
+**Market Gap Analysis:** No major Manim-animated channel has a dedicated measure theory introduction video. 3B1B, Mathologer, Reducible, and others have not covered measure theory as a standalone topic. Existing content is exclusively from lecture-style channels (Dr. Peyam, Faculty of Khan, Michael Penn, The Math Sorcerer) using whiteboard/blackboard format with definition-first approaches. This is a major opportunity for the first high-production animated treatment.
+
+**Source 1: Dr. Peyam — "Measure Theory Introduction"** (~25K views)
+Pure lecture format on blackboard. Covers sigma-algebra definition immediately with no visual motivation. Good mathematical rigor but no animations. Fast-paced definitions without intuition building.
+
+Dimensions: Structure 6/10 | Pacing 4/10 | Visuals 1/10 | Narration 7/10 | Hooks 2/10
+
+Techniques to Adopt:
+- Clear emphasis on the three axioms of a measure
+
+Techniques to Avoid:
+- Starting with formal definitions without motivation
+- No visual intuition for what measure "looks like"
+
+**Source 2: Faculty of Khan — "Measure Theory"**
+Whiteboard style. Covers Lebesgue measure definition-first. Reasonable pacing but static visuals throughout. Does show the Dirichlet function limitation but without animation.
+
+Dimensions: Structure 5/10 | Pacing 6/10 | Visuals 2/10 | Narration 6/10 | Hooks 3/10
+
+**Market gap confirmed:** No animated visual-first treatment exists. Our video fills this gap with:
+- Animated visualization of the Riemann integral's failure (Dirichlet function)
+- Visual set diagrams showing different measures (counting, Lebesgue, probability)
+- Roadmap visualization showing the measure theory journey
+- Application-driven motivation before formal definitions
+
+**Techniques to adopt for Video 151:**
+1. Start with the historical motivation — "the problem of size" narrative
+2. Visual demonstration of Riemann's failure (animated Dirichlet function)
+3. Side-by-side comparison of three different measures on the same framework
+4. Roadmap visualization to orient the viewer before diving in
+5. Application-driven motivation: probability, quantum mechanics, signal processing
+
+**Techniques to avoid:**
+1. Definition-first approach (sigma-algebras come in Video 152, not here)
+2. Overwhelming with formalism before building intuition
+3. Skipping the motivation — "why do we need this?" must be answered visually
