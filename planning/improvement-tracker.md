@@ -249,9 +249,9 @@ Videos 139-150 created with v2 templates. Bulk analysis performed 2026-08-03.
 
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
-| 151 | Measure Theory Introduction | 508 | YES | YES (minor) | N/A | Added 6 section_divider calls (was 0) for scenes 2-7. Added 4 formula_box (Dirichlet function RED box, measure requirements, unifying statement ACCENT box). 0 .shift()/.to_edge() for content. 1 .move_to() diagram. 0 .next_to(). Compile OK. |
-| 152 | Sigma-Algebras | 549 | YES | YES (minor) | N/A | Added 7 section_divider calls (was 0) for scenes 2-8. Added 3 formula_box (sigma-algebra definition ACCENT box, Borel B(R) ACCENT box, generated sigma-algebra PRIMARY box). Removed dead .move_to(ORIGIN). Replaced .next_to() → safe_place. Compile OK. |
-| 153 | Measures | 692 | YES | YES (minor) | N/A | Added 7 section_divider calls (was 0) for scenes 2-8. Added 7 formula_box (countable subadditivity ACCENT, Lebesgue outer measure PRIMARY, Caratheodory criterion ACCENT, and more). Compile OK. |
+| 151 | Measure Theory Introduction | 508 | YES | YES (minor) | YES | Added 6 section_divider calls (was 0) for scenes 2-7. Added 4 formula_box (Dirichlet function RED box, measure requirements, unifying statement ACCENT box). 0 .shift()/.to_edge() for content. 1 .move_to() diagram. 0 .next_to(). Compile OK. Re-rendered Aug 3. |
+| 152 | Sigma-Algebras | 549 | YES | YES (minor) | YES | Added 7 section_divider calls (was 0) for scenes 2-8. Added 3 formula_box (sigma-algebra definition ACCENT box, Borel B(R) ACCENT box, generated sigma-algebra PRIMARY box). Removed dead .move_to(ORIGIN). Replaced .next_to() → safe_place. Compile OK. |
+| 153 | Measures | 692 | YES | YES (minor) | YES | Added 7 section_divider calls (was 0) for scenes 2-8. Added 7 formula_box (countable subadditivity ACCENT, Lebesgue outer measure PRIMARY, Caratheodory criterion ACCENT, and more). Compile OK. Re-rendered at 480p15, 128.3s, 4.2MB. |
 
 ## Videos Needing Re-render
 - Videos 151-153: improved scripts need fresh render
