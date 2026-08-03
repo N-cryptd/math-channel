@@ -88,6 +88,7 @@ class Video152_SigmaAlgebras(Scene):
             "countably infinite unions, not just finite ones.",
             duration=70,
         )
+        self.ly.section_divider(1, "From Algebras to Sigma-Algebras")
 
         title = self.ly.title("From Algebras to Sigma-Algebras", color=PRIMARY)
 
@@ -114,7 +115,6 @@ class Video152_SigmaAlgebras(Scene):
             "These define an ALGEBRA of sets",
             font_size=HEADING_SIZE, color=WHITE, font=SANS,
         )
-        label.move_to(ORIGIN)
         ensure_fits(label)
         self.ly.center_in_content(label)
 
@@ -141,8 +141,7 @@ class Video152_SigmaAlgebras(Scene):
             font_size=HEADING_SIZE, color=ACCENT, font=SANS,
         )
         ensure_fits(sigma_label)
-        sigma_label.next_to(upgrade, DOWN, buff=0.6)
-        clamp_position(sigma_label)
+        self.ly.safe_place(sigma_label, anchor=upgrade, direction=DOWN, buff=0.6)
         self.play(FadeIn(sigma_label, shift=LEFT * 0.15), run_time=0.7)
         self.wait(1.5)
 
@@ -161,6 +160,7 @@ class Video152_SigmaAlgebras(Scene):
             "countable intersections and set differences.",
             duration=60,
         )
+        self.ly.section_divider(2, "Definition of a Sigma-Algebra")
 
         title = self.ly.title("Definition of a Sigma-Algebra", color=PRIMARY)
 
@@ -175,9 +175,10 @@ class Video152_SigmaAlgebras(Scene):
         )
         def_text[2].set_color(ACCENT)
         def_text[3].set_color(ACCENT)
-        ensure_fits(def_text)
-        self.ly.safe_place(def_text, anchor=title, buff=0.5)
-        self.play(Write(def_text), run_time=1.0)
+        def_text_box = self.ly.formula_box(def_text, color=ACCENT)
+        ensure_fits(def_text_box)
+        self.ly.safe_place(def_text_box, anchor=title, buff=0.5)
+        self.play(Write(def_text_box), run_time=1.0)
         self.wait(0.5)
 
         ax1 = MathTex(
@@ -244,6 +245,7 @@ class Video152_SigmaAlgebras(Scene):
             "countable.",
             duration=70,
         )
+        self.ly.section_divider(3, "Examples of Sigma-Algebras")
 
         title = self.ly.title("Examples of Sigma-Algebras", color=PRIMARY)
 
@@ -318,6 +320,7 @@ class Video152_SigmaAlgebras(Scene):
             "intersections.",
             duration=70,
         )
+        self.ly.section_divider(4, "The Borel Sigma-Algebra")
 
         title = self.ly.title("The Borel Sigma-Algebra", color=ACCENT)
 
@@ -349,9 +352,10 @@ class Video152_SigmaAlgebras(Scene):
         )
         borel_def[0].set_color(ACCENT)
         borel_def[1].set_color(ACCENT)
-        ensure_fits(borel_def)
-        self.ly.center_in_content(borel_def)
-        self.play(Write(borel_def), run_time=1.0)
+        borel_def_box = self.ly.formula_box(borel_def, color=ACCENT)
+        ensure_fits(borel_def_box)
+        self.ly.center_in_content(borel_def_box)
+        self.play(Write(borel_def_box), run_time=1.0)
         self.wait(1.0)
 
         generators = Text(
@@ -388,6 +392,7 @@ class Video152_SigmaAlgebras(Scene):
             "open intervals.",
             duration=60,
         )
+        self.ly.section_divider(5, "Generated Sigma-Algebras")
 
         title = self.ly.title("Generated Sigma-Algebras", color=PRIMARY)
 
@@ -397,9 +402,10 @@ class Video152_SigmaAlgebras(Scene):
             font_size=BODY_SIZE,
         )
         gen_def[0].set_color(ACCENT)
-        ensure_fits(gen_def)
-        self.ly.safe_place(gen_def, anchor=title, buff=0.6)
-        self.play(Write(gen_def), run_time=1.0)
+        gen_def_box = self.ly.formula_box(gen_def, color=PRIMARY)
+        ensure_fits(gen_def_box)
+        self.ly.safe_place(gen_def_box, anchor=title, buff=0.6)
+        self.play(Write(gen_def_box), run_time=1.0)
         self.wait(1.0)
 
         well_def = Text(
@@ -455,6 +461,7 @@ class Video152_SigmaAlgebras(Scene):
             "measure, or the counting measure.",
             duration=45,
         )
+        self.ly.section_divider(6, "Measurable Spaces")
 
         title = self.ly.title("Measurable Spaces", color=PRIMARY)
 
@@ -525,6 +532,7 @@ class Video152_SigmaAlgebras(Scene):
             "integration on sigma-algebras.",
             duration=40,
         )
+        self.ly.section_divider(7, "Summary")
 
         title = self.ly.title("Summary", color=ACCENT)
 

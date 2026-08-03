@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-02
 
-**Completed Videos (152 scripts, 152 renders)**
+**Completed Videos (153 scripts, 153 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -211,9 +211,10 @@
 |---|-------|--------|----------|
 | 151 | Measure Theory Introduction | ✅ | ✅ |
 | 152 | Sigma-Algebras | ✅ | ✅ |
+| 153 | Measures | ✅ | ✅ |
 
 ## In Progress
-- Measure Theory (Videos 151+): Videos 151-152 complete, Video 153 (Measures) needs script
+- Measure Theory (Videos 151+): Videos 151-153 complete, Video 154 (Lebesgue Measure) needs script
 
 
 ## Completed Playlists

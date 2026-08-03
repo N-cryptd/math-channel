@@ -224,11 +224,37 @@ Videos 126+ created with v2 templates from the start.
 | 137 | Zeros and Poles | 450 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), section_divider(5), progressive_reveal(2), formula_box(5), SANS(19), ly.clear(15), safe_place(10), center_in_content(13), clamp_position(1). Zero .shift()/.to_edge() for content. 3 .move_to() all diagram. Zero .next_to() — acceptable. — no improvement needed |
 | 138 | Conformal Mappings | 444 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), section_divider(5), progressive_reveal(6), formula_box(2), SANS(31), ly.clear(15), safe_place(7), center_in_content(10), clamp_position(1). Zero .shift()/.to_edge() for content. 1 .move_to() diagram. 2 .next_to() diagram labels — acceptable. — no improvement needed |
 
-## Status: COMPLETE ✓
-All 138 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant (Video 126 received minor fix). No videos remain that need improvement work.
+## Status: COMPLETE ✓ (Videos 1-138)
+All 138 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant (Video 126 received minor fix).
+
+### Graduate: Topology (Videos 139–150) — v2 Analysis
+Videos 139-150 created with v2 templates. Bulk analysis performed 2026-08-03.
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 139 | Introduction to Topology | 628 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(8), section_divider(6), formula_box(2), SANS(50), ly.clear(26), safe_place(9). 1 .shift()/.to_edge() in docstring only, 1 .move_to() diagram, 3 .next_to() diagram labels — all acceptable. |
+| 140 | Connectedness | 801 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(6), formula_box(5), SANS(44), ly.clear(28), safe_place(18). 1 .move_to() diagram, 8 .next_to() diagram labels — acceptable. |
+| 141 | Compactness | 363 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(7), SANS(33), ly.clear(19). 11 .move_to() + 16 .next_to() all diagram/visual — acceptable. 0 safe_place/0 formula_box — style choice for visual-heavy topic. |
+| 142 | Separation Axioms | 402 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(6), SANS(34), ly.clear(15). 6 .move_to() + 11 .next_to() all diagram — acceptable. |
+| 143 | Product Topology | 323 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(6), SANS(22), ly.clear(12). 7 .move_to() + 3 .next_to() diagram — acceptable. |
+| 144 | Quotient Topology | 331 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(2), section_divider(6), SANS(15), ly.clear(14). 12 .move_to() + 4 .next_to() diagram — acceptable. |
+| 145 | Metric Spaces | 256 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), section_divider(5), SANS(19), ly.clear(10). 2 .move_to() + 1 .next_to() diagram — acceptable. |
+| 146 | Completeness | 248 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(5), SANS(15), ly.clear(10). 1 .next_to() diagram — acceptable. |
+| 147 | Fundamental Group | 269 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(5), SANS(19), ly.clear(11). 4 .next_to() diagram — acceptable. |
+| 148 | Covering Spaces | 227 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(5), SANS(17), ly.clear(9). 3 .move_to() diagram — acceptable. |
+| 149 | Surfaces | 220 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(4), SANS(19), ly.clear(10). |
+| 150 | Topology Recap | 195 | YES | N/A (already v2) | N/A | setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), section_divider(4), SANS(23), ly.clear(7). |
+
+### Graduate: Measure Theory (Videos 151–153) — v2 Analysis + Improvement
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 151 | Measure Theory Introduction | 508 | YES | YES (minor) | N/A | Added 6 section_divider calls (was 0) for scenes 2-7. Added 4 formula_box (Dirichlet function RED box, measure requirements, unifying statement ACCENT box). 0 .shift()/.to_edge() for content. 1 .move_to() diagram. 0 .next_to(). Compile OK. |
+| 152 | Sigma-Algebras | 549 | YES | YES (minor) | N/A | Added 7 section_divider calls (was 0) for scenes 2-8. Added 3 formula_box (sigma-algebra definition ACCENT box, Borel B(R) ACCENT box, generated sigma-algebra PRIMARY box). Removed dead .move_to(ORIGIN). Replaced .next_to() → safe_place. Compile OK. |
+| 153 | Measures | 692 | YES | YES (minor) | N/A | Added 7 section_divider calls (was 0) for scenes 2-8. Added 7 formula_box (countable subadditivity ACCENT, Lebesgue outer measure PRIMARY, Caratheodory criterion ACCENT, and more). Compile OK. |
 
 ## Videos Needing Re-render
-None — all improved videos have been re-rendered.
+- Videos 151-153: improved scripts need fresh render
 
 ## Last Updated
-2026-07-31 (Analyzed Videos 131-138 Complex Analysis continuation — all v2-compliant.)
+2026-08-03 (Analyzed Videos 139-153 — Topology all v2-compliant, Measure Theory 151-153 improved with section_dividers + formula_box.)

@@ -93,6 +93,7 @@ class Video151_MeasureTheoryIntro(Scene):
             "foundation of all measure theory.",
             duration=60,
         )
+        self.ly.section_divider(1, "What is a Measure?")
 
         title = self.ly.title("What is a Measure?", color=PRIMARY)
 
@@ -138,38 +139,29 @@ class Video151_MeasureTheoryIntro(Scene):
         self.play(Write(length_label), run_time=0.6)
         self.wait(1.0)
 
-        # Three requirements
-        reqs_title = Text(
-            "Three Requirements",
-            font_size=HEADING_SIZE, color=ACCENT, font=SANS,
-        )
-        ensure_fits(reqs_title)
-
-        req1 = Text(
-            "1. mu(empty set) = 0  (nothing has no size)",
-            font_size=BODY_SIZE, color=WHITE, font=SANS,
-        )
-        req2 = Text(
-            "2. mu(A) >= 0  (size is never negative)",
-            font_size=BODY_SIZE, color=SECONDARY, font=SANS,
-        )
-        req3 = Text(
-            "3. mu(A union B) = mu(A) + mu(B)  when A, B disjoint",
-            font_size=BODY_SIZE, color=PRIMARY, font=SANS,
-        )
-
-        reqs = [req1, req2, req3]
-
+        # Three axioms — formal definition with formula_box
         self.play(
-            *[FadeOut(m) for m in [ax, interval_rect, length_label]],
-            FadeIn(reqs_title, shift=UP * 0.2),
-            run_time=0.6,
+            FadeOut(group),
+            run_time=0.5,
         )
-        self.ly.progressive_reveal(
-            reqs, start_from=reqs_title, reveal_anim=FadeIn,
-            anim_kwargs={"shift": LEFT * 0.15}, run_time=0.6, wait_time=1.0,
+        self.wait(0.3)
+
+        axioms = MathTex(
+            r"\mu(\emptyset) = 0",
+            r",\;\;",
+            r"\mu(A) \geq 0",
+            r",\;\;",
+            r"\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)",
+            font_size=BODY_SIZE,
         )
-        self.wait(1.0)
+        axioms[0].set_color(ACCENT)
+        axioms[2].set_color(SECONDARY)
+        axioms[4].set_color(PRIMARY)
+        axioms_box = self.ly.formula_box(axioms, color=ACCENT)
+        ensure_fits(axioms_box)
+        self.ly.center_in_content(axioms_box)
+        self.play(Write(axioms_box), run_time=1.2)
+        self.wait(1.5)
         self.ly.clear()
 
     # --- Scene 3: The Riemann Integral's Limitations ~70s ---
@@ -188,6 +180,7 @@ class Video151_MeasureTheoryIntro(Scene):
             "This makes no sense. We need a better theory.",
             duration=70,
         )
+        self.ly.section_divider(2, "The Riemann Integral's Flaw")
 
         title = self.ly.title("The Riemann Integral's Flaw", color=RED)
 
@@ -218,9 +211,10 @@ class Video151_MeasureTheoryIntro(Scene):
             font_size=BODY_SIZE,
         )
         dirichlet[0].set_color(WHITE)
-        ensure_fits(dirichlet)
-        self.ly.safe_place(dirichlet, anchor=problem, buff=0.5)
-        self.play(Write(dirichlet), run_time=1.0)
+        dirichlet_box = self.ly.formula_box(dirichlet, color=RED)
+        ensure_fits(dirichlet_box)
+        self.ly.safe_place(dirichlet_box, anchor=problem, buff=0.5)
+        self.play(Write(dirichlet_box), run_time=1.0)
         self.wait(0.8)
 
         # The contradiction
@@ -249,7 +243,7 @@ class Video151_MeasureTheoryIntro(Scene):
         ensure_fits(conclusion)
         self.ly.center_in_content(conclusion)
         self.play(
-            *[FadeOut(m) for m in [problem, dirichlet, contradiction, but]],
+            *[FadeOut(m) for m in [problem, dirichlet_box, contradiction, but]],
             Write(conclusion),
             run_time=0.8,
         )
@@ -272,6 +266,7 @@ class Video151_MeasureTheoryIntro(Scene):
             "handles all of these.",
             duration=70,
         )
+        self.ly.section_divider(3, "Examples of Measures")
 
         title = self.ly.title("Examples of Measures", color=PRIMARY)
 
@@ -348,9 +343,10 @@ class Video151_MeasureTheoryIntro(Scene):
             "One framework handles ALL of these!",
             font_size=HEADING_SIZE, color=WHITE, font=SANS,
         )
-        ensure_fits(unify)
-        self.ly.safe_place(unify, anchor=ex3_group, buff=0.6)
-        self.play(FadeIn(unify, shift=UP * 0.15), run_time=0.6)
+        unify_box = self.ly.formula_box(unify, color=ACCENT)
+        ensure_fits(unify_box)
+        self.ly.safe_place(unify_box, anchor=ex3_group, buff=0.6)
+        self.play(Write(unify_box), run_time=0.6)
         self.wait(1.5)
         self.ly.clear()
 
@@ -370,6 +366,7 @@ class Video151_MeasureTheoryIntro(Scene):
             "complete function spaces with measures.",
             duration=60,
         )
+        self.ly.section_divider(4, "The Measure Theory Roadmap")
 
         title = self.ly.title("The Measure Theory Roadmap", color=ACCENT)
 
@@ -431,6 +428,7 @@ class Video151_MeasureTheoryIntro(Scene):
             "you need measure theory.",
             duration=50,
         )
+        self.ly.section_divider(5, "Why This Matters")
 
         title = self.ly.title("Why This Matters", color=RED)
 
@@ -477,6 +475,7 @@ class Video151_MeasureTheoryIntro(Scene):
             "the family of sets we are allowed to measure.",
             duration=45,
         )
+        self.ly.section_divider(6, "Summary")
 
         title = self.ly.title("Summary", color=ACCENT)
 
