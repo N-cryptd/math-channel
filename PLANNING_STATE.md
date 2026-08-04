@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-04
 
-**Completed Videos (155 scripts, 155 renders)**
+**Completed Videos (156 scripts, 156 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -214,9 +214,10 @@
 | 153 | Measures | ✅ | ✅ |
 | 154 | Lebesgue Measure | ✅ | ✅ |
 | 155 | Lebesgue Measurable Functions | ✅ | ✅ |
+| 156 | The Lebesgue Integral | ✅ | ✅ |
 
 ## In Progress
-- Measure Theory (Videos 151+): Videos 151-155 complete. Next: Video 156 (The Lebesgue Integral) needs script.
+- Measure Theory (Videos 151+): Videos 151-156 complete. Next: Video 157 (Convergence Theorems: MCT, DCT) needs script.
 
 
 ## Completed Playlists
