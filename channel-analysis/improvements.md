@@ -1,4 +1,41 @@
 
+
+
+### [2026-08-03] Lebesgue Measurable Functions (Video 155)
+
+**Market Gap Analysis:** No major Manim-animated channel has a dedicated video on Lebesgue measurable functions. The topic is always bundled into broader Lebesgue integral lectures. Existing coverage is lecture-style: Faculty of Khan, Dr. Peyam, Michael Penn all cover it as part of integration theory with whiteboard/blackboard format. Abide By Reason (652K views) covers the integral concept but never formally defines measurable functions. vcubingx (386K views) shows horizontal slicing without measurability conditions.
+
+**Source 1: Faculty of Khan — Lebesgue Integration Series**
+Lecture-style with proofs on whiteboard. Covers measurable functions as a prerequisite for the integral. Good formal definitions but no visual intuition for the preimage condition.
+
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 3/10
+
+Techniques to Adopt:
+- Clear formal definition with equivalent characterizations listed systematically
+
+Techniques to Avoid:
+- Jumping too quickly to proofs without building visual intuition
+- No visual for the preimage condition (our video shows f^{-1}(U) mapping back)
+
+**Source 2: Abide By Reason — "The Integral That Changed Math Forever"** (652K views)
+Manim-animated, covers Lebesgue integration conceptually. Never defines measurable functions formally. Good storytelling but lacks rigor.
+
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 8/10 | Narration 8/10 | Hooks 9/10
+
+**Source 3: Dr. Peyam — Lebesgue Measure/Integration Lectures**
+Blackboard lectures, very thorough proofs. Covers measurable functions with all equivalent conditions. No animations.
+
+Dimensions: Structure 8/10 | Pacing 4/10 | Visuals 2/10 | Narration 6/10 | Hooks 2/10
+
+**Our Video Strategy:**
+- First animated, visual-first treatment of measurable functions
+- Open with the core question: "which functions can we integrate?"
+- Visual: preimage arrows from R back to measurable sets in X
+- Dirichlet function as the star example (measurable but not Riemann integrable)
+- Staircase approximation visual for simple function approximation theorem
+- Egorov's theorem with visual: pointwise -> uniform on a large set, bad behavior on a small set
+- Builds on videos 151-154, sets up the Lebesgue integral (Video 156)
+
 ### [2026-08-03] Lebesgue Measure (Video 154)
 
 **Market Gap Analysis:** Lebesgue Measure has growing YouTube coverage but almost all is lecture-style or proof-first. The most viewed (3B1B's "Music And Measure Theory" at 1.66M) uses measure theory as a framing device for music/harmony, not as a dedicated tutorial. "Abide By Reason" (652K views on Lebesgue Integral, 46K on "What is a Measure?") uses Manim and builds intuition-first but at a general audience level. "vcubingx" (386K views) has the classic horizontal-slicing visual for Lebesgue integration. "Problemathic" (8.3K views) covers Lebesgue Measure directly but as a chalkboard lecture. No channel has a systematic, animated, curriculum-integrated Measure Theory series. Our position as the only channel with a full measure theory playlist (151+) gives us a significant structural advantage.

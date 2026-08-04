@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-03
+**Last updated:** 2026-08-04
 
-**Completed Videos (154 scripts, 154 renders)**
+**Completed Videos (155 scripts, 155 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -213,9 +213,10 @@
 | 152 | Sigma-Algebras | ✅ | ✅ |
 | 153 | Measures | ✅ | ✅ |
 | 154 | Lebesgue Measure | ✅ | ✅ |
+| 155 | Lebesgue Measurable Functions | ✅ | ✅ |
 
 ## In Progress
-- Measure Theory (Videos 151+): Videos 151-154 complete, Video 155 (Lebesgue Measurable Functions) needs script
+- Measure Theory (Videos 151+): Videos 151-155 complete. Next: Video 156 (The Lebesgue Integral) needs script.
 
 
 ## Completed Playlists

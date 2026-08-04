@@ -35,6 +35,13 @@ Last updated: 2026-07-31
   - Video 139: Introduction to Topology — plan + script + render done
   - Video 140: Connectedness — plan + script + render done (2026-07-31)
   - Scripts in scripts/graduate/
+|- Measure Theory (in progress, Videos 151-155 done)
+  - Video 151: Measure Theory Introduction — plan + script + render done
+  - Video 152: Sigma-Algebras — plan + script + render done
+  - Video 153: Measures — plan + script + render done
+  - Video 154: Lebesgue Measure — plan + script + render done
+  - Video 155: Lebesgue Measurable Functions — plan + script + render done (2026-08-03)
+  - Scripts in scripts/graduate/
 
 ## Upcoming Playlists
 |- Calculus III (Multivariable)

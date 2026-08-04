@@ -253,8 +253,18 @@ Videos 139-150 created with v2 templates. Bulk analysis performed 2026-08-03.
 | 152 | Sigma-Algebras | 549 | YES | YES (minor) | YES | Added 7 section_divider calls (was 0) for scenes 2-8. Added 3 formula_box (sigma-algebra definition ACCENT box, Borel B(R) ACCENT box, generated sigma-algebra PRIMARY box). Removed dead .move_to(ORIGIN). Replaced .next_to() → safe_place. Compile OK. |
 | 153 | Measures | 692 | YES | YES (minor) | YES | Added 7 section_divider calls (was 0) for scenes 2-8. Added 7 formula_box (countable subadditivity ACCENT, Lebesgue outer measure PRIMARY, Caratheodory criterion ACCENT, and more). Compile OK. Re-rendered at 480p15, 128.3s, 4.2MB. |
 
+### Graduate: Measure Theory (Videos 154–155) — v2 Analysis
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 154 | Lebesgue Measure | 458 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(8), section_divider(5), SANS(27), MONO(1), ly.clear(12), safe_place(11). Zero .shift()/.to_edge() for content (matches in docstring only). Zero .move_to()/.next_to(). Content budget: all scenes ≤5 items. — no improvement needed |
+| 155 | Lebesgue Measurable Functions | 730 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(14), section_divider(6), SANS(44), ly.clear(22), safe_place(17), clamp_position(1). Zero .shift()/.to_edge() for content (matches in docstring only). Zero .move_to()/.next_to(). Content budget: all scenes ≤5 items. — no improvement needed |
+
 ## Videos Needing Re-render
-- Videos 151-153: improved scripts need fresh render
+(None currently)
+
+## Status: COMPLETE ✓ (Videos 1-155)
+All 155 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant.
 
 ## Last Updated
-2026-08-03 (Analyzed Videos 139-153 — Topology all v2-compliant, Measure Theory 151-153 improved with section_dividers + formula_box.)
+2026-08-04 (Analyzed Videos 154-155 — both v2-compliant. All 155 videos analyzed.)
