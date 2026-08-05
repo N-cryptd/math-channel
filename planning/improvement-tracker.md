@@ -263,8 +263,11 @@ Videos 139-150 created with v2 templates. Bulk analysis performed 2026-08-03.
 ## Videos Needing Re-render
 (None currently)
 
-## Status: COMPLETE ✓ (Videos 1-155)
-All 155 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant.
+| 156 | The Lebesgue Integral | 737 | YES | YES (minor) | YES | v2-compliant. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(10), section_divider(6), formula_box(8), SANS(35), ly.clear(9), safe_place(30). Zero .shift()/.to_edge() for content. Rendered Aug 4. |
+| 157 | Convergence Theorems | 440 | YES | YES (major rewrite) | YES | v2 rewrite: 0→4 progressive_reveal, 0→7 section_divider, 0→9 formula_box, 0→34 font=SANS. Fixed severe content budget violations (scenes 2-6 had 7-16 items → split into sub-scenes with ≤5 items). Removed all manual positioning. Competitive analysis incorporated (Fatou→MCT→DCT logical progression, animate convergence process). Rendered Aug 5: 182 anims, 147.1s, 8 TTS segs, 3.4MB. |
+
+## Status: COMPLETE ✓ (Videos 1-157)
+All 157 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant. Video 156 v2-compliant. Video 157 received major v2 rewrite (0→full v2 features, content budget fixes).
 
 ## Last Updated
-2026-08-04 (Analyzed Videos 154-155 — both v2-compliant. All 155 videos analyzed.)
+2026-08-05 (Video 157 major v2 rewrite complete. Rendering in progress.)
