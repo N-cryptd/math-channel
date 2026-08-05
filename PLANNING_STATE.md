@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-04
+**Last updated:** 2026-08-05
 
-**Completed Videos (157 scripts, 157 renders)**
+**Completed Videos (158 scripts, 158 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -216,9 +216,10 @@
 | 155 | Lebesgue Measurable Functions | ✅ | ✅ |
 | 156 | The Lebesgue Integral | ✅ | ✅ |
 | 157 | Convergence Theorems (MCT, DCT) | ✅ | ✅ |
+| 158 | L^p Spaces | ✅ | ✅ |
 
 ## In Progress
-- Measure Theory (Videos 151+): Videos 151-157 complete. Next: Video 158 (L^p Spaces) needs script.
+- Measure Theory (Videos 151+): Video 158 (L^p Spaces) complete. Next: Video 159 (Radon-Nikodym Theorem) needs script.
 
 
 ## Completed Playlists
