@@ -217,9 +217,12 @@
 | 156 | The Lebesgue Integral | ✅ | ✅ |
 | 157 | Convergence Theorems (MCT, DCT) | ✅ | ✅ |
 | 158 | L^p Spaces | ✅ | ✅ |
+| 159 | Radon-Nikodym Theorem | ✅ | ✅ |
+| 160 | Fubini's Theorem | ✅ | ✅ |
+| 161 | Lebesgue vs Riemann | | |
 
 ## In Progress
-- Measure Theory (Videos 151+): Video 158 (L^p Spaces) complete. Next: Video 159 (Radon-Nikodym Theorem) needs script.
+- Measure Theory (Videos 151+): Videos 151–160 COMPLETE (rendered). Next: Video 161 (Lebesgue vs Riemann) — writing plan + script.
 
 
 ## Completed Playlists

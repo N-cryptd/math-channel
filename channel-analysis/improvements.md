@@ -322,3 +322,97 @@ The background of the thumbnail features a desert landscape with a wooden horse 
 The thumbnail features a white background with green and blue text. It displays an integral sign with infinity on top, followed by the expression "1/(x^4 + 1)" and the variable "dx". The text "Complex Integral Fun" is written in green at the top, and "Dr Peyam" in blue at the bottom. The overall quality of the thumbnail is 8 out of 10.
 
 ---
+
+---
+
+## 2026-08-05 — Radon-Nikodym Theorem (Video 159)
+
+### @cofiber — The Radon-Nikodym derivative (sPcXyZB1bkM)
+**Views:** 10,413 | **Date:** Dec 2024 | **Subs:** 9.73K | **Captions:** True
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 6/10 | Narration 6/10 | Hooks 6/10
+
+### Key Insights
+- Fast-paced (6 min), covers motivation → definition → theorem → special case → properties → probability application → Lebesgue decomposition
+- Starts with density/motivation: why do we need a "derivative" of measures?
+- Covers both RN theorem AND Lebesgue decomposition theorem in one video
+- Links RN derivative to probability density functions (practical application)
+- Clean blackboard-style presentation
+
+### Techniques to Adopt
+- Motivation-first: start with density functions and why we need a generalized derivative concept
+- Connect to probability theory (dQ/dP) — practical, memorable
+- Cover Lebesgue decomposition alongside RN theorem (they're naturally linked)
+
+### Techniques to Avoid
+- Cramming too much into one video — consider separating Lebesgue decomposition or keeping it brief
+- Static presentation — we should ANIMATE the absolute continuity concept
+
+---
+
+### @tbsom — Measure Theory 14: Radon-Nikodym and Lebesgue's Decomposition (12kFDeN6xuI)
+**Views:** 51,371 | **Date:** Dec 2019 | **Subs:** 254K | **Captions:** True
+Dimensions: Structure 8/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+### Key Insights
+- Part of a full 22-video measure theory course (highly structured curriculum)
+- Lecture-style with scrolling whiteboard (Khan Academy-like)
+- Methodical: defines everything carefully before stating theorem
+- Covers signed measures, Hahn decomposition, Lebesgue decomposition, and RN theorem
+- Very detailed proofs — may be too formal for YouTube audience
+- Strong exercise/PDF support (Steady membership model)
+
+### Techniques to Adopt
+- Logical build-up: signed measures → Hahn decomposition → Lebesgue decomposition → RN theorem
+- The Hahn decomposition as a stepping stone is pedagogically excellent
+- Emphasize uniqueness of the RN derivative (up to a.e.)
+
+### Techniques to Avoid
+- Static whiteboard (no animation) — we should use Manim transforms
+- Overly long proofs on screen — show proof sketches with visual intuition instead
+- Dense notation without visual breaks
+
+---
+
+### @denis-potapov — Measure decomposition and Radon-Nikodym Theorem (Vx0xgPXW8YI)
+**Views:** 13,019 | **Date:** Oct 2013 | **Subs:** 3.03K | **Captions:** True
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 4/10 | Narration 5/10 | Hooks 4/10
+
+### Key Insights
+- Traditional lecture recording (classroom, handwritten)
+- Focuses on measure decomposition (absolutely continuous + singular parts)
+- Proves Radon-Nikodym via the Hilbert space approach (Riesz representation)
+- Slow, methodical proof walkthrough
+
+### Techniques to Avoid
+- No visual aids at all — pure chalk-and-talk
+- Proof-heavy without motivation — loses audience early
+
+---
+
+### @alon-sela — Radon-Nikodym Derivative | Probability Theory (q8raN_Mv96A)
+**Views:** 2,853 | **Date:** Jan 2023 | **Subs:** 593 | **Captions:** True
+Dimensions: Structure 5/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 5/10
+
+### Key Insights
+- Probability-focused perspective on RN derivative
+- Connects dQ/dP to CDFs and PDFs (concrete example)
+- Short video, focused on one application
+
+### Techniques to Adopt
+- Concrete probability example: if Q(A) = ∫_A f dP, then f = dQ/dP
+- This connects directly to what students learned in probability
+
+---
+
+### Synthesis for Our Video
+
+**Our approach (distinct from all competitors):**
+1. Start with the "change of variables" intuition from calculus — dν = f dμ as a measure equation
+2. Define absolute continuity of measures with visual intuition (ν vanishes wherever μ does)
+3. State the theorem with clear conditions (σ-finite, ν ≪ μ)
+4. Properties of the RN derivative (chain rule, linearity)
+5. Concrete example: probability density as RN derivative
+6. Connection to Lebesgue decomposition (brief, as bridge)
+7. Applications: probability theory (change of measure), statistics (likelihood ratios)
+
+**What makes us different:** Animated visual metaphors for absolute continuity, progressive disclosure, dark-themed Manim with color coding, no chalk-and-talk.
