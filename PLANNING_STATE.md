@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-05
+**Last updated:** 2026-08-06
 
-**Completed Videos (158 scripts, 158 renders)**
+**Completed Videos (161 scripts, 161 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -219,10 +219,28 @@
 | 158 | L^p Spaces | ✅ | ✅ |
 | 159 | Radon-Nikodym Theorem | ✅ | ✅ |
 | 160 | Fubini's Theorem | ✅ | ✅ |
-| 161 | Lebesgue vs Riemann | | |
+| 161 | Lebesgue vs Riemann | ✅ | ✅ |
+
+### Functional Analysis (Videos 162–173)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 162 | Normed Spaces | | |
+| 163 | Banach Spaces | | |
+| 164 | Inner Product Spaces | | |
+| 165 | Hilbert Spaces | | |
+| 166 | Bounded Linear Operators | | |
+| 167 | The Dual Space | | |
+| 168 | Weak and Weak-* Topology | | |
+| 169 | Compact Operators | | |
+| 170 | Spectral Theory | | |
+| 171 | Hahn-Banach Theorem | | |
+| 172 | Open Mapping Theorem | | |
+| 173 | Applications to PDEs | | |
 
 ## In Progress
-- Measure Theory (Videos 151+): Videos 151–160 COMPLETE (rendered). Next: Video 161 (Lebesgue vs Riemann) — writing plan + script.
+- Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
+- Functional Analysis (Videos 162–173): Next video 162 (Normed Spaces) needs plan + script
+- **Last updated:** 2026-08-06
 
 
 ## Completed Playlists
@@ -236,8 +254,8 @@
 - Proof-Based Mathematics (Videos 90–98): COMPLETE (9 videos)
 - Real Analysis I (Videos 99–110): COMPLETE (12 videos)
 - Complex Analysis (Videos 126–138): COMPLETE (13 videos)
+- Measure Theory (Videos 151–161): COMPLETE (12 videos)
 
 ## Notes
-- Video 111 script has been enhanced to v2 quality standards
-- Ready for rendering and narration
-- Next video in sequence (112) requires script creation before enhancement"
+- Measure Theory playlist is COMPLETE as of Video 161
+- Next playlist: Functional Analysis (Videos 162–173)"
