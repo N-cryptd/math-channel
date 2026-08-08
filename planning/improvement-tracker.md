@@ -269,8 +269,23 @@ Videos 139-150 created with v2 templates. Bulk analysis performed 2026-08-03.
 | 158 | L^p Spaces | 445 | YES | N/A (already v2) | YES | Created with v2. setup_bg(3), play_intro(2), play_outro(2), progressive_reveal(6), section_divider(6), formula_box(10), SANS(26), ly.clear(11), safe_place(15). Zero .shift()/.to_edge() for content (docstring only). Rendered. |
 | 159 | Radon-Nikodym Theorem | 523 | YES | N/A (already v2) | YES | Created with v2. setup_bg(3), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(7), formula_box(16), SANS(29), ly.clear(11), safe_place(28). Zero .shift()/.to_edge() for content (docstring only). Re-rendered 480p15. |
 
-## Status: COMPLETE ✓ (Videos 1-159)
-All 159 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant. Video 156 v2-compliant. Video 157 received major v2 rewrite (0→full v2 features, content budget fixes). Videos 158-159 created with v2 templates — fully compliant.
+### Graduate: Measure Theory (Videos 160–161) — v2 Analysis
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 160 | Fubini's Theorem | 550 | YES | N/A (already v2) | YES | Created with v2. setup_bg(3), play_intro/outro(3), progressive_reveal(6), section_divider(8), formula_box(14), SANS(37), ly.clear(10), safe_place(24), add_subcaption(10). Zero .shift()/.to_edge()/.next_to()/.move_to() for content (matches in docstring only). — no improvement needed |
+| 161 | Lebesgue vs Riemann | 528 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro/outro(3), progressive_reveal(3), section_divider(8), formula_box(6), SANS(46), ly.clear(10), safe_place(17), add_subcaption(10). Zero .shift()/.to_edge()/.next_to()/.move_to() for content (matches in docstring only). — no improvement needed |
+
+### Graduate: Functional Analysis (Videos 162–164) — v2 Analysis
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 162 | Normed Spaces | 721 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), section_divider(5), formula_box(2), progressive_reveal(0 — uses manual FadeIn/FadeOut pattern), SANS(20), ly.clear(12), safe_place(23), center_in_content(1), clamp_position(3). Zero .shift()/.to_edge() for content (docstring only). 2 .next_to() on diagram VGroups (acceptable, followed by ensure_fits + clamp_position). Competitive analysis incorporated. Rendered. |
+| 163 | Banach Spaces | 384 | YES | N/A (already v2) | YES | Created with v2. setup_bg(2), play_intro(2), play_outro(2), section_divider(5), formula_box(1), progressive_reveal(3), SANS(25), MONO(1), ly.clear(7), safe_place(17), clamp_position(1). Zero .shift()/.to_edge()/.next_to()/.move_to() for content (docstring only). Competitive insights incorporated (Abide By Reason pi=4 example). Rendered. |
+| 164 | Inner Product Spaces | 603 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), section_divider(7), formula_box(3), progressive_reveal(2), SANS(29), MONO(3), ly.clear(9), safe_place(39), clamp_position(1). Zero .shift()/.to_edge()/.next_to()/.move_to() for content (docstring only). Competitive analysis incorporated (5 competitors). Script exists, needs render. |
+
+## Status: COMPLETE ✓ (Videos 1-164)
+All 164 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant. Video 156 v2-compliant. Video 157 received major v2 rewrite. Videos 158-159 created with v2 templates. Videos 160-161 (Fubini, Lebesgue vs Riemann) created with v2 templates — fully compliant. Videos 162-164 (Functional Analysis) created with v2 templates — fully compliant.
 
 ## Last Updated
-2026-08-05 (Video 157 major v2 rewrite complete. Rendering in progress.)
+2026-08-08 (Videos 162-164 analyzed — v2-compliant, no improvement needed. Video 164 needs render.)
