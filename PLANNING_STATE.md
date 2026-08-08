@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-06
 
-**Completed Videos (161 scripts, 161 renders)**
+**Completed Videos (163 scripts, 163 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -224,10 +224,10 @@
 ### Functional Analysis (Videos 162–173)
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
-| 162 | Normed Spaces | | |
-| 163 | Banach Spaces | | |
-| 164 | Inner Product Spaces | | |
-| 165 | Hilbert Spaces | | |
+| 162 | Normed Spaces | ✅ | ✅ |
+| 163 | Banach Spaces | ✅ | ✅ |
+| 164 | Inner Product Spaces | ✅ | ✅ |
+| 165 | Hilbert Spaces | ✅ | ✅ |
 | 166 | Bounded Linear Operators | | |
 | 167 | The Dual Space | | |
 | 168 | Weak and Weak-* Topology | | |
@@ -239,8 +239,7 @@
 
 ## In Progress
 - Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
-- Functional Analysis (Videos 162–173): Next video 162 (Normed Spaces) needs plan + script
-- **Last updated:** 2026-08-06
+- Functional Analysis (Videos 162–173): Videos 162-165 COMPLETE (rendered). Next: Video 166 (Bounded Linear Operators)
 
 
 ## Completed Playlists

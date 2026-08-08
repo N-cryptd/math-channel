@@ -1,3 +1,41 @@
+### [2026-08-07] Normed Spaces (Video 162)
+
+**Market Gap Analysis:** Normed spaces are the foundation of functional analysis but most YouTube coverage consists of Indian university chalk-lecture style videos (15-30 min, whiteboard). The only notable exception is "The Bright Side of Mathematics" (105K views, clean lecture style with tablet writing) and Dr. Will Wood (35K views, data science focus). No channel covers this with animated Manim visuals building geometric intuition from the ground up.
+
+**Competitive Landscape Analysis:**
+
+#### @brightsideofmaths — Functional Analysis 6 | Norms and Banach Spaces (imYQJOgUx7Y)
+**Views:** 105,269 | **Date:** Sep 2020 | **Subs:** 256K | **Captions:** True
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 6/10 | Hooks 5/10
+- **Thumbnail:** Yellow background, handwritten-style font, black text with math illustration. Quality 7/10.
+- **Style:** Tablet whiteboard lecture. Clean handwriting. Dark + light mode versions.
+- **Content:** 7 min. Definition of norm, normed space, connection to metrics, Banach space. Very efficient.
+- **Insight:** Covers both normed AND Banach spaces in one video. Our approach should focus on normed spaces alone (first video of playlist).
+- **Weakness:** No geometric animation. Relies on formula writing.
+
+#### Dr. Will Wood — Normed Linear Spaces | Introduction, L1 and L2 Norms (aMLl6jUlpqA)
+**Views:** 34,756 | **Date:** Sep 2020 | **Subs:** 59.5K | **Captions:** True
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 6/10 | Narration 5/10 | Hooks 4/10
+- **Thumbnail:** Green 3D coordinate plane, bold sans-serif title. Quality 8/10.
+- **Style:** Screen-recorded slides + handwriting. Data science application focus.
+- **Content:** 12 min. Data science motivation, formal definition, examples, L1/L2 norms, comparison with metric spaces.
+- **Insight:** Good idea to motivate with real-world application (data science / ML).
+- **Weakness:** Slide-heavy, pacing is slow for content depth.
+
+### Synthesis for Video 162
+
+**Our approach (distinct from all competitors):**
+1. **Hook with the familiar:** Start with "what is the length of a vector?" — everyone knows |x|. Bridge from R^n to abstract spaces.
+2. **Visual intuition first:** Animate unit balls in R^2 for different norms (l1 diamond, l2 circle, l∞ square) — signature visual NO competitor has.
+3. **Three axioms with geometric meaning:** Each axiom illustrated with animation.
+4. **Examples progression:** R^n → C^n → sequence spaces → continuous functions — concrete to abstract.
+5. **Norm induces metric:** Visual demonstration that d(x,y) = ||x-y|| gives a metric.
+6. **Preview Banach spaces:** Teaser at end — "what happens when every Cauchy sequence converges?"
+
+**What makes us different:** Animated unit ball comparison, color-coded axioms with geometric illustrations, progressive disclosure from familiar to abstract, no chalk-and-talk.
+
+---
+
 ### [2026-08-05] L^p Spaces (Video 158)
 
 **Market Gap Analysis:** L^p spaces are fundamental to modern analysis (functional analysis, PDEs, probability) but have almost no animated visual coverage. Only The Bright Side of Mathematics covers this topic with a lecture-style video (580 views). No high-production Manim-animated video explains L^p spaces with intuition-first, geometric approach. This is a major gap in the math education YouTube space.
@@ -416,3 +454,111 @@ Dimensions: Structure 5/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks
 7. Applications: probability theory (change of measure), statistics (likelihood ratios)
 
 **What makes us different:** Animated visual metaphors for absolute continuity, progressive disclosure, dark-themed Manim with color coding, no chalk-and-talk.
+
+### [2026-08-07] Normed Spaces (Video 162)
+
+**Market Gap Analysis:** Normed spaces as a standalone topic have almost no high-quality animated coverage. The dominant format is traditional lecture recordings (chalkboard, slides) from university channels (MIT OCW, DTUdk, Schuller). The only animated explainer is TBSOM's video, which is clean but brief (~10 min) and focuses on definitions rather than building deep intuition. There is a clear gap for a visually rich, intuition-first animated treatment that connects norms to geometry, real-world applications, and the broader functional analysis story. The 3Blue1Brown "Abstract Vector Spaces" video (1.75M views) proves there is massive appetite for this level of mathematical content when presented with strong animation.
+
+**Competitive Landscape Analysis:**
+
+1. **The Bright Side of Mathematics** — "Functional Analysis 6 | Norms and Banach Spaces" (105K views, Sep 2020) [imYQJOgUx7Y]
+   - **Thumbnail:** Yellow background with black handwritten-style text and math illustration showing arrows and inequalities. Casual, on-brand for TBSOM but lacks the polish of top-tier math channels. Quality 7/10.
+   - **Visual Analysis:** Clean whiteboard-on-yellow aesthetic using TBSOM's signature style. Text is handwritten font with simple geometric illustrations. Functional but not visually distinctive or memorable.
+   - **Content:** Concise ~10-minute video covering: norm definition (0:33), normed space (4:17), connection to metrics (4:50), Banach space (6:00). Part of a 10+ video Functional Analysis playlist. Focuses on definitions and key properties.
+   - **Rating:** Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 6/10 | Hooks 4/10
+
+2. **Dr. Will Wood** — "Normed Linear Spaces | Introduction, L1 and L2 Norms" (34K views, Sep 2020) [aMLl6jUlpqA]
+   - **Thumbnail:** Green 3D plane in a coordinate system with bold sans-serif title text. High quality, clean, with well-defined visuals that communicate the mathematical concept. Professional look.
+   - **Visual Analysis:** Uses Apple Keynote animations — clean slides with 3D graphics, smooth transitions between concepts. Good use of color to distinguish L1 vs L2 norms visually. Geometric illustrations are clear but not animated in the Manim sense.
+   - **Content:** 13-minute video introducing norms via data science applications. Covers: normed linear space definition with data example, formal definition, comparison with metric spaces, L1 and L2 norms. Strong application-driven motivation.
+   - **Rating:** Structure 7/10 | Pacing 7/10 | Visuals 6/10 | Narration 7/10 | Hooks 6/10
+
+3. **MIT OpenCourseWare** — "Lecture 1: Basic Banach Space Theory" (290K views, Nov 2022) [uoL4lQxfgwg]
+   - **Thumbnail:** Instructor standing in front of a chalkboard with equations. Professional photograph style, well-lit. Standard OCW thumbnail format — authoritative but not click-worthy for general audience.
+   - **Visual Analysis:** Traditional lecture format — professor at chalkboard writing proofs and definitions. No animation or digital visuals. High production quality for a lecture recording (good camera, clear audio) but purely chalk-and-talk.
+   - **Content:** Full university lecture by Dr. Casey Rodriguez covering vector spaces, norms, and examples of normed spaces in depth. Rigorous, theorem-proof format with detailed mathematical derivations. Over 1 hour.
+   - **Rating:** Structure 8/10 | Pacing 4/10 | Visuals 2/10 | Narration 6/10 | Hooks 2/10
+
+4. **DTUdk** — "Normed Vector Spaces Part 1" (118K views, Feb 2013) [VXwXkME9uWU]
+   - **Thumbnail:** Professor in front of chalkboard with mathematical equations and diagrams. Clear handwriting style with arrows and geometric shapes. Good lighting but dated production quality.
+   - **Visual Analysis:** Traditional chalkboard lecture from 2013. Professor Ole Christensen uses hand-drawn illustrations on board. Some geometric drawings (triangle inequality, unit balls) but no digital animations. Clean board work.
+   - **Content:** Lecture covering: vector spaces with examples, Fourier transform context, norm definition, opposite triangle inequality lemma, convergence, subspaces, trigonometric polynomial example. Very thorough and example-rich.
+   - **Rating:** Structure 7/10 | Pacing 5/10 | Visuals 3/10 | Narration 5/10 | Hooks 2/10
+
+5. **Frederic Schuller** — "Banach Spaces - Lec02" (100K views, Mar 2016) [Px1Zd--fgic]
+   - **Thumbnail:** Chalkboard-style text and diagrams with arrows and inequalities. Slightly blurry, muted colors. Signature Schuller aesthetic — raw chalkboard, no frills.
+   - **Visual Analysis:** Pure chalkboard lecture. Schuller is known for extremely rigorous, deeply mathematical presentations. No animations, no slides — just careful board work. Quality 7/10 for clarity of content despite technical limitations.
+   - **Content:** Part of the famous "Lectures on Quantum Theory" series. Covers Banach spaces from a deeply theoretical perspective with full proofs. Assumes strong mathematical maturity. Builds from vector spaces through norms to completeness.
+   - **Rating:** Structure 9/10 | Pacing 3/10 | Visuals 2/10 | Narration 7/10 | Hooks 1/10
+
+6. **3Blue1Brown** — "Abstract vector spaces | Chapter 16, Essence of linear algebra" (1.75M views, Sep 2016) [TgKwz5Ikpc8]
+   - **Thumbnail:** Black background, white text "Abstract vector spaces", purple curve with yellow and red bars representing function decomposition. Classic 3B1B minimalist aesthetic. Quality 8/10 — instantly recognizable.
+   - **Visual Analysis:** Benchmark-quality Manim animations. Uses the signature color palette (purple, yellow, red, blue) with smooth transitions between numeric vectors and function spaces. The key insight — showing that functions are vectors — is visualized brilliantly with color-coded function graphs.
+   - **Content:** 16-minute video building the bridge from concrete numeric vectors to abstract function spaces. Shows polynomials, sine/cosine as vectors. The "aha moment" is visualizing function operations as vector operations. Not specifically about norms, but directly adjacent and the gold standard for how to teach abstraction visually.
+   - **Rating:** Structure 10/10 | Pacing 10/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+
+7. **Normalized Nerd** — "What is Norm in Machine Learning?" (112K views, Aug 2020) [FiSy6zWDfiA]
+   - **Thumbnail:** Black background, white text "Understanding Norms", yellow diamond/square geometric figure showing unit balls. Clean, professional. Uses manim-style (3B1B-inspired) animations.
+   - **Visual Analysis:** Uses 3Blue1Brown's manim library for animations. Clean black-background aesthetic with colorful geometric visualizations. Shows unit balls for different norms, L1 vs L2 geometry, with smooth animations. Good but derivative of 3B1B style.
+   - **Content:** Explains norms through the lens of machine learning applications. Covers what a norm is, L1 and L2 norms with geometric interpretation, why norms matter for ML (regularization, gradient descent). Application-focused with good geometric intuition.
+   - **Rating:** Structure 6/10 | Pacing 7/10 | Visuals 7/10 | Narration 6/10 | Hooks 7/10
+
+8. **Lassi Paunonen** — "Normed Spaces (IFA21 Video 3)" (1.4K views, Jan 2021) [ed9RgzOvlpg]
+   - **Thumbnail:** Dark chalkboard-style background with white text, circular presenter photo on left. Professional appearance with good contrast. Title "Introduction to Functional Analysis" with subtitle "Part 3: Normed Spaces."
+   - **Visual Analysis:** Slide-based presentation with typed mathematical content. Clean, well-organized slides but no animation. Standard academic presentation style. Presenter photo adds personal touch to thumbnail.
+   - **Content:** Part of a structured 19-video online course. Covers normed spaces, norms on sequence spaces, norms on spaces of continuous functions. Well-structured academic content with clear definitions and examples. Lecture notes available as PDF.
+   - **Rating:** Structure 8/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 3/10
+
+9. **Dr. Will Wood** — "The Lp Norm for Vectors and Functions" (100K views, Nov 2020) [NKuLYRui-NU]
+   - **Thumbnail:** Four green geometric shapes (diamond, circle, square, rectangle) on white background, labeled L1, L2, Lp, L-infinity. Text "The Lp Norm" at top. Clean, informative, visually showing how unit balls change shape. Quality 7/10.
+   - **Visual Analysis:** Apple Keynote animations with good 3D geometric visualizations. Shows how unit balls morph from diamond (L1) to circle (L2) to square (L-infinity) as p changes. Strong geometric intuition building. Clean transitions.
+   - **Content:** Builds on previous video to define Lp norms generally. Covers Lp norm definition, geometry of Lp unit balls (the key visual), and extends to continuous functions. Only 8 minutes but dense with geometric insight. The unit ball morphing is the highlight.
+   - **Rating:** Structure 7/10 | Pacing 8/10 | Visuals 7/10 | Narration 7/10 | Hooks 6/10
+
+**Key Insights from Competitor Analysis:**
+- No existing video combines deep mathematical rigor with high-quality animation for normed spaces specifically. TBSOM is animated but superficial; Schuller/MIT are rigorous but chalk-and-talk.
+- The biggest engagement driver in this space is geometric intuition: showing unit balls for different norms, visualizing how norms measure "size" in different ways. Dr. Will Wood's unit ball morphing and Normalized Nerd's geometric shapes are the closest to doing this well.
+- 3Blue1Brown's "Abstract Vector Spaces" (1.75M views) proves that making the jump from concrete to abstract is the key "aha moment" viewers crave. No normed spaces video has replicated this for norms → Banach spaces.
+- Application-based hooks dramatically improve engagement. Dr. Will Wood's data science framing and Normalized Nerd's ML framing both outperform pure-math approaches in views-per-subscriber ratio.
+- The TBSOM video (105K views, 256K subs = 41% view rate) and MIT OCW (290K views, 6.4M subs = 4.5% view rate) show that dedicated math channels capture much more of their audience for this topic than general academic channels.
+- Most competitors treat norms as a stepping stone to Banach spaces rather than giving norms the full intuitive treatment they deserve as a standalone concept. This is our opportunity.
+- Thumbnail quality correlates strongly with views. 3B1B's minimalist design and Normalized Nerd's geometric shapes both outperform chalkboard thumbnails significantly.
+
+**Specific Techniques to Adopt for Our Video:**
+1. Geometric visualization of unit balls morphing as p changes (L1 diamond → L2 circle → L-infinity square) — this is the most intuitive way to understand what different norms do
+2. Application-driven opening hook: start with a real-world problem (e.g., how do you measure the "size" of a function? how does ML use norms?) before any definitions
+3. The "concrete → abstract" progression from 3B1B: show norms on R² first (visible geometry), then extend to function spaces (same rules, infinite-dimensional)
+4. Color-code different norm families consistently throughout (L1 = one color, L2 = another, L-infinity = another) for visual continuity
+5. Animated proof of triangle inequality that builds geometrically rather than algebraically
+6. Show the "ladder" of spaces: inner product → normed → metric → topological, with clear visual of what each adds
+
+**Specific Techniques to Avoid:**
+1. Starting with formal axioms/definitions before building geometric intuition (the Schuller/MIT approach — too dry for a standalone video)
+2. Treating norms as merely a prerequisite for Banach spaces without exploring their own richness
+3. Pure chalkboard/slide aesthetic without animation — this is oversaturated and lower engagement
+4. Covering too many examples without depth — better to deeply animate 2-3 examples than list 10
+5. Using overly technical notation without visual grounding (common in lecture-style videos)
+6. Copying the exact 3B1B visual style — we need our own aesthetic identity while learning from their pacing and structure
+
+**Our Video Strategy (based on analysis):**
+- **Opening hook (0-60s):** Pose the question "How do you measure the size of a function?" — show a function graph and ask what its "length" could mean. This creates immediate curiosity and connects to the abstract vector spaces idea from 3B1B.
+- **Core structure:** Build from R² geometry (where norms are visible) → R^n → sequence spaces → function spaces, with the same color-coded animations carrying through each level. This mirrors 3B1B's concrete-to-abstract ladder but goes further.
+- **Signature visual:** Animated unit ball morphing as p varies, with the insight that "choosing a norm is choosing how to measure distance" — show how different norms give different "shapes of closeness."
+- **Differentiation:** We go deeper than TBSOM on intuition (they spend 4 min on the definition; we'll spend 4 min building geometric motivation before the definition). We're more animated than Dr. Will Wood. We're more accessible than Schuller/MIT. We connect to the broader functional analysis story (this is Video 162, so viewers expect depth).
+- **Engagement anchors:** Every 2-3 minutes, return to a running example (e.g., "Is this sequence of functions converging?" measured under different norms — different answers!) to keep viewers grounded.
+- **Playlist positioning:** As the first video in a Functional Analysis playlist, we need to establish the visual language and color palette that will carry through the entire series. Start with the "ladder of spaces" overview so viewers know where they're headed.
+
+---
+
+## 2026-08-07 — Video 164: Inner Product Spaces (Functional Analysis)
+Source: 5 competitor videos analyzed (TBSOM 40K, MIT OCW 60K, Schuller 52K, Brunton 158K, Maultsby 4K)
+Full analysis: channel-analysis/analysis-164-inner-product.md
+
+Key findings:
+- **HUGE market gap:** No animated Manim video covers inner product spaces at graduate level
+- **Application framing drives views:** Brunton's data-science angle (158K) vs pure math (40-60K)
+- **The "ladder" hook from Video 162:** Inner product → norm → metric → topological. Show what an inner product ADDS (angles, orthogonality, projection)
+- **Cauchy-Schwarz is the star:** Visual proof via projection geometry, not just statement
+- **Function inner products = the graduate leap:** <f,g> = integral is where we add value over LA video 37
+
+---
