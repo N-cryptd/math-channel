@@ -1,3 +1,64 @@
+### [2026-08-08] Bounded Linear Operators (Video 166)
+
+**Market Gap Analysis:** Bounded linear operators are central to functional analysis, yet YouTube coverage is dominated by full-length university lectures (MIT OCW 47K views, 84 min) and tablet-writing videos (TBSOM, 25-36K views). No channel provides an animated, intuition-first treatment of bounded operators with Manim visuals. The topic is spread across multiple videos by each competitor -- TBSOM has separate videos for the definition, operator norm examples, spectrum, and compact operators. This is a major opportunity for a unified, visually-driven exposition.
+
+**Competitive Landscape Analysis:**
+
+#### MIT OpenCourseWare -- Lecture 2: Bounded Linear Operators (78vN4sO7FVU)
+**Views:** 47,016 | **Date:** Nov 2022 | **Subs:** 6.43M | **Captions:** True
+Dimensions: Structure 8/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+- **Style:** Full university lecture, chalkboard. Systematic and rigorous but 84 minutes long.
+- **Content:** Definition, bounded = continuous, operator norm, examples (integration, differentiation), Banach space of bounded operators, adjoint on Hilbert spaces, compact operators preview.
+- **Insight:** Covers nearly everything in one lecture. Very complete but overwhelming for beginners.
+- **Weakness:** No visuals beyond chalk. Extremely long. No geometric intuition for what "bounded" means.
+
+#### The Bright Side of Mathematics -- FA 14: Example Operator Norm (YMm-UZwmuF0)
+**Views:** 35,680 | **Date:** Nov 2020 | **Subs:** 257K | **Captions:** True
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+- **Style:** Tablet whiteboard lecture. Dark + light mode. Clean handwriting.
+- **Content:** 5.5 min focused on computing operator norm examples. Very efficient.
+- **Insight:** Good specific examples. Covers sup norm estimation technique.
+- **Weakness:** Definition-first, no geometric animation. Assumes viewer already knows theory.
+
+#### The Bright Side of Mathematics -- FA 28: Spectrum of Bounded Operators (Mx75Kiqyaik)
+**Views:** 35,550 | **Date:** Jan 2021 | **Subs:** 257K | **Captions:** True
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+- **Style:** Same tablet lecture format. Systematic spectral theory.
+- **Content:** Definition of spectrum, spectral radius, examples.
+- **Insight:** Good progression from eigenvalues to spectrum to spectral radius.
+- **Weakness:** Pure definition-lemma-theorem. No visual metaphor for spectral radius.
+
+#### Nathaniel Johnston -- Operator Norm of a Matrix (G2RKg1pHApc)
+**Views:** 12,264 | **Date:** Sep 2020 | **Subs:** 7.81K | **Captions:** True
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+- **Style:** Slides with mathematical notation. Clear, organized.
+- **Content:** 24 min. Operator norm definition, submultiplicativity, unitary invariance, computation via SVD, examples.
+- **Insight:** Excellent coverage of submultiplicativity and SVD connection.
+- **Weakness:** Matrix-focused, not abstract operator focus. Slides, not animation.
+
+#### MIT OCW -- Lecture 18: Adjoint Operator (BctaYoR9tOY)
+**Views:** 9,277 | **Date:** Nov 2022 | **Subs:** 6.43M | **Captions:** True
+Dimensions: Structure 8/10 | Pacing 5/10 | Visuals 3/10 | Narration 7/10 | Hooks 3/10
+- **Style:** University lecture, 72 min chalkboard.
+- **Content:** Adjoint via Riesz Representation, rank-nullity analog, compact operators preview.
+- **Insight:** Connects adjoint to Riesz theorem -- good bridge from our Video 165.
+- **Weakness:** Very long, chalkboard-only.
+
+### Synthesis for Video 166
+
+**Our approach (distinct from all competitors):**
+1. **Hook with the visual:** Animate what "bounded" means -- a transformation that sends the unit ball to a bounded set. This geometric intuition is MISSING from every competitor.
+2. **Definition via supremum:** Show operator norm as "maximum stretching factor" -- animate a vector being stretched and the worst-case ratio.
+3. **Bounded = Continuous theorem:** The key equivalence, proved visually with the epsilon-delta picture.
+4. **Examples with animation:** Differentiation operator on C[0,1] (unbounded!) vs. multiplication operator on C[0,1] (bounded) -- animate the functions being transformed.
+5. **B(H) as a Banach space:** Space of bounded operators itself forms a Banach space.
+6. **Adjoint operator:** Definition via Riesz, connecting to Video 165. Animate T and T* as a "mirror" transformation.
+7. **Spectral radius and applications:** Teaser for next videos on spectral theory.
+
+**What makes us different:** Animated unit ball transformation, visual bounded vs. unbounded comparison (differentiation!), geometric operator norm intuition, unified 8-scene treatment vs. competitors' fragmented multi-video approach, progressive disclosure from intuition to formality.
+
+---
+
 ### [2026-08-07] Normed Spaces (Video 162)
 
 **Market Gap Analysis:** Normed spaces are the foundation of functional analysis but most YouTube coverage consists of Indian university chalk-lecture style videos (15-30 min, whiteboard). The only notable exception is "The Bright Side of Mathematics" (105K views, clean lecture style with tablet writing) and Dr. Will Wood (35K views, data science focus). No channel covers this with animated Manim visuals building geometric intuition from the ground up.

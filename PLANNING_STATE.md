@@ -228,7 +228,7 @@
 | 163 | Banach Spaces | ✅ | ✅ |
 | 164 | Inner Product Spaces | ✅ | ✅ |
 | 165 | Hilbert Spaces | ✅ | ✅ |
-| 166 | Bounded Linear Operators | | |
+| 166 | Bounded Linear Operators | ✅ | |
 | 167 | The Dual Space | | |
 | 168 | Weak and Weak-* Topology | | |
 | 169 | Compact Operators | | |
@@ -239,7 +239,7 @@
 
 ## In Progress
 - Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
-- Functional Analysis (Videos 162–173): Videos 162-165 COMPLETE (rendered). Next: Video 166 (Bounded Linear Operators)
+- Functional Analysis (Videos 162–173): Videos 162-165 COMPLETE (rendered). Video 166 script written (pending render). Next: Video 167 (The Dual Space).
 
 
 ## Completed Playlists
