@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-06
+**Last updated:** 2026-08-09
 
-**Completed Videos (163 scripts, 163 renders)**
+**Completed Videos (173 scripts, 173 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -228,18 +228,18 @@
 | 163 | Banach Spaces | ✅ | ✅ |
 | 164 | Inner Product Spaces | ✅ | ✅ |
 | 165 | Hilbert Spaces | ✅ | ✅ |
-| 166 | Bounded Linear Operators | ✅ | |
-| 167 | The Dual Space | | |
-| 168 | Weak and Weak-* Topology | | |
-| 169 | Compact Operators | | |
-| 170 | Spectral Theory | | |
-| 171 | Hahn-Banach Theorem | | |
-| 172 | Open Mapping Theorem | | |
-| 173 | Applications to PDEs | | |
+| 166 | Bounded Linear Operators | ✅ | ✅ |
+| 167 | The Dual Space | ✅ | ✅ |
+| 168 | Weak and Weak-* Topology | ✅ | ✅ |
+| 169 | Compact Operators | ✅ | ✅ |
+| 170 | Spectral Theory | ✅ | ✅ |
+| 171 | Hahn-Banach Theorem | ✅ | ✅ |
+| 172 | Open Mapping Theorem | ✅ | ✅ |
+| 173 | Applications to PDEs | ✅ | ✅ |
 
 ## In Progress
 - Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
-- Functional Analysis (Videos 162–173): Videos 162-165 COMPLETE (rendered). Video 166 script written (pending render). Next: Video 167 (The Dual Space).
+- Functional Analysis (Videos 162–173): COMPLETE (12 videos, all rendered)
 
 
 ## Completed Playlists
@@ -254,7 +254,9 @@
 - Real Analysis I (Videos 99–110): COMPLETE (12 videos)
 - Complex Analysis (Videos 126–138): COMPLETE (13 videos)
 - Measure Theory (Videos 151–161): COMPLETE (12 videos)
+- Functional Analysis (Videos 162–173): COMPLETE (12 videos)
 
 ## Notes
 - Measure Theory playlist is COMPLETE as of Video 161
-- Next playlist: Functional Analysis (Videos 162–173)"
+- Functional Analysis playlist is COMPLETE as of Video 173 (Aug 2026)
+- Next playlist: TBD (potential: Differential Geometry, Fourier Analysis, or Number Theory)"
