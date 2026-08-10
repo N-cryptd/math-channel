@@ -623,3 +623,40 @@ Key findings:
 - **Function inner products = the graduate leap:** <f,g> = integral is where we add value over LA video 37
 
 ---
+
+### [2026-08-10] Fourier Analysis Playlist — Intro (Video 174)
+
+**Market Gap Analysis:** Fourier Analysis is one of the most popular math topics on YouTube — 3B1B's "But what is the Fourier Transform?" has 12.3M views, Reducible's FFT video has 2.2M views. However, there is NO comprehensive animated Fourier Analysis playlist (series) covering Fourier series, Fourier transform, properties, convolution theorem, and applications systematically. 3B1B covers the transform intuition in a single brilliant video but doesn't do a series. Steve Brunton has extensive Fourier content but uses whiteboard style. Our opportunity: a full 10-video Fourier Analysis series with Manim animations, building from Hilbert space foundations (which we just completed in Functional Analysis).
+
+**Competitive Landscape Analysis:**
+
+#### 3Blue1Brown — "But what is the Fourier Transform? A visual introduction." (spUNpyF58BY)
+**Views:** 12,301,934 | **Date:** Jan 2018 | **Subs:** 8.53M | **Captions:** True
+Dimensions: Structure 9/10 | Pacing 10/10 | Visual Techniques 10/10 | Narration 9/10 | Hooks 10/10
+- **Style:** Dark background, winding machine metaphor. Builds from "what frequency is this signal?" through the unwinding metaphor.
+- **Thumbnail:** Black bg, white text "Signal / Winding / Transform", blue/green/yellow visual metaphors. High quality.
+- **Key technique:** The "winding machine" — wraps a signal around a circle at different frequencies, then measures center of mass. This visual is THE canonical Fourier intuition on YouTube.
+- **Strengths:** Single video tells a complete story. Color-coded. The "uncertainty principle" follow-up.
+- **What to AVOID:** We should NOT duplicate the winding machine — it's been viewed 12M times and every Fourier video references it. We need our own visual approach.
+- **Takeaway:** Our Fourier series intro should connect to Hilbert spaces (our last playlist) — orthogonal decomposition of functions into sine/cosine basis functions. This is different from 3B1B's approach and builds on our unique content pipeline.
+
+#### Reducible — "The Fast Fourier Transform (FFT): Most Ingenious Algorithm Ever?" (h7apO7q16V0)
+**Views:** 2,244,760 | **Date:** Nov 2020 | **Subs:** 336K | **Captions:** True
+Dimensions: Structure 8/10 | Pacing 7/10 | Visual Techniques 8/10 | Narration 8/10 | Hooks 9/10
+- **Style:** Dark bg, clean Manim animations. Algorithm-focused approach via polynomial multiplication.
+- **Thumbnail:** Black bg, "Fast Fourier Transform" text, line graph + node network. Clean and clear.
+- **Key technique:** Discovery-based — "discovers" FFT through asking questions about polynomial multiplication efficiency.
+- **Strengths:** Excellent at making an algorithm feel natural and motivated. Good chapter markers.
+- **What to AVOID:** Our series is mathematical, not algorithmic. We focus on the theory, not computational tricks.
+- **Takeaway:** Good pacing model — discovery narrative works well for math. We'll use a similar "why do we need this?" hook.
+
+#### Steve Brunton — Fourier content (various)
+**Views:** Varies (typically 20-100K) | **Captions:** Varies
+- Extensive Fourier series and transform content but whiteboard/hybrid style.
+- Focus on applications: signal processing, data science, differential equations.
+- **Takeaway:** Our advantage is animations — we can show Fourier convergence, Gibbs phenomenon, etc. visually in ways whiteboard can't.
+
+**Our Strategy for Fourier Analysis Playlist:**
+1. **Unique angle:** Connect Fourier Analysis to our completed Functional Analysis content — L² spaces, orthonormal bases, Hilbert spaces. "You learned about orthogonal bases in Hilbert spaces. Now see the most beautiful application: decomposing any function into sines and cosines."
+2. **Visual approach:** Instead of 3B1B's winding machine, show the geometric picture — project a function onto sine/cosine axes, visualize partial sums converging, animate Gibbs phenomenon.
+3. **Playlist structure:** 10 videos: Fourier Series → Convergence → Fourier Transform → Properties → Convolution Theorem → Parseval's Theorem → Applications (Signal Processing, Heat Equation, PDEs) → DFT/FFT → Summary

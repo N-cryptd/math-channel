@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-09
+**Last updated:** 2026-08-10
 
-**Completed Videos (173 scripts, 173 renders)**
+**Completed Videos (174 scripts, 174 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -237,9 +237,24 @@
 | 172 | Open Mapping Theorem | ✅ | ✅ |
 | 173 | Applications to PDEs | ✅ | ✅ |
 
+### Fourier Analysis (Videos 174–183)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 174 | Introduction to Fourier Series | ✅ | ✅ |
+| 175 | Convergence of Fourier Series | ⬜ | ⬜ |
+| 176 | Fourier Series Properties | ⬜ | ⬜ |
+| 177 | The Fourier Transform | ⬜ | ⬜ |
+| 178 | Properties of the Fourier Transform | ⬜ | ⬜ |
+| 179 | The Convolution Theorem | ⬜ | ⬜ |
+| 180 | Parseval's Theorem | ⬜ | ⬜ |
+| 181 | Applications: Signal Processing | ⬜ | ⬜ |
+| 182 | Applications: Heat Equation | ⬜ | ⬜ |
+| 183 | Fourier Analysis Summary | ⬜ | ⬜ |
+
 ## In Progress
 - Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
 - Functional Analysis (Videos 162–173): COMPLETE (12 videos, all rendered)
+- Fourier Analysis (Videos 174–183): IN PROGRESS (Video 174 done, 9 remaining)
 
 
 ## Completed Playlists
@@ -254,9 +269,8 @@
 - Real Analysis I (Videos 99–110): COMPLETE (12 videos)
 - Complex Analysis (Videos 126–138): COMPLETE (13 videos)
 - Measure Theory (Videos 151–161): COMPLETE (12 videos)
-- Functional Analysis (Videos 162–173): COMPLETE (12 videos)
+|- Functional Analysis (Videos 162–173): COMPLETE (12 videos)
 
 ## Notes
-- Measure Theory playlist is COMPLETE as of Video 161
-- Functional Analysis playlist is COMPLETE as of Video 173 (Aug 2026)
-- Next playlist: TBD (potential: Differential Geometry, Fourier Analysis, or Number Theory)"
+- Fourier Analysis playlist started (Video 174, Aug 2026) — 10 videos planned (174-183)
+- Next playlist after Fourier Analysis: TBD (potential: Differential Geometry, Algebraic Topology, PDEs)
