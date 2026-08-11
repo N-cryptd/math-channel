@@ -1,3 +1,55 @@
+### [2026-08-11] Parseval's Theorem (Video 180)
+
+**Market Gap Analysis:** Parseval's theorem sits at the intersection of pure mathematics (unitary operators on Hilbert spaces), signal processing (energy conservation, power spectral density), and quantum mechanics (probability conservation). No video on YouTube provides a unified, animated treatment connecting all three domains. Every competitor covers one piece: Trefor Bazett focuses on the Fourier series version to solve Basel problem, Steve Brunton covers signal energy in a lecture format, Mike the Mathematician proves Plancherel rigorously on whiteboard, and Iain Explains covers PSD from an engineering perspective. Nobody bridges the full Plancherel → Parseval → autocorrelation → Wiener-Khinchin → quantum mechanics chain.
+
+**Competitive Landscape Analysis:**
+
+#### Dr. Trefor Bazett — "Parseval's Identity, Fourier Series, and Solving this Classic Pi Formula" (WPeU34jndSw, 92.6K views, 611K subs)
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 8/10 | Hooks 8/10
+- **Style:** Manim animations with handwritten overlays. Blackboard thumbnail with summation formula in white/pink text.
+- **Content:** Fourier series Parseval identity used to solve Basel problem (sum 1/n^2 = pi^2/6). Excellent narrative arc for Pi Day. Shows Fourier series refresher, Parseval identity statement, inner product connection, then the famous proof.
+- **Insight:** Good storytelling approach (famous result as motivation). The "Pythagoras in infinite dimensions" framing is pedagogically excellent.
+- **Weakness:** Limited to Fourier series, no Fourier transform extension. No autocorrelation, no Wiener-Khinchin, no quantum applications. Undergraduate level only.
+- **Thumbnail:** Blackboard with white/pink text, summation formula. Clean but academic. Rating: 6/10.
+
+#### Steve Brunton — "Parseval's Theorem" (ML0eYMyhqOs, 87.3K views, 546K subs)
+Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 6/10
+- **Style:** Whiteboard lecture, data-driven science focus. Dark blue thumbnail with chalkboard equations.
+- **Content:** Parseval's theorem as energy conservation in truncated Fourier series. Practical signal processing perspective. Connects approximation accuracy to energy in discarded coefficients.
+- **Insight:** The practical framing ("how many Fourier coefficients do you need?") is valuable for engineers. The energy interpretation is clear.
+- **Weakness:** Whiteboard-only, no animations. Lecture format, not engaging for visual learners. No Plancherel theorem, no generalized Parseval, no applications beyond truncation.
+- **Thumbnail:** Dark blue swirl with chalkboard Fourier equations. Professional but static. Rating: 7/10.
+
+#### Mike, the Mathematician — "The Plancherel Theorem" (pIpuHVJC2vc, 1.4K views, 25.7K subs)
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 2/10 | Narration 6/10 | Hooks 4/10
+- **Style:** Whiteboard lecture, rigorous graduate-level. Low views but closest in mathematical depth to our target.
+- **Content:** Proves Plancherel as consequence of convolution theorem. Covers L^2 isometry, convolution identity, inner product preservation.
+- **Insight:** Most rigorous competitor. The proof via convolution theorem is the correct mathematical approach.
+- **Weakness:** No animations, pure whiteboard. Very slow pace. No applications (no signal processing, no quantum, no Wiener-Khinchin). Only 1.4K views despite covering the right material — suggests the presentation format is the problem.
+- **Thumbnail:** Standard academic style, low engagement.
+
+#### Iain Explains Signals — "What is Power Spectral Density (PSD)?" (DoSLMEEo1Y0, 124.7K views, 96.5K subs)
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 7/10
+- **Style:** Slides with speaker face-cam. Red thumbnail with speaker photo and density graphs.
+- **Content:** PSD of random signals from intuitive and mathematical perspectives. Shows link to autocorrelation with examples in digital communications. Covers WSS processes.
+- **Insight:** Best PSD explanation on YouTube for engineering. Good examples (digital comms). Explains why it's a "density."
+- **Weakness:** No animations. Doesn't prove Wiener-Khinchin mathematically. Doesn't connect back to Parseval or Plancherel. Purely engineering perspective without the mathematical foundation.
+- **Thumbnail:** Red background, speaker face, density graphs. Engaging but busy. Rating: 6/10.
+
+### Synthesis for Video 180
+
+**Our approach (distinct from all competitors):**
+1. **Full chain coverage:** Nobody connects Plancherel → generalized Parseval → autocorrelation → Wiener-Khinchin → quantum in a single animated video. We provide the complete picture.
+2. **Animated proofs:** Unlike Mike's whiteboard, we show the Plancherel proof via convolution theorem (building on Video 179) with animated equations.
+3. **Bridging math and engineering:** Following Brunton's practical framing but with Iain's PSD applications, connected through rigorous mathematics.
+4. **Trefor's Pythagoras analogy + Mike's rigor + Brunton's applications:** We synthesize the best of each competitor.
+5. **Uncertainty principle as Parseval consequence:** Nobody animates this connection. The bandwidth-duration inequality sigma_t * sigma_omega >= 1/2 derived from Parseval is unique to our video.
+6. **Quantum probability conservation:** Nobody connects Parseval to quantum mechanics in an animated format.
+
+**What makes us different:** The full Plancherel→Parseval→autocorrelation→Wiener-Khinchin chain with Manim animations, the uncertainty principle derivation, quantum probability conservation, and being part of a systematic Fourier Analysis playlist where every concept builds on prior videos.
+
+---
+
 ### [2026-08-11] The Fourier Transform (Video 177)
 
 **Market Gap Analysis:** The Fourier Transform is one of the most-covered math topics on YouTube, but almost all coverage falls into two extremes: (a) 3B1B's single masterpiece at 12.3M views (visual intuition, non-rigorous), or (b) engineering-style whiteboard lectures (BriTheMathGuy ~500K views, Engineering Funda ~15K views, various Indian university channels). Nobody bridges the gap between 3B1B's beautiful intuition and rigorous graduate-level mathematics with animated Manim visuals. Our video, as part of a systematic Fourier Analysis playlist (Videos 174-183), can build directly from the Fourier series foundation in Videos 174-176 and provide the rigorous treatment that 3B1B's video intentionally omits.
@@ -810,3 +862,47 @@ Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 7/10 | Narration 6/10 | Hooks
 6. **Polynomial multiplication = coefficient convolution:** Following Reducible's FFT insight but adding the O(n log n) algorithm walkthrough.
 
 **What makes us different:** The only graduate-level visual convolution theorem video with animated Fubini proof, convolution algebra structure, and three deep application payoffs (filtering, probability, Green's functions) — all building on our playlist's Fourier Transform foundation.
+
+### [2026-08-11] Applications: Signal Processing (Video 181)
+
+**Market Gap Analysis:** Existing signal processing content splits into two extremes: dry lecture-style university videos (Radke) that are rigorous but visually lifeless, and popular-science animations (3Blue1Brown, Reducible) that are visually stunning but cover only narrow slices (FFT or Fourier intuition alone). No single video unifies sampling theorem, aliasing, FFT algorithm, windowing/spectral leakage, filter design, and STFT into a cohesive graduate-level Manim-animated treatment. Viewers must cobble together understanding from 4-5 different sources, each with different notation and pedagogical framing.
+
+**Competitive Landscape Analysis:**
+
+#### Reducible — "The Fast Fourier Transform (FFT): Most Ingenious Algorithm Ever?" (h7apO7q16V0, 2,245,137 views)
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 9/10
+- **Style:** Manim-animated deep-dive using the polynomial multiplication framing. Black background, clean white text, colorful node diagrams showing butterfly operations, recursive tree visualizations. Thumbnail (rated 9/10 by AI analysis) features black background with white title text, line graph, and interconnected node network -- highly representative of the channel's distinctive look.
+- **Content:** Polynomial multiplication motivation → coefficient vs value representation → Nth roots of unity → butterfly diagram → IFFT for interpolation. Chapter timestamps provided. 26:49 runtime. 336K subscriber channel.
+- **Insight:** The polynomial multiplication framing is the single best pedagogical gateway to FFT. Building from "why does multiplying polynomials take O(n²)?" creates genuine curiosity before revealing the O(n log n) trick. The recursive structure is visualized with tree diagrams that make the divide-and-conquer tangible. Uses Manim Community edition.
+- **Weakness:** Covers ONLY FFT. No sampling theorem, no aliasing, no STFT, no filter design. Viewer gets deep FFT understanding but zero context for when/how FFT is used in real signal processing pipelines. The polynomial framing, while elegant, disconnects from the frequency-analysis intuition that Fourier provides.
+
+#### 3Blue1Brown — "But what is the Fourier Transform? A visual introduction." (spUNpyF58BY, 12,304,063 views)
+Dimensions: Structure 8/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+- **Style:** Iconic Manim animation style. Black background with Grant's signature smooth, hand-drawn-feel math animations. Thumbnail shows "Signal → Winding → Transform" pipeline with blue, green, and yellow squiggly lines -- rated 10/10 clickworthiness. 8.53M subscribers.
+- **Content:** Winding machine intuition for Fourier Transform → frequency as rotation rate → unwrapping the circle → decomposition into sinusoids. Follow-on video on uncertainty principle. Interactive companion by a viewer (Prajwal Souza's Experiments project). 20+ minutes.
+- **Insight:** The winding machine is the gold standard for building Fourier intuition. No one has surpassed it for making the continuous FT accessible. The "identity element" insight (what frequency leaves the center of mass unchanged) is pedagogically brilliant. Grant's narration pacing -- pauses at key moments, rhetorical questions -- is unmatched in math YouTube.
+- **Weakness:** Covers only the continuous Fourier Transform intuition. No sampling, no discrete FT, no FFT, no aliasing. The winding metaphor, while beautiful, doesn't scale well to explaining discrete-time concepts or algorithmic aspects. Graduate-level viewers need the bridge from this intuition to the DFT/FFT machinery.
+
+#### Marshall Bruner — "Aliasing... Or How Sampling Distorts Signals" (eBHbCZo9QrM, 74,684 views)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 8/10 | Narration 7/10 | Hooks 8/10
+- **Style:** Manim Community animations with a dark blue background. Clean sans-serif text, waveform visualizations in contrasting colors (light blue and orange). Thumbnail rated 8/10: shows "Original (3Hz)" vs "What we see (2Hz)" with waveforms -- directly communicates the aliasing concept. 50.7K subscribers, growing channel.
+- **Content:** Sampling recap → time domain sampling → frequency spectrum visualization → infinite ambiguity problem → Nyquist zone boundaries → concrete aliasing examples. Companion Python notebook for interactive exploration. Uses Oppenheim reference.
+- **Insight:** Strong visual treatment of aliasing in both time and frequency domains simultaneously, which is rare. The "What we see (2Hz)" vs "Original (3Hz)" thumbnail perfectly communicates the problem. Providing a companion Jupyter notebook is a smart engagement tool. The Manim + Python notebook combo signals technical rigor.
+- **Weakness:** Focused narrowly on aliasing only. Narration is competent but lacks Grant's masterful pacing. At 74K views, channel hasn't yet built the authority/brand recognition that would make this a definitive reference. Production quality is good but not yet at the Reducible/3B1B polish level.
+
+#### Rich Radke — "DSP Lecture 13: The Sampling Theorem" (_Z7ErH7UTMs, 101,270 views)
+Dimensions: Structure 9/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 3/10
+- **Style:** Traditional whiteboard/PowerPoint university lecture. White background, text-heavy slides, minimal animation. Thumbnail is a plain graph with colored lines on white background -- rated 6/10 quality but low click appeal. 40.7K subscribers.
+- **Content:** Exhaustive sampling theorem coverage: periodic sampling, reconstruction methods (nearest neighbor, zero-order hold, linear interpolation), impulse train sampling, frequency domain copies, aliasing, sinc reconstruction, phase reversal/wagon-wheel effect, real audio demos (dial tone, ringing tone, music), prefiltering. 1h11m lecture. Follows Proakis and Manolakis textbook Section 6.1.
+- **Insight:** The most rigorous and complete treatment of sampling theorem on YouTube. Excellent use of real audio demonstrations (dial tone, music sampling/reconstruction) to ground abstract theory. The phase reversal / wagon-wheel effect demonstration is memorable. Comprehensive timestamp system for navigation.
+- **Weakness:** Lecture format is fundamentally unengaging for YouTube. 1h11m runtime is a massive barrier. Zero visual animation -- all static slides and equations. Narration is dry, academic style. No thumbnail design effort. This is a university lecture deposited on YouTube, not designed for the platform.
+
+### Synthesis for Video 181
+
+**Our approach (distinct from all competitors):**
+1. **Unified narrative arc:** Unlike every competitor who covers one topic in isolation, Video 181 weaves sampling → aliasing → FFT → windowing → filter design → STFT into a single coherent story where each concept motivates the next. "Why do we need FFT?" is answered by the sampling theorem section. "Why do we need STFT?" is answered by the spectral leakage from windowing.
+2. **Graduate-level rigor with Manim visuals:** Combining the mathematical depth of Radke's lecture (sinc reconstruction proofs, spectral leakage math, filter impulse response) with the visual quality of 3B1B/Reducible. No one does this at this level -- it's either rigorous OR beautiful, never both in one video.
+3. **Aliasing as visual-mathematical proof, not just demonstration:** Building on Marshall Bruner's visual approach but adding the rigorous frequency-domain proof (periodic spectrum copies overlapping) that graduate students need, animated step-by-step.
+4. **FFT via our playlist's Fourier foundation:** Unlike Reducible's polynomial multiplication framing (which is self-contained but disconnected from Fourier analysis), we present FFT as the natural computational realization of everything the playlist has built -- the DFT as sampled FT, Cooley-Tukey as exploiting periodic symmetry of roots of unity, all consistent with our notation and framework from Videos 174-180.
+5. **STFT with spectrogram as payoff:** The climax of the video shows a spectrogram being built in real-time animation, revealing time-frequency structure that pure FT misses. This "wow moment" of seeing music or speech decomposed into a spectrogram is the emotional payoff that drives the entire video's structure.
+6. **Windowing and spectral leakage as bridge concept:** This is the missing topic in virtually all competitor content. We connect it naturally: sampling → DFT → but finite samples mean windowing → windowing causes spectral leakage → this motivates window function design → and motivates STFT as a solution. This conceptual chain doesn't exist anywhere else on YouTube.
