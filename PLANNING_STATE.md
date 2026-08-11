@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-11
 
-**Completed Videos (178 scripts, 178 renders)**
+**Completed Videos (179 scripts, 179 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -245,7 +245,7 @@
 | 176 | Fourier Series Properties | ✅ | ✅ |
 | 177 | The Fourier Transform | ✅ | ✅ |
 | 178 | Properties of the Fourier Transform | ✅ | ✅ |
-| 179 | The Convolution Theorem | ⬜ | ⬜ |
+| 179 | The Convolution Theorem | ✅ | ✅ |
 | 180 | Parseval's Theorem | ⬜ | ⬜ |
 | 181 | Applications: Signal Processing | ⬜ | ⬜ |
 | 182 | Applications: Heat Equation | ⬜ | ⬜ |
@@ -254,7 +254,7 @@
 ## In Progress
 - Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
 - Functional Analysis (Videos 162–173): COMPLETE (12 videos, all rendered)
-- Fourier Analysis (Videos 174–183): IN PROGRESS (Videos 174-178 done, 5 remaining)
+- Fourier Analysis (Videos 174–183): IN PROGRESS (Videos 174-179 done, 4 remaining)
 
 
 ## Completed Playlists

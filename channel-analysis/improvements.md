@@ -755,3 +755,58 @@ Dimensions: Structure 7/10 | Pacing 7/10 | Visual Techniques 6/10 | Narration 7/
 5. **Parseval/Plancherel as Pythagorean theorem:** Connect Parseval's theorem back to Hilbert spaces (Video 165) — it's the Pythagorean theorem for functions. Energy is conserved under the FT.
 
 **What makes us different:** Animated visual proofs connecting all properties through a unified framework (functional analysis perspective), the smoothness-decay duality theme, and being part of a systematic playlist with rigorous foundations already established in Videos 174-177.
+
+---
+
+### [2026-08-11] The Convolution Theorem (Video 179)
+
+**Market Gap Analysis:** The convolution theorem is covered across YouTube at two extremes: (a) high-intuition videos explaining what convolution IS (BriTheMathGuy ~600K views, Steve Brunton ~80K views) without rigorous treatment of the theorem, or (b) dry lecture-style proofs in engineering/math courses. No video provides graduate-level rigor with Manim-quality animated visuals. Nobody animates the Fubini swap proof. Green's functions + convolution has essentially zero visual competition. The polynomial-multiplication-as-convolution connection has no animated walkthrough anywhere.
+
+**Competitive Landscape Analysis:**
+
+#### 3Blue1Brown — "But what is the Fourier Transform?" (spiro6LXwEIQ, 12.3M views)
+Dimensions: Structure 10/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+- **Style:** Custom Manim (manimlib), dark background. Benchmark FT video.
+- **Content:** Touches on frequency-domain multiplication briefly but never names the convolution theorem. Focuses on winding machine, not the algebra of the transform.
+- **Insight:** The most-watched FT video but fundamentally incomplete for our depth level.
+- **Weakness:** No formal convolution theorem statement, no proof, no properties of convolution.
+
+#### Reducible — "The FFT Algorithm" (h7apO2qoa78, 2.2M views)
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 9/10 | Narration 8/10 | Hooks 9/10
+- **Style:** Clean Manim animations, storytelling narrative. Shows convolution underpins FFT.
+- **Content:** Polynomial multiplication = discrete convolution. DFT via FFT. NOT about the continuous convolution theorem.
+- **Insight:** Excellent storytelling structure. The polynomial multiplication connection is a must-adopt insight.
+- **Weakness:** Focused on algorithms, not the continuous theory.
+
+#### BriTheMathGuy — "Convolution: A Visual Explanation" (est. ~600K views)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 7/10 | Narration 6/10 | Hooks 7/10
+- **Style:** Slides + whiteboard, some visual aids. Slide-and-multiply intuition.
+- **Content:** Convolution definition, sliding window visual. Undergraduate level.
+- **Insight:** The "flip, slide, multiply, integrate" visual is the standard intuition — must adopt.
+- **Weakness:** No Manim animation quality. Doesn't connect convolution to the FT theorem.
+
+#### Steve Brunton — "What is Convolution? Intuition + Example" (est. ~80K views)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 8/10 | Narration 7/10 | Hooks 7/10
+- **Style:** Whiteboard + some animation. Application-driven (signal processing).
+- **Content:** Convolution definition, signal filtering application, connection to FT mentioned briefly.
+- **Insight:** Good graduate-level audience. Application-first motivation. Green's functions mentioned.
+- **Weakness:** Whiteboard-only for most content. No animated proof.
+
+#### Visually Explained — "Convolution and Fourier Transforms" (est. ~50K views)
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 7/10 | Narration 6/10 | Hooks 5/10
+- **Style:** Geometric animations, shorter format.
+- **Content:** Covers the theorem explicitly. Some visual motivation.
+- **Insight:** Directly covers the topic but at undergraduate level with static animations.
+- **Weakness:** No rigor, no proof, no algebraic structure.
+
+### Synthesis for Video 179
+
+**Our approach (distinct from all competitors):**
+1. **Discrete-to-continuous ramp:** Nobody starts with discrete convolution for intuition then bridges to continuous. We follow Reducible's discrete-first approach and extend it.
+2. **Animated Fubini proof:** Nobody animates the proof. We show the two integrals literally swapping order (Fubini) and the change of variables splitting the double integral apart.
+3. **Convolution algebra as visual cards:** Commutative, associative, identity (Dirac delta) — the algebraic structure of convolution is unaddressed visually on YouTube.
+4. **Dirac delta as identity element:** Connect via the convolution theorem: F{delta} = 1, so F{f*delta} = F{f} * 1 = F{f}. Beautiful circular verification.
+5. **Three strong applications:** Signal filtering (convolution in time = multiplication in frequency), probability (CLT via repeated convolution → Gaussian), Green's functions (impulse response convolves with forcing). Each is a "why should you care" payoff.
+6. **Polynomial multiplication = coefficient convolution:** Following Reducible's FFT insight but adding the O(n log n) algorithm walkthrough.
+
+**What makes us different:** The only graduate-level visual convolution theorem video with animated Fubini proof, convolution algebra structure, and three deep application payoffs (filtering, probability, Green's functions) — all building on our playlist's Fourier Transform foundation.
