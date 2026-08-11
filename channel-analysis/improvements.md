@@ -906,3 +906,52 @@ Dimensions: Structure 9/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks
 4. **FFT via our playlist's Fourier foundation:** Unlike Reducible's polynomial multiplication framing (which is self-contained but disconnected from Fourier analysis), we present FFT as the natural computational realization of everything the playlist has built -- the DFT as sampled FT, Cooley-Tukey as exploiting periodic symmetry of roots of unity, all consistent with our notation and framework from Videos 174-180.
 5. **STFT with spectrogram as payoff:** The climax of the video shows a spectrogram being built in real-time animation, revealing time-frequency structure that pure FT misses. This "wow moment" of seeing music or speech decomposed into a spectrogram is the emotional payoff that drives the entire video's structure.
 6. **Windowing and spectral leakage as bridge concept:** This is the missing topic in virtually all competitor content. We connect it naturally: sampling → DFT → but finite samples mean windowing → windowing causes spectral leakage → this motivates window function design → and motivates STFT as a solution. This conceptual chain doesn't exist anywhere else on YouTube.
+
+### [2026-08-11] Heat Equation via Fourier Transform (Video 182)
+
+**Market Gap Analysis:** The heat equation is covered by many channels but almost never through the Fourier transform lens at graduate level. 3B1B's "Differential Equations" playlist touches PDEs visually but never does the Fourier transform solution. Most heat equation content is either engineering-focused (finite differences, numerical methods) or pure PDE theory (separation of variables). The specific story of "Fourier transform converts the PDE to an ODE, the solution is a Gaussian convolution" is a narrative gap that perfectly concludes our Fourier Analysis playlist.
+
+**Competitive Landscape Analysis:**
+
+#### 3Blue1Brown -- Differential Equations Chapter (multiple videos, ~4M views total)
+**Views:** ~4M per video | **Subs:** 8.3M | **Captions:** True
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 9/10
+- **Style:** Intuition-first, custom Manim animations, color-coded fields.
+- **Content:** Covers heat equation visually (flow fields, intuitive spreading), but does NOT do the Fourier transform solution approach. Uses separation of variables on finite domains.
+- **Insight:** The visual of heat spreading IS the Gaussian smoothing story, but 3B1B never connects it to Fourier/Gaussian explicitly. This is our unique angle.
+- **Weakness:** Doesn't reach the Fourier transform solution. No heat kernel formula. No connection to the broader Fourier framework.
+
+#### The Bright Side of Mathematics -- PDE: Heat Equation (LPtMW3c7Bdk)
+**Views:** ~25K | **Subs:** 257K | **Captions:** True
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 4/10 | Narration 6/10 | Hooks 4/10
+- **Style:** Tablet whiteboard, systematic derivation, classical PDE course approach.
+- **Content:** Derives heat equation from physical principles, solves via separation of variables on [0, L], Fourier series expansion on bounded domain.
+- **Insight:** Good systematic treatment but bounded domain only. No Fourier transform on R. No heat kernel as Gaussian.
+- **Weakness:** Pure tablet writing, no Manim animations. Focuses on bounded domain, misses the unbounded case where Fourier transform shines.
+
+#### Steve Brunton -- Fourier Transform (Part 1): What is a Fourier Transform? (k093fI8YOFI)
+**Views:** 60K | **Subs:** 168K | **Captions:** True
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 7/10 | Narration 8/10 | Hooks 6/10
+- **Style:** MATLAB simulations overlaid on teaching, engineering professor tone.
+- **Content:** Intuition for FT via frequency decomposition, briefly mentions PDEs. Does not solve heat equation with FT.
+- **Insight:** Good practical/engineering perspective. Shows frequency content visually. Motivates FT for differential equations conceptually.
+- **Weakness:** Not rigorous enough for graduate level. Doesn't actually solve any PDEs with FT.
+
+#### Zach Star -- Overview of the Heat Equation (older content)
+**Views:** ~200K | **Captions:** True
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 7/10
+- **Style:** Whiteboard sketches, engineering perspective.
+- **Content:** Physical motivation, basic properties, finite difference intuition.
+- **Insight:** Good physical motivation and connection to engineering applications.
+- **Weakness:** No Fourier approach. Elementary treatment. Channel has pivoted away from math.
+
+### Synthesis for Video 182
+
+**Our approach (distinct from all competitors):**
+1. **Fourier transform as PDE solver -- the narrative hook:** Unlike all competitors who introduce the heat equation via physical derivation or separation of variables, we frame it as the climax of our Fourier journey: "Remember when we said the Fourier transform converts differentiation into multiplication? Here is where that power truly shines -- it converts a PDE into an algebra problem."
+2. **The Gaussian reveal:** The heat kernel is a Gaussian. We build visual suspense: start with the Fourier space solution (simple exponential decay), then compute the inverse transform and reveal it is a Gaussian. This connects to Video 177 (Gaussian as eigenfunction) and Video 179 (convolution). No competitor does this reveal.
+3. **Smoothing as low-pass filtering:** We uniquely connect the heat equation to signal processing (Video 181) by showing that the heat equation IS a low-pass filter -- the Fourier multiplier e^(-alpha omega^2 t) is exactly a Gaussian filter. This bridges PDE theory and signal processing in a way no competitor attempts.
+4. **Full Fourier method recipe:** We present the general 3-step method (transform PDE -> solve ODE -> inverse transform) and list which PDEs it works for (heat, wave, Laplace, Schrodinger). This gives viewers a reusable tool, not just a one-off solution.
+5. **Manim animations competitors lack:** We'll animate the Gaussian spreading over time (heat kernel visualization), show frequency components decaying at different rates, and visualize the convolution structure. These are impossible with tablet/whiteboard approaches.
+6. **Connection to entire playlist:** Scene 7 explicitly maps each result back to earlier videos -- heat kernel to eigenfunctions (177), convolution to theorem (179), smoothing to Parseval (180), signal processing to (181). This gives the video a "culmination" feel that standalone heat equation videos can never achieve.
+

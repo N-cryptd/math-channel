@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-11
 
-**Completed Videos (181 scripts, 181 renders)**
+**Completed Videos (182 scripts, 182 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -248,13 +248,13 @@
 | 179 | The Convolution Theorem | ✅ | ✅ |
 | 180 | Parseval's Theorem | ✅ | ✅ |
 | 181 | Applications: Signal Processing | ✅ | ✅ |
-| 182 | Applications: Heat Equation | ⬜ | ⬜ |
+| 182 | Applications: Heat Equation | ✅ | ✅ |
 | 183 | Fourier Analysis Summary | ⬜ | ⬜ |
 
 ## In Progress
 - Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
 - Functional Analysis (Videos 162–173): COMPLETE (12 videos, all rendered)
-- Fourier Analysis (Videos 174–183): IN PROGRESS (Videos 174-181 done, 2 remaining)
+- Fourier Analysis (Videos 174–183): IN PROGRESS (Videos 174-182 done, 1 remaining)
 
 
 ## Completed Playlists
