@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-10
+**Last updated:** 2026-08-11
 
-**Completed Videos (174 scripts, 174 renders)**
+**Completed Videos (175 scripts, 175 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -241,7 +241,7 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 174 | Introduction to Fourier Series | ✅ | ✅ |
-| 175 | Convergence of Fourier Series | ⬜ | ⬜ |
+| 175 | Convergence of Fourier Series | ✅ | ✅ |
 | 176 | Fourier Series Properties | ⬜ | ⬜ |
 | 177 | The Fourier Transform | ⬜ | ⬜ |
 | 178 | Properties of the Fourier Transform | ⬜ | ⬜ |
@@ -254,7 +254,7 @@
 ## In Progress
 - Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
 - Functional Analysis (Videos 162–173): COMPLETE (12 videos, all rendered)
-- Fourier Analysis (Videos 174–183): IN PROGRESS (Video 174 done, 9 remaining)
+- Fourier Analysis (Videos 174–183): IN PROGRESS (Videos 174-175 done, 8 remaining)
 
 
 ## Completed Playlists
