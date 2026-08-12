@@ -1122,3 +1122,54 @@ Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks
 | 192 | Numerical Methods for PDEs | Finite differences, CFL condition | NOT COVERED by anyone with animation |
 | 193 | PDE Summary | Unifying themes and what's next | 3B1B has no PDE summary |
 
+### [2026-08-12] Green's Functions (Video 190)
+
+**Market Gap Analysis:** Green's functions sit at the intersection of PDE theory, physics (electrostatics, diffusion, wave propagation), and Fourier analysis. Existing YouTube coverage splits into two camps: (a) 3B1B-style visual introductions that only cover ODEs (Mathemaniac, 755K views), and (b) rigorous whiteboard lectures for the PDE case (Faculty of Khan, 156K views). Nobody provides an animated treatment of PDE Green's functions that covers the impulse response intuition, the heat kernel, convolution representation, method of images, AND Fourier connection in one video.
+
+**Competitive Landscape Analysis:**
+
+#### Mathemaniac -- "Green's functions: the genius way to solve DEs" (ism2SfZgFJg, 755K views, 276K subs)
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 9/10
+- **Style:** 3B1B-style custom animations, dark background, colored shapes with math symbols.
+- **Content:** Linear differential operators, Dirac delta motivation, Green's functions for ODEs (harmonic oscillator), convolution as "continuous sum" of impulse responses. Excellent narrative structure with discovery-style exposition.
+- **Insight:** The "impulse response" framing is the best motivation for Green's functions on YouTube. Starting from "what happens if you kick a system once?" builds deep intuition. The connection to electrostatics (superposition of point charges) is powerful.
+- **Weakness:** Only covers ODEs. No PDE-specific content, no heat kernel, no method of images, no Fourier connection. The video is long (~20 min) and could be more focused.
+- **Thumbnail:** Black bg, white text "Green's functions," two colored spheres with math symbols, wavy connecting line. Clean and professional. Rating: 8/10.
+
+#### Faculty of Khan -- "Introducing Green's Functions for PDEs" (xNqLZnM-PPY, 156K views, 104K subs)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 5/10
+- **Style:** Whiteboard lecture, traditional academic style.
+- **Content:** Formal definition of Green's function for Poisson's equation, derivation of properties, 1D example with detailed calculations. Most rigorous PDE Green's function treatment on YouTube.
+- **Insight:** The mathematical rigor is correct and thorough. Good for students who already have intuition and need formal grounding. Shows the reciprocity/symmetry property proof.
+- **Weakness:** Whiteboard-only, no animations. Very slow pace. No visual intuition for what Green's functions look like geometrically. No heat kernel visualization, no method of images, no Fourier approach.
+- **Thumbnail:** Blurred math equations in background, "Green's Functions PDEs" text overlay. Rating: 7/10.
+
+#### Andrew Dotson -- "Intuition for Green's Functions" (Ld1u7bew6wc, 96K views, 249K subs)
+Dimensions: Structure 5/10 | Pacing 6/10 | Visuals 2/10 | Narration 6/10 | Hooks 5/10
+- **Style:** Whiteboard, physics-focused, informal "daily physics upload" format.
+- **Content:** Electrostatics motivation: Green's function as the potential from a point charge. Physical intuition for why convolution works (superposition of charges).
+- **Insight:** The physics perspective (point charge -> potential field -> superposition) gives excellent physical grounding. Good for physics students.
+- **Weakness:** Whiteboard-only, physics-specific, no connection to general PDE theory. Doesn't define Green's function formally. Very casual, lacks structure.
+- **Thumbnail:** Andrew writing on whiteboard, "Daily Physics Upload" text. Rating: 5/10.
+
+#### Prof. Dave Explains -- "The Diffusion Equation Part 3: Green's Functions" (Ghobc7v1-Js, 19K views, 4.38M subs)
+Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks 5/10
+- **Style:** Lecture with slides/gifs, part of a series on the diffusion equation.
+- **Content:** Connects Green's functions specifically to the diffusion equation. Shows the heat kernel as the fundamental solution.
+- **Insight:** Heat kernel connection is the right physical example. Very recent, so low views despite large channel.
+- **Weakness:** Surface-level treatment, no animations beyond embedded gifs. No method of images, no Fourier connection. Only covers the heat equation case.
+- **Thumbnail:** Bell curve with colored time overlays, characteristic length scale. Rating: 6/10.
+
+### Synthesis for Video 190
+
+**Our approach (distinct from all competitors):**
+1. **PDE-focused, animated coverage:** Nobody animates PDE Green's functions with Manim-quality visuals. Mathemaniac only does ODEs; Faculty of Khan is whiteboard-only. We provide the first animated PDE treatment.
+2. **Five-aspect coverage:** Impulse response intuition + formal definition + heat kernel + convolution + method of images + Fourier connection. No single competitor covers all six.
+3. **Mathemaniac's intuition + Faculty of Khan's rigor + our animations:** We synthesize the best of each competitor with proper mathematical definitions and Manim visuals.
+4. **Heat kernel as centerpiece:** The animated Gaussian spreading from a point source is our signature visual — nobody animates this for PDE Green's functions.
+5. **Method of images with visual mirror sources:** Showing positive and negative sources canceling at boundaries is a unique animated visualization.
+6. **Fourier connection building on our playlist:** Because we have the Fourier Analysis playlist (Videos 174-183), we can naturally connect Green's functions to the convolution theorem — a connection no competitor makes in a visual format.
+
+**What makes us different:** First animated treatment of PDE Green's functions covering impulse response, formal definition, heat kernel, convolution, method of images, and Fourier connection — all in one video, all building on our existing PDE and Fourier playlists.
+
+---

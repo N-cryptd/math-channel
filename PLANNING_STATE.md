@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-12
 
-**Completed Videos (190 scripts, 190 renders)**
+**Completed Videos (193 scripts, 193 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -252,8 +252,7 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Fourier Analysis (Videos 174–183): COMPLETE (10 videos, all rendered)
-- Partial Differential Equations (Videos 184–193): IN PROGRESS — Videos 184-190 done, 191-193 remaining
+- Partial Differential Equations (Videos 184–193): COMPLETE (10 videos, all rendered)
 
 
 ## Completed Playlists
@@ -268,24 +267,25 @@
 - Real Analysis I (Videos 99–110): COMPLETE (12 videos)
 - Complex Analysis (Videos 126–138): COMPLETE (13 videos)
 - Measure Theory (Videos 151–161): COMPLETE (12 videos)
-|- Functional Analysis (Videos 162–173): COMPLETE (12 videos)
-|- Fourier Analysis (Videos 174–183): COMPLETE (10 videos)
+- Functional Analysis (Videos 162–173): COMPLETE (12 videos)
+- Fourier Analysis (Videos 174–183): COMPLETE (10 videos)
+- Partial Differential Equations (Videos 184–193): COMPLETE (10 videos)
 
 ### Partial Differential Equations (Videos 184–193)
-|| # | Title | Script | Rendered | Plan |
-|---|-------|--------|----------|------|
-|| 184 | What is a PDE? | ✅ | ✅ | ✅ |
-|| 185 | The Heat Equation | ✅ | ✅ | ✅ |
-|| 186 | The Wave Equation | ✅ | ✅ | ✅ |
-|| 187 | Laplace's Equation | ✅ | ✅ | ✅ |
-|| 188 | Separation of Variables | ✅ | ✅ | ✅ |
-|| 189 | Sturm-Liouville Theory | ✅ | ✅ | ✅ |
-|| 190 | Green's Functions | ✅ | ✅ | ✅ |
-|| 191 | Distributions & Weak Solutions | ❌ | ❌ | ❌ |
-|| 192 | Numerical Methods for PDEs | ❌ | ❌ | ❌ |
-|| 193 | PDE Summary | ❌ | ❌ | ❌ |
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 184 | What is a PDE? | ✅ | ✅ |
+| 185 | The Heat Equation | ✅ | ✅ |
+| 186 | The Wave Equation | ✅ | ✅ |
+| 187 | Laplace's Equation | ✅ | ✅ |
+| 188 | Separation of Variables | ✅ | ✅ |
+| 189 | Sturm-Liouville Theory | ✅ | ✅ |
+| 190 | Green's Functions | ✅ | ✅ |
+| 191 | Distributions & Weak Solutions | ✅ | ✅ |
+| 192 | Numerical Methods for PDEs | ✅ | ✅ |
+| 193 | PDE Summary | ✅ | ✅ |
 
 ## Notes
-|- Fourier Analysis playlist COMPLETE (Videos 174-183, 10 videos, Aug 2026)
-|- Next playlist: **Partial Differential Equations** (Videos 184-193, 10 videos)
-|- Competitive analysis complete for PDE playlist (Aug 2026) — see channel-analysis/improvements.md
+- PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
+- Competitive analysis complete for PDE playlist (Aug 2026) — see channel-analysis/improvements.md
+- Next playlist: TBD (Advanced PDEs, Calculus of Variations, or new topic)

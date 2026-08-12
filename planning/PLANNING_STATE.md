@@ -65,3 +65,11 @@ Last updated: 2026-08-12
   - Plan: planning/video-188-separation-of-variables.md (8 scenes)
   - Script: scripts/graduate/video-188-separation-of-variables.py (324 lines)
   - Render: PENDING
+- Video 189: Sturm-Liouville Theory -- plan + script done (2026-08-12)
+  - Plan: planning/video-189-sturm-liouville.md (8 scenes)
+  - Script: scripts/graduate/video-189-sturm-liouville.py (328 lines)
+  - Render: PENDING
+- Video 190: Green's Functions -- plan + script done (2026-08-12)
+  - Plan: planning/video-190-greens-functions.md (7 scenes)
+  - Script: scripts/graduate/video-190-greens-functions.py (7 scenes, compile-checked)
+  - Render: PENDING

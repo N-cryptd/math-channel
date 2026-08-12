@@ -5,21 +5,31 @@ TEMPLATE v2 -- Professional quality Manim script
 Class: Video190_GreensFunctions
 
 Topics: Green's function as impulse response,
-        The heat kernel as a Green's function,
-        Method of images for simple geometries,
-        Convolution representation of PDE solutions,
-        Physical intuition: response to a point source.
+        Formal definition with Dirac delta,
+        Heat kernel as the Green's function for diffusion,
+        Convolution representation of general solutions,
+        Method of images for boundary conditions,
+        Connection to Fourier analysis.
 
-Prerequisites: Videos 184-189 (PDE intro through Sturm-Liouville),
-               Fourier Analysis (177-179), Convolution (179).
+Prerequisites: Video 189 (Sturm-Liouville Theory), Video 185 (Heat Equation),
+               Videos 174-179 (Fourier Analysis), Video 170 (Inner Product Spaces).
+
+Competitive insights:
+- Mathemaniac (755K views): excellent impulse response motivation via 3B1B-style
+  visuals, but only covers ODEs, no PDE-specific content, no method of images
+- Faculty of Khan (156K views): rigorous PDE Green's functions, whiteboard-only
+- Andrew Dotson (96K views): physics-focused electrostatics intuition, whiteboard
+- Prof. Dave (19K views): heat kernel connection, surface-level, no animations
+- NO competitor animates PDE Green's functions with all five aspects covered
 
 Quality Rules (mandatory):
 1. Max 5 visible elements per scene at any time
-2. Use LayoutEngine for ALL positioning
-3. Progressive disclosure
-4. Narration timing ~12 words / 5s
+2. Use LayoutEngine for ALL positioning -- no manual .shift() or .to_edge()
+3. Progressive disclosure: add items one at a time
+4. Each add_subcaption() duration = words / 2.5 seconds (12 words = 5s)
 5. Call ly.clear() between scenes
-6. MathTex: raw strings with single backslashes
+6. Use consistent animation vocabulary from channel_branding.py
+7. MathTex: raw strings with single backslashes
 """
 
 from manim import *
@@ -36,7 +46,7 @@ from layout import LayoutEngine, ensure_fits
 
 
 class Video190_GreensFunctions(Scene):
-    """Green's Functions -- PDE Playlist."""
+    """Green's Functions -- the golden key to solving PDEs for any source."""
 
     def construct(self):
         self.camera.background_color = BG
@@ -44,33 +54,37 @@ class Video190_GreensFunctions(Scene):
         self._bg_dots, self._bg_gradient = setup_background(self)
 
         self.scene1_hook()
-        self.scene2_impulse_response()
+        self.scene2_formal_definition()
         self.scene3_heat_kernel()
         self.scene4_convolution()
         self.scene5_method_of_images()
-        self.scene6_properties()
+        self.scene6_fourier_connection()
         self.scene7_summary()
 
     # ------------------------------------------------------------------ #
-    # Scene 1: Hook
+    # Scene 1: Hook -- The Impulse Response
     # ------------------------------------------------------------------ #
     def scene1_hook(self):
         self.add_subcaption(
-            "If you know how a system responds to a single impulse, "
-            "you can predict its response to any input. This is the "
-            "power of Green's functions. They are the building blocks "
-            "for solving PDEs with arbitrary source terms, providing "
-            "elegant and general solutions.",
-            duration=9,
+            "Separation of variables solves PDEs on nice domains "
+            "with nice boundary conditions. But what if the source "
+            "term is complicated, or the geometry is irregular? "
+            "Green's functions give you a universal solution "
+            "method. The key idea: solve the PDE for a single "
+            "point source, then build up the full solution by "
+            "superposition. This is the impulse response "
+            "approach, and it works for almost any PDE.",
+            duration=15,
         )
         play_intro(self, "Green's Functions", "Partial Differential Equations")
 
         title = self.ly.title("The Impulse Response of a PDE")
 
         items = [
-            Text("Know the response to a single impulse", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Superpose to get the response to any source", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("Powerful tool for inhomogeneous PDEs", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("Solve the PDE for a single point source", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("The solution = Green's function G(x, xi)", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Full solution = convolution with G", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Works for heat, wave, Laplace, and more", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
@@ -78,34 +92,37 @@ class Video190_GreensFunctions(Scene):
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
-    # Scene 2: What is a Green's Function?
+    # Scene 2: Formal Definition
     # ------------------------------------------------------------------ #
-    def scene2_impulse_response(self):
+    def scene2_formal_definition(self):
         self.add_subcaption(
-            "A Green's function G(x, xi) is the solution to the PDE "
-            "when the source is a point mass, or Dirac delta, at "
-            "position xi. It tells us how the system at point x "
-            "responds to a unit impulse at xi. For an inhomogeneous "
-            "PDE, the full solution is a convolution of the Green's "
-            "function with the source.",
-            duration=10,
+            "For a linear differential operator L, the Green's "
+            "function G satisfies L of G equals the Dirac delta "
+            "function. The Dirac delta is infinite at the source "
+            "point, zero everywhere else, and integrates to one. "
+            "Think of it as the idealized point source. The "
+            "Green's function tells you: how does the system "
+            "respond to a unit kick at a specific location?",
+            duration=14,
         )
-        title = self.ly.title("Green's Function = Impulse Response")
+        title = self.ly.title("Formal Definition")
 
-        equation = MathTex(
-            r"\mathcal{L} G(x, \xi) = \delta(x - \xi)",
-            font_size=HEADING_SIZE, color=ACCENT,
+        # The defining equation
+        def_eq = MathTex(
+            r"L[G(x, \xi)] = \delta(x - \xi)",
+            font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.center_in_content(equation)
-        self.play(Write(equation), run_time=NORMAL)
+        self.ly.safe_place(def_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(def_eq), run_time=NORMAL)
         self.wait(0.5)
 
-        self.play(FadeOut(equation), run_time=0.3)
+        self.play(FadeOut(def_eq), run_time=0.3)
 
         items = [
-            Text("G(x, xi): response at x to impulse at xi", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("delta(x - xi): Dirac delta (point source)", font_size=BODY_SIZE, color=RED, font=SANS),
-            Text("Full solution: convolution with source term", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            MathTex(r"\delta(x - \xi)", r"\text{: infinite at } \xi", r"\text{, zero elsewhere}", font_size=HEADING_SIZE, color=WHITE),
+            MathTex(r"\int \delta(x - \xi) \, dx = 1", font_size=HEADING_SIZE, color=PRIMARY),
+            Text("G encodes the response to a unit impulse", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Symmetry: G(x, xi) = G(xi, x) for self-adjoint L", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
@@ -117,30 +134,35 @@ class Video190_GreensFunctions(Scene):
     # ------------------------------------------------------------------ #
     def scene3_heat_kernel(self):
         self.add_subcaption(
-            "For the heat equation, the Green's function is the heat "
-            "kernel. It is a Gaussian that spreads out over time, "
-            "starting from a point source. The width of the Gaussian "
-            "grows with the square root of time, and the height "
-            "decreases to conserve total heat.",
-            duration=9,
+            "For the heat equation, the Green's function is the "
+            "heat kernel, a Gaussian that starts as a point and "
+            "spreads over time. At time equals zero, it is the "
+            "Dirac delta, a perfect point source. As time "
+            "increases, the Gaussian broadens and flattens. This "
+            "is exactly what diffusion looks like: heat "
+            "spreading out from a single hot point. The heat "
+            "kernel is also called the fundamental solution.",
+            duration=15,
         )
-        title = self.ly.title("The Heat Kernel")
+        title = self.ly.title("The Heat Kernel: Gaussian Spreading")
 
+        # The heat kernel formula
         kernel = MathTex(
-            r"G(x, t; \xi) = \frac{1}{\sqrt{4\pi\alpha t}}",
-            r"e^{-\frac{(x-\xi)^2}{4\alpha t}}",
-            font_size=HEADING_SIZE, color=SECONDARY,
+            r"G(x, t) = \frac{1}{\sqrt{4 \pi \alpha t}} \, "
+            r"e^{-x^2 / (4 \alpha t)}",
+            font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.center_in_content(kernel)
+        self.ly.safe_place(kernel, direction=DOWN, anchor=title, buff=0.5)
         self.play(Write(kernel), run_time=NORMAL)
         self.wait(0.5)
 
         self.play(FadeOut(kernel), run_time=0.3)
 
         items = [
-            Text("Gaussian spreading from point source", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("Width grows as sqrt(t), height decreases", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Total heat (integral) is conserved (= 1)", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("At t = 0: delta function (point source)", font_size=BODY_SIZE, color=RED, font=SANS),
+            Text("As t grows: Gaussian broadens and flattens", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Visual: heat spreading from a single hot point", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Also called: fundamental solution, diffusion kernel", font_size=BODY_SIZE, color=DIM, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
@@ -148,33 +170,40 @@ class Video190_GreensFunctions(Scene):
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
-    # Scene 4: Convolution Solution
+    # Scene 4: Convolution Representation
     # ------------------------------------------------------------------ #
     def scene4_convolution(self):
         self.add_subcaption(
-            "Once we have the Green's function, the solution to "
-            "any inhomogeneous PDE is given by convolution. We "
-            "integrate the Green's function against the source "
-            "term over all space. This is the same convolution "
-            "theorem from Fourier analysis.",
-            duration=9,
+            "Once you have the Green's function, the general "
+            "solution is a convolution. You integrate the Green's "
+            "function against the source term. Physically, this "
+            "means you sum up the contributions from every source "
+            "point. For the heat equation, this becomes: the "
+            "temperature at any point and time is the integral of "
+            "the heat kernel times the initial temperature "
+            "distribution. This is why the heat kernel is so "
+            "powerful.",
+            duration=16,
         )
-        title = self.ly.title("Convolution Representation")
+        title = self.ly.title("The Solution: Convolution")
 
-        conv = MathTex(
-            r"u(x, t) = \int_{-\infty}^{\infty} G(x - \xi, t) f(\xi) \, d\xi",
-            font_size=HEADING_SIZE, color=WHITE,
+        # The convolution formula
+        conv_eq = MathTex(
+            r"u(x, t) = \int_{-\infty}^{\infty} "
+            r"G(x - \xi, t) \, f(\xi) \, d\xi",
+            font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.center_in_content(conv)
-        self.play(Write(conv), run_time=NORMAL)
+        self.ly.safe_place(conv_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(conv_eq), run_time=NORMAL)
         self.wait(0.5)
 
-        self.play(FadeOut(conv), run_time=0.3)
+        self.play(FadeOut(conv_eq), run_time=0.3)
 
         items = [
-            Text("Integrate Green's function against source", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Works for any initial condition f(x)", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("Same idea: superposition of impulse responses", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("G(x-xi, t): how heat from point xi reaches x", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("f(xi): the initial temperature at point xi", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Integrate: sum contributions from all source points", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("Works for ANY initial condition f(x)", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
@@ -186,30 +215,36 @@ class Video190_GreensFunctions(Scene):
     # ------------------------------------------------------------------ #
     def scene5_method_of_images(self):
         self.add_subcaption(
-            "For simple geometries like a half-line or a quarter "
-            "plane, the method of images constructs Green's "
-            "functions using mirror images. We add fictitious "
-            "sources to enforce boundary conditions. For a "
-            "Dirichlet boundary at x equals zero, we subtract "
-            "the image source.",
-            duration=10,
+            "The free-space Green's function ignores boundaries. "
+            "But real problems have boundary conditions. The "
+            "method of images is a clever trick: place a mirror "
+            "image source to enforce the boundary condition. For "
+            "the half-line with Dirichlet conditions, subtract "
+            "a reflected Green's function. The positive source "
+            "and the negative mirror source cancel at the "
+            "boundary, giving you exactly zero. This trick works "
+            "for heat, wave, and Laplace equations.",
+            duration=16,
         )
-        title = self.ly.title("Method of Images")
+        title = self.ly.title("Method of Images: Mirror Sources")
 
-        half_line = MathTex(
-            r"G_{\text{half}}(x, t; \xi) = G_{\text{free}}(x - \xi, t) - G_{\text{free}}(x + \xi, t)",
-            font_size=28, color=ACCENT,
+        # The Dirichlet Green's function
+        img_eq = MathTex(
+            r"G_D(x, \xi) = G_{\text{free}}(x, \xi) "
+            r"- G_{\text{free}}(x, -\xi)",
+            font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(half_line, direction=DOWN, anchor=title, buff=0.4)
-        self.play(Write(half_line), run_time=NORMAL)
+        self.ly.safe_place(img_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(img_eq), run_time=NORMAL)
         self.wait(0.5)
 
-        self.play(FadeOut(half_line), run_time=0.3)
+        self.play(FadeOut(img_eq), run_time=0.3)
 
         items = [
-            Text("Place a mirror source at the image point", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Sign chosen to match boundary condition", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("Works for half-line, quarter-plane, spheres", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Free-space G ignores boundaries", font_size=BODY_SIZE, color=DIM, font=SANS),
+            Text("Mirror source: place source at -xi with opposite sign", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Positive + negative cancel at the boundary", font_size=BODY_SIZE, color=RED, font=SANS),
+            Text("Works for heat, wave, and Laplace equations", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
@@ -217,23 +252,39 @@ class Video190_GreensFunctions(Scene):
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
-    # Scene 6: Key Properties
+    # Scene 6: Connection to Fourier Analysis
     # ------------------------------------------------------------------ #
-    def scene6_properties(self):
+    def scene6_fourier_connection(self):
         self.add_subcaption(
-            "Green's functions have key properties that make them "
-            "invaluable. They satisfy reciprocity: the response "
-            "at x to an impulse at xi equals the response at xi "
-            "to an impulse at x. They encode all the information "
-            "about the PDE and its boundary conditions.",
-            duration=9,
+            "Fourier analysis gives us the easiest way to find "
+            "Green's functions. Take the PDE, apply the Fourier "
+            "transform, and solve algebraically. The Green's "
+            "function in Fourier space is just one over the "
+            "symbol of the operator. Then transform back. This "
+            "connects directly to the convolution theorem: "
+            "convolution in physical space equals multiplication "
+            "in frequency space. The Green's function is the "
+            "multiplicative inverse of the operator.",
+            duration=16,
         )
-        title = self.ly.title("Properties of Green's Functions")
+        title = self.ly.title("Fourier Transform: The Easy Path")
+
+        # Fourier space Green's function
+        ft_eq = MathTex(
+            r"\hat{G}(k) = \frac{1}{\hat{L}(k)}",
+            font_size=TITLE_SIZE, color=ACCENT,
+        )
+        self.ly.safe_place(ft_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(ft_eq), run_time=NORMAL)
+        self.wait(0.5)
+
+        self.play(FadeOut(ft_eq), run_time=0.3)
 
         items = [
-            Text("Reciprocity: G(x, xi) = G(xi, x)", font_size=BODY_SIZE, color=ACCENT, font=SANS),
-            Text("Encodes PDE + boundary conditions", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Universal building block for solutions", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Apply Fourier transform to L[u] = f", font_size=BODY_SIZE, color=WHITE, font=SANS),
+            MathTex(r"\hat{L}(k) \, \hat{u}(k) = \hat{f}(k)", font_size=HEADING_SIZE, color=PRIMARY),
+            Text("G-hat = 1 over L-hat: invert in frequency space", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Inverse Fourier transform gives G(x)", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
@@ -245,25 +296,30 @@ class Video190_GreensFunctions(Scene):
     # ------------------------------------------------------------------ #
     def scene7_summary(self):
         self.add_subcaption(
-            "Green's functions are the impulse responses of PDEs. "
-            "The heat kernel is a Gaussian that spreads over time. "
-            "Solutions are obtained by convolution. The method of "
-            "images handles simple boundary conditions. Green's "
-            "functions encode everything about a PDE. Next, we "
-            "study distributions and weak solutions.",
-            duration=10,
+            "Green's functions are the universal tool for solving "
+            "linear PDEs. The Green's function is the impulse "
+            "response: it satisfies L of G equals delta. The "
+            "general solution is a convolution with G. For the "
+            "heat equation, the heat kernel is a spreading "
+            "Gaussian. The method of images handles boundaries "
+            "with mirror sources. And the Fourier transform "
+            "gives the easiest way to compute Green's functions "
+            "in frequency space. Next, we study well-posed "
+            "problems.",
+            duration=17,
         )
         title = self.ly.title("Key Takeaways")
 
         items = [
-            Text("Green's function: response to point source", font_size=BODY_SIZE, color=WHITE, font=SANS),
-            Text("Heat kernel: spreading Gaussian", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("Solutions by convolution with source", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("Method of images for boundaries", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("Green's function = impulse response of the PDE", font_size=BODY_SIZE, color=ACCENT, font=SANS),
+            Text("Solution = convolution with G", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Heat kernel = Gaussian spreading from a point", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Method of images: mirror sources for boundaries", font_size=BODY_SIZE, color=RED, font=SANS),
+            Text("Fourier: G-hat = 1 / L-hat in frequency space", font_size=BODY_SIZE, color=DIM, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
         self.wait(1.0)
         self.ly.clear()
 
-        play_outro(self, "Distributions & Weak Solutions", "Partial Differential Equations")
+        play_outro(self, "Well-Posed Problems", "Partial Differential Equations")
