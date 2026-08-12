@@ -118,6 +118,7 @@ class Video178_PropertiesFourierTransform(Scene):
             "a linear operator.",
             duration=6,
         )
+        self.ly.section_divider(1, "Linearity, Scaling, and Shifts")
         title = self.ly.title("Linearity, Scaling, and Shifts")
 
         # Linearity
@@ -219,6 +220,7 @@ class Video178_PropertiesFourierTransform(Scene):
             "becomes simple multiplication.",
             duration=6,
         )
+        self.ly.section_divider(2, "The Derivative Property")
         title = self.ly.title("The Derivative Property")
 
         self.add_subcaption(
@@ -325,6 +327,7 @@ class Video178_PropertiesFourierTransform(Scene):
             "easiest, multiplication.",
             duration=8,
         )
+        self.ly.section_divider(3, "The Convolution Theorem")
         title = self.ly.title("The Convolution Theorem")
 
         # Convolution definition
@@ -423,6 +426,7 @@ class Video178_PropertiesFourierTransform(Scene):
             "own inverse.",
             duration=6,
         )
+        self.ly.section_divider(4, "Duality")
         title = self.ly.title("Duality: The FT is Its Own (Almost) Inverse")
 
         self.add_subcaption(
@@ -499,6 +503,7 @@ class Video178_PropertiesFourierTransform(Scene):
             "frequency domain.",
             duration=8,
         )
+        self.ly.section_divider(5, "Parseval's Theorem")
         title = self.ly.title("Parseval's Theorem and Plancherel")
 
         self.add_subcaption(
@@ -584,6 +589,7 @@ class Video178_PropertiesFourierTransform(Scene):
             "transform.",
             duration=9,
         )
+        self.ly.section_divider(6, "Smoothness and Decay")
         title = self.ly.title("Smoothness <-> Decay: The Unifying Theme")
 
         # Moments
