@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-12
 
-**Completed Videos (185 scripts, 185 renders)**
+**Completed Videos (186 scripts, 186 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -253,7 +253,7 @@
 
 ## In Progress
 - Fourier Analysis (Videos 174–183): COMPLETE (10 videos, all rendered)
-- Partial Differential Equations (Videos 184–193): IN PROGRESS — Videos 184-185 done, 186-193 remaining
+- Partial Differential Equations (Videos 184–193): IN PROGRESS — Videos 184-186 done, 187-193 remaining
 
 
 ## Completed Playlists
@@ -276,7 +276,7 @@
 |---|-------|--------|----------|------|
 || 184 | What is a PDE? | ✅ | ✅ | ✅ |
 || 185 | The Heat Equation | ✅ | ✅ | ✅ |
-|| 186 | The Wave Equation | ❌ | ❌ | ❌ |
+|| 186 | The Wave Equation | ✅ | ✅ | ✅ |
 || 187 | Laplace's Equation | ❌ | ❌ | ❌ |
 || 188 | Separation of Variables | ❌ | ❌ | ❌ |
 || 189 | Sturm-Liouville Theory | ❌ | ❌ | ❌ |
