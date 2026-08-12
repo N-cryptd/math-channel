@@ -1,0 +1,56 @@
+{
+  "topic": "Separation of Variables for PDEs",
+  "competitors": [
+    {
+      "video_id": "EJLympg3XMM",
+      "title": "PDE 13 | Wave equation: separation of variables",
+      "channel": "commutant",
+      "subscribers": "42.9K",
+      "views": "342,359",
+      "date": "Aug 9, 2012",
+      "url": "https://www.youtube.com/watch?v=EJLympg3XMM",
+      "has_captions": true,
+      "description_excerpt": "An introduction to PDEs. Topics: idea of separation of variables, separation of variables for the wave equation (3:58), summary (16:46). Part of a full PDE playlist."
+    },
+    {
+      "video_id": "aq2DAkJIA2w",
+      "title": "Solving the 1-D Heat/Diffusion PDE by Separation of Variables (Part 1/2)",
+      "channel": "Faculty of Khan",
+      "subscribers": "104K",
+      "views": "151,465",
+      "date": "Aug 17, 2016",
+      "url": "https://www.youtube.com/watch?v=aq2DAkJIA2w",
+      "has_captions": true,
+      "description_excerpt": "Introduces separation of variables to solve an initial-boundary value problem with the 1-D heat equation and homogeneous Dirichlet boundary conditions. Includes lecture notes and Patreon support."
+    },
+    {
+      "video_id": "VjWtMl6vQ3Q",
+      "title": "PDE 101: Separation of Variables! ...or how I learned to stop worrying and solve Laplace's equation",
+      "channel": "Steve Brunton",
+      "subscribers": "546K",
+      "views": "112,555",
+      "date": "Sep 2, 2022",
+      "url": "https://www.youtube.com/watch?v=VjWtMl6vQ3Q",
+      "has_captions": true,
+      "description_excerpt": "Introduces separation of variables to solve Laplace's equation in 2D for steady state heat distribution on a rectangle. Covers linear superposition, reducing PDEs to ODEs, and Fourier transform. Well-structured with chapter timestamps."
+    }
+  ],
+  "additional_candidates": [
+    {
+      "video_id": "hcm-CgHFbwI",
+      "title": "Oxford Calculus: Separable Solutions to PDEs",
+      "channel": "Tom Rocks Maths",
+      "subscribers": "251K",
+      "views": "37,127",
+      "date": "Jul 31, 2022"
+    },
+    {
+      "video_id": "8jOqXM8OFh8",
+      "title": "Laplace's Equation: Separation of Variables",
+      "channel": "Professor Dave Explains",
+      "subscribers": "4.38M",
+      "views": "14,399",
+      "date": "Sep 12, 2025"
+    }
+  ]
+}
