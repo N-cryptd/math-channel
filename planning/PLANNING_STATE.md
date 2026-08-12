@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-Last updated: 2026-07-31
+Last updated: 2026-08-12
 
 ## Completed Videos
 - Videos 1-24: Calculus I/II (scripts in scripts/pre-university/)
@@ -52,3 +52,12 @@ Last updated: 2026-07-31
 |- Video 128: Limits and Continuity in C — plan + script done
 |- Video 129: Complex Differentiation — plan + script done
 |- Video 130-138: Contour Integrals through Conformal Mappings — all done
+
+## PDE Playlist (Videos 184-193)
+|- Video 184: What is a PDE? — plan + script done
+|- Video 185: The Heat Equation — plan + script done
+|- Video 186: The Wave Equation — plan + script done
+|- Video 187: Laplace's Equation — plan + script done (2026-08-12)
+  - Plan: planning/video-187-laplaces-equation.md (7 scenes)
+  - Script: scripts/graduate/video-187-laplaces-equation.py (285 lines, compile-checked)
+  - Render: PENDING
