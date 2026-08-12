@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-12
 
-**Completed Videos (183 scripts, 183 renders)**
+**Completed Videos (184 scripts, 184 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -252,9 +252,8 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Measure Theory: COMPLETE (Videos 151–161, 12 videos, all rendered)
-- Functional Analysis (Videos 162–173): COMPLETE (12 videos, all rendered)
 - Fourier Analysis (Videos 174–183): COMPLETE (10 videos, all rendered)
+- Partial Differential Equations (Videos 184–193): IN PROGRESS — Video 184 done, 185-193 remaining
 
 
 ## Completed Playlists
@@ -275,7 +274,7 @@
 ### Partial Differential Equations (Videos 184–193)
 || # | Title | Script | Rendered | Plan |
 |---|-------|--------|----------|------|
-|| 184 | What is a PDE? | ❌ | ❌ | ❌ |
+|| 184 | What is a PDE? | ✅ | ✅ | ✅ |
 || 185 | The Heat Equation | ❌ | ❌ | ❌ |
 || 186 | The Wave Equation | ❌ | ❌ | ❌ |
 || 187 | Laplace's Equation | ❌ | ❌ | ❌ |
