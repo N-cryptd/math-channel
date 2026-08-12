@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-12
 
-**Completed Videos (189 scripts, 189 renders)**
+**Completed Videos (190 scripts, 190 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -253,7 +253,7 @@
 
 ## In Progress
 - Fourier Analysis (Videos 174–183): COMPLETE (10 videos, all rendered)
-- Partial Differential Equations (Videos 184–193): IN PROGRESS — Videos 184-189 done, 190-193 remaining
+- Partial Differential Equations (Videos 184–193): IN PROGRESS — Videos 184-190 done, 191-193 remaining
 
 
 ## Completed Playlists
@@ -280,7 +280,7 @@
 || 187 | Laplace's Equation | ✅ | ✅ | ✅ |
 || 188 | Separation of Variables | ✅ | ✅ | ✅ |
 || 189 | Sturm-Liouville Theory | ✅ | ✅ | ✅ |
-|| 190 | Green's Functions | ❌ | ❌ | ❌ |
+|| 190 | Green's Functions | ✅ | ✅ | ✅ |
 || 191 | Distributions & Weak Solutions | ❌ | ❌ | ❌ |
 || 192 | Numerical Methods for PDEs | ❌ | ❌ | ❌ |
 || 193 | PDE Summary | ❌ | ❌ | ❌ |
