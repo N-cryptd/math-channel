@@ -32,39 +32,62 @@
 
 ## Tier 2 — Partial Overlap / Inspiration
 
-### 4. Looking Glass Universe
+### 4. Mathemaniac
+- YouTube: https://www.youtube.com/@Mathemaniac
+- Videos: ~50, Subscribers: ~276K
+- Style: Custom animation (NOT Manim but visually similar), dark background
+- Signature: Explains underrated math/physics topics with novel approaches
+- Notable: Green's functions video (755K views) — best intuition for matrix analogy
+- Title pattern: "X: the genius way to Y", "X and why they matter"
+
+### 5. Faculty of Khan
+- YouTube: https://www.youtube.com/@FacultyofKhan
+- Videos: ~100, Subscribers: ~104K
+- Style: Whiteboard, rigorous proofs, colored equation annotations
+- Signature: Sturm-Liouville theorem proof, PDE derivations
+- Notable: Most rigorous PDE content on YouTube, but no animation
+
+### 6. commutant
+- YouTube: https://www.youtube.com/@commutant
+- Videos: ~200, Subscribers: ~42.9K
+- Style: Blackboard lecture format, systematic coverage
+- Signature: Most complete PDE playlist on YouTube (PDE 1–20+, 2011)
+- Notable: Transport equation (217K views), wave equation separation (342K views)
+- **STATUS: Dormant** — last PDE videos 2011-2012
+
+### 7. Looking Glass Universe
 - YouTube: https://www.youtube.com/@lookingglassun
 - Focus: Quantum mechanics, quantum computing with visual explanations
 - Style: Simple animations, hand-drawn feel
 
-### 5. Steve Brunton (Eigensteve)
+### 8. Steve Brunton (Eigensteve)
 - YouTube: https://www.youtube.com/@Eigensteve
 - Focus: Applied math, dynamical systems, data science
 - Style: Whiteboard + some animations, academic lectures compressed
 
-### 6. Reducible
+### 9. Reducible
 - YouTube: https://www.youtube.com/@Reducible
 - Focus: CS + math intersection (algorithms, information theory)
 - Style: Clean Manim animations, similar to 3B1B
 - Notable: Excellent at breaking complex CS topics visually
 
-### 7. The Math Sorcerer
+### 10. The Math Sorcerer
 - YouTube: https://www.youtube.com/@themathsorcerer
 - Focus: Pure math proofs, graduate-level content
 - Style: Traditional whiteboard/blackboard
 
-### 8. Socratica
+### 11. Socratica
 - YouTube: https://www.youtube.com/@Socratica
 - Focus: NOW producing Python/programming tutorials
 - **STATUS: PIVOTED (2024+)** — LA playlist exists but channel now focuses on coding
 - Historical: Math basics, linear algebra, abstract algebra with Manim animations
 
-### 9. Inigo Quilez
+### 12. Inigo Quilez
 - YouTube: https://www.youtube.com/@iquilezles
 - Focus: Math + computer graphics (Shadertoy)
 - Style: Live coding, mathematical art
 
-### 10. Sabine Hossenfelder
+### 13. Sabine Hossenfelder
 - YouTube: https://www.youtube.com/@SabineHossenfelder
 - Focus: Physics, math applications in physics
 - Style: Talking head + diagrams, not Manim

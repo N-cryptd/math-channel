@@ -969,3 +969,156 @@ Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks
 
 **What makes us different:** The only Fourier analysis summary video on YouTube with Manim animations, graduate-level mathematical content, explicit connections to earlier playlists (Functional Analysis), and forward-looking guidance for future study areas.
 
+---
+
+### [2026-08-12] Partial Differential Equations — Full Playlist Competitive Analysis (Videos 184–193)
+
+**Market Gap Analysis:** PDE content on YouTube falls into two extremes: (a) 3Blue1Brown's 6-video "Differential Equations" series (DE1–DE6, 2019) with 3.2M–18.9M views each — beautiful Manim animations but covers only the heat equation, Fourier series connection, and ODE intuition, with NO wave equation, NO Laplace equation, NO separation of variables, NO Sturm-Liouville, NO Green's functions, and NO numerical methods; and (b) traditional university lecture channels (Steve Brunton, commutant, Faculty of Khan, Khan Academy) that cover PDEs systematically but with whiteboards/slides and no animation. NO channel produces a complete, animated, systematic PDE playlist covering all 10 canonical topics (intro, heat, wave, Laplace, separation of variables, Sturm-Liouville, Green's functions, distributions, numerical methods). This is a massive market gap — PDEs are the natural next step after both Fourier Analysis (which ended with heat equation applications) and our ODE playlist (Videos 55–66).
+
+**Competitive Landscape Analysis:**
+
+#### 3Blue1Brown — "Differential equations, a tourist's guide | DE1" (p_di4Zn4wz4, 5,921,358 views, 8.54M subs, Mar 2019)
+Dimensions: Structure 10/10 | Pacing 10/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+- **Style:** Custom Manim (manimlib), dark background (#1c1c1c). Phase space visualizations, vector field animations, pendulum dynamics, mass-spring systems, logistic growth.
+- **Content:** Overview of what ODEs are — phase space, vector fields, existence/uniqueness, pendulum, predator-prey. A "tourist's guide" that shows the beauty without rigor.
+- **Thumbnail:** Black background, white text, colored math objects (red/green/blue arrows, circles, lines). Minimal whitespace, centered composition. Quality 9/10, clickworthiness 8/10.
+- **Insight:** The "tourist's guide" framing is excellent for a playlist intro — shows breadth before depth. Uses concrete physical systems (pendulum, springs) as hooks.
+- **Weakness:** Not actually about PDEs — this is the ODE intro. The PDE-specific videos (DE2, DE3) are much narrower.
+
+#### 3Blue1Brown — "But what is a partial differential equation? | DE2" (ly4S0oi3Yz8, 3,210,971 views, 8.54M subs, Apr 2019)
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 10/10 | Narration 9/10 | Hooks 10/10
+- **Style:** Custom Manim, dark background. 3D surface plots, colored line graphs, partial derivative visualizations.
+- **Content:** Partial derivatives refresher → building the heat equation from first principles (heat flow ∝ temperature gradient) → ODEs vs PDEs comparison → the Laplacian operator.
+- **Thumbnail:** Black background, 3D surface plot with colored line graph overlay, white text top-left with shadow. Quality 7/10, clickworthiness 8/10. Left-aligned layout.
+- **Insight:** Deriving the heat equation from physical reasoning (conservation of energy) is THE right way to introduce PDEs. The 3D surface visualization of the temperature field is pedagogically perfect.
+- **Weakness:** Only covers the heat equation as an example PDE. No wave equation, no Laplace equation. 17 minutes — good length but only scratches the surface. No separation of variables shown. The Fourier series connection is deferred to DE4.
+
+#### 3Blue1Brown — "Solving the heat equation | DE3" (ToIXSwZ1pJU, 1,661,487 views, 8.54M subs, Jun 2019)
+Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 8/10
+- **Content:** Boundary conditions → setup for Fourier series → how separation of variables works conceptually (without full derivation).
+- **Thumbnail:** Black background, 3D grid with color-filled waveforms centered. White text overlaid on visuals. Quality 9/10, clickworthiness 8/10. Centered composition.
+- **Insight:** The animated temperature field evolving over time is the key visual — showing how Fourier modes decompose the initial condition and evolve independently.
+- **Weakness:** Doesn't complete the separation of variables derivation. No Sturm-Liouville framework. Only handles specific boundary conditions (Dirichlet). Doesn't show the full solution.
+
+#### 3Blue1Brown — "But what is a Fourier series? From heat flow to drawing with circles | DE4" (r6sGWTCMz2k, 18,859,252 views, 8.54M subs)
+Dimensions: Structure 10/10 | Pacing 9/10 | Visuals 10/10 | Narration 10/10 | Hooks 10/10
+- **Content:** Fourier series motivated by heat equation → epicycles → drawing shapes with circles. The most-viewed PDE-related video on YouTube.
+- **Thumbnail:** Black background, yellow/teal/blue/green waveform visualizations, white text right-aligned. Quality 7/10, clickworthiness 8/10. Left-aligned layout with good whitespace.
+- **Insight:** This video proves that connecting PDEs to Fourier series → epicycles → art is the single most popular angle for this topic (18.9M views). However, it pivots away from PDEs entirely into Fourier art.
+
+#### Steve Brunton — "Partial Differential Equations Overview" (pvrIagjEk4c, 181,342 views, 546K subs, Jul 2022)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 6/10
+- **Style:** Whiteboard/lecture format, slides with Greek letters, derivatives, equations.
+- **Content:** Overview of PDEs → canonical PDEs (heat, wave, Laplace, Burgers) → linear superposition → nonlinear PDE (Burgers equation with shock formation).
+- **Thumbnail:** Black background, yellow/pink text, glowing/shadowed equations and Greek letters. Top-placed text with shadow/glow effects. Quality 7/10, clickworthiness 8/10. Left-aligned, minimal whitespace.
+- **Insight:** Good breadth — covers heat, wave, Laplace, AND Burgers in one video. The nonlinear vs linear distinction is valuable. The shock formation animation for Burgers is a great visual hook.
+- **Weakness:** No animation — pure whiteboard/slides. Not Manim. Too fast-paced, tries to cover everything in one overview without depth. No separation of variables demonstration.
+
+#### Mathemaniac — "Green's functions: the genius way to solve DEs" (ism2SfZgFJg, 754,929 views, 276K subs, Jul 2021)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 8/10 | Narration 7/10 | Hooks 9/10
+- **Style:** Custom animation (NOT Manim but visually similar), dark background. 3D rendered spheres, colored waves, bold text.
+- **Content:** Linear differential operators → Dirac delta "function" → principle of Green's functions → solving DEs with Green's functions. Motivates from linear algebra (inverse matrix analogy).
+- **Thumbnail:** Black background, red sphere with gold "+" and green sphere with green "-" (representing impulse response), gold wave, bold white text centered. Quality 9/10, clickworthiness 8/10. Moderate brand consistency.
+- **Insight:** The matrix analogy for Green's functions (G(x,t) is like the inverse of the differential operator L, just as A⁻¹ is the inverse of matrix A) is THE best intuition-builder. Nobody else makes this connection as clearly.
+- **Weakness:** Doesn't cover PDE-specific Green's functions (heat kernel, Poisson kernel). Only 1D examples. No boundary conditions or image methods.
+
+#### Faculty of Khan — "Sturm-Liouville Theorem and Proof" (_F0ck1JncLE, 194,352 views, 104K subs)
+Dimensions: Structure 7/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 4/10
+- **Style:** Whiteboard with colored equation symbols (green, purple). Bold text centered.
+- **Content:** Full proof of Sturm-Liouville theorem, eigenvalues/eigenfunctions.
+- **Thumbnail:** Black background, white centered bold text with shadow, colored equation symbols. Quality 8/10, clickworthiness 7/10.
+- **Insight:** Most rigorous SL theorem proof on YouTube. Correct mathematical approach.
+- **Weakness:** Pure whiteboard — no animation. Very slow pace (9 min for one theorem). No physical motivation (heat equation, vibrating string). Only 194K views despite covering essential PDE material.
+
+#### Andrew Dotson — "Intuition for Greens Functions" (Ld1u7bew6wc, 96,451 views, 249K subs)
+Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 7/10
+- **Style:** White background with handwritten equations and green highlighting. Bottom-placed text.
+- **Content:** Green's functions intuition from finite-dimensional matrix problems. Graduate Math Methods perspective.
+- **Thumbnail:** White background (unique — most PDE thumbnails are dark), black text, purple accent, green handwritten math. Quality 7/10, clickworthiness 8/10. Evenly distributed whitespace.
+- **Insight:** Good finite-dimensional → infinite-dimensional analogy. Physics-focused.
+- **Weakness:** No animation. Handwritten style doesn't scale well. Short (20 min) but not comprehensive.
+
+#### commutant — "PDE 3 | Transport equation: derivation" (atvw5iseoGQ, 217,004 views, 42.9K subs, 2011)
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 6/10
+- **Style:** Blackboard/whiteboard lecture format, old but systematic.
+- **Content:** Transport equation derivation from conservation law.
+- **Insight:** Most systematic PDE playlist on YouTube (PDE 1–20+), covering transport, heat, wave, Laplace, separation of variables. But outdated production quality (2011).
+
+#### Math Infinitum — "Partial Differential Equations: Heat Equation" (de46ITZo6Ag, 21,587 views, 9.18K subs, Mar 2026)
+- **Style:** Recently published (Mar 2026), likely Manim-based given the channel focus.
+- **Insight:** New competitor in the PDE space — worth monitoring. Low views but growing.
+
+### Thumbnail Analysis Summary
+
+| Channel | BG | Text Color | Accent | Visual Element | Quality | Click |
+|---------|-----|-----------|--------|---------------|---------|-------|
+| 3B1B (DE2) | Black | White | Green/Blue/Yellow | 3D surface + line graph | 7/10 | 8/10 |
+| 3B1B (DE3) | Black | White | Multi-color | 3D grid + waveforms | 9/10 | 8/10 |
+| 3B1B (DE1) | Black | White | Red/Green/Blue | Circles, arrows, lines | 9/10 | 8/10 |
+| 3B1B (DE4) | Black | White | Yellow/Teal/Blue | Waveforms, line graph | 7/10 | 8/10 |
+| Brunton | Black | White/Yellow/Pink | Yellow, glowing | Greek letters, equations | 7/10 | 8/10 |
+| Mathemaniac | Black | White | Red/Green/Gold | 3D spheres, wave | 9/10 | 8/10 |
+| Faculty Khan | Black | White | Red | Equation symbols | 8/10 | 7/10 |
+| Andrew Dotson | **White** | Black | Purple/Green | Handwritten functions | 7/10 | 8/10 |
+
+**Thumbnail Trends:**
+1. **Dark backgrounds dominate** (7/8 channels) — black is the standard for math/PDE content
+2. **3D surfaces are the signature PDE visual** — heat maps, wave surfaces, mesh grids
+3. **Multi-color math objects** — color-coded components (red=heat, blue=cold, green=wave) are standard
+4. **Bold white text with shadow** — high contrast is essential for clickability
+5. **Andrew Dotson's white background** is the outlier — works because it's distinctive but may not suit our dark BG brand
+
+### Synthesis for PDE Playlist (Videos 184–193)
+
+**Key Market Gaps Identified:**
+1. **No complete animated PDE playlist** — 3B1B covers heat equation only (2 videos), no wave/Laplace/SL/Green's
+2. **No Sturm-Liouville animation** exists — Faculty of Khan's 194K views prove demand but whiteboard format limits reach
+3. **No Green's functions animation for PDEs** — Mathemaniac covers ODE Green's functions only, not PDE-specific (heat kernel, Poisson kernel)
+4. **No distributions/weak solutions animation** — only whiteboard/lecture coverage exists
+5. **No numerical methods for PDEs with animation** — finite difference/finite element are lecture-only
+
+**Our Approach (distinct from ALL competitors):**
+1. **Complete PDE playlist** — 10 videos covering the full curriculum (intro → heat → wave → Laplace → separation → SL → Green's → distributions → numerical → summary). Nobody else provides this.
+2. **Build on Fourier Analysis** — Our Videos 174–183 give us a unique advantage. When we solve the heat equation with Fourier series (Video 186), we can reference our Fourier playlist directly. 3B1B had to explain Fourier from scratch (DE4).
+3. **Animated Sturm-Liouville** — Nobody animates eigenvalue problems for differential operators. We can show how eigenfunctions of the Laplacian form orthogonal bases, connecting to our Linear Algebra (Videos 35–36) and Functional Analysis (Videos 170) playlists.
+4. **Green's functions from matrix analogy** — Following Mathemaniac's excellent finite-dimensional intuition but extending to PDEs: heat kernel G(x,t;ξ,τ), Poisson kernel, method of images with animated boundary reflections.
+5. **Wave equation with standing wave visualization** — 3B1B never covered the wave equation. We can show standing waves, traveling waves, d'Alembert's solution, and vibrating string modes with Manim animations.
+6. **Distributions as the natural setting for PDEs** — Connect Dirac delta (from our ODE videos) to weak solutions, test functions, and distributional derivatives. Animated delta sequences converging.
+7. **Numerical methods with visual grid** — Show finite difference stencils as animated grids, stability (CFL condition) as visual simulation, and error convergence plots.
+
+**Specific Techniques to Adopt:**
+- 3B1B's physical derivation approach: derive heat equation from conservation of energy (DE2)
+- Mathemaniac's matrix analogy for Green's functions (A⁻¹ ↔ G)
+- Brunton's breadth: show heat/wave/Laplace/Burgers as the "big four" canonical PDEs
+- 3B1B's 3D surface visualization for temperature fields
+- Faculty of Khan's rigorous SL theorem (but animated)
+
+**Specific Techniques to Avoid/Adapt:**
+- Don't replicate 3B1B's "tourist's guide" framing — we're doing a systematic curriculum, not a highlight reel
+- Don't use Faculty of Khan's slow whiteboard pace — keep 12-15 min with progressive disclosure
+- Don't cover Burgers equation as a standalone — our playlist is pure math, not applied/engineering
+- Don't do the "epicycles drawing art" pivot from PDEs (3B1B DE4) — stay focused on PDEs
+
+**What Makes Us Unique:**
+1. The ONLY complete animated PDE playlist on YouTube (10 systematic videos)
+2. Direct connection to our Fourier Analysis playlist (natural prerequisite)
+3. Animated Sturm-Liouville theory (world first)
+4. PDE Green's functions with heat kernel animation (world first)
+5. Distributions and weak solutions with animation (world first)
+6. Part of a 183-video systematic math curriculum — viewers who finished Fourier Analysis have a clear path forward
+
+**Recommended Video Structure:**
+
+| # | Video | Key Hook | 3B1B Coverage |
+|---|-------|----------|---------------|
+| 184 | What is a PDE? | Heat equation from physical reasoning | DE2 (3.2M) — similar, but we go further |
+| 185 | The Heat Equation | Temperature evolution, Fourier connection | DE3 (1.7M) — we complete the derivation |
+| 186 | The Wave Equation | Vibrating string, d'Alembert solution | NOT COVERED by 3B1B |
+| 187 | Laplace's Equation | Harmonic functions, maximum principle | NOT COVERED by 3B1B |
+| 188 | Separation of Variables | Full technique for all three PDEs | DE3 touches this — we do it rigorously |
+| 189 | Sturm-Liouville Theory | Eigenvalue problems for operators | NOT COVERED by anyone with animation |
+| 190 | Green's Functions | Heat kernel, method of images | Mathemaniac covers ODE only |
+| 191 | Distributions & Weak Solutions | Delta, test functions, weak form | NOT COVERED by anyone with animation |
+| 192 | Numerical Methods for PDEs | Finite differences, CFL condition | NOT COVERED by anyone with animation |
+| 193 | PDE Summary | Unifying themes and what's next | 3B1B has no PDE summary |
+

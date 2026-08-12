@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-11
+**Last updated:** 2026-08-12
 
 **Completed Videos (183 scripts, 183 renders)**
 
@@ -272,6 +272,21 @@
 |- Functional Analysis (Videos 162–173): COMPLETE (12 videos)
 |- Fourier Analysis (Videos 174–183): COMPLETE (10 videos)
 
+### Partial Differential Equations (Videos 184–193)
+|| # | Title | Script | Rendered | Plan |
+|---|-------|--------|----------|------|
+|| 184 | What is a PDE? | ❌ | ❌ | ❌ |
+|| 185 | The Heat Equation | ❌ | ❌ | ❌ |
+|| 186 | The Wave Equation | ❌ | ❌ | ❌ |
+|| 187 | Laplace's Equation | ❌ | ❌ | ❌ |
+|| 188 | Separation of Variables | ❌ | ❌ | ❌ |
+|| 189 | Sturm-Liouville Theory | ❌ | ❌ | ❌ |
+|| 190 | Green's Functions | ❌ | ❌ | ❌ |
+|| 191 | Distributions & Weak Solutions | ❌ | ❌ | ❌ |
+|| 192 | Numerical Methods for PDEs | ❌ | ❌ | ❌ |
+|| 193 | PDE Summary | ❌ | ❌ | ❌ |
+
 ## Notes
-- Fourier Analysis playlist COMPLETE (Videos 174-183, 10 videos, Aug 2026)
-- Next playlist after Fourier Analysis: TBD (potential: Differential Geometry, Algebraic Topology, PDEs)
+|- Fourier Analysis playlist COMPLETE (Videos 174-183, 10 videos, Aug 2026)
+|- Next playlist: **Partial Differential Equations** (Videos 184-193, 10 videos)
+|- Competitive analysis complete for PDE playlist (Aug 2026) — see channel-analysis/improvements.md
