@@ -61,3 +61,7 @@ Last updated: 2026-08-12
   - Plan: planning/video-187-laplaces-equation.md (7 scenes)
   - Script: scripts/graduate/video-187-laplaces-equation.py (285 lines, compile-checked)
   - Render: PENDING
+- Video 188: Separation of Variables -- plan + script done (2026-08-12)
+  - Plan: planning/video-188-separation-of-variables.md (8 scenes)
+  - Script: scripts/graduate/video-188-separation-of-variables.py (324 lines)
+  - Render: PENDING

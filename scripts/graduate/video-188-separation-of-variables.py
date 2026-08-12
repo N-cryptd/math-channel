@@ -223,20 +223,7 @@ class Video188_SeparationOfVariables(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(0.5)
-
-        # Fade out items, then show general solution
-        for m in self.mobjects:
-            self.remove(m)
-
-        general = MathTex(
-            r"u(x,t) = \sum_{n=1}^{\infty} c_n \, X_n(x) \, T_n(t)",
-            font_size=TITLE_SIZE, color=ACCENT,
-        )
-        self.ly.center_in_content(general)
-        self.play(Write(general), run_time=NORMAL)
         self.wait(1.0)
-
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
