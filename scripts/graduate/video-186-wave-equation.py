@@ -87,6 +87,7 @@ class Video186_WaveEquation(Scene):
     # Scene 2: Derivation
     # ------------------------------------------------------------------ #
     def scene2_derivation(self):
+        self.ly.section_divider("1", "Deriving the Wave Equation")
         self.add_subcaption(
             "Consider a taut string under tension. A small segment "
             "of the string feels forces from both sides. The net "
@@ -170,6 +171,7 @@ class Video186_WaveEquation(Scene):
     # Scene 4: Initial Conditions
     # ------------------------------------------------------------------ #
     def scene4_initial_conditions(self):
+        self.ly.section_divider("2", "Two Initial Conditions")
         self.add_subcaption(
             "Because the wave equation is second order in time, we "
             "need two initial conditions: the initial shape of the "
@@ -224,7 +226,7 @@ class Video186_WaveEquation(Scene):
             r"u(x, t) = F(x - ct) + G(x + ct)",
             font_size=HEADING_SIZE, color=PRIMARY,
         )
-        self.ly.center_in_content(dalembert)
+        self.ly.formula_box(dalembert)
         self.play(Write(dalembert), run_time=NORMAL)
         self.wait(0.5)
 
@@ -244,6 +246,7 @@ class Video186_WaveEquation(Scene):
     # Scene 6: Separation of Variables
     # ------------------------------------------------------------------ #
     def scene6_separation(self):
+        self.ly.section_divider("3", "Separation of Variables on [0, L]")
         self.add_subcaption(
             "On a finite interval, we use separation of variables. "
             "The spatial problem is identical to the heat equation, "
@@ -294,6 +297,7 @@ class Video186_WaveEquation(Scene):
     # Scene 7: Standing Waves
     # ------------------------------------------------------------------ #
     def scene7_standing_waves(self):
+        self.ly.section_divider("4", "Standing Waves and Harmonics")
         self.add_subcaption(
             "The complete solution is a superposition of standing "
             "waves. Each mode oscillates at a specific frequency "

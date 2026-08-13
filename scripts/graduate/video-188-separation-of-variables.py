@@ -92,6 +92,7 @@ class Video188_SeparationOfVariables(Scene):
     # Scene 2: The General Idea
     # ------------------------------------------------------------------ #
     def scene2_general_idea(self):
+        self.ly.section_divider("1", "The Separation Ansatz")
         self.add_subcaption(
             "The core idea is breathtakingly simple. Assume the "
             "solution is a product of functions, each depending "
@@ -108,7 +109,7 @@ class Video188_SeparationOfVariables(Scene):
             r"u(x, t) = X(x) \cdot T(t)",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(ansatz, direction=DOWN, anchor=title, buff=0.4)
+        self.ly.formula_box(ansatz)
         self.play(Write(ansatz), run_time=NORMAL)
         self.wait(0.5)
 
@@ -129,6 +130,7 @@ class Video188_SeparationOfVariables(Scene):
     # Scene 3: The Eigenvalue Problem
     # ------------------------------------------------------------------ #
     def scene3_eigenvalue_problem(self):
+        self.ly.section_divider("2", "The Eigenvalue Problem")
         self.add_subcaption(
             "After separating variables, the spatial equation "
             "comes with boundary conditions. Not every value "
@@ -167,6 +169,7 @@ class Video188_SeparationOfVariables(Scene):
     # Scene 4: Fourier Series Expansion
     # ------------------------------------------------------------------ #
     def scene4_fourier_expansion(self):
+        self.ly.section_divider("3", "Expanding in Eigenfunctions")
         self.add_subcaption(
             "The initial condition tells us how the solution "
             "starts. To match it, we decompose the initial "
@@ -203,6 +206,7 @@ class Video188_SeparationOfVariables(Scene):
     # Scene 5: The Superposition Principle
     # ------------------------------------------------------------------ #
     def scene5_superposition(self):
+        self.ly.section_divider("4", "Linearity and Superposition")
         self.add_subcaption(
             "Linearity is the key property that makes all of "
             "this work. If u sub 1 and u sub 2 are solutions, "
@@ -230,6 +234,7 @@ class Video188_SeparationOfVariables(Scene):
     # Scene 6: Heat vs Wave vs Laplace
     # ------------------------------------------------------------------ #
     def scene6_comparison(self):
+        self.ly.section_divider("5", "Three Equations, One Structure")
         self.add_subcaption(
             "Here is the beautiful insight. All three classical "
             "PDEs share the same spatial eigenvalue problem. "

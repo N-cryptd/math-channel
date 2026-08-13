@@ -93,6 +93,7 @@ class Video185_HeatEquation(Scene):
     # Scene 2: Derivation from Physical Reasoning
     # ------------------------------------------------------------------ #
     def scene2_derivation(self):
+        self.ly.section_divider("1", "Deriving the Heat Equation")
         self.add_subcaption(
             "We derive the heat equation from two physical principles. "
             "First, Fourier's law: heat flux is proportional to the "
@@ -183,6 +184,7 @@ class Video185_HeatEquation(Scene):
     # Scene 4: Initial and Boundary Conditions
     # ------------------------------------------------------------------ #
     def scene4_boundary_conditions(self):
+        self.ly.section_divider("2", "Initial and Boundary Conditions")
         self.add_subcaption(
             "To solve a PDE we need conditions. The initial condition "
             "specifies the temperature at time zero. Boundary conditions "
@@ -252,7 +254,7 @@ class Video185_HeatEquation(Scene):
             r"u(x, t) = X(x) \, T(t)",
             font_size=HEADING_SIZE, color=SECONDARY,
         )
-        self.ly.center_in_content(ansatz)
+        self.ly.formula_box(ansatz)
         self.play(Write(ansatz), run_time=NORMAL)
         self.wait(0.3)
 
@@ -293,6 +295,7 @@ class Video185_HeatEquation(Scene):
     # Scene 6: The Spatial Problem — Eigenvalues
     # ------------------------------------------------------------------ #
     def scene6_spatial_problem(self):
+        self.ly.section_divider("3", "The Spatial Eigenvalue Problem")
         self.add_subcaption(
             "The spatial equation is a second-order ODE with boundary "
             "conditions. Only specific values of lambda, called "
@@ -372,7 +375,7 @@ class Video185_HeatEquation(Scene):
             r"T_n(t) = e^{-\alpha (n\pi/L)^2 \, t}",
             font_size=HEADING_SIZE, color=SECONDARY,
         )
-        self.ly.center_in_content(solution)
+        self.ly.formula_box(solution)
         self.play(Write(solution), run_time=NORMAL)
         self.wait(0.5)
 
@@ -392,6 +395,7 @@ class Video185_HeatEquation(Scene):
     # Scene 8: Complete Solution
     # ------------------------------------------------------------------ #
     def scene8_complete_solution(self):
+        self.ly.section_divider("4", "The Complete Solution")
         self.add_subcaption(
             "The complete solution is a superposition of all modes. "
             "The initial condition determines the Fourier sine "
@@ -407,7 +411,7 @@ class Video185_HeatEquation(Scene):
             r" e^{-\alpha (n\pi/L)^2 t}",
             font_size=32, color=SECONDARY,
         )
-        self.ly.safe_place(full, direction=DOWN, anchor=title, buff=0.4)
+        self.ly.formula_box(full)
         self.play(Write(full), run_time=SLOW)
         self.wait(0.5)
 

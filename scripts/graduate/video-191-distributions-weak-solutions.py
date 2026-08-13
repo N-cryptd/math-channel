@@ -83,6 +83,7 @@ class Video191_DistributionsWeakSolutions(Scene):
     # Scene 2: Why Classical Solutions Fail
     # ------------------------------------------------------------------ #
     def scene2_why_weak(self):
+        self.ly.section_divider("1", "The Problem with Classical Solutions")
         self.add_subcaption(
             "A classical solution must be differentiable enough "
             "for every derivative in the PDE to exist pointwise. "
@@ -107,6 +108,7 @@ class Video191_DistributionsWeakSolutions(Scene):
     # Scene 3: The Dirac Delta
     # ------------------------------------------------------------------ #
     def scene3_dirac_delta(self):
+        self.ly.section_divider("2", "The Dirac Delta")
         self.add_subcaption(
             "The Dirac delta is not a function. It is a distribution "
             "that picks out the value of a test function at a "
@@ -121,7 +123,7 @@ class Video191_DistributionsWeakSolutions(Scene):
             r"\int_{-\infty}^{\infty} \delta(x - \xi) \, \phi(x) \, dx = \phi(\xi)",
             font_size=HEADING_SIZE, color=RED,
         )
-        self.ly.center_in_content(delta_prop)
+        self.ly.formula_box(delta_prop)
         self.play(Write(delta_prop), run_time=NORMAL)
         self.wait(0.5)
 
@@ -141,6 +143,7 @@ class Video191_DistributionsWeakSolutions(Scene):
     # Scene 4: Test Functions
     # ------------------------------------------------------------------ #
     def scene4_test_functions(self):
+        self.ly.section_divider("3", "Test Functions")
         self.add_subcaption(
             "Distributions are defined by how they act on test "
             "functions. A test function is infinitely differentiable "
@@ -165,6 +168,7 @@ class Video191_DistributionsWeakSolutions(Scene):
     # Scene 5: The Weak Form
     # ------------------------------------------------------------------ #
     def scene5_weak_form(self):
+        self.ly.section_divider("4", "The Weak Form of a PDE")
         self.add_subcaption(
             "The weak form of a PDE moves derivatives from the "
             "solution onto the test function using integration by "
@@ -180,7 +184,7 @@ class Video191_DistributionsWeakSolutions(Scene):
             r"\quad \forall \phi \in D",
             font_size=HEADING_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(weak, direction=DOWN, anchor=title, buff=0.4)
+        self.ly.formula_box(weak)
         self.play(Write(weak), run_time=NORMAL)
 
         weak_note = Text(
@@ -197,6 +201,7 @@ class Video191_DistributionsWeakSolutions(Scene):
     # Scene 6: Weak Solutions
     # ------------------------------------------------------------------ #
     def scene6_weak_solutions(self):
+        self.ly.section_divider("5", "Weak Solutions")
         self.add_subcaption(
             "A weak solution satisfies the weak form of the PDE "
             "for all test functions. It does not need to be "

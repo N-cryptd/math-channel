@@ -86,6 +86,7 @@ class Video187_LaplacesEquation(Scene):
     # Scene 2: Definition
     # ------------------------------------------------------------------ #
     def scene2_definition(self):
+        self.ly.section_divider("1", "Laplace's Equation")
         self.add_subcaption(
             "Laplace's equation states that the Laplacian of the "
             "unknown function equals zero. It has no time derivative, "
@@ -100,7 +101,7 @@ class Video187_LaplacesEquation(Scene):
             r"\nabla^2 u = 0",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.center_in_content(lap)
+        self.ly.formula_box(lap)
         self.play(Write(lap), run_time=NORMAL)
         self.wait(0.5)
 
@@ -120,6 +121,7 @@ class Video187_LaplacesEquation(Scene):
     # Scene 3: Harmonic Functions
     # ------------------------------------------------------------------ #
     def scene3_harmonic_functions(self):
+        self.ly.section_divider("2", "Harmonic Functions")
         self.add_subcaption(
             "Solutions to Laplace's equation are called harmonic "
             "functions. They have remarkable smoothness: every "
@@ -161,6 +163,7 @@ class Video187_LaplacesEquation(Scene):
     # Scene 4: Mean Value Property
     # ------------------------------------------------------------------ #
     def scene4_mean_value(self):
+        self.ly.section_divider("3", "The Mean Value Property")
         self.add_subcaption(
             "The mean value property says that the value of a "
             "harmonic function at any point equals the average of "
@@ -176,7 +179,7 @@ class Video187_LaplacesEquation(Scene):
             r"\int_0^{2\pi} u(x_0 + r\cos\theta)\, d\theta",
             font_size=HEADING_SIZE, color=ACCENT,
         )
-        self.ly.center_in_content(mvp)
+        self.ly.formula_box(mvp)
         self.play(Write(mvp), run_time=NORMAL)
         self.wait(0.5)
 

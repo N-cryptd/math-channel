@@ -93,6 +93,7 @@ class Video189_SturmLiouville(Scene):
     # Scene 2: The Sturm-Liouville Form
     # ------------------------------------------------------------------ #
     def scene2_sl_form(self):
+        self.ly.section_divider("1", "The Sturm-Liouville Form")
         self.add_subcaption(
             "The Sturm-Liouville form is a second-order "
             "differential equation written in a specific way. "
@@ -110,7 +111,7 @@ class Video189_SturmLiouville(Scene):
             r"-[p(x) \, y']' + q(x) \, y = \lambda \, w(x) \, y",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(sl_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(sl_eq)
         self.play(Write(sl_eq), run_time=NORMAL)
         self.wait(0.5)
 
@@ -131,6 +132,7 @@ class Video189_SturmLiouville(Scene):
     # Scene 3: Every Separation Problem Is Sturm-Liouville
     # ------------------------------------------------------------------ #
     def scene3_all_sl_problems(self):
+        self.ly.section_divider("2", "Every Separation Gives Sturm-Liouville")
         self.add_subcaption(
             "The power of Sturm-Liouville theory is that every "
             "eigenvalue problem from separation of variables fits "
@@ -159,6 +161,7 @@ class Video189_SturmLiouville(Scene):
     # Scene 4: Self-Adjoint Operators
     # ------------------------------------------------------------------ #
     def scene4_self_adjoint(self):
+        self.ly.section_divider("3", "Self-Adjointness")
         self.add_subcaption(
             "Define the Sturm-Liouville operator L acting on "
             "y as negative the derivative of p times y prime, "
@@ -178,7 +181,7 @@ class Video189_SturmLiouville(Scene):
             r"\mathcal{L}[y] = -[p(x) \, y']' + q(x) \, y",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(op, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(op)
         self.play(Write(op), run_time=NORMAL)
         self.wait(0.5)
 
@@ -199,6 +202,7 @@ class Video189_SturmLiouville(Scene):
     # Scene 5: Real Eigenvalues and Orthogonal Eigenfunctions
     # ------------------------------------------------------------------ #
     def scene5_key_properties(self):
+        self.ly.section_divider("4", "Key Properties")
         self.add_subcaption(
             "Self-adjointness gives three key properties. "
             "First, all eigenvalues are real. Second, "
@@ -230,6 +234,7 @@ class Video189_SturmLiouville(Scene):
     # Scene 6: Completeness and Eigenfunction Expansions
     # ------------------------------------------------------------------ #
     def scene6_completeness(self):
+        self.ly.section_divider("5", "Completeness")
         self.add_subcaption(
             "Completeness means that any reasonable function "
             "on the interval can be expanded in eigenfunctions. "
@@ -249,7 +254,7 @@ class Video189_SturmLiouville(Scene):
             r"f(x) = \sum_{n=1}^{\infty} c_n \, y_n(x)",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(expansion, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(expansion)
         self.play(Write(expansion), run_time=NORMAL)
         self.wait(0.5)
 

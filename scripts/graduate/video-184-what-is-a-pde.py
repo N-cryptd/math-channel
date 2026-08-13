@@ -91,6 +91,7 @@ class Video184_WhatIsAPDE(Scene):
     # Scene 2: What Makes It "Partial"?
     # ------------------------------------------------------------------ #
     def scene2_ordinary_vs_partial(self):
+        self.ly.section_divider("1", "Ordinary vs Partial")
         self.add_subcaption(
             "In an ordinary differential equation, the unknown depends "
             "on a single variable. In a partial differential equation, "
@@ -141,6 +142,8 @@ class Video184_WhatIsAPDE(Scene):
     # Scene 3: The General Form
     # ------------------------------------------------------------------ #
     def scene3_general_form(self):
+        self.ly.section_divider("2", "General Form of a PDE")
+
         self.add_subcaption(
             "A partial differential equation relates a function of "
             "several variables to its partial derivatives. The order "
@@ -152,14 +155,16 @@ class Video184_WhatIsAPDE(Scene):
         title = self.ly.title("General Form of a PDE")
 
         general = MathTex(
-            r"F", r"\!\left(", r"x_1, \ldots, x_n,", r"u,",
+            r"F", r"\!\left(",
+            r"x_1, \ldots, x_n,",
+            r"u,",
             r"\frac{\partial u}{\partial x_1}, \ldots,",
             r"\frac{\partial^2 u}{\partial x_1^2},",
             r"\ldots",
             r"\right) = 0",
             font_size=36, color=WHITE,
         )
-        self.ly.safe_place(general, direction=DOWN, anchor=title, buff=0.4)
+        self.ly.formula_box(general)
         self.play(Write(general), run_time=SLOW)
         self.wait(0.5)
 
@@ -217,7 +222,7 @@ class Video184_WhatIsAPDE(Scene):
             r"\alpha", r"\nabla^2 u",
             font_size=HEADING_SIZE, color=SECONDARY,
         )
-        self.ly.center_in_content(heat_eq)
+        self.ly.formula_box(heat_eq)
         self.play(Write(heat_eq), run_time=NORMAL)
         self.wait(0.3)
 
@@ -254,7 +259,7 @@ class Video184_WhatIsAPDE(Scene):
             r"c^2", r"\nabla^2 u",
             font_size=HEADING_SIZE, color=PRIMARY,
         )
-        self.ly.center_in_content(wave_eq)
+        self.ly.formula_box(wave_eq)
         self.play(Write(wave_eq), run_time=NORMAL)
         self.wait(0.3)
 
@@ -289,7 +294,7 @@ class Video184_WhatIsAPDE(Scene):
             r"\nabla^2 u = 0",
             font_size=HEADING_SIZE, color=ACCENT,
         )
-        self.ly.center_in_content(lap_eq)
+        self.ly.formula_box(lap_eq)
         self.play(Write(lap_eq), run_time=NORMAL)
         self.wait(0.3)
 
@@ -314,6 +319,7 @@ class Video184_WhatIsAPDE(Scene):
     # Scene 5: Classification
     # ------------------------------------------------------------------ #
     def scene5_classification(self):
+        self.ly.section_divider("3", "Classifying Second-Order PDEs")
         self.add_subcaption(
             "We classify second-order linear PDEs into three types "
             "based on their discriminant, similar to classifying conic "
@@ -375,6 +381,7 @@ class Video184_WhatIsAPDE(Scene):
     # Scene 7: Preview of the Playlist
     # ------------------------------------------------------------------ #
     def scene7_playlist_preview(self):
+        self.ly.section_divider("4", "What's Coming Up")
         self.add_subcaption(
             "In this playlist, we will develop the tools to solve "
             "each type of PDE. We will study separation of variables, "

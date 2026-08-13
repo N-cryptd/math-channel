@@ -83,6 +83,7 @@ class Video192_NumericalMethodsPDEs(Scene):
     # Scene 2: Why Numerical Methods
     # ------------------------------------------------------------------ #
     def scene2_why_numerical(self):
+        self.ly.section_divider("1", "The Need for Computation")
         self.add_subcaption(
             "Analytical methods like separation of variables only "
             "work for very special cases. Real engineering problems "
@@ -109,6 +110,7 @@ class Video192_NumericalMethodsPDEs(Scene):
     # Scene 3: Finite Differences
     # ------------------------------------------------------------------ #
     def scene3_finite_differences(self):
+        self.ly.section_divider("2", "Finite Difference Approximations")
         self.add_subcaption(
             "The finite difference method replaces derivatives with "
             "difference quotients on a grid. The first derivative "
@@ -124,7 +126,7 @@ class Video192_NumericalMethodsPDEs(Scene):
             r"\quad \text{(central difference)}",
             font_size=HEADING_SIZE, color=PRIMARY,
         )
-        self.ly.safe_place(fd1, direction=DOWN, anchor=title, buff=0.4)
+        self.ly.formula_box(fd1)
         self.play(Write(fd1), run_time=NORMAL)
 
         fd2 = MathTex(
@@ -132,7 +134,7 @@ class Video192_NumericalMethodsPDEs(Scene):
             r"\quad \text{(2nd order)}",
             font_size=HEADING_SIZE, color=SECONDARY,
         )
-        self.ly.safe_place(fd2, direction=DOWN, anchor=fd1, buff=0.3)
+        self.ly.formula_box(fd2)
         self.play(Write(fd2), run_time=NORMAL)
 
         self.wait(1.0)
@@ -142,6 +144,7 @@ class Video192_NumericalMethodsPDEs(Scene):
     # Scene 4: Discretizing the Heat Equation
     # ------------------------------------------------------------------ #
     def scene4_discretizing_the_heat_eq(self):
+        self.ly.section_divider("3", "Discretizing the Heat Equation")
         self.add_subcaption(
             "To solve the heat equation numerically, we replace "
             "each derivative with its finite difference "
@@ -173,6 +176,7 @@ class Video192_NumericalMethodsPDEs(Scene):
     # Scene 5: Stability and CFL
     # ------------------------------------------------------------------ #
     def scene5_stability(self):
+        self.ly.section_divider("4", "Stability: The CFL Condition")
         self.add_subcaption(
             "Not all discretizations are stable. If the time step "
             "is too large relative to the space step, errors grow "
@@ -189,7 +193,7 @@ class Video192_NumericalMethodsPDEs(Scene):
             r"\quad \text{(CFL condition for heat equation)}",
             font_size=HEADING_SIZE, color=RED,
         )
-        self.ly.safe_place(cfl, direction=DOWN, anchor=title, buff=0.4)
+        self.ly.formula_box(cfl)
         self.play(Write(cfl), run_time=NORMAL)
 
         self.play(FadeOut(cfl), run_time=0.3)
@@ -208,6 +212,7 @@ class Video192_NumericalMethodsPDEs(Scene):
     # Scene 6: Finite Element Method Overview
     # ------------------------------------------------------------------ #
     def scene6_fem_overview(self):
+        self.ly.section_divider("5", "Finite Element Method")
         self.add_subcaption(
             "The finite element method takes a different approach. "
             "It starts from the weak form of the PDE and expands "

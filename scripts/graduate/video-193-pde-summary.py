@@ -72,6 +72,7 @@ class Video193_PDESummary(Scene):
     # Scene 2: The Three Canonical PDEs
     # ------------------------------------------------------------------ #
     def scene2_three_canonical(self):
+        self.ly.section_divider("1", "The Big Three")
         self.add_subcaption(
             "The three canonical PDEs are the foundation. The heat "
             "equation is parabolic, describing diffusion and decay. "
@@ -113,6 +114,7 @@ class Video193_PDESummary(Scene):
     # Scene 3: Solution Methods
     # ------------------------------------------------------------------ #
     def scene3_solution_methods(self):
+        self.ly.section_divider("2", "Solution Methods")
         self.add_subcaption(
             "We learned four major solution approaches. Separation "
             "of variables works for linear PDEs on simple domains. "
@@ -138,6 +140,7 @@ class Video193_PDESummary(Scene):
     # Scene 4: Connections to Other Playlists
     # ------------------------------------------------------------------ #
     def scene4_connections(self):
+        self.ly.section_divider("3", "Connections Across Mathematics")
         self.add_subcaption(
             "PDEs connect to many topics in our curriculum. The "
             "Fourier transform solves PDEs on the real line. "
@@ -164,6 +167,7 @@ class Video193_PDESummary(Scene):
     # Scene 5: What Comes Next?
     # ------------------------------------------------------------------ #
     def scene5_what_next(self):
+        self.ly.section_divider("4", "Further Study")
         self.add_subcaption(
             "PDEs are an enormous field. Topics for further study "
             "include nonlinear PDEs like the Navier-Stokes equations, "

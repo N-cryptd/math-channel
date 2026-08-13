@@ -95,6 +95,7 @@ class Video190_GreensFunctions(Scene):
     # Scene 2: Formal Definition
     # ------------------------------------------------------------------ #
     def scene2_formal_definition(self):
+        self.ly.section_divider("1", "Formal Definition")
         self.add_subcaption(
             "For a linear differential operator L, the Green's "
             "function G satisfies L of G equals the Dirac delta "
@@ -112,7 +113,7 @@ class Video190_GreensFunctions(Scene):
             r"L[G(x, \xi)] = \delta(x - \xi)",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(def_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(def_eq)
         self.play(Write(def_eq), run_time=NORMAL)
         self.wait(0.5)
 
@@ -133,6 +134,7 @@ class Video190_GreensFunctions(Scene):
     # Scene 3: The Heat Kernel
     # ------------------------------------------------------------------ #
     def scene3_heat_kernel(self):
+        self.ly.section_divider("2", "The Heat Kernel")
         self.add_subcaption(
             "For the heat equation, the Green's function is the "
             "heat kernel, a Gaussian that starts as a point and "
@@ -152,7 +154,7 @@ class Video190_GreensFunctions(Scene):
             r"e^{-x^2 / (4 \alpha t)}",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(kernel, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(kernel)
         self.play(Write(kernel), run_time=NORMAL)
         self.wait(0.5)
 
@@ -173,6 +175,7 @@ class Video190_GreensFunctions(Scene):
     # Scene 4: Convolution Representation
     # ------------------------------------------------------------------ #
     def scene4_convolution(self):
+        self.ly.section_divider("3", "Convolution Representation")
         self.add_subcaption(
             "Once you have the Green's function, the general "
             "solution is a convolution. You integrate the Green's "
@@ -193,7 +196,7 @@ class Video190_GreensFunctions(Scene):
             r"G(x - \xi, t) \, f(\xi) \, d\xi",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(conv_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(conv_eq)
         self.play(Write(conv_eq), run_time=NORMAL)
         self.wait(0.5)
 
@@ -214,6 +217,7 @@ class Video190_GreensFunctions(Scene):
     # Scene 5: Method of Images
     # ------------------------------------------------------------------ #
     def scene5_method_of_images(self):
+        self.ly.section_divider("4", "Method of Images")
         self.add_subcaption(
             "The free-space Green's function ignores boundaries. "
             "But real problems have boundary conditions. The "
@@ -234,7 +238,7 @@ class Video190_GreensFunctions(Scene):
             r"- G_{\text{free}}(x, -\xi)",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(img_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(img_eq)
         self.play(Write(img_eq), run_time=NORMAL)
         self.wait(0.5)
 
@@ -255,6 +259,7 @@ class Video190_GreensFunctions(Scene):
     # Scene 6: Connection to Fourier Analysis
     # ------------------------------------------------------------------ #
     def scene6_fourier_connection(self):
+        self.ly.section_divider("5", "Fourier Transform")
         self.add_subcaption(
             "Fourier analysis gives us the easiest way to find "
             "Green's functions. Take the PDE, apply the Fourier "
@@ -274,7 +279,7 @@ class Video190_GreensFunctions(Scene):
             r"\hat{G}(k) = \frac{1}{\hat{L}(k)}",
             font_size=TITLE_SIZE, color=ACCENT,
         )
-        self.ly.safe_place(ft_eq, direction=DOWN, anchor=title, buff=0.5)
+        self.ly.formula_box(ft_eq)
         self.play(Write(ft_eq), run_time=NORMAL)
         self.wait(0.5)
 
