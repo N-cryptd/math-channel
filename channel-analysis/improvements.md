@@ -1173,3 +1173,24 @@ Dimensions: Structure 6/10 | Pacing 6/10 | Visuals 4/10 | Narration 7/10 | Hooks
 **What makes us different:** First animated treatment of PDE Green's functions covering impulse response, formal definition, heat kernel, convolution, method of images, and Fourier connection — all in one video, all building on our existing PDE and Fourier playlists.
 
 ---
+
+### [2026-08-13] Differential Geometry Playlist (Videos 194–206) — Market Entry Analysis
+
+**Market Gap Analysis:** No systematic, Manim-animated differential geometry playlist exists on YouTube. This is a green-field opportunity. 3Blue1Brown has not covered differential geometry (closest: essence of calculus/linear algebra geometric intuition, but no curvature, surfaces, or manifolds). Mathologer touches on topology and geometry but has no diff geom series. Faculty of Khan has whiteboard-only content on related topics. Dr. Trefor Bazett covers individual topics but no comprehensive playlist.
+
+**Competitive Landscape:**
+
+No direct competitor videos found on recent differential geometry topics from major Manim-based channels. The existing coverage is fragmented:
+- **3B1B**: No diff geom content. Closest are the linear algebra and calculus "essence" series which build geometric intuition but never formalize curvature or surfaces.
+- **Mathologer**: Has topology-related videos (covering spaces, Euler characteristic) but no systematic differential geometry.
+- **Faculty of Khan**: Whiteboard format only. Covers individual topics when relevant to physics but no playlist.
+- **Trefor Bazett**: Some geometric content but focused on individual theorems, no playlist coverage.
+
+**Our positioning:**
+- First animated differential geometry playlist on YouTube (13 videos)
+- Builds naturally from our existing Calculus III (vectors/3D), Linear Algebra (transformations), Topology (surfaces), and PDE content
+- Progresses from curves → surfaces → curvature → geodesics → manifolds → differential forms → Stokes on manifolds
+
+**What makes us different:** Systematic, animated, building-block approach to differential geometry — starting from curves in R^n and building up to Stokes' theorem on manifolds. No competitor offers this complete animated treatment.
+
+---

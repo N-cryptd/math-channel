@@ -252,7 +252,7 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Partial Differential Equations (Videos 184–193): COMPLETE (10 videos, all rendered)
+- Differential Geometry (Videos 194–206): Video 194 complete, 195-206 backlog
 
 
 ## Completed Playlists
@@ -285,7 +285,24 @@
 | 192 | Numerical Methods for PDEs | ✅ | ✅ |
 | 193 | PDE Summary | ✅ | ✅ |
 
+### Differential Geometry (Videos 194–206)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 194 | Curves in R^n | ✅ | ✅ |
+| 195 | Arc Length & Curvature | 📋 | — |
+| 196 | Frenet-Serret Frame | 📋 | — |
+| 197 | Surfaces in R^3 | 📋 | — |
+| 198 | First Fundamental Form | 📋 | — |
+| 199 | Second Fundamental Form | 📋 | — |
+| 200 | Gaussian Curvature | 📋 | — |
+| 201 | Geodesics | 📋 | — |
+| 202 | Gauss-Bonnet Theorem | 📋 | — |
+| 203 | Manifolds Intro | 📋 | — |
+| 204 | Tangent Spaces & Vector Fields | 📋 | — |
+| 205 | Differential Forms | 📋 | — |
+| 206 | Stokes on Manifolds | 📋 | — |
+
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
-- Competitive analysis complete for PDE playlist (Aug 2026) — see channel-analysis/improvements.md
-- Next playlist: TBD (Advanced PDEs, Calculus of Variations, or new topic)
+- Differential Geometry playlist started (Video 194: Curves in R^n, Aug 2026)
+- Competitive analysis: green-field topic, no animated competitor playlist exists
