@@ -73,3 +73,11 @@ Last updated: 2026-08-12
   - Plan: planning/video-190-greens-functions.md (7 scenes)
   - Script: scripts/graduate/video-190-greens-functions.py (7 scenes, compile-checked)
   - Render: PENDING
+- Video 191-193: PDE remaining (plans + scripts done)
+
+## Differential Geometry Playlist (Videos 194+)
+|- Video 194: Curves in R^n — plan + script + render done
+|- Video 195: Arc Length and Curvature — plan + script + render done (2026-08-14)
+  - Plan: planning/video-195-arc-length-curvature.md (8 scenes)
+  - Script: scripts/graduate/video-195-arc-length-curvature.py (8 scenes, compile-checked)
+  - Render: 480p15, 96.6s, 166 animations, 15 TTS segments

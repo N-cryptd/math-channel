@@ -1194,3 +1194,75 @@ No direct competitor videos found on recent differential geometry topics from ma
 **What makes us different:** Systematic, animated, building-block approach to differential geometry — starting from curves in R^n and building up to Stokes' theorem on manifolds. No competitor offers this complete animated treatment.
 
 ---
+
+### [2026-08-14] Video 196: Frenet-Serret Frame — Competitive Analysis
+
+**Competitor Videos Found (4 relevant):**
+
+1. **Dr. Trefor Bazett** — "Torsion: How curves twist in space, and the TNB or Frenet Frame"
+   - 203K views, Oct 2019, 611K subs
+   - Level: Undergraduate (Calculus III / Multivariable)
+   - Style: Whiteboard tablet, colorful hand-drawn diagrams
+   - Structure: 7/10 — clear section flow from tangent → normal → binormal → torsion → formulas
+   - Pacing: 7/10 — balances intuition with formula, good breathing room
+   - Visual Techniques: 5/10 — hand-drawn 3D curve diagrams, color-coded TNB vectors
+   - Narration: 8/10 — enthusiastic, conversational, good at connecting formulas to geometry
+   - Engagement: 7/10 — "how curves twist in space" hook is strong, torsion concept is well-motivated
+
+2. **Daniel Walsh** — "A Visual Intro to Curves and the Frenet Frame" (SOME2 entry)
+   - 37K views, Aug 2022, 1.1K subs
+   - Level: Undergraduate to graduate crossover
+   - Style: Custom 2D animations (Manim-like but custom renderer), narrator + collaborator
+   - Structure: 9/10 — excellent flow: circles/curvature → 3D → Frenet frame → formulas → visualization → fundamental theorem
+   - Pacing: 9/10 — builds intuition before formalism, excellent pedagogical sequencing
+   - Visual Techniques: 9/10 — beautiful custom animations of osculating circles, TNB frame moving along curves, 3D perspective
+   - Narration: 7/10 — clear but could be more energetic
+   - Engagement: 8/10 — "Hidden Figures" reference, applications hook, fundamental theorem as climax
+
+3. **Faculty of Khan** — "The Frenet-Serret Formulas | Differential Geometry"
+   - 7.7K views, Aug 2024, 104K subs
+   - Level: Graduate (part of a dedicated DG playlist)
+   - Style: Digital whiteboard (GoodNotes-style), structured derivation
+   - Structure: 8/10 — formula derivation + worked example, clean two-part structure
+   - Pacing: 5/10 — leans formal, less intuition building
+   - Visual Techniques: 4/10 — whiteboard only, minimal visual aids
+   - Narration: 6/10 — clear but dry, lecture-style
+   - Engagement: 5/10 — no strong hook, straight into derivation
+
+4. **bprp calculus basics** — "Frenet-Serret formulas (proof)"
+   - 9.4K views, Jul 2024, 233K subs
+   - Level: Undergraduate (Calc III)
+   - Style: Physical whiteboard, handwritten, proof-focused
+   - Structure: 6/10 — proof-first approach, then t-parametrization version
+   - Pacing: 6/10 — fast-paced computation, less geometric interpretation
+   - Visual Techniques: 3/10 — whiteboard with colored markers only
+   - Narration: 7/10 — energetic, bprp's signature style
+   - Engagement: 6/10 — relies on existing audience, no special hook
+
+**Key Insights:**
+
+1. **Massive gap for animated graduate-level content.** Dr. Trefor and bprp are undergrad-level; Faculty of Khan is grad but whiteboard-only. NO Manim-animated DG content exists beyond Walsh's SOME2 entry (which is standalone, not a playlist).
+
+2. **Daniel Walsh's approach is the gold standard for this topic.** His custom animations of TNB vectors moving along a curve are exactly what we should emulate with Manim. The progression from 2D curvature → 3D → Frenet frame is pedagogically excellent.
+
+3. **Torsion is the "aha moment."** Dr. Trefor's framing of torsion as "how much the curve twists" vs curvature as "how much it bends" is the key conceptual distinction viewers remember. We should build our video around this contrast.
+
+4. **The fundamental theorem is the natural climax.** Walsh ends with it and it provides satisfying closure — curvature + torsion uniquely determine the curve (up to rigid motion).
+
+**Techniques to Adopt:**
+- Build from 2D (tangent+normal) to 3D (add binormal) — mirrors viewer's existing intuition
+- Animate TNB vectors moving along a curve (Manim 3D is perfect for this)
+- Contrast curvature (bending) vs torsion (twisting) as the conceptual anchors
+- End with the fundamental theorem of space curves for closure
+
+**Techniques to Avoid/Adapt:**
+- Don't start with formal derivations (Faculty of Khan approach) — start with geometric intuition
+- Don't make it proof-heavy (bprp approach) — our audience wants understanding, not proof mechanics
+- Avoid dry lecture tone; keep narration conversational and discovery-oriented
+
+**Thumbnail Observations (from metadata, vision tool unavailable):**
+- Dr. Trefor: Blue background with 3D curve diagram and TNB vectors color-coded
+- Daniel Walsh: Dark background with animated curve and "Visual Intro" text
+- Faculty of Khan: White/light background with formula text overlay
+
+**Our Positioning:** First animated, systematic Frenet-Serret video in a complete differential geometry playlist. Graduate-level rigor with undergraduate-level visual intuition. Manim 3D animations of TNB frame moving along curves — something no competitor offers.

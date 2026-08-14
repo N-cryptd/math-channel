@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-12
+**Last updated:** 2026-08-14
 
-**Completed Videos (193 scripts, 193 renders)**
+**Completed Videos (193 scripts, 197 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -252,7 +252,7 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Differential Geometry (Videos 194–206): Video 194 complete, 195-206 backlog
+- Differential Geometry (Videos 194–206): Videos 194-199 scripted, 198 rendering, 200-206 backlog
 
 
 ## Completed Playlists
@@ -289,11 +289,11 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 194 | Curves in R^n | ✅ | ✅ |
-| 195 | Arc Length & Curvature | ✅ | — |
-| 196 | Frenet-Serret Frame | 📋 | — |
-| 197 | Surfaces in R^3 | 📋 | — |
-| 198 | First Fundamental Form | 📋 | — |
-| 199 | Second Fundamental Form | 📋 | — |
+| 195 | Arc Length & Curvature | ✅ | ✅ |
+| 196 | Frenet-Serret Frame | ✅ | ✅ |
+| 197 | Surfaces in R^3 | ✅ | ✅ |
+| 198 | First Fundamental Form | ✅ | — |
+| 199 | Second Fundamental Form | ✅ | — |
 | 200 | Gaussian Curvature | 📋 | — |
 | 201 | Geodesics | 📋 | — |
 | 202 | Gauss-Bonnet Theorem | 📋 | — |
