@@ -289,7 +289,7 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 194 | Curves in R^n | ✅ | ✅ |
-| 195 | Arc Length & Curvature | 📋 | — |
+| 195 | Arc Length & Curvature | ✅ | — |
 | 196 | Frenet-Serret Frame | 📋 | — |
 | 197 | Surfaces in R^3 | 📋 | — |
 | 198 | First Fundamental Form | 📋 | — |

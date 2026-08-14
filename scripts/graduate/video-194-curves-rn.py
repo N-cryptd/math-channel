@@ -91,6 +91,7 @@ class Video194_CurvesRn(Scene):
             r"\gamma", r": [a, b] \to \mathbb{R}^n",
             font_size=HEADING_SIZE, color=WHITE,
         )
+        self.ly.formula_box(defn, PRIMARY)
         self.ly.safe_place(defn, direction=DOWN, anchor=title, buff=0.5)
         self.play(Write(defn), run_time=NORMAL)
 
@@ -113,21 +114,20 @@ class Video194_CurvesRn(Scene):
         )
         title2 = self.ly.title("Example: Unit Circle")
 
-        axes = Axes(
-            x_range=[-1.8, 1.8, 1], y_range=[-1.8, 1.8, 1],
-            x_length=4, y_length=4,
-            axis_config={"color": DIM, "stroke_width": 1.5},
-        ).shift(DOWN * 0.5)
-        self.ly.center_in_content(axes)
-        self.play(Create(axes), run_time=FAST)
-
         circle_formula = MathTex(
             r"\gamma(t) = (\cos t,\, \sin t), \quad t \in [0, 2\pi]",
             font_size=BODY_SIZE, color=SECONDARY,
         )
-        circle_formula.to_edge(UP, buff=0.3)
-        ensure_fits(circle_formula)
+        self.ly.safe_place(circle_formula, direction=DOWN, anchor=title2, buff=0.5)
         self.play(Write(circle_formula), run_time=FAST)
+
+        axes = Axes(
+            x_range=[-1.8, 1.8, 1], y_range=[-1.8, 1.8, 1],
+            x_length=4, y_length=4,
+            axis_config={"color": DIM, "stroke_width": 1.5},
+        )
+        self.ly.center_in_content(axes)
+        self.play(Create(axes), run_time=FAST)
 
         circle = Circle(radius=1.5, color=PRIMARY, stroke_width=2)
         circle.move_to(axes.get_center())
@@ -177,8 +177,7 @@ class Video194_CurvesRn(Scene):
 
         # Label z-axis direction
         z_label = Text("z direction", font_size=LABEL_SIZE, color=DIM, font=SANS)
-        z_label.to_edge(DOWN, buff=0.3)
-        ensure_fits(z_label)
+        self.ly.safe_place(z_label, direction=DOWN, anchor=helix_2d, buff=0.3)
         self.play(FadeIn(z_label), run_time=FAST)
 
         self.wait(1.0)
@@ -202,6 +201,7 @@ class Video194_CurvesRn(Scene):
             r"\gamma'(t) = \left(\frac{dx_1}{dt},\, \frac{dx_2}{dt},\, \ldots,\, \frac{dx_n}{dt}\right)",
             font_size=BODY_SIZE, color=WHITE,
         )
+        self.ly.formula_box(vel_formula, ACCENT)
         self.ly.safe_place(vel_formula, direction=DOWN, anchor=title, buff=0.5)
         self.play(Write(vel_formula), run_time=NORMAL)
 
@@ -277,6 +277,7 @@ class Video194_CurvesRn(Scene):
             r"\gamma \text{ is regular } \iff \gamma'(t) \neq 0 \text{ for all } t",
             font_size=HEADING_SIZE, color=WHITE,
         )
+        self.ly.formula_box(defn, PRIMARY)
         self.ly.safe_place(defn, direction=DOWN, anchor=title, buff=0.5)
         self.play(Write(defn), run_time=NORMAL)
 
@@ -301,12 +302,21 @@ class Video194_CurvesRn(Scene):
         )
         title2 = self.ly.title("Non-Regular Example: Cusp")
 
+        cusp_label = MathTex(
+            r"\gamma(t) = (t^3,\, t^2)",
+            font_size=BODY_SIZE, color=RED,
+        )
+        self.ly.formula_box(cusp_label, RED)
+        self.ly.safe_place(cusp_label, direction=DOWN, anchor=title2, buff=0.5)
+        self.play(Write(cusp_label), run_time=FAST)
+
         axes2 = Axes(
             x_range=[-1.5, 1.5, 0.5], y_range=[-0.3, 1.5, 0.5],
             x_length=5, y_length=3.5,
             axis_config={"color": DIM, "stroke_width": 1.5},
         )
         self.ly.center_in_content(axes2)
+        self.play(Create(axes2), run_time=FAST)
 
         cusp = ParametricFunction(
             lambda t: axes2.c2p(t ** 3, t ** 2),
@@ -314,22 +324,45 @@ class Video194_CurvesRn(Scene):
             color=RED,
             stroke_width=2.5,
         )
-        cusp_label = MathTex(
-            r"\gamma(t) = (t^3,\, t^2)",
-            font_size=BODY_SIZE, color=RED,
-        )
-        cusp_label.to_edge(UP, buff=0.3)
-        ensure_fits(cusp_label)
-        self.play(Write(cusp_label), run_time=FAST)
         self.play(Create(cusp), run_time=2.5, rate_func=linear)
 
-        cusp_dot = Dot(axes2.c2p(0, 0), color=ACCENT, radius=0.06)
-        cusp_note = Text(
-            "Cusp at t=0: gamma prime of zero equals zero!",
-            font_size=LABEL_SIZE, color=ACCENT, font=SANS,
+        self.wait(1.0)
+        self.ly.clear()
+
+        # Cusp detail
+        self.add_subcaption(
+            "At t equals zero the derivative vanishes, creating "
+            "a cusp. The curve is not regular here because the "
+            "tangent direction changes abruptly.",
+            duration=6,
         )
-        cusp_note.next_to(cusp_dot, RIGHT, buff=0.3)
-        self.play(FadeIn(cusp_dot), FadeIn(cusp_note), run_time=NORMAL)
+        title3 = self.ly.title("Cusp at t=0")
+
+        axes3 = Axes(
+            x_range=[-1.5, 1.5, 0.5], y_range=[-0.3, 1.5, 0.5],
+            x_length=5, y_length=3.5,
+            axis_config={"color": DIM, "stroke_width": 1.5},
+        )
+        self.ly.center_in_content(axes3)
+        self.play(Create(axes3), run_time=FAST)
+
+        cusp2 = ParametricFunction(
+            lambda t: axes3.c2p(t ** 3, t ** 2),
+            t_range=[-1.2, 1.2],
+            color=RED,
+            stroke_width=2.5,
+        )
+        self.play(Create(cusp2), run_time=2.0, rate_func=linear)
+
+        cusp_dot = Dot(axes3.c2p(0, 0), color=ACCENT, radius=0.06)
+        self.play(FadeIn(cusp_dot), run_time=FAST)
+
+        cusp_note = Text(
+            "gamma prime of zero equals zero!",
+            font_size=BODY_SIZE, color=ACCENT, font=SANS,
+        )
+        self.ly.safe_place(cusp_note, direction=DOWN, anchor=cusp_dot, buff=0.3)
+        self.play(FadeIn(cusp_note, shift=LEFT * 0.15), run_time=NORMAL)
 
         self.wait(1.5)
         self.ly.clear()
@@ -353,6 +386,7 @@ class Video194_CurvesRn(Scene):
             r"\alpha(s) = \gamma(\phi(s)), \quad \phi'(s) > 0",
             font_size=HEADING_SIZE, color=WHITE,
         )
+        self.ly.formula_box(formula, SECONDARY)
         self.ly.safe_place(formula, direction=DOWN, anchor=title, buff=0.5)
         self.play(Write(formula), run_time=NORMAL)
 

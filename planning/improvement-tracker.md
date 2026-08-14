@@ -339,5 +339,12 @@ All 183 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-8
 | 192 | Numerical Methods for PDEs | 261 | YES | YES (section_divider+formula_box) | N/A | Added 5 section_divider (scenes 1-5). Added 3 formula_box (central diff, 2nd diff, CFL). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(5), SANS(18), ly.clear(8), safe_place(5). Zero .shift()/.to_edge() for content. |
 | 193 | PDE Summary | 204 | YES | YES (section_divider) | N/A | Added 4 section_divider (scenes 1-4). Zero formula_box (summary video, formulas already displayed). setup_bg(2), play_intro(2), play_outro(1), progressive_reveal(3), SANS(12), ly.clear(6), safe_place(3). Zero .shift()/.to_edge() for content. |
 
+### Graduate: Differential Geometry (Videos 194–195) — v2 Analysis + Improvement
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 194 | Curves in R^n | 480 | YES | YES (positioning + content budget + formula_box) | N/A | v2-compliant base. Fixed 4 .shift()/.to_edge() → safe_place/center_in_content. Split cusp scene (6→3+4 items, added sub-scene). Added 4 formula_box (parametrized curve def, velocity, regular curve, reparametrization). setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(3), section_divider(5), SANS(20+), ly.clear(14), safe_place(10), two_columns(1), center_in_content(3). Zero .shift()/.to_edge() for content. Competitive analysis: green-field topic (no animated competitor playlist). |
+| 195 | Arc Length & Curvature | 495 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(4), section_divider(2), SANS(30+), ly.clear(17), safe_place(15). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. All scenes ≤5 items. Content budget fully respected. — no improvement needed |
+
 ## Last Updated
-2026-08-13 (Videos 184-193 analyzed + improved — all 10 PDE playlist scripts received section_divider + formula_box additions. All 193 videos analyzed.)
+2026-08-14 (Videos 194-195 analyzed. Video 194 improved: fixed 4 manual positioning violations, split cusp content budget violation, added 4 formula_box. Video 195 already v2-compliant. All 195 videos analyzed.)
