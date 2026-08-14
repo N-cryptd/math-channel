@@ -252,7 +252,7 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Differential Geometry (Videos 194–206): Videos 194-199 scripted, 198 rendering, 200-206 backlog
+- Differential Geometry (Videos 194–206): Videos 194-200 scripted, 200 rendering, 201-206 backlog
 
 
 ## Completed Playlists
@@ -292,9 +292,9 @@
 | 195 | Arc Length & Curvature | ✅ | ✅ |
 | 196 | Frenet-Serret Frame | ✅ | ✅ |
 | 197 | Surfaces in R^3 | ✅ | ✅ |
-| 198 | First Fundamental Form | ✅ | — |
-| 199 | Second Fundamental Form | ✅ | — |
-| 200 | Gaussian Curvature | 📋 | — |
+| 198 | First Fundamental Form | ✅ | ✅ |
+| 199 | Second Fundamental Form | ✅ | ✅ |
+| 200 | Gaussian Curvature | ✅ | — |
 | 201 | Geodesics | 📋 | — |
 | 202 | Gauss-Bonnet Theorem | 📋 | — |
 | 203 | Manifolds Intro | 📋 | — |

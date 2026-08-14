@@ -6,78 +6,107 @@
 **Script:** scripts/graduate/video-199-second-fundamental-form.py
 
 ## Prerequisites
-- Video 197: Surfaces in R³ (parametrizations, tangent plane, normal vector)
-- Video 198: First Fundamental Form (coefficients E, F, G, metric tensor)
-- Video 196: Frenet-Serret Frame (curvature of curves)
-- Linear Algebra: Self-adjoint operators, eigenvalues, quadratic forms
+- Video 198: First Fundamental Form (metric tensor, E/F/G coefficients, intrinsic geometry)
+- Video 197: Surfaces in R³ (parametrizations, regularity, tangent plane, unit normal)
+- Video 196: Frenet-Serret Frame (curvature of curves as motivation)
+- Linear Algebra: Linear maps, symmetric matrices, eigenvalues/eigenvectors
 
 ## Learning Objectives
-1. Define the shape operator (Weingarten map) as the differential of the Gauss map
-2. Define the second fundamental form coefficients e, f, g (or ℓ, m, n)
-3. Compute principal curvatures as eigenvalues of the shape operator
-4. Define mean curvature H and Gaussian curvature K in terms of the second fundamental form
-5. Understand the geometric meaning: how the surface bends in space (extrinsic)
+1. Understand the second fundamental form as a bilinear form on the tangent plane that measures how the surface curves in space
+2. Define the shape operator (Weingarten map) S: T_pS → T_pS via the differential of the Gauss map
+3. Compute the second fundamental form coefficients L, M, N from the parametrization
+4. Relate the second fundamental form to the shape operator: II(v,w) = ⟨S(v), w⟩ = I(S(v), w)
+5. Define principal curvatures as eigenvalues of the shape operator
+6. Express Gaussian and mean curvature in terms of the first and second fundamental forms
 
-## Scene Plan (8 scenes, ~12 min target)
+## Scene Plan (9 scenes, ~13 min target)
 
-### Scene 1: Hook — Intrinsic vs Extrinsic (~45s)
-- "The first fundamental form tells you how to measure things on the surface — distances, angles, areas. But it says nothing about how the surface sits in space. Two surfaces can have the same first fundamental form but look completely different. The second fundamental form captures this missing information: how the surface curves, bends, and twists in three-dimensional space."
+### Scene 1: Hook — How Surfaces Bend (~50s)
+**Visual:** Side-by-side comparison of a sphere and a saddle, with normal vectors bending differently.
+- "The first fundamental form told us how to measure distances, angles, and areas on a surface. But it said nothing about curvature — about how the surface bends in space. A flat sheet of paper and a cylinder wrapped from that paper have the same first fundamental form, yet they look completely different. The second fundamental form is the missing piece: it measures exactly how a surface curves."
+- Contrast: cylinder (bends in one direction only) vs. sphere (bends equally) vs. saddle (bends differently in different directions).
+**Content budget:** 3 elements max (title + 2 contrast labels)
 
 ### Scene 2: Intro + Section Divider (~20s)
 - play_intro("Second Fundamental Form", "Differential Geometry")
-- Section divider: "1 — The Gauss Map"
+- Section divider: "1 — The Shape Operator"
 
-### Scene 3: The Gauss Map and Shape Operator (~90s)
-- The Gauss map N: S → S² sends each point to its unit normal
-- The shape operator S_p: T_p S → T_p S is defined as S_p(v) = -D N_p(v)
-  (the negative differential of the Gauss map)
-- S is self-adjoint: I(S(v), w) = I(v, S(w)) for all tangent vectors
-- "The Gauss map sends each point on the surface to its unit normal vector on the unit sphere. The shape operator is the negative derivative of this map. It is a linear map from the tangent plane to itself, and it is self-adjoint with respect to the first fundamental form."
+### Scene 3: The Shape Operator (~100s)
+**Visual:** Build from the Gauss map N: S → S² and its differential.
+- The Gauss map sends each point on the surface to its unit normal vector on the sphere.
+- The differential dN_p maps tangent vectors to tangent vectors (not obvious, but follows from N·sigma_u = 0).
+- The shape operator S_p = −dN_p: T_pS → T_pS is a linear map on the tangent plane.
+- Geometric interpretation: S(v) tells you how the normal changes as you move in direction v.
+- "The shape operator is the negative differential of the Gauss map. It takes a tangent vector and returns another tangent vector that points toward the direction of greatest normal change. This is the fundamental extrinsic invariant of the surface."
+**Content budget:** title + N formula + dN formula + S definition + interpretation = 5 items max
 
-### Scene 4: Second Fundamental Form Coefficients (~80s)
-- The second fundamental form: II(v, w) = I(S(v), w) = ⟨N, d²σ⟩
-- Coefficients: e = σ_uu · N, f = σ_uv · N, g = σ_vv · N
-- Matrix: II = [[e, f], [f, g]]
-- Alternative formula: II(v, w) = -⟨dN(v), w⟩ (since N is unit)
-- "The second fundamental form is a quadratic form on the tangent plane defined by the shape operator. The three coefficients e, f, and g measure the normal components of the second partial derivatives."
+### Scene 4: The Second Fundamental Form — Definition (~90s)
+**Visual:** The bilinear form II(v,w) = ⟨S(v), w⟩ = −⟨dN(v), w⟩.
+- The second fundamental form II_p is the bilinear form associated to S via the first fundamental form.
+- For tangent vectors v = a*sigma_u + b*sigma_v and w = c*sigma_u + d*sigma_v:
+  II_p(v, w) = L*a*c + M*(a*d + b*c) + N*b*d
+- Matrix form: II = [[L, M], [M, N]]
+- "The second fundamental form is a quadratic form on the tangent plane, just like the first. But while the first form measures intrinsic quantities, the second form measures extrinsic ones: how the surface sits in three-dimensional space."
+**Content budget:** title + II formula + matrix form + interpretation = 4 items
 
-### Scene 5: Principal Curvatures (~90s)
-- The shape operator has real eigenvalues (self-adjoint + spectral theorem)
-- The eigenvalues k₁, k₂ are the principal curvatures
-- The eigenvectors are the principal directions
-- Geometric meaning: the principal curvatures are the maximum and minimum normal curvatures
-- Normal curvature in direction v: k_n(v) = II(v, v) / I(v, v)
-- Euler's formula: k_n(theta) = k₁ cos²θ + k₂ sin²θ
+### Scene 5: Computing L, M, N (~80s)
+**Visual:** Derivation from the parametrization.
+- L = σ_uu · N, M = σ_uv · N, N = σ_vv · N
+- These are the dot products of the second partial derivatives with the unit normal.
+- Alternative: L = σ_uu · (σ_u × σ_v) / |σ_u × σ_v|, etc.
+- Comparison with E, F, G (first fundamental form uses first derivatives dot first derivatives).
+- "The coefficients L, M, and N are computed from the second derivatives of the parametrization projected onto the normal direction. While E, F, and G come from the first derivatives, these come from the second derivatives."
+**Content budget:** title + L/M/N formulas + comparison note = 4 items
 
-### Scene 6: Mean and Gaussian Curvature (~80s)
-- Mean curvature: H = (k₁ + k₂) / 2 = (eG - 2fF + gE) / (2(EG - F²))
-- Gaussian curvature: K = k₁ · k₂ = (eg - f²) / (EG - F²)
-- H = 0: minimal surface (soap films)
-- K = 0: one principal curvature is zero (cylinder, cone)
-- K > 0: both curvatures same sign (sphere, ellipsoid)
-- K < 0: curvatures opposite sign (saddle, hyperboloid)
+### Scene 6: Principal Curvatures (~90s)
+**Visual:** The shape operator as a 2x2 matrix; its eigenvalues κ₁, κ₂.
+- The shape operator is symmetric (dN is self-adjoint), so it has real eigenvalues.
+- The eigenvalues κ₁ and κ₂ are the principal curvatures.
+- The eigenvectors are the principal directions.
+- Geometric meaning: κ₁ is the maximum normal curvature, κ₂ is the minimum (for all directions in the tangent plane).
+- "The principal curvatures are the eigenvalues of the shape operator. They tell you the maximum and minimum amount of bending at a point on the surface. A sphere has equal principal curvatures everywhere. A saddle has one positive and one negative."
+**Content budget:** title + eigenvalue equation + κ₁/κ₂ definition + geometric meaning = 4 items
 
-### Scene 7: Example — Sphere and Cylinder (~80s)
-- Sphere: e = -R, f = 0, g = -R sin²φ... wait, for outward normal N = sigma/R:
-  e = sigma_uu · N = -R sin²φ · (1/R) · R = ... actually e = -R sin²φ·cos(something)...
-  Simplify: For sphere with outward N, k₁ = k₂ = 1/R, H = 1/R, K = 1/R²
-- Cylinder: k₁ = 1/R (circular cross-section), k₂ = 0 (along axis)
-  H = 1/(2R), K = 0
+### Scene 7: Gaussian and Mean Curvature (~90s)
+**Visual:** K = κ₁κ₂, H = (κ₁ + κ₂)/2 expressed via I and II matrices.
+- Gaussian curvature: K = det(S) = det(II) / det(I) = (LN − M²) / (EG − F²)
+- Mean curvature: H = (1/2)tr(S) = (EN − 2FM + GL) / (2(EG − F²))
+- Gauss's Theorema Egregium preview: K depends only on E, F, G and their derivatives — it is intrinsic!
+- "Gaussian curvature is the determinant of the shape operator, and it equals L N minus M squared over E G minus F squared. By the Theorema Egregium, Gaussian curvature depends only on the first fundamental form, making it an intrinsic property of the surface."
+**Content budget:** title + K formula + H formula + Theorema Egregium note = 4 items
 
-### Scene 8: Summary and Outro (~60s)
+### Scene 8: Example — Sphere and Saddle (~100s)
+**Visual:** Compute II for sphere (simple) and saddle (mixed term).
+- Sphere: σ(θ,φ) = (R sin φ cos θ, R sin φ sin θ, R cos φ)
+  - N = (sin φ cos θ, sin φ sin θ, cos φ) = σ/R
+  - L = −R sin²φ, M = 0, N = −R
+  - K = (LN − M²)/(EG − F²) = (R² sin²φ)/(R⁴ sin²φ) = 1/R²
+  - Principal curvatures: κ₁ = κ₂ = 1/R (umbilic point)
+- Saddle: σ(u,v) = (u, v, uv)
+  - N = (−v, −u, 1)/√(1 + u² + v²)
+  - At origin: L = 0, M = 1, N = 0
+  - K = (0 − 1)/(1 − 0) = −1 (negative! hyperbolic)
+  - Principal curvatures: κ₁ = 1, κ₂ = −1
+- "The sphere has equal positive curvature everywhere, an umbilic point. The saddle has one positive and one negative principal curvature, making its Gaussian curvature negative. These examples show how the second fundamental form distinguishes shapes that the first form cannot."
+**Content budget:** Split into two sub-scenes with ly.clear() between them. Max 4 items per sub-scene.
+
+### Scene 9: Summary and Outro (~70s)
 - Key results:
-  1. Gauss map N: S → S², shape operator S = -DN
-  2. II = [[e, f], [f, g]] where e = σ_uu · N, etc.
-  3. Principal curvatures: eigenvalues of S
-  4. Mean curvature H = (k₁+k₂)/2, Gaussian K = k₁·k₂
-  5. Extrinsic: measures how surface sits in space
-- Preview: Video 200 — Gaussian Curvature (Theorema Egregium!)
+  1. Shape operator S = −dN: measures how the normal changes along the surface
+  2. II = [[L, M], [M, N]]: the second fundamental form (extrinsic)
+  3. L = σ_uu · N, M = σ_uv · N, N = σ_vv · N
+  4. Principal curvatures κ₁, κ₂ are eigenvalues of S
+  5. K = det(S) = (LN − M²)/(EG − F²), H = tr(S)/2
+  6. II is extrinsic (unlike I which is intrinsic)
+- Preview: Next video (200) — Gaussian Curvature (Theorema Egregium, Gauss's equation)
 - play_outro
 
 ## Competitive Analysis Reference
-Per channel-analysis/improvements.md: Green-field topic.
-- Dr. Trefor Bazett: "Second Fundamental Form" whiteboard lecture
-- Faculty of Khan: Shape operator derivation
-- 3B1B: "Gauss's Remarkable Theorem" (intuitive, not formula-heavy)
+Per channel-analysis/improvements.md (2026-08-14):
+- **Market gap confirmed:** No animated video covers the complete II → S → principal curvatures → Gaussian/mean curvature chain.
+- **Mathemaniac** (143K views): Excellent shape operator intuition via normal field visualization but skips the second fundamental form entirely. We adopt their visual approach (normal field arrows) for our Scene 3.
+- **Cofiber** (8.8K views): Good principal curvature visualization via osculating circles but no formal bilinear form. We adopt their visual curvature circle idea for Scene 6.
+- **Mike the Mathematician** (1.2K views): Most rigorous formal treatment but whiteboard-only. We adopt the definition precision but provide visual intuition throughout.
+- **Justin Solomon** (9K views): Applied CS perspective. We reference the geometry processing connection briefly.
 
-Our approach: Progressive derivation of the second fundamental form, emphasizing the contrast with the intrinsic first form. Use the sphere/cylinder comparison to show how extrinsic geometry differs.
+Our approach: First animated walkthrough covering the complete chain: shape operator intuition → second fundamental form → coefficients → principal curvatures → Gaussian/mean curvature. Progressive derivation with geometric motivation at each step. Two worked examples (sphere + saddle) that no competitor animates.
