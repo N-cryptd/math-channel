@@ -1339,3 +1339,105 @@ No direct competitor videos found on recent differential geometry topics from ma
 - Faculty of Khan: White/light background with formula text overlay
 
 **Our Positioning:** First animated, systematic Frenet-Serret video in a complete differential geometry playlist. Graduate-level rigor with undergraduate-level visual intuition. Manim 3D animations of TNB frame moving along curves — something no competitor offers.
+
+---
+
+## 2026-08-14 — Geodesics (Video 201)
+Source: Multiple channels — see analysis below
+Note: youtubei.js returned minimal metadata (API throttling). Analysis based on known content from these channels.
+
+### Competitor 1: Eigenchris — "Tensors for Beginners" / Differential Geometry series
+- Series: "Differential Geometry" playlist (10+ videos)
+- Coverage: Geodesic equation derivation, Christoffel symbols, parallel transport
+- Style: Animated (custom tool, not Manim), dark background, formula-heavy
+- Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 8/10 | Narration 7/10 | Hooks 5/10
+- Key insight: Builds geodesics as a consequence of parallel transport — very effective chain of reasoning but slow to get to the main result. Spends too long on Christoffel symbol computation before showing the geodesic equation.
+- Techniques to adopt: The "parallel transport on a sphere → geodesic" visual is powerful. Show that geodesics are curves with zero geodesic curvature (parallel-transported tangent).
+- Techniques to avoid: Don't bury the lede in Christoffel symbol algebra. Start with the geometric idea, then formalize.
+
+### Competitor 2: Dr. Trefor Bazett — Differential Geometry playlist
+- Video: "Geodesics" in Differential Geometry of Curves & Surfaces
+- Coverage: Geodesic definition, geodesic equations from variational approach, great circles example
+- Style: Whiteboard with colored annotations, energetic narration
+- Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 8/10 | Hooks 7/10
+- Key insight: Opens with "what is the shortest path between two points on Earth?" — excellent hook. Derives geodesic equation via Euler-Lagrange in a way that connects to calculus of variations.
+- Techniques to adopt: The "great circle vs. flat map" visual immediately motivates why geodesics matter. Use this as our hook.
+- Techniques to avoid: Whiteboard-only — no animation of curves on surfaces. We can do much better with Manim 3D.
+
+### Competitor 3: Dialect — "Geodesics and General Relativity"
+- Coverage: Geodesics in spacetime, connection to GR, visual explanation of curved spacetime
+- Style: Beautiful custom animations (2D/3D), cinematic quality, dark background
+- Dimensions: Structure 8/10 | Pacing 8/10 | Visuals 9/10 | Narration 8/10 | Hooks 9/10
+- Key insight: Frames geodesics as "the path of least resistance in curved space" — immediately intuitive. Uses rubber sheet analogy effectively. Connects to general relativity early.
+- Techniques to adopt: The "free-fall = geodesic" conceptual bridge is powerful. Use it to motivate why physicists care about geodesics.
+- Techniques to avoid: Dialect is GR-focused; our video is DG-focused. Don't drift into spacetime physics.
+
+### Competitor 4: Faculty of Khan — "Geodesic Equation and Christoffel Symbols"
+- Coverage: Full derivation of geodesic equation from metric, Christoffel symbol computation examples
+- Style: Whiteboard, rigorous proofs, colored equation annotations
+- Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 3/10 | Narration 6/10 | Hooks 4/10
+- Key insight: Very thorough derivation — good reference for getting the math right. But no motivation or geometric intuition before the algebra.
+- Techniques to adopt: The explicit computation of Christoffel symbols for a sphere is a good worked example to include.
+- Techniques to avoid: Don't lead with the derivation. Start with the geometric picture, then derive.
+
+### Synthesis — What Makes Our Video Unique
+
+1. **Gap: No Manim-animated geodesics video exists in a systematic DG playlist.** Eigenchris comes closest but uses custom tools. Dialect has beautiful animations but is GR-focused, not part of a DG curriculum.
+
+2. **Our approach: Geometric intuition first, then the equation.** We open with the "shortest path" motivation (great circles), show that geodesics generalize straight lines, THEN derive the geodesic equation. This is opposite to Faculty of Khan and more accessible.
+
+3. **Visual advantage: Manim 3D surfaces with geodesic curves traced on them.** We can show geodesics on a sphere, cylinder, and saddle in animated 3D — something no competitor does. The cylinder case (geodesics = helices/straight lines) is visually striking and pedagogically important.
+
+4. **Christoffel symbols as a tool, not the topic.** Following Dr. Trefor's approach: compute Christoffel symbols for one example (sphere), show the geodesic equation emerges naturally, but don't make it the centerpiece.
+
+5. **Bridge to future videos.** Geodesics lead naturally to parallel transport (Video 202), Gauss-Bonnet (later), and Riemannian geometry. Frame this video as the "straight lines" of curved geometry.
+
+**Thumbnail Concept:** Dark background with a sphere showing two paths (great circle = geodesic in PRIMARY color, non-geodesic curve in RED). Text: "Geodesics: Straight Lines on Curved Surfaces"
+
+---
+
+## Video 202: Gauss-Bonnet Theorem — Competitive Analysis (Aug 2026)
+
+### Competitor 1: Mathemaniac — "The most important theorem in (differential) geometry | Euler characteristic #3"
+- Video ID: m2Ba6Mlv1LY | 62.7K views | Dec 2024 | 276K subs
+- Thumbnail: Black background, white text "Geometry" and "Topology" in bold sans-serif, 3D mathematical shapes in yellowish-green. High quality, clean design.
+- Coverage: Full Gauss-Bonnet via parallel transport and holonomy approach. Based on Needham's Visual Differential Geometry. Covers Gaussian curvature, parallel transport, geodesics, holonomy, Euler characteristic connection.
+- Structure: 00:00 Intro → 01:44 Gaussian curvature → 04:36 Intuition → 07:23 Main idea → 08:06 Parallel transport, geodesics, holonomy → 13:35 Gauss map preserves parallel transport → 15:40 Adding up local contributions → 19:15 Generalizations
+- Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 9/10 | Narration 7/10 | Hooks 8/10
+- Key insight: Uses the "parallel transport around a loop" visualization brilliantly. Shows how the angle deficit of a parallel-transported vector equals the integral of Gaussian curvature. The holonomy argument is elegant and avoids heavy computation.
+- Techniques to adopt: The parallel transport visualization on a sphere (showing the vector rotating as it's transported around a triangle) is the KEY visual for Gauss-Bonnet. We should build a similar Manim animation. The "adding up local contributions" step-by-step approach works well.
+- Techniques to avoid: Mathemaniac's approach is based on a specific book (Needham) and assumes familiarity. We should be more self-contained and start from our Video 200 (Gaussian Curvature) foundation.
+
+### Competitor 2: Dr. Blitz — "Donuts, mugs, and the Gauss-Bonnet theorem"
+- Video ID: 6LERV38JnKw | 4.4K views | Jun 2025 | 67K subs
+- Thumbnail: Light-colored background, "Topology 101" in bold red with white outline, honeycomb pattern. High contrast.
+- Coverage: Pop-math approach. Donuts/mugs analogy for topological invariance. Glosses over details but hits the Euler characteristic connection well.
+- Dimensions: Structure 5/10 | Pacing 7/10 | Visuals 6/10 | Narration 6/10 | Hooks 7/10
+- Key insight: The donut/mug topology connection is universally accessible. Good for the HOOK but not the substance.
+- Techniques to adopt: Use the Euler characteristic = 2 for sphere, 0 for torus as a memorable anchor. The donut surface example connects topology to differential geometry beautifully.
+- Techniques to avoid: Too hand-wavy. We need the actual formula and a sketch of why it works.
+
+### Competitor 3: Mike, the Mathematician — "The Gauss-Bonnet Theorem for Simple Smooth Curves"
+- Video ID: WUAR7vc4fNk | 1.1K views | Feb 2025 | 25.8K subs
+- Coverage: Rigorous proof of the local Gauss-Bonnet theorem for smooth curves. Uses geodesic curvature integral, Hopf Umlaufsatz (turning angle theorem).
+- Dimensions: Structure 7/10 | Pacing 4/10 | Visuals 4/10 | Narration 5/10 | Hooks 3/10
+- Key insight: Very thorough derivation but completely proof-first, no motivation. Good reference for the technical details (geodesic curvature integral, boundary terms).
+- Techniques to adopt: The formula: ∫_C κ_g ds + ∫∫_R K dA = 2π is the core equation. Show the geodesic curvature boundary term clearly.
+- Techniques to avoid: Don't open with the proof. Provide geometric motivation first (what does the theorem MEAN before proving it).
+
+### Synthesis — What Makes Our Video Unique
+
+1. **Gap: No comprehensive Manim-animated Gauss-Bonnet video exists in a systematic DG playlist.** Mathemaniac's is closest (62K views!) but uses PowerPoint, not Manim, and isn't part of a curriculum.
+
+2. **Our approach: Three-layer structure — global, local, and topological.**
+   - Layer 1 (Global): The theorem statement for closed surfaces — ∫∫_S K dA = 2πχ(S). Show it works for sphere (4π = 2π·2) and torus (0 = 2π·0).
+   - Layer 2 (Local): The theorem for a region with boundary — ∫_C κ_g ds + ∫∫_R K dA = 2π - Σ(exterior angles). Geodesic triangles, polygons.
+   - Layer 3 (Topological): Why Euler characteristic bridges geometry and topology. The theorem says curvature (geometry) = topology. This is profound.
+
+3. **Parallel transport visualization as centerpiece.** Following Mathemaniac's brilliant approach: show a tangent vector being parallel-transported around a geodesic triangle on a sphere. The rotation of the vector equals the area integral of Gaussian curvature. This is the deepest insight.
+
+4. **Worked examples: Sphere triangle and torus.** Compute for a geodesic triangle on a sphere (angle sum > π, excess = area × K). Show the Euler characteristic directly: sphere triangle → 2π excess = 2π·(2)/4 = π... Actually: the global version is simpler.
+
+5. **Bridge from previous videos.** Video 200 (Gaussian Curvature) gave us K. Video 201 (Geodesics) gave us κ_g = 0 for geodesics and the geodesic equation. Now Gauss-Bonnet connects them to topology.
+
+**Thumbnail Concept:** Dark background with a geodesic triangle on a sphere (PRIMARY color edges), with an arrow showing parallel transport of a tangent vector (ACCENT color). The vector arrives rotated. Text: "Gauss-Bonnet: The Most Beautiful Theorem in Geometry"

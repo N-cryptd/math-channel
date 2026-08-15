@@ -61,10 +61,10 @@ Last updated: 2026-08-12
   - Plan: planning/video-187-laplaces-equation.md (7 scenes)
   - Script: scripts/graduate/video-187-laplaces-equation.py (285 lines, compile-checked)
   - Render: PENDING
-- Video 188: Separation of Variables -- plan + script done (2026-08-12)
+- Video 188: Separation of Variables -- plan + script + render done (2026-08-15)
   - Plan: planning/video-188-separation-of-variables.md (8 scenes)
   - Script: scripts/graduate/video-188-separation-of-variables.py (324 lines)
-  - Render: PENDING
+  - Render: DONE (480p15, 95.6s, 3.3MB, 171 animations, 8 TTS segments)
 - Video 189: Sturm-Liouville Theory -- plan + script done (2026-08-12)
   - Plan: planning/video-189-sturm-liouville.md (8 scenes)
   - Script: scripts/graduate/video-189-sturm-liouville.py (328 lines)

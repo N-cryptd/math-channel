@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-14
+**Last updated:** 2026-08-15
 
-**Completed Videos (193 scripts, 197 renders)**
+**Completed Videos (206 scripts, 207 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -252,7 +252,7 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Differential Geometry (Videos 194–206): Videos 194-200 rendered, 201-206 backlog
+- Differential Geometry (Videos 194–206): Videos 194-201 rendered, 202-206 scripted (needs render)
 
 
 ## Completed Playlists
@@ -295,12 +295,12 @@
 | 198 | First Fundamental Form | ✅ | ✅ |
 | 199 | Second Fundamental Form | ✅ | ✅ |
 | 200 | Gaussian Curvature | ✅ | ✅ |
-| 201 | Geodesics | 📋 | — |
-| 202 | Gauss-Bonnet Theorem | 📋 | — |
-| 203 | Manifolds Intro | 📋 | — |
-| 204 | Tangent Spaces & Vector Fields | 📋 | — |
-| 205 | Differential Forms | 📋 | — |
-| 206 | Stokes on Manifolds | 📋 | — |
+| 201 | Geodesics | ✅ | ✅ |
+| 202 | Gauss-Bonnet Theorem | ✅ | — |
+| 203 | Manifolds Intro | ✅ | — |
+| 204 | Tangent Spaces & Vector Fields | ✅ | — |
+| 205 | Differential Forms | ✅ | — |
+| 206 | Stokes on Manifolds | ✅ | — |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
