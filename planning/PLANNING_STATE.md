@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-Last updated: 2026-08-12
+Last updated: 2026-08-15
 
 ## Completed Videos
 - Videos 1-24: Calculus I/II (scripts in scripts/pre-university/)
@@ -75,9 +75,23 @@ Last updated: 2026-08-12
   - Render: PENDING
 - Video 191-193: PDE remaining (plans + scripts done)
 
-## Differential Geometry Playlist (Videos 194+)
+## Differential Geometry Playlist (Videos 194-206) — COMPLETE
 |- Video 194: Curves in R^n — plan + script + render done
 |- Video 195: Arc Length and Curvature — plan + script + render done (2026-08-14)
   - Plan: planning/video-195-arc-length-curvature.md (8 scenes)
   - Script: scripts/graduate/video-195-arc-length-curvature.py (8 scenes, compile-checked)
   - Render: 480p15, 96.6s, 166 animations, 15 TTS segments
+|- Video 196: Frenet-Serret Frame — plan + script + render done
+|- Video 197: Surfaces in R^3 — plan + script + render done
+|- Video 198: First Fundamental Form — plan + script + render done
+|- Video 199: Second Fundamental Form — plan + script + render done
+|- Video 200: Gaussian Curvature — plan + script + render done
+|- Video 201: Geodesics — plan + script + render done
+|- Video 202: Gauss-Bonnet Theorem — plan + script done, render pending
+|- Video 203: Manifolds Introduction — plan + script done, render pending
+|- Video 204: Tangent Spaces and Vector Fields — plan + script done, render pending
+|- Video 205: Differential Forms — plan + script done, render pending
+|- Video 206: Stokes on Manifolds (FINALE) — plan + script + render done (2026-08-15)
+  - Script: scripts/graduate/video-206-stokes-on-manifolds.py (387 lines)
+  - Render: 480p15, ~65s, 2.3MB
+  - Note: Fixed LaTeX \oiint → \oint\!\!\!\oint for esint compat

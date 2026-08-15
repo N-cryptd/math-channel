@@ -273,7 +273,7 @@ class Video206_StokesOnManifolds(Scene):
         title = self.ly.title("Case 3: Divergence Theorem")
 
         div_thm = MathTex(
-            r"\oiint_{\partial V} \mathbf{F} \cdot d\mathbf{S}"
+            r"\oint\!\!\!\oint_{\partial V} \mathbf{F} \cdot d\mathbf{S}"
             r"= \iiint_V (\nabla \cdot \mathbf{F}) \, dV",
             font_size=HEADING_SIZE, color=WHITE,
         )

@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-15
 
-**Completed Videos (206 scripts, 207 renders)**
+**Completed Videos (206 scripts, 208 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -252,8 +252,7 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Differential Geometry (Videos 194–206): Videos 194-201 rendered, 202-206 scripted (needs render)
-
+- No active playlist in production
 
 ## Completed Playlists
 - Topology (Videos 139–150): COMPLETE (12 videos)
@@ -270,6 +269,7 @@
 - Functional Analysis (Videos 162–173): COMPLETE (12 videos)
 - Fourier Analysis (Videos 174–183): COMPLETE (10 videos)
 - Partial Differential Equations (Videos 184–193): COMPLETE (10 videos)
+- Differential Geometry (Videos 194–206): COMPLETE (13 videos)
 
 ### Partial Differential Equations (Videos 184–193)
 | # | Title | Script | Rendered |
@@ -296,13 +296,14 @@
 | 199 | Second Fundamental Form | ✅ | ✅ |
 | 200 | Gaussian Curvature | ✅ | ✅ |
 | 201 | Geodesics | ✅ | ✅ |
-| 202 | Gauss-Bonnet Theorem | ✅ | — |
-| 203 | Manifolds Intro | ✅ | — |
-| 204 | Tangent Spaces & Vector Fields | ✅ | — |
-| 205 | Differential Forms | ✅ | — |
-| 206 | Stokes on Manifolds | ✅ | — |
+| 202 | Gauss-Bonnet Theorem | ✅ | ✅ |
+| 203 | Manifolds Intro | ✅ | ✅ |
+| 204 | Tangent Spaces & Vector Fields | ✅ | ✅ |
+| 205 | Differential Forms | ✅ | ✅ |
+| 206 | Stokes on Manifolds | ✅ | ✅ |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
-- Differential Geometry playlist started (Video 194: Curves in R^n, Aug 2026)
+- Differential Geometry playlist COMPLETE (Videos 194-206, 13 videos, Aug 2026)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
+- 206 scripts, 212 renders total across all playlists
