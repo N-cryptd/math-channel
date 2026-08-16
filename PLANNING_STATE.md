@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-15
+**Last updated:** 2026-08-16
 
-**Completed Videos (206 scripts, 208 renders)**
+**Completed Videos (207 scripts, 209 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -252,9 +252,10 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- No active playlist in production
+- Algebraic Topology (Videos 207–216): Video 207 complete, Videos 208–216 pending
 
 ## Completed Playlists
+- Algebraic Topology (Videos 207–216): IN PROGRESS (1/10 videos)
 - Topology (Videos 139–150): COMPLETE (12 videos)
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
@@ -302,8 +303,23 @@
 | 205 | Differential Forms | ✅ | ✅ |
 | 206 | Stokes on Manifolds | ✅ | ✅ |
 
+### Algebraic Topology (Videos 207–216)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 207 | Homotopy | ✅ | ✅ |
+| 208 | The Fundamental Group | ⬜ | ⬜ |
+| 209 | Covering Spaces | ⬜ | ⬜ |
+| 210 | Simplicial Complexes | ⬜ | ⬜ |
+| 211 | Simplicial Homology | ⬜ | ⬜ |
+| 212 | Singular Homology | ⬜ | ⬜ |
+| 213 | Mayer-Vietoris Sequence | ⬜ | ⬜ |
+| 214 | Degree of a Map | ⬜ | ⬜ |
+| 215 | Cohomology | ⬜ | ⬜ |
+| 216 | Introduction to Homotopy Groups | ⬜ | ⬜ |
+
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
 - Differential Geometry playlist COMPLETE (Videos 194-206, 13 videos, Aug 2026)
+- Algebraic Topology playlist IN PROGRESS (Videos 207-216, 10 videos planned)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
-- 206 scripts, 212 renders total across all playlists
+- 207 scripts, 213 renders total across all playlists

@@ -147,6 +147,8 @@ class Video202_GaussBonnet(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         formula_box = self.ly.formula_box(formula, color=PRIMARY)
+        self.play(Write(formula_box[0]), run_time=NORMAL)
+        self.play(Create(formula_box[1]), run_time=FAST)
 
         self.wait(0.5)
 
@@ -287,6 +289,8 @@ class Video202_GaussBonnet(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         formula_box = self.ly.formula_box(holonomy, color=PRIMARY)
+        self.play(Write(formula_box[0]), run_time=NORMAL)
+        self.play(Create(formula_box[1]), run_time=FAST)
 
         self.wait(0.5)
 
@@ -325,6 +329,8 @@ class Video202_GaussBonnet(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         formula_box = self.ly.formula_box(local_formula, color=PRIMARY)
+        self.play(Write(formula_box[0]), run_time=NORMAL)
+        self.play(Create(formula_box[1]), run_time=FAST)
 
         self.wait(0.5)
         self.ly.clear()
@@ -426,6 +432,8 @@ class Video202_GaussBonnet(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         formula_box = self.ly.formula_box(result, color=ACCENT)
+        self.play(Write(formula_box[0]), run_time=NORMAL)
+        self.play(Create(formula_box[1]), run_time=FAST)
 
         self.wait(0.5)
 
