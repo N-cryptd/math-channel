@@ -358,7 +358,7 @@ All 183 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-8
 | 201 | Geodesics | — | YES | N/A (already v2) | N/A | Created with v2. setup_bg(2), play_intro(2), play_outro(2), progressive_reveal(9), section_divider(4), SANS(25), ly.clear(20), safe_place(13), add_subcaption(17). Zero .shift()/.to_edge()/.move_to()/.next_to(). All sub-scenes ≤2 items. — no improvement needed |
 
 ### Graduate: Differential Geometry (Videos 202–206) — v2 Analysis
-
+### Graduate: Differential Geometry (Videos 202–206) — v2 Analysis
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
 | 202 | Gauss-Bonnet Theorem | 488 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), play_intro(1), play_outro(1), progressive_reveal(4), section_divider(4), formula_box(6), SANS(20), ly.clear(10), safe_place(7). Zero .shift()/.to_edge() for content. All scenes ≤5 items. — no improvement needed |
@@ -367,8 +367,13 @@ All 183 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-8
 | 205 | Differential Forms | 401 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), play_intro(1), play_outro(1), progressive_reveal(5), section_divider(4), formula_box(4), SANS(19), ly.clear(10), safe_place(3). Zero .shift()/.to_edge() for content. All scenes ≤5 items. — no improvement needed |
 | 206 | Stokes on Manifolds | 387 | YES | N/A (already v2) | N/A | Created with v2. setup_bg(1), play_intro(1), play_outro(1), progressive_reveal(4), section_divider(3), formula_box(5), SANS(14), ly.clear(9), safe_place(4). Zero .shift()/.to_edge() for content. All scenes ≤5 items. — no improvement needed |
 
-## Status: COMPLETE ✓ (Videos 1-206)
-All 206 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant. Video 156 v2-compliant. Video 157 received major v2 rewrite. Videos 158-159 created with v2 templates. Videos 160-161 created with v2 templates — fully compliant. Videos 162-173 (Functional Analysis) created with v2 templates — fully compliant. Videos 174-183 (Fourier Analysis) created with v2 templates — fully compliant. Videos 184-193 (PDE) created with v2 and improved with section_dividers + formula_box — all re-rendered. Videos 194 improved with positioning fixes + formula_box. Videos 195-206 (Differential Geometry) created with v2 templates — fully compliant.
+### Algebraic Topology (Videos 207–216) — v2 Analysis
+
+| # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
+|---|-------|-----------|----------|----------|-------------|-------|
+| 207 | Homotopy | 432 | YES | YES (minor) | YES | v2-compliant base. Added 6 section_divider (was 0) for all 6 major scene transitions. Added 2 formula_box (homotopy definition H:X×[0,1]→Y, S¹≠S² counterexample). Fixed 1 content budget violation in scene 6 (7→3 items: FadeOut circles+labels before formula_box+reason). setup_bg(1), play_intro(1), play_outro(1), progressive_reveal(4), formula_box(3), SANS(14), ly.clear(13), safe_place(15). Zero .shift()/.to_edge() for content. 8 .next_to() all diagram labels (acceptable). Re-rendered Aug 17: 103.9s, 2.9MB. 3 TTS segs skipped (insufficient gap), 11 segs speedup (1.5-3.2x). |
+## Status: COMPLETE ✓ (Videos 1-207)
+All 207 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant. Video 156 v2-compliant. Video 157 received major v2 rewrite. Videos 158-159 created with v2 templates. Videos 160-161 created with v2 templates — fully compliant. Videos 162-173 (Functional Analysis) created with v2 templates — fully compliant. Videos 174-183 (Fourier Analysis) created with v2 templates — fully compliant. Videos 184-193 (PDE) created with v2 and improved with section_dividers + formula_box — all re-rendered. Videos 194 improved with positioning fixes + formula_box. Videos 195-206 (Differential Geometry) created with v2 templates — fully compliant. Video 207 (Homotopy) improved with section_dividers + formula_box + content budget fix.
 
 ## Last Updated
-2026-08-16 (Videos 202-206 analyzed. All 5 created with v2 templates — fully compliant with zero violations. PDE videos 186-193 re-render statuses updated to YES. All 206 videos analyzed.)
+2026-08-17 (Video 207 analyzed and improved. Added 6 section_divider (was 0), 2 formula_box (was 1→3), fixed content budget violation in scene 6 counterexample. All 207 videos analyzed.)

@@ -95,3 +95,12 @@ Last updated: 2026-08-15
   - Script: scripts/graduate/video-206-stokes-on-manifolds.py (387 lines)
   - Render: 480p15, ~65s, 2.3MB
   - Note: Fixed LaTeX \oiint → \oint\!\!\!\oint for esint compat
+
+## Algebraic Topology Playlist (Videos 207+)
+|- Video 207: Homotopy — plan + script + render done (2026-08-17)
+  - Plan: planning/video-207-homotopy.md (7 scenes)
+  - Script: scripts/graduate/video-207-homotopy.py (432 lines, compile-checked)
+  - Render: 480p15
+|- Video 208: The Fundamental Group — plan + script done (2026-08-17)
+  - Script: scripts/graduate/video-208-fundamental-group.py (616 lines, compile-checked)
+  - Render: PENDING

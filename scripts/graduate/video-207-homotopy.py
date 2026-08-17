@@ -69,6 +69,8 @@ class Video207_Homotopy(Scene):
             "No tearing, no gluing — just smooth deformation.",
             duration=6,
         )
+        self.ly.section_divider(1, "Intuition")
+
         title = self.ly.title("The Idea of Continuous Deformation")
 
         # Square morphing into circle
@@ -109,6 +111,8 @@ class Video207_Homotopy(Scene):
             "that smoothly transforms one function into another.",
             duration=7,
         )
+        self.ly.section_divider(2, "Formal Definition")
+
         title = self.ly.title("Formal Definition")
         self.wait(0.5)
 
@@ -124,8 +128,9 @@ class Video207_Homotopy(Scene):
             r"H : X \times [0,1] \to Y",
             font_size=HEADING_SIZE, color=PRIMARY,
         )
-        self.ly.safe_place(defn2, DOWN, anchor=defn1, buff=0.4)
-        self.play(Write(defn2), run_time=NORMAL)
+        boxed_defn2 = self.ly.formula_box(defn2, color=PRIMARY)
+        self.ly.safe_place(boxed_defn2, DOWN, anchor=defn1, buff=0.4)
+        self.play(FadeIn(boxed_defn2), run_time=NORMAL)
 
         # Constraints
         self.add_subcaption(
@@ -163,6 +168,8 @@ class Video207_Homotopy(Scene):
             "from point a to point b? A path homotopy keeps the endpoints fixed.",
             duration=7,
         )
+        self.ly.section_divider(3, "Path Homotopy")
+
         title = self.ly.title("Path Homotopy")
 
         # Two paths visual
@@ -248,6 +255,8 @@ class Video207_Homotopy(Scene):
             "to something homotopic to the identity.",
             duration=8,
         )
+        self.ly.section_divider(4, "Homotopy Equivalence")
+
         title = self.ly.title("Homotopy Equivalence")
 
         self.add_subcaption(
@@ -299,6 +308,8 @@ class Video207_Homotopy(Scene):
             "so the disk is homotopy equivalent to a point. We call such a space contractible.",
             duration=8,
         )
+        self.ly.section_divider(5, "Examples and Counterexamples")
+
         title = self.ly.title("Contractible Spaces")
 
         # Disk shrinking to point
@@ -345,19 +356,24 @@ class Video207_Homotopy(Scene):
 
         self.play(Create(s1), Create(s2), run_time=FAST)
         self.play(Write(s1_label), FadeIn(s2_label), run_time=FAST)
+        self.wait(0.3)
+
+        # Remove circles before adding formula to respect content budget
+        self.play(FadeOut(s1), FadeOut(s2), FadeOut(s1_label), FadeOut(s2_label), run_time=FAST)
 
         not_equiv = MathTex(
             r"S^1 \not\simeq S^2",
             font_size=HEADING_SIZE, color=RED,
         )
-        self.ly.safe_place(not_equiv, DOWN, anchor=title2, buff=0.8)
-        self.play(Write(not_equiv), run_time=NORMAL)
+        boxed_ne = self.ly.formula_box(not_equiv, color=RED)
+        self.ly.safe_place(boxed_ne, DOWN, anchor=title2, buff=0.8)
+        self.play(FadeIn(boxed_ne), run_time=NORMAL)
 
         reason = Text(
             "Different homotopy groups (more in the next video!)",
             font_size=BODY_SIZE, color=ACCENT, font=SANS,
         )
-        self.ly.safe_place(reason, DOWN, anchor=not_equiv, buff=0.5)
+        self.ly.safe_place(reason, DOWN, anchor=boxed_ne, buff=0.5)
         self.play(FadeIn(reason, shift=LEFT * 0.15), run_time=NORMAL)
 
         self.wait(0.5)
@@ -371,6 +387,8 @@ class Video207_Homotopy(Scene):
             "up to continuous deformation.",
             duration=7,
         )
+        self.ly.section_divider(6, "Why It Matters")
+
         title = self.ly.title("Why Homotopy Matters")
         items = [
             Text("Foundation of algebraic topology", font_size=BODY_SIZE, color=WHITE, font=SANS),
