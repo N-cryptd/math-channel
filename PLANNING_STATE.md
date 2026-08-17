@@ -252,10 +252,10 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Algebraic Topology (Videos 207–216): Videos 207–214 complete, Videos 215–216 pending
+- Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
 
 ## Completed Playlists
-- Algebraic Topology (Videos 207–216): IN PROGRESS (8/10 videos)
+- Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
 - Topology (Videos 139–150): COMPLETE (12 videos)
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
@@ -314,8 +314,8 @@
 | 212 | Singular Homology | ✅ | ✅ |
 | 213 | Mayer-Vietoris Sequence | ✅ | ✅ |
 | 214 | Degree of a Map | ✅ | ✅ |
-| 215 | Cohomology | ⬜ | ⬜ |
-| 216 | Introduction to Homotopy Groups | ⬜ | ⬜ |
+| 215 | Cohomology | ✅ | ✅ |
+| 216 | Introduction to Homotopy Groups | ✅ | ✅ |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
