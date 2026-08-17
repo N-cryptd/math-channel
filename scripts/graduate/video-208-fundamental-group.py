@@ -499,6 +499,8 @@ class Video208_FundamentalGroup(Scene):
         )
         self.ly.safe_place(impl, DOWN, anchor=title3, buff=0.5)
         self.play(Write(impl), run_time=NORMAL)
+        # Fill remaining 13s of the 15s caption window before next subcaption
+        self.wait(13)
 
         # 31 words → duration=15
         self.add_subcaption(
@@ -643,12 +645,12 @@ class Video208_FundamentalGroup(Scene):
         self.wait(11)
         self.ly.clear()
 
-        # 35 words → duration=17
+        # 35 words → duration=20 (generous for TTS natural pace)
         self.add_subcaption(
             "In the next video, we will explore the covering space approach "
             "to computing fundamental groups, and see how higher homotopy "
             "groups pi_n capture even more about the structure of a space. "
             "Thank you for watching!",
-            duration=17,
+            duration=20,
         )
         play_outro(self, "Covering Spaces", "Algebraic Topology")

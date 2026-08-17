@@ -252,10 +252,10 @@
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
 ## In Progress
-- Algebraic Topology (Videos 207–216): Videos 207–208 complete, Videos 209–216 pending
+- Algebraic Topology (Videos 207–216): Videos 207–210 complete, Videos 211–216 pending
 
 ## Completed Playlists
-- Algebraic Topology (Videos 207–216): IN PROGRESS (2/10 videos)
+- Algebraic Topology (Videos 207–216): IN PROGRESS (4/10 videos)
 - Topology (Videos 139–150): COMPLETE (12 videos)
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
@@ -309,7 +309,7 @@
 | 207 | Homotopy | ✅ | ✅ |
 | 208 | The Fundamental Group | ✅ | ✅ |
 | 209 | Covering Spaces | ✅ | ✅ |
-| 210 | Simplicial Complexes | ⬜ | ⬜ |
+| 210 | Simplicial Complexes | ✅ | ✅ |
 | 211 | Simplicial Homology | ⬜ | ⬜ |
 | 212 | Singular Homology | ⬜ | ⬜ |
 | 213 | Mayer-Vietoris Sequence | ⬜ | ⬜ |

@@ -151,9 +151,58 @@ def build_audio_timeline(
     last_end = 0.0
     warnings = []
 
+    # Pre-compute effective end times: cap slot_end at next segment's start
+    # to prevent overlapping SRT entries from stealing time from later segments.
+    # Also merge consecutive overlapping segments into single longer entries.
+    effective_ends = []
+    for i, seg in enumerate(segments):
+        raw_end = seg["end"]
+        # Cap at the start of the next segment (minus gap) if it overlaps
+        if i + 1 < len(segments):
+            next_start = segments[i + 1]["start"]
+            capped = next_start - MIN_SEGMENT_GAP
+            if capped < raw_end:
+                effective_ends.append(capped)
+            else:
+                effective_ends.append(raw_end)
+        else:
+            effective_ends.append(min(raw_end, video_duration))
+
+    # Merge overlapping segments: if segment i's effective_end > segment i+1's start,
+    # combine their text and extend the slot. This gives TTS more time.
+    merged_segments = []
+    i = 0
+    while i < len(segments):
+        current = dict(segments[i])
+        current["end"] = effective_ends[i]
+        while (i + 1 < len(segments) and
+               current["end"] > segments[i + 1]["start"] - 0.1):
+            # Merge next segment into current
+            next_seg = segments[i + 1]
+            current["text"] = current["text"] + " " + next_seg["text"]
+            next_end = effective_ends[i + 1] if i + 1 < len(effective_ends) else next_seg["end"]
+            current["end"] = max(current["end"], next_end)
+            i += 1
+        merged_segments.append(current)
+        i += 1
+
+    # Recompute effective_ends for merged segments, capped at video_duration
+    effective_ends = []
+    for i, seg in enumerate(merged_segments):
+        raw_end = min(seg["end"], video_duration)
+        if i + 1 < len(merged_segments):
+            next_start = min(merged_segments[i + 1]["start"], video_duration)
+            capped = next_start - MIN_SEGMENT_GAP
+            effective_ends.append(min(raw_end, capped))
+        else:
+            effective_ends.append(raw_end)
+
+    # Use merged segments for processing
+    segments = merged_segments
+
     for i, seg in enumerate(segments):
         slot_start = seg["start"]
-        slot_end = seg["end"]
+        slot_end = effective_ends[i]
         slot_duration = slot_end - slot_start
 
         # Ensure minimum gap from previous segment
