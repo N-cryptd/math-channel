@@ -654,3 +654,5 @@ class Video208_FundamentalGroup(Scene):
             duration=20,
         )
         play_outro(self, "Covering Spaces", "Algebraic Topology")
+        # Ensure video extends to cover the full 20s caption window
+        self.wait(6)
