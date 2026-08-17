@@ -308,7 +308,7 @@
 |---|-------|--------|----------|
 | 207 | Homotopy | ✅ | ✅ |
 | 208 | The Fundamental Group | ✅ | ✅ |
-| 209 | Covering Spaces | ⬜ | ⬜ |
+| 209 | Covering Spaces | ✅ | ✅ |
 | 210 | Simplicial Complexes | ⬜ | ⬜ |
 | 211 | Simplicial Homology | ⬜ | ⬜ |
 | 212 | Singular Homology | ⬜ | ⬜ |
