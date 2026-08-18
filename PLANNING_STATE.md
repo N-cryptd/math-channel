@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-17
+**Last updated:** 2026-08-18
 
-**Completed Videos (207 scripts, 209 renders)**
+**Completed Videos (208 scripts, 210 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -317,9 +317,15 @@
 | 215 | Cohomology | ✅ | ✅ |
 | 216 | Introduction to Homotopy Groups | ✅ | ✅ |
 
+### Advanced Abstract Algebra (Videos 217–228)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 217 | Group Actions | ✅ | ✅ |
+
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
 - Differential Geometry playlist COMPLETE (Videos 194-206, 13 videos, Aug 2026)
-- Algebraic Topology playlist IN PROGRESS (Videos 207-216, 10 videos planned)
+- Algebraic Topology playlist COMPLETE (Videos 207-216, 10 videos, Aug 2026)
+- Advanced Abstract Algebra playlist IN PROGRESS (Videos 217-228, 12 videos planned)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
-- 207 scripts, 213 renders total across all playlists
+- 208 scripts, 210 renders total across all playlists
