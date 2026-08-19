@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-18
+**Last updated:** 2026-08-19
 
-**Completed Videos (208 scripts, 210 renders)**
+**Completed Videos (211 scripts, 213 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -321,6 +321,9 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 217 | Group Actions | ✅ | ✅ |
+| 218 | Solvable & Nilpotent Groups | ✅ | ✅ |
+| 219 | Field Extensions | ✅ | ✅ |
+| 220 | Algebraic Extensions | ✅ | ✅ |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
