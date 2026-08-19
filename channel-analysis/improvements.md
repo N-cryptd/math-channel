@@ -1441,3 +1441,205 @@ Note: youtubei.js returned minimal metadata (API throttling). Analysis based on 
 5. **Bridge from previous videos.** Video 200 (Gaussian Curvature) gave us K. Video 201 (Geodesics) gave us κ_g = 0 for geodesics and the geodesic equation. Now Gauss-Bonnet connects them to topology.
 
 **Thumbnail Concept:** Dark background with a geodesic triangle on a sphere (PRIMARY color edges), with an arrow showing parallel transport of a tangent vector (ACCENT color). The vector arrives rotated. Text: "Gauss-Bonnet: The Most Beautiful Theorem in Geometry"
+
+### [2026-08-18] Field Extensions (Video 219)
+
+**Market Gap Analysis:** Field extensions are the gateway to Galois theory and one of the most important topics in abstract algebra. YouTube coverage is dominated by traditional whiteboard lectures (The Math Sorcerer, Michael Penn) that define extensions formally and work through examples, and Socratica's older Manim-based treatment that is clear but definition-first with limited visual intuition. No existing video provides an animated, visually motivated treatment that builds from the intuitive idea of "enlarging a field" to the formal machinery (degree, algebraic vs transcendental, minimal polynomial, tower law) with visual representations of the lattice structure and inclusion relationships.
+
+**Competitive Landscape Analysis:**
+
+1. **Socratica — "Field Extensions"** (Structure: 7, Pacing: 5, Visuals: 6, Narration: 6, Engagement: 5)
+   - Clean Manim animations but definition-first approach
+   - Covers basic definition and simple examples (Q(√2), C/R)
+   - Does NOT cover minimal polynomial properties or tower law in depth
+   - No visual representation of extension degrees or tower diagrams
+
+2. **The Math Sorcerer — "Field Extensions: Definition and Examples"** (Structure: 6, Pacing: 4, Visuals: 2, Narration: 5, Engagement: 3)
+   - Pure whiteboard, very thorough with examples
+   - Covers algebraic vs transcendental, simple and extension fields
+   - No animations, purely symbolic manipulation
+   - Good for exam prep but poor for building intuition
+
+3. **Michael Penn — "What is a Field Extension?"** (Structure: 5, Pacing: 6, Visuals: 2, Narration: 7, Engagement: 6)
+   - Fast-paced whiteboard, engaging lecturer
+   - Jumps to formalism quickly, minimal motivation
+   - Good computation examples (adjoining roots, checking field properties)
+   - No visual structure or diagrammatic representation
+
+**Our Differentiation Strategy:**
+- Open with the INTUITIVE idea: Q lives inside R lives inside C — each is a field extension
+- Use visual inclusion diagrams (nested boxes/circles) for field extension tower
+- Animate the degree as a dimension concept: [R:Q] is infinite, [C:R] = 2
+- Color-code algebraic (green) vs transcendental (red) elements
+- Visual proof of the tower law using dimension counting
+- Connect to the "big picture": field extensions are the foundation for Galois theory
+- Progressive disclosure: motivation → definition → examples → algebraic vs transcendental → minimal polynomial → tower law → summary
+
+**Techniques to Adopt:**
+- Socratica's clear definition-first structure (but add motivation first)
+- Michael Penn's concrete computation examples (but with animations)
+
+**Techniques to Avoid:**
+- Definition-first without motivation (all competitors do this)
+- Purely symbolic without geometric/diagrammatic intuition
+- Burying the tower law — it should be the climax with a visual proof
+### [2026-08-19] Algebraic Extensions (Video 220)
+
+**Market Gap Analysis:** Algebraic extensions are the workhorse of field theory — they are the specific type of field extension where every adjoined element satisfies a polynomial equation. This is where Galois theory becomes concrete: splitting fields, minimal polynomials, and the degree tower law all live here. YouTube coverage splits sharply into (a) university lecture channels (Borcherds, Salomone, Kinney, Billig, PT Yamin) that are 30-55 min whiteboard/tablet lectures — rigorous but unengaging, and (b) popular-science Galois theory videos (Mathemaniac 549K, Math Visualized 564K, Aleph 0 314K) that are beautifully animated but skip the foundational definitions entirely, jumping straight to the "sexy" result (unsolvability of quintics). NO video provides a Manim-animated, systematic treatment of algebraic extensions specifically — the definitions, examples, minimal polynomial theory, degree computations, tower law, and the algebraic vs transcendental distinction — with the visual quality of the popular-science channels.
+
+**Competitive Landscape Analysis:**
+
+#### 1. Professor Macauley — "Visual Group Theory, Lecture 6.1: Fields and their extensions" (Buv4Y74_z7I, 120,572 views, 29.6K subs, Apr 2016)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 6/10
+- **Style:** Tablet-based lecture with some visual elements (Venn diagrams, Cayley tables). Part of a systematic Galois theory course.
+- **Content:** Starts from field axioms, shows how adjoining roots to Q creates larger fields. Uses Venn diagram for Q ⊂ R ⊂ C. Computes Q(√2) explicitly. Introduces the idea of field extension degree informally.
+- **Thumbnail:** Black background, white text, Venn diagram with Q, R, C + equations. Clean academic style. Rating: 8/10.
+- **Insight:** The Venn diagram approach to showing Q ⊂ R ⊂ C is intuitive and transferable. The "throwing in roots" motivation is excellent for opening a video.
+- **Weakness:** Not truly animated — it's a recorded lecture. Very long (26 min). Does not cover minimal polynomial rigorously or the tower law. The visual elements are static diagrams, not dynamic animations.
+
+#### 2. Richard E Borcherds — "Galois theory: Field extensions" (HpzVD1l3Olw, 50,270 views, 82.5K subs, Dec 2020)
+Dimensions: Structure 9/10 | Pacing 4/10 | Visuals 2/10 | Narration 6/10 | Hooks 3/10
+- **Style:** Tablet lecture by a Fields medalist. Extremely rigorous, systematic coverage.
+- **Content:** Reviews field extension basics, defines degree [E:F], proves algebraic iff contained in a finite extension, proves sum/product of algebraic elements is algebraic, proves root of polynomial with algebraic coefficients is algebraic.
+- **Thumbnail:** White background, yellow "Galois theory" + black "Field extensions" text only. No visuals. Rating: 4/10.
+- **Insight:** The proof that the sum/product of algebraic numbers is algebraic is a key result that most other videos skip. This is the kind of depth our video should include (in animated form).
+- **Weakness:** Extremely dry and fast-paced (27 min of dense proofs). Assumes significant background. No visual intuition — purely symbolic. White background with minimal contrast.
+
+#### 3. Matthew Salomone — "302.S2a: Field Extensions and Polynomial Roots" (8iapBh4EjfM, 21,554 views, 18.6K subs, Mar 2014)
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 4/10 | Narration 7/10 | Hooks 6/10
+- **Style:** Whiteboard lecture, conversational tone. Part of systematic abstract algebra course.
+- **Content:** Connects field extensions to polynomial roots. Shows that adjoining a root of an irreducible polynomial creates a larger field. Good concrete examples.
+- **Thumbnail:** White background, red/black text, purple circle with step-by-step equation. Rating: 7/10.
+- **Insight:** The connection between field extensions and polynomial roots is the right narrative arc — "we extend fields to find roots of polynomials." This is exactly how to motivate the topic.
+- **Weakness:** 12 years old, low resolution. No animations. Only covers the basics — does not reach minimal polynomial properties or tower law.
+
+#### 4. Bill Kinney — "Algebraic Field Extensions, Finite Degree Extensions" (WZAYF646Mis, 978 views, 39.1K subs, May 2023)
+Dimensions: Structure 8/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 4/10
+- **Style:** Whiteboard with colored markers. Very thorough, textbook-following approach.
+- **Content:** Covers algebraic vs transcendental, finite degree, multiplicative property of degree. Draws Venn diagram of algebraic vs transcendental numbers. Uses Gallian's textbook.
+- **Thumbnail:** Whiteboard photo, red/blue text, green circle highlight. Informal. Rating: 6/10.
+- **Insight:** The algebraic vs transcendental Venn diagram is a useful visual. The emphasis on the multiplicative property of degree (tower law) is good — this is the key computational tool.
+- **Weakness:** Only 978 views despite being recent and thorough. 52 minutes — way too long. Whiteboard format limits engagement. No animations.
+
+#### 5. Mathemaniac — "Why you can't solve quintic equations (Galois theory approach)" (zCU9tZ2VkWc, 548,653 views, 277K subs, Jul 2022, SoME2 entry)
+Dimensions: Structure 10/10 | Pacing 9/10 | Visuals 9/10 | Narration 9/10 | Hooks 10/10
+- **Style:** Custom animation (not Manim but visually identical). 45-minute epic. #SoME2 entry.
+- **Content:** Builds from "what does it mean to solve a polynomial" → field extensions → Galois groups → solvable groups → quintic unsolvability. Deliberately avoids the tower law and degree of extension as unnecessary for the core argument. Uses "dial" metaphor for Galois group action on roots.
+- **Thumbnail:** Black background, white "Galois Theory" text, two circles with colored dots and arrows. Clean, minimalist. Rating: 8/10.
+- **Insight:** This is the GOLD STANDARD for animated abstract algebra on YouTube. The "dial" metaphor for Galois groups is brilliant — it makes the abstract concept of field automorphisms concrete and visual. The 45-minute video works because of masterful storytelling: each section raises a question that the next section answers.
+- **Weakness:** Deliberately avoids algebraic extension definitions, minimal polynomial, and tower law — these are exactly what our video needs to cover. The video assumes the viewer will accept field extensions as a black box. Mathemaniac acknowledges this in the description: "I HAVE to simplify and not give every technical detail."
+
+#### 6. Aleph 0 — "What is the square root of two? | The Fundamental Theorem of Galois Theory" (CwvuZ8aHyH4, 314,325 views, 225K subs, Nov 2021)
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 8/10 | Narration 9/10 | Hooks 9/10
+- **Style:** Manim-based animations (but custom, possibly After Effects). Pink/magenta color scheme. Very polished.
+- **Content:** Uses √2 as a concrete hook → builds to field extensions → automorphisms → the Fundamental Theorem of Galois Theory in 25 minutes. Credits Grant Sanderson in the description.
+- **Thumbnail:** Solid pink background, black text, circles/arrows/numbers. Clean and distinctive. Rating: 8/10.
+- **Insight:** Using √2 as the concrete hook is perfect — every math student knows √2 is irrational, but few know the field theory behind it. The pink color scheme is distinctive and memorable. The FTGT introduction at the end provides a compelling "why we're doing this" payoff.
+- **Weakness:** Covers the entire Galois theory arc in 25 min — necessarily glosses over algebraic extension details. Does not define minimal polynomial or prove its properties. Skips tower law.
+
+#### 7. Math Visualized — "Galois Theory Explained Simply" (Ct2fyigNgPY, 563,814 views, 19K subs, Nov 2020)
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 8/10 | Narration 7/10 | Hooks 8/10
+- **Style:** 3D-looking custom animations. Gray gradient background with blue geometric shapes.
+- **Content:** Uses a "trousers" metaphor (from Eric Weinstein) for field extensions. Shows how polynomial roots relate to group structure. Simplifies heavily but makes the core ideas accessible.
+- **Thumbnail:** Gray gradient, blue 3D shapes, bold sans-serif text. Clean. Rating: 7/10.
+- **Insight:** The "trousers" metaphor for field extensions is creative — it visualizes the branching structure of polynomial roots. However, it's unusual and may confuse viewers expecting standard mathematical exposition.
+- **Weakness:** Very simplified — not suitable for a student who needs to actually work with algebraic extensions. Math Visualized has since pivoted to simpler visual proofs, suggesting the Galois video was a one-off.
+
+**Broader Competitive Context — Galois Theory Ecosystem:**
+
+The three most-viewed animated Galois theory videos (Mathemaniac 549K, Math Visualized 564K, Aleph 0 314K) all share a common strategy: they SKIP the foundational definitions (algebraic extensions, minimal polynomial, tower law) and jump to the "sexy" result. This creates a massive gap: students who watch these videos understand the BIG IDEA of Galois theory but cannot actually DO any Galois theory. Our video fills this gap by providing the animated, systematic treatment of algebraic extensions that these popular videos assume as background knowledge.
+
+**Thumbnail Trends in Field Theory / Galois Theory:**
+- **Dominant pattern 1 (academic):** White background, text-only (Borcherds, Salomone). Clean but boring. Rating: 4-6/10.
+- **Dominant pattern 2 (whiteboard):** Photo of whiteboard with colored markers (Kinney, Nicholson). Authentic but low production value. Rating: 5-7/10.
+- **Dominant pattern 3 (animated, effective):** Dark background with geometric shapes and minimal text (Mathemaniac: black + colored dots; Aleph 0: pink + black text). These get 300K+ views. Rating: 8/10.
+- **Color insight:** Aleph 0's distinctive pink/magenta breaks the "dark blue/purple" pattern and is highly memorable. Mathemaniac's pure black + white + colored dots is the cleanest.
+- **Our thumbnail opportunity:** Use our channel's BG (#1A1832 deep indigo) + show a visual field extension tower (Q → Q(√2) → Q(√2, i)) with PRIMARY (#5BC0EB) arrows and ACCENT (#FFD166) degree labels. This is distinctive, informative, and matches our brand.
+
+**Synthesis for Video 220 — Algebraic Extensions:**
+
+**Our approach (distinct from all competitors):**
+1. **The missing foundation video.** Position this as the video you need BEFORE watching Mathemaniac/Aleph 0's Galois theory videos. We provide the definitions, examples, and computational tools they assume.
+2. **Hook with the concrete question:** "What happens when we add √2 to Q?" — build Q(√2) from scratch, showing every element is a + b√2. This mirrors Aleph 0's √2 hook but goes deeper into the algebraic structure.
+3. **Animate the vector space perspective:** Every finite field extension E/F is a vector space over F. Animate the basis vectors for Q(√2)/Q as {1, √2} and for Q(√2, √3)/Q as {1, √2, √3, √6}. This is mentioned by Nicholson but never visualized.
+4. **Visualize the minimal polynomial as the "DNA" of an algebraic element:** Show that α is algebraic over F iff it has a minimal polynomial m(x) ∈ F[x]. Animate: given α, the set of polynomials in F[x] that vanish at α is a principal ideal generated by m(x). This connects to our earlier abstract algebra content (ideals, PIDs).
+5. **The tower law as the climax:** [E:K][K:F] = [E:F] — animate this as a dimension-counting argument. Show a concrete tower Q ⊂ Q(√2) ⊂ Q(√2, √3) with degrees [2][2] = [4]. This is the key computational tool that Borcherds and Kinney cover rigorously but no one animates.
+6. **Algebraic vs transcendental as the dramatic contrast:** √2 is algebraic (minimal polynomial x²−2), π is transcendental (no polynomial). Visualize: algebraic elements are the "tame" ones that play nicely with polynomial equations; transcendental elements are the "wild" ones. Use PRIMARY for algebraic, RED for transcendental.
+7. **Key examples animated:** Q(√2), Q(√2, √3), Q(∛2), Q(ζ₃) where ζ₃ is a primitive cube root of unity. Show the degree computation for each.
+
+**What makes us different:**
+- First animated video that systematically covers algebraic extensions (definition, minimal polynomial, degree, tower law, algebraic vs transcendental)
+- The "missing foundation" for the popular Galois theory videos (Mathemaniac 549K, Aleph 0 314K)
+- Vector space visualization of field extensions (unique to our approach)
+- Animated tower law proof (no competitor does this)
+- Follows Video 219 (Field Extensions) naturally — we go from the general concept to the specific (algebraic) case
+
+**Techniques to Adopt:**
+- Aleph 0's √2 concrete hook (but go deeper into the algebra)
+- Macauley's Venn diagram for field inclusions (animate it)
+- Mathemaniac's storytelling structure (each section raises a question the next answers)
+- Borcherds' result: sum/product of algebraic elements is algebraic (animate the proof sketch)
+- Salomone's "field extensions exist to find roots" narrative arc
+
+**Techniques to Avoid:**
+- Borcherds' 27-min proof-heavy lecture format (too dense for YouTube)
+- Kinney's 52-minute whiteboard (way too long)
+- Nicholson's photo-of-handwriting thumbnail (low production value)
+- Math Visualized's "trousers" metaphor (too unusual, may confuse)
+- Definition-first without motivation (start with the √2 question, not the formal definition)
+- Skipping the tower law — it's the most practically useful result in this topic
+
+### [2026-08-18] Solvable and Nilpotent Groups (Video 218)
+
+**Market Gap Analysis:** Solvable and nilpotent groups are central to Galois theory (solvability by radicals) and the classification of finite groups. YouTube coverage is dominated by two types: (a) Indian university lecture channels (50+ min, proof-heavy, no animations) and (b) Western channels like MathDoctorBob (30K views on commutator subgroup, whiteboard), Matthew Salomone (32K views on solvable groups, whiteboard), and Richard Borcherds (9.6K views on nilpotent groups, tablet lecture). No Manim-animated video covers both solvable and nilpotent groups together with derived series, upper/lower central series, and their relationship. This is a clear gap.
+
+**Competitive Landscape Analysis:**
+
+#### 1. Matthew Salomone — "302.4B: Solvable Groups" (32K views, 2013)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 5/10
+- Whiteboard lecture format, clear section breaks
+- Good question-driven approach: "What makes a group solvable?"
+- Computes derived series of S3 and S4 as examples
+- Lacks visual metaphors — purely algebraic manipulation on whiteboard
+- No discussion of nilpotent groups (separate video needed)
+
+#### 2. Richard Borcherds — "Group theory 18: Nilpotent groups" (9.6K views, 2020)
+Dimensions: Structure 8/10 | Pacing 5/10 | Visuals 2/10 | Narration 6/10 | Hooks 3/10
+- Tablet lecture, Fields medalist — deep mathematical insight but dry delivery
+- Key result: finite nilpotent iff product of p-groups
+- Lists groups of order 16 as running example
+- Very dense, fast-paced, minimal motivation
+- Assumes strong background, no visual aids
+
+#### 3. MathDoctorBob — "GT7. The Commutator Subgroup" (30K views, 2012)
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 3/10 | Narration 8/10 | Hooks 5/10
+- Whiteboard with good handwriting, conversational tone
+- Covers commutator subgroup definition + abelianization
+- Main example: dihedral group
+- Good pace for the level, but no animation
+- Does not extend to derived series or solvability
+
+#### 4. Zvi Rosen — "The Commutator Subgroup (Dummit & Foote 5.4A)" (3K views, 2023)
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks 4/10
+- Follows Dummit & Foote textbook structure closely
+- Computes derived series of D8, S4, S5
+- Good proof of normality of commutator subgroup
+- Textbook-oriented, no visual intuition
+
+**Key Insights:**
+- No existing video combines commutator subgroups, derived series, solvable groups, AND nilpotent groups with animation
+- All competitors use whiteboard/tablet — our Manim approach will differentiate
+- The strongest engagement hook is the Galois theory connection: solvable groups explain WHY quintics are unsolvable
+- Competitors skip the visual metaphor of "peeling layers" via series — we can animate this
+
+**Techniques to Adopt:**
+- Salomone's question-driven opening ("What makes a group solvable?")
+- Visualize derived series as peeling back layers of commutativity
+- Animate the chain of subgroups G > G' > G'' > ... > {e} for concrete examples
+- Color-code: PRIMARY for solvable, SECONDARY for nilpotent, RED for non-solvable
+- Show the relationship diagram: cyclic ⊂ abelian ⊂ nilpotent ⊂ solvable
+
+**Techniques to Avoid:**
+- Borcherds' extremely dense pace — this is a 12-min video, not a 50-min lecture
+- Indian university channels' proof-heavy approach without motivation
+- Long algebraic computations without visual breaks

@@ -92,6 +92,46 @@
 - Focus: Physics, math applications in physics
 - Style: Talking head + diagrams, not Manim
 
+## Tier 3 — Animated Abstract Algebra (Direct topic competitors for Videos 217-228)
+
+### 14. Aleph 0
+- YouTube: https://www.youtube.com/@Aleph0
+- Videos: ~20, Subscribers: ~225K
+- Style: Manim-based (possibly After Effects), pink/magenta color scheme, very polished
+- Signature: Abstract algebra + topology for a general math audience. Credits 3B1B as inspiration.
+- Notable: "What is the square root of two? | The Fundamental Theorem of Galois Theory" (314K views), "What is algebraic geometry?" (300K views), "What is algebraic topology?" (125K views)
+- **STATUS: ACTIVE** — Most direct animated competitor for our Abstract Algebra II content
+- Title pattern: "What is X?", "Something strange happens when..."
+- Key technique: Uses concrete hooks (√2) to introduce abstract theory. Strong storytelling.
+
+### 15. Mathemaniac
+- YouTube: https://www.youtube.com/@Mathemaniac
+- Videos: ~50, Subscribers: ~277K
+- Style: Custom animation (not Manim but visually similar), dark background
+- Signature: Deep dives into specific theorems with novel approaches. #SoME2 winner-tier content.
+- Notable: "Why you can't solve quintic equations" (549K views, SoME2), Green's functions (755K views)
+- **STATUS: ACTIVE** — Covers Galois theory, differential equations, information theory
+- Title pattern: "Why you can't X", "X: the genius way to Y"
+- Key technique: 45-min epics with masterful storytelling. "Dial" metaphor for Galois groups.
+
+### 16. Math Visualized
+- YouTube: https://www.youtube.com/@MathVisualized
+- Videos: ~100, Subscribers: ~19K
+- Style: 3D-looking custom animations, gray gradient background
+- Signature: Visual proofs and geometric explanations
+- Notable: "Galois Theory Explained Simply" (564K views) — their biggest hit
+- **STATUS: PIVOTED (2023+)** — Now produces short visual proofs, no more abstract algebra
+- Historical value: Their Galois Theory video is the 2nd most-viewed animated treatment on YouTube
+
+### 17. Professor Macauley
+- YouTube: https://www.youtube.com/@ProfessorMacauley
+- Videos: ~200, Subscribers: ~29.6K
+- Style: Tablet-based lectures with some visual elements (Venn diagrams, Cayley tables)
+- Signature: Systematic course playlists (Visual Group Theory, Galois Theory, Combinatorics)
+- Notable: "Visual Group Theory, Lecture 6.1: Fields and their extensions" (121K views)
+- **STATUS: ACTIVE** — Most viewed field extension video on YouTube
+- Key technique: Combines systematic course structure with some visual elements
+
 ## Analysis Notes
 
 ### Patterns Across Top Performers
@@ -111,12 +151,13 @@
 - Probability/Statistics (3B1B, Zach Star)
 - Neural Networks/ML (3B1B, Steve Brunton)
 - Number Theory (Mathologer, Math Sorcerer)
-- Abstract Algebra (Socratica, Math Sorcerer)
-- Topology (Mathologer)
+- Abstract Algebra (Socratica, Math Sorcerer, Aleph 0, Mathemaniac)
+- Topology (Mathologer, Aleph 0)
 - Geometry (3B1B, Mathologer)
 - Complex Analysis (Mathologer, 3B1B)
 - Information Theory (Reducible)
 - Fourier Analysis (3B1B, Steve Brunton, Zach Star)
+- Galois Theory / Field Theory (Mathemaniac, Aleph 0, Math Visualized, Professor Macauley)
 
 ### Our Channel's Positioning
 - **Niche**: Undergraduate math with Manim (community manim)
