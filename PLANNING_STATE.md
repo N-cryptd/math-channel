@@ -325,7 +325,7 @@
 | 219 | Field Extensions | ✅ | ✅ |
 | 220 | Algebraic Extensions | ✅ | ✅ |
 | 221 | Splitting Fields | ✅ | ✅ |
-| 222 | Galois Theory | ✅ | |
+| 222 | Galois Theory | ✅ | ✅ |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
@@ -333,4 +333,4 @@
 - Algebraic Topology playlist COMPLETE (Videos 207-216, 10 videos, Aug 2026)
 - Advanced Abstract Algebra playlist IN PROGRESS (Videos 217-228, 12 videos planned)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
-- 208 scripts, 210 renders total across all playlists
+- 209 scripts, 211 renders total across all playlists
