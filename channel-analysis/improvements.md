@@ -1643,3 +1643,63 @@ Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks
 - Borcherds' extremely dense pace — this is a 12-min video, not a 50-min lecture
 - Indian university channels' proof-heavy approach without motivation
 - Long algebraic computations without visual breaks
+
+### [2026-08-19] Galois Theory (Video 222)
+
+**Market Gap Analysis:** Galois theory is one of the most-viewed advanced math topics on YouTube (Mathemaniac 549K, Math Visualized 564K, Aleph 0 314K). However, all three of these top-performing videos SKIP the foundational definitions — they assume you already know what Aut(E/F) is, how to compute Galois groups, and what fixed fields are. Our Video 222 fills this gap by providing the animated, systematic treatment of Galois group definitions, concrete examples, and the Galois correspondence teaser. No existing Manim-animated video covers Gal(Q(√2)/Q) computation, Aut(E/F) definition, fixed fields, AND the correspondence diagram together.
+
+**Previously Analyzed (from Video 220 analysis):**
+1. **Mathemaniac — "Why you can't solve quintic equations"** (zCU9tZ2VkWc, 549K views, 277K subs) — "dial" metaphor for Galois groups, 45-min storytelling epic. Skips all definitions we need to cover.
+2. **Aleph 0 — "What is the square root of two? FTGT"** (CwvuZ8aHyH4, 314K views, 225K subs) — √2 hook, pink color scheme, 25 min. Covers entire Galois arc but glosses over Aut(E/F) and fixed fields.
+3. **Math Visualized — "Galois Theory Explained Simply"** (Ct2fyigNgPY, 564K views, 19K subs) — "trousers" metaphor, 3D animations. Very simplified, not suitable for students who need to compute.
+
+**New Competitors Analyzed:**
+
+#### 4. Michael Penn — "Galois Group Examples" (Structure: 7/10 | Pacing: 7/10 | Visuals: 2/10 | Narration: 8/10 | Hooks: 4/10)
+- **Style:** Tablet whiteboard. Computes Galois groups step by step.
+- **Content:** Defines Gal(E/F), works through multiple examples (Q(√2)/Q, Q(√2,√3)/Q, Q(∛2,ω)/Q). Strong on computation, weak on visual intuition.
+- **Insight:** The worked examples are exactly what students need. Our video should match this computational depth but with animations.
+- **Weakness:** No visual intuition at all. Pure symbolic manipulation on whiteboard. No fixed fields discussion.
+
+#### 5. Socratica — "Introduction to Galois Theory" (Structure: 8/10 | Pacing: 6/10 | Visuals: 6/10 | Narration: 7/10 | Hooks: 5/10)
+- **Style:** Professional Manim-like animations. Clean, academic.
+- **Content:** Motivates Galois theory historically (solving polynomials by radicals). Introduces the Galois group idea but doesn't compute concrete examples in detail.
+- **Insight:** Good historical motivation. The storytelling arc (polynomial solving → symmetry → groups) is effective.
+- **Weakness:** Doesn't actually compute Gal(Q(√2)/Q) or show fixed fields. More motivation than content.
+
+#### 6. BriTheMathGuy — Galois Theory introduction (Structure: 6/10 | Pacing: 7/10 | Visuals: 3/10 | Narration: 8/10 | Hooks: 6/10)
+- **Style:** Tablet whiteboard, conversational, beginner-friendly.
+- **Content:** High-level overview of what Galois theory is about. Accessible but lacks rigor.
+- **Weakness:** Too surface-level for our target audience. No formal definitions or computations.
+
+#### 7. Dr. Peyam — Galois Theory series (Structure: 9/10 | Pacing: 5/10 | Visuals: 2/10 | Narration: 7/10 | Hooks: 3/10)
+- **Style:** Comprehensive lecture series, tablet whiteboard.
+- **Content:** Most thorough coverage: defines Aut(E/F), computes examples, discusses fixed fields, proves the correspondence. Very rigorous.
+- **Insight:** The most complete treatment of our exact topic. Good reference for content coverage.
+- **Weakness:** Extremely dry, long-form (30-50 min per video), no animations. Pure lecture.
+
+**Synthesis for Video 222 — Galois Theory:**
+
+**Our approach (distinct from all competitors):**
+1. **The missing definitions video.** After watching Mathemaniac/Aleph 0/Math Visualized, viewers understand the BIG IDEA but cannot compute a single Galois group. We provide the animated, systematic treatment of Aut(E/F), concrete examples, and fixed fields that these popular videos assume as background.
+2. **Animate the automorphism computation.** Show σ(√2) being sent to ±√2 visually — animate the two roots being swapped. This is Michael Penn's best content but with Manim animations.
+3. **Animated Galois correspondence lattice.** No competitor visualizes the subgroup ↔ intermediate field correspondence with an animated diagram. This is our visual climax.
+4. **Fixed fields as a visual concept.** Dr. Peyam covers this rigorously but nobody visualizes it. Show the fixed field as the set of elements that "survive" all automorphisms.
+5. **Mathemaniac's "dial" metaphor adapted.** Show automorphisms as permutations of roots on a circle — the "dial" idea but for concrete examples.
+
+**Techniques to Adopt:**
+- Mathemaniac's storytelling (each section answers a question raised by the previous)
+- Michael Penn's computational examples (but animated)
+- Aleph 0's √2 concrete hook (we build on the same example)
+- Dr. Peyam's coverage completeness (ensure we hit all key definitions)
+- Socratica's historical motivation (brief, in the hook)
+
+**Techniques to Avoid:**
+- Michael Penn/BriTheMathGuy's pure whiteboard (no visual intuition)
+- Dr. Peyam's 50-minute lecture length
+- Mathemaniac's 45-minute epic (our video is 10-14 min)
+- Math Visualized's non-standard "trousers" metaphor
+- Skipping definitions (the #1 mistake of all high-view-count competitors)
+
+**Thumbnail Concept:** Dark BG (#1A1832) with a field tower Q ⊂ Q(√2) on the left, and the group Z/2Z on the right, connected by a glowing ACCENT (#FFD166) double arrow. Two dots (±√2) in PRIMARY with arrows between them showing the automorphism. Text: "Galois Theory: The Symmetries of Fields".
+

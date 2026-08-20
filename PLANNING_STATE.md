@@ -324,6 +324,8 @@
 | 218 | Solvable & Nilpotent Groups | ✅ | ✅ |
 | 219 | Field Extensions | ✅ | ✅ |
 | 220 | Algebraic Extensions | ✅ | ✅ |
+| 221 | Splitting Fields | ✅ | ✅ |
+| 222 | Galois Theory | ✅ | |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
