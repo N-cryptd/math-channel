@@ -1703,3 +1703,66 @@ Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks
 
 **Thumbnail Concept:** Dark BG (#1A1832) with a field tower Q ⊂ Q(√2) on the left, and the group Z/2Z on the right, connected by a glowing ACCENT (#FFD166) double arrow. Two dots (±√2) in PRIMARY with arrows between them showing the automorphism. Text: "Galois Theory: The Symmetries of Fields".
 
+---
+
+## Video 223 — Fundamental Theorem of Galois Theory [2026-08-20]
+
+### Competitors Analyzed
+
+**1. Aleph 0 — "What is the square root of two? | The Fundamental Theorem of Galois Theory"** (CwvuZ8aHyH4, 314K views, 225K subs, Nov 2021, 25 min, pink/dark scheme, Manim-like animation)
+- Covers the FULL FTGT arc from √2 hook through correspondence in one video
+- FTGT section starts at 18:25 — spends ~6 min on the theorem
+- Shows the subgroup↔field lattice visually (key strength)
+- SKIPS the Galois extension definition, normal subgroups, and the degree formula
+- Uses pink (#ff69b4) accent on dark bg — very distinctive
+- Style: fast cuts, intuition-first, minimal formalism
+- Thumbnail: Pink text on dark, clean, minimal
+
+**2. Richard Borcherds — Galois Theory lectures** (33K subs, whiteboard, 50+ min lectures)
+- Most rigorous treatment on YouTube, covers FTGT across multiple lectures
+- Full proof, normal subgroups, all parts of the theorem
+- NO animations, pure whiteboard/lecture
+- Audience: grad students who want full proofs
+- Thumbnail: Standard academic screenshot
+
+**3. Dr. Peyam — Galois Theory playlist** (~120K subs, whiteboard, 45+ min per video)
+- Covers FTGT in 2-3 separate videos
+- Full definitions, proof sketches, examples
+- NO animations, dry lecture style
+- Very thorough but visually unengaging
+
+**4. Michael Penn — Galois Theory examples** (~80K-150K subs, whiteboard, 10-15 min)
+- Computation-focused: works through specific FTGT examples
+- Computes Galois groups and lattices for specific polynomials
+- NO animations
+- Good for seeing FTGT applied but lacks the structural overview
+
+**5. Mathemaniac — (from Video 222 analysis)**
+- Covers Galois theory with the "dial" metaphor but does NOT do the full FTGT proof
+- Uses storytelling structure (each section raises a question the next answers)
+
+### Analysis Summary
+
+| Dimension | Aleph 0 | Borcherds | Dr. Peyam | Michael Penn |
+|-----------|---------|-----------|-----------|-------------|
+| Structure | 8/10 | 9/10 | 7/10 | 6/10 |
+| Pacing | 7/10 | 5/10 | 4/10 | 6/10 |
+| Visual | 8/10 | 2/10 | 2/10 | 2/10 |
+| Narration | 7/10 | 6/10 | 5/10 | 7/10 |
+| Engagement | 9/10 | 3/10 | 3/10 | 5/10 |
+
+### Key Market Gap
+**NO competitor covers the FTGT with BOTH (a) animated visuals showing the lattice correspondence AND (b) the full formal statement including normal subgroups and the degree formula.** Aleph 0 has the animation but skips the formal parts. Borcherds/Dr. Peyam have the rigor but no animation. This is exactly the gap our video fills.
+
+### Techniques to Adopt
+- Aleph 0's lattice visualization: animate the subgroup↔field correspondence with arrows connecting both sides (adapted to our color scheme)
+- Aleph 0's √2-running-example approach: use Q(√2, √3)/Q as the running example throughout (richer than just Q(√2)/Q)
+- Aleph 0's storytelling: state the theorem early as a "big picture", then prove each part
+- Michael Penn's computational examples: show a worked lattice (our video, but animated)
+
+### Techniques to Avoid
+- Aleph 0's 25-minute single-video approach (too long; we focus on FTGT specifically since 222 already covered Galois groups)
+- Skipping the Galois extension definition (Aleph 0 does this; our audience needs the formal setup)
+- Borcherds/Dr. Peyam's wall-of-formalism with no visual relief
+- Proving every part in full detail (this is a video, not a textbook — prove the main ideas, state the rest)
+

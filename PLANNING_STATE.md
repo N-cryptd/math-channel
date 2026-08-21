@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-19
+**Last updated:** 2026-08-21
 
-**Completed Videos (211 scripts, 213 renders)**
+**Completed Videos (212 scripts, 214 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -326,6 +326,7 @@
 | 220 | Algebraic Extensions | ✅ | ✅ |
 | 221 | Splitting Fields | ✅ | ✅ |
 | 222 | Galois Theory | ✅ | ✅ |
+| 223 | Fundamental Theorem of Galois Theory | ✅ | ✅ |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)

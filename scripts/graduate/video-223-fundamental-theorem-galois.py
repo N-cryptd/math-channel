@@ -64,7 +64,7 @@ class Video223_FundamentalTheoremGalois(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(7)
+        self.wait(22)
         self.ly.clear()
 
     def scene2_galois_extensions(self):
@@ -91,7 +91,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         boxed_defn = self.ly.formula_box(defn, color=PRIMARY)
         self.ly.safe_place(boxed_defn, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(boxed_defn), run_time=NORMAL)
-        self.wait(4)
+        self.wait(8)
 
         # Equivalent condition 1
         self.play(FadeOut(boxed_defn), run_time=FAST)
@@ -102,7 +102,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         boxed_eq1 = self.ly.formula_box(eq1, color=SECONDARY)
         self.ly.safe_place(boxed_eq1, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(boxed_eq1), run_time=NORMAL)
-        self.wait(3)
+        self.wait(6)
 
         # Equivalent condition 2
         self.play(FadeOut(boxed_eq1), run_time=FAST)
@@ -112,7 +112,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(eq2, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(eq2, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(3)
+        self.wait(6)
 
         # Key insight
         note = Text(
@@ -121,7 +121,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(note, DOWN, anchor=eq2, buff=0.4)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(7)
         self.ly.clear()
 
     def scene3_running_example(self):
@@ -147,7 +147,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(ext, DOWN, anchor=title, buff=0.5)
         self.play(Write(ext), run_time=NORMAL)
-        self.wait(3)
+        self.wait(6)
 
         # Basis
         self.play(FadeOut(ext), run_time=FAST)
@@ -157,7 +157,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(basis, DOWN, anchor=title, buff=0.5)
         self.play(Write(basis), run_time=NORMAL)
-        self.wait(3)
+        self.wait(6)
 
         # Four automorphisms, shown two at a time
         self.play(FadeOut(basis), run_time=FAST)
@@ -167,7 +167,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(auto_title, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(auto_title, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(2)
+        self.wait(3)
 
         id_auto = MathTex(
             r'\text{id}: \sqrt{2} \mapsto \sqrt{2},\ \sqrt{3} \mapsto \sqrt{3}',
@@ -175,7 +175,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(id_auto, DOWN, anchor=auto_title, buff=0.3)
         self.play(Write(id_auto), run_time=FAST)
-        self.wait(2)
+        self.wait(4)
 
         sigma_auto = MathTex(
             r'\sigma: \sqrt{2} \mapsto -\sqrt{2},\ \sqrt{3} \mapsto \sqrt{3}',
@@ -183,7 +183,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(sigma_auto, DOWN, anchor=id_auto, buff=0.25)
         self.play(Write(sigma_auto), run_time=FAST)
-        self.wait(2)
+        self.wait(4)
 
         self.play(FadeOut(id_auto), run_time=FAST)
 
@@ -193,7 +193,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(tau_auto, DOWN, anchor=auto_title, buff=0.3)
         self.play(Write(tau_auto), run_time=FAST)
-        self.wait(2)
+        self.wait(4)
 
         self.play(FadeOut(sigma_auto), run_time=FAST)
 
@@ -203,7 +203,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(st_auto, DOWN, anchor=tau_auto, buff=0.25)
         self.play(Write(st_auto), run_time=FAST)
-        self.wait(3)
+        self.wait(5)
 
         # Result
         self.play(
@@ -217,7 +217,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         boxed_result = self.ly.formula_box(result, color=ACCENT)
         self.ly.safe_place(boxed_result, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(boxed_result), run_time=NORMAL)
-        self.wait(5)
+        self.wait(8)
         self.ly.clear()
 
     def scene4_ftgt_statement(self):
@@ -246,7 +246,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         boxed_stmt = self.ly.formula_box(stmt, color=PRIMARY)
         self.ly.safe_place(boxed_stmt, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(boxed_stmt), run_time=NORMAL)
-        self.wait(4)
+        self.wait(10)
 
         # The two maps
         self.play(FadeOut(boxed_stmt), run_time=FAST)
@@ -257,7 +257,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(maps, DOWN, anchor=title, buff=0.5)
         self.play(Write(maps), run_time=NORMAL)
-        self.wait(4)
+        self.wait(10)
 
         # Properties
         self.play(FadeOut(maps), run_time=FAST)
@@ -277,7 +277,7 @@ class Video223_FundamentalTheoremGalois(Scene):
             ),
         ]
         self.ly.progressive_reveal(props, start_from=title)
-        self.wait(5)
+        self.wait(11)
         self.ly.clear()
 
     def scene5_lattice_visual(self):
@@ -335,7 +335,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         self.play(FadeIn(heads), run_time=FAST)
         self.play(Write(left_col), run_time=NORMAL)
         self.play(Write(right_col), run_time=NORMAL)
-        self.wait(2)
+        self.wait(4)
 
         # Lattice edges (inclusion lines within each column)
         edges = VGroup()
@@ -352,7 +352,7 @@ class Video223_FundamentalTheoremGalois(Scene):
             edges.add(Line(fld.get_top(), f_e.get_bottom(),
                            stroke_width=2, color=DIM))
         self.play(Create(edges), run_time=NORMAL)
-        self.wait(2)
+        self.wait(5)
 
         # Correspondence arrows (pairs at equal height)
         pairs = [
@@ -370,12 +370,12 @@ class Video223_FundamentalTheoremGalois(Scene):
                 Arrow(start, end, buff=0.05, stroke_width=3,
                       color=ACCENT, max_tip_length_to_length_ratio=0.35))
         self.play(GrowArrow(arrow_list[0]), run_time=FAST)
-        self.wait(1)
+        self.wait(2)
         self.play(GrowArrow(arrow_list[1]), GrowArrow(arrow_list[2]),
                   GrowArrow(arrow_list[3]), run_time=NORMAL)
-        self.wait(1)
+        self.wait(3)
         self.play(GrowArrow(arrow_list[4]), run_time=FAST)
-        self.wait(2)
+        self.wait(3)
 
         # Emphasize a pair: <tau> fixes sqrt2, so it pairs with Q(sqrt2)
         highlight = Text(
@@ -389,7 +389,8 @@ class Video223_FundamentalTheoremGalois(Scene):
             Indicate(f_q2, color=ACCENT),
             run_time=NORMAL,
         )
-        self.wait(4)
+        self.wait(8)
+        self.wait(14)
         self.ly.clear()
 
     def scene6_degree_formula_normal(self):
@@ -417,7 +418,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         boxed_formula = self.ly.formula_box(formula, color=ACCENT)
         self.ly.safe_place(boxed_formula, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(boxed_formula), run_time=NORMAL)
-        self.wait(4)
+        self.wait(12)
 
         # Worked example
         example = MathTex(
@@ -426,7 +427,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(example, DOWN, anchor=boxed_formula, buff=0.4)
         self.play(Write(example), run_time=NORMAL)
-        self.wait(4)
+        self.wait(8)
 
         # Normal subgroups
         self.play(FadeOut(boxed_formula), FadeOut(example), run_time=FAST)
@@ -437,7 +438,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         boxed_normal = self.ly.formula_box(normal_stmt, color=RED)
         self.ly.safe_place(boxed_normal, DOWN, anchor=title, buff=0.5)
         self.play(FadeIn(boxed_normal), run_time=NORMAL)
-        self.wait(4)
+        self.wait(8)
 
         note = Text(
             'V4 is abelian: all subgroups normal, all subextensions Galois',
@@ -445,7 +446,7 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(note, DOWN, anchor=boxed_normal, buff=0.4)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(9)
         self.ly.clear()
 
     def scene7_proof_sketch(self):
@@ -482,7 +483,7 @@ class Video223_FundamentalTheoremGalois(Scene):
             ),
         ]
         self.ly.progressive_reveal(steps, start_from=title)
-        self.wait(4)
+        self.wait(10)
 
         # Key insight
         insight = Text(
@@ -491,7 +492,8 @@ class Video223_FundamentalTheoremGalois(Scene):
         )
         self.ly.safe_place(insight, DOWN, anchor=steps[-1], buff=0.4)
         self.play(FadeIn(insight, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(10)
+        self.wait(19)
         self.ly.clear()
 
     def scene8_summary(self):
@@ -527,7 +529,8 @@ class Video223_FundamentalTheoremGalois(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(5)
+        self.wait(16)
+        self.wait(17)
         self.ly.clear()
 
         self.add_subcaption(
