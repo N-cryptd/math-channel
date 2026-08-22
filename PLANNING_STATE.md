@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-21
+**Last updated:** 2026-08-22
 
-**Completed Videos (212 scripts, 214 renders)**
+**Completed Videos (212 scripts, 215 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -251,10 +251,10 @@
 | 182 | Applications: Heat Equation | ✅ | ✅ |
 | 183 | Fourier Analysis Summary | ✅ | ✅ |
 
-## In Progress
-- Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
-
+- (none)
 ## Completed Playlists
+- Advanced Abstract Algebra (Videos 217–228): COMPLETE (12 videos)
+- Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
 - Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
 - Topology (Videos 139–150): COMPLETE (12 videos)
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
@@ -327,11 +327,16 @@
 | 221 | Splitting Fields | ✅ | ✅ |
 | 222 | Galois Theory | ✅ | ✅ |
 | 223 | Fundamental Theorem of Galois Theory | ✅ | ✅ |
+| 224 | Solvability by Radicals | ✅ | ✅ |
+| 225 | Insolvability of the Quintic | ✅ | ✅ |
+| 226 | Cyclotomic Fields | ✅ | ✅ |
+| 227 | Finite Fields | ✅ | ✅ |
+| 228 | Advanced Algebra Summary | ✅ | ✅ |
 
 ## Notes
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
 - Differential Geometry playlist COMPLETE (Videos 194-206, 13 videos, Aug 2026)
 - Algebraic Topology playlist COMPLETE (Videos 207-216, 10 videos, Aug 2026)
-- Advanced Abstract Algebra playlist IN PROGRESS (Videos 217-228, 12 videos planned)
+- Advanced Abstract Algebra playlist COMPLETE (Videos 217-228, 12 videos, Aug 2026)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
-- 209 scripts, 211 renders total across all playlists
+- 212 scripts, 218 renders total across all playlists

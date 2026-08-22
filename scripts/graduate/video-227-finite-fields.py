@@ -1,0 +1,239 @@
+r"""
+Video 227: Finite Fields — Advanced Abstract Algebra
+
+Prime fields, existence/uniqueness theorem, Frobenius automorphism,
+multiplicative group cyclicity, subfield lattice.
+
+Follows v2 template quality rules.
+"""
+
+from manim import *
+import sys, os
+_template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "templates"))
+if _template_dir not in sys.path:
+    sys.path.insert(0, _template_dir)
+from channel_branding import (
+    BG, PRIMARY, SECONDARY, ACCENT, RED, DIM, WHITE, SANS, MONO,
+    TITLE_SIZE, HEADING_SIZE, BODY_SIZE, LABEL_SIZE, FAST, NORMAL, SLOW,
+    play_intro, play_outro, setup_background,
+)
+from layout import LayoutEngine, ensure_fits
+
+
+class Video227_FiniteFields(Scene):
+
+    def construct(self):
+        self.camera.background_color = BG
+        self.ly = LayoutEngine(self)
+        self._bg_dots, self._bg_gradient = setup_background(self)
+
+        self.scene1_hook()
+        self.scene2_characteristic()
+        self.scene3_existence_uniqueness()
+        self.scene4_frobenius()
+        self.scene5_mult_group()
+        self.scene6_subfields()
+        self.scene7_applications()
+        self.scene8_summary()
+
+    def scene1_hook(self):
+        self.add_subcaption(
+            "We have studied field extensions over Q and C. But there is a completely "
+            "different world of fields: finite fields. For every prime power p to the n, "
+            "there exists a unique field with p to the n elements. "
+            "These have remarkably clean structure.",
+            duration=14,
+        )
+        play_intro(self, "Finite Fields", "Advanced Abstract Algebra")
+
+        title = self.ly.title("Fields with Finitely Many Elements")
+        items = [
+            Text("Z/pZ for p prime: fields with p elements",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("For every prime power p^n: a unique field GF(p^n)",
+                 font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Remarkably clean: Galois theory in miniature",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+    def scene2_characteristic(self):
+        self.add_subcaption(
+            "Every field has a characteristic: the smallest positive n "
+            "such that n times 1 equals 0. The characteristic of a field "
+            "is always 0 or a prime number.",
+            duration=12,
+        )
+        self.ly.section_divider(1, "Basics")
+        title = self.ly.title("Characteristic and Prime Field")
+
+        items = [
+            MathTex(r"\text{char}(F) = \min\{n > 0 : n \cdot 1 = 0\}",
+                    font_size=HEADING_SIZE, color=PRIMARY),
+            Text("Characteristic is always 0 or a prime",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("char(Q) = 0, prime field = Q",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("char(F_p) = p, prime field = F_p",
+                 font_size=BODY_SIZE, color=ACCENT, font=SANS),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+    def scene3_existence_uniqueness(self):
+        self.add_subcaption(
+            "The fundamental theorem of finite fields: for every prime p and "
+            "positive integer n, there exists a unique field with p to the n "
+            "elements. The construction uses splitting fields of x to the p to the n minus x.",
+            duration=14,
+        )
+        self.ly.section_divider(2, "Existence and Uniqueness")
+        title = self.ly.title("The Fundamental Theorem")
+
+        thm = MathTex(
+            r"\forall \text{ prime } p, \; n \geq 1: \; \exists ! \; \text{field with } p^n \text{ elements}",
+            font_size=BODY_SIZE, color=ACCENT,
+        )
+        boxed = self.ly.formula_box(thm, ACCENT)
+        self.ly.safe_place(boxed, DOWN, anchor=title, buff=0.4)
+        self.play(Write(thm), run_time=NORMAL)
+        self.wait(3)
+        self.play(FadeOut(boxed), run_time=FAST)
+
+        items = [
+            Text("Construction: roots of x^{p^n} - x in an extension of F_p",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Notation: GF(p^n) or F_{p^n} (Galois field)",
+                 font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("Uniqueness: any field of order p^n is roots of that polynomial",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+    def scene4_frobenius(self):
+        self.add_subcaption(
+            "Every finite field has a canonical automorphism: the Frobenius map, "
+            "which sends x to x to the p. It preserves addition by the binomial "
+            "theorem and multiplication. The Galois group of GF of p to the n "
+            "over GF of p is cyclic, generated by the Frobenius.",
+            duration=16,
+        )
+        title = self.ly.title("The Frobenius Automorphism")
+
+        frob = MathTex(
+            r"\mathcal{F} : x \mapsto x^p",
+            font_size=HEADING_SIZE, color=PRIMARY,
+        )
+        boxed = self.ly.formula_box(frob, PRIMARY)
+        self.ly.safe_place(boxed, DOWN, anchor=title, buff=0.4)
+        self.play(Write(frob), run_time=NORMAL)
+        self.wait(3)
+        self.play(FadeOut(boxed), run_time=FAST)
+
+        items = [
+            Text("Field automorphism (binomial theorem for addition)",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            MathTex(r"\mathcal{F}^n = \text{id} \text{ on } 	ext{GF}(p^n)",
+                    font_size=BODY_SIZE, color=WHITE),
+            MathTex(r"\text{Gal}(	ext{GF}(p^n)/	ext{GF}(p)) = \langle \mathcal{F} \rangle \cong C_n",
+                    font_size=HEADING_SIZE, color=ACCENT),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+    def scene5_mult_group(self):
+        self.add_subcaption(
+            "The multiplicative group of a finite field is cyclic. "
+            "GF of p to the n star is cyclic of order p to the n minus 1. "
+            "A primitive element generates this group.",
+            duration=12,
+        )
+        self.ly.section_divider(3, "Structure")
+        title = self.ly.title("The Multiplicative Group Is Cyclic")
+
+        thm = MathTex(
+            r"\text{GF}(p^n)^\times \cong C_{p^n - 1}",
+            font_size=HEADING_SIZE, color=SECONDARY,
+        )
+        boxed = self.ly.formula_box(thm, SECONDARY)
+        self.ly.safe_place(boxed, DOWN, anchor=title, buff=0.4)
+        self.play(Write(thm), run_time=NORMAL)
+        self.wait(3)
+        self.play(FadeOut(boxed), run_time=FAST)
+
+        items = [
+            Text("A primitive element generates the multiplicative group",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            MathTex(r"\text{GF}(4)^\times \cong C_3, \quad \text{GF}(9)^\times \cong C_8",
+                    font_size=BODY_SIZE, color=WHITE),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+    def scene6_subfields(self):
+        self.add_subcaption(
+            "The subfields of GF of p to the n correspond bijectively to "
+            "the divisors of n, via the Galois correspondence. "
+            "The subfield for divisor d has p to the d elements.",
+            duration=12,
+        )
+        title = self.ly.title("Subfields of GF(p^n)")
+
+        items = [
+            MathTex(r"d | n \quad \longleftrightarrow \quad \text{subfield of order } p^d",
+                    font_size=HEADING_SIZE, color=PRIMARY),
+            Text("Subfield for d = Fix(F^d), the fixed field of Frobenius^d",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Example: GF(p^12) has subfields for d in {1,2,3,4,6,12}",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+    def scene7_applications(self):
+        self.add_subcaption(
+            "Finite fields are essential in modern applications. "
+            "In coding theory, Reed-Solomon codes use finite field arithmetic. "
+            "In cryptography, Diffie-Hellman and elliptic curves work over finite fields.",
+            duration=14,
+        )
+        title = self.ly.title("Applications")
+        items = [
+            Text("Coding theory: Reed-Solomon error-correcting codes",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Cryptography: Diffie-Hellman, elliptic curve cryptography",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Combinatorics: finite projective planes from finite fields",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+    def scene8_summary(self):
+        self.add_subcaption(
+            "Finite fields exist for every prime power and are unique. "
+            "The Frobenius generates the Galois group. The multiplicative group "
+            "is cyclic. Subfields correspond to divisors. "
+            "Applications span coding, cryptography, and combinatorics.",
+            duration=14,
+        )
+        self.ly.section_divider(4, "Summary")
+        title = self.ly.title("Key Takeaways")
+        items = [
+            Text("GF(p^n) exists and is unique for every prime p, n >= 1",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Frobenius F(x) = x^p generates Gal(GF(p^n)/GF(p))",
+                 font_size=BODY_SIZE, color=PRIMARY, font=SANS),
+            Text("GF(p^n)* is cyclic of order p^n - 1",
+                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
+            Text("Subfields of GF(p^n) correspond to divisors of n",
+                 font_size=BODY_SIZE, color=WHITE, font=SANS),
+            Text("Applications: error-correcting codes, cryptography, combinatorics",
+                 font_size=BODY_SIZE, color=ACCENT, font=SANS),
+        ]
+        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.clear()
+
+        play_outro(self, "Advanced Algebra Summary", "Advanced Abstract Algebra")

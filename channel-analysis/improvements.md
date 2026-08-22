@@ -1766,3 +1766,143 @@ Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 7/10 | Hooks
 - Borcherds/Dr. Peyam's wall-of-formalism with no visual relief
 - Proving every part in full detail (this is a video, not a textbook — prove the main ideas, state the rest)
 
+---
+
+#### Video 225: Insolvability of the Quintic (Abel-Ruffini)
+**Analysis date:** August 2026
+**Topic scope:** Abel-Ruffini theorem, S5 non-solvability, general quintic has Galois group S5
+
+**Existing analysis coverage:** Mathemaniac 'Why you can't solve quintic equations' (zCU9tZ2VkWc, 549K views) analyzed under Video 222/224 entries. Key: 45-minute storytelling epic, "dial" metaphor, covers entire arc from field extensions to quintic unsolvability. Deliberately skips tower law. Our unique angle: this video is the CLIMACTIC payoff of the entire Advanced Abstract Algebra playlist, not a standalone explainer.
+
+**Additional competitors (lecture channels, 20-60K views each):**
+1. **Michael Penn** — 'The Insolubility of the Quintic' (~40-60K views). Whiteboard proof: derives general quintic Galois group as S5, shows S5 has no solvable subgroup chain. Graduate-lecture pace, heavy algebra, minimal visuals. **Structure: 6/10, Pacing: 5/10, Visual: 2/10, Narration: 6/10, Engagement: 4/10**
+2. **Dr. Peyam** — 'Abel's Impossibility Theorem' (~20-40K views). Conversational chalkboard talk, accessible but doesn't complete a full proof. Good intuition but no rigor. **Structure: 5/10, Pacing: 6/10, Visual: 2/10, Narration: 7/10, Engagement: 5/10**
+3. **Borcherds** — 'Galois Theory: Why the Quintic Has No Radical Solution' (~25-40K views). Dense lecture, treats insolvability as a corollary. Fast-paced, assumes field extension familiarity. **Structure: 4/10, Pacing: 3/10, Visual: 2/10, Narration: 5/10, Engagement: 3/10**
+
+**Market gap:** NO animated (Manim) video provides a rigorous standalone treatment of the Abel-Ruffini proof. Mathemaniac covers it in the context of a 45-minute epic (not a focused proof). All other competitors are whiteboard lectures. Our Video 224 set up solvability by radicals; this video DELIVERS the payoff with animated group theory visuals (derived series, A5 simplicity, transitive subgroups of S5).
+
+**Techniques to adopt:**
+- Mathemaniac's narrative arc: raise the question, show WHY the answer must be 'no', not just state it
+- The visual derived series of S5 FAILING (red X) vs D4 succeeding (green check) — direct visual contrast with Video 224
+- Build the proof as a chain: (1) A5 is simple, (2) S5' = A5 so S5 is not solvable, (3) general quintic has Galois group S5, (4) QED
+- Show specific solvable quintics (cyclotomic, x^5 - 1) to demonstrate not ALL quintics are unsolvable
+
+**Techniques to avoid:**
+- Mathemaniac's 45-minute single-video approach (we've already built the foundation in Videos 218-224)
+- Lecture channels' wall-of-formalism without visual breaks
+- Proving the full Vandermonde determinant / general quintic Galois group calculation (too computational for video — state the key lemma, motivate it, cite it)
+- Skipping A5 simplicity proof (the core visual payoff — show the 3-cycle conjugation argument animated)
+
+
+## Video 228 — Advanced Abstract Algebra Summary [2026-08-22]
+
+### Competitors Analyzed
+
+**1. Mathemaniac — "Why you can't solve quintic equations" (0wlBnViMqb8, 549K views, SoME2)**
+- The closest competitor: a 45-minute video covering the ENTIRE arc from field extensions through Galois groups to quintic insolvability
+- Functions as a "summary" of Galois theory but in one shot, not as a dedicated recap
+- Uses the "dial" metaphor for Galois groups, color-coded field towers
+- (Structure: 9/10 | Pacing: 8/10 | Visual: 9/10 | Narration: 9/10 | Hooks: 10/10)
+- **Key insight:** The storytelling arc IS the summary — each concept flows into the next
+- **Weakness:** 45 minutes is too long for most viewers; no coverage of cyclotomic or finite fields
+
+**2. Bill Kinney — "Review Abstract Algebra in 30 Minutes" (aNfhmFeIAQ, 2,642 views, Aug 2024)**
+- Literal recap video covering groups, rings, fields, homomorphisms, isomorphism theorems
+- Whiteboard/tablet, rapid-fire definitions
+- (Structure: 6/10 | Pacing: 4/10 | Visual: 2/10 | Narration: 6/10 | Hooks: 3/10)
+- **Key insight:** Recaps at a surface level — lists definitions without connecting them
+- **Weakness:** No animations, no visual story, low production value, low views prove demand is thin for this format
+
+**3. Aleph 0 — "What is the square root of two?" (CwvuZ8aHyH4, 314K views)**
+- Not a summary video, but covers the full FTGT arc in 25 minutes
+- Shows how √2 connects field extensions, Galois groups, and solvability
+- (Structure: 8/10 | Pacing: 7/10 | Visual: 8/10 | Narration: 7/10 | Hooks: 9/10)
+- **Key insight:** A single concrete example CAN carry an entire conceptual summary
+- **Weakness:** Skips solvable groups, cyclotomic fields, finite fields entirely
+
+### Market Gap
+**NO animated channel produces a dedicated "playlist summary" video for abstract algebra that (a) connects group theory to field theory through Galois correspondence, (b) shows the full arc from group actions through quintic insolvability, AND (c) previews what comes next (algebraic geometry, algebraic number theory).** Mathemaniac comes closest but in 45 minutes, not as a 12-minute recap. Bill Kinney does the recap format but without animation.
+
+### Our Positioning
+The definitive recap of our 12-video Advanced Abstract Algebra playlist. Unlike Mathemaniac's 45-minute epic, we do in 12 minutes what took 12 videos to build — with animated flow diagrams, a visual "roadmap" connecting all topics, and forward-looking teasers. This video is our "Easter egg" for viewers who watched the whole series.
+
+### Techniques to Adopt
+- Mathemaniac's storytelling arc (question → answer → deeper question → answer)
+- Aleph 0's concrete-example-as-thread approach (use Q(√2,√3) as the running thread)
+- A visual "roadmap" or flow diagram showing how all 12 topics connect (NO competitor does this animated)
+
+### Techniques to Avoid
+- Bill Kinney's rapid-fire definition listing (boring, no connections)
+- Mathemaniac's 45-minute length (12-15 minutes, 8-10 scenes)
+- Trying to re-prove anything (this is a recap — reference, don't re-derive)
+- Equal time for all topics (spend more time on the KEY connections: groups ↔ fields, solvable groups ↔ solvability by radicals)
+
+### Thumbnail Concept
+Dark BG with a flowing path connecting icons/dots labeled: "Groups" → "Actions" → "Fields" → "Galois" → "Quintic ❌" — each node in a different channel color, connected by glowing arrows. Title: "The Big Picture: Abstract Algebra".
+
+### Video 227: Finite Fields [2026-08-22]
+
+**Topic scope:** Finite fields (Galois fields) — fields of prime power order, existence and uniqueness of GF(p^n), Frobenius automorphism, multiplicative group is cyclic, structure of finite field extensions.
+
+**Competitors Analyzed:**
+
+**1. RH — "Finite fields made easy" (z9bTzjy4SCg, 101K views, Jun 2015, 17.8K subs)**
+- Whiteboard/tablet lecture focusing on concrete examples (Z/5Z, F4, F9 as polynomials mod irreducible).
+- Covers: Z/pZ as prime fields, constructing extension fields via irreducible polynomials, arithmetic in GF(4), GF(9).
+- (Structure: 7/10 | Pacing: 7/10 | Visual: 3/10 | Narration: 6/10 | Hooks: 5/10)
+- **Key insight:** Heavy on worked examples and computation — good for exam prep, bad for conceptual understanding.
+- **Weakness:** No animation, no visual structure, exam-focused rather than theory-focused. No proof of existence/uniqueness of GF(p^n). No Frobenius automorphism. No multiplicative group cyclicity.
+- **Thumbnail:** Dark blue background with light blue text banner. Clean but plain. Rating: 5/10.
+
+**2. Richard E Borcherds — "Galois theory: Finite fields" (c6FlpordfDk, 28.6K views, Dec 2020, 82.5K subs)**
+- Graduate-level lecture from a Fields Medalist. Covers classification: one field of each prime power order up to isomorphism. Examples of small order, irreducible polynomial counting.
+- (Structure: 8/10 | Pacing: 4/10 | Visual: 2/10 | Narration: 5/10 | Hooks: 3/10)
+- **Key insight:** The classification theorem (existence + uniqueness of GF(p^n)) is stated cleanly. The irreducible polynomial counting is a nice touch.
+- **Weakness:** Extremely dense, 30 minutes of pure lecture at graduate pace. No animation. Assumes heavy background. The "no good choice of irreducible polynomial" point is interesting but gets lost in density.
+- **Thumbnail:** White background with black/yellow text. Minimalist academic. Rating: 2/10.
+
+**3. Richard E Borcherds — "Galois theory: Frobenius automorphism" (OeynencPfpg, 8K views, Jan 2021, 82.5K subs)**
+- Graduate lecture on lifting Frobenius to characteristic 0, applications to quadratic reciprocity.
+- (Structure: 7/10 | Pacing: 3/10 | Visual: 2/10 | Narration: 5/10 | Hooks: 3/10)
+- **Key insight:** The Frobenius lift to Q(i) for proving (-1/p) = 1 iff p ≡ 1 mod 4 is a beautiful application.
+- **Weakness:** Very niche, narrow focus. No visual content. The application to quadratic reciprocity is too specific for a general finite fields video.
+- **Thumbnail:** White background, black/yellow text. Same style as all Borcherds videos. Rating: 2/10.
+
+**4. Socratica — "Field Definition (expanded) - Abstract Algebra" (KCSZ4QhOw0I, 417K views, Jul 2018, 1.01M subs)**
+- Introductory field definition video with Manim-style animations (Socratica used Manim before pivoting to coding). Covers field axioms, characteristic, prime fields Z/pZ.
+- (Structure: 8/10 | Pacing: 7/10 | Visual: 7/10 | Narration: 8/10 | Hooks: 7/10)
+- **Key insight:** 417K views proves there is significant demand for animated field theory content. Uses color-coded axioms visually. The prime field Z/pZ construction is well-animated.
+- **Weakness:** Only covers field definitions and prime fields — no finite fields beyond Z/pZ. No GF(p^n), no Frobenius, no classification. This was their intro-level field video, not a finite fields deep dive.
+- **Thumbnail:** Dark gradient background, "FIELDS" in large serif font. Professional, clean. Rating: 9/10.
+
+**5. Christof Paar — "Introduction to Galois Fields for the AES" (x1v2tX4_dkQ, 275K views, 90 min lecture)**
+- University lecture (applied cryptography). Covers GF(2^n) construction via irreducible polynomials over GF(2), used in AES S-box.
+- (Structure: 7/10 | Pacing: 5/10 | Visual: 4/10 | Narration: 6/10 | Hooks: 6/10)
+- **Key insight:** The cryptography application (AES) is a massive engagement hook — 275K views for a 90-min lecture proves it. Shows GF(2^8) arithmetic concretely.
+- **Weakness:** Lecture format, 90 minutes, focused on GF(2^n) only (characteristic 2). No general theory. No Frobenius automorphism or classification theorem.
+
+### Market Gap
+**NO animated video provides a complete treatment of finite field theory.** The landscape splits into:
+- (a) Introductory field definition videos (Socratica, 417K) that stop at prime fields
+- (b) Computational/cryptography lectures (Paar, 275K; RH, 101K) focused on GF(2^n) arithmetic for AES
+- (c) Graduate whiteboard lectures (Borcherds) covering the classification theorem but with no animation
+NO ONE covers the complete picture — prime fields, GF(p^n) construction, classification theorem, Frobenius automorphism, cyclic multiplicative group, subfield lattice — with animation. This is our unique position.
+
+### Our Positioning
+The definitive animated treatment of finite fields. We cover what Borcherds covers (classification, Frobenius) but with Manim animation, visual subfield lattices, and concrete worked examples. We provide what RH provides (arithmetic examples) but in the context of the general theory. The AES/cryptography teaser provides the engagement hook that pure-theory videos lack.
+
+### Techniques to Adopt
+- Socratica's color-coded axiom visuals for the field structure review
+- RH's concrete arithmetic examples (GF(4), GF(8) Cayley tables) but animated, not whiteboard
+- Borcherds' classification theorem as the climactic statement (existence + uniqueness)
+- Paar's cryptography hook as the opening motivation ("every time you send an encrypted message, you're doing arithmetic in a finite field")
+- Animate the subfield lattice of GF(p^{mn}) — no competitor does this visually
+
+### Techniques to Avoid
+- Borcherds' 30-minute graduate lecture density (we target 12-15 minutes)
+- RH's exam-prep focus (we build theory, not just compute)
+- Paar's 90-minute length and GF(2)-only restriction (we cover general p)
+- Skipping the cyclic multiplicative group theorem (RH doesn't prove it, Borcherds states it in passing — we make it a visual centerpiece)
+
+### Thumbnail Concept
+Dark BG (#1A1832) with a central visual: a Cayley table or field diagram for GF(4) with elements 0, 1, α, α+1 in channel colors (PRIMARY, SECONDARY, ACCENT, RED). Title: "Finite Fields: The Hidden Algebra of Encryption".
