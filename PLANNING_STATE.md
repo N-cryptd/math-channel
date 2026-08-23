@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-23
 
-**Completed Videos (228 scripts, 228 renders)**
+**Completed Videos (229 scripts, 229 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -172,6 +172,22 @@
 | 123 | Polynomial Rings | ✅ | ✅ |
 | 124 | Ideals | ✅ | ✅ |
 | 125 | Quotient Rings | ✅ | ✅ |
+
+### Stochastic Processes (Videos 229–240)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 229 | Random Walks | DONE | DONE |
+| 230 | Markov Chains | 🔲 BACKLOG | 🔲 |
+| 231 | Classification of States | 🔲 BACKLOG | 🔲 |
+| 232 | Stationary Distributions | 🔲 BACKLOG | 🔲 |
+| 233 | Poisson Processes | 🔲 BACKLOG | 🔲 |
+| 234 | Continuous-Time Markov Chains | 🔲 BACKLOG | 🔲 |
+| 235 | Brownian Motion | 🔲 BACKLOG | 🔲 |
+| 236 | Martingales | 🔲 BACKLOG | 🔲 |
+| 237 | Stopping Times | 🔲 BACKLOG | 🔲 |
+| 238 | Optional Stopping Theorem | 🔲 BACKLOG | 🔲 |
+| 239 | Ito's Lemma | 🔲 BACKLOG | 🔲 |
+| 240 | Stochastic Differential Equations | 🔲 BACKLOG | 🔲 |
 
 ### Complex Analysis (Videos 126–138)
 | # | Title | Script | Rendered |
