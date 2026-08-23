@@ -255,7 +255,6 @@
 ## Completed Playlists
 - Advanced Abstract Algebra (Videos 217–228): COMPLETE (12 videos)
 - Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
-- Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
 - Topology (Videos 139–150): COMPLETE (12 videos)
 - Abstract Algebra I (Videos 111–125): COMPLETE (15 videos)
 - Differential Equations (Videos 55–66): COMPLETE (12 videos)
@@ -339,4 +338,4 @@
 - Algebraic Topology playlist COMPLETE (Videos 207-216, 10 videos, Aug 2026)
 - Advanced Abstract Algebra playlist COMPLETE (Videos 217-228, 12 videos, Aug 2026)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
-- 212 scripts, 218 renders total across all playlists
+- 212 scripts, 215 renders total across all playlists

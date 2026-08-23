@@ -164,6 +164,7 @@ class Video226_CyclotomicFields(Scene):
             "Cyclotomic extensions are always Galois.",
             duration=12,
         )
+        self.ly.section_divider(3, "Cyclotomic Extensions")
         title = self.ly.title("Cyclotomic Extensions")
 
         items = [
@@ -260,7 +261,7 @@ class Video226_CyclotomicFields(Scene):
         title = self.ly.title("Connection to Abel-Ruffini")
 
         items = [
-            MathTex(r"x^5 - 1:  ext{Gal} = C_4 \text{ (abelian, solvable!)}",
+            MathTex(r"x^5 - 1: \text{Gal} = C_4 \text{ (abelian, solvable!)}",
                     font_size=HEADING_SIZE, color=SECONDARY),
             Text("Every cyclotomic polynomial is solvable by radicals",
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
