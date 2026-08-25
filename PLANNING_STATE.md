@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-08-25
 
-**Completed Videos (241 scripts, 241 renders)**
+**Completed Videos (250 scripts, 250 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -193,6 +193,15 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 241 | What is Information? | ✅ | ✅ |
+| 242 | Entropy and Data Compression | ✅ | ✅ |
+| 243 | Joint Entropy & Mutual Information | ✅ | ✅ |
+| 244 | Channel Capacity | ✅ | ✅ |
+| 245 | Error-Correcting Codes | ✅ | ✅ |
+| 246 | Rate-Distortion Theory | ✅ | ✅ |
+| 247 | KL Divergence | ✅ | ✅ |
+| 248 | Maximum Entropy Principle | ✅ | ✅ |
+| 249 | Information Theory & Physics | ✅ | ✅ |
+| 250 | Information Theory Summary | ✅ | ✅ |
 
 ### Complex Analysis (Videos 126–138)
 | # | Title | Script | Rendered |
@@ -274,6 +283,7 @@
 
 - (none)
 ## Completed Playlists
+- Information Theory (Videos 241–250): COMPLETE (10 videos)
 - Stochastic Processes (Videos 229–240): COMPLETE (12 videos)
 - Advanced Abstract Algebra (Videos 217–228): COMPLETE (12 videos)
 - Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
@@ -360,5 +370,6 @@
 - Algebraic Topology playlist COMPLETE (Videos 207-216, 10 videos, Aug 2026)
 - Advanced Abstract Algebra playlist COMPLETE (Videos 217-228, 12 videos, Aug 2026)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
-- 240 scripts, 240 renders total across all playlists
+- 250 scripts, 250 renders total across all playlists
+- Information Theory playlist COMPLETE (Videos 241-250, 10 videos, Aug 2026)
 - Stochastic Processes playlist COMPLETE (Videos 229-240, 12 videos, Aug 2026)
