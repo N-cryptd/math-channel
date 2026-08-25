@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-23
+**Last updated:** 2026-08-25
 
-**Completed Videos (229 scripts, 229 renders)**
+**Completed Videos (241 scripts, 241 renders)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -177,17 +177,22 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 229 | Random Walks | DONE | DONE |
-| 230 | Markov Chains | 🔲 BACKLOG | 🔲 |
-| 231 | Classification of States | 🔲 BACKLOG | 🔲 |
-| 232 | Stationary Distributions | 🔲 BACKLOG | 🔲 |
-| 233 | Poisson Processes | 🔲 BACKLOG | 🔲 |
-| 234 | Continuous-Time Markov Chains | 🔲 BACKLOG | 🔲 |
-| 235 | Brownian Motion | 🔲 BACKLOG | 🔲 |
-| 236 | Martingales | 🔲 BACKLOG | 🔲 |
-| 237 | Stopping Times | 🔲 BACKLOG | 🔲 |
-| 238 | Optional Stopping Theorem | 🔲 BACKLOG | 🔲 |
-| 239 | Ito's Lemma | 🔲 BACKLOG | 🔲 |
-| 240 | Stochastic Differential Equations | 🔲 BACKLOG | 🔲 |
+| 230 | Markov Chains | ✅ | ✅ |
+| 231 | Classification of States | ✅ | ✅ |
+| 232 | Stationary Distributions | ✅ | ✅ |
+| 233 | Poisson Processes | ✅ | ✅ |
+| 234 | Continuous-Time Markov Chains | ✅ | ✅ |
+| 235 | Brownian Motion | ✅ | ✅ |
+| 236 | Martingales | ✅ | ✅ |
+| 237 | Stopping Times | ✅ | ✅ |
+| 238 | Optional Stopping Theorem | ✅ | ✅ |
+| 239 | Ito's Lemma | ✅ | ✅ |
+| 240 | Stochastic Differential Equations | ✅ | ✅ |
+
+### Information Theory (Videos 241–250)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 241 | What is Information? | ✅ | ✅ |
 
 ### Complex Analysis (Videos 126–138)
 | # | Title | Script | Rendered |
@@ -269,6 +274,7 @@
 
 - (none)
 ## Completed Playlists
+- Stochastic Processes (Videos 229–240): COMPLETE (12 videos)
 - Advanced Abstract Algebra (Videos 217–228): COMPLETE (12 videos)
 - Algebraic Topology (Videos 207–216): COMPLETE (10 videos)
 - Topology (Videos 139–150): COMPLETE (12 videos)
@@ -354,4 +360,5 @@
 - Algebraic Topology playlist COMPLETE (Videos 207-216, 10 videos, Aug 2026)
 - Advanced Abstract Algebra playlist COMPLETE (Videos 217-228, 12 videos, Aug 2026)
 - Competitive analysis: green-field topic, no animated competitor playlist exists
-- 228 scripts, 228 renders total across all playlists
+- 240 scripts, 240 renders total across all playlists
+- Stochastic Processes playlist COMPLETE (Videos 229-240, 12 videos, Aug 2026)
