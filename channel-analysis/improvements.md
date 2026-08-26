@@ -1906,3 +1906,176 @@ The definitive animated treatment of finite fields. We cover what Borcherds cove
 
 ### Thumbnail Concept
 Dark BG (#1A1832) with a central visual: a Cayley table or field diagram for GF(4) with elements 0, 1, α, α+1 in channel colors (PRIMARY, SECONDARY, ACCENT, RED). Title: "Finite Fields: The Hidden Algebra of Encryption".
+
+---
+
+### [2026-08-26] General Competitive Landscape Sweep (Post-250 Videos)
+
+**Context:** All 250 videos across 17 playlists are complete. This sweep assesses the current competitive landscape to inform the next playlist direction. No specific video is in the backlog.
+
+---
+
+#### 3Blue1Brown — Current Output & Trend
+
+**Most recent videos (Aug 2026):**
+1. "But what is cross-entropy?" (GlYgs6v2YfU) — 633K views, Jul 2026
+2. "Reinventing Entropy" (l6DKRf-fAAM) — 1.44M views, Jun 2026
+3. "How (and why) to take a logarithm of an image" (ldxFjLJ3rVY) — 2M views, Mar 2026
+4. "The most beautiful formula not enough people understand" (fsLh-NYhOoU) — 1.3M views, Mar 2026
+5. "Why you can't comb a hairy ball, and why we care" (BHdbsHFs2P0) — 3.3M views, Jan 2026
+
+**Subscribers:** 8.56M (up from 8.34M at last analysis)
+
+**Key trend — "Compression is Intelligence" series:** 3B1B's latest 2-part series directly covers **entropy and cross-entropy**, which overlaps with our Information Theory playlist (Videos 241-250). His framing is novel: "Compression is Intelligence" connects Shannon entropy to LLM training loss functions. This is a significant competitive development.
+
+**Content analysis:**
+- The entropy video (1.44M views, 31 min) builds from language trees → optimal codes → information content → entropy definition. Very narrative-driven, with a robot character predicting text. Much more storytelling-oriented than our systematic treatment.
+- The cross-entropy video (633K views, 31 min) connects entropy to LLM loss functions, Lagrange multipliers, KL divergence. This is applied/relevant content we don't cover.
+- Both videos are 30+ minutes — 3B1B is trending longer, trusting audience patience.
+- He now credits multiple animators (Aaron Gostein, Paul Dancstep, Clayton Rabideau, Nishad Deulkar) — production scale has increased.
+
+**Thumbnail analysis (model: nemotron-nano-vl):**
+- Cross-entropy thumb: Black BG, white text "Loss = Information", blue vertical bars with scattered words. Rating: 8/10. Clean, minimal, curiosity gap.
+- Entropy thumb: Black BG, large white "Entropy" text, robot character with binoculars. Rating: 8/10. Character-driven, playful.
+- Hairy ball thumb: Black BG, white text, Fibonacci spiral visual. Rating: 8/10. Classic 3B1B geometric visual.
+- Logarithm of image: Black BG, "Escher → log(Escher)" with Escher drawings. Rating: 7/10. Clever but relies on art knowledge.
+- Beautiful formula: Black BG, blue glowing sphere, white text. Rating: 8/10. Minimalist, mysterious.
+
+**3B1B thumbnail pattern:** ALWAYS black background, white sans-serif text, exactly ONE visual element (geometric shape, character, diagram). Text is short (1-5 words). The visual element is always rendered from the Manim animation, not a stock image.
+
+**Impact on our channel:** Our Information Theory playlist (Videos 241-250) now has direct competition from the biggest math channel. However, our 10-video systematic treatment covers far more ground (channel capacity, error-correcting codes, rate-distortion, KL divergence as its own video, max entropy principle, information theory & physics). 3B1B's 2 videos only cover entropy and cross-entropy. **We should not feel threatened** — we offer depth, he offers a single narrative arc. But we should note the SEO overlap.
+
+**Techniques to adopt from 3B1B's latest:**
+- Applied connections (entropy → LLMs) as opening hooks for abstract topics
+- Longer video format when the narrative warrants it (20-30 min for summary/connecting videos)
+- Character/mascot elements for engagement (pi creature equivalent)
+
+---
+
+#### Mathologer — Declining Output
+
+**Most recent:**
+1. "Parity of permutations, impossible puzzles and the magical determinant" (rUiulWItECQ) — 43K views, Apr 2026
+2. "I Built an Original One-Glance Proof from Dice" — 38K views, Oct 2025
+3. "How to build and solve a 4D Rubik's cube" — 35K views, ~2025
+4. "Planimeters" — 71K views, ~2025
+5. "Water solve the 1800-Year-Old Talmudic Bankruptcy Problem" — 113K views, ~2025
+
+**Subscribers:** 967K (up from ~800K)
+
+**Thumbnail analysis:** Parity video uses cosmic background with lightning bolt, Rubik's cubes labeled "even"/"odd". Rating: 8/10. Much more colorful/busy than 3B1B — Mathologer's signature chaotic-but-engaging style.
+
+**Key observations:**
+- Output has slowed dramatically (4 months between latest videos)
+- View counts dropped significantly (43K for the latest vs. 113K+ for older ones)
+- Content remains high-quality deep dives but the algorithm seems to be favoring other channels
+- 36-minute runtime is very long even by his standards
+- Still covering permutation parity — content relevant to our Abstract Algebra playlists
+
+**Technique to note:** The "impossible puzzles" framing (15-puzzle, Rubik's cube) as entry points for abstract algebra is highly engaging. We could adopt this for any topic with recreational math connections.
+
+---
+
+#### Aleph 0 — Entering Number Theory
+
+**Most recent:**
+1. "Something strange happens when you look at the primes" (egA9K_R5pkg) — 181K views, Nov 2025
+2. "Why everything looks flat… until you zoom out" — 35K views, ~2025
+3. "Something weird happens in dimension 8" — 114K views, ~2025
+4. "Math isn't ready to solve this problem" (6gCaEeBNlnk) — 256K views, ~2025
+5. "What is algebraic topology?" — 126K views, ~2025
+
+**Subscribers:** 226K (up from ~225K — growth has stalled)
+
+**Thumbnail analysis:**
+- Primes thumb: Pink/magenta BG, white rectangle with blue border, "Why so close together?" in purple, green squiggly line with red dots. Rating: 7/10. Distinctive pink palette but cluttered.
+- Unsolved thumb: Pink BG, blue text, two math problems with "50%" labels. Rating: 7/10. Consistent pink branding but visually busy.
+
+**Key observations:**
+- Aleph 0 is moving into **number theory** (twin prime conjecture, sieve methods) — a topic we haven't covered
+- His title pattern "Something strange/weird happens when..." is working well (181K, 256K views)
+- Offering an online course (group theory) — monetization beyond YouTube
+- Credits an actual researcher (Lasse Grimmelt, Cambridge/James Maynard's group) for fact-checking
+- Growth has plateaued at ~226K subs — possibly hitting a ceiling with abstract math-only content
+
+**Strategic implication:** If we plan a Number Theory playlist, Aleph 0 is our most direct animated competitor. His twin primes video (181K views) shows there IS demand for animated number theory content. However, his coverage is episodic — we could offer systematic curriculum coverage as our differentiator.
+
+---
+
+#### Steve Brunton (Eigensteve) — Pivoting to Optimization
+
+**Most recent (very active):**
+1. "HydroGym: A Reinforcement Learning Platform" — 19K views, 5 days ago
+2. "Convex Sets" — 6.8K views, 13 days ago
+3. "Convexity 101 [Optimization Bootcamp]" — 12K views, 1 month ago
+4. "Applications of Optimization" — 18K views, 1 month ago
+5. "The Anatomy of an Optimization Problem" — 26K views, 1 month ago
+
+**Key observation:** Brunton has launched an **Optimization Bootcamp** series. This is a green-field topic for animated math content — no Manim-based optimization playlist exists on YouTube. If we're considering the next playlist, Optimization could be a strong choice with direct demand signals (Brunton's optimization videos getting 6-26K views within weeks of posting).
+
+---
+
+#### Reducible — Dormant
+
+**Most recent video:** 2 years ago (A* Search, 97K views). The channel appears inactive. No recent content to analyze. Historical videos remain highly viewed (PNG: 747K, TSP: 373K, PageRank: 190K).
+
+---
+
+#### Zach Star — Fully Pivoted
+
+Now producing sketch comedy, not math education. No longer a competitor.
+
+---
+
+### Thumbnail Trends Across All Channels (August 2026)
+
+| Channel | BG Color | Text Style | Visual Element | Rating Range |
+|---------|----------|-----------|----------------|--------------|
+| 3B1B | Black (#000) | White, sans-serif, 1-5 words | Single geometric/character element | 7-8/10 |
+| Mathologer | Colorful/cosmic | White/yellow, bold, question format | Multiple elements (cubes, formulas, illustrations) | 7-8/10 |
+| Aleph 0 | Pink/magenta | Blue/purple, 5-8 words | Diagrams with colored elements | 6-7/10 |
+| Our channel | Dark purple (#1A1832) | White, Source Sans 3 | Formula/geometry + title text | ?/10 |
+
+**Dominant pattern:** Black or very dark backgrounds dominate. 3B1B's black BG + single visual element is the gold standard. Text should be ≤5 words. The visual element should be immediately recognizable (sphere, robot, Escher drawing).
+
+**Our thumbnail gap:** Our BG is #1A1832 (dark purple) which is close to black but not quite. Our thumbnails may not have the same punch as pure black. Consider testing pure black (#000000) for future video thumbnails while keeping the dot-grid background in the actual video content.
+
+---
+
+### Next Playlist Recommendations
+
+Given all 250 videos are complete, the channel needs a new playlist direction. Analysis of competitor gaps and demand signals:
+
+**Option A: Number Theory (STRONG RECOMMENDATION)**
+- **Demand signal:** Aleph 0's twin primes video: 181K views. Mathologer's number theory videos: 38-113K views. Math Sorcerer's NT content consistently performs.
+- **Competitive gap:** No animated, systematic Number Theory playlist exists. Aleph 0 does episodic coverage. Mathologer does deep dives on specific results. Nobody does a curriculum (divisibility → primes → modular arithmetic → quadratic reciprocity → primitive roots → Diophantine equations → analytic NT).
+- **Prerequisite fit:** Perfect next step after Abstract Algebra. Audience already comfortable with groups, rings, fields.
+- **Estimated playlist:** 12-15 videos (Videos 251-265)
+
+**Option B: Foundations Track — Numbers & Arithmetic (AUDIENCE GROWTH)**
+- **Demand signal:** This is the most searched math topic on YouTube ("what is a prime number", "how fractions work"). Massive audience potential.
+- **Competitive gap:** Khan Academy dominates but uses tablet whiteboard. No Manim-based systematic foundations series exists.
+- **Risk:** Lower engagement from existing subscriber base (too elementary).
+- **Estimated playlist:** 14 videos (Numbers & Arithmetic alone)
+
+**Option C: Optimization (EMERGING TOPIC)**
+- **Demand signal:** Steve Brunton's new Optimization Bootcamp (6-26K views within days). Growing interest in convex optimization (Boyd & Vandenberghe's book is the standard text).
+- **Competitive gap:** NO animated optimization playlist exists. Brunton uses whiteboard. No 3B1B/Aleph 0/Mathologer coverage.
+- **Prerequisite fit:** Builds on Linear Algebra, Calculus III, and Functional Analysis.
+- **Estimated playlist:** 10-12 videos
+
+**Option D: Category Theory (AUDIENCE MATURITY)**
+- **Demand signal:** Aleph 0 and Mathemaniac occasionally reference category theory. Growing interest as a "unifying" language.
+- **Competitive gap:** Aleph 0 has no systematic coverage. Some whiteboard lectures exist.
+- **Risk:** Very abstract — may have limited audience. Best as a shorter playlist (6-8 videos).
+
+### Recommendation
+
+**Start with Number Theory (Option A)** as the next playlist. Rationale:
+1. Strong demand signals from Aleph 0 and Mathologer
+2. Natural progression from Abstract Algebra (our most recent L4 content)
+3. Rich visual potential (sieve animations, modular clock arithmetic, elliptic curves)
+4. No systematic animated competitor
+5. 3B1B hasn't covered it (he focuses on geometry/analysis/ML)
+
+**Then consider Optimization (Option C)** as the follow-up — it's an emerging topic with zero animated competition and strong practical appeal.
