@@ -59,6 +59,8 @@ class Video243_JointEntropyMI(Scene):
         self.ly.clear()
 
     def scene2_joint_entropy(self):
+        self.ly.section_divider(1, "Joint Entropy")
+
         self.add_subcaption(
             "Joint entropy extends Shannon entropy to pairs of random variables. "
             "It measures the total uncertainty in the pair X, Y taken together. "
@@ -76,6 +78,8 @@ class Video243_JointEntropyMI(Scene):
         self.ly.clear()
 
     def scene3_conditional_entropy(self):
+        self.ly.section_divider(2, "Conditional Entropy")
+
         self.add_subcaption(
             "Conditional entropy measures the remaining uncertainty in X "
             "after we know Y. It is the average of H of X given Y equals y, "
@@ -94,6 +98,8 @@ class Video243_JointEntropyMI(Scene):
         self.ly.clear()
 
     def scene4_mutual_information(self):
+        self.ly.section_divider(3, "Mutual Information")
+
         self.add_subcaption(
             "Mutual information measures how much knowing one variable "
             "reduces uncertainty about the other. "
@@ -102,12 +108,15 @@ class Video243_JointEntropyMI(Scene):
             duration=14,
         )
         title = self.ly.title("Mutual Information")
+        mi_formula = MathTex(r"I(X;Y) = H(X) - H(X|Y)", font_size=HEADING_SIZE, color=PRIMARY)
+        boxed = self.ly.formula_box(mi_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"I(X;Y) = H(X) - H(X|Y)", font_size=HEADING_SIZE, color=PRIMARY),
             Text("Information shared between X and Y", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("I(X;Y) >= 0, equals 0 iff independent", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(2)
         self.ly.clear()
 
@@ -130,6 +139,8 @@ class Video243_JointEntropyMI(Scene):
         self.ly.clear()
 
     def scene6_chain_rule(self):
+        self.ly.section_divider(4, "Chain Rule")
+
         self.add_subcaption(
             "The chain rule for entropy says that joint entropy equals "
             "the entropy of X plus the conditional entropy of Y given X. "

@@ -77,6 +77,8 @@ class Video245_ErrorCorrectingCodes(Scene):
         self.ly.clear()
 
     def scene3_repetition_codes(self):
+        self.ly.section_divider(1, "Repetition Code")
+
         self.add_subcaption(
             "The simplest error-correcting code: repeat each bit three times. "
             "Send 000 for 0 and 111 for 1. "
@@ -95,6 +97,8 @@ class Video245_ErrorCorrectingCodes(Scene):
         self.ly.clear()
 
     def scene4_hamming_distance(self):
+        self.ly.section_divider(2, "Hamming Distance")
+
         self.add_subcaption(
             "The Hamming distance between two codewords is the number of "
             "positions where they differ. A code with minimum distance d "
@@ -113,6 +117,8 @@ class Video245_ErrorCorrectingCodes(Scene):
         self.ly.clear()
 
     def scene5_hamming_codes(self):
+        self.ly.section_divider(3, "Hamming Codes")
+
         self.add_subcaption(
             "Hamming codes are the first practical error-correcting codes. "
             "They use parity check bits placed at powers of two. "

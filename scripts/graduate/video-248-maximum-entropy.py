@@ -59,6 +59,8 @@ class Video248_MaximumEntropy(Scene):
         self.ly.clear()
 
     def scene2_principle(self):
+        self.ly.section_divider(1, "Jaynes' Principle")
+
         self.add_subcaption(
             "The maximum entropy principle, due to E.T. Jaynes, states that "
             "among all distributions consistent with our constraints, "
@@ -77,6 +79,8 @@ class Video248_MaximumEntropy(Scene):
         self.ly.clear()
 
     def scene3_mean_constraint(self):
+        self.ly.section_divider(2, "No Constraints: Uniform")
+
         self.add_subcaption(
             "With no constraints, the maximum entropy distribution "
             "is uniform: equal probability for all outcomes. "
@@ -95,6 +99,8 @@ class Video248_MaximumEntropy(Scene):
         self.ly.clear()
 
     def scene4_gaussian(self):
+        self.ly.section_divider(3, "Mean + Variance: Gaussian")
+
         self.add_subcaption(
             "If you fix the mean and variance, the maximum entropy distribution "
             "is the Gaussian. This is why the Gaussian appears everywhere: "
@@ -113,6 +119,8 @@ class Video248_MaximumEntropy(Scene):
         self.ly.clear()
 
     def scene5_exponential(self):
+        self.ly.section_divider(4, "Positive Mean: Exponential")
+
         self.add_subcaption(
             "If you fix only the mean and require non-negativity, "
             "the maximum entropy distribution is the exponential. "

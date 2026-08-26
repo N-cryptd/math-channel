@@ -59,6 +59,8 @@ class Video247_KLDivergence(Scene):
         self.ly.clear()
 
     def scene2_definition(self):
+        self.ly.section_divider(1, "KL Divergence Definition")
+
         self.add_subcaption(
             "The KL divergence from distribution Q to P is the expected value "
             "of log P over Q, using P's probabilities. "
@@ -66,16 +68,24 @@ class Video247_KLDivergence(Scene):
             duration=14,
         )
         title = self.ly.title("Definition")
+        kl_formula = MathTex(
+            r"D(P \|Q) = \sum_x P(x) \log\frac{P(x)}{Q(x)}",
+            font_size=HEADING_SIZE, color=PRIMARY,
+        )
+        boxed = self.ly.formula_box(kl_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"D(P \|Q) = \sum_x P(x) \log\frac{P(x)}{Q(x)}", font_size=HEADING_SIZE, color=PRIMARY),
             Text("Expected log-ratio of P to Q", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Not symmetric: D(P|Q) != D(Q|P)", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(2)
         self.ly.clear()
 
     def scene3_properties(self):
+        self.ly.section_divider(2, "Properties")
+
         self.add_subcaption(
             "KL divergence is always non-negative, by Jensen's inequality. "
             "It equals zero if and only if P equals Q. "
@@ -94,6 +104,8 @@ class Video247_KLDivergence(Scene):
         self.ly.clear()
 
     def scene4_relation_to_mi(self):
+        self.ly.section_divider(3, "Connection to Mutual Information")
+
         self.add_subcaption(
             "Mutual information is a special case of KL divergence. "
             "It equals the KL divergence between the joint distribution "

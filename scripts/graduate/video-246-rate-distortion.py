@@ -59,6 +59,8 @@ class Video246_RateDistortion(Scene):
         self.ly.clear()
 
     def scene2_lossy_compression(self):
+        self.ly.section_divider(1, "Lossy Compression")
+
         self.add_subcaption(
             "JPEG, MP3, and H.264 are all lossy compressors. "
             "They throw away information you cannot perceive. "
@@ -95,6 +97,8 @@ class Video246_RateDistortion(Scene):
         self.ly.clear()
 
     def scene4_rate_distortion_function(self):
+        self.ly.section_divider(2, "Rate-Distortion Function")
+
         self.add_subcaption(
             "The rate-distortion function R of D gives the minimum rate "
             "needed to achieve average distortion at most D. "
@@ -103,16 +107,24 @@ class Video246_RateDistortion(Scene):
             duration=16,
         )
         title = self.ly.title("The Rate-Distortion Function")
+        rd_formula = MathTex(
+            r"R(D) = \min_{q(\hat{x}|x)} I(X; \hat{X})",
+            font_size=HEADING_SIZE, color=PRIMARY,
+        )
+        boxed = self.ly.formula_box(rd_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"R(D) = \\min_{q(\hat{x}|x)} I(X; \\hat{X})", font_size=HEADING_SIZE, color=PRIMARY),
             Text("Minimum rate for distortion D", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Below R(D): distortion D is impossible", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(2)
         self.ly.clear()
 
     def scene5_tradeoff(self):
+        self.ly.section_divider(3, "The Tradeoff")
+
         self.add_subcaption(
             "The rate-distortion curve is always decreasing. "
             "Higher rate means lower distortion, and vice versa. "

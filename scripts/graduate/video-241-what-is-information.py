@@ -59,6 +59,8 @@ class Video241_WhatIsInformation(Scene):
         self.ly.clear()
 
     def scene2_surprise(self):
+        self.ly.section_divider(1, "Information as Surprise")
+
         self.add_subcaption(
             "Think about surprise. If someone tells you the sun rose this morning, "
             "you learn nothing. If they tell you they won the lottery, "
@@ -66,12 +68,15 @@ class Video241_WhatIsInformation(Scene):
             duration=14,
         )
         title = self.ly.title("Information as Surprise")
+        info_formula = MathTex(r"I(x) = -\log(p(x))", font_size=HEADING_SIZE, color=PRIMARY)
+        boxed = self.ly.formula_box(info_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"I(x) = -\log(p(x))", font_size=HEADING_SIZE, color=PRIMARY),
             Text("Sunrise: high probability, low information", font_size=BODY_SIZE, color=DIM, font=SANS),
             Text("Lottery win: low probability, high information", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(3)
         self.ly.clear()
 
@@ -112,6 +117,8 @@ class Video241_WhatIsInformation(Scene):
         self.ly.clear()
 
     def scene5_entropy(self):
+        self.ly.section_divider(2, "Shannon Entropy")
+
         self.add_subcaption(
             "What about a random variable with many possible outcomes? "
             "We take the expected value of the information function. "
@@ -120,16 +127,23 @@ class Video241_WhatIsInformation(Scene):
             duration=14,
         )
         title = self.ly.title("Shannon Entropy")
+        entropy_formula = MathTex(
+            r"H(X) = -\sum_{i} p_i \log p_i",
+            font_size=HEADING_SIZE, color=PRIMARY,
+        )
+        boxed = self.ly.formula_box(entropy_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"H(X) = \mathbb{E}[I(X)]", font_size=HEADING_SIZE, color=PRIMARY),
-            MathTex(r"= -\sum_{i} p_i \log p_i", font_size=HEADING_SIZE, color=PRIMARY),
             Text("Average uncertainty per observation", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(3)
         self.ly.clear()
 
     def scene6_entropy_intuition(self):
+        self.ly.section_divider(3, "Entropy Intuition")
+
         self.add_subcaption(
             "Entropy is highest when all outcomes are equally likely, "
             "and zero when one outcome is certain. "

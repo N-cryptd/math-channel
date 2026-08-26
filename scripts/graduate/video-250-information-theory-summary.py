@@ -61,6 +61,8 @@ class Video250_InfoTheorySummary(Scene):
         self.ly.clear()
 
     def scene2_foundations(self):
+        self.ly.section_divider(1, "Part I: Foundations")
+
         self.add_subcaption(
             "The foundation: information as surprise, measured by negative log. "
             "Entropy averages this to measure uncertainty. "
@@ -79,6 +81,8 @@ class Video250_InfoTheorySummary(Scene):
         self.ly.clear()
 
     def scene3_compression(self):
+        self.ly.section_divider(2, "Part II: Compression")
+
         self.add_subcaption(
             "Source coding: entropy is the limit of lossless compression. "
             "Huffman codes approach this limit. "
@@ -97,6 +101,8 @@ class Video250_InfoTheorySummary(Scene):
         self.ly.clear()
 
     def scene4_channels(self):
+        self.ly.section_divider(3, "Part III: Channels")
+
         self.add_subcaption(
             "Channel capacity C equals maximum mutual information. "
             "Below C, reliable communication is possible. "
@@ -115,6 +121,8 @@ class Video250_InfoTheorySummary(Scene):
         self.ly.clear()
 
     def scene5_statistics(self):
+        self.ly.section_divider(4, "Part IV: Statistics and ML")
+
         self.add_subcaption(
             "KL divergence measures distribution differences. "
             "It is the foundation of cross-entropy loss in machine learning. "
@@ -133,6 +141,8 @@ class Video250_InfoTheorySummary(Scene):
         self.ly.clear()
 
     def scene6_physics(self):
+        self.ly.section_divider(5, "Part V: Physics")
+
         self.add_subcaption(
             "Boltzmann entropy and Shannon entropy share the same formula. "
             "Landauer's principle links information to energy. "

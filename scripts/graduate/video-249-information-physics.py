@@ -60,6 +60,8 @@ class Video249_InformationPhysics(Scene):
         self.ly.clear()
 
     def scene2_boltzmann(self):
+        self.ly.section_divider(1, "Boltzmann Entropy")
+
         self.add_subcaption(
             "In 1877, Boltzmann defined thermodynamic entropy as S = k "
             "times log W, where W is the number of microstates. "
@@ -68,12 +70,15 @@ class Video249_InformationPhysics(Scene):
             duration=16,
         )
         title = self.ly.title("Boltzmann Entropy")
+        boltz_formula = MathTex(r"S = k \log W", font_size=HEADING_SIZE, color=PRIMARY)
+        boxed = self.ly.formula_box(boltz_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"S = k \log W", font_size=HEADING_SIZE, color=PRIMARY),
             Text("W = number of microstates", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Shannon entropy, 70 years earlier", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(2)
         self.ly.clear()
 
@@ -96,6 +101,8 @@ class Video249_InformationPhysics(Scene):
         self.ly.clear()
 
     def scene4_landauer(self):
+        self.ly.section_divider(2, "Landauer's Principle")
+
         self.add_subcaption(
             "Landauer's principle says erasing one bit of information "
             "dissipates at least k T ln 2 of energy. "
@@ -114,6 +121,8 @@ class Video249_InformationPhysics(Scene):
         self.ly.clear()
 
     def scene5_bekenstein(self):
+        self.ly.section_divider(3, "Bekenstein Bound")
+
         self.add_subcaption(
             "The Bekenstein bound says the maximum information in a region "
             "of space is proportional to its surface area, not volume. "
@@ -132,6 +141,8 @@ class Video249_InformationPhysics(Scene):
         self.ly.clear()
 
     def scene6_black_holes(self):
+        self.ly.section_divider(4, "Black Hole Entropy")
+
         self.add_subcaption(
             "Black hole entropy, discovered by Bekenstein and Hawking, "
             "equals one quarter of the horizon area in Planck units. "
@@ -140,12 +151,18 @@ class Video249_InformationPhysics(Scene):
             duration=16,
         )
         title = self.ly.title("Black Hole Entropy")
+        bh_formula = MathTex(
+            r"S_{BH} = \frac{k_B A}{4 \ell_P^2}",
+            font_size=HEADING_SIZE, color=PRIMARY,
+        )
+        boxed = self.ly.formula_box(bh_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"S_{BH} = \frac{k_B A}{4 \ell_P^2}", font_size=HEADING_SIZE, color=PRIMARY),
             Text("A = horizon area", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Physics is fundamentally about information", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(2)
         self.ly.clear()
 

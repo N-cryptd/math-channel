@@ -59,6 +59,8 @@ class Video244_ChannelCapacity(Scene):
         self.ly.clear()
 
     def scene2_channel_model(self):
+        self.ly.section_divider(1, "The Channel Model")
+
         self.add_subcaption(
             "A communication channel takes input X and produces output Y. "
             "Noise corrupts the signal. The channel is described by "
@@ -93,6 +95,8 @@ class Video244_ChannelCapacity(Scene):
         self.ly.clear()
 
     def scene4_capacity_formula(self):
+        self.ly.section_divider(2, "Channel Capacity")
+
         self.add_subcaption(
             "The channel capacity C is the maximum mutual information, "
             "maximized over all input distributions. "
@@ -101,12 +105,15 @@ class Video244_ChannelCapacity(Scene):
             duration=16,
         )
         title = self.ly.title("Channel Capacity")
+        cap_formula = MathTex(r"C = \max_{p(x)} I(X;Y)", font_size=HEADING_SIZE, color=PRIMARY)
+        boxed = self.ly.formula_box(cap_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"C = \max_{p(x)} I(X;Y)", font_size=HEADING_SIZE, color=PRIMARY),
             Text("Units: bits per channel use", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Fundamental limit of communication", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(2)
         self.ly.clear()
 
@@ -128,6 +135,8 @@ class Video244_ChannelCapacity(Scene):
         self.ly.clear()
 
     def scene6_noisy_coding_theorem(self):
+        self.ly.section_divider(3, "Noisy-Channel Coding Theorem")
+
         self.add_subcaption(
             "Shannon's noisy-channel coding theorem is one of the most "
             "remarkable results in mathematics. It says that if your rate "

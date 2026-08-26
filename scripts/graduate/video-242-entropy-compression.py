@@ -59,6 +59,8 @@ class Video242_EntropyCompression(Scene):
         self.ly.clear()
 
     def scene2_source_coding(self):
+        self.ly.section_divider(1, "Source Coding")
+
         self.add_subcaption(
             "Source coding means assigning binary codewords to source symbols. "
             "The goal is to minimize the average codeword length. "
@@ -94,6 +96,8 @@ class Video242_EntropyCompression(Scene):
         self.ly.clear()
 
     def scene4_huffman(self):
+        self.ly.section_divider(2, "Huffman Coding")
+
         self.add_subcaption(
             "Huffman coding is an optimal prefix-free code. "
             "Repeatedly merge the two least probable symbols into a new node. "
@@ -112,6 +116,8 @@ class Video242_EntropyCompression(Scene):
         self.ly.clear()
 
     def scene5_source_coding_theorem(self):
+        self.ly.section_divider(3, "Source Coding Theorem")
+
         self.add_subcaption(
             "Shannon's source coding theorem: the average codeword length "
             "L can never be less than the entropy H. "
@@ -120,12 +126,15 @@ class Video242_EntropyCompression(Scene):
             duration=14,
         )
         title = self.ly.title("Source Coding Theorem")
+        sc_formula = MathTex(r"H(X) \leq L < H(X) + 1", font_size=HEADING_SIZE, color=PRIMARY)
+        boxed = self.ly.formula_box(sc_formula, color=PRIMARY)
+        self.ly.safe_place(boxed, direction=DOWN, anchor=title, buff=0.5)
+        self.play(Write(boxed), run_time=NORMAL)
         items = [
-            MathTex(r"H(X) \\<= L < H(X) + 1", font_size=HEADING_SIZE, color=PRIMARY),
             Text("Entropy is the lower bound", font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Can approach H arbitrarily closely", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
-        self.ly.progressive_reveal(items, start_from=title)
+        self.ly.progressive_reveal(items, start_from=boxed)
         self.wait(2)
         self.ly.clear()
 
