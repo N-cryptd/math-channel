@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-25
+**Last updated:** 2026-08-29
 
 **Completed Videos (250 scripts, 250 renders)**
 
@@ -364,12 +364,33 @@
 | 227 | Finite Fields | ✅ | ✅ |
 | 228 | Advanced Algebra Summary | ✅ | ✅ |
 
+### Number Theory (Videos 251–265)
+| # | Title | Script | Rendered |
+|---|-------|--------|----------|
+| 251 | Divisibility and the Euclidean Algorithm | ✅ | ✅ |
+| 252 | Prime Numbers | — | — |
+| 253 | The Fundamental Theorem of Arithmetic | — | — |
+| 254 | Modular Arithmetic | — | — |
+| 255 | Linear Congruences | — | — |
+| 256 | Chinese Remainder Theorem | — | — |
+| 257 | Fermat's Little Theorem | — | — |
+| 258 | Euler's Totient Function | — | — |
+| 259 | Euler's Theorem and RSA | — | — |
+| 260 | Primitive Roots | — | — |
+| 261 | Quadratic Residues | — | — |
+| 262 | Quadratic Reciprocity | — | — |
+| 263 | Sums of Squares | — | — |
+| 264 | Diophantine Equations | — | — |
+| 265 | Number Theory Summary | — | — |
+
 ## Notes
+- Number Theory playlist IN PROGRESS (Videos 251-265, 15 videos, Aug 2026)
+- Competitive analysis recommends Number Theory as next playlist (see improvements.md Aug 2026 sweep)
+- No systematic animated Number Theory playlist exists on YouTube
+- Natural progression from Abstract Algebra (Videos 111-125, 217-228)
 - PDE playlist COMPLETE (Videos 184-193, 10 videos, Aug 2026)
 - Differential Geometry playlist COMPLETE (Videos 194-206, 13 videos, Aug 2026)
 - Algebraic Topology playlist COMPLETE (Videos 207-216, 10 videos, Aug 2026)
 - Advanced Abstract Algebra playlist COMPLETE (Videos 217-228, 12 videos, Aug 2026)
-- Competitive analysis: green-field topic, no animated competitor playlist exists
-- 250 scripts, 250 renders total across all playlists
 - Information Theory playlist COMPLETE (Videos 241-250, 10 videos, Aug 2026)
 - Stochastic Processes playlist COMPLETE (Videos 229-240, 12 videos, Aug 2026)
