@@ -2079,3 +2079,423 @@ Given all 250 videos are complete, the channel needs a new playlist direction. A
 5. 3B1B hasn't covered it (he focuses on geometry/analysis/ML)
 
 **Then consider Optimization (Option C)** as the follow-up — it's an emerging topic with zero animated competition and strong practical appeal.
+
+---
+
+### [2026-08-29] Prime Numbers (Video 252)
+
+## Search Results Summary
+
+Queried: 'prime numbers 3blue1brown', 'prime numbers explained animation', 'prime number theorem visual', 'sieve of eratosthenes animation', 'Euclid proof infinite primes'
+
+Top videos discovered:
+| Video ID | Title | Views | Channel | Duration |
+|----------|-------|-------|---------|----------|
+| EK32jo7i5LQ | Why do prime numbers make these spirals? | 7,562,422 | 3Blue1Brown | 22:21 |
+| NaL_Cb42WyY | Pi hiding in prime regularities | 2,810,177 | 3Blue1Brown | 29:36 |
+| ctC33JAV4FI | Infinite Primes | 878,508 | Numberphile | 7:06 |
+| LFwSIdLSosI | Euler's Pi Prime Product and Riemann's Zeta Function | 424,920 | Mathologer | 15:23 |
+| inUkhh8-h-I | Proof: There are infinitely many primes | 110,948 | Dr. Trefor Bazett | 7:09 |
+| klcIklsWzrY | Sieve of Eratosthenes | 157,086 | Khan Academy Labs | 4:12 |
+| 7jzCJJIc59E | The prime number theorem | 193,672 | Khan Academy Labs | 6:46 |
+
+Key observation: **Nobody has made a definitive Manim-animated "Introduction to Prime Numbers" video** that covers the basics (definition, Euclid's proof, sieve, PNT, distribution) in one cohesive visual narrative. The top results are either advanced topics (3B1B) or basic non-animated explainers (Numberphile, Trefor, Khan Academy). This is a genuine gap.
+
+---
+
+### Video 1: 3Blue1Brown — "Why do prime numbers make these spirals? | Dirichlet's theorem and pi approximations"
+Source: 3Blue1Brown — EK32jo7i5LQ (https://www.youtube.com/watch?v=EK32jo7i5LQ)
+Views: 7,562,422 | Date: Oct 8, 2019 | Duration: 22:21
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 10/10 | Narration 9/10 | Hooks 10/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Assumes viewer already knows what primes are. No definition given — jumps straight into a curiosity (plotting primes on a spiral). This is the single biggest lesson: 3B1B's audience doesn't need basics.
+- **Distribution of primes**: The ENTIRE video is about prime distribution — but via the lens of Sacks/Ulam spirals, residue classes, and Dirichlet's theorem. This is the gold standard for visualizing prime distribution.
+- **Prime Number Theorem**: Implicitly referenced via the ~1/ln(n) density, but never formally stated. The PNT is treated as background knowledge.
+- **Euclid's proof**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- Opens with a pure visual mystery: plotting integers in a spiral and coloring primes creates galaxy-like arms. No explanation, just "here's something weird" — the viewer is hooked before any math appears.
+- Uses the "non-prime spirals" comparison (multiples of 2, 3, 5, etc.) to build intuition for why residue classes matter. Each comparison is its own mini visual proof.
+- Euler's totient function is animated as a way to count relatively prime numbers, connecting abstract number theory to a visualizable concept.
+- The transition from "cool pattern" to "Dirichlet's theorem" is masterful — it feels like a detective story where the mystery deepens before resolving.
+- Timestamps in description (0:00 spiral, 3:35 non-prime spirals, 6:10 residue classes, 9:30 totient, 14:45 Dirichlet, 20:26 "why care?") show extremely clear sectioning.
+- The "why care?" section at the end is brief but crucial — it connects back to the original mystery and provides closure.
+
+#### Techniques to Adopt
+- **Cold-open visual mystery**: Start with the Ulam spiral or a similarly striking visual before any definitions. Let the viewer ask "what IS that?" before you tell them what a prime is.
+- **Comparison technique**: Show non-prime spirals (multiples of 2, 3, 5) as a way to build intuition before explaining residue classes.
+- **Color coding with persistence**: Assign a specific color to each residue class and maintain it throughout the entire video.
+- **"Why care?" closing section**: Always circle back to the opening mystery.
+
+#### Techniques to Avoid
+- Skipping the definition of primes entirely (works for 3B1B's advanced audience, not for a general intro).
+- The video is very long (22 min) and dense — for an introductory video, this level of density would lose casual viewers.
+
+---
+
+### Video 2: 3Blue1Brown — "Pi hiding in prime regularities"
+Source: 3Blue1Brown — NaL_Cb42WyY (https://www.youtube.com/watch?v=NaL_Cb42WyY)
+Views: 2,810,177 | Date: May 19, 2017 | Duration: 29:36
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 10/10 | Narration 9/10 | Hooks 9/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Again, no prime definition. Assumes familiarity.
+- **Distribution of primes**: Explored through the lens of primes of the form 4k+1 vs 4k+3, and how they relate to sums of two squares (Fermat's theorem on sums of two squares).
+- **Gaussian integers**: The main mathematical tool — primes in the complex plane. This is a novel visual approach to prime factorization.
+- **Prime Number Theorem**: Not directly covered, but prime density is implicitly used.
+- **Euclid's proof**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- Uses the Gaussian integer lattice as a visual metaphor — each Gaussian integer is a point on a 2D grid, and "prime" means something visually specific (no other lattice points between it and the origin).
+- The connection between primes and pi is built up through lattice point counting on concentric rings — an extraordinary visual bridge between number theory and geometry.
+- At 28:36, there's a meta-moment: "branches of number theory" where Grant steps back and shows how different subfields connect. This kind of "map of the territory" moment is rare and valuable.
+- The video is 29 minutes long — among 3B1B's longest. It works because the visual narrative carries it, but it tests the limits of audience attention.
+
+#### Techniques to Adopt
+- **"Map of the territory" moment**: Near the end, briefly show how the topic connects to the broader mathematical landscape. A quick visual showing prime numbers linking to cryptography, Riemann hypothesis, etc. would be powerful.
+- **Lattice/grid visualization**: Using a 2D grid to represent number-theoretic concepts (e.g., the number line as a 1D lattice where composites get "crossed out").
+
+#### Techniques to Avoid
+- 29-minute runtime for what is fundamentally a single (albeit deep) idea. Our video should stay under 20 minutes.
+- Assuming the viewer knows Gaussian integers. Even if we reference advanced topics, we should provide enough context.
+
+---
+
+### Video 3: Numberphile — "Infinite Primes"
+Source: Numberphile — ctC33JAV4FI (https://www.youtube.com/watch?v=ctC33JAV4FI)
+Views: 878,508 | Date: Apr 23, 2013 | Duration: 7:06
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 7/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Brief — "primes are numbers only divisible by 1 and themselves." Written on brown paper.
+- **Euclid's proof**: This is the CORE of the video. Full proof by contradiction explained conversationally by Dr. James Grime.
+- **Distribution of primes**: Not covered beyond "they thin out."
+- **Prime Number Theorem**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- The proof is presented as a conversation, not a lecture. James Grime writes on brown paper while talking naturally — it feels like a friend explaining something at a pub.
+- The proof structure: (1) Assume finitely many primes, (2) Multiply them all and add 1, (3) Contradiction. Clean and clear.
+- Common misconception addressed: "the product + 1 is prime" — Grime explicitly corrects this (it might be composite with new prime factors).
+- Very short (7 min) — perfect for the specific scope of just Euclid's proof.
+- No animations, just handwriting on paper. Charm comes from personality, not visuals.
+
+#### Techniques to Adopt
+- **Address the "product + 1 is prime" misconception explicitly**. Many viewers assume N = p1*p2*...*pn + 1 must be prime. Showing that N could be composite (with a new prime factor not in the list) is crucial for correctness.
+- **Conversational tone for proof**: Even in Manim, keep the proof narration natural. Don't switch to "theorem-proof" formality.
+
+#### Techniques to Avoid
+- Brown paper aesthetic — we're a Manim channel, this doesn't apply, but the lesson is: don't let proof presentation become dry/formal.
+- Only covering one proof in isolation. Our video should embed Euclid's proof within a broader narrative about primes.
+
+---
+
+### Video 4: Mathologer — "Euler's Pi Prime Product and Riemann's Zeta Function"
+Source: Mathologer — LFwSIdLSosI (https://www.youtube.com/watch?v=LFwSIdLSosI)
+Views: 424,920 | Date: Sep 8, 2017 | Duration: 15:23
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 8/10 | Narration 8/10 | Hooks 8/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Brief, assumes familiarity.
+- **Distribution of primes**: Explored via the Euler product formula for zeta(s) = product over primes of 1/(1-p^(-s)). This connects the zeta function to prime distribution.
+- **Prime Number Theorem**: Not directly covered, but the Riemann zeta function connection is established (setting up for the Riemann hypothesis).
+- **Euclid's proof**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- Mathologer uses a mix of pre-made animations, hand-drawn elements, and physical props. The style is busier than 3B1B but more "human."
+- The Euler product formula is built up from the geometric series for 1/(1-p^(-s)), which is itself animated step by step.
+- Strong use of historical context: Euler, Riemann, the "most important unsolved problem in math" framing.
+- The "license plate" example (calculating pi from license plates) is a brilliant real-world hook that makes the abstract formula tangible.
+- Mathologer is more willing to show algebraic manipulations on screen than 3B1B — equations stay visible longer and are annotated.
+
+#### Techniques to Adopt
+- **Real-world hook for abstract formulas**: The license plate pi calculation is a model for how to make the Euler product formula accessible.
+- **Historical storytelling**: Mentioning Euler and the historical development of prime number theory adds narrative depth.
+- **Building formulas step-by-step on screen**: Keep partial formulas visible as you build up to the final result.
+
+#### Techniques to Avoid
+- Mathologer's busy visual style (multiple annotation styles, mixed media) doesn't suit our clean Manim aesthetic.
+- The video assumes significant prior knowledge. For an intro video, we need to establish foundations first.
+
+---
+
+### Video 5: Dr. Trefor Bazett — "Proof: There are infinitely many primes"
+Source: Dr. Trefor Bazett — inUkhh8-h-I (https://www.youtube.com/watch?v=inUkhh8-h-I)
+Views: 110,948 | Date: Jun 13, 2017 | Duration: 7:09
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Quick formal definition at the start.
+- **Euclid's proof**: Full proof by contradiction, whiteboard style with colored markers.
+- **Distribution/PNT/Sieve**: Not covered.
+
+#### Key Insights
+- Part of a full Discrete Math course playlist — this is curriculum content, not standalone edutainment.
+- Uses colored markers (blue for assumptions, red for contradiction) — effective simple color coding.
+- Very standard proof presentation: state theorem, proof by contradiction, QED. Functional but not memorable.
+- Embeds the video in a larger course structure via playlist links in description.
+
+#### Techniques to Adopt
+- **Color coding in proofs**: blue for assumption, red for contradiction, green for conclusion. Simple and effective.
+- **Course integration**: Our video should reference its place in the broader curriculum/playlist.
+
+#### Techniques to Avoid
+- The "theorem → proof → done" structure with no narrative or motivation beyond "this is in the syllabus." Our video needs a compelling reason to care about primes before diving into proofs.
+
+---
+
+## Competitive Landscape Summary for Prime Numbers
+
+### What the Competition Has Covered
+1. **3B1B**: Advanced distribution topics (spirals, Dirichlet, Gaussian integers) — no basics. 7.5M and 2.8M views show massive demand for visual prime content.
+2. **Numberphile**: Euclid's proof as a standalone — 878K views. Proves demand for proof-based content.
+3. **Mathologer**: Euler product / zeta function connection — 425K views. Shows appetite for primes-meets-analysis content.
+4. **Trefor Bazett**: Euclid's proof in a course context — 111K views. Functional but not remarkable.
+5. **Khan Academy**: Sieve of Eratosthenes (157K views) and PNT (194K views) as standalone short explainers. No visual polish.
+
+### The Gap
+**No channel has created a cohesive, visually polished, Manim-animated introduction to prime numbers that covers: definition, sieve of Eratosthenes, Euclid's proof of infinitude, prime distribution, and the prime number theorem in a single video or short series.**
+
+The existing content is fragmented:
+- Basics (definition, sieve) are covered by Khan Academy and kids' channels with no visual sophistication.
+- Advanced topics (spirals, zeta function, Gaussian integers) are covered by 3B1B/Mathologer but assume prior knowledge.
+- Euclid's proof exists as a standalone (Numberphile, Trefor) but without visual animation or context.
+
+### Specific Coverage Map
+| Subtopic | 3B1B | Numberphile | Mathologer | Trefor | Khan Academy | **Ours (opportunity)** |
+|----------|------|-------------|------------|--------|--------------|----------------------|
+| Prime definition | -- | Brief | Brief | Yes | Yes | **Animated visual definition** |
+| Sieve of Eratosthenes | -- | -- | -- | -- | Basic | **Full Manim sieve animation** |
+| Euclid's proof | -- | Yes (paper) | -- | Yes (whiteboard) | -- | **Animated proof by contradiction** |
+| Prime distribution | Yes (advanced) | -- | -- | -- | -- | **Accessible intro with visual density** |
+| Prime Number Theorem | Implicit | -- | Setup (zeta) | -- | Basic | **Visual statement + intuition** |
+| Ulam/Sacks spiral | Yes | -- | -- | -- | -- | **Brief teaser/hook** |
+
+### Recommended Approach for Video 252
+
+1. **Open with the Ulam spiral** (borrowing 3B1B's cold-open technique) — 30 seconds of "what IS this pattern?" before any definition.
+2. **Define primes visually**: Use a number line animation where composites break apart and primes remain. Not just a textual definition.
+3. **Sieve of Eratosthenes as a centerpiece**: This is the most animatable aspect of prime numbers and nobody has done it justice in Manim. Animate numbers lighting up, crossing out multiples in waves, primes remaining. Khan Academy's version has 157K views with zero visual polish — a Manim version would dominate.
+4. **Euclid's proof with the misconception callout**: Present the proof by contradiction with visual number blocks. Explicitly address the "N = product + 1 is prime" fallacy (per Numberphile's example).
+5. **Prime density visualization**: Show primes thinning out on a number line. Animate the ~n/ln(n) counting function growing alongside the actual prime count. This is the PNT without the formal statement.
+6. **Close with the mystery**: Circle back to the Ulam spiral and hint at deeper topics (Riemann hypothesis, Dirichlet's theorem) as a teaser. Use 3B1B's "why care?" technique.
+
+### Estimated Competitive Positioning
+- 3B1B's prime videos: 7.5M and 2.8M views prove the topic has massive audience.
+- Our video would be the **first animated introduction** combining basics with distribution.
+- Target: 500K-2M views within a year (based on Khan Academy's 157K+194K for unpolished versions of subtopics, and Numberphile's 878K for a paper-based proof).
+- The Spanish-language market has essentially zero competition for this topic.
+
+---
+
+### [2026-08-29] Prime Numbers (Video 252)
+
+## Search Results Summary
+
+Queried: 'prime numbers 3blue1brown', 'prime numbers explained animation', 'prime number theorem visual', 'sieve of eratosthenes animation', 'Euclid proof infinite primes'
+
+Top videos discovered:
+| Video ID | Title | Views | Channel | Duration |
+|----------|-------|-------|---------|----------|
+| EK32jo7i5LQ | Why do prime numbers make these spirals? | 7,562,422 | 3Blue1Brown | 22:21 |
+| NaL_Cb42WyY | Pi hiding in prime regularities | 2,810,177 | 3Blue1Brown | 29:36 |
+| ctC33JAV4FI | Infinite Primes | 878,508 | Numberphile | 7:06 |
+| LFwSIdLSosI | Euler Pi Prime Product and Riemann Zeta | 424,920 | Mathologer | 15:23 |
+| inUkhh8-h-I | Proof: There are infinitely many primes | 110,948 | Dr. Trefor Bazett | 7:09 |
+| klcIklsWzrY | Sieve of Eratosthenes | 157,086 | Khan Academy Labs | 4:12 |
+| 7jzCJJIc59E | The prime number theorem | 193,672 | Khan Academy Labs | 6:46 |
+
+Key observation: Nobody has made a definitive Manim-animated introduction to prime numbers covering the basics (definition, Euclid proof, sieve, PNT, distribution) in one cohesive visual narrative. The top results are either advanced topics (3B1B) or basic non-animated explainers (Numberphile, Trefor, Khan Academy). This is a genuine gap.
+
+---
+
+### Video 1: 3Blue1Brown - Why do prime numbers make these spirals?
+Source: 3Blue1Brown - EK32jo7i5LQ (https://www.youtube.com/watch?v=EK32jo7i5LQ)
+Views: 7,562,422 | Date: Oct 8, 2019 | Duration: 22:21
+Dimensions: Structure 9/10 | Pacing 9/10 | Visuals 10/10 | Narration 9/10 | Hooks 10/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Assumes viewer already knows what primes are. No definition given - jumps straight into a curiosity (plotting primes on a spiral).
+- **Distribution of primes**: The ENTIRE video is about prime distribution via the lens of Sacks/Ulam spirals, residue classes, and Dirichlet theorem. Gold standard for visualizing prime distribution.
+- **Prime Number Theorem**: Implicitly referenced via the 1/ln(n) density, but never formally stated.
+- **Euclid proof**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- Opens with a pure visual mystery: plotting integers in a spiral and coloring primes creates galaxy-like arms. No explanation, just here is something weird - the viewer is hooked before any math appears.
+- Uses the non-prime spirals comparison (multiples of 2, 3, 5, etc.) to build intuition for why residue classes matter. Each comparison is its own mini visual proof.
+- Euler totient function is animated as a way to count relatively prime numbers, connecting abstract number theory to a visualizable concept.
+- The transition from cool pattern to Dirichlet theorem is masterful - it feels like a detective story where the mystery deepens before resolving.
+- Timestamps in description (0:00 spiral, 3:35 non-prime spirals, 6:10 residue classes, 9:30 totient, 14:45 Dirichlet, 20:26 why care?) show extremely clear sectioning.
+- The why care section at the end is brief but crucial - it connects back to the original mystery and provides closure.
+
+#### Techniques to Adopt
+- **Cold-open visual mystery**: Start with the Ulam spiral or a similarly striking visual before any definitions. Let the viewer ask what IS that? before you tell them what a prime is.
+- **Comparison technique**: Show non-prime spirals (multiples of 2, 3, 5) as a way to build intuition before explaining residue classes.
+- **Color coding with persistence**: Assign a specific color to each residue class and maintain it throughout the entire video.
+- **Why care closing section**: Always circle back to the opening mystery.
+
+#### Techniques to Avoid
+- Skipping the definition of primes entirely (works for 3B1B advanced audience, not for a general intro).
+- The video is very long (22 min) and dense - for an introductory video, this level of density would lose casual viewers.
+
+---
+
+### Video 2: 3Blue1Brown - Pi hiding in prime regularities
+Source: 3Blue1Brown - NaL_Cb42WyY (https://www.youtube.com/watch?v=NaL_Cb42WyY)
+Views: 2,810,177 | Date: May 19, 2017 | Duration: 29:36
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 10/10 | Narration 9/10 | Hooks 9/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: No prime definition. Assumes familiarity.
+- **Distribution of primes**: Explored through primes of the form 4k+1 vs 4k+3, and how they relate to sums of two squares (Fermat theorem on sums of two squares).
+- **Gaussian integers**: The main mathematical tool - primes in the complex plane. A novel visual approach to prime factorization.
+- **Prime Number Theorem**: Not directly covered, but prime density is implicitly used.
+- **Euclid proof**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- Uses the Gaussian integer lattice as a visual metaphor - each Gaussian integer is a point on a 2D grid, and prime means something visually specific (no other lattice points between it and the origin).
+- The connection between primes and pi is built up through lattice point counting on concentric rings - an extraordinary visual bridge between number theory and geometry.
+- At 28:36, there is a meta-moment: branches of number theory where Grant steps back and shows how different subfields connect. This kind of map of the territory moment is rare and valuable.
+- The video is 29 minutes long - among 3B1B longest. It works because the visual narrative carries it, but it tests the limits of audience attention.
+
+#### Techniques to Adopt
+- **Map of the territory moment**: Near the end, briefly show how the topic connects to the broader mathematical landscape. A quick visual showing prime numbers linking to cryptography, Riemann hypothesis, etc.
+- **Lattice/grid visualization**: Using a 2D grid to represent number-theoretic concepts.
+
+#### Techniques to Avoid
+- 29-minute runtime for what is fundamentally a single idea. Our video should stay under 20 minutes.
+- Assuming the viewer knows Gaussian integers. Even referencing advanced topics, we should provide enough context.
+
+---
+
+### Video 3: Numberphile - Infinite Primes
+Source: Numberphile - ctC33JAV4FI (https://www.youtube.com/watch?v=ctC33JAV4FI)
+Views: 878,508 | Date: Apr 23, 2013 | Duration: 7:06
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 4/10 | Narration 8/10 | Hooks 7/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Brief - primes are numbers only divisible by 1 and themselves. Written on brown paper.
+- **Euclid proof**: This is the CORE of the video. Full proof by contradiction explained conversationally by Dr. James Grime.
+- **Distribution of primes**: Not covered beyond they thin out.
+- **Prime Number Theorem**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- The proof is presented as a conversation, not a lecture. James Grime writes on brown paper while talking naturally - it feels like a friend explaining something at a pub.
+- The proof structure: (1) Assume finitely many primes, (2) Multiply them all and add 1, (3) Contradiction. Clean and clear.
+- Common misconception addressed: the product + 1 is prime - Grime explicitly corrects this (it might be composite with new prime factors not in the list).
+- Very short (7 min) - perfect for the specific scope of just Euclid proof.
+- No animations, just handwriting on paper. Charm comes from personality, not visuals.
+
+#### Techniques to Adopt
+- **Address the product + 1 is prime misconception explicitly**. Many viewers assume N = p1*p2*...*pn + 1 must be prime. Showing that N could be composite with a new prime factor is crucial for correctness.
+- **Conversational tone for proof**: Even in Manim, keep the proof narration natural. Do not switch to theorem-proof formality.
+
+#### Techniques to Avoid
+- Brown paper aesthetic does not apply, but the lesson is: do not let proof presentation become dry/formal.
+- Only covering one proof in isolation. Our video should embed Euclid proof within a broader narrative about primes.
+
+---
+
+### Video 4: Mathologer - Euler Pi Prime Product and Riemann Zeta Function
+Source: Mathologer - LFwSIdLSosI (https://www.youtube.com/watch?v=LFwSIdLSosI)
+Views: 424,920 | Date: Sep 8, 2017 | Duration: 15:23
+Dimensions: Structure 8/10 | Pacing 7/10 | Visuals 8/10 | Narration 8/10 | Hooks 8/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Brief, assumes familiarity.
+- **Distribution of primes**: Explored via the Euler product formula for zeta(s) = product over primes of 1/(1-p^(-s)). Connects the zeta function to prime distribution.
+- **Prime Number Theorem**: Not directly covered, but the Riemann zeta function connection is established (setting up for the Riemann hypothesis).
+- **Euclid proof**: Not covered.
+- **Sieve visualization**: Not covered.
+
+#### Key Insights
+- Mathologer uses a mix of pre-made animations, hand-drawn elements, and physical props. The style is busier than 3B1B but more human.
+- The Euler product formula is built up from the geometric series for 1/(1-p^(-s)), which is itself animated step by step.
+- Strong use of historical context: Euler, Riemann, the most important unsolved problem in math framing.
+- The license plate example (calculating pi from license plates) is a brilliant real-world hook that makes the abstract formula tangible.
+- Mathologer is more willing to show algebraic manipulations on screen than 3B1B - equations stay visible longer and are annotated.
+
+#### Techniques to Adopt
+- **Real-world hook for abstract formulas**: The license plate pi calculation is a model for how to make the Euler product formula accessible.
+- **Historical storytelling**: Mentioning Euler and the historical development of prime number theory adds narrative depth.
+- **Building formulas step-by-step on screen**: Keep partial formulas visible as you build up to the final result.
+
+#### Techniques to Avoid
+- Mathologer busy visual style (multiple annotation styles, mixed media) does not suit our clean Manim aesthetic.
+- The video assumes significant prior knowledge. For an intro video, we need to establish foundations first.
+
+---
+
+### Video 5: Dr. Trefor Bazett - Proof: There are infinitely many primes
+Source: Dr. Trefor Bazett - inUkhh8-h-I (https://www.youtube.com/watch?v=inUkhh8-h-I)
+Views: 110,948 | Date: Jun 13, 2017 | Duration: 7:09
+Dimensions: Structure 7/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 5/10
+
+#### How It Covers Prime Number Topics
+- **Definition**: Quick formal definition at the start.
+- **Euclid proof**: Full proof by contradiction, whiteboard style with colored markers.
+- **Distribution/PNT/Sieve**: Not covered.
+
+#### Key Insights
+- Part of a full Discrete Math course playlist - this is curriculum content, not standalone edutainment.
+- Uses colored markers (blue for assumptions, red for contradiction) - effective simple color coding.
+- Very standard proof presentation: state theorem, proof by contradiction, QED. Functional but not memorable.
+- Embeds the video in a larger course structure via playlist links in description.
+
+#### Techniques to Adopt
+- **Color coding in proofs**: blue for assumption, red for contradiction, green for conclusion. Simple and effective.
+- **Course integration**: Our video should reference its place in the broader curriculum/playlist.
+
+#### Techniques to Avoid
+- The theorem-proof-done structure with no narrative or motivation beyond this is in the syllabus. Our video needs a compelling reason to care about primes before diving into proofs.
+
+---
+
+## Competitive Landscape Summary for Prime Numbers
+
+### What the Competition Has Covered
+1. **3B1B**: Advanced distribution topics (spirals, Dirichlet, Gaussian integers) - no basics. 7.5M and 2.8M views show massive demand for visual prime content.
+2. **Numberphile**: Euclid proof as a standalone - 878K views. Proves demand for proof-based content.
+3. **Mathologer**: Euler product / zeta function connection - 425K views. Shows appetite for primes-meets-analysis content.
+4. **Trefor Bazett**: Euclid proof in a course context - 111K views. Functional but not remarkable.
+5. **Khan Academy**: Sieve of Eratosthenes (157K views) and PNT (194K views) as standalone short explainers. No visual polish.
+
+### The Gap
+No channel has created a cohesive, visually polished, Manim-animated introduction to prime numbers that covers: definition, sieve of Eratosthenes, Euclid proof of infinitude, prime distribution, and the prime number theorem in a single video or short series.
+
+The existing content is fragmented:
+- Basics (definition, sieve) are covered by Khan Academy and kids channels with no visual sophistication.
+- Advanced topics (spirals, zeta function, Gaussian integers) are covered by 3B1B/Mathologer but assume prior knowledge.
+- Euclid proof exists as a standalone (Numberphile, Trefor) but without visual animation or context.
+
+### Specific Coverage Map
+| Subtopic | 3B1B | Numberphile | Mathologer | Trefor | Khan Academy | Ours (opportunity) |
+|----------|------|-------------|------------|--------|--------------|----------------------|
+| Prime definition | -- | Brief | Brief | Yes | Yes | Animated visual definition |
+| Sieve of Eratosthenes | -- | -- | -- | -- | Basic | Full Manim sieve animation |
+| Euclid proof | -- | Yes (paper) | -- | Yes (whiteboard) | -- | Animated proof by contradiction |
+| Prime distribution | Yes (advanced) | -- | -- | -- | -- | Accessible intro with visual density |
+| Prime Number Theorem | Implicit | -- | Setup (zeta) | -- | Basic | Visual statement + intuition |
+| Ulam/Sacks spiral | Yes | -- | -- | -- | -- | Brief teaser/hook |
+
+### Recommended Approach for Video 252
+
+1. **Open with the Ulam spiral** (borrowing 3B1B cold-open technique) - 30 seconds of what IS this pattern? before any definition.
+2. **Define primes visually**: Use a number line animation where composites break apart and primes remain. Not just a textual definition.
+3. **Sieve of Eratosthenes as a centerpiece**: This is the most animatable aspect of prime numbers and nobody has done it justice in Manim. Animate numbers lighting up, crossing out multiples in waves, primes remaining. Khan Academy version has 157K views with zero visual polish - a Manim version would dominate.
+4. **Euclid proof with the misconception callout**: Present the proof by contradiction with visual number blocks. Explicitly address the N = product + 1 is prime fallacy (per Numberphile example).
+5. **Prime density visualization**: Show primes thinning out on a number line. Animate the n/ln(n) counting function growing alongside the actual prime count. This is the PNT without the formal statement.
+6. **Close with the mystery**: Circle back to the Ulam spiral and hint at deeper topics (Riemann hypothesis, Dirichlet theorem) as a teaser. Use 3B1B why care? technique.
+
+### Estimated Competitive Positioning
+- 3B1B prime videos: 7.5M and 2.8M views prove the topic has massive audience.
+- Our video would be the first animated introduction combining basics with distribution.
+- Target: 500K-2M views within a year (based on Khan Academy 157K+194K for unpolished subtopic versions, and Numberphile 878K for paper-based proof).
+- The Spanish-language market has essentially zero competition for this topic.

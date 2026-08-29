@@ -368,9 +368,9 @@
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 251 | Divisibility and the Euclidean Algorithm | ✅ | ✅ |
-| 252 | Prime Numbers | — | — |
-| 253 | The Fundamental Theorem of Arithmetic | — | — |
-| 254 | Modular Arithmetic | — | — |
+| 252 | Prime Numbers | ✅ | ✅ |
+| 253 | The Fundamental Theorem of Arithmetic | ✅ | ✅ |
+| 254 | Modular Arithmetic | ✅ | — |
 | 255 | Linear Congruences | — | — |
 | 256 | Chinese Remainder Theorem | — | — |
 | 257 | Fermat's Little Theorem | — | — |
