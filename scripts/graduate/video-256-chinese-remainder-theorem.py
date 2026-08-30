@@ -67,9 +67,18 @@ class Video256_ChineseRemainderTheorem(Scene):
         self.ly.section_divider(1, "The Theorem")
         title = self.ly.title("Statement")
 
+        thm = MathTex(
+            r"x \equiv a_i \pmod{n_i}, \quad i = 1, \ldots, k",
+            r"\quad (\gcd(n_i, n_j) = 1 \; \forall \; i \neq j)",
+            font_size=BODY_SIZE, color=PRIMARY,
+        )
+        boxed = self.ly.formula_box(thm, PRIMARY)
+        self.ly.safe_place(boxed, DOWN, anchor=title, buff=0.4)
+        self.play(Write(thm), run_time=NORMAL)
+        self.wait(2)
+        self.play(FadeOut(boxed), run_time=FAST)
+
         items = [
-            MathTex(r"x \equiv a_i \pmod{n_i}, \quad i = 1, \ldots, k",
-                    font_size=BODY_SIZE, color=PRIMARY),
             Text("If gcd(n_i, n_j) = 1 for all i != j",
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
             MathTex(r"\Rightarrow \exists ! \; x \pmod{N}, \; N = n_1 \cdots n_k",
@@ -89,15 +98,25 @@ class Video256_ChineseRemainderTheorem(Scene):
         self.ly.section_divider(2, "Constructing the Solution")
         title = self.ly.title("The Algorithm")
 
-        items = [
-            MathTex(r"N = n_1 \cdot n_2 \cdots n_k",
-                    font_size=BODY_SIZE, color=PRIMARY),
-            MathTex(r"N_i = N / n_i, \quad m_i = N_i^{-1} \pmod{n_i}",
-                    font_size=BODY_SIZE, color=SECONDARY),
-            MathTex(r"x = \sum_{i=1}^{k} a_i \, m_i \, N_i \pmod{N}",
-                    font_size=BODY_SIZE, color=ACCENT),
-        ]
-        self.ly.progressive_reveal(items, start_from=title)
+        sol_formula = MathTex(
+            r"N = n_1 \cdots n_k, \quad N_i = N/n_i, \quad m_i = N_i^{-1} \pmod{n_i}",
+            font_size=BODY_SIZE, color=PRIMARY,
+        )
+        boxed = self.ly.formula_box(sol_formula, PRIMARY)
+        self.ly.safe_place(boxed, DOWN, anchor=title, buff=0.4)
+        self.play(Write(sol_formula), run_time=NORMAL)
+        self.wait(2)
+        self.play(FadeOut(boxed), run_time=FAST)
+
+        result = MathTex(
+            r"x = \sum_{i=1}^{k} a_i \, m_i \, N_i \pmod{N}",
+            font_size=HEADING_SIZE, color=ACCENT,
+        )
+        boxed2 = self.ly.formula_box(result, ACCENT)
+        self.ly.safe_place(boxed2, DOWN, anchor=title, buff=0.4)
+        self.play(Write(result), run_time=NORMAL)
+        self.wait(3)
+        self.play(FadeOut(boxed2), run_time=FAST)
         self.ly.clear()
 
         title2 = self.ly.title("Sun Tzu Example")

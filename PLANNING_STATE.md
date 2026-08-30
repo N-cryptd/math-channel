@@ -373,7 +373,7 @@
 | 254 | Modular Arithmetic | ✅ | — |
 | 255 | Linear Congruences | ✅ | ✅ |
 | 256 | Chinese Remainder Theorem | ✅ | ✅ |
-| 257 | Fermat's Little Theorem | — | — |
+| 257 | Fermat's Little Theorem | ✅ | — |
 | 258 | Euler's Totient Function | — | — |
 | 259 | Euler's Theorem and RSA | — | — |
 | 260 | Primitive Roots | — | — |

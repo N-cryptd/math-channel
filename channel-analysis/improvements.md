@@ -2499,3 +2499,125 @@ The existing content is fragmented:
 - Our video would be the first animated introduction combining basics with distribution.
 - Target: 500K-2M views within a year (based on Khan Academy 157K+194K for unpolished subtopic versions, and Numberphile 878K for paper-based proof).
 - The Spanish-language market has essentially zero competition for this topic.
+
+---
+
+## 2026-08-29 -- Euler's Totient Function
+
+### Video 1: Khan Academy Labs (qa_hksAzpSg)
+Source: Khan Academy Labs (59.5K subs)
+Views: 206,159 | Date: Apr 28, 2014
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 4/10 | Narration 5/10 | Hooks 4/10
+
+#### Key Insights
+- Part of a "Journey into Cryptography" series -- totient framed purely as a cryptography tool.
+- Simple drawing-on-tablet style, no animation. Defines phi(n) by counting coprimes.
+- Shows RSA connection but doesn't prove the multiplicative property.
+
+#### Techniques to Adopt
+- Cryptography framing as a "why care" motivation.
+
+#### Techniques to Avoid
+- Pure example-computation with no formula derivation.
+- No visual animation -- static drawings.
+
+---
+
+### Video 2: Neso Academy (DwQ7-k9LkJ4)
+Source: Neso Academy (3.25M subs)
+Views: 410,554 | Date: Oct 15, 2021
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 3/10 | Narration 6/10 | Hooks 5/10
+
+#### Key Insights
+- Network Security course context. Formal definition then examples.
+- Lists phi values for 1-20 in a table.
+- Covers phi(p) = p-1 and phi(p^k) = p^k - p^(k-1) for prime powers.
+- Does NOT cover multiplicative property or product formula.
+
+#### Techniques to Adopt
+- Table of phi values for building intuition.
+- Prime power formula as a pedagogical ladder.
+
+#### Techniques to Avoid
+- Lecture-style slides with bullet points.
+- Stopping at prime powers without the general formula.
+
+---
+
+### Video 3: Mu Prime Math (NgZ33qr5WHM)
+Source: Mu Prime Math (52.4K subs)
+Views: 36,651 | Date: Aug 25, 2020
+Dimensions: Structure 6/10 | Pacing 7/10 | Visuals 5/10 | Narration 7/10 | Hooks 6/10
+
+#### Key Insights
+- Clean definition-first approach. Starts counting coprimes of 8 and 9.
+- Covers phi(p) = p-1 and phi(p^k) clearly.
+- Part of a modular arithmetic playlist with timestamps.
+- Does NOT cover multiplicative property -- explicitly "Part 1" only.
+
+#### Techniques to Adopt
+- Start with a concrete counting example before formal definition.
+
+#### Techniques to Avoid
+- Whiteboard style instead of animation.
+
+---
+
+### Competitive Gap
+No competitor covers the full story in one animated video: definition, examples, prime powers, multiplicative property, product formula, and applications. We fill this gap by leveraging our Manim animation capability and the foundation built in Videos 254-257.
+
+## 2026-08-29 -- Fermat's Little Theorem (Video 257)
+
+### Mathologer -- "Fermat's HUGE little theorem, pseudoprimes and Futurama" (_9fbBSxhkuA)
+**Views:** 240,653 | **Date:** Oct 2018 | **Subs:** 968K | **Captions:** True | **Duration:** ~18:40
+Dimensions: Structure 9/10 | Pacing 8/10 | Visuals 7/10 | Narration 8/10 | Hooks 9/10
+
+#### Key Insights
+- Opens with the contrast between Fermat's little theorem (easy proof) and Fermat's last theorem (350-year struggle)
+- Covers pseudoprimes extensively -- shows Fermat primality test can be fooled
+- Spends significant time on Wilson's theorem as a natural companion
+- Visual style: mix of physical props and animated formulas, not pure Manim
+
+#### Techniques to Adopt
+- Start with the contrast between FLT (easy) and Fermat's Last Theorem (hard)
+- Show the Fermat primality test AND its failure mode (pseudoprimes)
+- Connect Wilson's theorem organically to the permutation proof
+
+#### Techniques to Avoid
+- 18+ minute runtime is too long for our format (8-15 min target)
+- Cultural references don't fit our systematic curriculum style
+
+### Neso Academy -- "Fermat's Little Theorem" (3Cb0ys-jppU)
+**Views:** 408,177 | **Date:** Oct 2021 | **Subs:** 3.25M | **Captions:** True | **Duration:** ~7:31
+Dimensions: Structure 6/10 | Pacing 5/10 | Visuals 4/10 | Narration 6/10 | Hooks 4/10
+
+#### Key Insights
+- Pure lecture/whiteboard style, no animation, but highest views
+- Covers statement + verification examples only, no real proof
+- Frames FLT as a cryptography tool (Network Security playlist)
+
+#### Techniques to Adopt
+- Concrete numerical verification as an early intuition builder
+- Frame the theorem as practically useful (cryptography)
+
+#### Techniques to Avoid
+- No proof at all -- our audience expects more rigor
+
+### Michael Penn -- "A geometric proof of Fermat's little theorem" (kC6j6dregRs)
+**Views:** 29,475 | **Date:** Jan 2021 | **Subs:** 353K | **Captions:** True | **Duration:** ~13:33
+Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks 5/10
+
+#### Key Insights
+- UNIQUE: geometric proof using a regular p-gon with labeled vertices
+- Whiteboard with colored chalk -- visual but not animated
+- Does not cover Wilson's theorem or applications
+
+#### Techniques to Adopt
+- The geometric proof idea is striking -- mention as alternative
+- Methodical step-by-step proof pacing works for rigorous content
+
+### Standout Approaches for Our Video
+1. **Group theory framing (unique to us):** No competitor frames FLT via Lagrange's theorem on the group of units mod p.
+2. **Dual proof structure:** Elementary permutation proof first, then group theory perspective.
+3. **Worked example throughout:** Actually compute 2^100 mod 13 using the theorem.
+4. **Wilson's theorem as a corollary:** Derive Wilson's from the same machinery.

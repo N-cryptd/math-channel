@@ -234,6 +234,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "remainder. The remainders strictly decrease, so the algorithm must terminate.",
             duration=18,
         )
+        self.ly.section_divider(5, "Correctness")
         title = self.ly.title("Correctness of the Algorithm")
 
         items = [
@@ -258,7 +259,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "A corollary: a and b are coprime if and only if a x plus b y equals 1 has a solution.",
             duration=24,
         )
-        self.ly.section_divider(5, "Bezout's Identity")
+        self.ly.section_divider(6, "Bezout's Identity")
         title = self.ly.title("Bezout's Identity")
 
         # Theorem
@@ -310,7 +311,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "linear combination. These tools power everything in number theory.",
             duration=20,
         )
-        self.ly.section_divider(6, "Summary")
+        self.ly.section_divider(7, "Summary")
         title = self.ly.title("Key Takeaways")
         items = [
             Text("a|b iff b = ak for some integer k",
