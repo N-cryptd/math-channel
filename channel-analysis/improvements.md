@@ -1,3 +1,27 @@
+### [2026-08-30] Euler's Theorem and RSA (Video 259)
+
+**Competitor Videos Analyzed:**
+
+1. **Art of the Problem** -- "Public Key Cryptography: RSA Encryption" (990K views, 2012)
+   - Animated explainer covering Euler's theorem + phi + factoring + complexity
+   - Strength: Ties math directly to crypto application, clear narrative arc
+   - Weakness: Dated animation style, no formal proof of Euler's theorem
+   - Rating: Structure 8, Pacing 7, Visual 7, Narration 7, Engagement 8
+
+2. **Eddie Woo** -- "The RSA Encryption Algorithm" (1.27M views, 2014)
+   - Whiteboard lecture, step-by-step numerical example
+   - Strength: Very clear worked example, classroom energy
+   - Weakness: No visual animation, no proof of Euler's theorem
+   - Rating: Structure 6, Pacing 8, Visual 3, Narration 9, Engagement 7
+
+3. **Mu Prime Math** -- "Euler's Totient Theorem and FLT Proof" (91K views, 2020)
+   - Complete proof of Euler's theorem, connects to FLT
+   - Strength: Rigorous proof, good intuition
+   - Weakness: No RSA application, static visuals
+   - Rating: Structure 7, Pacing 6, Visual 4, Narration 7, Engagement 5
+
+**Our Differentiation:** We do both proof AND RSA application with Manim animation, unlike competitors who do only one.
+
 ### [2026-08-14] Second Fundamental Form (Video 199)
 
 **Market Gap Analysis:** The second fundamental form sits at the heart of differential geometry of surfaces — it measures how a surface bends in space and gives rise to the shape operator, principal curvatures, Gaussian curvature, and mean curvature. YouTube coverage falls into two camps: (a) rigorous whiteboard lectures (Mike the Mathematician, Justin Solomon, Dr. Jordan Budhu) that define the second fundamental form formally but provide no visual intuition; and (b) Mathemaniac's single high-quality animated video (143K views) that covers the shape operator and Gaussian/mean curvature but deliberately omits principal curvatures and the second fundamental form matrix itself. No video on YouTube provides an animated, Manim-based treatment of the second fundamental form that connects it to the shape operator, shows the matrix computation with visual geometric meaning, and derives the principal/Gaussian/mean curvatures — all in one video.

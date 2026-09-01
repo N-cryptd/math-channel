@@ -49,7 +49,7 @@ class Video257_FermatsLittleTheorem(Scene):
         play_intro(self, "Fermat's Little Theorem", "Number Theory")
 
         title = self.ly.title("An Impossible Computation?")
-        q = MathTex(r"2^{100} mod 7 = \;?",
+        q = MathTex(r"2^{100} \bmod 7 = \;?",
                      font_size=TITLE_SIZE, color=RED)
         self.ly.safe_place(q, DOWN, anchor=title, buff=0.5)
         self.play(Write(q), run_time=NORMAL)
