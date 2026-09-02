@@ -389,8 +389,8 @@
 | 266 | What is Mathematics? | ✅ | ✅ |
 | 267 | The Natural Numbers | ✅ | ✅ |
 | 268 | Addition and Subtraction | ✅ | ✅ |
-| 269 | Multiplication | ⬜ | ⬜ |
-| 270 | Division and Remainders | ⬜ | ⬜ |
+| 269 | Multiplication | ✅ | 🔄 render in progress (kanban t_6b893322) |
+| 270 | Division and Remainders | ✅ | ⬜ produce task t_b3932659 queued |
 | 271 | Negative Numbers | ⬜ | ⬜ |
 | 272 | Fractions | ⬜ | ⬜ |
 

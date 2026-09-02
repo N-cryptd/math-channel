@@ -35,9 +35,10 @@ produce_video() {
 
     echo "  Script: $script_file"
 
-    # Render
+    # Render (--disable_caching: manim's cache flush deletes partial files
+    # and partial_movie_file_list.txt when a scene exceeds 100 partials)
     cd "$PROJECT_DIR"
-    manim -"$quality" "$script_file" "$class" 2>&1 | tail -3
+    manim -"$quality" --disable_caching "$script_file" "$class" 2>&1 | tail -3
 
     # Determine output paths
     local video_dir="media/videos"
