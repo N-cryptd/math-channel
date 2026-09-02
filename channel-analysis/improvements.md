@@ -2645,3 +2645,123 @@ Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks
 2. **Dual proof structure:** Elementary permutation proof first, then group theory perspective.
 3. **Worked example throughout:** Actually compute 2^100 mod 13 using the theorem.
 4. **Wilson's theorem as a corollary:** Derive Wilson's from the same machinery.
+
+## [2026-09-02 10:03] @3blue1brown — But what is cross-entropy? | Compression is Intelligence Part 2
+
+**URL:** https://www.youtube.com/watch?v=GlYgs6v2YfU
+**Views:** 673K views | **Date:** 1 month ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:03] @3blue1brown — Reinventing Entropy | Compression is Intelligence Part 1
+
+**URL:** https://www.youtube.com/watch?v=l6DKRf-fAAM
+**Views:** 1.4M views | **Date:** 2 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:03] @3blue1brown — How (and why) to take a logarithm of an image
+
+**URL:** https://www.youtube.com/watch?v=ldxFjLJ3rVY
+**Views:** 2M views | **Date:** 5 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:03] @mathologer — Parity of permutations, impossible puzzles and the magical determinant
+
+**URL:** https://www.youtube.com/watch?v=rUiulWItECQ
+**Views:** 44K views | **Date:** 4 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:03] @mathologer — I Built an Original One-Glance Proof from Dice
+
+**URL:** https://www.youtube.com/watch?v=8q95eiq-y-Q
+**Views:** 38K views | **Date:** 10 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:03] @mathologer — How to build and solve a 4D Rubik's cubes in physical 3D (no simulator!)
+
+**URL:** https://www.youtube.com/watch?v=d-Yy-ILjM3k
+**Views:** 35K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @drpeyam — Craving some complex integrals 
+
+**URL:** https://www.youtube.com/watch?v=1_Qi_N_-61I
+**Views:** 7.8K views | **Date:** 8 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @drpeyam — Laplace Equation Applications
+
+**URL:** https://www.youtube.com/watch?v=3OFxXnBFf9s
+**Views:** 3.5K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @drpeyam — Laplace transform of jumps
+
+**URL:** https://www.youtube.com/watch?v=AwTwycSSxRY
+**Views:** 1.5K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @Aleph0 — Something strange happens when you look at the primes
+
+**URL:** https://www.youtube.com/watch?v=egA9K_R5pkg
+**Views:** 182K views | **Date:** 9 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @Aleph0 — Why everything looks flat… until you zoom out
+
+**URL:** https://www.youtube.com/watch?v=OdWaYWtrZI4
+**Views:** 35K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @Aleph0 — Something weird happens in dimension 8
+
+**URL:** https://www.youtube.com/watch?v=whNVIPiVl2o
+**Views:** 115K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @Mathemaniac — Generalised Stokes' Theorem | Differential forms #3
+
+**URL:** https://www.youtube.com/watch?v=6B9eWS1GCR0
+**Views:** 43K views | **Date:** 4 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @Mathemaniac — What are differential forms? | Differential forms #2
+
+**URL:** https://www.youtube.com/watch?v=j79ihqK0-gE
+**Views:** 45K views | **Date:** 5 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-02 10:04] @Mathemaniac — Why care about differential forms? | Differential forms #1
+
+**URL:** https://www.youtube.com/watch?v=dNT8OLNMsQ0
+**Views:** 114K views | **Date:** 6 months ago
+**Duration:** ?s | **Captions:** True
+
+---

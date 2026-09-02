@@ -1,8 +1,8 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-08-29
+**Last updated:** 2026-09-02
 
-**Completed Videos (250 scripts, 250 renders)**
+**Completed Videos (Videos 1–268: scripts ✅, narrated renders ✅)**
 
 ### Pre-University / Calculus I (Videos 1–16)
 | # | Title | Script | Rendered |
@@ -383,12 +383,20 @@
 | 264 | Diophantine Equations | ✅ | ✅ |
 | 265 | Number Theory Summary | ✅ | ✅ |
 
-### Foundations (Videos 266+)
+### Foundations (Videos 266+) — Playlist: Numbers & Arithmetic
 | # | Title | Script | Rendered |
 |---|-------|--------|----------|
 | 266 | What is Mathematics? | ✅ | ✅ |
+| 267 | The Natural Numbers | ✅ | ✅ |
+| 268 | Addition and Subtraction | ✅ | ✅ |
+| 269 | Multiplication | ⬜ | ⬜ |
+| 270 | Division and Remainders | ⬜ | ⬜ |
+| 271 | Negative Numbers | ⬜ | ⬜ |
+| 272 | Fractions | ⬜ | ⬜ |
 
 ## Notes
+- Videos 267 (Natural Numbers) + 268 (Addition and Subtraction) rendered 2026-09-02 (480p15, pixel QA passed)
+- Next up: Video 269 Multiplication (content), Video 270 Division and Remainders (content) — kanban tasks created
 - Foundations playlist IN PROGRESS (Videos 266+, Sep 2026)
 - New "Foundations" track: builds mathematical literacy from zero
 - Video 266: introductory "What is Mathematics?" video
