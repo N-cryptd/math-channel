@@ -51,7 +51,7 @@ class Video267_NaturalNumbers(Scene):
             "A child points at objects one by one and says the words. One, two, "
             "three. But behind that simple act hides one of the deepest ideas in "
             "all of mathematics.",
-            duration=32,
+            duration=29,
         )
         play_intro(self, "The Natural Numbers", "Numbers & Arithmetic")
 
@@ -65,7 +65,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(8)
+        self.wait(18)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -80,7 +80,7 @@ class Video267_NaturalNumbers(Scene):
             "means the pattern continues without bound. The natural numbers "
             "are infinite. There is no largest natural number. No matter how "
             "big a number you name, you can always add one to get a bigger one.",
-            duration=38,
+            duration=26,
         )
         self.ly.section_divider(1, "What Are Natural Numbers?")
         title = self.ly.title("The Counting Numbers")
@@ -101,7 +101,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=nat_box)
-        self.wait(10)
+        self.wait(17)
         self.ly.clear()
 
         # Two conventions
@@ -112,7 +112,7 @@ class Video267_NaturalNumbers(Scene):
             "makes the algebraic structure cleaner. Second, it matches how "
             "computers represent numbers. Either convention works fine. "
             "Just be aware that different textbooks may differ.",
-            duration=36,
+            duration=24,
         )
         title2 = self.ly.title("Two Conventions")
 
@@ -140,7 +140,7 @@ class Video267_NaturalNumbers(Scene):
         conv_b_group = VGroup(conv_b, conv_b_label).arrange(RIGHT, buff=0.15)
         self.ly.safe_place(conv_b_group, DOWN, anchor=conv_a_group, buff=0.4)
         self.play(FadeIn(conv_b_group, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(12)
+        self.wait(20)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -156,7 +156,7 @@ class Video267_NaturalNumbers(Scene):
             "and each number is used at most once. When you run out of "
             "stones, the last number you said is the count. This simple idea "
             "is the foundation of all arithmetic.",
-            duration=38,
+            duration=28,
         )
         self.ly.section_divider(2, "Counting")
         title = self.ly.title("One-to-One Correspondence")
@@ -201,7 +201,7 @@ class Video267_NaturalNumbers(Scene):
             )
             arrows.add(arr)
         self.play(*[FadeIn(a) for a in arrows], run_time=NORMAL)
-        self.wait(10)
+        self.wait(15)
         self.ly.clear()
 
         # Key insight
@@ -212,7 +212,7 @@ class Video267_NaturalNumbers(Scene):
             "and five apples have something in common, even though fingers "
             "and apples are completely different things. The number five is "
             "that common property.",
-            duration=34,
+            duration=21,
         )
         title2 = self.ly.title("The Counting Principle")
         items = [
@@ -226,7 +226,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(12)
+        self.wait(15)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -243,7 +243,7 @@ class Video267_NaturalNumbers(Scene):
             "is what we call one. The successor of one is two. And so on. "
             "That is all we need. By repeatedly applying the successor "
             "function to zero, we generate every natural number.",
-            duration=48,
+            duration=35,
         )
         self.ly.section_divider(3, "The Successor Function")
         title = self.ly.title("Building Numbers from Nothing")
@@ -281,7 +281,7 @@ class Video267_NaturalNumbers(Scene):
                 run_time=NORMAL,
             )
             self.wait(FAST)
-        self.wait(10)
+        self.wait(24)
         self.ly.clear()
 
         # Key ideas
@@ -291,7 +291,7 @@ class Video267_NaturalNumbers(Scene):
             "there is exactly one domino after it. One is the successor of zero. "
             "Two is the successor of the successor of zero. Three is the successor "
             "of the successor of the successor of zero. And this never stops.",
-            duration=34,
+            duration=23,
         )
         title2 = self.ly.title("A Never-Ending Chain")
         items = [
@@ -305,7 +305,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(14)
+        self.wait(17)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -322,7 +322,7 @@ class Video267_NaturalNumbers(Scene):
             "number. Axiom two: every natural number has a successor that is "
             "also a natural number. Axiom three: zero is not the successor "
             "of any number.",
-            duration=46,
+            duration=33,
         )
         self.ly.section_divider(4, "Peano's Axioms")
         title = self.ly.title("Five Rules Define Everything")
@@ -336,7 +336,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items_a, start_from=title)
-        self.wait(10)
+        self.wait(25)
         self.ly.clear()
 
         # Axioms 4 and 5
@@ -348,7 +348,7 @@ class Video267_NaturalNumbers(Scene):
             "principle: if zero has a property, and if having the property "
             "at any number implies having it at the successor, then every "
             "natural number has that property.",
-            duration=40,
+            duration=28,
         )
         title2 = self.ly.title("Axioms 4 and 5")
         items_b = [
@@ -374,7 +374,7 @@ class Video267_NaturalNumbers(Scene):
         p5_box = self.ly.formula_box(p5_tex, color=RED)
         self.ly.safe_place(p5_box, DOWN, anchor=title2, buff=0.8)
         self.play(FadeIn(p5_box, shift=UP * 0.15), run_time=NORMAL)
-        self.wait(6)
+        self.wait(10)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -391,7 +391,7 @@ class Video267_NaturalNumbers(Scene):
             "are no dead ends because of axiom two: every number has a "
             "successor. The structure is forced. It has to look exactly "
             "like this: zero, one, two, three, and so on forever.",
-            duration=46,
+            duration=34,
         )
         self.ly.section_divider(5, "No Cycles, No Branching")
         title = self.ly.title("The Structure Is Forced")
@@ -406,7 +406,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(10)
+        self.wait(25)
         self.ly.clear()
 
         # Induction as dominoes
@@ -418,7 +418,7 @@ class Video267_NaturalNumbers(Scene):
             "property. Think of a line of dominoes standing on end. If the "
             "first one falls, and each domino knocks over the next, then "
             "they all fall. That is exactly what mathematical induction is.",
-            duration=46,
+            duration=30,
         )
         title2 = self.ly.title("Induction: The Domino Principle")
         items2 = [
@@ -432,7 +432,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
-        self.wait(18)
+        self.wait(24)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -448,7 +448,7 @@ class Video267_NaturalNumbers(Scene):
             "gives us a total order on the natural numbers. Any two numbers "
             "can be compared: either they are equal, or one is less than "
             "the other.",
-            duration=40,
+            duration=26,
         )
         self.ly.section_divider(6, "Ordering")
         title = self.ly.title("Less Than, Greater Than")
@@ -490,7 +490,7 @@ class Video267_NaturalNumbers(Scene):
             FadeIn(lt_label, shift=UP * 0.15),
             run_time=NORMAL,
         )
-        self.wait(10)
+        self.wait(17)
         self.ly.clear()
 
         # Well-ordering
@@ -502,7 +502,7 @@ class Video267_NaturalNumbers(Scene):
             "include negative numbers that go on forever in both directions, "
             "so there is no smallest integer. Well-ordering is what makes "
             "many proofs about natural numbers work.",
-            duration=46,
+            duration=28,
         )
         title2 = self.ly.title("Well-Ordering Principle")
         items = [
@@ -516,7 +516,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(18)
+        self.wait(22)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -531,7 +531,7 @@ class Video267_NaturalNumbers(Scene):
             "Base case: when n equals zero, the sum is just zero, and the "
             "formula gives zero times one over two, which is zero. The base "
             "case checks out.",
-            duration=42,
+            duration=26,
         )
         self.ly.section_divider(7, "Induction in Action")
         title = self.ly.title("Sum of First n Natural Numbers")
@@ -559,7 +559,7 @@ class Video267_NaturalNumbers(Scene):
         )
         self.ly.safe_place(base_check, DOWN, anchor=base_title, buff=0.3)
         self.play(Write(base_check), run_time=NORMAL)
-        self.wait(8)
+        self.wait(16)
         self.ly.clear()
 
         # Inductive step
@@ -571,7 +571,7 @@ class Video267_NaturalNumbers(Scene):
             "n plus one times n plus two, all over two. This is exactly the "
             "formula with n replaced by n plus one. The inductive step is "
             "complete. By axiom five, the formula holds for all n.",
-            duration=52,
+            duration=34,
         )
         title2 = self.ly.title("Inductive Step")
         items = [
@@ -585,7 +585,7 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(22)
+        self.wait(28)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -602,7 +602,7 @@ class Video267_NaturalNumbers(Scene):
             "numbers. Every theorem in every branch of mathematics, from "
             "calculus to topology to number theory, ultimately rests on the "
             "natural numbers. That is why we start here.",
-            duration=48,
+            duration=32,
         )
         self.ly.section_divider(8, "The Foundation")
         title = self.ly.title("Everything Builds on N")
@@ -639,7 +639,7 @@ class Video267_NaturalNumbers(Scene):
             self.play(FadeIn(box_group, shift=UP * 0.1), run_time=NORMAL)
             self.wait(FAST)
 
-        self.wait(12)
+        self.wait(19)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -657,7 +657,7 @@ class Video267_NaturalNumbers(Scene):
             "the successor chain. And the natural numbers are the bedrock on "
             "which all other number systems and all of mathematics are built. "
             "In the next video, we learn how to add and subtract. See you then.",
-            duration=50,
+            duration=36,
         )
         self.ly.section_divider(9, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -674,6 +674,6 @@ class Video267_NaturalNumbers(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(16)
+        self.wait(18)
         self.ly.clear()
         play_outro(self, next_video="Addition and Subtraction", next_playlist="Numbers & Arithmetic")
