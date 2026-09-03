@@ -166,13 +166,12 @@ class Video267_NaturalNumbers(Scene):
             Dot(LEFT * 4 + RIGHT * i * 1.2 + DOWN * 0.5, radius=0.12, color=ACCENT)
             for i in range(5)
         ])
-        self.ly.center_in_content(stones)
-        stones.shift(LEFT * 1.5)
+        self.ly.safe_place(stones, DOWN, anchor=title, buff=1.6)
 
         stone_label = Text(
             "Stones", font_size=LABEL_SIZE, color=DIM, font=SANS,
         )
-        stone_label.next_to(stones, UP, buff=0.4)
+        stone_label.next_to(stones, DOWN, buff=0.35)
         self.play(
             FadeIn(stone_label, shift=LEFT * 0.1),
             *[FadeIn(s) for s in stones],
@@ -265,8 +264,7 @@ class Video267_NaturalNumbers(Scene):
                 pair = num_tex
             chain.add(pair)
         chain.arrange(RIGHT, buff=0.5)
-        self.ly.center_in_content(chain)
-        chain.shift(UP * 0.5)
+        self.ly.safe_place(chain, DOWN, anchor=title, buff=1.2)
 
         # Arrows between items
         arrows = VGroup()
@@ -363,16 +361,18 @@ class Video267_NaturalNumbers(Scene):
             Text("    If P(0) and P(n) -> P(S(n)), then P holds for all n",
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
-        self.ly.progressive_reveal(items_b, start_from=title2)
+        visible_b = self.ly.progressive_reveal(items_b, start_from=title2)
         self.wait(10)
 
-        # Highlight P5 formally
+        # Highlight P5 formally -- fade the bullet list first so the
+        # formula box has the content area to itself (no overlap)
+        self.play(*[FadeOut(m) for m in visible_b], run_time=0.5)
         p5_tex = MathTex(
             r"P(0) \wedge \; \forall n\,[P(n) \Rightarrow P(S(n))] \; \Rightarrow \; \forall n\, P(n)",
             font_size=BODY_SIZE, color=RED,
         )
         p5_box = self.ly.formula_box(p5_tex, color=RED)
-        self.ly.safe_place(p5_box, DOWN, anchor=title2, buff=1.8)
+        self.ly.safe_place(p5_box, DOWN, anchor=title2, buff=0.8)
         self.play(FadeIn(p5_box, shift=UP * 0.15), run_time=NORMAL)
         self.wait(6)
         self.ly.clear()
@@ -455,8 +455,7 @@ class Video267_NaturalNumbers(Scene):
 
         # Number line visual
         line = Line(LEFT * 5, RIGHT * 5, color=PRIMARY, stroke_width=2)
-        self.ly.center_in_content(line)
-        line.shift(UP * 0.8)
+        self.ly.safe_place(line, DOWN, anchor=title, buff=1.6)
         self.play(Create(line), run_time=NORMAL)
         self.wait(FAST)
 
@@ -479,7 +478,7 @@ class Video267_NaturalNumbers(Scene):
 
         # Highlight 1 < 3
         red_dots = VGroup()
-        for i in range(2, 5):
+        for i in (1, 3):
             pos = line.get_left() + RIGHT * (i * 2)
             red_dots.add(Dot(pos, radius=0.08, color=RED))
         lt_label = Text(
@@ -634,8 +633,7 @@ class Video267_NaturalNumbers(Scene):
             boxes.append(group)
 
         tower = VGroup(*boxes).arrange(DOWN, buff=0.25)
-        self.ly.center_in_content(tower)
-        tower.shift(DOWN * 0.3)
+        self.ly.safe_place(tower, DOWN, anchor=title, buff=0.5)
 
         for box_group in boxes:
             self.play(FadeIn(box_group, shift=UP * 0.1), run_time=NORMAL)

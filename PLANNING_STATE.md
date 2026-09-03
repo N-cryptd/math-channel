@@ -389,14 +389,18 @@
 | 266 | What is Mathematics? | ✅ | ✅ |
 | 267 | The Natural Numbers | ✅ | ✅ |
 | 268 | Addition and Subtraction | ✅ | ✅ |
-| 269 | Multiplication | ✅ | 🔄 render in progress (kanban t_6b893322) |
-| 270 | Division and Remainders | ✅ | ⬜ produce task t_b3932659 queued |
-| 271 | Negative Numbers | ⬜ | ⬜ |
+| 269 | Multiplication | ✅ | ✅ |
+| 270 | Division and Remainders | ✅ | 🔄 stale render — re-render needed (render used superseded pre-spec script) |
+| 271 | Negative Numbers | ✅ | ⬜ render queued (kanban t_2751418f) |
 | 272 | Fractions | ⬜ | ⬜ |
 
 ## Notes
-- Videos 267 (Natural Numbers) + 268 (Addition and Subtraction) rendered 2026-09-02 (480p15, pixel QA passed)
-- Next up: Video 269 Multiplication (content), Video 270 Division and Remainders (content) — kanban tasks created
+- Video 268 (Addition and Subtraction) RE-RENDERED 2026-09-03 (480p15, 279.1s, h264+aac, 12 TTS segments) from the scene 8 content-budget fix script (4 bullets merged to 3; t_10e0a6a6) → rendered/Video268_AdditionSubtraction_narrated.mp4, render mtime > script mtime. Known issue: segment 1 (scenes 1-2) needs 1.7x TTS speedup — pre-existing pacing, not touched by the budget fix. (Video 267 rendered 2026-09-02, pixel QA passed)
+- Videos 269 (Multiplication) + 270 (Division and Remainders) content complete: 269 RENDERED 2026-09-02 (t_6b893322); independent compile verification of 269 queued (t_4057bfe9)
+- Video 269 (Multiplication) rendered 2026-09-02 (480p15, 350.1s, 14 TTS segments, 0 speedup warnings, dot-grid pixel QA passed 100% coverage) → rendered/Video269_Multiplication_narrated.mp4. Production notes: (1) templates/narrate.py patched with edge-tts timeout=120 + 3 retries — an earlier run stalled 12+ min on a hung TTS call; (2) script pacing fixed — 12/13 segments originally needed 1.6–2.5x speech speedup, +72s of scene wait() brought all segments to natural speed (≤1.25x target)
+- Next up: re-render Video 270 from the final spec script; next content: Video 271 Negative Numbers & Integers (script done, render pending)
+- Video 270 (Division and Remainders) script REWRITTEN to spec on 2026-09-02 (t_9be3077d): 10 scenes, 643 lines, class Video270_DivisionRemainders, 14 caption blocks / 466s total; py_compile + importlib + full construction dry-run pass. NOTE: the earlier 14:52 render (362.9s) was produced from the superseded pre-spec script (9 scenes, different content) → rendered/Video270_DivisionRemainders_narrated.mp4 is STALE and must be re-rendered before publishing.
+- Video 271 (Negative Numbers) script complete (10 scenes, py_compile + full MathTex/Text construction checks pass); render not started
 - Foundations playlist IN PROGRESS (Videos 266+, Sep 2026)
 - New "Foundations" track: builds mathematical literacy from zero
 - Video 266: introductory "What is Mathematics?" video

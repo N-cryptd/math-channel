@@ -473,9 +473,7 @@ class Video268_AdditionSubtraction(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
             Text("Subtraction only works when a >= b in N",
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
-            Text("This gap motivates negative numbers",
-                 font_size=BODY_SIZE, color=SECONDARY, font=SANS),
-            Text("The integers (Z) will fix this completely",
+            Text("This gap motivates negative numbers -- the integers Z",
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=problem)

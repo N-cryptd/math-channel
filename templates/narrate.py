@@ -26,6 +26,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 
@@ -75,12 +76,22 @@ def get_duration(file_path: str) -> float:
 def generate_tts(text: str, output_path: str, tts_backend: str = "edge", voice: str = "en-US-AndrewNeural") -> float:
     """Generate TTS audio. Returns duration in seconds."""
     if tts_backend == "edge":
-        # Use slightly slower rate for natural speech
-        subprocess.run(
-            ["edge-tts", "--voice", voice, "--text", text,
-             "--write-media", output_path, "--rate=-5%"],
-            check=True, capture_output=True,
-        )
+        # Use slightly slower rate for natural speech.
+        # timeout+retry: edge-tts network calls can hang indefinitely
+        # (observed 12+ min stall on one segment), stalling whole runs.
+        last_err: Exception | None = None
+        for attempt in range(3):
+            try:
+                subprocess.run(
+                    ["edge-tts", "--voice", voice, "--text", text,
+                     "--write-media", output_path, "--rate=-5%"],
+                    check=True, capture_output=True, timeout=120,
+                )
+                return get_duration(output_path)
+            except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as exc:
+                last_err = exc
+                time.sleep(3 * (attempt + 1))
+        raise last_err  # type: ignore[misc]
     elif tts_backend == "espeak":
         subprocess.run(
             ["espeak-ng", "-v", "en", "-s", "145", "-p", "30", "-w", output_path, text],
