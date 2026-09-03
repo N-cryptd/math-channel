@@ -63,7 +63,7 @@ class Video268_AdditionSubtraction(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(8)
+        self.wait(14)  # pacing: seg0 TTS 22.7s needs slot >= 25s (was 8)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -105,7 +105,7 @@ class Video268_AdditionSubtraction(Scene):
         )
         self.ly.safe_place(formula_3, DOWN, anchor=formula_2, buff=0.4)
         self.play(Write(formula_3), run_time=SLOW)
-        self.wait(8)
+        self.wait(20)  # pacing: seg1 TTS 27.8s needs slot >= 31s (was 8; flagged 1.7x)
         self.ly.clear()
 
         # Concrete example
@@ -129,7 +129,7 @@ class Video268_AdditionSubtraction(Scene):
                 self.ly.safe_place(step, DOWN, anchor=steps[i - 1], buff=0.3)
             self.play(Write(step), run_time=NORMAL)
             self.wait(FAST)
-        self.wait(10)
+        self.wait(13)  # pacing: seg2 TTS 17.5s needs slot >= 19.3s (was 10)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -234,7 +234,7 @@ class Video268_AdditionSubtraction(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=formula)
-        self.wait(10)
+        self.wait(18)  # pacing: seg4 TTS 25.6s needs slot >= 28.2s (was 10)
         self.ly.clear()
 
         # Visual proof with two rows of dots
@@ -311,7 +311,7 @@ class Video268_AdditionSubtraction(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=formula)
-        self.wait(14)
+        self.wait(18)  # pacing: seg6 TTS 25.4s needs slot >= 28s (was 14)
         self.ly.clear()
 
         # Identity element
@@ -335,7 +335,7 @@ class Video268_AdditionSubtraction(Scene):
                  font_size=BODY_SIZE, color=DIM, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
-        self.wait(14)
+        self.wait(17)  # pacing: seg7 TTS 21.0s needs slot >= 23s (was 14)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -372,7 +372,7 @@ class Video268_AdditionSubtraction(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=formula)
-        self.wait(12)
+        self.wait(17)  # pacing: seg8 TTS 25.0s needs slot >= 27.5s (was 12)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -477,7 +477,7 @@ class Video268_AdditionSubtraction(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=problem)
-        self.wait(16)
+        self.wait(22)  # pacing: seg10 TTS 29.3s needs slot >= 32.2s (was 16; bullet-merge content unchanged)
         self.ly.clear()
 
     # ------------------------------------------------------------------
