@@ -45,7 +45,7 @@ class Video249_InformationPhysics(Scene):
             "Black holes have entropy proportional to their surface area. "
             "The universe itself may be fundamentally computational."
             "Information theory connects to the deepest questions in physics.",
-            duration=16,
+            duration=18,
         )
         play_intro(self, "Information Theory and Physics", "Information Theory")
 
@@ -56,7 +56,7 @@ class Video249_InformationPhysics(Scene):
             Text("The universe computes", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(4)
         self.ly.clear()
 
     def scene2_boltzmann(self):
@@ -67,7 +67,7 @@ class Video249_InformationPhysics(Scene):
             "times log W, where W is the number of microstates. "
             "This is essentially Shannon entropy, decades before Shannon. "
             "Boltzmann's formula measures the uncertainty in a physical system.",
-            duration=16,
+            duration=20,
         )
         title = self.ly.title("Boltzmann Entropy")
         boltz_formula = MathTex(r"S = k \log W", font_size=HEADING_SIZE, color=PRIMARY)
@@ -79,7 +79,7 @@ class Video249_InformationPhysics(Scene):
             Text("Shannon entropy, 70 years earlier", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
-        self.wait(2)
+        self.wait(17)
         self.ly.clear()
 
     def scene3_shannon_boltzmann(self):
@@ -97,7 +97,7 @@ class Video249_InformationPhysics(Scene):
             Text("Boltzmann: thermodynamics", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(9)
         self.ly.clear()
 
     def scene4_landauer(self):
@@ -117,7 +117,7 @@ class Video249_InformationPhysics(Scene):
             Text("Minimum energy cost of computation", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(9)
         self.ly.clear()
 
     def scene5_bekenstein(self):
@@ -137,7 +137,7 @@ class Video249_InformationPhysics(Scene):
             Text("Connects to quantum gravity", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(9)
         self.ly.clear()
 
     def scene6_black_holes(self):
@@ -148,7 +148,7 @@ class Video249_InformationPhysics(Scene):
             "equals one quarter of the horizon area in Planck units. "
             "This is pure information: it counts the number of ways "
             "to form the black hole. Physics is information.",
-            duration=16,
+            duration=17,
         )
         title = self.ly.title("Black Hole Entropy")
         bh_formula = MathTex(
@@ -163,7 +163,7 @@ class Video249_InformationPhysics(Scene):
             Text("Physics is fundamentally about information", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
-        self.wait(2)
+        self.wait(13)
         self.ly.clear()
 
     def scene7_summary(self):
@@ -172,7 +172,7 @@ class Video249_InformationPhysics(Scene):
             "Landauer's principle links erasure to energy. "
             "Black hole entropy suggests physics is information. "
             "Next, we summarize the entire Information Theory playlist.",
-            duration=14,
+            duration=17,
         )
         title = self.ly.title("Key Takeaways")
         items = [
@@ -181,6 +181,6 @@ class Video249_InformationPhysics(Scene):
             Text("Black holes encode information", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(7)
 
         play_outro(self, next_video="Information Theory Summary", next_playlist="Information Theory")

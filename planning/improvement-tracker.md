@@ -458,15 +458,15 @@ Videos 241-250 created with v2 templates. Bulk analysis + improvement performed 
 
 | # | Video | Script LOC | Analyzed | Improved | Re-rendered | Notes |
 |---|-------|-----------|----------|----------|-------------|-------|
-| 241 | What is Information? | 176 | YES | YES (section_divider+formula_box) | N/A | Added 3 section_divider, 2 formula_box (I(x)=-log p(x), H(X)=-Σ pᵢ log pᵢ). Fixed LaTeX. |
-| 242 | Entropy and Data Compression | 176 | YES | YES (section_divider+formula_box) | N/A | Added 3 section_divider, 1 formula_box (H(X) ≤ L < H(X) + 1). Fixed LaTeX bug (\<= → \leq). |
+| 241 | What is Information? | 176 | YES | YES (section_divider+formula_box) | YES | Added 3 section_divider, 2 formula_box (I(x)=-log p(x), H(X)=-Σ pᵢ log pᵢ). Fixed LaTeX. Re-rendered 2026-09-04 after pacing fix: declared caption durations raised (16→19, 14→21/17/18/17) + scene-final waits bumped (+48.3s), all 7 TTS segments fit slots (0 speedup warnings), 125.7s narrated 480p15 render verified. |
+| 242 | Entropy and Data Compression | 176 | YES | YES (section_divider+formula_box) | YES | Added 3 section_divider, 1 formula_box (H(X) ≤ L < H(X) + 1). Fixed LaTeX bug (\<= → \leq). Re-rendered 2026-09-04 after pacing fix (7 scene waits 2→6-13s, caption durations 14-20s; all TTS segments fit slots, 0 speedup warnings; 125.8s narrated 480p15). |
 | 243 | Joint Entropy and Mutual Information | 176 | YES | YES (section_divider+formula_box) | N/A | Added 4 section_divider, 1 formula_box (I(X;Y) = H(X) - H(X|Y)). |
 | 244 | Channel Capacity | 173 | YES | YES (section_divider+formula_box) | N/A | Added 3 section_divider, 1 formula_box (C = max I(X;Y)). |
 | 245 | Error-Correcting Codes | 177 | YES | YES (section_divider) | N/A | Added 3 section_divider. Conceptual video, no single key formula. |
 | 246 | Rate-Distortion Theory | 182 | YES | YES (section_divider+formula_box) | N/A | Added 3 section_divider, 1 formula_box (R(D) = min I(X;X̂)). Fixed LaTeX bug (\min → \min). |
-| 247 | KL Divergence | 179 | YES | YES (section_divider+formula_box) | N/A | Added 3 section_divider, 1 formula_box (D(P||Q) = Σ P(x) log(P(x)/Q(x))). |
-| 248 | Maximum Entropy Principle | 178 | YES | YES (section_divider) | N/A | Added 4 section_divider. |
-| 249 | Information Theory and Physics | 184 | YES | YES (section_divider+formula_box) | N/A | Added 4 section_divider, 2 formula_box (S = k log W, S_BH = kA/4ℓ²_P). |
+| 247 | KL Divergence | 179 | YES | YES (section_divider+formula_box) | YES | Added 3 section_divider, 1 formula_box (D(P||Q) = Σ P(x) log(P(x)/Q(x))). Re-rendered 2026-09-04 after pacing fix (caption durations 14-16→17-29s, scene-final waits 2→3-24s; all 7 TTS segments fit slots, 0 speedup warnings; 131.8s narrated 480p15, pixel QA PASS). |
+| 248 | Maximum Entropy Principle | 178 | YES | YES (section_divider) | YES | Added 4 section_divider. Re-rendered Sep 4, 2026 (stale-render audit): narration-timed waits (2 scene-final wait bumps, scene5 2→14.0s and scene6 2→11.0s after measuring natural TTS), 0 TTS speedup warnings, 118.9s narrated render verified (pixel QA pass, md5-matched copy in rendered/). |
+| 249 | Information Theory and Physics | 184 | YES | YES (section_divider+formula_box) | YES | Added 4 section_divider, 2 formula_box (S = k log W, S_BH = kA/4ℓ²_P). Re-rendered Sep 4, 2026 (stale-render audit): narration-timed waits (7 scene-final wait bumps + 4 slot durations), 0 TTS speedup warnings, 130.7s narrated render verified (pixel QA PASS). |
 | 250 | Information Theory Summary | 196 | YES | YES (section_divider) | YES | Added 5 section_divider. Summary video, formulas displayed as text. Re-rendered Sep 4, 2026 (stale-render audit): narration-timed waits (8 scene-final wait bumps), 0 TTS speedup warnings, 128.9s narrated render verified. |
 
 ## Status: COMPLETE ✓ (Videos 1-250)
