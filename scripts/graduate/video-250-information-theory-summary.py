@@ -68,7 +68,7 @@ class Video250_InfoTheorySummary(Scene):
             "Entropy averages this to measure uncertainty. "
             "Joint entropy and conditional entropy extend it to multiple variables. "
             "Mutual information measures what they share.",
-            duration=16,
+            duration=17,
         )
         title = self.ly.title("Part I: Foundations")
         items = [
@@ -77,7 +77,7 @@ class Video250_InfoTheorySummary(Scene):
             Text("I(X;Y): mutual information", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(9)
         self.ly.clear()
 
     def scene3_compression(self):
@@ -97,7 +97,7 @@ class Video250_InfoTheorySummary(Scene):
             Text("R(D): lossy compression limit", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(8)
         self.ly.clear()
 
     def scene4_channels(self):
@@ -108,7 +108,7 @@ class Video250_InfoTheorySummary(Scene):
             "Below C, reliable communication is possible. "
             "Above C, it is impossible. "
             "Error-correcting codes make this practical.",
-            duration=16,
+            duration=14,
         )
         title = self.ly.title("Part III: Channels")
         items = [
@@ -117,7 +117,7 @@ class Video250_InfoTheorySummary(Scene):
             Text("Error-correcting codes in practice", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(6)
         self.ly.clear()
 
     def scene5_statistics(self):
@@ -128,7 +128,7 @@ class Video250_InfoTheorySummary(Scene):
             "It is the foundation of cross-entropy loss in machine learning. "
             "The maximum entropy principle gives a principled way "
             "to choose distributions based on constraints.",
-            duration=16,
+            duration=15,
         )
         title = self.ly.title("Part IV: Statistics and ML")
         items = [
@@ -137,7 +137,7 @@ class Video250_InfoTheorySummary(Scene):
             Text("Max entropy: principled distributions", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(7)
         self.ly.clear()
 
     def scene6_physics(self):
@@ -157,7 +157,7 @@ class Video250_InfoTheorySummary(Scene):
             Text("Black holes and holography", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(11)
         self.ly.clear()
 
     def scene7_big_picture(self):
@@ -166,7 +166,7 @@ class Video250_InfoTheorySummary(Scene):
             "It connects communication, computation, statistics, and physics. "
             "Every concept builds on entropy. "
             "Shannon's 1948 paper may be the most important work of the 20th century.",
-            duration=16,
+            duration=17,
         )
         title = self.ly.title("The Big Picture")
         items = [
@@ -175,7 +175,7 @@ class Video250_InfoTheorySummary(Scene):
             Text("Shannon's 1948: a century-defining work", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(12)
         self.ly.clear()
 
     def scene8_outro(self):
@@ -184,7 +184,7 @@ class Video250_InfoTheorySummary(Scene):
             "From a simple question about surprise, we traveled through "
             "compression, channels, physics, and beyond. "
             "Stay curious, and keep asking: what is information?",
-            duration=16,
+            duration=15,
         )
         title = self.ly.title("Thank You")
         items = [
@@ -193,6 +193,6 @@ class Video250_InfoTheorySummary(Scene):
             Text("Stay curious", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(5)
 
         play_outro(self, next_video="", next_playlist="Information Theory")
