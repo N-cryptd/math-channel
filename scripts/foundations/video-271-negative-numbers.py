@@ -93,7 +93,7 @@ class Video271_NegativeNumbers(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(8)
+        self.wait(21)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -140,7 +140,7 @@ class Video271_NegativeNumbers(Scene):
                    font_size=BODY_SIZE, color=ACCENT, font=SANS)
         self.ly.safe_place(key, direction=DOWN, anchor=left, buff=0.5)
         self.play(FadeIn(key, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(9)
+        self.wait(19)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -192,7 +192,7 @@ class Video271_NegativeNumbers(Scene):
         )
         self.ly.safe_place(integers, direction=DOWN, anchor=full, buff=0.8)
         self.play(Write(integers), run_time=NORMAL)
-        self.wait(12)
+        self.wait(22)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -255,7 +255,7 @@ class Video271_NegativeNumbers(Scene):
         self.play(GrowFromCenter(brace), run_time=NORMAL)
         self.play(Write(brace_lbl), run_time=FAST)
         self.play(Write(abs_val), run_time=NORMAL)
-        self.wait(12)
+        self.wait(19.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -321,7 +321,7 @@ class Video271_NegativeNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(rules, start_from=line, spacing=0.5)
-        self.wait(8)
+        self.wait(11.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -382,7 +382,7 @@ class Video271_NegativeNumbers(Scene):
         self.play(FadeIn(dot_b, scale=0.5), run_time=FAST)
         self.play(GrowArrow(arrow_b), run_time=NORMAL)
         self.play(Write(eq_b), run_time=NORMAL)
-        self.wait(9)
+        self.wait(12)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -441,7 +441,7 @@ class Video271_NegativeNumbers(Scene):
             MathTex(r"(-1) \times (-2) = +2", font_size=HEADING_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(rows, start_from=title2, spacing=0.35)
-        self.wait(12)
+        self.wait(13.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -500,7 +500,7 @@ class Video271_NegativeNumbers(Scene):
                     font_size=BODY_SIZE, color=DIM, font=SANS)
         self.ly.safe_place(note, direction=DOWN, anchor=fb, buff=0.45)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(8)
+        self.wait(15.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -537,7 +537,7 @@ class Video271_NegativeNumbers(Scene):
                  font_size=BODY_SIZE, color=DIM, font=SANS),
         ]
         self.ly.progressive_reveal(rows, start_from=title, spacing=0.35)
-        self.wait(10)
+        self.wait(31.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -578,6 +578,6 @@ class Video271_NegativeNumbers(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(16)
+        self.wait(27)
         self.ly.clear()
         play_outro(self, next_video="Fractions", next_playlist="Numbers & Arithmetic")

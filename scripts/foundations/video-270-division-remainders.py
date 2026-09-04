@@ -71,7 +71,8 @@ class Video270_DivisionRemainders(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(8)
+        # pacing fix t_ca7fa7ff: caption 1 slot 19.3s vs 33.4s TTS -> +21s
+        self.wait(29)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -142,7 +143,8 @@ class Video270_DivisionRemainders(Scene):
         clamp_position(dot_formula)
         self.play(FadeIn(dot_rows, lag_ratio=0.15), run_time=SLOW)
         self.play(Write(dot_formula), run_time=NORMAL)
-        self.wait(8)
+        # pacing fix t_ca7fa7ff: caption 3 slot 12.4s vs 20.4s TTS -> +11s
+        self.wait(19)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -272,7 +274,8 @@ class Video270_DivisionRemainders(Scene):
         for item in stack:
             self.play(Write(item), run_time=NORMAL)
             self.wait(2.5)
-        self.wait(3)
+        # pacing fix t_ca7fa7ff: caption 5 slot 26.4s vs 34.2s TTS -> +2.7s
+        self.wait(5.7)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -313,7 +316,8 @@ class Video270_DivisionRemainders(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(bullets, start_from=g)
-        self.wait(8)
+        # pacing fix t_ca7fa7ff: caption 6 slot 21.0s vs 34.8s TTS -> +19s
+        self.wait(27)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -340,7 +344,8 @@ class Video270_DivisionRemainders(Scene):
             MathTex(r"53 = 8 \cdot 6 + 5", font_size=BODY_SIZE, color=WHITE),
         ]
         self.ly.progressive_reveal(examples, start_from=title)
-        self.wait(6)
+        # pacing fix t_ca7fa7ff: caption 7 slot 14.0s vs 29.3s TTS -> +26.5s
+        self.wait(32.5)
         self.ly.clear()
 
         # Block 2: finding q is a search (18s)
@@ -359,7 +364,8 @@ class Video270_DivisionRemainders(Scene):
         )
         self.ly.safe_place(search, direction=DOWN, anchor=title2, buff=1.2)
         self.play(Write(search), run_time=SLOW)
-        self.wait(8)
+        # pacing fix t_ca7fa7ff: caption 8 slot 11.2s vs 18.0s TTS -> +9s
+        self.wait(17)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -420,7 +426,8 @@ class Video270_DivisionRemainders(Scene):
             MathTex(r"29 = 4 \cdot 7 + 1", font_size=BODY_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(bullets, start_from=VGroup(brace_r, r_label))
-        self.wait(6)
+        # pacing fix t_ca7fa7ff: caption 9 slot 20.2s vs 35.3s TTS -> +22.5s
+        self.wait(28.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -475,7 +482,8 @@ class Video270_DivisionRemainders(Scene):
         # Bring down the 3
         bd3 = MathTex("3", font_size=40, color=WHITE).move_to((xc3, 0.0, 0))
         self.play(TransformFromCopy(digits[1], bd3), run_time=NORMAL)
-        self.wait(2.5)
+        # pacing fix t_ca7fa7ff: caption 10 slot 20.8s vs 28.8s TTS -> +6.5s
+        self.wait(9)
 
         # Step 2: 6 into 13 goes 2 times; 2*6 = 12; 13 - 12 = 1
         q2 = MathTex("2", font_size=40, color=WHITE).move_to((xc3, qy, 0))
@@ -529,7 +537,8 @@ class Video270_DivisionRemainders(Scene):
         final.move_to((0, -3.05, 0))
         clamp_position(final)
         self.play(Write(final), run_time=NORMAL)
-        self.wait(4)
+        # pacing fix t_ca7fa7ff: caption 11 slot 17.8s vs 37.7s TTS -> +35s
+        self.wait(39)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -577,7 +586,8 @@ class Video270_DivisionRemainders(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(bullets, start_from=VGroup(eq, divides_lab))
-        self.wait(6)
+        # pacing fix t_ca7fa7ff: caption 12 slot 22.4s vs 30.1s TTS -> +4.5s
+        self.wait(10.5)
         self.ly.clear()
 
         # Block 2: remainders repeat (20s)
@@ -599,7 +609,8 @@ class Video270_DivisionRemainders(Scene):
         self.ly.safe_place(note, direction=DOWN, anchor=cycle, buff=0.7)
         self.play(Write(cycle), run_time=SLOW)
         self.play(FadeIn(note, shift=UP * 0.15), run_time=NORMAL)
-        self.wait(6)
+        # pacing fix t_ca7fa7ff: caption 13 slot 10.4s vs 22.5s TTS -> +21.5s
+        self.wait(27.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -637,7 +648,8 @@ class Video270_DivisionRemainders(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(14)
+        # pacing fix t_ca7fa7ff: caption 14 slot capped by video end -> +1s
+        self.wait(15)
         self.ly.clear()
         play_outro(self, next_video="Negative Numbers & Integers",
                    next_playlist="Numbers & Arithmetic")

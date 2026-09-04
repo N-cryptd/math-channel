@@ -2765,3 +2765,50 @@ Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks
 **Duration:** ?s | **Captions:** True
 
 ---
+
+---
+
+## [2026-09-03 14:10] Video 272 Fractions — Competitive Analysis (Foundations track)
+
+**Topic:** What fractions are — parts of wholes, equal partitioning, numerator/denominator meaning, fractions as numbers on the number line, mixed numbers vs fractions less than/greater than one.
+**Videos analyzed:**
+
+### 1. "What Are Fractions?" — Math Antics (I1u3pM9g9o8)
+- 173K views (Apr 2026 re-upload; the 2012 original has ~8M+ views across mirrors), 3.84M subs
+- **Structure (7/10):** Definition-first: "a fraction is a part of a whole" -> get one whole -> cut into equal parts -> name the parts. Then vocabulary (numerator = how many parts you have; denominator = how many equal parts in the whole — "DENominator Down"). Ends with worked examples counting shaded parts. Very tight sectioning, but no narrative hook.
+- **Pacing (8/10):** Slow, deliberate, repetition-heavy — ideal for the target audience (learners, parents, teachers). Long dwell time on each diagram.
+- **Visuals (5/10):** Whiteboard/tablet style: hand-drawn circles and rectangles partitioned into slices, shaded portions in marker color. Static-ish; little motion. Color does the work (one color = one fraction).
+- **Narration (8/10):** Direct, friendly, vocabulary-forward. Etymology tricks that stick.
+- **Hooks (4/10):** No story hook; assumes the viewer already decided to learn fractions.
+- **Thumbnail pixels:** warm cream/tan paper palette (mean luma 176, 40 percent bright), high edge density 6.0 -> text-forward, worksheet-like look. Readability over drama.
+
+### 2. "Fractions on the Number Line" — Math Antics (pWJzqTYS8no)
+- 112K views (Apr 2026 re-upload), sequel to the above
+- **Structure (8/10):** Extends fractions from "parts of objects" to "numbers between numbers" — exactly the conceptual bridge our playlist needs (Video 271 ended with the integers; 272 shows fractions live BETWEEN them). Progression: between 0 and 1 -> partition the unit -> label fourths -> count past 1 -> improper fractions and mixed numbers.
+- **Pacing (8/10):** Same deliberate rhythm; number-line ticks drawn one at a time.
+- **Visuals (6/10):** Number line with tick marks and labels; red/maroon theme. Cleaner than the parts video, still static.
+- **Narration (8/10):** "Fractions are numbers too" framing — the single most important sentence in fraction pedagogy.
+- **Hooks (5/10):** Mild curiosity gap ("what lives between 0 and 1?").
+- **Thumbnail pixels:** saturated red/maroon blocks with white accents (mean luma 122, colorfulness 85, low edge density 3.0) -> bold, high-contrast, single-figure composition.
+
+### Market gap (reconfirms Foundations decision from Aug 2026 sweep)
+- Khan Academy + Math Antics dominate with **tablet-whiteboard style**; nothing cinematic.
+- No Manim-quality animated treatment of fractions that ALSO carries a story arc ("why do humans need numbers between numbers?").
+- Competitors stop at vocabulary; almost nobody shows WHY equivalent fractions name the same point, and few connect fractions back to division (our Video 270!) — we can make 3 divided by 4 = 3/4 the emotional payoff.
+
+### Techniques to adopt in Video 272
+1. **Open on the gap between integers:** 271 ended with the number line; start at "between 0 and 1 there is a number with no name yet" — direct serial hook (Math Antics' number-line framing, but dramatized).
+2. **Vocabulary discipline:** explicit numerator/denominator naming with position mnemonics, ONE scene dedicated to it (competitors prove this is essential; do it in one scene, not five).
+3. **Equal-partition visual:** unit rectangle (not circle — easier to verify equality in Manim, cleaner grid) progressively split 2 -> 3 -> 4 parts with shading.
+4. **"Fractions are numbers" scene:** the number line gets a dense tick ladder between 0 and 1; count past 1 to improper/mixed numbers.
+5. **Payoff scene:** division connection 3 divided by 4 = 3/4 (ties directly to our Video 270) — competitors don't do this.
+
+### Techniques to avoid
+- Worksheet/quiz framing and "pause the video" gaps (Math Antics' classroom contract) — our channel is watch-through cinema.
+- Circle pies as the primary model (hard to compare unequal-looking slices) — use bars/rectangles and the line.
+- Five-minute vocabulary drills; compress naming into a single scene.
+
+### Our differentiation
+- Cinematic dark theme + motion (sweeping partition animations, growing tick ladders) vs. static whiteboard.
+- Story continuity: Video 270 division -> Video 271 integers below zero -> Video 272 numbers BETWEEN integers. The line gets denser every episode.
+- Real division-as-fraction proof (3 cookies, 4 friends) as the aha moment.
