@@ -54,7 +54,7 @@ class Video103_Continuity(Scene):
             "if you can draw its graph without lifting your pen. "
             "That intuition is useful, but can we make it rigorous? "
             "What exactly does it mean for a function to have no breaks?",
-            duration=22,
+            duration=14.1,
         )
         play_intro(self, "Continuity", "Real Analysis I")
 
@@ -93,7 +93,8 @@ class Video103_Continuity(Scene):
         )
         self.ly.safe_place(question, direction=DOWN, anchor=g1, buff=0.4)
         self.play(Write(question), run_time=NORMAL)
-        self.wait(1)
+        # pacing: extends previous caption slot (seg#0 natural 14.11s, slot 13.13s -> 17.73s, delta=4.6)
+        self.wait(5.6)
         self.ly.clear()
 
     # --- Scene 2: Intro + Section Divider ---
@@ -101,9 +102,10 @@ class Video103_Continuity(Scene):
         self.add_subcaption(
             "To answer that, we will build on the epsilon-delta "
             "definition of limits from our last video.",
-            duration=6,
+            duration=5.6,
         )
-        self.ly.section_divider("1", "From Limits to Continuity")
+        # pacing: hold=0.8+3.2 extends caption slot (seg#1 natural 5.57s, slot 3.83s -> 7.03s, delta=3.2)
+        self.ly.section_divider("1", "From Limits to Continuity", hold=4.0)
         self.ly.clear()
 
     # --- Scene 3: Key Idea --- Continuity = Limit Equals Value ---
@@ -114,7 +116,7 @@ class Video103_Continuity(Scene):
             "if the limit of f of x as x approaches a, equals f of a. "
             "The limit captures the predicted value near the point. "
             "Continuity says the prediction is exactly right.",
-            duration=25,
+            duration=16.5,
         )
 
         title = self.ly.title("Continuity = Limit Equals Value")
@@ -133,16 +135,18 @@ class Video103_Continuity(Scene):
             font_size=HEADING_SIZE, color=ACCENT,
         )
         self.ly.formula_box(definition, ACCENT)
-        self.wait(1)
+        # pacing: extends previous caption slot (seg#2 natural 16.49s, slot 6.83s -> 20.73s, delta=13.9)
+        self.wait(14.9)
         self.ly.clear()
 
     # --- Scene 4: Section Divider ---
     def scene4_divider_definition(self):
         self.add_subcaption(
             "Now let's see the formal epsilon-delta definition.",
-            duration=4,
+            duration=3.3,
         )
-        self.ly.section_divider("2", "The Formal Definition")
+        # pacing: hold=0.8+0.4 extends caption slot (seg#3 natural 3.31s, slot 3.80s -> 4.20s, delta=0.4)
+        self.ly.section_divider("2", "The Formal Definition", hold=1.2)
         self.ly.clear()
 
     # --- Scene 5: Epsilon-Delta Definition Animated ---
@@ -156,7 +160,7 @@ class Video103_Continuity(Scene):
             "Notice the key difference from the limit definition: "
             "we include x equals a. The limit excludes the point itself. "
             "Continuity includes it.",
-            duration=30,
+            duration=27.4,
         )
 
         title = self.ly.title("Epsilon-Delta Definition")
@@ -189,7 +193,8 @@ class Video103_Continuity(Scene):
         self.ly.two_columns(
             [col_left], [col_right], start_from=title,
         )
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#4 natural 27.43s, slot 5.23s -> 34.33s, delta=29.1)
+        self.wait(30.6)
         self.ly.clear()
 
         # Now show continuous function visualization
@@ -198,7 +203,7 @@ class Video103_Continuity(Scene):
             "The delta-tube around x equals a always maps "
             "inside the epsilon-band around f of a. "
             "No matter how small epsilon gets, we can find a delta that works.",
-            duration=18,
+            duration=13.4,
         )
 
         title2 = self.ly.title("Continuous: Tube Maps Into Band")
@@ -263,14 +268,15 @@ class Video103_Continuity(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=axes, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1)
+        # pacing: extends previous caption slot (seg#5 natural 13.37s, slot 10.63s -> 16.83s, delta=6.2)
+        self.wait(7.2)
         self.ly.clear()
 
     # --- Scene 6: Section Divider ---
     def scene6_divider_proof(self):
         self.add_subcaption(
             "Let's prove continuity for a concrete function.",
-            duration=4,
+            duration=3.2,
         )
         self.ly.section_divider("3", "Proving Continuity")
         self.ly.clear()
@@ -289,7 +295,7 @@ class Video103_Continuity(Scene):
             "we have 1 less than x less than 3, so x plus 2 is less than 5. "
             "Therefore the whole expression is less than "
             "5 times delta, which is less than epsilon. QED.",
-            duration=40,
+            duration=44.7,
         )
 
         title = self.ly.title(r"Proof: $f(x) = x^2$ at $a = 2$")
@@ -340,14 +346,15 @@ class Video103_Continuity(Scene):
             Text("This gives us a finite bound on |x+2|", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(1)
+        # pacing: extends previous caption slot (seg#7 natural 44.74s, slot 16.13s -> 56.03s, delta=39.9)
+        self.wait(40.9)
         self.ly.clear()
 
     # --- Scene 8: Section Divider ---
     def scene8_divider_sequential(self):
         self.add_subcaption(
             "Now let's connect continuity to sequences.",
-            duration=4,
+            duration=3.1,
         )
         self.ly.section_divider("4", "Sequences and Discontinuities")
         self.ly.clear()
@@ -365,7 +372,7 @@ class Video103_Continuity(Scene):
             "Jump: the left and right limits exist but differ. "
             "Infinite: the function blows up near the point. "
             "Oscillation: the function oscillates wildly with no limit.",
-            duration=40,
+            duration=35.4,
         )
 
         title = self.ly.title("Theorem: Sequential Criterion")
@@ -412,7 +419,8 @@ class Video103_Continuity(Scene):
         )
         self.ly.safe_place(common, direction=DOWN, anchor=examples[-1], buff=0.3)
         self.play(Write(common), run_time=NORMAL)
-        self.wait(1)
+        # pacing: extends previous caption slot (seg#9 natural 35.35s, slot 20.17s -> 44.27s, delta=24.1)
+        self.wait(25.1)
         self.ly.clear()
 
     # --- Scene 10: Summary + Outro ---
@@ -431,7 +439,7 @@ class Video103_Continuity(Scene):
             "removable, jump, infinite, and oscillation. "
             "And continuity is a local property, defined point by point. "
             "Next time, we explore uniform continuity, where continuity is global.",
-            duration=40,
+            duration=44.6,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -444,7 +452,8 @@ class Video103_Continuity(Scene):
             Text("Continuity is a LOCAL property", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(takeaways, start_from=title)
-        self.wait(1)
+        # pacing: extends previous caption slot (seg#10 natural 44.64s, slot 16.63s -> 55.83s, delta=39.2)
+        self.wait(40.2)
         self.ly.clear()
 
         play_outro(self, "Uniform Continuity", "Real Analysis I")
