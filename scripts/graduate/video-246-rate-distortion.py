@@ -75,7 +75,7 @@ class Video246_RateDistortion(Scene):
             Text("How much can we discard?", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(10)  # natural TTS 13.4s needs ~15s span (pacing fix 2026-09-04)
         self.ly.clear()
 
     def scene3_distortion_measures(self):

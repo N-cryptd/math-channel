@@ -66,7 +66,7 @@ class Video248_MaximumEntropy(Scene):
             "among all distributions consistent with our constraints, "
             "we should choose the one with maximum entropy. "
             "This is the least informative distribution: it assumes nothing extra.",
-            duration=16,
+            duration=17,
         )
         title = self.ly.title("Jaynes' Principle")
         items = [
@@ -75,7 +75,7 @@ class Video248_MaximumEntropy(Scene):
             Text("Assumes nothing extra", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(8.7)
         self.ly.clear()
 
     def scene3_mean_constraint(self):
@@ -86,7 +86,7 @@ class Video248_MaximumEntropy(Scene):
             "is uniform: equal probability for all outcomes. "
             "This makes intuitive sense: if you know nothing, "
             "assume maximum uncertainty.",
-            duration=14,
+            duration=15,
         )
         title = self.ly.title("No Constraints: Uniform")
         items = [
@@ -95,7 +95,7 @@ class Video248_MaximumEntropy(Scene):
             MathTex(r"p_i = 1/n", font_size=HEADING_SIZE, color=PRIMARY),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(6.7)
         self.ly.clear()
 
     def scene4_gaussian(self):
@@ -106,7 +106,7 @@ class Video248_MaximumEntropy(Scene):
             "is the Gaussian. This is why the Gaussian appears everywhere: "
             "it is the most unbiased distribution with given first two moments. "
             "The central limit theorem gives another reason, but max entropy is deeper.",
-            duration=16,
+            duration=20,
         )
         title = self.ly.title("Mean + Variance: Gaussian")
         items = [
@@ -115,7 +115,7 @@ class Video248_MaximumEntropy(Scene):
             Text("Why Gaussians appear everywhere", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(11.7)
         self.ly.clear()
 
     def scene5_exponential(self):
@@ -126,7 +126,7 @@ class Video248_MaximumEntropy(Scene):
             "the maximum entropy distribution is the exponential. "
             "This models waiting times, radioactive decay, and many natural processes. "
             "Different constraints lead to different maximum entropy distributions.",
-            duration=16,
+            duration=19,
         )
         title = self.ly.title("Positive Mean: Exponential")
         items = [
@@ -135,7 +135,7 @@ class Video248_MaximumEntropy(Scene):
             Text("Models waiting times and decay", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(14.0)
         self.ly.clear()
 
     def scene6_philosophy(self):
@@ -153,7 +153,7 @@ class Video248_MaximumEntropy(Scene):
             Text("Assume nothing else", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(11.0)
         self.ly.clear()
 
     def scene7_summary(self):

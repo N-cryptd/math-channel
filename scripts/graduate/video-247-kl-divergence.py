@@ -6,6 +6,8 @@ Covers: KL divergence, properties, relation to mutual information,
 applications in statistics and machine learning.
 
 v2: LayoutEngine, progressive_reveal, Source Sans 3, dot grid background.
+Pacing fix 2026-09-04: declared caption durations raised + scene-final waits
+bumped so every TTS segment fits its slot (0 speedup warnings).
 
 Render:  manim -ql scripts/graduate/video-247-kl-divergence.py Video247_KLDivergence
 """
@@ -44,7 +46,7 @@ class Video247_KLDivergence(Scene):
             "How do we measure the difference between two probability distributions? "
             "The Kullback-Leibler divergence is the answer. "
             "It measures how much information is lost when we use one distribution to approximate another.",
-            duration=16,
+            duration=17,
         )
         play_intro(self, "KL Divergence", "Information Theory")
 
@@ -55,7 +57,7 @@ class Video247_KLDivergence(Scene):
             Text("Core tool in ML and statistics", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(3)
         self.ly.clear()
 
     def scene2_definition(self):
@@ -65,7 +67,7 @@ class Video247_KLDivergence(Scene):
             "The KL divergence from distribution Q to P is the expected value "
             "of log P over Q, using P's probabilities. "
             "It measures the inefficiency of assuming Q when the truth is P.",
-            duration=14,
+            duration=16,
         )
         title = self.ly.title("Definition")
         kl_formula = MathTex(
@@ -80,7 +82,7 @@ class Video247_KLDivergence(Scene):
             Text("Not symmetric: D(P|Q) != D(Q|P)", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
-        self.wait(2)
+        self.wait(8)
         self.ly.clear()
 
     def scene3_properties(self):
@@ -91,7 +93,7 @@ class Video247_KLDivergence(Scene):
             "It equals zero if and only if P equals Q. "
             "But it is not a true distance because it is not symmetric "
             "and does not satisfy the triangle inequality.",
-            duration=16,
+            duration=17,
         )
         title = self.ly.title("Properties")
         items = [
@@ -100,7 +102,7 @@ class Video247_KLDivergence(Scene):
             Text("NOT a true distance (not symmetric)", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(9)
         self.ly.clear()
 
     def scene4_relation_to_mi(self):
@@ -120,7 +122,7 @@ class Video247_KLDivergence(Scene):
             Text("Unifies the framework", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(10)
         self.ly.clear()
 
     def scene5_applications(self):
@@ -129,7 +131,7 @@ class Video247_KLDivergence(Scene):
             "it is the basis of variational inference and the cross-entropy loss. "
             "In statistics, it justifies maximum likelihood estimation. "
             "In physics, it connects to free energy.",
-            duration=16,
+            duration=18,
         )
         title = self.ly.title("Applications")
         items = [
@@ -138,7 +140,7 @@ class Video247_KLDivergence(Scene):
             Text("Physics: free energy connection", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(13)
         self.ly.clear()
 
     def scene6_example(self):
@@ -147,7 +149,7 @@ class Video247_KLDivergence(Scene):
             "The KL divergence is small, about 0.13 bits, because the "
             "distributions are similar. But P = (0.5, 0.5) vs Q = (0.99, 0.01) "
             "gives KL about 1.77 bits, a much bigger difference.",
-            duration=16,
+            duration=29,
         )
         title = self.ly.title("Example: Fair vs Biased Coin")
         items = [
@@ -156,7 +158,7 @@ class Video247_KLDivergence(Scene):
             Text("More different distributions = higher KL", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(24)
         self.ly.clear()
 
     def scene7_summary(self):
@@ -165,7 +167,7 @@ class Video247_KLDivergence(Scene):
             "It is non-negative, zero only for identical distributions. "
             "Mutual information is a special case. "
             "Next, we explore the principle of maximum entropy.",
-            duration=14,
+            duration=17,
         )
         title = self.ly.title("Key Takeaways")
         items = [
@@ -174,6 +176,6 @@ class Video247_KLDivergence(Scene):
             Text("Foundation of ML loss functions", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(5)
 
         play_outro(self, next_video="Maximum Entropy Principle", next_playlist="Information Theory")

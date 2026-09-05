@@ -545,7 +545,7 @@ class Video87_Trees(Scene):
             if step == 0:
                 seq_text = f"Visit: {name}"
             else:
-                seq_text = f"{visit_seq.text.text}, {name}"
+                seq_text = f"{visit_seq.text}, {name}"
             new_seq = Text(seq_text, font_size=BODY_SIZE, color=ACCENT, font=SANS)
             new_seq.move_to(visit_seq.get_center())
             self.play(FadeOut(visit_seq), FadeIn(new_seq, shift=LEFT * 0.1), run_time=FAST)
@@ -616,7 +616,7 @@ class Video87_Trees(Scene):
             if step == 0:
                 seq_text = f"In-order: {name}"
             else:
-                seq_text = f"{in_label.text.text}, {name}"
+                seq_text = f"{in_label.text}, {name}"
             new_l = Text(seq_text, font_size=BODY_SIZE, color=PRIMARY, font=SANS)
             new_l.move_to(in_label.get_center())
             self.play(FadeOut(in_label), FadeIn(new_l, shift=LEFT * 0.1), run_time=FAST)
@@ -636,7 +636,7 @@ class Video87_Trees(Scene):
             if step == 0:
                 seq_text = f"Post-order: {name}"
             else:
-                seq_text = f"{post_label.text.text}, {name}"
+                seq_text = f"{post_label.text}, {name}"
             new_l = Text(seq_text, font_size=BODY_SIZE, color=SECONDARY, font=SANS)
             new_l.move_to(post_label.get_center())
             self.play(FadeOut(post_label), FadeIn(new_l, shift=LEFT * 0.1), run_time=FAST)
@@ -888,7 +888,9 @@ class Video87_Trees(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(apps, start_from=title)
-        self.wait(2)
+        # +10s hold: narration for this scene needs ~17.3s natural TTS; the slot
+        # is capped by the next scene's subcaption start (stale-render audit fix).
+        self.wait(12)
 
         self.ly.clear()
 
@@ -920,7 +922,8 @@ class Video87_Trees(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(points, start_from=title)
-        self.wait(2)
+        # +2s hold: summary narration needs ~16.6s natural TTS before outro starts.
+        self.wait(4)
 
         formula = MathTex(r"|E| = |V| - 1", color=WHITE)
         fbox = self.ly.formula_box(formula, ACCENT)

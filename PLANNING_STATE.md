@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-09-02
+**Last updated:** 2026-09-05
 
 **Completed Videos (Videos 1–268: scripts ✅, narrated renders ✅)**
 
@@ -395,6 +395,7 @@
 | 272 | Fractions | ✅ | ✅ |
 
 ## Notes
+- Video 207 (Homotopy) RE-RENDERED 2026-09-05 (t_f0820091): 480p15, 221.6s, h264+aac, 18 TTS segments, 0 speedup warnings, 0 skipped → rendered/Video207_Homotopy_narrated.mp4, render mtime > script mtime. PACING FIX: old render had 3 narration segments missing entirely + 11 rushed at 1.5-3.2x (natural TTS 194.8s vs 103.9s video). Added +117.6s scene waits across all 18 caption blocks + aligned declared caption durations to natural speech. All segments now ≤1.0x slot usage. Audio -20.5 dB mean / -2.3 dB peak; dot QA PASS (44/44 frames). Math content unchanged. Next documented pacing offender: Video 75 (Central Limit Theorem, 5/18 segments 1.5-2.3x).
 - Video 272 (Fractions) RENDERED 2026-09-03 (t_25ca3c7a): first render (480p15, 484.3s, h264+aac, 854x480, 10 TTS segments, 0 speedup warnings) → rendered/Video272_Fractions_narrated.mp4, render mtime > script mtime. Audio -20.6 dB mean / -2.0 dB peak. Dot QA PASS (qa_dots v2: 98% dot-frame coverage, median 14332 px, mean luma 29.0; tool validated on 267-271 renders). Caption slots generous (47-58s), natural narration pace throughout.
 - Video 267 (Natural Numbers) RE-RENDERED 2026-09-03 (480p15, 501.7s, h264+aac, 17 TTS segments, 0 speedup warnings) → rendered/Video267_NaturalNumbers_narrated.mp4, render mtime > script mtime. PACING FIX (t_d22b1c16): 6/17 segments previously needed 1.5-2.0x speech speedup (declared caption durations overran actual slots — same add_subcaption pitfall as 268/271). Measured natural TTS per subcaption (edge-tts -5%); trimmed 7 declared durations by 1s to fit slots; all 17 segments now 0.89-0.96x slot usage, natural speed. Dot QA pass (97% coverage, median 3658 in-band px); audio -20.3 dB mean / -2.2 dB peak. Layout fix (scene 5 formula_box overlap) also in this render — full details in improvement-tracker row 267.
  2026-09-03 (480p15, 467.7s, h264+aac, 14 TTS segments, 0 speedup warnings) → rendered/Video270_DivisionRemainders_narrated.mp4, render mtime > script mtime. PACING FIX (t_ca7fa7ff): render test showed 287.7s video vs ~466s caption plan, 10/13 segments needing 1.6–2.6x speech speedup. Measured natural TTS per subcaption (edge-tts -5%, en-US-AndrewNeural): sum 420.9s vs 283.8s of caption slots. Added +180.2s of scene wait() across 12 of 14 caption blocks (each block's final wait before ly.clear(), i.e. after its own caption / before the next caption — extends that caption's slot), distributed proportionally to per-caption deficit at 1.25x target: +21s caption1, +11s caption3, +2.7s caption5, +19s caption6, +26.5s caption7, +9s caption8, +22.5s caption9, +6.5s caption10, +35s caption11, +4.5s caption12, +21.5s caption13, +1s caption14 (captions 2, 4 already ≤1.25x). Verified post-render: all 14 segments 0.71–1.23x natural speed, zero narrate.py warnings. Math content, captions, class name unchanged; py_compile + full construction dry-run (252 animations) pass.

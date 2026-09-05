@@ -44,13 +44,14 @@ class Video207_Homotopy(Scene):
         self.add_subcaption(
             "Welcome to Algebraic Topology! Today we explore homotopy, "
             "the idea of continuous deformation between shapes.",
-            duration=6,
+            duration=8.5,
         )
         play_intro(self, "Homotopy", "Algebraic Topology")
+        self.wait(3.6)  # pacing: give intro caption its full narration slot
 
         self.add_subcaption(
             "A fundamental question: when should we consider two shapes to be essentially the same?",
-            duration=5,
+            duration=5.5,
         )
         title = self.ly.title("When Are Two Shapes the Same?")
         items = [
@@ -59,7 +60,7 @@ class Video207_Homotopy(Scene):
             Text("But cutting, tearing, and gluing are forbidden", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(0.5)
+        self.wait(1.0)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene2_intuition(self):
@@ -67,7 +68,7 @@ class Video207_Homotopy(Scene):
         self.add_subcaption(
             "Imagine taking a square and continuously stretching it into a circle. "
             "No tearing, no gluing — just smooth deformation.",
-            duration=6,
+            duration=9.5,
         )
         self.ly.section_divider(1, "Intuition")
 
@@ -85,14 +86,14 @@ class Video207_Homotopy(Scene):
         self.play(Create(square), run_time=NORMAL)
         self.wait(0.3)
         self.play(Transform(square, circle), run_time=2.5)
-        self.wait(0.3)
+        self.wait(2.0)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
         self.add_subcaption(
             "This smooth transformation from one shape to another is called a homotopy. "
             "The Greek word 'homos' means same, and 'topos' means place.",
-            duration=6,
+            duration=10.5,
         )
         title2 = self.ly.title("This is Homotopy")
         items = [
@@ -101,7 +102,7 @@ class Video207_Homotopy(Scene):
             Text("From Greek: homos (same) + topos (place)", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(0.5)
+        self.wait(6.0)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene3_definition(self):
@@ -109,7 +110,7 @@ class Video207_Homotopy(Scene):
         self.add_subcaption(
             "Formally, a homotopy is a continuous map H from X cross the unit interval into Y, "
             "that smoothly transforms one function into another.",
-            duration=7,
+            duration=10.0,
         )
         self.ly.section_divider(2, "Formal Definition")
 
@@ -131,12 +132,13 @@ class Video207_Homotopy(Scene):
         boxed_defn2 = self.ly.formula_box(defn2, color=PRIMARY)
         self.ly.safe_place(boxed_defn2, DOWN, anchor=defn1, buff=0.4)
         self.play(FadeIn(boxed_defn2), run_time=NORMAL)
+        self.wait(4.5)  # pacing: extends previous caption slot
 
         # Constraints
         self.add_subcaption(
             "The homotopy H at time zero gives function f, and at time one gives function g. "
             "For every point x in X, the path H of x, t connects f of x to g of x.",
-            duration=6,
+            duration=13.0,
         )
         constraints = VGroup(
             MathTex(r"H(x, 0) = f(x)", font_size=BODY_SIZE, color=SECONDARY),
@@ -144,12 +146,13 @@ class Video207_Homotopy(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
         self.ly.safe_place(constraints, DOWN, anchor=defn2, buff=0.5)
         self.play(FadeIn(constraints, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(12.8)  # pacing: extends previous caption slot
 
         # Visual: parameter t
         self.add_subcaption(
             "Think of t as a time parameter. At each moment, H gives an intermediate "
             "shape between f and g.",
-            duration=5,
+            duration=8.0,
         )
         t_visual = MathTex(
             r"t = 0 \Rightarrow f, \quad t = 1 \Rightarrow g, \quad t \in [0,1]",
@@ -158,7 +161,7 @@ class Video207_Homotopy(Scene):
         self.ly.safe_place(t_visual, DOWN, anchor=constraints, buff=0.5)
         self.play(Write(t_visual), run_time=NORMAL)
 
-        self.wait(0.5)
+        self.wait(6.5)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene4_path_homotopy(self):
@@ -166,7 +169,7 @@ class Video207_Homotopy(Scene):
         self.add_subcaption(
             "Now consider a special case. What if f and g are both paths "
             "from point a to point b? A path homotopy keeps the endpoints fixed.",
-            duration=7,
+            duration=9.8,
         )
         self.ly.section_divider(3, "Path Homotopy")
 
@@ -200,17 +203,19 @@ class Video207_Homotopy(Scene):
             FadeIn(labels_f), FadeIn(labels_g),
             run_time=NORMAL,
         )
+        self.wait(5.5)  # pacing: extends previous caption slot
 
         # Deformation animation
         self.add_subcaption(
             "Watch as one path smoothly deforms into the other while both endpoints stay fixed.",
-            duration=5,
+            duration=5.8,
         )
         self.play(
             Transform(path_f, path_g),
             run_time=2.0,
         )
         self.play(FadeOut(path_f), FadeOut(labels_f))
+        self.wait(2.8)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -218,7 +223,7 @@ class Video207_Homotopy(Scene):
         self.add_subcaption(
             "A path homotopy H satisfies H of zero, t equals a and H of one, t equals b "
             "for all t in the interval. We write gamma is path homotopic to sigma.",
-            duration=7,
+            duration=13.2,
         )
         title2 = self.ly.title("Path Homotopy Definition")
         self.wait(0.3)
@@ -244,7 +249,7 @@ class Video207_Homotopy(Scene):
         self.ly.safe_place(notation, DOWN, anchor=ph_constraints, buff=0.5)
         self.play(Write(notation), run_time=NORMAL)
 
-        self.wait(0.5)
+        self.wait(8.6)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene5_equivalence(self):
@@ -253,17 +258,18 @@ class Video207_Homotopy(Scene):
             "We can extend this idea to whole spaces. Two spaces X and Y are "
             "homotopy equivalent if there exist maps between them that compose "
             "to something homotopic to the identity.",
-            duration=8,
+            duration=12.2,
         )
         self.ly.section_divider(4, "Homotopy Equivalence")
 
         title = self.ly.title("Homotopy Equivalence")
+        self.wait(9.3)  # pacing: extends previous caption slot
 
         self.add_subcaption(
             "X and Y are homotopy equivalent, written X tilde equals Y, if there exist "
             "continuous maps f from X to Y and g from Y to X, such that g composed with f "
             "is homotopic to the identity on X, and f composed with g is homotopic to the identity on Y.",
-            duration=10,
+            duration=20.3,
         )
         defn = MathTex(
             r"X \simeq Y \iff \exists\, f : X \to Y,\, g : Y \to X",
@@ -271,6 +277,7 @@ class Video207_Homotopy(Scene):
         )
         self.ly.safe_place(defn, DOWN, anchor=title, buff=0.5)
         self.play(Write(defn), run_time=NORMAL)
+        self.wait(8.0)  # pacing: reading time for definition
 
         constraints = VGroup(
             MathTex(r"g \circ f \simeq \text{id}_X", font_size=BODY_SIZE, color=PRIMARY),
@@ -279,7 +286,7 @@ class Video207_Homotopy(Scene):
         self.ly.safe_place(constraints, DOWN, anchor=defn, buff=0.5)
         self.play(FadeIn(constraints, shift=LEFT * 0.15), run_time=NORMAL)
 
-        self.wait(0.3)
+        self.wait(10.1)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Examples
@@ -287,7 +294,7 @@ class Video207_Homotopy(Scene):
             "Classic examples: a circle is homotopy equivalent to a punctured plane. "
             "The open interval from 0 to 1 is homotopy equivalent to the entire real line. "
             "A solid disk is homotopy equivalent to a single point.",
-            duration=8,
+            duration=15.4,
         )
         title2 = self.ly.title("Examples")
         items = [
@@ -298,7 +305,7 @@ class Video207_Homotopy(Scene):
             MathTex(r"D^2 \simeq \{*\}", font_size=BODY_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(0.5)
+        self.wait(8.9)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene6_examples(self):
@@ -306,7 +313,7 @@ class Video207_Homotopy(Scene):
         self.add_subcaption(
             "Here's a visual example. A solid disk can be continuously shrunk to a point, "
             "so the disk is homotopy equivalent to a point. We call such a space contractible.",
-            duration=8,
+            duration=11.4,
         )
         self.ly.section_divider(5, "Examples and Counterexamples")
 
@@ -331,7 +338,7 @@ class Video207_Homotopy(Scene):
         )
         self.ly.safe_place(contractible, DOWN, anchor=title, buff=0.8)
         self.play(FadeIn(contractible, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(3.9)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Counterexample
@@ -339,7 +346,7 @@ class Video207_Homotopy(Scene):
             "But not all spaces are homotopy equivalent! A circle and a sphere "
             "are fundamentally different. You cannot continuously deform one into the other. "
             "The hole in the circle cannot be removed without tearing.",
-            duration=9,
+            duration=13.2,
         )
         title2 = self.ly.title("Not All Spaces Are Equivalent")
 
@@ -376,7 +383,7 @@ class Video207_Homotopy(Scene):
         self.ly.safe_place(reason, DOWN, anchor=boxed_ne, buff=0.5)
         self.play(FadeIn(reason, shift=LEFT * 0.15), run_time=NORMAL)
 
-        self.wait(0.5)
+        self.wait(8.4)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene7_why_matters(self):
@@ -385,7 +392,7 @@ class Video207_Homotopy(Scene):
             "Homotopy is the foundational concept of algebraic topology. "
             "It gives us a precise way to say when two spaces have the same shape, "
             "up to continuous deformation.",
-            duration=7,
+            duration=11.6,
         )
         self.ly.section_divider(6, "Why It Matters")
 
@@ -397,7 +404,7 @@ class Video207_Homotopy(Scene):
             Text("Connects topology to algebra", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(0.5)
+        self.wait(3.1)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Summary formula box
@@ -405,7 +412,7 @@ class Video207_Homotopy(Scene):
             "To summarize: a homotopy is a continuous deformation H from X cross I to Y. "
             "Two spaces are homotopy equivalent if maps between them compose to the identity, "
             "up to homotopy. This is our first algebraic invariant of topological spaces.",
-            duration=9,
+            duration=18.4,
         )
         title2 = self.ly.title("Summary")
         summary = self.ly.formula_box(
@@ -419,7 +426,8 @@ class Video207_Homotopy(Scene):
         self.ly.safe_place(summary, DOWN, anchor=title2, buff=0.6)
         self.play(FadeIn(summary), run_time=NORMAL)
 
-        self.wait(0.5)
+        self.wait(7.5)  # pacing: reading time for summary formula
+        self.wait(9.0)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Outro
@@ -427,6 +435,7 @@ class Video207_Homotopy(Scene):
             "In the next video, we will study the fundamental group, "
             "which captures the loops in a space up to homotopy. "
             "Thank you for watching!",
-            duration=6,
+            duration=8.8,
         )
         play_outro(self, "The Fundamental Group", "Algebraic Topology")
+        self.wait(1.2)  # pacing: outro narration tail

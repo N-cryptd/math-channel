@@ -74,7 +74,7 @@ class Video242_EntropyCompression(Scene):
             Text("Frequent symbols get short codes", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(10)
         self.ly.clear()
 
     def scene3_fixed_vs_variable(self):
@@ -83,7 +83,7 @@ class Video242_EntropyCompression(Scene):
             "one eighth, one eighth. A fixed-length code uses 2 bits per symbol. "
             "But variable-length codes give the likely symbol just 1 bit. "
             "The average drops from 2 to 1.75 bits.",
-            duration=16,
+            duration=20,
         )
         title = self.ly.title("Fixed vs Variable Length")
         items = [
@@ -92,7 +92,7 @@ class Video242_EntropyCompression(Scene):
             Text("Variable: 1, 2, 3, 3 bits (avg = 1.75)", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(13)
         self.ly.clear()
 
     def scene4_huffman(self):
@@ -103,7 +103,7 @@ class Video242_EntropyCompression(Scene):
             "Repeatedly merge the two least probable symbols into a new node. "
             "The resulting tree minimizes expected length. "
             "Huffman is used in JPEG, ZIP, and MP3.",
-            duration=14,
+            duration=17,
         )
         title = self.ly.title("Huffman Coding")
         items = [
@@ -112,7 +112,7 @@ class Video242_EntropyCompression(Scene):
             Text("Used in JPEG, ZIP, MP3", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(10)
         self.ly.clear()
 
     def scene5_source_coding_theorem(self):
@@ -123,7 +123,7 @@ class Video242_EntropyCompression(Scene):
             "L can never be less than the entropy H. "
             "But we can get arbitrarily close to H from above. "
             "This is why entropy is the limit of compression.",
-            duration=14,
+            duration=16,
         )
         title = self.ly.title("Source Coding Theorem")
         sc_formula = MathTex(r"H(X) \leq L < H(X) + 1", font_size=HEADING_SIZE, color=PRIMARY)
@@ -135,7 +135,7 @@ class Video242_EntropyCompression(Scene):
             Text("Can approach H arbitrarily closely", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
-        self.wait(2)
+        self.wait(12)
         self.ly.clear()
 
     def scene6_english(self):
@@ -144,7 +144,7 @@ class Video242_EntropyCompression(Scene):
             "far less than the 5 bits for fixed-length encoding. "
             "This shows English has massive redundancy. "
             "Shannon estimated this through guessing experiments.",
-            duration=14,
+            duration=17,
         )
         title = self.ly.title("Entropy of English")
         items = [
@@ -153,7 +153,7 @@ class Video242_EntropyCompression(Scene):
             Text("Shannon's guessing experiments", font_size=BODY_SIZE, color=DIM, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(13)
         self.ly.clear()
 
     def scene7_summary(self):
@@ -162,7 +162,7 @@ class Video242_EntropyCompression(Scene):
             "Huffman coding achieves near-optimal performance. "
             "English text has far less entropy than its alphabet suggests. "
             "Next, we look at two random variables at once.",
-            duration=14,
+            duration=17,
         )
         title = self.ly.title("Key Takeaways")
         items = [
@@ -171,6 +171,6 @@ class Video242_EntropyCompression(Scene):
             Text("Redundancy = room for compression", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(6)
 
         play_outro(self, next_video="Joint Entropy and Mutual Information", next_playlist="Information Theory")

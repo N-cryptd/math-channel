@@ -77,7 +77,7 @@ class Video241_WhatIsInformation(Scene):
             Text("Lottery win: low probability, high information", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
-        self.wait(3)
+        self.wait(9.3)
         self.ly.clear()
 
     def scene3_properties(self):
@@ -86,7 +86,7 @@ class Video241_WhatIsInformation(Scene):
             "First, it is always non-negative. Second, rarer events carry more information. "
             "Third, information from independent events adds up. "
             "These three properties force the logarithm.",
-            duration=16,
+            duration=19,
         )
         title = self.ly.title("Three Key Properties")
         items = [
@@ -95,7 +95,7 @@ class Video241_WhatIsInformation(Scene):
             Text("3. Additive for independent events", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(3)
+        self.wait(14.2)
         self.ly.clear()
 
     def scene4_example(self):
@@ -104,7 +104,7 @@ class Video241_WhatIsInformation(Scene):
             "A fair die gives about 2.58 bits. "
             "A biased coin with probability 0.9 for heads "
             "gives only 0.15 bits for heads but 3.32 bits for tails.",
-            duration=14,
+            duration=21,
         )
         title = self.ly.title("Computing Information")
         items = [
@@ -113,7 +113,7 @@ class Video241_WhatIsInformation(Scene):
             Text("Biased coin (p=0.9): I(H)=0.15, I(T)=3.32", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(3)
+        self.wait(13.2)
         self.ly.clear()
 
     def scene5_entropy(self):
@@ -124,7 +124,7 @@ class Video241_WhatIsInformation(Scene):
             "We take the expected value of the information function. "
             "This is called Shannon entropy, H of X. "
             "It measures the average uncertainty per observation.",
-            duration=14,
+            duration=17,
         )
         title = self.ly.title("Shannon Entropy")
         entropy_formula = MathTex(
@@ -138,7 +138,7 @@ class Video241_WhatIsInformation(Scene):
             Text("Average uncertainty per observation", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
-        self.wait(3)
+        self.wait(10.5)
         self.ly.clear()
 
     def scene6_entropy_intuition(self):
@@ -149,7 +149,7 @@ class Video241_WhatIsInformation(Scene):
             "and zero when one outcome is certain. "
             "A fair coin has entropy 1 bit. A fair die has 2.58 bits. "
             "A coin that always lands heads has entropy 0.",
-            duration=14,
+            duration=18,
         )
         title = self.ly.title("What Does Entropy Measure?")
         items = [
@@ -158,7 +158,7 @@ class Video241_WhatIsInformation(Scene):
             Text("Certain event (p=1): H = 0 bits", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(3)
+        self.wait(13.2)
         self.ly.clear()
 
     def scene7_summary(self):
@@ -167,7 +167,7 @@ class Video241_WhatIsInformation(Scene):
             "the negative log, and averaged it to get Shannon entropy. "
             "In the next video, we will see how entropy leads to "
             "data compression, and why it sets a fundamental limit.",
-            duration=14,
+            duration=17,
         )
         title = self.ly.title("Key Takeaways")
         items = [
@@ -176,6 +176,6 @@ class Video241_WhatIsInformation(Scene):
             Text("Entropy bounds compression", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(2)
+        self.wait(4.9)
 
         play_outro(self, next_video="Entropy and Data Compression", next_playlist="Information Theory")

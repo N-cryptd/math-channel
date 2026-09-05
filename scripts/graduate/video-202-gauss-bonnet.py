@@ -62,7 +62,7 @@ class Video202_GaussBonnet(Scene):
             "you bend the surface. Why? Because it's "
             "a topological invariant, fixed by the "
             "Gauss-Bonnet theorem.",
-            duration=10,
+            duration=15,
         )
         play_intro(self, "Gauss-Bonnet Theorem", "Differential Geometry")
 
@@ -84,7 +84,7 @@ class Video202_GaussBonnet(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(1.0)
+        self.wait(3.8)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -98,7 +98,7 @@ class Video202_GaussBonnet(Scene):
             "curvature measures how much a curve "
             "deviates from a geodesic. And the Euler "
             "characteristic counts the topology.",
-            duration=10,
+            duration=17,
         )
         title = self.ly.title("Key Ingredients")
 
@@ -122,7 +122,7 @@ class Video202_GaussBonnet(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(0.5)
+        self.wait(7.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -137,7 +137,7 @@ class Video202_GaussBonnet(Scene):
             "times the Euler characteristic. This "
             "means the total curvature is entirely "
             "determined by the surface's topology.",
-            duration=8,
+            duration=16,
         )
 
         title = self.ly.title("Global Gauss-Bonnet Theorem")
@@ -168,7 +168,7 @@ class Video202_GaussBonnet(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=formula_box)
 
-        self.wait(0.5)
+        self.wait(8.1)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -182,7 +182,7 @@ class Video202_GaussBonnet(Scene):
             "gives four pi. The Euler characteristic "
             "of a sphere is two, so two pi times two "
             "equals four pi. The theorem holds.",
-            duration=10,
+            duration=17,
         )
         title = self.ly.title("Verification: Sphere")
 
@@ -201,7 +201,7 @@ class Video202_GaussBonnet(Scene):
         self.wait(0.5)
         self.ly.safe_place(sphere_chi, DOWN, sphere_formula)
         self.play(FadeIn(sphere_chi, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(13.1)
 
         self.ly.clear()
 
@@ -212,7 +212,7 @@ class Video202_GaussBonnet(Scene):
             "cancels to zero. The Euler characteristic "
             "of a torus is also zero. So zero "
             "equals two pi times zero. It holds.",
-            duration=10,
+            duration=18,
         )
         title2 = self.ly.title("Verification: Torus")
 
@@ -230,7 +230,7 @@ class Video202_GaussBonnet(Scene):
         self.wait(0.5)
         self.ly.safe_place(torus_chi, DOWN, torus_formula)
         self.play(FadeIn(torus_chi, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(10.2)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -246,7 +246,7 @@ class Video202_GaussBonnet(Scene):
             "possible. When it returns, it's "
             "rotated. This rotation angle is "
             "called holonomy.",
-            duration=9,
+            duration=16,
         )
 
         title = self.ly.title("Parallel Transport on a Sphere")
@@ -271,6 +271,7 @@ class Video202_GaussBonnet(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
+        self.wait(9.4)
         self.ly.clear()
 
         self.add_subcaption(
@@ -280,7 +281,7 @@ class Video202_GaussBonnet(Scene):
             "geometric heart of Gauss-Bonnet. "
             "Curvature causes parallel transport "
             "to rotate vectors.",
-            duration=8,
+            duration=15,
         )
         title2 = self.ly.title("The Holonomy Formula")
 
@@ -301,7 +302,7 @@ class Video202_GaussBonnet(Scene):
         self.ly.safe_place(insight, DOWN, formula_box)
         self.play(FadeIn(insight, shift=LEFT * 0.15), run_time=NORMAL)
 
-        self.wait(1.0)
+        self.wait(6.9)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -317,7 +318,7 @@ class Video202_GaussBonnet(Scene):
             "curvature over the interior equals "
             "two pi minus the sum of exterior "
             "angles.",
-            duration=9,
+            duration=16,
         )
 
         title = self.ly.title("Local Gauss-Bonnet Theorem")
@@ -332,7 +333,7 @@ class Video202_GaussBonnet(Scene):
         self.play(Write(formula_box[0]), run_time=NORMAL)
         self.play(Create(formula_box[1]), run_time=FAST)
 
-        self.wait(0.5)
+        self.wait(13.0)
         self.ly.clear()
 
         self.add_subcaption(
@@ -343,7 +344,7 @@ class Video202_GaussBonnet(Scene):
             "integral of curvature. On a sphere, "
             "angles always exceed pi, and the "
             "excess equals the area times K.",
-            duration=10,
+            duration=20,
         )
         title2 = self.ly.title("Geodesic Triangles")
 
@@ -371,7 +372,7 @@ class Video202_GaussBonnet(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=triangle_formula)
 
-        self.wait(0.5)
+        self.wait(10.4)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -387,7 +388,7 @@ class Video202_GaussBonnet(Scene):
             "over all triangles. The boundary "
             "terms cancel because interior edges "
             "are shared by adjacent triangles.",
-            duration=10,
+            duration=18,
         )
 
         title = self.ly.title("Triangulation Argument")
@@ -412,6 +413,7 @@ class Video202_GaussBonnet(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
+        self.wait(11.8)
         self.ly.clear()
 
         self.add_subcaption(
@@ -422,7 +424,7 @@ class Video202_GaussBonnet(Scene):
             "the global Gauss-Bonnet theorem. "
             "Geometry on the left, topology on the "
             "right.",
-            duration=10,
+            duration=17,
         )
         title2 = self.ly.title("The Result")
 
@@ -444,7 +446,7 @@ class Video202_GaussBonnet(Scene):
         self.ly.safe_place(bridge, DOWN, formula_box)
         self.play(FadeIn(bridge, shift=LEFT * 0.15), run_time=NORMAL)
 
-        self.wait(1.0)
+        self.wait(11.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -460,7 +462,7 @@ class Video202_GaussBonnet(Scene):
             "geometric version says holonomy "
             "equals the curvature integral. "
             "Three faces of the same truth.",
-            duration=11,
+            duration=20,
         )
         title = self.ly.title("Three Forms of Gauss-Bonnet")
 
@@ -480,7 +482,7 @@ class Video202_GaussBonnet(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(0.5)
+        self.wait(14.4)
         self.ly.clear()
 
         self.add_subcaption(
@@ -491,6 +493,7 @@ class Video202_GaussBonnet(Scene):
             "manifolds, generalizing surfaces to "
             "arbitrary dimensions. Thanks for "
             "watching!",
-            duration=9,
+            duration=16,
         )
+        self.wait(8.3)
         play_outro(self, "Manifolds Intro", "Differential Geometry")

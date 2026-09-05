@@ -70,7 +70,7 @@ class Video184_WhatIsAPDE(Scene):
             "pond, from the shape of a soap bubble to the behavior of "
             "quantum particles. Partial differential equations are the "
             "language that describes all of these phenomena.",
-            duration=10,
+            duration=14.2,
         )
         play_intro(self, "What is a PDE?", "Partial Differential Equations")
 
@@ -97,7 +97,7 @@ class Video184_WhatIsAPDE(Scene):
             "on a single variable. In a partial differential equation, "
             "the unknown depends on multiple variables, and we take "
             "partial derivatives with respect to each one.",
-            duration=8,
+            duration=15.1,
         )
         title = self.ly.title("Ordinary vs Partial")
 
@@ -135,7 +135,7 @@ class Video184_WhatIsAPDE(Scene):
         self.ly.safe_place(pde_note, direction=DOWN, anchor=pde_eq, buff=0.3)
         self.play(FadeIn(pde_note, shift=LEFT * 0.15), run_time=FAST)
 
-        self.wait(1.0)
+        self.wait(4.1)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -150,7 +150,7 @@ class Video184_WhatIsAPDE(Scene):
             "is the highest derivative that appears. Whether the unknown "
             "appears linearly or not determines if the equation is "
             "linear or nonlinear.",
-            duration=10,
+            duration=16.8,
         )
         title = self.ly.title("General Form of a PDE")
 
@@ -197,7 +197,7 @@ class Video184_WhatIsAPDE(Scene):
         self.ly.safe_place(lin_def, direction=DOWN, anchor=lin_title, buff=0.3)
         self.play(FadeIn(lin_def, shift=LEFT * 0.15), run_time=NORMAL)
 
-        self.wait(0.8)
+        self.wait(5.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -212,7 +212,7 @@ class Video184_WhatIsAPDE(Scene):
             "time. The rate of change at any point is proportional to "
             "the curvature at that point. Heat flows from hot regions "
             "to cold regions.",
-            duration=8,
+            duration=12.7,
         )
         heat_title = self.ly.title("The Heat Equation")
 
@@ -240,7 +240,7 @@ class Video184_WhatIsAPDE(Scene):
         self.ly.safe_place(heat_order, direction=DOWN, anchor=heat_meaning, buff=0.3)
         self.play(FadeIn(heat_order, shift=LEFT * 0.15), run_time=FAST)
 
-        self.wait(0.8)
+        self.wait(8.3)
         self.ly.clear()
 
         # --- Wave Equation ---
@@ -249,7 +249,7 @@ class Video184_WhatIsAPDE(Scene):
             "The acceleration of any point is proportional to its "
             "curvature. This describes everything from guitar strings "
             "to electromagnetic radiation.",
-            duration=8,
+            duration=14.4,
         )
         wave_title = self.ly.title("The Wave Equation")
 
@@ -277,7 +277,7 @@ class Video184_WhatIsAPDE(Scene):
         self.ly.safe_place(wave_order, direction=DOWN, anchor=wave_meaning, buff=0.3)
         self.play(FadeIn(wave_order, shift=LEFT * 0.15), run_time=FAST)
 
-        self.wait(0.8)
+        self.wait(10.0)
         self.ly.clear()
 
         # --- Laplace's Equation ---
@@ -286,7 +286,7 @@ class Video184_WhatIsAPDE(Scene):
             "no time evolution. The sum of second derivatives in all "
             "directions equals zero. Solutions are called harmonic "
             "functions and appear in electrostatics and fluid mechanics.",
-            duration=9,
+            duration=17.1,
         )
         lap_title = self.ly.title("Laplace's Equation")
 
@@ -312,7 +312,7 @@ class Video184_WhatIsAPDE(Scene):
         self.ly.safe_place(lap_order, direction=DOWN, anchor=lap_meaning, buff=0.3)
         self.play(FadeIn(lap_order, shift=LEFT * 0.15), run_time=FAST)
 
-        self.wait(0.8)
+        self.wait(9.7)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -325,7 +325,7 @@ class Video184_WhatIsAPDE(Scene):
             "based on their discriminant, similar to classifying conic "
             "sections. Each type has fundamentally different behavior "
             "and requires different solution techniques.",
-            duration=9,
+            duration=14.8,
         )
         title = self.ly.title("Classifying Second-Order PDEs")
 
@@ -349,7 +349,7 @@ class Video184_WhatIsAPDE(Scene):
             run_time=NORMAL,
         )
 
-        self.wait(1.0)
+        self.wait(12.5)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -362,7 +362,7 @@ class Video184_WhatIsAPDE(Scene):
             "equations exist in infinite dimensions, making them "
             "fundamentally more difficult. There is no single general "
             "solution method.",
-            duration=9,
+            duration=16.9,
         )
         title = self.ly.title("The Challenge of PDEs")
 
@@ -374,7 +374,7 @@ class Video184_WhatIsAPDE(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(1.0)
+        self.wait(7.7)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -388,7 +388,7 @@ class Video184_WhatIsAPDE(Scene):
             "the heat equation, the wave equation, Laplace's equation, "
             "and advanced methods including Green's functions and "
             "numerical techniques.",
-            duration=9,
+            duration=16.9,
         )
         title = self.ly.title("What's Coming Up")
 
@@ -401,7 +401,7 @@ class Video184_WhatIsAPDE(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(1.0)
+        self.wait(9.4)
         self.ly.clear()
 
     # ------------------------------------------------------------------ #
@@ -414,7 +414,7 @@ class Video184_WhatIsAPDE(Scene):
             "elliptic, parabolic, and hyperbolic. Each requires "
             "specialized techniques. In the next video, we dive deep "
             "into the heat equation.",
-            duration=9,
+            duration=17.2,
         )
         title = self.ly.title("Key Takeaways")
 
@@ -425,7 +425,7 @@ class Video184_WhatIsAPDE(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(1.0)
+        self.wait(9.2)
         self.ly.clear()
 
         play_outro(self, "The Heat Equation", "Partial Differential Equations")
