@@ -99,7 +99,7 @@ class Video75_CentralLimitTheorem(Scene):
             font_size=BODY_SIZE, color=WHITE, font=SANS,
         )
         self.ly.safe_place(desc, DOWN, title)
-        self.wait(4)
+        self.wait(6.0)  # pacing: extends previous caption slot
 
         # Show that the final position = sum of many small binary choices
         insight = MathTex(
@@ -122,7 +122,7 @@ class Video75_CentralLimitTheorem(Scene):
             "The binomial distribution from thousands of small random "
             "choices forms a smooth bell curve. This is the Central Limit "
             "Theorem in action, before we even state it.",
-            duration=10,
+            duration=10.5,
         )
 
         self.ly.clear()
@@ -195,7 +195,7 @@ class Video75_CentralLimitTheorem(Scene):
             "independent, identically distributed random variables, with "
             "expected value mu and finite variance sigma squared. Then the "
             "sample mean is approximately normal for large n.",
-            duration=14,
+            duration=15.5,
         )
 
         self.ly.section_divider(3, "CLT Statement")
@@ -207,6 +207,7 @@ class Video75_CentralLimitTheorem(Scene):
             font_size=BODY_SIZE, color=WHITE, font=SANS,
         )
         self.play(FadeIn(setup, shift=LEFT * 0.15), run_time=NORMAL)
+        self.wait(3.1)  # pacing: extends previous caption slot
         self.wait(10)
 
         # Sum formulation
@@ -277,7 +278,7 @@ class Video75_CentralLimitTheorem(Scene):
         mean_box.move_to(ORIGIN)
 
         self.play(Write(mean_formula), run_time=SLOW)
-        self.wait(10)
+        self.wait(10.5)  # pacing: extends previous caption slot
 
         # Standardized form
         self.add_subcaption(
@@ -301,7 +302,7 @@ class Video75_CentralLimitTheorem(Scene):
             run_time=NORMAL,
         )
         self.play(Write(std_formula), run_time=SLOW)
-        self.wait(4)
+        self.wait(4.8)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -319,12 +320,12 @@ class Video75_CentralLimitTheorem(Scene):
         title = self.ly.title("Dice: From Uniform to Bell Curve")
 
         # Show uniform population
-        self.wait(9)
+        self.wait(10.5)  # pacing: extends previous caption slot
         self.add_subcaption(
             "A single die roll is uniform. But watch what happens to the "
             "sampling distribution as we increase the sample size from two "
             "to one hundred rolls.",
-            duration=9,
+            duration=9.2,
         )
 
         # Simulate sampling distribution of the mean
@@ -413,7 +414,7 @@ class Video75_CentralLimitTheorem(Scene):
             "Even though the population is perfectly flat, the sampling "
             "distribution of the mean converges to a bell curve as the "
             "sample size increases. This is not a coincidence.",
-            duration=10,
+            duration=10.7,
         )
 
         result = Text(
@@ -422,7 +423,7 @@ class Video75_CentralLimitTheorem(Scene):
         )
         self.ly.center_in_content(result)
         self.play(FadeIn(result, shift=UP * 0.15), run_time=NORMAL)
-        self.wait(4)
+        self.wait(10.2)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -435,7 +436,7 @@ class Video75_CentralLimitTheorem(Scene):
             "as long as the variance is finite. Uniform, exponential, bimodal, "
             "it does not matter. They all produce bell-shaped sampling "
             "distributions for large enough samples.",
-            duration=14,
+            duration=15.4,
         )
 
         title = self.ly.title("Universality of the CLT")
@@ -484,7 +485,7 @@ class Video75_CentralLimitTheorem(Scene):
             "This is why the normal distribution appears everywhere in nature "
             "and science. Any quantity that is the sum or average of many "
             "small independent effects will be approximately normal.",
-            duration=11,
+            duration=11.1,
         )
 
         key_msg = Text(
@@ -493,6 +494,7 @@ class Video75_CentralLimitTheorem(Scene):
         )
         self.ly.center_in_content(key_msg)
         self.play(Write(key_msg), run_time=SLOW)
+        self.wait(5.8)  # pacing: extends previous caption slot
         self.wait(4)
 
         self.ly.clear()
@@ -506,7 +508,7 @@ class Video75_CentralLimitTheorem(Scene):
             "contributes a small random amount to the sum. Positive and "
             "negative deviations tend to cancel out. The most likely "
             "configuration is centered on the expected value.",
-            duration=12,
+            duration=14.1,
         )
 
         title = self.ly.title("Intuition: Why the Bell Curve?")
@@ -531,7 +533,7 @@ class Video75_CentralLimitTheorem(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(8)
+        self.wait(9.2)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Connection to characteristic functions
@@ -541,7 +543,7 @@ class Video75_CentralLimitTheorem(Scene):
             "characteristic function of a sum is the sum of the logarithms, "
             "and its Taylor expansion is a quadratic, which corresponds "
             "to a Gaussian.",
-            duration=16,
+            duration=16.1,
         )
 
         proof_title = self.ly.title("Proof Sketch (Characteristic Functions)")
@@ -566,7 +568,7 @@ class Video75_CentralLimitTheorem(Scene):
         ]
         self.ly.progressive_reveal(proof_items, start_from=proof_title)
 
-        self.wait(5)
+        self.wait(11.4)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -577,7 +579,7 @@ class Video75_CentralLimitTheorem(Scene):
             "The Central Limit Theorem is the workhorse of statistics. "
             "It explains why polling works, how quality control operates, "
             "and why medical trials can draw conclusions from small samples.",
-            duration=10,
+            duration=11.5,
         )
 
         title = self.ly.title("Applications")
@@ -606,7 +608,7 @@ class Video75_CentralLimitTheorem(Scene):
         ]
         self.ly.progressive_reveal(apps, start_from=title)
 
-        self.wait(4)
+        self.wait(6.5)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # ------------------------------------------------------------------
@@ -618,7 +620,7 @@ class Video75_CentralLimitTheorem(Scene):
             "us where the sample mean converges. The Central Limit Theorem "
             "describes the shape of that convergence. Together, they are "
             "the foundation of all statistical inference.",
-            duration=13,
+            duration=13.9,
         )
 
         title = self.ly.title("LLN and CLT: Two Pillars")
@@ -671,7 +673,7 @@ class Video75_CentralLimitTheorem(Scene):
             *[FadeIn(m, shift=LEFT * 0.15) for m in [lln_col, clt_col]],
             run_time=NORMAL,
         )
-        self.wait(4)
+        self.wait(12.9)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Assumptions
@@ -681,7 +683,7 @@ class Video75_CentralLimitTheorem(Scene):
             "has finite variance, and the sample size is large enough. "
             "A common rule of thumb is n at least thirty for non-normal "
             "populations.",
-            duration=14,
+            duration=16.2,
         )
 
         assume_title = self.ly.title("Assumptions")
@@ -706,7 +708,7 @@ class Video75_CentralLimitTheorem(Scene):
         ]
         self.ly.progressive_reveal(assumptions, start_from=assume_title)
 
-        self.wait(4)
+        self.wait(11.5)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Preview of Video 76
