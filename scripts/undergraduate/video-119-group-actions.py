@@ -61,7 +61,7 @@ class Video119_GroupActions(Scene):
             "and prove one of the most useful counting tools in group theory: "
             "the orbit-stabilizer theorem. "
             "This is Abstract Algebra, Video 9.",
-            duration=33,
+            duration=35,
         )
         play_intro(self, "Group Actions", "Abstract Algebra I")
 
@@ -85,7 +85,7 @@ class Video119_GroupActions(Scene):
         self.play(FadeOut(items[0]), run_time=FAST)
         self.ly.safe_place(boxed, anchor=items[-1], direction=DOWN, buff=0.5)
         self.play(Write(teaser), Create(boxed[1]), run_time=NORMAL)
-        self.wait(6)
+        self.wait(17.8)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -110,7 +110,7 @@ class Video119_GroupActions(Scene):
             "phi from G to Sym of X, the group of permutations of X. "
             "This connects group actions to what we learned about homomorphisms in Video 6. "
             "Notation: we write g dot x for the element that g sends x to.",
-            duration=55,
+            duration=57.5,
         )
 
         title = self.ly.title("Definition of a Group Action")
@@ -183,7 +183,7 @@ class Video119_GroupActions(Scene):
         self.play(FadeOut(hg), run_time=FAST)
         self.ly.safe_place(notn, anchor=title, direction=DOWN, buff=0.6)
         self.play(Write(notn), run_time=NORMAL)
-        self.wait(6)
+        self.wait(19.3)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -203,7 +203,7 @@ class Video119_GroupActions(Scene):
             "The key insight is that a single group can act on many different sets. "
             "D_5 acts on vertices, on edges, on diagonals, on the whole pentagon itself. "
             "Each action reveals different structure about the group.",
-            duration=55,
+            duration=56.8,
         )
 
         self.ly.section_divider(1, "Example: D_5 on a Pentagon")
@@ -267,7 +267,7 @@ class Video119_GroupActions(Scene):
         )
         self.ly.safe_place(key, anchor=refl_label, direction=DOWN, buff=0.3)
         self.play(FadeIn(key, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(26.6)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -288,7 +288,7 @@ class Video119_GroupActions(Scene):
             "As an example, consider S_3 acting on the set 1 through 6, "
             "where S_3 only permutes 1, 2, 3 and leaves 4, 5, 6 fixed. "
             "Then 1, 2, 3 form one orbit, and 4, 5, 6 form another.",
-            duration=50,
+            duration=54.7,
         )
 
         title = self.ly.title("Orbits")
@@ -346,7 +346,7 @@ class Video119_GroupActions(Scene):
         )
         self.ly.safe_place(equiv, anchor=s3ex, direction=DOWN, buff=0.3)
         self.play(FadeIn(equiv, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(5)
+        self.wait(24.1)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -367,7 +367,7 @@ class Video119_GroupActions(Scene):
             "For D_5 acting on the whole pentagon, "
             "the stabilizer is trivial, just the identity, "
             "because no non-trivial symmetry leaves the pentagon exactly where it is.",
-            duration=45,
+            duration=51.8,
         )
 
         title = self.ly.title("Stabilizers")
@@ -431,7 +431,7 @@ class Video119_GroupActions(Scene):
         )
         self.ly.safe_place(interp, anchor=ex2, direction=DOWN, buff=0.3)
         self.play(FadeIn(interp, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(24.8)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -457,7 +457,7 @@ class Video119_GroupActions(Scene):
             "The orbit of vertex 1 has size 5, "
             "the stabilizer has order 2, "
             "and 5 times 2 equals 10, which is |D_5|. It checks out.",
-            duration=60,
+            duration=63.7,
         )
 
         self.ly.section_divider(2, "The Orbit-Stabilizer Theorem")
@@ -524,7 +524,7 @@ class Video119_GroupActions(Scene):
         )
         self.ly.safe_place(checkmark, anchor=check, direction=DOWN, buff=0.3)
         self.play(FadeIn(checkmark, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(26.0)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -548,7 +548,7 @@ class Video119_GroupActions(Scene):
             "Therefore every group G is isomorphic to a subgroup of a symmetric group. "
             "Cayley's theorem answers a fundamental question: "
             "all groups are symmetry groups of some set.",
-            duration=55,
+            duration=65.6,
         )
 
         title = self.ly.title("Permutation Action and Cayley's Theorem")
@@ -617,7 +617,7 @@ class Video119_GroupActions(Scene):
         )
         self.ly.safe_place(connect, anchor=payoff, direction=DOWN, buff=0.3)
         self.play(FadeIn(connect, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(5)
+        self.wait(36.2)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -638,7 +638,7 @@ class Video119_GroupActions(Scene):
             "Next time, we will use group actions to prove the Sylow theorems, "
             "which count subgroups of prime power order. "
             "This is Abstract Algebra, Video 9.",
-            duration=30,
+            duration=41.1,
         )
 
         title = self.ly.title("Summary")
@@ -669,14 +669,14 @@ class Video119_GroupActions(Scene):
         )
         self.ly.safe_place(cayley_recap, anchor=boxed, direction=DOWN, buff=0.4)
         self.play(FadeIn(cayley_recap, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(26.8)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
         # Tease next
         self.add_subcaption(
             "Next time: the Sylow theorems.",
-            duration=3,
+            duration=2.6,
         )
         tease = self.ly.title("Next: Sylow Theorems")
         self.wait(3)
