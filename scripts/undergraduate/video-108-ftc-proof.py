@@ -59,7 +59,7 @@ class Video108_FTCProof(Scene):
             "proves it. Today we prove both parts of the "
             "FTC rigorously, using the Riemann integral "
             "and the Mean Value Theorem.",
-            duration=24,
+            duration=22.1,
         )
         play_intro(self, "Fundamental Theorem of Calculus", "Real Analysis I")
 
@@ -100,7 +100,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=bridge_label, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#0 natural 22.1s, slot 19.1s -> 27.7s, Δ=8.6)
+        self.wait(10.1)
         self.ly.clear()
 
     # --- Scene 2: Section Divider ---
@@ -120,7 +121,7 @@ class Video108_FTCProof(Scene):
             "this accumulation? In other words, what is "
             "F prime of x? This question leads to FTC "
             "Part 1.",
-            duration=30,
+            duration=26.9,
         )
 
         title = self.ly.title("The Accumulation Function")
@@ -193,7 +194,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(question, direction=RIGHT, anchor=area_label, buff=0.5)
         self.play(Write(question), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#1 natural 26.9s, slot 12.7s -> 33.7s, Δ=21.0)
+        self.wait(22.5)
         self.ly.clear()
 
     # --- Scene 4: MVT for Integrals ---
@@ -211,7 +213,7 @@ class Video108_FTCProof(Scene):
             "the integral, which is at most M times b minus a. "
             "Dividing by b minus a and applying the "
             "Intermediate Value Theorem gives the result.",
-            duration=44,
+            duration=40.6,
         )
         self.ly.section_divider("2", "MVT for Integrals")
         self.ly.clear()
@@ -300,7 +302,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(s3, direction=DOWN, anchor=s2, buff=0.25)
         self.play(Write(s3), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#2 natural 40.6s, slot 22.1s -> 50.9s, Δ=28.8)
+        self.wait(30.3)
         self.ly.clear()
 
     # --- Scene 5: FTC Part 1 — Statement ---
@@ -314,7 +317,7 @@ class Video108_FTCProof(Scene):
             "of the integrand. Differentiating the "
             "accumulation function gives back the original "
             "function.",
-            duration=24,
+            duration=23.9,
         )
         self.ly.section_divider("3", "FTC Part 1")
         self.ly.clear()
@@ -335,7 +338,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=theorem, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#3 natural 24.0s, slot 10.5s -> 30.0s, Δ=19.5)
+        self.wait(21.0)
         self.ly.clear()
 
     # --- Scene 6: FTC Part 1 — Proof ---
@@ -355,7 +359,7 @@ class Video108_FTCProof(Scene):
             "h approaches zero, c sub h is squeezed toward x. "
             "Since f is continuous, f of c sub h approaches "
             "f of x. Therefore F prime of x equals f of x.",
-            duration=52,
+            duration=52.9,
         )
 
         title = self.ly.title("Proof of FTC Part 1")
@@ -435,7 +439,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(step4, direction=DOWN, anchor=step3, buff=0.3)
         self.play(Write(step4), run_time=SLOW)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#4 natural 52.9s, slot 16.2s -> 66.2s, Δ=50.0)
+        self.wait(51.5)
         self.ly.clear()
 
     # --- Scene 7: FTC Part 2 — Statement ---
@@ -450,7 +455,7 @@ class Video108_FTCProof(Scene):
             "and evaluate it at the endpoints. The proof "
             "connects Riemann sums to antiderivatives via "
             "the Mean Value Theorem.",
-            duration=26,
+            duration=29.0,
         )
         self.ly.section_divider("4", "FTC Part 2")
         self.ly.clear()
@@ -479,7 +484,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=condition, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#5 natural 29.0s, slot 12.0s -> 36.4s, Δ=24.4)
+        self.wait(25.9)
         self.ly.clear()
 
     # --- Scene 8: FTC Part 2 — Proof ---
@@ -497,7 +503,7 @@ class Video108_FTCProof(Scene):
             "As the mesh goes to zero, the Riemann sum "
             "approaches the integral. Therefore the integral "
             "equals F of b minus F of a.",
-            duration=42,
+            duration=39.5,
         )
 
         title = self.ly.title("Proof of FTC Part 2")
@@ -586,7 +592,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=step4, buff=0.3)
         self.play(Write(result), run_time=SLOW)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#6 natural 39.5s, slot 22.3s -> 49.5s, Δ=27.2)
+        self.wait(28.7)
         self.ly.clear()
 
     # --- Scene 9: Example ---
@@ -602,7 +609,7 @@ class Video108_FTCProof(Scene):
             "thirds. What took pages of Riemann sum "
             "computation, FTC solves in two lines. This is "
             "why the Fundamental Theorem is fundamental.",
-            duration=34,
+            duration=33.5,
         )
         self.ly.section_divider("5", "Example")
         self.ly.clear()
@@ -676,7 +683,8 @@ class Video108_FTCProof(Scene):
         )
         self.ly.safe_place(punchline, direction=DOWN, anchor=s3, buff=0.3)
         self.play(Write(punchline), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#7 natural 33.5s, slot 19.5s -> 42.0s, Δ=22.5)
+        self.wait(24.0)
         self.ly.clear()
 
     # --- Scene 10: Summary + Outro ---
@@ -695,7 +703,7 @@ class Video108_FTCProof(Scene):
             "genuinely inverse operations. "
             "FTC closes the loop of calculus. "
             "Next time: pointwise and uniform convergence.",
-            duration=36,
+            duration=35.5,
         )
         title = self.ly.title("Key Takeaways")
 
@@ -722,6 +730,7 @@ class Video108_FTCProof(Scene):
             ),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(1)
+        # pacing: extends final caption slot (seg#8 natural 35.5s, slot 15.7s -> 44.4s, Δ=28.7)
+        self.wait(29.7)
 
         play_outro(self, "Pointwise vs Uniform Convergence", "Real Analysis I")
