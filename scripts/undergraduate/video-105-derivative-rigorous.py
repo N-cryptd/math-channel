@@ -59,7 +59,7 @@ class Video105_DerivativeRigorous(Scene):
             "implies continuity, derive the basic rules from "
             "the limit definition, and connect derivatives to "
             "Lipschitz continuity and uniform continuity.",
-            duration=25,
+            duration=20.7,
         )
         play_intro(self, "The Derivative (Rigorous)", "Real Analysis I")
 
@@ -161,7 +161,7 @@ class Video105_DerivativeRigorous(Scene):
     def scene2_intro(self):
         self.add_subcaption(
             "Let's start with the formal definition.",
-            duration=3,
+            duration=2.3,
         )
         self.ly.section_divider("1", "The Formal Definition")
         self.ly.clear()
@@ -182,7 +182,7 @@ class Video105_DerivativeRigorous(Scene):
             "The key requirement is that the limit must exist "
             "and be finite, meaning both the left-hand and "
             "right-hand limits must agree.",
-            duration=55,
+            duration=41.2,
         )
         title = self.ly.title("Definition: The Derivative")
 
@@ -229,7 +229,7 @@ class Video105_DerivativeRigorous(Scene):
         )
         self.ly.safe_place(key, direction=DOWN, anchor=equiv, buff=0.4)
         self.play(Write(key), run_time=NORMAL)
-        self.wait(1)
+        self.wait(41.6)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # --- Scene 4: Section Divider ---
@@ -237,9 +237,9 @@ class Video105_DerivativeRigorous(Scene):
         self.add_subcaption(
             "An important theorem: if a function is differentiable "
             "at a point, then it is continuous at that point.",
-            duration=5,
+            duration=6.5,
         )
-        self.ly.section_divider("2", "Differentiable Implies Continuous")
+        self.ly.section_divider("2", "Differentiable Implies Continuous", hold=5.5)  # pacing: extends caption slot
         self.ly.clear()
 
     # --- Scene 5: Theorem + Proof ---
@@ -262,7 +262,7 @@ class Video105_DerivativeRigorous(Scene):
             "times zero, which is zero. "
             "Therefore f of x approaches f of a, and f is "
             "continuous at a.",
-            duration=65,
+            duration=46.1,
         )
 
         # Part 1: Geometric motivation
@@ -332,7 +332,7 @@ class Video105_DerivativeRigorous(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=step4, buff=0.4)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1)
+        self.wait(43.2)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # --- Scene 6: Section Divider ---
@@ -340,9 +340,9 @@ class Video105_DerivativeRigorous(Scene):
         self.add_subcaption(
             "But the converse is false. Being continuous does "
             "not guarantee being differentiable.",
-            duration=4,
+            duration=5.5,
         )
-        self.ly.section_divider("3", "The Converse Fails")
+        self.ly.section_divider("3", "The Converse Fails", hold=4.2)  # pacing: extends caption slot
         self.ly.clear()
 
     # --- Scene 7: Counterexample |x| at 0 ---
@@ -358,7 +358,7 @@ class Video105_DerivativeRigorous(Scene):
             "line. Yet the function is continuous: the limit as "
             "x approaches zero of absolute value of x is zero, "
             "which equals f of zero.",
-            duration=38,
+            duration=33.7,
         )
         title = self.ly.title(r"Counterexample: $f(x) = |x|$ at $x = 0$")
 
@@ -426,7 +426,7 @@ class Video105_DerivativeRigorous(Scene):
             Text("Continuous does NOT imply differentiable!", font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(1)
+        self.wait(25.4)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # --- Scene 8: Section Divider ---
@@ -434,9 +434,9 @@ class Video105_DerivativeRigorous(Scene):
         self.add_subcaption(
             "All the derivative rules you know from calculus "
             "can be proved from the limit definition.",
-            duration=4,
+            duration=5.0,
         )
-        self.ly.section_divider("4", "Derivative Rules from the Definition")
+        self.ly.section_divider("4", "Derivative Rules from the Definition", hold=3.6)  # pacing: extends caption slot
         self.ly.clear()
 
     # --- Scene 9: Linearity and Product Rule ---
@@ -459,7 +459,7 @@ class Video105_DerivativeRigorous(Scene):
             "Taking limits and using the continuity of f at a, "
             "we get f of a times g prime of a plus f prime of a "
             "times g of a. That is the product rule.",
-            duration=80,
+            duration=51.0,
         )
 
         # Part 1: Linearity
@@ -544,7 +544,7 @@ class Video105_DerivativeRigorous(Scene):
         )
         self.ly.safe_place(note, direction=DOWN, anchor=pr_result, buff=0.3)
         self.play(Write(note), run_time=FAST)
-        self.wait(1)
+        self.wait(45.3)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # --- Scene 10: Differentiability on Intervals + Lipschitz ---
@@ -569,7 +569,7 @@ class Video105_DerivativeRigorous(Scene):
             "uniformly continuous implies continuous. "
             "This extends the hierarchy from our last video, "
             "with differentiability at the top.",
-            duration=80,
+            duration=54.5,
         )
         title = self.ly.title("Differentiability on Intervals")
 
@@ -657,7 +657,7 @@ class Video105_DerivativeRigorous(Scene):
         )
         self.ly.safe_place(from_video, direction=DOWN, anchor=cascade[-1], buff=0.3)
         self.play(Write(from_video), run_time=FAST)
-        self.wait(1)
+        self.wait(45.8)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # --- Scene 11: Summary + Outro ---
@@ -676,7 +676,7 @@ class Video105_DerivativeRigorous(Scene):
             "implies Lipschitz implies uniformly continuous. "
             "Next time we will cover the Mean Value Theorem "
             "and its consequences.",
-            duration=42,
+            duration=32.9,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -688,7 +688,7 @@ class Video105_DerivativeRigorous(Scene):
             Text("Bounded derivative on [a,b] => Lipschitz => Uniformly Continuous", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(takeaways, start_from=title)
-        self.wait(1)
+        self.wait(27.1)  # pacing: extends previous caption slot
         self.ly.clear()
 
         play_outro(self, "The Mean Value Theorem", "Real Analysis I")
