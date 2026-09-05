@@ -53,7 +53,7 @@ Videos 25-40 created with v2 templates. Videos 25-29 received targeted improveme
 |---|-------|-----------|----------|----------|-------------|-------|
 | 25 | What is a Vector? | 598 | YES | YES | YES | v2 rewrite: setup_background, SANS font, progressive_reveal, section_divider, formula_box, split crowded scenes into sub-scenes, content budgets enforced |
 | 26 | Linear Combinations | 657 | YES | YES | YES | v2 rewrite: setup_background, SANS font, progressive_reveal, section_divider, formula_box, split scene2/5/6/7 into sub-scenes, content budgets |
-| 27 | Matrices as Trans. | 854 | YES | YES | YES | v2 rewrite: setup_background, SANS font, progressive_reveal, section_divider, formula_box, split 9→15 sub-scenes, content budgets |
+| 27 | Matrices as Trans. | 854 | YES | YES (narration pacing) | YES | v2 rewrite: setup_background, SANS font, progressive_reveal, section_divider, formula_box, split 9→15 sub-scenes, content budgets. Pacing fix Sep 5 (t_3c2b11d6): 19/25 rushed 1.12-12.32x (176.2s video vs 226.5s natural TTS; slots overlapped) + seg#19 skipped silent (0.45s avail, SKIPRISK 12.32x). Slot extensions across all 19 defect blocks (block-final wait() ×19, +118.9s total, slot ≥ 1.08x natural + 0.3s gap) + 19 declared durations aligned to natural speech. QA follow-up in same task: scene-1 extension landed after play_intro's self-clear and held a BLANK background 7.1s (dot QA 90%) — replaced bare wait(7.1) with hook-question card (0.5+6.1+0.5 = same 7.1s, zero slot shift). Re-rendered Sep 5: 480p15, 295.1s (4:55), 25/25 segments narrated, ZERO speedup warnings, ZERO skips, usage 0.46-0.92x; audio -21.1 dB mean / -2.3 dB peak; dot QA PASS 60/60 after FP classification (6 flags = t=0 lead-in + four 0.5-0.75s ly.clear() transition dips + one dim mid-animation frame, dense-sampled). Math content + narration text unchanged. |
 | 28 | Matrix Multiplication | 882 | YES | YES | YES | v2 targeted fix: SANS font (21 replacements), progressive_reveal in summary, ly.title() for summary, already had setup_background |
 | 29 | Determinants | 747 | YES | YES | YES | v2 targeted fix: SANS font (20 replacements), progressive_reveal in summary, ly.title() for summary, already had setup_background |
 | 30 | Inverse Matrices | 786 | YES | N/A (already v2) | YES | Created with v2: setup_background, progressive_reveal(15), section_divider, formula_box, SANS font(15), no content .shift()/.to_edge() — no improvement needed |
@@ -523,7 +523,7 @@ Batch audit of ALL pre-Aug-2026 narrated renders — Real Analysis 99-110, Abstr
 |---|---|---|---|---|---|
 | 25 | 126.7 vs 139.5 | 14/20 | 4 | 9.89x | fix card t_9c8943a0 |
 | 26 | 144.1 vs 155.5 | 11/15 | 0 | 4.08x | fix card t_c0e34f1b |
-| 27 | 176.2 vs 226.5 | 19/25 | 1 | 12.32x | fix card t_3c2b11d6 |
+| 27 | 176.2 vs 226.5 | 19/25 | 1 | 12.32x | FIXED Sep 5 (t_3c2b11d6) — 19/25 rushed 1.12-12.32x + seg#19 skipped silent (0.45s avail); post-fix render verified clean (295.1s, 25/25 narrated, 0 warnings, 0 skips, usage 0.46-0.92x; scene-1 blank-hold QA defect found and repaired: extension now holds hook-question card) |
 | 28 | 134.3 vs 235.7 | 26/27 | 1 | 7.39x | fix card t_aa9f7542 |
 | 29 | 107.9 vs 261.3 | 24/25 | 5 | 10.88x | fix card t_5760635a — captions #18-21 start PAST video end, NEVER narrated |
 | 99 | 249.5 vs 227.8 | 0/9 | 0 | 1.00x | none — FIXED Sep 5 (t_045f44a5); post-fix render verified clean by this audit |

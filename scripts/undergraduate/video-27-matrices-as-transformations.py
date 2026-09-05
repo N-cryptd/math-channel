@@ -97,9 +97,22 @@ class Video27_MatricesAsTransformations(Scene):
             "Welcome back to Linear Algebra. So far we have talked about vectors "
             "and linear combinations. Today we answer one of the biggest questions: "
             "what does a matrix actually do?",
-            duration=12,
+            duration=10.7,
         )
         play_intro(self, "Matrices as Transformations", "Linear Algebra")
+
+        # pacing: extends previous caption slot (seg#0 natural 10.61s, slot 6.27s -> 13.37s, Δ=7.1)
+        # QA fix: play_intro self-clears to blank, so a bare wait() here held a blank
+        # background for 7.1s (dot-QA defect). Hold the hook question instead —
+        # 0.5 + 6.1 + 0.5 = 7.1s total, so all caption slot timings are unchanged.
+        question = Text(
+            "What does a matrix actually do?",
+            font_size=HEADING_SIZE, color=ACCENT, font=SANS, weight=BOLD,
+        )
+        self.ly.center_in_content(question)
+        self.play(FadeIn(question, shift=UP * 0.15), run_time=0.5)
+        self.wait(6.1)
+        self.play(FadeOut(question), run_time=0.5)
 
         self.add_subcaption(
             "You have probably seen matrices before: grids of numbers. "
@@ -141,7 +154,7 @@ class Video27_MatricesAsTransformations(Scene):
             "A transformation is just a function. It takes every point in space "
             "and moves it somewhere new. Think of it as picking up the "
             "entire plane and moving it around.",
-            duration=14,
+            duration=10.3,
         )
 
         func = MathTex(
@@ -163,23 +176,27 @@ class Video27_MatricesAsTransformations(Scene):
         self.play(FadeIn(dots, scale=0.8), run_time=FAST)
         self.wait(0.5)
 
+        # pacing: extends previous caption slot (seg#2 natural 10.22s, slot 3.27s -> 12.87s, Δ=9.6)
+        self.wait(9.6)
+
         # "Move" the dots
         moved_dots = dots.copy().rotate(PI / 12).shift(RIGHT * 0.5 + UP * 0.3)
 
         self.add_subcaption(
             "Under a transformation, every dot moves to a new position. "
             "The key question is: what rule determines where each point goes?",
-            duration=10,
+            duration=8.2,
         )
         self.play(Transform(dots, moved_dots), run_time=2.0)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#3 natural 8.18s, slot 4.30s -> 10.30s, Δ=6.0)
+        self.wait(7.5)
         self.ly.clear()
 
     def scene2b_linear_intro(self):
         self.add_subcaption(
             "There are infinitely many possible transformations. "
             "But mathematicians focus on a special kind: linear transformations.",
-            duration=10,
+            duration=8.3,
         )
 
         many = Text(
@@ -196,7 +213,8 @@ class Video27_MatricesAsTransformations(Scene):
         )
         self.ly.safe_place(special, direction=DOWN, anchor=many, buff=0.5)
         self.play(Write(special), run_time=NORMAL)
-        self.wait(2.0)
+        # pacing: extends previous caption slot (seg#4 natural 8.30s, slot 9.23s -> 10.43s, Δ=1.2)
+        self.wait(3.2)
         self.ly.clear()
 
     # ── Scene 3: Linear vs Non-Linear ──────────────────────────────
@@ -207,7 +225,7 @@ class Video27_MatricesAsTransformations(Scene):
             "A linear transformation has two simple rules. "
             "First, grid lines must remain straight and evenly spaced. "
             "Second, the origin must stay in place.",
-            duration=14,
+            duration=10.7,
         )
 
         plane = make_plane(length=6, shift=LEFT * 3.5)
@@ -220,6 +238,9 @@ class Video27_MatricesAsTransformations(Scene):
             run_time=NORMAL,
         )
         self.wait(0.5)
+
+        # pacing: extends previous caption slot (seg#5 natural 10.66s, slot 2.27s -> 13.47s, Δ=11.2)
+        self.wait(11.2)
 
         # Linear: 90-degree rotation
         rot_mat = np.array([[0, -1, 0], [1, 0, 0], [0, 0, 1]])
@@ -247,7 +268,7 @@ class Video27_MatricesAsTransformations(Scene):
         self.add_subcaption(
             "Here is a linear transformation: a rotation. "
             "Grid lines stay straight, evenly spaced, and the origin is fixed.",
-            duration=10,
+            duration=8.3,
         )
         self.play(Write(lin_label), run_time=FAST)
         self.play(
@@ -256,7 +277,8 @@ class Video27_MatricesAsTransformations(Scene):
             Transform(j_hat, new_j), Transform(j_label, new_j_label),
             run_time=2.0,
         )
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#6 natural 8.26s, slot 4.60s -> 10.40s, Δ=5.8)
+        self.wait(7.3)
 
         self.play(FadeOut(plane), FadeOut(i_hat), FadeOut(i_label),
                   FadeOut(j_hat), FadeOut(j_label), FadeOut(lin_label),
@@ -324,7 +346,7 @@ class Video27_MatricesAsTransformations(Scene):
             "Here is the beautiful insight. "
             "If you know where i-hat and j-hat land, you know where "
             "EVERY vector lands.",
-            duration=10,
+            duration=7.1,
         )
 
         plane = make_plane(length=6, shift=LEFT * 2.5)
@@ -349,6 +371,9 @@ class Video27_MatricesAsTransformations(Scene):
 
         self.play(GrowArrow(vec), Write(vec_label), run_time=NORMAL)
 
+        # pacing: extends previous caption slot (seg#8 natural 7.08s, slot 3.47s -> 8.87s, Δ=5.4)
+        self.wait(5.4)
+
         # Decompose
         decomp = MathTex(
             r"\vec{v} = 2\hat{\imath} + 1\hat{\jmath}",
@@ -360,7 +385,7 @@ class Video27_MatricesAsTransformations(Scene):
             "Take vector v equals 2 times i-hat plus 1 times j-hat. "
             "If the transformation is linear, it preserves this combination. "
             "So T of v equals 2 times T of i-hat, plus 1 times T of j-hat.",
-            duration=16,
+            duration=15.1,
         )
         self.play(Write(decomp), run_time=NORMAL)
         self.wait(1.0)
@@ -407,7 +432,8 @@ class Video27_MatricesAsTransformations(Scene):
             Transform(vec, new_vec), Transform(vec_label, new_vec_label),
             run_time=2.0,
         )
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#9 natural 15.07s, slot 9.83s -> 18.93s, Δ=9.1)
+        self.wait(10.6)
         self.ly.clear()
 
     def scene4b_insight(self):
@@ -441,7 +467,7 @@ class Video27_MatricesAsTransformations(Scene):
             "A linear transformation is completely determined by "
             "where i-hat and j-hat land. "
             "A matrix is just a compact way to record those two destinations.",
-            duration=14,
+            duration=10.0,
         )
 
         plane = make_plane(length=5, shift=LEFT * 3.5)
@@ -470,10 +496,13 @@ class Video27_MatricesAsTransformations(Scene):
         self.play(Write(mat_mob), run_time=NORMAL)
         self.wait(0.5)
 
+        # pacing: extends previous caption slot (seg#11 natural 9.91s, slot 4.53s -> 12.43s, Δ=7.9)
+        self.wait(7.9)
+
         self.add_subcaption(
             "The first column records where i-hat goes. "
             "The second column records where j-hat goes.",
-            duration=10,
+            duration=6.0,
         )
 
         col1_label = MathTex(
@@ -486,7 +515,8 @@ class Video27_MatricesAsTransformations(Scene):
         col2_label.next_to(mat_mob, RIGHT, buff=0.1).shift(DOWN * 0.3)
 
         self.play(Write(col1_label), Write(col2_label), run_time=NORMAL)
-        self.wait(1.0)
+        # pacing: extends previous caption slot (seg#12 natural 5.95s, slot 3.03s -> 7.53s, Δ=4.5)
+        self.wait(5.5)
         self.ly.clear()
 
     def scene5b_fill(self):
@@ -527,7 +557,7 @@ class Video27_MatricesAsTransformations(Scene):
             "Let us look at a classic example: rotation by 90 degrees "
             "counterclockwise. I-hat goes from (1, 0) to (0, 1). "
             "J-hat goes from (0, 1) to (-1, 0).",
-            duration=14,
+            duration=14.4,
         )
 
         plane = make_plane(length=6.5, shift=ORIGIN)
@@ -589,7 +619,8 @@ class Video27_MatricesAsTransformations(Scene):
             Transform(square, para),
             run_time=2.0,
         )
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#14 natural 14.38s, slot 8.90s -> 18.00s, Δ=9.1)
+        self.wait(10.6)
         self.ly.clear()
 
     def scene6b_verify(self):
@@ -598,7 +629,7 @@ class Video27_MatricesAsTransformations(Scene):
             "Notice the unit square becomes another square. "
             "Rotation preserves shape and area. "
             "Let us check: vector (2, 1) rotated becomes (-1, 2).",
-            duration=12,
+            duration=12.3,
         )
 
         verify_items = [
@@ -610,7 +641,8 @@ class Video27_MatricesAsTransformations(Scene):
                  color=ACCENT, font=SANS, weight=BOLD),
         ]
         self.ly.progressive_reveal(verify_items, run_time=0.6, wait_time=1.0)
-        self.wait(2.0)
+        # pacing: extends previous caption slot (seg#15 natural 12.29s, slot 10.50s -> 15.40s, Δ=4.9)
+        self.wait(6.9)
         self.ly.clear()
 
     # ── Scene 7: Shear Example ───────────────────────────────────────
@@ -622,7 +654,7 @@ class Video27_MatricesAsTransformations(Scene):
             "This pushes everything horizontally by an amount "
             "proportional to its height. I-hat stays at (1, 0). "
             "J-hat slides to (1, 1).",
-            duration=14,
+            duration=11.5,
         )
 
         plane = make_plane(length=6.5, shift=ORIGIN)
@@ -642,6 +674,9 @@ class Video27_MatricesAsTransformations(Scene):
             color=ACCENT, fill_opacity=0.15, stroke_width=2,
         )
         self.play(Create(square), run_time=FAST)
+
+        # pacing: extends previous caption slot (seg#16 natural 11.42s, slot 2.90s -> 14.30s, Δ=11.4)
+        self.wait(11.4)
 
         shear_mat = MathTex(
             r"\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}",
@@ -676,7 +711,7 @@ class Video27_MatricesAsTransformations(Scene):
         self.add_subcaption(
             "Watch how the entire grid shears. "
             "The x-axis stays put, but every row slides more to the right.",
-            duration=10,
+            duration=6.9,
         )
         self.play(Write(shear_mat), run_time=NORMAL)
         self.play(
@@ -686,13 +721,14 @@ class Video27_MatricesAsTransformations(Scene):
             Transform(square, para),
             run_time=2.0,
         )
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#17 natural 6.86s, slot 4.70s -> 8.60s, Δ=3.9)
+        self.wait(5.4)
 
         self.add_subcaption(
             "The unit square becomes a parallelogram. "
             "Area is preserved, but shape changes. "
             "This is a key property of shear transformations.",
-            duration=10,
+            duration=9.0,
         )
 
         area_note = Text(
@@ -701,7 +737,8 @@ class Video27_MatricesAsTransformations(Scene):
         )
         self.ly.safe_place(area_note, direction=DOWN, anchor=plane, buff=0.3)
         self.play(Write(area_note), run_time=NORMAL)
-        self.wait(2.0)
+        # pacing: extends previous caption slot (seg#18 natural 9.00s, slot 6.90s -> 11.30s, Δ=4.4)
+        self.wait(6.4)
         self.ly.clear()
 
     # ── Scene 8: Matrix-Vector Multiplication ─────────────────────────
@@ -711,16 +748,19 @@ class Video27_MatricesAsTransformations(Scene):
         self.add_subcaption(
             "When you multiply a matrix by a vector, "
             "you are applying the transformation to that vector.",
-            duration=10,
+            duration=5.6,
         )
 
         self.ly.title("Matrix-Vector Multiplication")
+
+        # pacing: extends previous caption slot (seg#19 natural 5.54s, slot 0.75s -> 7.05s, Δ=6.3) — was SKIPRISK
+        self.wait(6.3)
 
         self.add_subcaption(
             "To compute A times v, scale the first column of A "
             "by the first component of v, scale the second column "
             "by the second component, and add them up.",
-            duration=14,
+            duration=9.3,
         )
 
         gen_formula = MathTex(
@@ -754,7 +794,8 @@ class Video27_MatricesAsTransformations(Scene):
                           color=SECONDARY, font=SANS)
         col2_text.next_to(col2_box, DOWN, buff=0.4)
         self.play(Write(col2_text), run_time=FAST)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#20 natural 9.26s, slot 8.60s -> 11.60s, Δ=3.0)
+        self.wait(4.5)
         self.ly.clear()
 
     def scene8b_connection(self):
@@ -763,7 +804,7 @@ class Video27_MatricesAsTransformations(Scene):
             "This is a linear combination of the matrix columns! "
             "The components of the vector are the scalars. "
             "This connects directly to linear combinations and span.",
-            duration=14,
+            duration=10.3,
         )
 
         connection = MathTex(
@@ -773,7 +814,8 @@ class Video27_MatricesAsTransformations(Scene):
         conn_group = self.ly.formula_box(connection, color=ACCENT)
         self.ly.center_in_content(conn_group)
         self.play(Write(conn_group), run_time=SLOW)
-        self.wait(2.0)
+        # pacing: extends previous caption slot (seg#21 natural 10.25s, slot 4.80s -> 12.90s, Δ=6.6)
+        self.wait(8.6)
         self.ly.clear()
 
     def scene8c_example(self):
@@ -814,7 +856,7 @@ class Video27_MatricesAsTransformations(Scene):
             "A matrix is not just a grid of numbers. "
             "It is a transformation of space. The columns tell you "
             "where the basis vectors land.",
-            duration=12,
+            duration=7.9,
         )
 
         bullets = [
@@ -830,7 +872,8 @@ class Video27_MatricesAsTransformations(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(bullets, run_time=0.6, wait_time=0.5)
-        self.wait(1.0)
+        # pacing: extends previous caption slot (seg#23 natural 7.87s, slot 7.30s -> 9.90s, Δ=1.5)
+        self.wait(2.5)
         self.ly.clear()
 
         # Teaser
