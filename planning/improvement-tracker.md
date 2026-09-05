@@ -186,7 +186,7 @@ Videos 111+ created with v2 templates from the start.
 5. **Verify** — Check output file exists and plays correctly
 6. **Track** — Update this file and PLANNING_STATE.md
 
-| 115 | Normal Subgroups/Quotient Groups | 568 | YES | YES (content budget) | YES | v2-compliant. Fixed 5 content budget violations (scenes 2,3,4,5,6,8): FadeOut before new items, split scene4 definition+conjugation into 2 sub-scenes, ly.clear before closing. Fixed 1 .move_to()→ly.safe_place (table). Removed unused clamp_position import. setup_bg(1), section_divider(6), progressive_reveal(4), formula_box(5), SANS font, ly.clear(9), safe_place(20+). |
+| 115 | Normal Subgroups/Quotient Groups | 568 | YES | YES (narration pacing) | YES | v2-compliant. Fixed 5 content budget violations (scenes 2,3,4,5,6,8): FadeOut before new items, split scene4 definition+conjugation into 2 sub-scenes, ly.clear before closing. Fixed 1 .move_to()→ly.safe_place (table). Removed unused clamp_position import. setup_bg(1), section_divider(6), progressive_reveal(4), formula_box(5), SANS font, ly.clear(9), safe_place(20+). Pre-Aug render (110.8s, 8 TTS segs) had 8/8 segments sped up 1.58-2.95x (natural TTS 250.3s vs 110.8s video; slots overlapped). PACING FIX Sep 5 (t_f4e767c7): +162.2s slot extensions across all 8 caption blocks (block-final wait() ×8, slot ≥ 1.08x natural + 0.3s gap) + 8 declared durations aligned to natural speech. Re-rendered Sep 5: 480p15, 273.1s (4:33), ZERO speedup warnings, ZERO skips, all slots 0.91-0.92x usage; audio -20.1 dB mean / -2.0 dB peak; dot QA PASS 96.6% (56/58 frames; 2 flags = t=0 lead-in + 0.5s scene3/4 ly.clear() transition dip — both FPs, dense-sampled to confirm). Math content + narration text unchanged. |
 
 | 116 | Group Homomorphisms | 666 | YES | N/A (already v2) | N/A | Created with v2: setup_bg(2), progressive_reveal(4), section_divider(6), formula_box(6), SANS(35), ly.clear(17), safe_place(39), two_columns(1), play_intro(2), play_outro(2), add_subcaption(9). Zero .shift()/.to_edge()/.move_to()/.next_to() for content. — no improvement needed |
 
@@ -542,7 +542,7 @@ Batch audit of ALL pre-Aug-2026 narrated renders — Real Analysis 99-110, Abstr
 | 112 | 105.9 vs 314.5 | 9/9 | 0 | 5.48x | fix card t_acb17be2 |
 | 113 | 148.3 vs 427.3 | 8/8 | 0 | 3.87x | fix card t_ec056e29 |
 | 114 | 140.1 vs 406.2 | 9/9 | 0 | 4.98x | fix card t_b402b2e5 |
-| 115 | 110.8 vs 250.3 | 8/8 | 0 | 2.95x | fix card t_f4e767c7 |
+| 115 | 110.8 vs 250.3 | 8/8 | 0 | 2.95x | FIXED Sep 5 (t_f4e767c7) — 8/8 rushed 1.58-2.95x; post-fix render verified clean (273.1s, 0 warnings, 0 skips, usage 0.91-0.92x) |
 | 116 | 122.4 vs 260.8 | 8/8 | 0 | 2.79x | fix card t_3f2a4568 |
 | 117 | 99.1 vs 426.8 | 10/10 | 0 | 8.45x | fix card t_e926851f — worst in RA/AA batch (4.3x overall) |
 | 118 | 351.6 vs 402.5 | 7/8 | 0 | 1.65x | fix card t_3c7eef2e |

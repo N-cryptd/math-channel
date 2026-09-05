@@ -47,7 +47,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "built from pieces of the original. "
             "But this doesn't always work. "
             "It requires something special about the subgroup.",
-            duration=28,
+            duration=20.5,
         )
         play_intro(self, "Normal Subgroups and Quotient Groups", "Abstract Algebra I")
 
@@ -61,7 +61,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(0.3)
+        self.wait(9.5)  # pacing: extends previous caption slot (Δ=9.2)
         self.ly.clear()
 
     # --- Scene 2: The Prototype — Z/nZ ---
@@ -77,7 +77,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "It doesn't matter which representative you pick. "
             "Zero plus one equals one, whether you use zero or seven "
             "as the representative of zero's class.",
-            duration=30,
+            duration=29.4,
         )
         self.ly.section_divider(1, "The Prototype")
 
@@ -126,7 +126,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.ly.safe_place(well_def, anchor=boxed_q, direction=DOWN, buff=0.5)
         self.ly.safe_place(note, anchor=well_def, direction=DOWN, buff=0.2)
         self.play(Write(well_def), FadeIn(note, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(20.5)  # pacing: extends previous caption slot (Δ=20.0)
 
         self.ly.clear()
 
@@ -145,7 +145,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "The left and right cosets don't agree. "
             "If we tried to multiply cosets, the result would depend "
             "on which representative we choose.",
-            duration=35,
+            duration=33.7,
         )
         self.ly.section_divider(2, "When Things Break")
 
@@ -198,7 +198,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         )
         self.ly.safe_place(bad_news, anchor=not_eq, direction=DOWN, buff=0.4)
         self.play(FadeIn(bad_news, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(25.5)  # pacing: extends previous caption slot (Δ=25.0)
 
         self.ly.clear()
 
@@ -215,7 +215,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "That is, g h g inverse is in H for every g in G and h in H. "
             "This is the conjugation perspective, "
             "and it's often the most useful way to check normality.",
-            duration=28,
+            duration=31.2,
         )
         self.ly.section_divider(3, "Normal Subgroups")
 
@@ -275,7 +275,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.play(FadeIn(conj_label, shift=LEFT * 0.15), run_time=FAST)
         self.play(Write(conj_def), Create(boxed_conj[1]), run_time=NORMAL)
         self.play(FadeIn(conj_note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(22.4)  # pacing: extends previous caption slot (Δ=21.9)
 
         self.ly.clear()
 
@@ -292,7 +292,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "A key consequence: in abelian groups, "
             "every subgroup is normal, "
             "because commuting means g H equals H g trivially.",
-            duration=28,
+            duration=32.3,
         )
         self.ly.section_divider(4, "Equivalent Conditions")
 
@@ -337,7 +337,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.ly.safe_place(reason, anchor=boxed_abel, direction=DOWN, buff=0.4)
         self.play(Write(abel_stmt), Create(boxed_abel[1]), run_time=NORMAL)
         self.play(FadeIn(reason, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(20.3)  # pacing: extends previous caption slot (Δ=19.8)
 
         self.ly.clear()
 
@@ -356,7 +356,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "And the order of G over H is the index of H in G, "
             "which by Lagrange's theorem equals the order of G "
             "divided by the order of H.",
-            duration=32,
+            duration=35.7,
         )
         self.ly.section_divider(5, "The Quotient Group")
 
@@ -409,7 +409,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         self.ly.safe_place(note, anchor=boxed_order, direction=DOWN, buff=0.3)
         self.play(Write(order_formula), Create(boxed_order[1]), run_time=NORMAL)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(24.1)  # pacing: extends previous caption slot (Δ=23.6)
 
         self.ly.clear()
 
@@ -430,7 +430,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "is isomorphic to Z over 2 Z, "
             "a two-element group that captures "
             "the parity structure of permutations.",
-            duration=35,
+            duration=37.7,
         )
         self.ly.section_divider(6, "Example: S_3 / A_3")
 
@@ -524,7 +524,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         )
         self.ly.safe_place(interp, anchor=iso, direction=DOWN, buff=0.3)
         self.play(FadeIn(interp, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(27.2)  # pacing: extends previous caption slot (Δ=26.7)
 
         self.ly.clear()
 
@@ -541,7 +541,7 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
             "And in abelian groups, every subgroup is normal. "
             "Next time, we'll explore group homomorphisms, "
             "the structure-preserving maps between groups.",
-            duration=25,
+            duration=29.8,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -565,6 +565,6 @@ class Video115_NormalSubgroupsQuotientGroups(Scene):
         )
         self.ly.center_in_content(closing)
         self.play(FadeIn(closing, scale=1.05), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(16.5)  # pacing: extends previous caption slot (Δ=16.0)
 
         play_outro(self, "Normal Subgroups and Quotient Groups", "Abstract Algebra I")
