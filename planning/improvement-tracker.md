@@ -515,6 +515,47 @@ Video 266 is the first video in the new foundations track. Created with v2 templ
 | 271 | Negative Numbers | 583 | YES | N/A (already v2) | YES (first render + pacing fix) | Created with v2. setup_bg(1), play_intro/outro(1+1), progressive_reveal(6), section_divider(9), two_columns(start_from=title) done correctly, formula_box(1) finale, SANS body, raw-string MathTex throughout. Helper methods _make_line/_walk_arrow keep visuals consistent. Explicit beat FadeOuts (scene 4/5/6) keep every beat ≤5 items. Proof stack scene 8 (given + 4 steps) and 5-row countdown/pattern/summary scenes follow accepted house pattern. py_compile OK. First render 2026-09-03 (480p15, 328.0s, h264+aac) had 6/10 TTS segments speech-sped 1.6-2.6x (add_subcaption pitfall); PACING FIX same day (t_62afdbfd): natural TTS measured per subcaption (edge-tts -5%), all 10 section-final wait() before ly.clear() bumped +88.5s total, re-render 416.3s → rendered/Video271_NegativeNumbers_narrated.mp4; render mtime > script mtime; 0 speedup warnings, all segments 1.09-1.10x (≤1.25x target). Pixel QA PASS (qa_dots v2: 97% coverage, median 13168 px; tool validated positive on 267-270 renders, negative on flat/white synthetics). Narration text + content unchanged. |
 | 272 | Fractions | 628 | YES | N/A (already v2) | YES | Created with v2. setup_background(1), play_intro/outro(1+1), progressive_reveal(2), section_divider(9), formula_box(3), stack_down(3), 10 caption blocks, SANS body. py_compile OK. First render 2026-09-03 (t_25ca3c7a): 480p15, 484.3s, h264+aac, 854x480, 10 TTS segments, 0 speedup warnings → rendered/Video272_Fractions_narrated.mp4; render mtime > script mtime. Audio -20.6 dB mean / -2.0 dB peak. Dot QA PASS (qa_dots v2: 98% dot-frame coverage, median 14332 px, mean luma 29.0). Caption slots generous (47-58s) — natural narration pace, no pacing fix needed. |
 
+## 2026-09-05 Pre-Aug-2026 Render Pacing Audit (t_475b35a7)
+
+Batch audit of ALL pre-Aug-2026 narrated renders — Real Analysis 99-110, Abstract Algebra 111-125, Linear Algebra 25-29. Method: natural TTS measured per SRT segment (edge-tts en-US-AndrewNeural --rate=-5% via narrate.py's own generate_tts, 3 retries) vs actual slot spans in the shipped renders. DEFECT if slot < 1.08x natural + 0.3s (stricter than narrate.py's >1.5x stderr-only warning); SKIP-RISK if available < 1.5s (narrate.py silently skips → dead air). SRT(script) count mismatch = add_subcaption(replace=True) silently dropped overrun captions (never narrated). Full per-segment rows: kanban task t_475b35a7 comments #9 (RA/AA) + #10 (LA). Method validated: post-fix Videos 99 (1.00x) and 119 (0.99x) measured clean.
+
+| # | render vs natural (s) | defects | skip-risk | worst | action |
+|---|---|---|---|---|---|
+| 25 | 126.7 vs 139.5 | 14/20 | 4 | 9.89x | fix card t_9c8943a0 |
+| 26 | 144.1 vs 155.5 | 11/15 | 0 | 4.08x | fix card t_c0e34f1b |
+| 27 | 176.2 vs 226.5 | 19/25 | 1 | 12.32x | fix card t_3c2b11d6 |
+| 28 | 134.3 vs 235.7 | 26/27 | 1 | 7.39x | fix card t_aa9f7542 |
+| 29 | 107.9 vs 261.3 | 24/25 | 5 | 10.88x | fix card t_5760635a — captions #18-21 start PAST video end, NEVER narrated |
+| 99 | 249.5 vs 227.8 | 0/9 | 0 | 1.00x | none — FIXED Sep 5 (t_045f44a5); post-fix render verified clean by this audit |
+| 100 | 83.7 vs 142.5 (pre-fix) | 6/8 | 0 | 2.92x | FIXED Sep 5 mid-audit (t_b6609f28, commit e7bfab1); audit card t_0d3f39a3 → verify-and-close |
+| 101 | 54.9 vs 83.7 | 4/6 | 0 | 3.09x | fix card t_1c5c89d6 — SRT 6 vs 11 declared (5 captions never narrated) |
+| 102 | 110.7 vs 287.3 | 9/10 | 0 | 3.79x | fix card t_a5524149 |
+| 103 | 104.0 vs 211.4 | 9/11 | 0 | 5.56x | fix card t_c0ecfa5d |
+| 104 | 132.5 vs 230.6 | 10/10 | 0 | 2.72x | fix card t_a8dbaa82 |
+| 105 | 141.7 vs 299.4 | 9/11 | 0 | 3.77x | fix card t_5ebb5859 |
+| 106 | 181.7 vs 325.3 | 10/10 | 0 | 2.79x | fix card t_3d664d07 |
+| 107 | 178.5 vs 280.9 | 10/10 | 0 | 2.77x | fix card t_ad074f55 |
+| 108 | 150.0 vs 304.1 | 9/9 | 0 | 3.33x | fix card t_160b8aa5 |
+| 109 | 119.7 vs 258.6 | 9/9 | 0 | 2.73x | fix card t_d08b197e |
+| 110 | 127.4 vs 242.0 | 9/9 | 0 | 2.51x | fix card t_802b3a5d |
+| 111 | 96.9 vs 206.3 | 9/9 | 0 | 3.21x | fix card t_9875d6df |
+| 112 | 105.9 vs 314.5 | 9/9 | 0 | 5.48x | fix card t_acb17be2 |
+| 113 | 148.3 vs 427.3 | 8/8 | 0 | 3.87x | fix card t_ec056e29 |
+| 114 | 140.1 vs 406.2 | 9/9 | 0 | 4.98x | fix card t_b402b2e5 |
+| 115 | 110.8 vs 250.3 | 8/8 | 0 | 2.95x | fix card t_f4e767c7 |
+| 116 | 122.4 vs 260.8 | 8/8 | 0 | 2.79x | fix card t_3f2a4568 |
+| 117 | 99.1 vs 426.8 | 10/10 | 0 | 8.45x | fix card t_e926851f — worst in RA/AA batch (4.3x overall) |
+| 118 | 351.6 vs 402.5 | 7/8 | 0 | 1.65x | fix card t_3c7eef2e |
+| 119 | 474.7 vs 428.1 | 0/9 | 0 | 0.99x | none — FIXED Sep 5 (t_79b654d3); positive control, clean |
+| 120 | 332.7 vs 477.6 | 8/9 | 0 | 2.79x | fix card t_8a15e02e |
+| 121 | 241.7 vs 349.3 | 8/8 | 0 | 1.68x | fix card t_c076675d |
+| 122 | 239.6 vs 361.8 | 8/8 | 0 | 1.78x | fix card t_265f7ae5 |
+| 123 | 321.3 vs 352.9 | 8/9 | 0 | 1.33x | fix card t_eaf6fca7 (mild) |
+| 124 | 280.2 vs 310.2 | 7/8 | 0 | 1.26x | fix card t_8907c905 (mild) |
+| 125 | 328.5 vs 310.5 | 5/8 | 0 | 1.30x | fix card t_a2fbd953 (mild, wait redistribution) |
+
+Verdict: 30 of 32 measured videos defective — every unfixed pre-Aug render ships rushed narration. Systemic root cause: scripts declare self-contained subcaption durations that overrun the animation timeline, so (a) block-final wait()s leave slots shorter than natural speech, and (b) add_subcaption(replace=True) silently drops 1-5 captions per video (SRT count < declared count on 14 of 27 RA/AA videos). narrate.py only warns >1.5x to stderr and never blocks — defects shipped unnoticed. Fix recipe per rows 75/119/207/267-272: slot ≥ 1.08x natural + 0.3s per caption, re-render 480p15, verify 0 speedup warnings / 0 skips + dot QA + volumedetect ~-20dB, md5-matched copy to rendered/.
+
 ## Status: COMPLETE ✓ (Videos 1-266)
 All 266 videos have been analyzed. Videos 1-29 received v2 rewrites. Videos 30-89 were created with v2 standards or received targeted improvements. Videos 90-125 created with v2 or improved to v2 standards. Videos 126-138 created with v2 templates — fully compliant. Videos 139-150 (Topology) created with v2 templates. Videos 151-153 improved with section_dividers + formula_box. Videos 154-155 created with v2 templates — fully compliant. Video 156 v2-compliant. Video 157 received major v2 rewrite. Videos 158-159 created with v2 templates. Videos 160-161 created with v2 templates — fully compliant. Videos 162-173 (Functional Analysis) created with v2 templates — fully compliant. Videos 174-183 (Fourier Analysis) created with v2 templates — fully compliant (Video 178 received minor section_divider improvement). Videos 184-193 (PDE) created with v2 and improved with section_dividers + formula_box — all re-rendered. Videos 194 improved with positioning fixes + formula_box. Videos 195-206 (Differential Geometry) created with v2 templates — fully compliant. Video 207 (Homotopy) improved with section_dividers + formula_box + content budget fix. Videos 208-216 (Algebraic Topology) created with v2 templates — fully compliant. Videos 217-228 (Advanced Abstract Algebra) created with v2 templates — fully compliant (Videos 226, 228 received minor improvements). Videos 229-230 (Stochastic Processes) created with v2 templates — fully compliant. Videos 231-240 (Stochastic Processes) created with v2 templates — fully compliant. Videos 241-250 (Information Theory) created with v2 templates — improved with 34 section_dividers + 9 formula_boxes. Videos 251-258 (Number Theory) created with v2 templates — 3 videos improved (1 section_divider, 5 formula_boxes, 1 positioning fix). Videos 259-265 (Number Theory) created with v2 templates — fully compliant. Video 266 (Foundations) created with v2 templates — fully compliant.
 
