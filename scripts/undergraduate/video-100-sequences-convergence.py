@@ -58,7 +58,7 @@ class Video100_SequencesConvergence(Scene):
             "In real analysis, we replace that vague intuition "
             "with a definition that is as precise as it is powerful. "
             "Today we study sequences and convergence.",
-            duration=24,
+            duration=24.4,
         )
         play_intro(self, "Sequences and Convergence", "Real Analysis I")
 
@@ -101,7 +101,7 @@ class Video100_SequencesConvergence(Scene):
         )
         self.ly.safe_place(question, direction=UP, anchor=nl, buff=0.5)
         self.play(FadeIn(question, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(10.8)  # pacing: extends previous caption slot (Δ=9.3)
 
         self.ly.clear()
 
@@ -112,9 +112,9 @@ class Video100_SequencesConvergence(Scene):
             "important definition in analysis. "
             "What does it mean for an infinite list of numbers "
             "to converge to a single value?",
-            duration=10,
+            duration=9.9,
         )
-        self.ly.section_divider(1, "What is a Sequence?")
+        self.ly.section_divider(1, "What is a Sequence?", hold=8.1)  # pacing: extends caption slot (Δ=7.3)
         self.ly.clear()
 
     # --- Scene 3: What is a Sequence? ---
@@ -131,7 +131,7 @@ class Video100_SequencesConvergence(Scene):
             "The key point is that order matters. "
             "A sequence is not a set. The positions one, two, three are fixed, "
             "and each position has exactly one value.",
-            duration=34,
+            duration=39.0,
         )
 
         title = self.ly.title("What is a Sequence?")
@@ -181,7 +181,7 @@ class Video100_SequencesConvergence(Scene):
         )
         self.ly.safe_place(order_note, direction=DOWN, anchor=pairs[-1], buff=0.4)
         self.play(FadeIn(order_note, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(1.5)
+        self.wait(34.6)  # pacing: extends previous caption slot (Δ=33.1)
 
         self.ly.clear()
 
@@ -190,9 +190,9 @@ class Video100_SequencesConvergence(Scene):
         self.add_subcaption(
             "Before writing the formal definition, "
             "let us build intuition with pictures.",
-            duration=5,
+            duration=4.7,
         )
-        self.ly.section_divider(2, "What Does Convergence Mean?")
+        self.ly.section_divider(2, "What Does Convergence Mean?", hold=2.4)  # pacing: extends caption slot (Δ=1.6)
         self.ly.clear()
 
     # --- Scene 5: Intuitive Convergence ---
@@ -212,7 +212,7 @@ class Video100_SequencesConvergence(Scene):
             "any arbitrarily small band around L. "
             "No matter how tight you make the band, "
             "from some point onward, every term is inside.",
-            duration=36,
+            duration=41.2,
         )
 
         title = self.ly.title("Convergence vs Divergence")
@@ -320,7 +320,7 @@ class Video100_SequencesConvergence(Scene):
         )
         self.ly.safe_place(div_tag, direction=DOWN, anchor=nl_div, buff=0.4)
         self.play(FadeIn(div_tag, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(1.5)
+        self.wait(29.4)  # pacing: extends previous caption slot (Δ=27.9)
 
         self.ly.clear()
 
@@ -329,9 +329,9 @@ class Video100_SequencesConvergence(Scene):
         self.add_subcaption(
             "Now we translate our visual intuition "
             "into the precise language of real analysis.",
-            duration=5,
+            duration=6.2,
         )
-        self.ly.section_divider(3, "The Epsilon-N Definition")
+        self.ly.section_divider(3, "The Epsilon-N Definition", hold=4.1)  # pacing: extends caption slot (Δ=3.3)
         self.ly.clear()
 
     # --- Scene 7: The Formal Definition ---
@@ -350,7 +350,7 @@ class Video100_SequencesConvergence(Scene):
             "The sequence responds with an N, "
             "a point beyond which all terms are within epsilon of L. "
             "If it can always do this, the sequence converges.",
-            duration=34,
+            duration=38.5,
         )
 
         title = self.ly.title("The Formal Definition")
@@ -488,7 +488,7 @@ class Video100_SequencesConvergence(Scene):
                 self.play(FadeOut(old), run_time=0.3)
 
         del self._part_rows
-        self.wait(1.5)
+        self.wait(18.9)  # pacing: extends previous caption slot (Δ=17.4)
 
         self.ly.clear()
 
@@ -510,7 +510,7 @@ class Video100_SequencesConvergence(Scene):
             "which gives one over n less than epsilon. "
             "The proof is complete. "
             "One over n converges to zero.",
-            duration=34,
+            duration=44.6,
         )
 
         title = self.ly.title("Proof: 1/n Converges to 0")
@@ -565,7 +565,7 @@ class Video100_SequencesConvergence(Scene):
         )
         self.ly.safe_place(qed, direction=DOWN, anchor=row, buff=0.5)
         self.play(FadeIn(qed, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(1.5)
+        self.wait(14.9)  # pacing: extends previous caption slot (Δ=13.4)
 
         self.ly.clear()
 
@@ -586,7 +586,7 @@ class Video100_SequencesConvergence(Scene):
             "In the next video, we meet Cauchy sequences, "
             "a powerful tool for proving convergence "
             "without knowing the limit in advance.",
-            duration=30,
+            duration=41.6,
         )
 
         title = self.ly.title("Basic Convergence Rules")
@@ -643,7 +643,7 @@ class Video100_SequencesConvergence(Scene):
         ]
         self.ly.progressive_reveal(takeaways, start_from=title2)
 
-        self.wait(1)
+        self.wait(27.5)  # pacing: extends previous caption slot (Δ=26.5)
 
         play_outro(
             self,
