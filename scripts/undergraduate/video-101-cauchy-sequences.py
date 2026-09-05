@@ -57,7 +57,7 @@ class Video101_CauchySequences(Scene):
             "What if you cannot even guess it? "
             "Cauchy sequences give us a way to prove convergence "
             "without ever naming the limit.",
-            duration=26,
+            duration=18.6,
         )
         play_intro(self, "Cauchy Sequences", "Real Analysis I")
 
@@ -103,7 +103,7 @@ class Video101_CauchySequences(Scene):
         )
         self.ly.safe_place(question, direction=DOWN, anchor=nl, buff=0.4)
         self.play(FadeIn(question, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(5.1)  # pacing: extends previous caption slot (Δ=3.6)
 
         self.ly.clear()
 
@@ -113,9 +113,9 @@ class Video101_CauchySequences(Scene):
             "Let us explore what it means "
             "for the terms of a sequence to get closer "
             "not to a known limit, but to each other.",
-            duration=10,
+            duration=6.9,
         )
-        self.ly.section_divider(1, "Convergence vs Cauchy")
+        self.ly.section_divider(1, "Convergence vs Cauchy", hold=4.8)  # pacing: extends caption slot (Δ=4.0)
         self.ly.clear()
 
     # --- Scene 3: Convergence vs Cauchy Intuition ---
@@ -134,7 +134,7 @@ class Video101_CauchySequences(Scene):
             "If the terms are squeezing together, "
             "they must be squeezing toward something. "
             "In the real numbers, completeness guarantees that something exists.",
-            duration=47,
+            duration=38.1,
         )
 
         title = self.ly.title("Two Ways to Measure Closeness")
@@ -237,7 +237,7 @@ class Video101_CauchySequences(Scene):
             run_time=0.6,
         )
         self.play(FadeIn(insight, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(2)
+        self.wait(29.2)  # pacing: extends previous caption slot (Δ=27.2)
 
         self.ly.clear()
 
@@ -246,9 +246,9 @@ class Video101_CauchySequences(Scene):
         self.add_subcaption(
             "Let us translate this intuition "
             "into the precise language of real analysis.",
-            duration=5,
+            duration=5.9,
         )
-        self.ly.section_divider(2, "The Definition")
+        self.ly.section_divider(2, "The Definition", hold=3.6)  # pacing: extends caption slot (Δ=2.8)
         self.ly.clear()
 
     # --- Scene 5: The Formal Definition ---
@@ -267,7 +267,7 @@ class Video101_CauchySequences(Scene):
             "Notice something crucial. "
             "The limit L does not appear anywhere in this definition. "
             "That is the power of Cauchy sequences.",
-            duration=40,
+            duration=37.3,
         )
 
         title = self.ly.title("Formal Definition of a Cauchy Sequence")
@@ -392,7 +392,7 @@ class Video101_CauchySequences(Scene):
         )
         self.ly.safe_place(key_obs, direction=DOWN, anchor=row, buff=0.5)
         self.play(FadeIn(key_obs, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(1.5)
+        self.wait(18.7)  # pacing: extends previous caption slot (Δ=17.2)
 
         self.ly.clear()
 
@@ -401,9 +401,9 @@ class Video101_CauchySequences(Scene):
         self.add_subcaption(
             "We now prove the first key result "
             "about Cauchy sequences.",
-            duration=5,
+            duration=4.0,
         )
-        self.ly.section_divider(3, "Convergent Implies Cauchy")
+        self.ly.section_divider(3, "Convergent Implies Cauchy", hold=1.6)  # pacing: extends caption slot (Δ=0.8)
         self.ly.clear()
 
     # --- Scene 7: Proof -- Every Convergent Sequence is Cauchy ---
@@ -426,7 +426,7 @@ class Video101_CauchySequences(Scene):
             "The trick was using epsilon over two: "
             "each term gets half the error budget, "
             "so together they stay within epsilon.",
-            duration=44,
+            duration=46.4,
         )
 
         title = self.ly.title("Proof: Convergent Implies Cauchy")
@@ -539,7 +539,7 @@ class Video101_CauchySequences(Scene):
         )
         self.ly.safe_place(trick, direction=DOWN, anchor=row, buff=0.5)
         self.play(FadeIn(trick, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(1.5)
+        self.wait(30.4)  # pacing: extends previous caption slot (Δ=28.9)
 
         self.ly.clear()
 
@@ -548,9 +548,9 @@ class Video101_CauchySequences(Scene):
         self.add_subcaption(
             "Now for the deep result. "
             "What does completeness have to do with Cauchy sequences?",
-            duration=6,
+            duration=5.0,
         )
-        self.ly.section_divider(4, "Cauchy and Completeness")
+        self.ly.section_divider(4, "Cauchy and Completeness", hold=2.8)  # pacing: extends caption slot (Δ=2.0)
         self.ly.clear()
 
     # --- Scene 9: Cauchy Implies Convergent + The Q Example ---
@@ -571,7 +571,7 @@ class Video101_CauchySequences(Scene):
             "Completeness is what fills the gaps. "
             "The real numbers have no holes, "
             "so every Cauchy sequence finds its limit.",
-            duration=46,
+            duration=46.2,
         )
 
         # Part 1: Theorem statement
@@ -680,7 +680,7 @@ class Video101_CauchySequences(Scene):
         self.play(
             FadeIn(comparison[1], shift=LEFT * 0.15), run_time=FAST,
         )
-        self.wait(2)
+        self.wait(29.3)  # pacing: extends previous caption slot (Δ=27.3)
 
         self.ly.clear()
 
@@ -701,7 +701,7 @@ class Video101_CauchySequences(Scene):
             "filling the holes that make Cauchy sequences fail to converge. "
             "Next time, we move from sequences to functions "
             "and study limits of functions.",
-            duration=38,
+            duration=40.1,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -730,7 +730,7 @@ class Video101_CauchySequences(Scene):
         ]
         self.ly.progressive_reveal(takeaways, start_from=title)
 
-        self.wait(1)
+        self.wait(28.6)  # pacing: extends previous caption slot (Δ=27.6)
 
         play_outro(
             self,
