@@ -367,10 +367,14 @@ class LayoutEngine:
         return group
 
     # ── Section divider ────────────────────────────────────────────
-    def section_divider(self, section_number, section_title):
+    def section_divider(self, section_number, section_title, hold=0.8):
         """Create an animated section divider between content blocks.
 
         Shows a number, title, and horizontal line sweep.
+        `hold` = seconds the divider stays fully visible before its
+        exit fade. Increase (with a "# pacing:" note) when the divider
+        scene carries a long narration slot, so the hold is not a blank
+        background.
         """
         from channel_branding import PRIMARY, ACCENT, DIM, SANS, HEADING_SIZE, LABEL_SIZE
 
@@ -392,7 +396,7 @@ class LayoutEngine:
         self.scene.play(Write(num), run_time=0.5)
         self.scene.play(FadeIn(title, shift=RIGHT * 0.2), run_time=0.5)
         self.scene.play(Create(line), run_time=0.5)
-        self.scene.wait(0.8)
+        self.scene.wait(hold)
         self.scene.play(
             FadeOut(label_group), FadeOut(line),
             run_time=0.4,

@@ -55,7 +55,7 @@ class Video99_RealNumbers(Scene):
             "The rational numbers, which you might think of as complete, "
             "actually have gaps. And filling those gaps is what makes calculus possible. "
             "Today we begin Real Analysis with the foundation: the Completeness Axiom.",
-            duration=24,
+            duration=24.3,
         )
         play_intro(self, "The Real Numbers", "Real Analysis I")
 
@@ -104,7 +104,8 @@ class Video99_RealNumbers(Scene):
         )
         self.ly.safe_place(gap_label, direction=DOWN, anchor=number_line, buff=0.5)
         self.play(FadeIn(gap_label, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot
+        self.wait(11.5)
 
         self.ly.clear()
 
@@ -116,10 +117,10 @@ class Video99_RealNumbers(Scene):
             "has a well-defined limit point? "
             "The answer for the rational numbers is no. "
             "For the real numbers, yes. And that yes is called completeness.",
-            duration=16,
+            duration=16.7,
         )
 
-        self.ly.section_divider(1, "Why the Rationals Are Not Enough")
+        self.ly.section_divider(1, "Why the Rationals Are Not Enough", hold=15.4)
         self.ly.clear()
 
     # ─── Scene 3: The Problem with Q ───
@@ -134,7 +135,7 @@ class Video99_RealNumbers(Scene):
             "and the square root of two is irrational. "
             "The rationals have a hole right there. "
             "The real numbers exist to fill every such hole.",
-            duration=26,
+            duration=30.5,
         )
 
         title = self.ly.title("The Rationals Have Holes")
@@ -205,7 +206,8 @@ class Video99_RealNumbers(Scene):
         )
         self.ly.safe_place(no_sup, direction=DOWN, anchor=upper_label, buff=0.4)
         self.play(FadeIn(no_sup, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(1.5)
+        # pacing: extends previous caption slot
+        self.wait(24.2)
 
         self.ly.clear()
 
@@ -215,9 +217,9 @@ class Video99_RealNumbers(Scene):
             "To state the completeness axiom precisely, "
             "we need the language of upper bounds and least upper bounds. "
             "These definitions are the building blocks of real analysis.",
-            duration=8,
+            duration=10.4,
         )
-        self.ly.section_divider(2, "Bounded Sets and Bounds")
+        self.ly.section_divider(2, "Bounded Sets and Bounds", hold=8.6)
         self.ly.clear()
 
     # ─── Scene 5: Upper Bounds and Suprema ───
@@ -233,7 +235,7 @@ class Video99_RealNumbers(Scene):
             "First, it IS an upper bound. "
             "Second, any number strictly less than it fails to be an upper bound. "
             "The infimum is defined symmetrically as the greatest lower bound.",
-            duration=26,
+            duration=32.5,
         )
 
         title = self.ly.title("Upper Bounds and Suprema")
@@ -314,7 +316,8 @@ class Video99_RealNumbers(Scene):
         )
         self.ly.safe_place(inf_note, direction=DOWN, anchor=nl, buff=0.5)
         self.play(FadeIn(inf_note, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(1)
+        # pacing: extends previous caption slot
+        self.wait(22.8)
 
         self.ly.clear()
 
@@ -323,9 +326,9 @@ class Video99_RealNumbers(Scene):
         self.add_subcaption(
             "Now we are ready for the axiom that distinguishes "
             "the real numbers from every other number system.",
-            duration=6,
+            duration=6.0,
         )
-        self.ly.section_divider(3, "The Completeness Axiom")
+        self.ly.section_divider(3, "The Completeness Axiom", hold=3.8)
         self.ly.clear()
 
     # ─── Scene 7: The Completeness Axiom ───
@@ -343,7 +346,7 @@ class Video99_RealNumbers(Scene):
             "This single axiom is what makes limits work, "
             "what makes the Intermediate Value Theorem true, "
             "and what makes calculus rigorous.",
-            duration=28,
+            duration=40.2,
         )
 
         title = self.ly.title("The Completeness Axiom")
@@ -415,7 +418,8 @@ class Video99_RealNumbers(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=left_col, buff=0.5)
         self.play(FadeIn(insight, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(1.5)
+        # pacing: extends previous caption slot
+        self.wait(34.9)
 
         self.ly.clear()
 
@@ -434,7 +438,7 @@ class Video99_RealNumbers(Scene):
             "area under a curve, requires that certain sets have least upper bounds. "
             "Every theorem you learned in Calculus One and Two "
             "ultimately traces back to this axiom.",
-            duration=28,
+            duration=37.8,
         )
 
         title = self.ly.title("Why Completeness Matters")
@@ -477,7 +481,8 @@ class Video99_RealNumbers(Scene):
         )
         self.ly.safe_place(calc_link, direction=DOWN, anchor=cards[-1], buff=0.4)
         self.play(FadeIn(calc_link, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(1.5)
+        # pacing: extends previous caption slot
+        self.wait(34.0)
 
         self.ly.clear()
 
@@ -494,7 +499,7 @@ class Video99_RealNumbers(Scene):
             "Without it, limits, continuity, and integration all break down. "
             "In the next video, we put completeness to work "
             "with sequences and convergence.",
-            duration=20,
+            duration=29.7,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -507,7 +512,8 @@ class Video99_RealNumbers(Scene):
         ]
         self.ly.progressive_reveal(takeaways, start_from=title)
 
-        self.wait(1)
+        # pacing: extends previous caption slot
+        self.wait(18.6)
 
         play_outro(
             self,
