@@ -547,7 +547,7 @@ Batch audit of ALL pre-Aug-2026 narrated renders — Real Analysis 99-110, Abstr
 | 117 | 99.1 vs 426.8 | 10/10 | 0 | 8.45x | FIXED Sep 6 (t_e926851f) — worst in RA/AA batch; crashed prior run (Sep 5) applied +242.9s slot extensions + declared=natural and died pre-render; this run verified its naturals (±0.05s), rendered its state (all slots 1.00-1.01x — declared==natural forces ~1.01x squeeze), then set declared = 1.08x natural + 0.3 (zero wait bumps needed, prior spans generous). Post-fix render verified clean: 534.2s (8:54), 10/10 narrated, 0 warnings, 0 skips, usage 0.92-0.93x uniform, audio -20.8 dB mean / -1.9 dB peak, dot QA PASS 94.7-100% (45 frames) |
 | 118 | 351.6 vs 402.5 | 7/8 | 0 | 1.65x | fix card t_3c7eef2e |
 | 119 | 474.7 vs 428.1 | 0/9 | 0 | 0.99x | none — FIXED Sep 5 (t_79b654d3); positive control, clean |
-| 120 | 332.7 vs 477.6 | 8/9 | 0 | 2.79x | fix card t_8a15e02e |
+| 120 | 332.7 vs 477.6 (pre-fix) | 8/9 | 0 | 2.79x | FIXED Sep 6 (t_8a15e02e) — 8/9 rushed 1.29-2.79x (finale worst); crashed prior run applied +193.4s slot extensions + declared=natural and died pre-copy; this run verified its slot math (9/9 hold natural + ≥3.5s gap, usage 0.92x uniform), finished rendered/ copy + verify: 526.0s (8:46), 0 warnings, 0 skips, audio -20.4/-2.1 dB, dot QA 97.5% (120 frames, 3 triaged flags) |
 | 121 | 241.7 vs 349.3 | 8/8 | 0 | 1.68x | fix card t_c076675d |
 | 122 | 239.6 vs 361.8 | 8/8 | 0 | 1.78x | fix card t_265f7ae5 |
 | 123 | 321.3 vs 352.9 | 8/9 | 0 | 1.33x | fix card t_eaf6fca7 (mild) |

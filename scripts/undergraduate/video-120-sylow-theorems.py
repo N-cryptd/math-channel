@@ -62,7 +62,7 @@ class Video120_SylowTheorems(Scene):
             "Today we will prove three theorems: "
             "existence, conjugacy, and counting of subgroups of prime power order. "
             "This is Abstract Algebra, Video 10.",
-            duration=40,
+            duration=40.9,
         )
         play_intro(self, "Sylow Theorems", "Abstract Algebra I")
 
@@ -94,7 +94,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(tease, anchor=boxed, direction=DOWN, buff=0.3)
         self.play(FadeIn(tease, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(18.1)  # pacing: +13.1s extends caption #0 slot (t_8a15e02e)
 
         self.ly.clear()
 
@@ -120,7 +120,7 @@ class Video120_SylowTheorems(Scene):
             "there is an element of order p. "
             "The Sylow theorems vastly generalize this "
             "from one element to an entire subgroup.",
-            duration=50,
+            duration=57.1,
         )
 
         title = self.ly.title("Sylow p-Subgroups: Definition")
@@ -179,7 +179,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(cauchy, anchor=lagrange, direction=DOWN, buff=0.4)
         self.play(FadeIn(cauchy, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(6)
+        self.wait(27.3)  # pacing: +21.3s extends caption #1 slot (t_8a15e02e)
 
         self.ly.clear()
 
@@ -208,7 +208,7 @@ class Video120_SylowTheorems(Scene):
             "so the stabilizer of a point in that orbit "
             "has order divisible by p to the k. "
             "This stabilizer is our Sylow p-subgroup.",
-            duration=55,
+            duration=66.7,
         )
 
         self.ly.section_divider(1, "First Sylow Theorem: Existence")
@@ -282,7 +282,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(insight, anchor=title, direction=DOWN, buff=0.6)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(5)
+        self.wait(25.5)  # pacing: +20.5s extends caption #2 slot (t_8a15e02e)
 
         self.ly.clear()
 
@@ -310,7 +310,7 @@ class Video120_SylowTheorems(Scene):
             "equals the number of Sylow p-subgroups, "
             "which must equal 1 mod p. "
             "This forces all Sylow p-subgroups into one conjugacy class.",
-            duration=50,
+            duration=57.6,
         )
 
         title = self.ly.title("Second Sylow Theorem: Conjugacy")
@@ -367,7 +367,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(result, anchor=consequence, direction=DOWN, buff=0.3)
         self.play(FadeIn(result, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(29.0)  # pacing: +24.0s extends caption #3 slot (t_8a15e02e)
 
         self.ly.clear()
 
@@ -394,7 +394,7 @@ class Video120_SylowTheorems(Scene):
             "gives n sub p. "
             "Restricting the action to P acting on its conjugates "
             "shows that n sub p is congruent to 1 mod p.",
-            duration=60,
+            duration=67.7,
         )
 
         self.ly.section_divider(2, "Third Sylow Theorem: Counting")
@@ -466,7 +466,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(payoff, anchor=syl2, direction=DOWN, buff=0.3)
         self.play(FadeIn(payoff, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(32.4)  # pacing: +27.4s extends caption #4 slot (t_8a15e02e)
 
         self.ly.clear()
 
@@ -495,7 +495,7 @@ class Video120_SylowTheorems(Scene):
             "More generally, for distinct primes p and q "
             "with p not dividing q minus 1, "
             "every group of order p q is cyclic.",
-            duration=55,
+            duration=68.3,
         )
 
         title = self.ly.title("Application: Groups of Order pq")
@@ -581,7 +581,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(gen_label, anchor=boxed, direction=DOWN, buff=0.3)
         self.play(FadeIn(gen_label, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(5)
+        self.wait(29.0)  # pacing: +24.0s extends caption #5 slot (t_8a15e02e)
 
         self.ly.clear()
 
@@ -607,7 +607,7 @@ class Video120_SylowTheorems(Scene):
             "When only the Sylow 5-subgroup is unique, "
             "we get the dihedral group D_15 or a semidirect product. "
             "This shows the power of Sylow's counting constraints.",
-            duration=50,
+            duration=67.4,
         )
 
         title = self.ly.title("Application: Groups of Order 30")
@@ -672,7 +672,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(power, anchor=results[-1], direction=DOWN, buff=0.3)
         self.play(FadeIn(power, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(32.4)  # pacing: +27.4s extends caption #6 slot (t_8a15e02e)
 
         self.ly.clear()
 
@@ -697,7 +697,7 @@ class Video120_SylowTheorems(Scene):
             "Next time, we will explore finite simple groups "
             "and why the Sylow theorems are essential for their study. "
             "This is Abstract Algebra, Video 10.",
-            duration=30,
+            duration=49.5,
         )
 
         title = self.ly.title("Summary: The Three Sylow Theorems")
@@ -718,7 +718,7 @@ class Video120_SylowTheorems(Scene):
         )
         self.ly.safe_place(connection, anchor=items[-1], direction=DOWN, buff=0.4)
         self.play(FadeIn(connection, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(39.7)  # pacing: +35.7s extends caption #7 slot (t_8a15e02e)
 
         self.ly.clear()
 
