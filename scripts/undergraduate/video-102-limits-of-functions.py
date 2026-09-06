@@ -56,7 +56,7 @@ class Video102_LimitsOfFunctions(Scene):
             "Can we make this idea mathematically precise? "
             "And what happens when the function misbehaves? "
             "Today we define the limit of a function rigorously.",
-            duration=23,
+            duration=20.0,  # pacing: declared ~= 1.15x natural TTS (17.35s)
         )
         play_intro(self, "Limits of Functions", "Real Analysis I")
 
@@ -118,7 +118,7 @@ class Video102_LimitsOfFunctions(Scene):
         question.shift(DOWN * 2.8)
         clamp_position(question)
         self.play(FadeIn(question, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(2)
+        self.wait(11.9)  # pacing: extends caption slot (Δ=+9.9)
 
         self.ly.clear()
 
@@ -129,9 +129,9 @@ class Video102_LimitsOfFunctions(Scene):
             "then state the formal epsilon-delta definition, "
             "work through a proof, "
             "and connect function limits back to sequences.",
-            duration=9,
+            duration=11.1,  # pacing: declared ~= 1.15x natural TTS (9.62s)
         )
-        self.ly.section_divider(1, "The Intuition")
+        self.ly.section_divider(1, "The Intuition", hold=9.9)  # pacing: hold=0.8+9.1 extends caption slot
         self.ly.clear()
 
     # --- Scene 3: What Does f(x) Approach? -- Intuition ---
@@ -150,7 +150,7 @@ class Video102_LimitsOfFunctions(Scene):
             "This is what makes limits powerful. "
             "We can talk about behavior near a point "
             "without ever evaluating at that point.",
-            duration=47,
+            duration=47.3,  # pacing: declared ~= 1.15x natural TTS (41.11s)
         )
 
         title = self.ly.title("What Does f(x) Approach?")
@@ -207,7 +207,7 @@ class Video102_LimitsOfFunctions(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=axes, buff=0.3)
         self.play(FadeIn(insight, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(2)
+        self.wait(41.3)  # pacing: extends caption slot (Δ=+39.3)
 
         self.ly.clear()
 
@@ -216,9 +216,9 @@ class Video102_LimitsOfFunctions(Scene):
         self.add_subcaption(
             "Let us translate this intuition "
             "into the precise language of real analysis.",
-            duration=5,
+            duration=6.8,  # pacing: declared ~= 1.15x natural TTS (5.86s)
         )
-        self.ly.section_divider(2, "The Epsilon-Delta Definition")
+        self.ly.section_divider(2, "The Epsilon-Delta Definition", hold=5.2)  # pacing: hold=0.8+4.4 extends caption slot
         self.ly.clear()
 
     # --- Scene 5: The Formal Definition ---
@@ -238,7 +238,7 @@ class Video102_LimitsOfFunctions(Scene):
             "For every epsilon, there exists delta. "
             "Epsilon comes first. You challenge me with any tolerance, "
             "and I must find a delta that works.",
-            duration=58,
+            duration=54.2,  # pacing: declared ~= 1.15x natural TTS (47.09s)
         )
 
         title = self.ly.title("The Epsilon-Delta Definition")
@@ -355,7 +355,7 @@ class Video102_LimitsOfFunctions(Scene):
         )
         self.ly.safe_place(key_text, direction=DOWN, anchor=geo_axes, buff=0.3)
         self.play(FadeIn(key_text, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(2)
+        self.wait(42.1)  # pacing: extends caption slot (Δ=+40.1)
 
         self.ly.clear()
 
@@ -363,9 +363,9 @@ class Video102_LimitsOfFunctions(Scene):
     def scene6_divider_proof(self):
         self.add_subcaption(
             "Now let us prove a limit using epsilon-delta.",
-            duration=3,
+            duration=3.6,  # pacing: declared ~= 1.15x natural TTS (3.05s)
         )
-        self.ly.section_divider(3, "Proof Example")
+        self.ly.section_divider(3, "Proof Example", hold=1.7)  # pacing: hold=0.8+0.9 extends caption slot
         self.ly.clear()
 
     # --- Scene 7: Proof -- lim 3x-1 = 5 as x->2 ---
@@ -388,7 +388,7 @@ class Video102_LimitsOfFunctions(Scene):
             "which is less than 3 times delta, "
             "equals 3 times epsilon over 3, equals epsilon. "
             "Proof complete.",
-            duration=55,
+            duration=62.4,  # pacing: declared ~= 1.15x natural TTS (54.22s)
         )
 
         title = self.ly.title("Proof: lim 3x-1 = 5")
@@ -467,7 +467,7 @@ class Video102_LimitsOfFunctions(Scene):
         )
         self.ly.center_in_content(insight)
         self.play(FadeIn(insight, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(2)
+        self.wait(53.9)  # pacing: extends caption slot (Δ=+51.9)
 
         self.ly.clear()
 
@@ -476,9 +476,9 @@ class Video102_LimitsOfFunctions(Scene):
         self.add_subcaption(
             "There is a beautiful connection between limits of functions "
             "and limits of sequences.",
-            duration=5,
+            duration=6.1,  # pacing: declared ~= 1.15x natural TTS (5.23s)
         )
-        self.ly.section_divider(4, "Limits and Sequences")
+        self.ly.section_divider(4, "Limits and Sequences", hold=4.4)  # pacing: hold=0.8+3.6 extends caption slot
         self.ly.clear()
 
     # --- Scene 9: Sequential Characterization ---
@@ -503,7 +503,7 @@ class Video102_LimitsOfFunctions(Scene):
             "which alternates between 1 and negative 1. "
             "Two sequences approaching zero give different outputs. "
             "Therefore the limit does not exist.",
-            duration=72,
+            duration=71.6,  # pacing: declared ~= 1.15x natural TTS (62.23s)
         )
 
         # Part 1: Theorem statement
@@ -584,7 +584,7 @@ class Video102_LimitsOfFunctions(Scene):
         )
         self.ly.safe_place(conclusion, direction=DOWN, anchor=app_axes, buff=0.3)
         self.play(FadeIn(conclusion, shift=UP * 0.1), run_time=NORMAL)
-        self.wait(2)
+        self.wait(64.0)  # pacing: extends caption slot (Δ=+62.0)
 
         self.ly.clear()
 
@@ -604,7 +604,7 @@ class Video102_LimitsOfFunctions(Scene):
             "And to prove a limit does not exist, "
             "just find two sequences approaching a that give different outputs. "
             "Next time, we use limits to define continuity.",
-            duration=52,
+            duration=47.8,  # pacing: declared ~= 1.15x natural TTS (41.50s)
         )
 
         title = self.ly.title("Key Takeaways")
@@ -633,7 +633,7 @@ class Video102_LimitsOfFunctions(Scene):
         ]
 
         self.ly.progressive_reveal(takeaways, start_from=title)
-        self.wait(1)
+        self.wait(36.8)  # pacing: extends caption slot (Δ=+35.8)
 
         self.ly.clear()
 
