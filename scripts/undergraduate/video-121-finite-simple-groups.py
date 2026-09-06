@@ -64,7 +64,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "Today we will define simple groups, explore why they matter, "
             "and prove that the alternating group A_n is simple for all n >= 5. "
             "This is Abstract Algebra, Video 11.",
-            duration=35,
+            duration=35.9,
         )
         play_intro(self, "Finite Simple Groups", "Abstract Algebra I")
 
@@ -87,7 +87,7 @@ class Video121_FiniteSimpleGroups(Scene):
         boxed = self.ly.formula_box(q, color=PRIMARY)
         self.ly.safe_place(boxed, anchor=items[-1], direction=DOWN, buff=0.4)
         self.play(Write(q), Create(boxed[1]), run_time=NORMAL)
-        self.wait(5)
+        self.wait(18.2)  # pacing: extends previous caption slot (seg0 +13.2)
 
         self.ly.clear()
 
@@ -109,7 +109,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "order 1 or p. "
             "But there are also non-abelian simple groups, "
             "and those are far more interesting.",
-            duration=40,
+            duration=36.4,
         )
         self.ly.section_divider("1", "Definition of Simple Groups")
 
@@ -159,7 +159,7 @@ class Video121_FiniteSimpleGroups(Scene):
         )
         self.ly.safe_place(tease, anchor=note, direction=DOWN, buff=0.35)
         self.play(FadeIn(tease, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(8.7)  # pacing: extends previous caption slot (seg1 +4.7)
 
         self.ly.clear()
 
@@ -180,7 +180,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "prime factorization of integers. "
             "If we can classify all simple groups, "
             "then in principle we can classify all finite groups.",
-            duration=35,
+            duration=33.3,
         )
         self.ly.section_divider("2", "Why Simple Groups Matter")
 
@@ -216,7 +216,7 @@ class Video121_FiniteSimpleGroups(Scene):
             Text("Classify simple groups \u21d2 classify ALL finite groups", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2, run_time=0.8)
-        self.wait(6)
+        self.wait(15.0)  # pacing: extends previous caption slot (seg2 +9.0)
 
         self.ly.clear()
 
@@ -238,7 +238,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "which do not fit into any of the other families. "
             "The largest sporadic group is called the Monster, "
             "and has approximately 8 times 10 to the 53rd elements.",
-            duration=35,
+            duration=43.1,
         )
         self.ly.section_divider("3", "The Classification")
 
@@ -295,7 +295,7 @@ class Video121_FiniteSimpleGroups(Scene):
         )
         self.ly.safe_place(scale, anchor=title, direction=DOWN, buff=0.6)
         self.play(FadeIn(scale, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(4)
+        self.wait(24.3)  # pacing: extends previous caption slot (seg3 +20.3)
 
         self.ly.clear()
 
@@ -317,7 +317,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "So N equals A_n, proving simplicity. "
             "For A_5 specifically, we can prove this directly "
             "using conjugacy class sizes.",
-            duration=40,
+            duration=45.0,
         )
         self.ly.section_divider("4", "Simplicity of A_n")
 
@@ -355,7 +355,7 @@ class Video121_FiniteSimpleGroups(Scene):
         )
         self.ly.safe_place(k4, anchor=items[-1], direction=DOWN, buff=0.35)
         self.play(Write(k4), run_time=NORMAL)
-        self.wait(4)
+        self.wait(24.6)  # pacing: extends previous caption slot (seg4 +20.6)
 
         self.ly.clear()
 
@@ -376,7 +376,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "conjugation sends our 3-cycle to any other 3-cycle. "
             "So N contains every 3-cycle. "
             "Step 4: The 3-cycles generate A_n, so N = A_n.",
-            duration=40,
+            duration=49.2,
         )
         self.ly.section_divider("5", "Proof Strategy")
 
@@ -413,7 +413,7 @@ class Video121_FiniteSimpleGroups(Scene):
         )
         self.ly.safe_place(detail, anchor=boxed, direction=DOWN, buff=0.4)
         self.play(FadeIn(detail, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(28.5)  # pacing: extends previous caption slot (seg5 +23.5)
 
         self.ly.clear()
 
@@ -441,7 +441,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "selected class sizes. "
             "The only possibilities are 1, 60, or sums that don't work. "
             "Therefore N must be A_5, proving simplicity.",
-            duration=45,
+            duration=63.4,
         )
         self.ly.section_divider("6", "A_5: Conjugacy Class Proof")
 
@@ -512,7 +512,7 @@ class Video121_FiniteSimpleGroups(Scene):
         )
         self.ly.safe_place(conclusion, anchor=items[-1], direction=DOWN, buff=0.35)
         self.play(FadeIn(conclusion, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(5)
+        self.wait(30.7)  # pacing: extends previous caption slot (seg6 +25.7)
 
         self.ly.clear()
 
@@ -533,7 +533,7 @@ class Video121_FiniteSimpleGroups(Scene):
             "and sketched the general proof for A_n when n >= 5. "
             "In the next video, we begin our study of rings. "
             "Thanks for watching.",
-            duration=30,
+            duration=43.1,
         )
 
         title = self.ly.title("Summary")
@@ -560,7 +560,7 @@ class Video121_FiniteSimpleGroups(Scene):
         )
         self.ly.center_in_content(tease)
         self.play(FadeIn(tease, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(3)
+        self.wait(24.2)  # pacing: extends previous caption slot (seg7 +21.2)
 
         self.ly.clear()
         play_outro(self)
