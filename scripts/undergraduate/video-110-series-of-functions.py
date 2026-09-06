@@ -56,7 +56,7 @@ class Video110_SeriesOfFunctions(Scene):
             "of functions, and unlock the operations that make "
             "power series so powerful. "
             "This is the final video of Real Analysis One.",
-            duration=22.5,
+            duration=19.5,
         )
         play_intro(self, "Series of Functions", "Real Analysis I")
 
@@ -89,7 +89,7 @@ class Video110_SeriesOfFunctions(Scene):
             self.play(Create(graph), run_time=FAST)
             self.wait(0.2)
 
-        # pacing: extends previous caption slot (seg#0 natural 22.5s, slot 15.1s -> 28.2s, Δ=13.1)
+        # pacing: slot 28.3s already >= 1.25x true natural 19.4s (no bump needed)
         self.wait(13.6)
         self.ly.clear()
 
@@ -106,7 +106,7 @@ class Video110_SeriesOfFunctions(Scene):
             "sums converge uniformly. "
             "Everything from the previous video applies, "
             "just replace f sub n with S sub N.",
-            duration=26.1,
+            duration=28.5,
         )
         self.ly.section_divider("1", "Convergence of Series of Functions")
         self.ly.clear()
@@ -155,8 +155,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=unif, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        # pacing: extends previous caption slot (seg#1 natural 26.1s, slot 14.9s -> 32.7s, Δ=17.9)
-        self.wait(19.4)
+        # pacing: extends previous caption slot (seg#1 natural 28.4s, slot 32.8s -> 35.5s, Δ=2.7)
+        self.wait(22.1)
         self.ly.clear()
 
     # --- Scene 3: Weierstrass M-Test ---
@@ -174,7 +174,7 @@ class Video110_SeriesOfFunctions(Scene):
             "original. "
             "Example: sum of x to the n over n factorial. "
             "Bound by one over n factorial, which converges.",
-            duration=30.5,
+            duration=36.2,
         )
         self.ly.section_divider("2", "The Weierstrass M-Test")
         self.ly.clear()
@@ -224,8 +224,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=example, buff=0.3)
         self.play(Write(result), run_time=NORMAL)
-        # pacing: extends previous caption slot (seg#2 natural 30.5s, slot 16.2s -> 38.1s, Δ=21.9)
-        self.wait(23.4)
+        # pacing: extends previous caption slot (seg#2 natural 36.1s, slot 38.1s -> 45.1s, Δ=7.0)
+        self.wait(30.4)
         self.ly.clear()
 
     # --- Scene 4: Term-by-Term Integration ---
@@ -243,7 +243,7 @@ class Video110_SeriesOfFunctions(Scene):
             "f, which goes to zero by uniform convergence. "
             "Uniform convergence lets you pull the integral "
             "inside the sum.",
-            duration=20.9,
+            duration=27.8,
         )
         self.ly.section_divider("3", "Term-by-Term Integration")
         self.ly.clear()
@@ -277,8 +277,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=proof, buff=0.4)
         self.play(Write(result), run_time=NORMAL)
-        # pacing: extends previous caption slot (seg#3 natural 20.9s, slot 12.1s -> 26.1s, Δ=14.0)
-        self.wait(15.5)
+        # pacing: extends previous caption slot (seg#3 natural 27.7s, slot 26.1s -> 34.6s, Δ=8.5)
+        self.wait(24.0)
         self.ly.clear()
 
     # --- Scene 5: Term-by-Term Differentiation ---
@@ -298,7 +298,7 @@ class Video110_SeriesOfFunctions(Scene):
             "the n minus one, which grows with n. "
             "Integration smooths errors out, but "
             "differentiation magnifies them.",
-            duration=18.1,
+            duration=36.0,
         )
         self.ly.section_divider("4", "Term-by-Term Differentiation")
         self.ly.clear()
@@ -347,8 +347,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=why, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        # pacing: extends previous caption slot (seg#4 natural 18.1s, slot 14.6s -> 22.6s, Δ=8.0)
-        self.wait(9.5)
+        # pacing: extends previous caption slot (seg#4 natural 35.9s, slot 22.6s -> 44.9s, Δ=22.3)
+        self.wait(31.8)
         self.ly.clear()
 
     # --- Scene 6: Power Series ---
@@ -367,7 +367,7 @@ class Video110_SeriesOfFunctions(Scene):
             "This means: inside the radius, you can "
             "differentiate and integrate term by term, "
             "infinitely many times!",
-            duration=29.3,
+            duration=36.0,
         )
         self.ly.section_divider("5", "Power Series")
         self.ly.clear()
@@ -417,8 +417,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=mtest, buff=0.3)
         self.play(Write(result), run_time=SLOW)
-        # pacing: extends previous caption slot (seg#5 natural 29.3s, slot 15.5s -> 36.7s, Δ=21.3)
-        self.wait(22.8)
+        # pacing: extends previous caption slot (seg#5 natural 35.9s, slot 36.8s -> 44.9s, Δ=8.1)
+        self.wait(30.9)
         self.ly.clear()
 
     # --- Scene 7: The Big Picture ---
@@ -439,7 +439,7 @@ class Video110_SeriesOfFunctions(Scene):
             "differentiable. "
             "Uniform convergence is the key that unlocks "
             "all the operations.",
-            duration=29.2,
+            duration=34.6,
         )
         title = self.ly.title("The Big Picture")
 
@@ -456,8 +456,8 @@ class Video110_SeriesOfFunctions(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        # pacing: extends previous caption slot (seg#6 natural 29.2s, slot 9.3s -> 36.5s, Δ=27.2)
-        self.wait(28.7)
+        # pacing: extends previous caption slot (seg#6 natural 34.4s, slot 36.5s -> 43.0s, Δ=6.5)
+        self.wait(35.2)
         self.ly.clear()
 
     # --- Scene 8: Summary + Outro ---
@@ -480,7 +480,7 @@ class Video110_SeriesOfFunctions(Scene):
             "This completes Real Analysis One. "
             "Twelve videos covering the foundations of "
             "rigorous calculus. Thank you for watching!",
-            duration=31.2,
+            duration=39.4,
         )
         title = self.ly.title("Key Takeaways")
 
@@ -524,7 +524,7 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(next_up, direction=DOWN, anchor=sub, buff=0.3)
         self.play(Write(next_up), run_time=NORMAL)
-        # pacing: extends final caption slot (seg#7 natural 31.2s, slot 24.3s -> 39.1s, Δ=14.8)
-        self.wait(15.8)
+        # pacing: extends final caption slot (seg#7 natural 39.3s, slot 39.1s -> 49.1s, Δ=10.0)
+        self.wait(25.8)
 
         play_outro(self, "Real Analysis I Complete!", "Real Analysis I")
