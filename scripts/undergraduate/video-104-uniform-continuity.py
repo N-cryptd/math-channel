@@ -56,7 +56,7 @@ class Video104_UniformContinuity(Scene):
             "What if we need one delta that works for every "
             "point simultaneously? That is uniform continuity, "
             "and it changes everything.",
-            duration=22,
+            duration=16.3,
         )
         play_intro(self, "Uniform Continuity", "Real Analysis I")
 
@@ -94,7 +94,7 @@ class Video104_UniformContinuity(Scene):
         )
         self.ly.safe_place(key2, direction=DOWN, anchor=key1, buff=0.4)
         self.play(FadeIn(key2, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(1)
+        self.wait(4.1)  # pacing: extends previous caption slot (+3.1s)
         self.ly.clear()
 
     # --- Scene 2: Intro + Section Divider ---
@@ -102,9 +102,9 @@ class Video104_UniformContinuity(Scene):
         self.add_subcaption(
             "Let's start by seeing what pointwise continuity "
             "looks like visually, and why the deltas can differ.",
-            duration=6,
+            duration=5.9,
         )
-        self.ly.section_divider("1", "Pointwise vs Uniform")
+        self.ly.section_divider("1", "Pointwise vs Uniform", hold=3.7)  # pacing: extends previous caption slot (+2.9s)
         self.ly.clear()
 
     # --- Scene 3: Visual Comparison --- Pointwise Continuity ---
@@ -117,7 +117,7 @@ class Video104_UniformContinuity(Scene):
             "the slope is even steeper, and delta must be tiny. "
             "Each point needs its own delta. "
             "This is perfectly fine for pointwise continuity.",
-            duration=30,
+            duration=23.3,
         )
 
         title = self.ly.title("Pointwise: Different Points, Different Deltas")
@@ -196,7 +196,7 @@ class Video104_UniformContinuity(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=axes, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1)
+        self.wait(14.9)  # pacing: extends previous caption slot (+13.9s)
         self.ly.clear()
 
     # --- Scene 4: Section Divider ---
@@ -204,9 +204,9 @@ class Video104_UniformContinuity(Scene):
         self.add_subcaption(
             "Now let's see the formal definition of "
             "uniform continuity.",
-            duration=4,
+            duration=3.9,
         )
-        self.ly.section_divider("2", "The Definition")
+        self.ly.section_divider("2", "The Definition", hold=1.5)  # pacing: extends previous caption slot (+0.7s)
         self.ly.clear()
 
     # --- Scene 5: Formal Definition + Visual ---
@@ -223,7 +223,7 @@ class Video104_UniformContinuity(Scene):
             "Notice we use x and y, two arbitrary points, not "
             "x and a fixed point. "
             "Uniform continuity is about pairs of points.",
-            duration=40,
+            duration=36.7,
         )
 
         title = self.ly.title("Side by Side: Pointwise vs Uniform")
@@ -253,7 +253,7 @@ class Video104_UniformContinuity(Scene):
         uc_col = VGroup(uc_title, uc_def, uc_impl).arrange(DOWN, buff=0.2)
 
         cols = self.ly.two_columns([pw_col], [uc_col], start_from=title)
-        self.wait(1)
+        self.wait(7.0)  # pacing: extends caption slot (+6.0s)
 
         # Highlight key differences
         self.ly.clear()
@@ -266,7 +266,7 @@ class Video104_UniformContinuity(Scene):
             Text("ONE delta tube works EVERYWHERE on the domain", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(1)
+        self.wait(7.0)  # pacing: extends caption slot (+6.0s)
 
         # Visual: sliding delta tube
         self.ly.clear()
@@ -329,7 +329,7 @@ class Video104_UniformContinuity(Scene):
         )
         self.ly.safe_place(label, direction=DOWN, anchor=axes, buff=0.3)
         self.play(Write(label), run_time=NORMAL)
-        self.wait(1)
+        self.wait(8.0)  # pacing: extends caption slot (+7.0s)
         self.ly.clear()
 
     # --- Scene 6: Section Divider ---
@@ -337,9 +337,9 @@ class Video104_UniformContinuity(Scene):
         self.add_subcaption(
             "Not every continuous function is uniformly continuous. "
             "Let's see a famous counterexample.",
-            duration=5,
+            duration=6.1,
         )
-        self.ly.section_divider("3", "Continuous but Not Uniformly Continuous")
+        self.ly.section_divider("3", "Continuous but Not Uniformly Continuous", hold=3.9)  # pacing: extends previous caption slot (+3.1s)
         self.ly.clear()
 
     # --- Scene 7: Counterexample --- f(x) = 1/x on (0,1) ---
@@ -353,7 +353,7 @@ class Video104_UniformContinuity(Scene):
             "we need delta less than 0.0001. "
             "As x approaches 0, the required delta shrinks "
             "to zero. No single delta works for the entire interval.",
-            duration=35,
+            duration=29.8,
         )
 
         title = self.ly.title(r"Counterexample: $f(x) = 1/x$ on $(0,1)$")
@@ -464,7 +464,7 @@ class Video104_UniformContinuity(Scene):
             Text("(But IS uniformly continuous on any bounded interval)", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title3)
-        self.wait(1)
+        self.wait(5.7)  # pacing: extends previous caption slot (+4.7s)
         self.ly.clear()
 
     # --- Scene 8: Section Divider ---
@@ -472,9 +472,9 @@ class Video104_UniformContinuity(Scene):
         self.add_subcaption(
             "So when does continuity imply uniform continuity? "
             "The Heine-Cantor theorem gives the answer.",
-            duration=5,
+            duration=6.0,
         )
-        self.ly.section_divider("4", "Heine-Cantor Theorem")
+        self.ly.section_divider("4", "Heine-Cantor Theorem", hold=3.9)  # pacing: extends previous caption slot (+3.1s)
         self.ly.clear()
 
     # --- Scene 9: Heine-Cantor Theorem Sketch + Lipschitz ---
@@ -502,7 +502,7 @@ class Video104_UniformContinuity(Scene):
             "The absolute value function is Lipschitz with "
             "L equal to 1. x squared is not Lipschitz on R, "
             "but is Lipschitz on any bounded interval.",
-            duration=80,
+            duration=68.4,
         )
 
         # Part 1: Heine-Cantor Theorem
@@ -532,7 +532,7 @@ class Video104_UniformContinuity(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=steps[-1], buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1)
+        self.wait(26.0)  # pacing: extends caption slot (+25.0s)
         self.ly.clear()
 
         # Part 2: Lipschitz Connection
@@ -554,7 +554,7 @@ class Video104_UniformContinuity(Scene):
         )
         self.ly.safe_place(implies, direction=DOWN, anchor=lipschitz_def, buff=0.4)
         self.play(Write(implies), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(9.0)  # pacing: extends caption slot (+8.5s)
 
         # Examples
         self.ly.clear()
@@ -566,7 +566,7 @@ class Video104_UniformContinuity(Scene):
             Text("x^2 IS Lipschitz on any bounded interval", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title3)
-        self.wait(0.5)
+        self.wait(8.8)  # pacing: extends caption slot (+8.3s)
 
         # Hierarchy
         self.ly.clear()
@@ -590,7 +590,7 @@ class Video104_UniformContinuity(Scene):
             FadeIn(con, shift=LEFT * 0.15),
             run_time=NORMAL,
         )
-        self.wait(1)
+        self.wait(8.0)  # pacing: extends caption slot (+7.0s)
         self.ly.clear()
 
     # --- Scene 10: Summary + Outro ---
@@ -607,7 +607,7 @@ class Video104_UniformContinuity(Scene):
             "And the hierarchy goes: Lipschitz implies uniform "
             "implies continuous. "
             "Next time, we rigorously define the derivative.",
-            duration=40,
+            duration=34.1,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -620,7 +620,7 @@ class Video104_UniformContinuity(Scene):
             Text("Hierarchy: Lipschitz -> Uniform -> Continuous", font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(takeaways, start_from=title)
-        self.wait(1)
+        self.wait(21.7)  # pacing: extends previous caption slot (+20.7s)
         self.ly.clear()
 
         play_outro(self, "The Derivative (Rigorous)", "Real Analysis I")

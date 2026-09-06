@@ -61,7 +61,7 @@ class Video107_RiemannIntegral(Scene):
             "continuous functions are integrable, and "
             "encounter a function so wild it is NOT "
             "integrable.",
-            duration=22,
+            duration=22.6,
         )
         play_intro(self, "The Riemann Integral", "Real Analysis I")
 
@@ -108,7 +108,7 @@ class Video107_RiemannIntegral(Scene):
         )
         self.ly.safe_place(caption, direction=DOWN, anchor=axes, buff=0.1)
         self.play(Write(caption), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(6.0)  # pacing: extends previous caption slot (+4.5s)
         self.ly.clear()
 
     # --- Scene 2: Partitions and Norm ---
@@ -123,7 +123,7 @@ class Video107_RiemannIntegral(Scene):
             "of the largest subinterval. "
             "As the mesh goes to zero, every subinterval "
             "becomes arbitrarily small.",
-            duration=22,
+            duration=22.7,
         )
         self.ly.section_divider("1", "Partitions")
         self.ly.clear()
@@ -195,7 +195,7 @@ class Video107_RiemannIntegral(Scene):
         )
         self.ly.safe_place(mesh_note, direction=DOWN, anchor=nl2, buff=0.6)
         self.play(Write(mesh_note), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(3.7)  # pacing: extends previous caption slot (+2.2s)
         self.ly.clear()
 
     # --- Scene 3: Riemann Sums ---
@@ -211,7 +211,7 @@ class Video107_RiemannIntegral(Scene):
             "We say f is Riemann integrable if these sums "
             "converge to a unique limit as the mesh goes "
             "to zero, regardless of the sample points.",
-            duration=28,
+            duration=26.5,
         )
         self.ly.section_divider("2", "Riemann Sums")
         self.ly.clear()
@@ -273,7 +273,7 @@ class Video107_RiemannIntegral(Scene):
         )
         self.ly.safe_place(label, direction=DOWN, anchor=axes, buff=0.1)
         self.play(Write(label), run_time=FAST)
-        self.wait(1.5)
+        self.wait(13.2)  # pacing: extends previous caption slot (+11.7s)
         self.ly.clear()
 
     # --- Scene 4: Upper and Lower Darboux Sums ---
@@ -289,7 +289,7 @@ class Video107_RiemannIntegral(Scene):
             "The true area is trapped between them. "
             "This squeeze is the key to the Darboux "
             "criterion for integrability.",
-            duration=28,
+            duration=24.8,
         )
         self.ly.section_divider("3", "Darboux Sums")
         self.ly.clear()
@@ -387,7 +387,7 @@ class Video107_RiemannIntegral(Scene):
         l_lbl = Text("L(f,P): underestimate", font_size=SMALL_SIZE, color=PRIMARY, font=SANS)
         self.ly.safe_place(l_lbl, direction=DOWN, anchor=u_lbl, buff=0.05)
         self.play(Write(l_lbl), run_time=FAST)
-        self.wait(1.5)
+        self.wait(6.5)  # pacing: extends previous caption slot (+5.0s)
         self.ly.clear()
 
     # --- Scene 5: The Integrability Condition ---
@@ -406,7 +406,7 @@ class Video107_RiemannIntegral(Scene):
             "zero, there exists a partition P with the "
             "difference of upper and lower sums less than "
             "epsilon.",
-            duration=35,
+            duration=30.3,
         )
         self.ly.section_divider("4", "The Integrability Condition")
         self.ly.clear()
@@ -462,7 +462,7 @@ class Video107_RiemannIntegral(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=dc2, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(16.3)  # pacing: extends previous caption slot (+14.8s)
         self.ly.clear()
 
     # --- Scene 6: Continuous => Integrable ---
@@ -483,7 +483,7 @@ class Video107_RiemannIntegral(Scene):
             "epsilon. "
             "This is exactly WHY we needed uniform continuity "
             "from Video 104.",
-            duration=42,
+            duration=42.9,
         )
         self.ly.section_divider("5", "Continuous Implies Integrable")
         self.ly.clear()
@@ -536,7 +536,7 @@ class Video107_RiemannIntegral(Scene):
         )
         self.ly.safe_place(connection, direction=DOWN, anchor=step4, buff=0.3)
         self.play(Write(connection), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(32.4)  # pacing: extends previous caption slot (+30.9s)
         self.ly.clear()
 
     # --- Scene 7: The Dirichlet Function ---
@@ -553,7 +553,7 @@ class Video107_RiemannIntegral(Scene):
             "The lower sum equals zero. "
             "They can never be close. "
             "The Dirichlet function is NOT Riemann integrable.",
-            duration=28,
+            duration=29.8,
         )
         self.ly.section_divider("6", "A Non-Integrable Function")
         self.ly.clear()
@@ -617,7 +617,7 @@ class Video107_RiemannIntegral(Scene):
         )
         self.ly.safe_place(concl, direction=DOWN, anchor=s4, buff=0.25)
         self.play(Write(concl), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(13.9)  # pacing: extends previous caption slot (+12.4s)
         self.ly.clear()
 
     # --- Scene 8: Properties ---
@@ -633,7 +633,7 @@ class Video107_RiemannIntegral(Scene):
             "a to b. "
             "And the absolute value of the integral is at "
             "most the integral of the absolute value.",
-            duration=28,
+            duration=28.5,
         )
         self.ly.section_divider("7", "Properties")
         self.ly.clear()
@@ -663,7 +663,7 @@ class Video107_RiemannIntegral(Scene):
             ),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(1.5)
+        self.wait(19.4)  # pacing: extends previous caption slot (+17.9s)
         self.ly.clear()
 
     # --- Scene 9: Geometric Recap ---
@@ -677,7 +677,7 @@ class Video107_RiemannIntegral(Scene):
             "If they converge to the same value, the "
             "function is integrable, and that value is "
             "the integral.",
-            duration=20,
+            duration=17.6,
         )
         title = self.ly.title("The Squeeze")
 
@@ -728,7 +728,7 @@ class Video107_RiemannIntegral(Scene):
         )
         self.ly.safe_place(conclusion, direction=DOWN, anchor=axes, buff=0.1)
         self.play(Write(conclusion), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(9.7)  # pacing: extends previous caption slot (+8.2s)
         self.ly.clear()
 
     # --- Scene 10: Summary + Outro ---
@@ -748,7 +748,7 @@ class Video107_RiemannIntegral(Scene):
             "Six: the Dirichlet function is not integrable. "
             "Next time: the Fundamental Theorem of Calculus, "
             "connecting derivatives and integrals.",
-            duration=35,
+            duration=35.2,
         )
         title = self.ly.title("Key Takeaways")
 
@@ -767,6 +767,6 @@ class Video107_RiemannIntegral(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(1)
+        self.wait(21.7)  # pacing: extends previous caption slot (+20.7s)
 
         play_outro(self, "Fundamental Theorem of Calculus", "Real Analysis I")

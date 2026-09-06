@@ -46,7 +46,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "Today we define what a group is, "
             "and see how this same structure appears everywhere in mathematics. "
             "This is the first video in our Abstract Algebra series.",
-            duration=15,
+            duration=24.2,  # pacing: 1.25x natural TTS slot
         )
         play_intro(self, "Groups: Definition and Examples", "Abstract Algebra I")
 
@@ -99,7 +99,7 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(comp_label, anchor=ref_label, direction=DOWN, buff=0.5)
         self.play(FadeIn(comp_label, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(12.6)  # pacing: extends previous caption slot
 
         # Fade out everything except title? We'll clear at end of scene.
         self.ly.clear()
@@ -115,7 +115,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "And the symmetries of a triangle. "
             "Each has a set, an operation, "
             "and three special properties.",
-            duration=14,
+            duration=19.0,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title("The Common Pattern")
@@ -151,7 +151,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             self.wait(0.2)
             prev = f
 
-        self.wait(0.5)
+        self.wait(10.6)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # --- Scene 3: Axioms ---
@@ -166,7 +166,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "Identity: there is a do-nothing element. "
             "Inverse: every element can be undone. "
             "Note that commutativity is NOT required.",
-            duration=18,
+            duration=29.7,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title("Definition: Group")
@@ -209,7 +209,7 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(note, anchor=prev, direction=DOWN, buff=0.5)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(19.7)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -224,7 +224,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "Zero is the identity element. "
             "And every integer n has negative n as its inverse. "
             "All four axioms satisfied. The integers form a group.",
-            duration=14,
+            duration=24.8,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title(r"Example: $(\mathbb{Z}, +)$")
@@ -257,7 +257,7 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(note, anchor=result, direction=DOWN, buff=0.4)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(15.9)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -273,7 +273,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "Zero is the identity. "
             "The inverse of n is 6 minus n. "
             "This is a finite group with exactly 6 elements.",
-            duration=15,
+            duration=28.5,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title(r"Example: $(\mathbb{Z}_6, +)$")
@@ -327,7 +327,7 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(chk2, anchor=chk1, direction=DOWN, buff=0.35)
         self.play(Write(chk2), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(21.2)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -343,7 +343,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "The integers under subtraction fail associativity: "
             "5 minus 3 minus 2 is 0, "
             "but 5 minus open paren 3 minus 2 close paren is 4.",
-            duration=16,
+            duration=33.8,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title("What Is NOT a Group?")
@@ -408,7 +408,7 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(fail, anchor=ne2b, direction=DOWN, buff=0.4)
         self.play(Write(fail), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(20.5)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -424,7 +424,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "But the symmetries of a triangle are not. "
             "Rotating then reflecting gives a different result than reflecting then rotating. "
             "Matrix multiplication and Rubik's cube moves are also non-abelian.",
-            duration=18,
+            duration=34.7,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title("Abelian Groups")
@@ -475,7 +475,7 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(hist, anchor=others, direction=DOWN, buff=0.3)
         self.play(FadeIn(hist, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(27.0)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -491,7 +491,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "it applies to all of these at once. "
             "That is the power of abstraction. "
             "Next time we will look at subgroups.",
-            duration=14,
+            duration=27.6,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title("Why Groups Matter")
@@ -535,7 +535,7 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(roadmap, anchor=preview_title, direction=DOWN, buff=0.3)
         self.play(FadeIn(roadmap, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(21.5)  # pacing: extends previous caption slot
 
         self.ly.clear()
 
@@ -553,7 +553,7 @@ class Video111_GroupsDefinitionExamples(Scene):
             "while non-abelian groups are common and important. "
             "This is the foundation of abstract algebra. "
             "Thanks for watching!",
-            duration=18,
+            duration=35.6,  # pacing: 1.25x natural TTS slot
         )
 
         title = self.ly.title("Summary")
@@ -574,6 +574,6 @@ class Video111_GroupsDefinitionExamples(Scene):
         )
         self.ly.safe_place(closing, anchor=takeaways[-1], direction=DOWN, buff=0.5)
         self.play(FadeIn(closing, scale=1.05), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(24.8)  # pacing: extends previous caption slot
 
         play_outro(self, "Groups: Definition and Examples", "Abstract Algebra I")

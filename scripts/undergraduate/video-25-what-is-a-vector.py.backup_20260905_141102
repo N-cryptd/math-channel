@@ -36,7 +36,6 @@ class Video25_WhatIsAVector(Scene):
 
         self.scene1_hook()
         self.scene2_geometric_view()
-        self.scene2c_2d_view()
         self.scene3_components()
         self.scene3b_basis_vectors()
         self.scene4_magnitude()
@@ -52,24 +51,14 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "Welcome to Linear Algebra. Today we answer a fundamental question: "
             "what exactly is a vector?",
-            duration=7.5,
+            duration=8,
         )
         play_intro(self, "What is a Vector?", "Linear Algebra")
-
-        # Hook card holds the central question while caption 1 finishes
-        hook = Text(
-            "What exactly is a vector?",
-            font_size=HEADING_SIZE, color=ACCENT, font=SANS, weight=BOLD,
-        )
-        self.ly.center_in_content(hook)
-        self.play(FadeIn(hook, shift=UP * 0.1), run_time=0.5)
-        self.wait(0.8)
-        self.play(FadeOut(hook), run_time=0.5)
 
         self.add_subcaption(
             "Vectors show up everywhere: physics uses them for forces and velocity, "
             "computer graphics for positions, and data science for features.",
-            duration=10.2,
+            duration=12,
         )
 
         contexts = [
@@ -79,12 +68,12 @@ class Video25_WhatIsAVector(Scene):
         ]
         self.ly.progressive_reveal(contexts, start_from=None,
                                    run_time=0.7, wait_time=0.8)
-        self.wait(5.5)
         self.ly.clear()
+
         # Key takeaway
         self.add_subcaption(
             "At their core, a vector is simply a quantity with both magnitude and direction.",
-            duration=6.9,
+            duration=6,
         )
         key = Text(
             "Magnitude + Direction",
@@ -92,7 +81,7 @@ class Video25_WhatIsAVector(Scene):
         )
         self.ly.center_in_content(key)
         self.play(Write(key), run_time=NORMAL)
-        self.wait(4.0)
+        self.wait(2.0)
         self.ly.clear()
 
     # ── Scene 2: The Geometric View ───────────────────────────────────
@@ -102,7 +91,7 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "Let's start with the most intuitive picture. "
             "On a number line, a vector is just a displacement from zero.",
-            duration=7.7,
+            duration=10,
         )
 
         # Number line
@@ -113,7 +102,7 @@ class Video25_WhatIsAVector(Scene):
         self.ly.center_in_content(number_line)
 
         self.play(Create(number_line), run_time=NORMAL)
-        self.wait(6.8)
+        self.wait(0.5)
 
         # Vector on number line
         vec_1d = Arrow(
@@ -127,11 +116,11 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "This arrow represents the number 3. "
             "It tells us: start at zero and move 3 units to the right.",
-            duration=7.9,
+            duration=8,
         )
         self.play(GrowArrow(vec_1d), run_time=NORMAL)
         self.play(Write(label_1d), run_time=FAST)
-        self.wait(5.7)
+        self.wait(2.0)
         self.ly.clear()
 
     def scene2b_2d(self):
@@ -143,7 +132,7 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "But in two dimensions, things get much more interesting. "
             "A vector is an arrow in the plane.",
-            duration=10.7,
+            duration=10,
         )
 
         plane = NumberPlane(
@@ -177,7 +166,7 @@ class Video25_WhatIsAVector(Scene):
         ]
         self.ly.progressive_reveal(concept_items, start_from=vec_2d,
                                    reveal_anim=FadeIn, run_time=0.7, wait_time=1.0)
-        self.wait(3.5)
+        self.wait(1.5)
         self.ly.clear()
 
     # ── Scene 3: Components ───────────────────────────────────────────
@@ -187,7 +176,7 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "To work with vectors mathematically, we describe them using components. "
             "Every vector can be broken down into an x-part and a y-part.",
-            duration=9.8,
+            duration=15,
         )
 
         plane = NumberPlane(
@@ -208,7 +197,6 @@ class Video25_WhatIsAVector(Scene):
         )
 
         self.play(Create(plane), GrowArrow(vec), run_time=NORMAL)
-        self.wait(9.0)
 
         # X-component
         x_comp = DashedLine(
@@ -220,10 +208,10 @@ class Video25_WhatIsAVector(Scene):
 
         self.add_subcaption(
             "The x-component is 2, the horizontal distance.",
-            duration=4.5,
+            duration=6,
         )
         self.play(Create(x_comp), Write(x_label), run_time=NORMAL)
-        self.wait(3.6)
+        self.wait(0.5)
 
         # Y-component
         y_comp = DashedLine(
@@ -235,10 +223,10 @@ class Video25_WhatIsAVector(Scene):
 
         self.add_subcaption(
             "The y-component is 3, the vertical distance.",
-            duration=4.4,
+            duration=6,
         )
         self.play(Create(y_comp), Write(y_label), run_time=NORMAL)
-        self.wait(3.3)
+        self.wait(1.5)
 
         # Vector notation — remove old items first to stay in budget
         self.play(FadeOut(x_comp), FadeOut(x_label), FadeOut(y_comp), FadeOut(y_label),
@@ -253,10 +241,10 @@ class Video25_WhatIsAVector(Scene):
 
         self.add_subcaption(
             "We write the vector as a column: v equals the column 2, 3.",
-            duration=12.6,
+            duration=8,
         )
         self.play(Write(formula_group), run_time=SLOW)
-        self.wait(4.0)
+        self.wait(2.0)
         self.ly.clear()
 
     def scene3b_basis_vectors(self):
@@ -318,7 +306,7 @@ class Video25_WhatIsAVector(Scene):
         clamp_position(formula_group)
 
         self.play(Write(formula_group), run_time=SLOW)
-        self.wait(4.0)
+        self.wait(2.0)
         self.ly.clear()
 
     # ── Scene 4: Magnitude ────────────────────────────────────────────
@@ -374,7 +362,7 @@ class Video25_WhatIsAVector(Scene):
             Create(right_angle),
             run_time=NORMAL,
         )
-        self.wait(3.5)
+        self.wait(1.5)
         self.ly.clear()
 
     def scene4b_formula(self):
@@ -407,7 +395,7 @@ class Video25_WhatIsAVector(Scene):
         clamp_position(gen_group)
 
         self.play(Write(gen_group), run_time=NORMAL)
-        self.wait(4.0)
+        self.wait(2.0)
         self.ly.clear()
 
     # ── Scene 5: Vector Addition (Tip to Tail) ────────────────────────
@@ -417,7 +405,7 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "How do we add two vectors? "
             "The rule is simple: tip to tail.",
-            duration=15.1,
+            duration=8,
         )
 
         plane = NumberPlane(
@@ -450,7 +438,7 @@ class Video25_WhatIsAVector(Scene):
         self.play(Create(plane), GrowArrow(a_vec), Write(a_label), run_time=NORMAL)
         self.wait(0.5)
         self.play(GrowArrow(b_vec_orig), Write(b_label_orig), run_time=NORMAL)
-        self.wait(3.0)
+        self.wait(1.0)
         self.ly.clear()
 
     def scene5b_result(self):
@@ -518,7 +506,7 @@ class Video25_WhatIsAVector(Scene):
         self.ly.center_in_content(formula_group)
 
         self.play(Write(formula_group), run_time=SLOW)
-        self.wait(4.0)
+        self.wait(2.0)
         self.ly.clear()
 
     # ── Scene 6: Scalar Multiplication ────────────────────────────────
@@ -528,7 +516,7 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "What happens when we multiply a vector by a plain number, "
             "called a scalar? It stretches or flips the vector.",
-            duration=7.8,
+            duration=10,
         )
 
         plane = NumberPlane(
@@ -551,7 +539,7 @@ class Video25_WhatIsAVector(Scene):
         orig_label.next_to(orig_vec.get_end(), UR, buff=0.15)
 
         self.play(Create(plane), GrowArrow(orig_vec), Write(orig_label), run_time=NORMAL)
-        self.wait(6.9)
+        self.wait(0.5)
 
         # Scale by 2
         vec_2 = Arrow(
@@ -565,10 +553,10 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "Multiply by 2: the vector stretches to twice its length, "
             "same direction. Each component gets doubled.",
-            duration=7.9,
+            duration=8,
         )
         self.play(GrowArrow(vec_2), Write(label_2), run_time=NORMAL)
-        self.wait(7.0)
+        self.wait(1.0)
 
         # Scale by -1
         vec_neg = Arrow(
@@ -584,10 +572,10 @@ class Video25_WhatIsAVector(Scene):
         self.add_subcaption(
             "Multiply by negative 1: the vector flips to point the opposite way. "
             "Same length, opposite direction.",
-            duration=7.4,
+            duration=8,
         )
         self.play(GrowArrow(vec_neg), Write(label_neg), run_time=NORMAL)
-        self.wait(6.0)
+        self.wait(1.5)
         self.ly.clear()
 
     def scene6b_insight(self):
@@ -605,7 +593,7 @@ class Video25_WhatIsAVector(Scene):
             Text("through the origin", font_size=BODY_SIZE, color=DIM, font=SANS),
         ]
         self.ly.progressive_reveal(insight_items, run_time=0.7, wait_time=1.0)
-        self.wait(4.0)
+        self.wait(2.0)
         self.ly.clear()
 
     # ── Scene 7: Summary + Outro ──────────────────────────────────────
@@ -614,7 +602,7 @@ class Video25_WhatIsAVector(Scene):
 
         self.add_subcaption(
             "Let's recap what we've learned about vectors.",
-            duration=10.2,
+            duration=5,
         )
 
         bullets = [
@@ -625,7 +613,7 @@ class Video25_WhatIsAVector(Scene):
             Text("5. Scalar mult: stretches / flips, same line", font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(bullets, run_time=0.7, wait_time=0.6)
-        self.wait(3.0)
+        self.wait(1.0)
 
         self.ly.clear()
 
@@ -634,7 +622,7 @@ class Video25_WhatIsAVector(Scene):
             "But what if we combine scalars and vectors freely? "
             "What set of points can we reach? That is the span, "
             "and it is the topic of our next video.",
-            duration=10.2,
+            duration=10,
         )
 
         teaser = Text(

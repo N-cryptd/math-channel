@@ -67,7 +67,7 @@ class Video125_QuotientRings(Scene):
             "for ANY ring, not just the integers? "
             "The answer is yes, using ideals. "
             "This is Abstract Algebra, Video 125.",
-            duration=35,
+            duration=23.4,
         )
         play_intro(self, "Quotient Rings", "Abstract Algebra I")
 
@@ -131,7 +131,7 @@ class Video125_QuotientRings(Scene):
             "Ideals are the ring-theoretic analog of normal subgroups. "
             "Just as normal subgroups let us quotient groups, "
             "ideals let us quotient rings.",
-            duration=30,
+            duration=26.4,
         )
 
         self.ly.section_divider("1", "Recap: Why Ideals Matter")
@@ -206,7 +206,7 @@ class Video125_QuotientRings(Scene):
             "For multiplication, we need I to be an ideal "
             "to guarantee that a plus I times b plus I "
             "always lands in a b plus I.",
-            duration=60,
+            duration=47.7,
         )
 
         self.ly.section_divider("2", "Constructing R/I")
@@ -269,7 +269,7 @@ class Video125_QuotientRings(Scene):
             Text("Result: R/I is a bona fide ring", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title3, run_time=0.8)
-        self.wait(10)
+        self.wait(14.3)  # pacing: extends previous caption slot (natural TTS 47.6s, bar 51.7s)
 
         self.ly.clear()
 
@@ -290,7 +290,7 @@ class Video125_QuotientRings(Scene):
             "These are zero divisors! "
             "This tells us the ideal 6Z is neither prime nor maximal, "
             "since Z over 6Z is not an integral domain.",
-            duration=45,
+            duration=40.5,
         )
 
         self.ly.section_divider("3", "Example: Z/6Z")
@@ -372,7 +372,7 @@ class Video125_QuotientRings(Scene):
             "Every nonzero element has a multiplicative inverse. "
             "We've just constructed F subscript 4, "
             "the finite field of order 4.",
-            duration=50,
+            duration=49.7,
         )
 
         self.ly.section_divider("4", "Example: Constructing F_4")
@@ -432,7 +432,7 @@ class Video125_QuotientRings(Scene):
             Text("This is a FIELD (unlike Z subscript 4)", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed3, run_time=0.8)
-        self.wait(8)
+        self.wait(17.0)  # pacing: extends previous caption slot (natural TTS 49.6s, bar 53.9s)
 
         self.ly.clear()
 
@@ -455,7 +455,7 @@ class Video125_QuotientRings(Scene):
             "Example: the evaluation map from Z to Z subscript 7 "
             "sending n to n mod 7 has kernel 7Z. "
             "So Z over 7Z is isomorphic to Z subscript 7.",
-            duration=55,
+            duration=42.9,
         )
 
         self.ly.section_divider("5", "First Isomorphism Theorem")
@@ -553,7 +553,7 @@ class Video125_QuotientRings(Scene):
         boxed_res = self.ly.formula_box(result, color=SECONDARY)
         self.ly.safe_place(boxed_res, anchor=boxed_ex, direction=DOWN, buff=0.4)
         self.play(Write(result), Create(boxed_res[1]), run_time=NORMAL)
-        self.wait(5)
+        self.wait(8.8)  # pacing: extends previous caption slot (natural TTS 42.9s, bar 46.6s)
 
         self.ly.clear()
 
@@ -575,7 +575,7 @@ class Video125_QuotientRings(Scene):
             "of R over I entirely through the ideals of R. "
             "It's like collapsing the lattice of ideals "
             "by quotienting out I.",
-            duration=40,
+            duration=35.1,
         )
 
         self.ly.section_divider("6", "Correspondence Theorem")
@@ -647,7 +647,7 @@ class Video125_QuotientRings(Scene):
             Create(arrow_collapse),
             run_time=NORMAL,
         )
-        self.wait(6)
+        self.wait(10.3)  # pacing: extends previous caption slot (natural TTS 35.0s, bar 38.1s)
 
         self.ly.clear()
 
@@ -673,7 +673,7 @@ class Video125_QuotientRings(Scene):
             "has the same form in both worlds. "
             "This completes our Abstract Algebra I playlist. "
             "Thank you for watching!",
-            duration=35,
+            duration=45.3,
         )
 
         title = self.ly.title("Summary: Quotient Rings")
@@ -712,7 +712,7 @@ class Video125_QuotientRings(Scene):
             *[FadeIn(item, shift=RIGHT * 0.15) for item in right_items],
             run_time=1.5,
         )
-        self.wait(8)
+        self.wait(23.0)  # pacing: extends previous caption slot (natural TTS 45.2s, bar 49.2s)
 
         self.ly.clear()
 

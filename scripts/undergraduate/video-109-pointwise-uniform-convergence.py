@@ -59,7 +59,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "matters, and discover that uniform convergence "
             "preserves continuity and lets us interchange "
             "limits with integrals.",
-            duration=20,
+            duration=22.6,
         )
         play_intro(self, "Pointwise vs Uniform Convergence", "Real Analysis I")
 
@@ -89,7 +89,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(note, direction=DOWN, anchor=axes, buff=0.1)
         self.play(Write(note), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(11.4)  # pacing: extends previous caption slot (Δ=9.9)
         self.ly.clear()
 
     # --- Scene 2: Pointwise Convergence ---
@@ -105,7 +105,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "is less than epsilon. "
             "The key point: N can depend on x. "
             "Different x values may need different N.",
-            duration=25,
+            duration=29.5,
         )
         self.ly.section_divider("1", "Pointwise Convergence")
         self.ly.clear()
@@ -134,7 +134,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(note, direction=DOWN, anchor=formal, buff=0.3)
         self.play(Write(note), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(21.5)  # pacing: extends previous caption slot (Δ=20.0)
         self.ly.clear()
 
     # --- Scene 3: Uniform Convergence ---
@@ -150,7 +150,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "epsilon. "
             "The key: N does NOT depend on x. "
             "One N works for the entire domain.",
-            duration=25,
+            duration=25.7,
         )
         self.ly.section_divider("2", "Uniform Convergence")
         self.ly.clear()
@@ -179,7 +179,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(note, direction=DOWN, anchor=formal, buff=0.3)
         self.play(Write(note), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(17.4)  # pacing: extends previous caption slot (Δ=15.9)
         self.ly.clear()
 
     # --- Scene 4: The Key Example: x^n ---
@@ -199,7 +199,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "Moreover, the supremum of the difference is "
             "always close to one near x equals one. "
             "So the convergence is NOT uniform.",
-            duration=30,
+            duration=36.3,
         )
         self.ly.section_divider("3", "The Key Example: xⁿ")
         self.ly.clear()
@@ -246,7 +246,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(conclusion, direction=DOWN, anchor=limit_label, buff=0.1)
         self.play(Write(conclusion), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(26.7)  # pacing: extends previous caption slot (Δ=25.2)
         self.ly.clear()
 
     # --- Scene 5: Uniform Limit of Continuous is Continuous ---
@@ -263,7 +263,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "The triangle inequality combines them to show "
             "f is continuous with tolerance epsilon. "
             "Uniform convergence preserves continuity.",
-            duration=28,
+            duration=30.9,
         )
         self.ly.section_divider("4", "Uniform Limit of Continuous is Continuous")
         self.ly.clear()
@@ -300,7 +300,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=step2, buff=0.3)
         self.play(Write(result), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(22.6)  # pacing: extends previous caption slot (Δ=21.1)
         self.ly.clear()
 
     # --- Scene 6: Interchange of Limit and Integral ---
@@ -319,7 +319,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "a times the supremum, which goes to zero. "
             "Uniform convergence lets you pull the limit "
             "inside the integral.",
-            duration=30,
+            duration=34.3,
         )
         self.ly.section_divider("5", "Interchange of Limit and Integral")
         self.ly.clear()
@@ -356,7 +356,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=result, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(26.0)  # pacing: extends previous caption slot (Δ=24.5)
         self.ly.clear()
 
     # --- Scene 7: Dini's Theorem ---
@@ -371,7 +371,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "Dini's theorem upgrades pointwise to uniform "
             "under the right conditions. "
             "Compactness is essential!",
-            duration=22,
+            duration=24.7,
         )
         self.ly.section_divider("6", "Dini's Theorem")
         self.ly.clear()
@@ -408,7 +408,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=concl, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(15.0)  # pacing: extends previous caption slot (Δ=13.5)
         self.ly.clear()
 
     # --- Scene 8: Visual Comparison ---
@@ -421,7 +421,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "Uniform: one N works for all x. The curves "
             "converge at the same rate everywhere, trapped "
             "within an epsilon tube around the limit.",
-            duration=20,
+            duration=19.0,
         )
         title = self.ly.title("Pointwise vs Uniform")
 
@@ -433,7 +433,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             Text("Uniform allows interchange with ∫", font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(1.5)
+        self.wait(13.0)  # pacing: extends previous caption slot (Δ=11.5)
         self.ly.clear()
 
     # --- Scene 9: Summary + Outro ---
@@ -453,7 +453,7 @@ class Video109_PointwiseUniformConvergence(Scene):
             "Six: Dini's theorem upgrades pointwise to "
             "uniform with monotonicity and compactness. "
             "Next time: Series of Functions.",
-            duration=32,
+            duration=35.8,
         )
         title = self.ly.title("Key Takeaways")
 
@@ -472,6 +472,6 @@ class Video109_PointwiseUniformConvergence(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(1)
+        self.wait(22.1)  # pacing: extends previous caption slot (Δ=21.1)
 
         play_outro(self, "Series of Functions", "Real Analysis I")

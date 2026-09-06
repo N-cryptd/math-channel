@@ -20,7 +20,7 @@ from channel_branding import (
     FAST, NORMAL, SLOW,
     play_intro, play_outro, setup_background,
 )
-from layout import LayoutEngine, ensure_fits
+from layout import LayoutEngine, ensure_fits, clamp_position
 import numpy as np
 
 
@@ -122,7 +122,7 @@ class Video29_Determinants(Scene):
             "Every matrix transformation stretches, squishes, "
             "or flips space. The determinant is the single number "
             "that tells you exactly how much.",
-            duration=14,
+            duration=9.6,
         )
         play_intro(self, "Determinants", "Linear Algebra")
 
@@ -151,7 +151,7 @@ class Video29_Determinants(Scene):
             "which has area 1. Apply a matrix transformation. "
             "The square becomes a parallelogram. "
             "The determinant is the area of that parallelogram.",
-            duration=18,
+            duration=13.4,
         )
 
         self.ly.title("The Geometric Meaning")
@@ -169,7 +169,7 @@ class Video29_Determinants(Scene):
 
         self.play(FadeIn(sq), run_time=NORMAL)
         self.play(Write(sq_label), run_time=FAST)
-        self.wait(1.0)
+        self.wait(11.2)  # pacing: caption 2 slot (natural 12.65s)
 
         # Apply transformation A = [[3,1],[0,2]]
         # det = 3*2 - 1*0 = 6, so area = 6
@@ -182,7 +182,7 @@ class Video29_Determinants(Scene):
             "The unit square stretches into a parallelogram. "
             "The determinant of this matrix is 6, "
             "so the new area is 6 times the original.",
-            duration=16,
+            duration=11.1,
         )
 
         self.play(
@@ -200,14 +200,14 @@ class Video29_Determinants(Scene):
             Transform(sq_label, new_label),
             run_time=FAST,
         )
-        self.wait(1.5)
+        self.wait(9.5)  # pacing: caption 3 slot (natural 10.34s)
 
         # Key insight box
         self.add_subcaption(
             "In general, det of A equals the area scaling factor. "
             "If det of A is 2, areas double. "
             "If det of A is one half, areas halve.",
-            duration=14,
+            duration=10.5,
         )
 
         formula = MathTex(
@@ -218,7 +218,7 @@ class Video29_Determinants(Scene):
         formula_group = VGroup(formula, box)
         formula_group.move_to(DOWN * 2.5)
         self.play(Write(formula), Create(box), run_time=NORMAL)
-        self.wait(2.0)
+        self.wait(9.1)  # pacing: caption 4 slot (natural 9.72s)
 
         self.ly.clear()
 
@@ -228,7 +228,7 @@ class Video29_Determinants(Scene):
             "So how do we compute this area scaling factor? "
             "Consider a general 2 by 2 matrix with entries a, b, c, d. "
             "The columns give us two vectors: (a, c) and (b, d).",
-            duration=16,
+            duration=14.6,
         )
 
         self.ly.title("The 2 by 2 Formula")
@@ -240,7 +240,7 @@ class Video29_Determinants(Scene):
         )
         self.ly.center_in_content(mat)
         self.play(Write(mat), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(12.5)  # pacing: caption 5 slot (natural 13.87s)
 
         # Show columns as vectors
         self.ly.clear()
@@ -249,7 +249,7 @@ class Video29_Determinants(Scene):
             "Column 1 is the vector (a, c) and column 2 is (b, d). "
             "The parallelogram formed by these two vectors "
             "has area equal to the absolute value of a d minus b c.",
-            duration=16,
+            duration=14.7,
         )
 
         cols = MathTex(
@@ -260,7 +260,7 @@ class Video29_Determinants(Scene):
         )
         self.ly.center_in_content(cols)
         self.play(Write(cols), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(13.3)  # pacing: caption 6 slot (natural 13.94s)
 
         self.ly.clear()
 
@@ -269,7 +269,7 @@ class Video29_Determinants(Scene):
             "The area of a parallelogram formed by two vectors "
             "is the magnitude of their cross product. "
             "This gives the determinant formula.",
-            duration=12,
+            duration=9.0,
         )
 
         # Show derivation step by step
@@ -280,7 +280,7 @@ class Video29_Determinants(Scene):
         )
         self.ly.center_in_content(cross)
         self.play(Write(cross), run_time=SLOW)
-        self.wait(1.5)
+        self.wait(6.8)  # pacing: caption 7 slot (natural 8.21s)
 
         self.ly.clear()
 
@@ -289,7 +289,7 @@ class Video29_Determinants(Scene):
             "So the determinant of a 2 by 2 matrix is simply "
             "a times d minus b times c. "
             "This is one of the most important formulas in linear algebra.",
-            duration=14,
+            duration=10.3,
         )
 
         formula = MathTex(
@@ -304,7 +304,7 @@ class Video29_Determinants(Scene):
         )
         self.play(Write(formula), run_time=NORMAL)
         self.play(Create(box), run_time=FAST)
-        self.wait(2.0)
+        self.wait(8.4)  # pacing: caption 8 slot (natural 9.60s)
 
         self.ly.clear()
 
@@ -315,7 +315,7 @@ class Video29_Determinants(Scene):
             "It is signed area. When the determinant is positive, "
             "orientation is preserved. "
             "When it is negative, orientation gets flipped.",
-            duration=16,
+            duration=11.8,
         )
 
         self.ly.title("Signed Area and Orientation")
@@ -352,7 +352,7 @@ class Video29_Determinants(Scene):
             Write(label_left), Write(label_right),
             run_time=FAST,
         )
-        self.wait(0.5)
+        self.wait(10.6)  # pacing: caption 9 slot (natural 11.09s)
 
         # Transform left: stretch horizontally (det = 2)
         t_left = apply_to_plane(plane_left, [[2, 0], [0, 1]])
@@ -361,14 +361,14 @@ class Video29_Determinants(Scene):
             "The determinant is positive 2. "
             "Orientation is preserved: i-hat still points right, "
             "j-hat still points up.",
-            duration=16,
+            duration=12.2,
         )
         self.play(
             Transform(plane_left, t_left),
             Transform(sq_left, para_left),
             run_time=1.5,
         )
-        self.wait(1.0)
+        self.wait(11.3)  # pacing: caption 10 slot (natural 11.45s)
 
         # Transform right: reflect across y=x (det = -1)
         t_right = apply_to_plane(plane_right, [[0, 1], [1, 0]])
@@ -376,7 +376,7 @@ class Video29_Determinants(Scene):
             "On the right, we reflect across the line y equals x. "
             "The area is still 1, but the determinant is negative 1. "
             "Orientation is flipped: i-hat and j-hat have swapped.",
-            duration=16,
+            duration=13.1,
         )
         self.play(
             Transform(plane_right, t_right),
@@ -391,7 +391,7 @@ class Video29_Determinants(Scene):
             font_size=BODY_SIZE, color=WHITE, font=SANS,
         ).move_to(DOWN * 2.8)
         self.play(Write(summary), run_time=NORMAL)
-        self.wait(2.0)
+        self.wait(9.2)  # pacing: caption 11 slot (natural 12.34s)
 
         self.ly.clear()
 
@@ -403,7 +403,7 @@ class Video29_Determinants(Scene):
             "something dramatic happens. "
             "The transformation squishes all of 2D space "
             "into a lower dimension.",
-            duration=16,
+            duration=11.8,
         )
 
         self.ly.title("det = 0 : Space Collapses")
@@ -422,7 +422,7 @@ class Video29_Determinants(Scene):
             GrowArrow(j_hat), Write(j_label),
             run_time=FAST,
         )
-        self.wait(0.5)
+        self.wait(9.9)  # pacing: caption 12 slot (natural 11.02s)
 
         # Apply [[1,2],[2,4]] — det = 1*4 - 2*2 = 0, squishes to line y=2x
         self.add_subcaption(
@@ -430,7 +430,7 @@ class Video29_Determinants(Scene):
             "1 times 4 minus 2 times 2 equals 0. "
             "Watch what happens to the grid. "
             "The entire 2D plane collapses onto a single line.",
-            duration=16,
+            duration=12.5,
         )
 
         zero_mat = [[1, 2], [2, 4]]
@@ -473,7 +473,7 @@ class Video29_Determinants(Scene):
             font_size=HEADING_SIZE, color=RED, font=SANS, weight=BOLD,
         ).move_to(DOWN * 2.5)
         self.play(Write(zero_label), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(8.9)  # pacing: caption 13 slot (natural 11.71s)
 
         # Connection to invertibility
         self.add_subcaption(
@@ -481,7 +481,7 @@ class Video29_Determinants(Scene):
             "You cannot undo the transformation because information "
             "was lost. Every point on that line came from multiple "
             "original points.",
-            duration=16,
+            duration=13.2,
         )
 
         invert = MathTex(
@@ -491,7 +491,7 @@ class Video29_Determinants(Scene):
         invert_box = SurroundingRectangle(invert, color=ACCENT, buff=0.2, stroke_width=2)
         VGroup(invert, invert_box).move_to(UP * 2.5)
         self.play(Write(invert), Create(invert_box), run_time=NORMAL)
-        self.wait(2.0)
+        self.wait(11.8)  # pacing: caption 14 slot (natural 12.43s)
 
         self.ly.clear()
 
@@ -501,7 +501,7 @@ class Video29_Determinants(Scene):
             "Let's compute a determinant step by step. "
             "Take the matrix with rows 2, 1 and 5, 3. "
             "We apply the formula: a times d minus b times c.",
-            duration=14,
+            duration=12.0,
         )
 
         self.ly.title("Worked Example")
@@ -513,7 +513,7 @@ class Video29_Determinants(Scene):
         )
         self.ly.center_in_content(mat)
         self.play(Write(mat), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(9.9)  # pacing: caption 15 slot (natural 11.23s)
 
         self.ly.clear()
 
@@ -521,7 +521,7 @@ class Video29_Determinants(Scene):
             "The determinant is 2 times 3 minus 1 times 5, "
             "which equals 6 minus 5, which equals 1. "
             "This transformation preserves area.",
-            duration=14,
+            duration=10.8,
         )
 
         # Computation
@@ -549,7 +549,7 @@ class Video29_Determinants(Scene):
             font=SANS, weight=BOLD,
         ).next_to(step2, DOWN, buff=0.5)
         self.play(Write(result_label), run_time=FAST)
-        self.wait(2.0)
+        self.wait(4.9)  # pacing: caption 16 slot (natural 10.08s)
 
         self.ly.clear()
 
@@ -559,7 +559,7 @@ class Video29_Determinants(Scene):
             "Matrix with rows 1, 2 and 3, 6. "
             "The determinant is 1 times 6 minus 2 times 3, "
             "equals 6 minus 6, equals 0.",
-            duration=16,
+            duration=13.1,
         )
 
         mat2 = MathTex(
@@ -585,7 +585,7 @@ class Video29_Determinants(Scene):
             font=SANS, weight=BOLD,
         ).next_to(comp2, DOWN, buff=0.5)
         self.play(Write(zero_note), run_time=FAST)
-        self.wait(2.0)
+        self.wait(8.7)  # pacing: caption 17 slot (natural 12.34s)
 
         self.ly.clear()
 
@@ -594,16 +594,17 @@ class Video29_Determinants(Scene):
         self.add_subcaption(
             "The determinant has several beautiful properties "
             "that follow from its geometric meaning.",
-            duration=10,
+            duration=5.6,
         )
 
-        self.ly.title("Key Properties")
+        title = self.ly.title("Key Properties")
+        self.wait(6.3)  # pacing: caption 18 slot (natural 4.90s) — title on screen
 
         # Property 1: Identity
         self.add_subcaption(
             "The determinant of the identity matrix is 1, "
             "because the identity does not change area.",
-            duration=8,
+            duration=6.7,
         )
 
         prop1_title = Text(
@@ -615,13 +616,16 @@ class Video29_Determinants(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         prop1 = VGroup(prop1_title, prop1_formula).arrange(RIGHT, buff=0.5)
+        self.ly.safe_place(prop1, direction=DOWN, anchor=title, buff=0.6)
+        self.play(FadeIn(prop1, shift=LEFT * 0.2), run_time=0.8)
+        self.wait(6.6)  # pacing: caption 19 slot (natural 5.95s)
 
         # Property 2: Multiplicativity
         self.add_subcaption(
             "The determinant of a product equals the product "
             "of the determinants. "
             "Area scaling factors compose by multiplication.",
-            duration=12,
+            duration=8.4,
         )
 
         prop2_title = Text(
@@ -633,13 +637,16 @@ class Video29_Determinants(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         prop2 = VGroup(prop2_title, prop2_formula).arrange(RIGHT, buff=0.5)
+        self.ly.safe_place(prop2, direction=DOWN, anchor=prop1, buff=0.4)
+        self.play(FadeIn(prop2, shift=LEFT * 0.2), run_time=0.8)
+        self.wait(8.3)  # pacing: caption 20 slot (natural 7.66s)
 
         # Property 3: Transpose
         self.add_subcaption(
             "The determinant of a transpose equals the determinant "
             "of the original matrix. "
             "Swapping rows for columns does not change area scaling.",
-            duration=14,
+            duration=9.5,
         )
 
         prop3_title = Text(
@@ -651,6 +658,9 @@ class Video29_Determinants(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         prop3 = VGroup(prop3_title, prop3_formula).arrange(RIGHT, buff=0.5)
+        self.ly.safe_place(prop3, direction=DOWN, anchor=prop2, buff=0.4)
+        self.play(FadeIn(prop3, shift=LEFT * 0.2), run_time=0.8)
+        self.wait(9.4)  # pacing: caption 21 slot (natural 8.74s)
 
         # Property 4: Scalar multiple
         self.add_subcaption(
@@ -658,7 +668,7 @@ class Video29_Determinants(Scene):
             "multiplies the determinant by c. "
             "Scaling the entire matrix by c multiplies "
             "the determinant by c squared for a 2 by 2 matrix.",
-            duration=16,
+            duration=12.0,
         )
 
         prop4_title = Text(
@@ -670,13 +680,16 @@ class Video29_Determinants(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         prop4 = VGroup(prop4_title, prop4_formula).arrange(RIGHT, buff=0.5)
+        self.ly.safe_place(prop4, direction=DOWN, anchor=prop3, buff=0.4)
+        self.play(FadeIn(prop4, shift=LEFT * 0.2), run_time=0.8)
+        self.wait(11.9)  # pacing: caption 22 slot (natural 11.23s)
 
         # Property 5: Row swap
         self.add_subcaption(
             "Swapping two rows of a matrix "
             "changes the sign of the determinant. "
             "This corresponds to flipping orientation.",
-            duration=12,
+            duration=8.3,
         )
 
         prop5_title = Text(
@@ -688,11 +701,9 @@ class Video29_Determinants(Scene):
             font_size=HEADING_SIZE, color=WHITE,
         )
         prop5 = VGroup(prop5_title, prop5_formula).arrange(RIGHT, buff=0.5)
-
-        # Progressive reveal
-        items = [prop1, prop2, prop3, prop4, prop5]
-        self.ly.progressive_reveal(items, start_from=None)
-        self.wait(1.0)
+        self.ly.safe_place(prop5, direction=DOWN, anchor=prop4, buff=0.4)
+        self.play(FadeIn(prop5, shift=LEFT * 0.2), run_time=0.8)
+        self.wait(8.2)  # pacing: caption 23 slot (natural 7.54s)
 
         self.ly.clear()
 
@@ -703,7 +714,7 @@ class Video29_Determinants(Scene):
             "a transformation scales area. "
             "It is positive when orientation is preserved, "
             "negative when flipped, and zero when space collapses.",
-            duration=16,
+            duration=12.4,
         )
 
         self.ly.title("Key Takeaways")
@@ -722,7 +733,7 @@ class Video29_Determinants(Scene):
         ]
         self.ly.progressive_reveal(bullets, run_time=0.6, wait_time=0.5)
 
-        self.wait(1.0)
+        self.wait(6.2)  # pacing: caption 24 slot (natural 11.69s)
         self.ly.clear()
 
         # Teaser
@@ -731,7 +742,16 @@ class Video29_Determinants(Scene):
             "the transformation that undoes your transformation. "
             "And we will see exactly why det = 0 "
             "means no inverse exists. See you then!",
-            duration=16,
+            duration=13.5,
         )
+
+        teaser = Text(
+            "Can every transformation be undone?",
+            font_size=HEADING_SIZE, color=ACCENT, font=SANS, weight=BOLD,
+        )
+        self.ly.center_in_content(teaser)
+        self.play(FadeIn(teaser, shift=LEFT * 0.15), run_time=0.5)
+        self.wait(6.0)  # pacing: caption 25 slot (natural 12.74s) — teaser card holds
+        self.play(FadeOut(teaser), run_time=0.5)
 
         play_outro(self, "Inverse Matrices", "Linear Algebra")

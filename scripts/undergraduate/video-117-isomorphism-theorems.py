@@ -58,7 +58,7 @@ class Video117_IsomorphismTheorems(Scene):
             "This is the First Isomorphism Theorem, "
             "and it has two powerful consequences. "
             "This is Abstract Algebra, Video 7.",
-            duration=30,
+            duration=27.0,  # pacing: 1.08x natural 24.74 + 0.3
         )
         play_intro(self, "Isomorphism Theorems", "Abstract Algebra I")
 
@@ -81,7 +81,7 @@ class Video117_IsomorphismTheorems(Scene):
         self.play(FadeOut(items[0]), run_time=FAST)
         self.ly.safe_place(boxed, anchor=items[-1], direction=DOWN, buff=0.5)
         self.play(Write(payoff), Create(boxed[1]), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(18.0)  # pacing: extends previous caption slot (Δ=17.5)
 
         self.ly.clear()
 
@@ -99,7 +99,7 @@ class Video117_IsomorphismTheorems(Scene):
             "Third, the image is the set of all elements in H "
             "that actually get hit by phi. "
             "The image is always a subgroup of H.",
-            duration=24,
+            duration=34.8,  # pacing: 1.08x natural 31.90 + 0.3
         )
 
         title = self.ly.title("Recap: Homomorphisms")
@@ -145,7 +145,7 @@ class Video117_IsomorphismTheorems(Scene):
         self.play(Write(recap_items[2]), run_time=FAST)
         self.ly.safe_place(labels[2], anchor=recap_items[2], direction=DOWN, buff=0.25)
         self.play(FadeIn(labels[2], shift=LEFT * 0.1), run_time=FAST)
-        self.wait(0.5)
+        self.wait(33.8)  # pacing: extends previous caption slot (Δ=33.3)
 
         self.ly.clear()
 
@@ -165,7 +165,7 @@ class Video117_IsomorphismTheorems(Scene):
             "Each coset maps to exactly one element of the image. "
             "The quotient group G over ker phi "
             "captures exactly this collapsed structure.",
-            duration=28,
+            duration=41.9,  # pacing: 1.08x natural 38.54 + 0.3
         )
 
         self.ly.section_divider(1, "First Isomorphism Theorem — Intuition")
@@ -214,7 +214,7 @@ class Video117_IsomorphismTheorems(Scene):
         self.play(FadeOut(arrow), FadeOut(phi_label), FadeOut(h_label), run_time=FAST)
         self.ly.safe_place(boxed, anchor=insight2, direction=DOWN, buff=0.5)
         self.play(Write(conclusion), Create(boxed[1]), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(38.8)  # pacing: extends previous caption slot (Δ=38.3)
 
         self.ly.clear()
 
@@ -242,7 +242,7 @@ class Video117_IsomorphismTheorems(Scene):
             "Step four, surjective. "
             "For any y in im phi, choose g with phi of g equals y. "
             "Then phi-hat of g ker equals y.",
-            duration=44,
+            duration=68.9,  # pacing: 1.08x natural 63.55 + 0.3
         )
 
         self.ly.section_divider(2, "First Isomorphism Theorem — Statement & Proof")
@@ -294,7 +294,7 @@ class Video117_IsomorphismTheorems(Scene):
             prev = step_group
             self.wait(0.2)
 
-        self.wait(0.5)
+        self.wait(68.9)  # pacing: extends previous caption slot (Δ=68.4)
         self.ly.clear()
 
     # --- Scene 5: First Isomorphism Theorem -- Examples ---
@@ -316,7 +316,7 @@ class Video117_IsomorphismTheorems(Scene):
             "The kernel is n Z and the image is Z over n Z. "
             "So Z over n Z is isomorphic to Z over n Z, "
             "which confirms the structure.",
-            duration=36,
+            duration=55.1,  # pacing: 1.08x natural 50.76 + 0.3
         )
 
         self.ly.section_divider(3, "First Isomorphism Theorem — Examples")
@@ -377,7 +377,7 @@ class Video117_IsomorphismTheorems(Scene):
         )
         self.ly.safe_place(ex3_result, anchor=ex3_title, direction=DOWN, buff=0.3)
         self.play(Write(ex3_result), run_time=FAST)
-        self.wait(0.5)
+        self.wait(53.7)  # pacing: extends previous caption slot (Δ=53.2)
 
         self.ly.clear()
 
@@ -396,7 +396,7 @@ class Video117_IsomorphismTheorems(Scene):
             "And H intersect N is normal in H. "
             "This is sometimes called the Diamond Isomorphism Theorem "
             "because the subgroups form a diamond shape in the lattice.",
-            duration=28,
+            duration=34.7,  # pacing: 1.08x natural 31.85 + 0.3
         )
 
         self.ly.section_divider(4, "Second Isomorphism Theorem")
@@ -447,7 +447,7 @@ class Video117_IsomorphismTheorems(Scene):
         boxed = self.ly.formula_box(theorem, color=ACCENT)
         self.ly.safe_place(boxed, anchor=diamond, direction=DOWN, buff=0.4)
         self.play(Write(theorem), Create(boxed[1]), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(32.7)  # pacing: extends previous caption slot (Δ=32.2)
 
         self.ly.clear()
 
@@ -466,7 +466,7 @@ class Video117_IsomorphismTheorems(Scene):
             "because any element h n N equals h N for some h in H. "
             "Applying the First Isomorphism Theorem, "
             "H over H intersect N is isomorphic to HN over N.",
-            duration=28,
+            duration=45.6,  # pacing: 1.08x natural 41.93 + 0.3
         )
 
         self.ly.section_divider(5, "Second Isomorphism Theorem — Proof")
@@ -521,7 +521,7 @@ class Video117_IsomorphismTheorems(Scene):
         boxed = self.ly.formula_box(result, color=ACCENT)
         self.ly.safe_place(boxed, anchor=apply_fit, direction=DOWN, buff=0.4)
         self.play(Write(result), Create(boxed[1]), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(42.3)  # pacing: extends previous caption slot (Δ=41.8)
 
         self.ly.clear()
 
@@ -543,7 +543,7 @@ class Video117_IsomorphismTheorems(Scene):
             "Applying the First Isomorphism Theorem gives the result. "
             "Quotienting by N then by K over N "
             "is the same as quotienting by K directly.",
-            duration=28,
+            duration=49.2,  # pacing: 1.08x natural 45.29 + 0.3
         )
 
         self.ly.section_divider(6, "Third Isomorphism Theorem")
@@ -589,7 +589,7 @@ class Video117_IsomorphismTheorems(Scene):
         boxed = self.ly.formula_box(theorem, color=ACCENT)
         self.ly.safe_place(boxed, anchor=tower, direction=DOWN, buff=0.4)
         self.play(Write(theorem), Create(boxed[1]), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(49.5)  # pacing: extends previous caption slot (Δ=49.0)
 
         self.ly.clear()
 
@@ -613,7 +613,7 @@ class Video117_IsomorphismTheorems(Scene):
             "In practice, to prove two quotient groups are isomorphic, "
             "find a homomorphism, compute its kernel and image, "
             "and apply the First Isomorphism Theorem.",
-            duration=36,
+            duration=58.7,  # pacing: 1.08x natural 54.07 + 0.3 (was 44.1 — copy of seg 9)
         )
 
         title = self.ly.title("The Big Picture")
@@ -643,7 +643,7 @@ class Video117_IsomorphismTheorems(Scene):
         self.play(FadeOut(items[0]), run_time=FAST)
         self.ly.safe_place(message, anchor=items[-1], direction=DOWN, buff=0.5)
         self.play(FadeIn(message, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(0.5)
+        self.wait(61.4)  # pacing: extends previous caption slot (Δ=60.9)
 
         self.ly.clear()
 
@@ -666,7 +666,7 @@ class Video117_IsomorphismTheorems(Scene):
             "Next time, we apply these theorems to classify groups "
             "and explore simple groups and composition series. "
             "Thanks for watching.",
-            duration=36,
+            duration=48.0,  # pacing: 1.08x natural 44.14 + 0.3
         )
 
         title = self.ly.title("Summary")
@@ -680,7 +680,7 @@ class Video117_IsomorphismTheorems(Scene):
         ]
 
         self.ly.progressive_reveal(takeaways, start_from=title, run_time=0.5)
-        self.wait(0.5)
+        self.wait(40.9)  # pacing: extends previous caption slot (Δ=40.4)
 
         self.ly.clear()
 

@@ -48,7 +48,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "like slicing a pie into equal pieces. "
             "This simple observation leads to one of the most powerful theorems in all of group theory. "
             "Today we explore cosets and Lagrange's Theorem.",
-            duration=28,
+            duration=31.3,
         )
         play_intro(self, "Cosets and Lagrange's Theorem", "Abstract Algebra I")
 
@@ -112,7 +112,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(bridge, anchor=c2_label, direction=DOWN, buff=0.4)
         self.play(FadeIn(bridge, scale=1.05), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(15.7)  # pacing: extends seg0 caption slot (+15.2s)
 
         self.ly.clear()
 
@@ -128,7 +128,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "Similarly, the right coset Hg is the set of h times g for all h in H. "
             "In abelian groups, left and right cosets are always the same. "
             "The element g is called the representative of the coset gH.",
-            duration=26,
+            duration=33.5,
         )
 
         title = self.ly.title("Left Cosets")
@@ -201,7 +201,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(note, anchor=h_set2, direction=DOWN, buff=0.4)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(21.2)  # pacing: extends seg1 caption slot (+20.7s, incl. +0.3 quantization margin)
 
         self.ly.clear()
 
@@ -225,7 +225,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "So even though we started with six elements, "
             "we only get three DISTINCT cosets, each of size two. "
             "This is no accident. It is Lagrange's Theorem in action.",
-            duration=40,
+            duration=52.5,
         )
 
         title = self.ly.title("Example: Cosets in Z_6")
@@ -302,7 +302,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(equation, anchor=summary, direction=DOWN, buff=0.35)
         self.play(Write(equation), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(41.8)  # pacing: extends seg2 caption slot (+41.3s)
 
         self.ly.clear()
 
@@ -321,7 +321,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "Property four: every coset has the same size as H. "
             "The map sending h to g times h is a bijection, "
             "so it pairs up elements of H with elements of gH one to one.",
-            duration=32,
+            duration=41.5,
         )
 
         title = self.ly.title("Key Properties of Cosets")
@@ -380,7 +380,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         for card in cards_34:
             self.play(FadeIn(card), run_time=NORMAL)
             self.wait(0.25)
-        self.wait(0.5)
+        self.wait(33.2)  # pacing: extends seg3 caption slot (+32.7s)
 
         self.ly.clear()
 
@@ -405,7 +405,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "We can verify that the other transpositions give duplicates. "
             "So we have exactly two distinct cosets, "
             "each of size three, and two times three equals six, which is the order of S three.",
-            duration=40,
+            duration=56.3,
         )
 
         title = self.ly.title("Example: Cosets in S_3")
@@ -479,7 +479,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(equation, anchor=summary, direction=DOWN, buff=0.35)
         self.play(Write(equation), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(45.0)  # pacing: extends seg4 caption slot (+44.5s)
 
         self.ly.clear()
 
@@ -502,7 +502,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "and two times three equals six. "
             "This theorem is named after Joseph Louis Lagrange, "
             "who worked in the seventeen hundreds.",
-            duration=38,
+            duration=47.3,
         )
 
         title = self.ly.title("Lagrange's Theorem")
@@ -573,7 +573,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(hist, anchor=ex2, direction=DOWN, buff=0.4)
         self.play(FadeIn(hist, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(0.5)
+        self.wait(39.1)  # pacing: extends seg5 caption slot (+38.6s, incl. +0.3 quantization margin)
 
         self.ly.clear()
 
@@ -596,7 +596,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "and each has size H, "
             "then the total number of elements is index times H, "
             "which equals the order of G. Done!",
-            duration=36,
+            duration=49.4,
         )
 
         title = self.ly.title("Proof of Lagrange's Theorem")
@@ -678,7 +678,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(remark, anchor=done_label, direction=DOWN, buff=0.4)
         self.play(FadeIn(remark, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(0.5)
+        self.wait(38.6)  # pacing: extends seg6 caption slot (+38.1s, incl. +0.3 quantization margin)
 
         self.ly.clear()
 
@@ -703,7 +703,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "Lagrange's Theorem gives us a clean proof of Fermat's Little Theorem, "
             "that a to the power p minus one is congruent to one mod p. "
             "We will see this connection when we study group homomorphisms.",
-            duration=48,
+            duration=59.4,
         )
 
         title = self.ly.title("Applications")
@@ -776,7 +776,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(teaser, anchor=app3_text, direction=DOWN, buff=0.4)
         self.play(FadeIn(teaser, shift=LEFT * 0.1), run_time=FAST)
-        self.wait(0.5)
+        self.wait(52.8)  # pacing: extends seg7 caption slot (+52.3s)
 
         self.ly.clear()
 
@@ -794,7 +794,7 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
             "And every group of prime order is cyclic. "
             "Next time, we study group homomorphisms, "
             "the structure preserving maps between groups.",
-            duration=32,
+            duration=35.2,
         )
         play_outro(self, "Cosets and Lagrange's Theorem", "Abstract Algebra I")
 
@@ -823,6 +823,6 @@ class Video114_CosetsAndLagrangesTheorem(Scene):
         )
         self.ly.safe_place(preview, anchor=title2, direction=DOWN, buff=0.5)
         self.play(FadeIn(preview, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(19.7)  # pacing: extends seg8 caption slot (+19.2s)
 
         self.ly.clear()

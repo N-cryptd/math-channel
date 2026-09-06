@@ -54,7 +54,7 @@ class Video113_PermutationGroups(Scene):
             "These rearrangements form a group. "
             "Today we study permutation groups, "
             "one of the most important families of groups in all of mathematics.",
-            duration=25,
+            duration=41.1,
         )
         play_intro(self, "Permutation Groups", "Abstract Algebra I")
 
@@ -111,7 +111,7 @@ class Video113_PermutationGroups(Scene):
         )
         self.ly.safe_place(bridge, anchor=answer, direction=DOWN, buff=0.4)
         self.play(FadeIn(bridge, scale=1.05), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(28.8)  # pacing: extends previous caption slot (D=28.3)
 
         self.ly.clear()
 
@@ -132,7 +132,7 @@ class Video113_PermutationGroups(Scene):
             "For example, S 3 has six elements, "
             "and S 4 has twenty four. "
             "S 3 is small enough that we can write down all six elements explicitly.",
-            duration=25,
+            duration=42.1,
         )
 
         title = self.ly.title("The Symmetric Group S_n")
@@ -207,7 +207,7 @@ class Video113_PermutationGroups(Scene):
         )
         self.ly.safe_place(note, anchor=s3_elements, direction=DOWN, buff=0.35)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(34.1)  # pacing: extends previous caption slot (D=33.6)
 
         self.ly.clear()
 
@@ -227,7 +227,7 @@ class Video113_PermutationGroups(Scene):
             "called cycle notation, which is what mathematicians actually use. "
             "Two-line notation is the bridge that helps us understand "
             "how to read permutations before we switch to the compact form.",
-            duration=25,
+            duration=39.7,
         )
 
         title = self.ly.title("Two-Line Notation")
@@ -284,7 +284,7 @@ class Video113_PermutationGroups(Scene):
         )
         self.ly.safe_place(bridge, anchor=note, direction=DOWN, buff=0.35)
         self.play(FadeIn(bridge, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(30.7)  # pacing: extends previous caption slot (D=30.2)
 
         self.ly.clear()
 
@@ -307,7 +307,7 @@ class Video113_PermutationGroups(Scene):
             "A permutation that is a single cycle covering all n elements "
             "is called an n-cycle. "
             "The identity is often written as just e.",
-            duration=28,
+            duration=45.7,
         )
 
         title = self.ly.title("Cycle Notation")
@@ -411,7 +411,7 @@ class Video113_PermutationGroups(Scene):
         )
         self.ly.safe_place(convention, anchor=commute, direction=DOWN, buff=0.35)
         self.play(FadeIn(convention, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(32.2)  # pacing: extends previous caption slot (D=31.7)
 
         self.ly.clear()
 
@@ -438,7 +438,7 @@ class Video113_PermutationGroups(Scene):
             "The result is the transposition two, three. "
             "Important: permutations are generally not commutative. "
             "The order matters.",
-            duration=32,
+            duration=50.8,
         )
 
         title = self.ly.title("Composition of Permutations")
@@ -536,7 +536,7 @@ class Video113_PermutationGroups(Scene):
         )
         self.ly.safe_place(warning, anchor=example, direction=DOWN, buff=0.4)
         self.play(FadeIn(warning, scale=1.05), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(34.1)  # pacing: extends previous caption slot (D=33.6)
 
         self.ly.clear()
 
@@ -568,7 +568,7 @@ class Video113_PermutationGroups(Scene):
             "So two maps to three. "
             "The decomposition is not unique, "
             "but we will see that the parity of the number of transpositions is fixed.",
-            duration=38,
+            duration=76.2,
         )
 
         title = self.ly.title("Transpositions")
@@ -666,7 +666,7 @@ class Video113_PermutationGroups(Scene):
         )
         self.ly.safe_place(note, anchor=trace_vg, direction=DOWN, buff=0.3)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(63.3)  # pacing: extends previous caption slot (D=62.8)
 
         self.ly.clear()
 
@@ -694,7 +694,7 @@ class Video113_PermutationGroups(Scene):
             "An even number of crossings means an even permutation. "
             "For S 3, the three even permutations are e, one, two, three, and one, three, two. "
             "The three odd permutations are one, two, one, three, and two, three.",
-            duration=38,
+            duration=72.4,
         )
 
         title = self.ly.title("Parity: Even and Odd Permutations")
@@ -846,7 +846,7 @@ class Video113_PermutationGroups(Scene):
         )
         self.ly.safe_place(note, anchor=odd_elems, direction=DOWN, buff=0.35)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(57.7)  # pacing: extends previous caption slot (D=57.2)
 
         self.ly.clear()
 
@@ -871,7 +871,7 @@ class Video113_PermutationGroups(Scene):
             "These ideas are fundamental to abstract algebra "
             "and will be essential when we study cosets and Lagrange's theorem. "
             "Thanks for watching!",
-            duration=30,
+            duration=59.3,
         )
 
         title = self.ly.title("The Alternating Group A_n")
@@ -932,6 +932,6 @@ class Video113_PermutationGroups(Scene):
         self.ly.safe_place(closing, anchor=title2, direction=DOWN, buff=-3.0)
         clamp_position(closing)
         self.play(FadeIn(closing, scale=1.05), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(43.6)  # pacing: extends previous caption slot (D=43.1)
 
         play_outro(self, "Permutation Groups", "Abstract Algebra I")

@@ -56,7 +56,7 @@ class Video110_SeriesOfFunctions(Scene):
             "of functions, and unlock the operations that make "
             "power series so powerful. "
             "This is the final video of Real Analysis One.",
-            duration=20,
+            duration=22.5,
         )
         play_intro(self, "Series of Functions", "Real Analysis I")
 
@@ -89,7 +89,8 @@ class Video110_SeriesOfFunctions(Scene):
             self.play(Create(graph), run_time=FAST)
             self.wait(0.2)
 
-        self.wait(0.5)
+        # pacing: extends previous caption slot (seg#0 natural 22.5s, slot 15.1s -> 28.2s, Δ=13.1)
+        self.wait(13.6)
         self.ly.clear()
 
     # --- Scene 2: Convergence of Series of Functions ---
@@ -105,7 +106,7 @@ class Video110_SeriesOfFunctions(Scene):
             "sums converge uniformly. "
             "Everything from the previous video applies, "
             "just replace f sub n with S sub N.",
-            duration=28,
+            duration=26.1,
         )
         self.ly.section_divider("1", "Convergence of Series of Functions")
         self.ly.clear()
@@ -154,7 +155,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=unif, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#1 natural 26.1s, slot 14.9s -> 32.7s, Δ=17.9)
+        self.wait(19.4)
         self.ly.clear()
 
     # --- Scene 3: Weierstrass M-Test ---
@@ -172,7 +174,7 @@ class Video110_SeriesOfFunctions(Scene):
             "original. "
             "Example: sum of x to the n over n factorial. "
             "Bound by one over n factorial, which converges.",
-            duration=30,
+            duration=30.5,
         )
         self.ly.section_divider("2", "The Weierstrass M-Test")
         self.ly.clear()
@@ -222,7 +224,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=example, buff=0.3)
         self.play(Write(result), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#2 natural 30.5s, slot 16.2s -> 38.1s, Δ=21.9)
+        self.wait(23.4)
         self.ly.clear()
 
     # --- Scene 4: Term-by-Term Integration ---
@@ -240,7 +243,7 @@ class Video110_SeriesOfFunctions(Scene):
             "f, which goes to zero by uniform convergence. "
             "Uniform convergence lets you pull the integral "
             "inside the sum.",
-            duration=28,
+            duration=20.9,
         )
         self.ly.section_divider("3", "Term-by-Term Integration")
         self.ly.clear()
@@ -274,7 +277,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=proof, buff=0.4)
         self.play(Write(result), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#3 natural 20.9s, slot 12.1s -> 26.1s, Δ=14.0)
+        self.wait(15.5)
         self.ly.clear()
 
     # --- Scene 5: Term-by-Term Differentiation ---
@@ -294,7 +298,7 @@ class Video110_SeriesOfFunctions(Scene):
             "the n minus one, which grows with n. "
             "Integration smooths errors out, but "
             "differentiation magnifies them.",
-            duration=32,
+            duration=18.1,
         )
         self.ly.section_divider("4", "Term-by-Term Differentiation")
         self.ly.clear()
@@ -343,7 +347,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(insight, direction=DOWN, anchor=why, buff=0.3)
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#4 natural 18.1s, slot 14.6s -> 22.6s, Δ=8.0)
+        self.wait(9.5)
         self.ly.clear()
 
     # --- Scene 6: Power Series ---
@@ -362,7 +367,7 @@ class Video110_SeriesOfFunctions(Scene):
             "This means: inside the radius, you can "
             "differentiate and integrate term by term, "
             "infinitely many times!",
-            duration=32,
+            duration=29.3,
         )
         self.ly.section_divider("5", "Power Series")
         self.ly.clear()
@@ -412,7 +417,8 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=mtest, buff=0.3)
         self.play(Write(result), run_time=SLOW)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#5 natural 29.3s, slot 15.5s -> 36.7s, Δ=21.3)
+        self.wait(22.8)
         self.ly.clear()
 
     # --- Scene 7: The Big Picture ---
@@ -433,7 +439,7 @@ class Video110_SeriesOfFunctions(Scene):
             "differentiable. "
             "Uniform convergence is the key that unlocks "
             "all the operations.",
-            duration=30,
+            duration=29.2,
         )
         title = self.ly.title("The Big Picture")
 
@@ -450,7 +456,8 @@ class Video110_SeriesOfFunctions(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(1.5)
+        # pacing: extends previous caption slot (seg#6 natural 29.2s, slot 9.3s -> 36.5s, Δ=27.2)
+        self.wait(28.7)
         self.ly.clear()
 
     # --- Scene 8: Summary + Outro ---
@@ -473,7 +480,7 @@ class Video110_SeriesOfFunctions(Scene):
             "This completes Real Analysis One. "
             "Twelve videos covering the foundations of "
             "rigorous calculus. Thank you for watching!",
-            duration=38,
+            duration=31.2,
         )
         title = self.ly.title("Key Takeaways")
 
@@ -517,6 +524,7 @@ class Video110_SeriesOfFunctions(Scene):
         )
         self.ly.safe_place(next_up, direction=DOWN, anchor=sub, buff=0.3)
         self.play(Write(next_up), run_time=NORMAL)
-        self.wait(1.0)
+        # pacing: extends final caption slot (seg#7 natural 31.2s, slot 24.3s -> 39.1s, Δ=14.8)
+        self.wait(15.8)
 
         play_outro(self, "Real Analysis I Complete!", "Real Analysis I")

@@ -12,11 +12,16 @@ Key improvements:
   - Gap enforcement: minimum 0.3s silence between segments
   - Smart splitting: long TTS gets split into sub-sentences
   - Duration verification: warns if final audio doesn't match video duration
-  - Quality gate: warn if any segment needs >1.5x speedup
+  - Quality gate: warn if any segment needs >1.08x speedup
+  - Central logging: every speedup/skip event is appended as JSONL (with
+    timestamp) to media/narration_speedup_warnings.log, so narration defects
+    are measurable post-hoc without re-measuring or watching stderr
+  - --strict: exit non-zero when any segment exceeds 1.08x speedup or is
+    skipped, so pipeline runs fail loudly instead of shipping rushed narration
   - Better rate control for edge-tts
 
 Usage:
-  python narrate.py --srt video.srt --video video.mp4 [--tts edge] [--voice en-US-AndrewNeural]
+  python narrate.py --srt video.srt --video video.mp4 [--tts edge] [--voice en-US-AndrewNeural] [--strict]
 """
 
 import argparse
@@ -34,8 +39,31 @@ from pathlib import Path
 MIN_SEGMENT_GAP = 0.3   # minimum silence between adjacent segments
 PRE_PAD = 0.15           # silence before each TTS segment
 POST_PAD = 0.15          # silence after each TTS segment
-MAX_SPEEDUP = 1.5        # warn if speedup exceeds this
+WARN_SPEEDUP = 1.08      # warn + central-log threshold (pacing-audit fix criterion)
+MAX_SPEEDUP = 1.5        # legacy threshold, superseded by WARN_SPEEDUP (kept for reference)
+# Durable central log for speedup/skip events. Resolved relative to this file
+# (<repo>/media/), independent of the caller's working directory.
+CENTRAL_LOG = Path(__file__).resolve().parent.parent / "media" / "narration_speedup_warnings.log"
 MIN_SEGMENT_DUR = 1.5    # minimum duration for a TTS segment (avoid tiny clips)
+
+
+def utc_now_iso() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def log_speedup_events(events: list[dict]) -> str:
+    """Append narration defect events to the central JSONL log (durable).
+
+    Each event: timestamp, video slug, segment index, slot vs natural
+    seconds, computed speedup factor. Returns the log path ("" if no events).
+    """
+    if not events:
+        return ""
+    CENTRAL_LOG.parent.mkdir(parents=True, exist_ok=True)
+    with open(CENTRAL_LOG, "a", encoding="utf-8") as f:
+        for ev in events:
+            f.write(json.dumps(ev, ensure_ascii=True) + "\n")
+    return str(CENTRAL_LOG)
 
 
 def parse_srt(srt_path: str) -> list[dict]:
@@ -141,7 +169,8 @@ def build_audio_timeline(
     output_dir: str,
     tts_backend: str = "edge",
     voice: str = "en-US-AndrewNeural",
-) -> str:
+    video_slug: str = "unknown",
+) -> tuple[str, list[dict]]:
     """
     Build a clean audio timeline with gap enforcement.
     
@@ -156,11 +185,14 @@ def build_audio_timeline(
     4. If TTS is longer than available time, speed it up (with warning)
     5. Concatenate silence gaps + TTS clips sequentially (no mixing)
     
-    Returns path to final audio file.
+    Returns (path to final audio file, defect events). Defect events are
+    speedups > WARN_SPEEDUP and skipped segments; the caller appends them to
+    the central JSONL log via log_speedup_events().
     """
     timeline = []  # list of (start_time, audio_file_path, audio_duration)
     last_end = 0.0
     warnings = []
+    events = []  # speedup/skip defect events for the central log
 
     # Pre-compute effective end times: cap slot_end at next segment's start
     # to prevent overlapping SRT entries from stealing time from later segments.
@@ -227,6 +259,16 @@ def build_audio_timeline(
             warnings.append(
                 f"Segment {i}: only {available:.1f}s available after gap enforcement, skipping"
             )
+            events.append({
+                "ts": utc_now_iso(),
+                "event": "skip",
+                "video": video_slug,
+                "segment": i,
+                "slot_s": round(available, 2),
+                "natural_s": None,
+                "speedup": None,
+                "text": seg["text"][:80],
+            })
             continue
 
         # Try generating TTS for the full text
@@ -271,10 +313,20 @@ def build_audio_timeline(
             # If still too long, speed it up
             if tts_dur > available:
                 speedup = tts_dur / available
-                if speedup > MAX_SPEEDUP:
+                if speedup > WARN_SPEEDUP:
                     warnings.append(
-                        f"Segment {i}: needs {speedup:.1f}x speedup (text: \"{seg['text'][:50]}...\")"
+                        f"Segment {i}: needs {speedup:.2f}x speedup (text: \"{seg['text'][:50]}...\")"
                     )
+                    events.append({
+                        "ts": utc_now_iso(),
+                        "event": "speedup",
+                        "video": video_slug,
+                        "segment": i,
+                        "slot_s": round(available, 2),
+                        "natural_s": round(tts_dur, 2),
+                        "speedup": round(speedup, 3),
+                        "text": seg["text"][:80],
+                    })
                 sped_path = os.path.join(output_dir, f"sped_{i:04d}.wav")
                 speedup_audio(raw_path, sped_path, speedup)
                 raw_path = sped_path
@@ -301,7 +353,7 @@ def build_audio_timeline(
              "-t", str(video_duration), "-q:a", "9", output_path],
             capture_output=True,
         )
-        return output_path
+        return output_path, events
 
     # Normalize all audio clips to uniform format (22050Hz mono PCM)
     # This is required for the concat demuxer to work correctly
@@ -371,7 +423,7 @@ def build_audio_timeline(
              "-t", str(video_duration), "-q:a", "9", fallback],
             capture_output=True,
         )
-        return fallback
+        return fallback, events
 
     # Verify total duration is reasonable
     actual_dur = get_duration(output_path)
@@ -382,7 +434,7 @@ def build_audio_timeline(
         print(f"  ⚠ Duration mismatch: audio={actual_dur:.1f}s vs video={video_duration:.1f}s",
               file=sys.stderr)
 
-    return output_path
+    return output_path, events
 
 
 def mux_audio_video(video_path: str, audio_path: str, output_path: str):
@@ -413,6 +465,9 @@ def main():
                         help="Voice name")
     parser.add_argument("--output", default=None,
                         help="Output path (default: <video>_narrated.mp4)")
+    parser.add_argument("--strict", action="store_true",
+                        help="Exit non-zero if any segment is skipped or needs >1.08x "
+                             "speedup (fail the pipeline instead of shipping rushed narration)")
     args = parser.parse_args()
 
     if not os.path.exists(args.srt):
@@ -452,10 +507,28 @@ def main():
     # Generate TTS
     print("Generating TTS audio with gap enforcement...")
     with tempfile.TemporaryDirectory() as tmpdir:
-        narration_path = build_audio_timeline(
+        narration_path, events = build_audio_timeline(
             segments, video_duration, tmpdir,
             tts_backend=args.tts, voice=args.voice,
+            video_slug=video_stem,
         )
+
+        # Durable central log: every speedup/skip event lands in
+        # media/narration_speedup_warnings.log (JSONL) so pacing defects are
+        # measurable post-hoc without watching stderr or re-measuring renders.
+        log_path = log_speedup_events(events)
+        if events:
+            print(f"  ⚠ {len(events)} narration defect event(s) "
+                  f"(skip / >{WARN_SPEEDUP}x speedup) appended to {log_path}",
+                  file=sys.stderr)
+
+        if args.strict and events:
+            print(f"STRICT: {len(events)} narration defect(s) detected "
+                  f"(skipped segments or >{WARN_SPEEDUP}x speedup) — failing "
+                  f"instead of shipping rushed narration. See {log_path}",
+                  file=sys.stderr)
+            sys.exit(2)
+
         print(f"Narration audio: {narration_path}")
         print()
 

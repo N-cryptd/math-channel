@@ -65,7 +65,7 @@ class Video124_Ideals(Scene):
             "Ideals are the ring-theoretic analog of normal subgroups, "
             "and they unlock the deep structure of every ring. "
             "This is Abstract Algebra, Video 124.",
-            duration=30,
+            duration=22.6,
         )
         play_intro(self, "Ideals in Ring Theory", "Abstract Algebra I")
 
@@ -110,7 +110,7 @@ class Video124_Ideals(Scene):
             "for every r in R and a in I, "
             "both r a and a r must lie in I. "
             "This is called the absorption law.",
-            duration=45,
+            duration=41.1,
         )
 
         self.ly.section_divider("1", "From Groups to Rings")
@@ -160,7 +160,7 @@ class Video124_Ideals(Scene):
             Text("Without it, coset multiplication breaks", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed, run_time=0.8)
-        self.wait(8)
+        self.wait(17.4)  # pacing: extends previous caption slot (+9.4s)
 
         self.ly.clear()
 
@@ -180,7 +180,7 @@ class Video124_Ideals(Scene):
             "so every ideal is automatically two-sided. "
             "Every ideal is a subring, but the converse is false: "
             "not every subring is an ideal.",
-            duration=40,
+            duration=33.9,
         )
 
         self.ly.section_divider("2", "Definition")
@@ -226,7 +226,7 @@ class Video124_Ideals(Scene):
         )
         self.ly.safe_place(note, anchor=cond2, direction=DOWN, buff=0.4)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(13.8)  # pacing: extends previous caption slot (+9.8s)
 
         self.ly.clear()
 
@@ -251,7 +251,7 @@ class Video124_Ideals(Scene):
             "but not an ideal. One half times one equals one half, "
             "which is not an integer. "
             "The absorption law fails.",
-            duration=50,
+            duration=46.3,
         )
 
         title = self.ly.title("Example: nZ in Z")
@@ -318,7 +318,7 @@ class Video124_Ideals(Scene):
         )
         self.ly.safe_place(verdict, anchor=boxed3, direction=DOWN, buff=0.35)
         self.play(FadeIn(verdict, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(15.2)  # pacing: extends previous caption slot (+11.2s)
 
         self.ly.clear()
 
@@ -339,7 +339,7 @@ class Video124_Ideals(Scene):
             "We can also combine ideals: "
             "the sum I plus J is the smallest ideal containing both, "
             "and the intersection I intersect J is also an ideal.",
-            duration=50,
+            duration=39.0,
         )
 
         self.ly.section_divider("3", "Principal Ideals")
@@ -392,7 +392,7 @@ class Video124_Ideals(Scene):
 
         self.ly.safe_place(smallest, anchor=prod_ideal, direction=DOWN, buff=0.35)
         self.play(FadeIn(smallest, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(8.3)  # pacing: extends previous caption slot (+4.3s)
 
         self.ly.clear()
 
@@ -413,7 +413,7 @@ class Video124_Ideals(Scene):
             "when p is a prime number. "
             "In Z bracket x, the ideal (x) is prime "
             "but not maximal, since (x) is contained in (2, x).",
-            duration=45,
+            duration=43.1,
         )
 
         self.ly.section_divider("4", "Prime and Maximal Ideals")
@@ -474,7 +474,7 @@ class Video124_Ideals(Scene):
             Text("Exception: in a PID, maximal = prime", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title3, run_time=0.8)
-        self.wait(6)
+        self.wait(12.9)  # pacing: extends previous caption slot (+6.9s)
 
         self.ly.clear()
 
@@ -499,7 +499,7 @@ class Video124_Ideals(Scene):
             "But Z over (6) is Z subscript 6, which has zero divisors. "
             "Since 2 times 3 equals 0 in Z subscript 6, "
             "the ideal (6) is neither prime nor maximal.",
-            duration=45,
+            duration=54.4,
         )
 
         self.ly.section_divider("5", "Key Theorems")
@@ -577,7 +577,7 @@ class Video124_Ideals(Scene):
         boxed_bad = self.ly.formula_box(ex_bad, color=RED)
         self.ly.safe_place(boxed_bad, anchor=boxed_good, direction=DOWN, buff=0.4)
         self.play(Write(ex_bad), Create(boxed_bad[1]), run_time=NORMAL)
-        self.wait(5)
+        self.wait(15.9)  # pacing: extends previous caption slot (+10.9s)
 
         self.ly.clear()
 
@@ -596,7 +596,7 @@ class Video124_Ideals(Scene):
             "while maximal ideals capture the every-element-invertible property. "
             "Next time, we'll construct quotient rings R over I "
             "and explore their structure in detail.",
-            duration=30,
+            duration=29.9,
         )
 
         title = self.ly.title("Summary")
@@ -609,7 +609,7 @@ class Video124_Ideals(Scene):
             Text("Prime \u2192 R/P integral domain; Maximal \u2192 R/M field", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title, run_time=0.8)
-        self.wait(10)
+        self.wait(17.2)  # pacing: extends previous caption slot (+7.2s)
 
         self.ly.clear()
         play_outro(self, next_video="Quotient Rings", next_playlist="Abstract Algebra I")

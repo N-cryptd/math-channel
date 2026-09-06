@@ -57,7 +57,7 @@ class Video116_GroupHomomorphisms(Scene):
             "If a times b equals c in G, "
             "then phi of a times phi of b equals phi of c in H. "
             "The operation commutes with the function.",
-            duration=30,
+            duration=23.9,
         )
         play_intro(self, "Group Homomorphisms", "Abstract Algebra I")
 
@@ -81,7 +81,7 @@ class Video116_GroupHomomorphisms(Scene):
         self.play(FadeOut(items[0]), run_time=FAST)
         self.ly.safe_place(boxed_prop, anchor=items[-1], direction=DOWN, buff=0.5)
         self.play(Write(key_prop), Create(boxed_prop[1]), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(16.3)  # pacing: extends previous caption slot (seg#0 natural 23.9s, slot 14.1s -> 29.9s, Δ=15.8)
 
         self.ly.clear()
 
@@ -98,7 +98,7 @@ class Video116_GroupHomomorphisms(Scene):
             "Or equivalently, we can apply phi to each element first, "
             "then multiply in H. "
             "Both paths give the same result.",
-            duration=30,
+            duration=28.3,
         )
         self.ly.section_divider(1, "Definition")
 
@@ -140,7 +140,7 @@ class Video116_GroupHomomorphisms(Scene):
             Text("Bijective homomorphism = isomorphism", font_size=BODY_SIZE, color=ACCENT, font=SANS, weight=BOLD),
         ]
         self.ly.progressive_reveal(terms, start_from=title2, run_time=0.7)
-        self.wait(0.3)
+        self.wait(22.1)  # pacing: extends previous caption slot (seg#1 natural 28.3s, slot 13.7s -> 35.5s, Δ=21.8)
 
         self.ly.clear()
 
@@ -161,7 +161,7 @@ class Video116_GroupHomomorphisms(Scene):
             "positive reals under multiplication "
             "to all reals under addition. "
             "Log of a b equals log of a plus log of b.",
-            duration=35,
+            duration=33.7,
         )
         self.ly.section_divider(2, "Examples")
 
@@ -239,7 +239,7 @@ class Video116_GroupHomomorphisms(Scene):
         self.ly.safe_place(ex3_prop, anchor=ex3_formula, direction=DOWN, buff=0.3)
         self.play(FadeIn(ex3_title, shift=LEFT * 0.15), run_time=FAST)
         self.play(Write(ex3_formula), Write(ex3_prop), run_time=NORMAL)
-        self.wait(0.3)
+        self.wait(30.1)  # pacing: extends previous caption slot (seg#2 natural 33.7s, slot 12.4s -> 42.1s, Δ=29.8)
 
         self.ly.clear()
 
@@ -259,7 +259,7 @@ class Video116_GroupHomomorphisms(Scene):
             "which equals phi of g times phi of g inverse. "
             "Third, powers map to powers. "
             "Phi of g to the n equals phi of g to the n.",
-            duration=35,
+            duration=40.0,
         )
         self.ly.section_divider(3, "Properties")
 
@@ -336,7 +336,7 @@ class Video116_GroupHomomorphisms(Scene):
         self.ly.safe_place(note3, anchor=boxed_prop3, direction=DOWN, buff=0.3)
         self.play(Write(prop3_formula), Create(boxed_prop3[1]), run_time=NORMAL)
         self.play(FadeIn(note3, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(33.2)  # pacing: extends previous caption slot (seg#3 natural 40.0s, slot 17.4s -> 50.1s, Δ=32.7)
 
         self.ly.clear()
 
@@ -358,7 +358,7 @@ class Video116_GroupHomomorphisms(Scene):
             "the kernel is always a subgroup of the domain. "
             "Even stronger, as we will see, "
             "the kernel is always a NORMAL subgroup.",
-            duration=32,
+            duration=31.3,
         )
         self.ly.section_divider(4, "The Kernel")
 
@@ -436,7 +436,7 @@ class Video116_GroupHomomorphisms(Scene):
         self.wait(0.2)
 
         self.ly.progressive_reveal(proof_items, start_from=theorem, run_time=0.7)
-        self.wait(0.5)
+        self.wait(21.3)  # pacing: extends previous caption slot (seg#4 natural 31.3s, slot 18.4s -> 39.1s, Δ=20.8)
 
         self.ly.clear()
 
@@ -456,7 +456,7 @@ class Video116_GroupHomomorphisms(Scene):
             "The image is always a subgroup of H. "
             "A homomorphism is surjective "
             "precisely when the image equals H.",
-            duration=30,
+            duration=27.2,
         )
         self.ly.section_divider(5, "The Image")
 
@@ -501,7 +501,7 @@ class Video116_GroupHomomorphisms(Scene):
         # Stagger reveal: left then right
         self.play(FadeIn(cols[0]), run_time=NORMAL)
         self.play(FadeIn(cols[1]), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(23.6)  # pacing: extends previous caption slot (seg#5 natural 27.2s, slot 11.1s -> 34.1s, Δ=23.1)
 
         self.ly.clear()
 
@@ -525,7 +525,7 @@ class Video116_GroupHomomorphisms(Scene):
             "which equals e H. "
             "Therefore g k g inverse is in the kernel. "
             "In fact, every normal subgroup arises as a kernel.",
-            duration=38,
+            duration=42.1,
         )
         self.ly.section_divider(6, "Why the Kernel is Special")
 
@@ -612,7 +612,7 @@ class Video116_GroupHomomorphisms(Scene):
         self.play(FadeIn(insight, shift=LEFT * 0.15), run_time=FAST)
         self.play(Write(boxed_insight[0]), Create(boxed_insight[1]), run_time=NORMAL)
         self.play(FadeIn(insight2, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(34.8)  # pacing: extends previous caption slot (seg#6 natural 42.1s, slot 18.3s -> 52.6s, Δ=34.3)
 
         self.ly.clear()
 
@@ -631,7 +631,7 @@ class Video116_GroupHomomorphisms(Scene):
             "Normal subgroups and homomorphisms "
             "are truly two sides of the same coin. "
             "Next time, the Isomorphism Theorems.",
-            duration=30,
+            duration=34.4,
         )
 
         title = self.ly.title("Key Takeaways")
@@ -661,6 +661,6 @@ class Video116_GroupHomomorphisms(Scene):
         self.ly.safe_place(teaser, anchor=closing, direction=DOWN, buff=0.3)
         self.play(FadeIn(closing, scale=1.05), run_time=NORMAL)
         self.play(FadeIn(teaser, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        self.wait(26.5)  # pacing: extends final caption slot (seg#7 natural 34.4s, slot 17.0s -> 43.0s, Δ=26.0)
 
         play_outro(self, "Group Homomorphisms", "Abstract Algebra I")

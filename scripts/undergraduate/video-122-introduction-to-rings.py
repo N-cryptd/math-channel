@@ -67,7 +67,7 @@ class Video122_IntroductionToRings(Scene):
             "Today we define rings, explore examples, "
             "and build up to the concept of a field. "
             "This is Abstract Algebra, Video 12.",
-            duration=35,
+            duration=36.9,
         )
         play_intro(self, "Introduction to Rings and Fields", "Abstract Algebra I")
 
@@ -90,7 +90,7 @@ class Video122_IntroductionToRings(Scene):
         boxed = self.ly.formula_box(bridge, color=PRIMARY)
         self.ly.safe_place(boxed, anchor=items[-1], direction=DOWN, buff=0.35)
         self.play(Write(bridge), Create(boxed[1]), run_time=NORMAL)
-        self.wait(5)
+        self.wait(17.4)  # pacing: extends previous caption slot (Δ=12.4)
 
         self.ly.clear()
 
