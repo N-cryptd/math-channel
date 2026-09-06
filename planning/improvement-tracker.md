@@ -539,7 +539,7 @@ Batch audit of ALL pre-Aug-2026 narrated renders — Real Analysis 99-110, Abstr
 | 109 | 119.7 vs 258.6 | 9/9 | 0 | 2.73x | fix card t_d08b197e |
 | 110 | 127.4 vs 242.0 | 9/9 | 0 | 2.51x | fix card t_802b3a5d |
 | 111 | 96.9 vs 206.3 (pre-fix) | 9/9 | 0 | 3.21x | FIXED Sep 5 (t_9875d6df) — 9/9 rushed 1.56-3.21x; post-fix render verified clean (266.3s, 0 warnings, 0 skips, usage 0.72-0.79x) |
-| 112 | 105.9 vs 314.5 | 9/9 | 0 | 5.48x | fix card t_acb17be2 |
+| 112 | 105.9 vs 314.5 (pre-fix) | 9/9 | 0 | 5.48x | FIXED Sep 5 (t_acb17be2) — 9/9 rushed 1.26-5.48x; post-fix render verified clean (394.1s, 0 warnings, 0 skips, usage 0.80-0.81x) |
 | 113 | 148.3 vs 427.3 | 8/8 | 0 | 3.87x | fix card t_ec056e29 |
 | 114 | 140.1 vs 406.2 | 9/9 | 0 | 4.98x | fix card t_b402b2e5 |
 | 115 | 110.8 vs 250.3 | 8/8 | 0 | 2.95x | FIXED Sep 5 (t_f4e767c7) — 8/8 rushed 1.58-2.95x; post-fix render verified clean (273.1s, 0 warnings, 0 skips, usage 0.91-0.92x) |

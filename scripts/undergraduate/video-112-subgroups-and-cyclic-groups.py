@@ -47,7 +47,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "These are cyclic groups. "
             "Today we will see how subgroups and cyclic groups work "
             "and why they are so fundamental to abstract algebra.",
-            duration=15,
+            duration=19.9,
         )
         play_intro(self, "Subgroups and Cyclic Groups", "Abstract Algebra I")
 
@@ -83,7 +83,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
         )
         self.ly.safe_place(note, anchor=arrow, direction=DOWN, buff=0.4)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        # pacing: extends previous caption slot (seg#0 natural 19.9s, slot 16.07s -> 24.97s, Δ=8.9)
+        self.wait(9.4)
 
         self.ly.clear()
 
@@ -101,7 +102,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "the whole group G itself is always a subgroup of G, "
             "and the set containing just the identity element is always a subgroup. "
             "These are called the improper and trivial subgroups.",
-            duration=18,
+            duration=25.7,
         )
 
         title = self.ly.title("Definition: Subgroup")
@@ -144,7 +145,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
         )
         self.ly.safe_place(improper, anchor=trivial, direction=DOWN, buff=0.35)
         self.play(FadeIn(improper, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.5)
+        # pacing: extends previous caption slot (seg#1 natural 25.7s, slot 7.63s -> 32.13s, Δ=24.5)
+        self.wait(25.0)
 
         self.ly.clear()
 
@@ -163,7 +165,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "In the dihedral group D3, the rotations alone form a subgroup. "
             "The three rotations close under composition, "
             "while the reflections do not.",
-            duration=20,
+            duration=40.0,
         )
 
         title = self.ly.title("Examples of Subgroups")
@@ -182,7 +184,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
         )
         self.ly.safe_place(ex1_check, anchor=ex1_title, direction=DOWN, buff=0.35)
         self.play(FadeIn(ex1_check, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.3)
+        # pacing: extends previous caption slot (seg#2 natural 40.0s, slot 9.27s -> 50.17s, Δ=40.9)
+        self.wait(41.2)
 
         self.ly.clear()
 
@@ -233,7 +236,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "so the identity is in H. "
             "Then the inverse of a is in H by the same condition. "
             "And closure follows by a similar argument.",
-            duration=22,
+            duration=40.2,
         )
 
         title = self.ly.title("The Subgroup Test")
@@ -264,7 +267,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
         )
         self.ly.safe_place(insight, anchor=condition, direction=DOWN, buff=0.5)
         self.play(FadeIn(insight, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(0.3)
+        # pacing: extends previous caption slot (seg#3 natural 40.2s, slot 16.73s -> 50.33s, Δ=33.6)
+        self.wait(33.9)
 
         self.ly.clear()
 
@@ -306,7 +310,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "Under multiplication, it means repeated multiplication. "
             "Every cyclic group is abelian, "
             "because powers of the same element always commute.",
-            duration=22,
+            duration=40.6,
         )
 
         title = self.ly.title("Definition: Cyclic Group")
@@ -345,7 +349,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
         )
         self.ly.safe_place(abelian_note, anchor=gen_label, direction=DOWN, buff=0.4)
         self.play(Write(abelian_note), run_time=NORMAL)
-        self.wait(0.5)
+        # pacing: extends previous caption slot (seg#4 natural 40.6s, slot 7.70s -> 50.80s, Δ=43.1)
+        self.wait(43.6)
 
         self.ly.clear()
 
@@ -365,7 +370,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "Every element appears! "
             "An element generates Zn if and only if "
             "it is coprime to n.",
-            duration=20,
+            duration=41.7,
         )
 
         title = self.ly.title("Visualizing a Generator: Z12")
@@ -451,7 +456,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
                 self.play(*[FadeIn(d) for d in batch], run_time=FAST)
                 self.wait(0.15)
 
-        self.wait(0.3)
+        # pacing: extends previous caption slot (seg#5 natural 41.7s, slot 10.63s -> 52.23s, Δ=41.6)
+        self.wait(41.9)
 
         self.ly.clear()
 
@@ -468,7 +474,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "For example, 12 over 3 equals 4, "
             "so 4 generates a subgroup of order 3: {0, 4, 8}. "
             "This lattice structure is perfect and predictable.",
-            duration=20,
+            duration=35.5,
         )
 
         title = self.ly.title("Subgroups of Z12")
@@ -528,7 +534,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             line = Line(a.get_center(), b.get_center(), color=DIM, stroke_width=1.5)
             edges.add(line)
         self.play(Create(edges), run_time=NORMAL)
-        self.wait(0.5)
+        # pacing: extends previous caption slot (seg#6 natural 35.5s, slot 7.50s -> 44.40s, Δ=36.9)
+        self.wait(37.4)
 
         self.ly.clear()
 
@@ -548,7 +555,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "then for each divisor d of n, "
             "there is exactly one subgroup of order d. "
             "This is the divisor-counting theorem for cyclic groups.",
-            duration=22,
+            duration=38.4,
         )
 
         title = self.ly.title("Order of an Element")
@@ -582,7 +589,8 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             self.wait(0.2)
             prev = ex
 
-        self.wait(0.3)
+        # pacing: extends previous caption slot (seg#7 natural 38.4s, slot 14.60s -> 48.00s, Δ=33.4)
+        self.wait(33.7)
         self.ly.clear()
 
         title2 = self.ly.title("Key Theorem")
@@ -641,7 +649,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
             "These are foundational results "
             "that we will build on when we study permutations and Lagrange's theorem. "
             "Thanks for watching!",
-            duration=20,
+            duration=32.6,
         )
 
         title = self.ly.title("Summary")
@@ -664,6 +672,7 @@ class Video112_SubgroupsAndCyclicGroups(Scene):
         self.ly.safe_place(closing, anchor=title, direction=DOWN, buff=-3.2)
         clamp_position(closing)
         self.play(FadeIn(closing, scale=1.05), run_time=NORMAL)
-        self.wait(0.5)
+        # pacing: extends previous caption slot (seg#8 natural 32.6s, slot 15.73s -> 40.83s, Δ=25.1)
+        self.wait(25.6)
 
         play_outro(self, "Subgroups and Cyclic Groups", "Abstract Algebra I")
