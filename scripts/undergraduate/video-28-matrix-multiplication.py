@@ -105,7 +105,7 @@ class Video28_MatrixMultiplication(Scene):
             "Welcome back to Linear Algebra. "
             "Last time we saw that a matrix is a transformation of space. "
             "But what happens when you apply two transformations in a row?",
-            duration=14,
+            duration=9.9,
         )
         play_intro(self, "Matrix Multiplication", "Linear Algebra")
 
@@ -143,7 +143,7 @@ class Video28_MatrixMultiplication(Scene):
             "A matrix is a transformation of space. "
             "If we apply transformation A and then transformation B, "
             "the net effect is a single combined transformation.",
-            duration=15,
+            duration=11.8,
         )
 
         self.ly.title("Composition of Transformations")
@@ -164,7 +164,7 @@ class Video28_MatrixMultiplication(Scene):
             color=WHITE, font=SANS,
         ).move_to(RIGHT * 3.2 + UP * 2.5)
         self.play(Write(step1), run_time=FAST)
-        self.wait(0.5)
+        self.wait(10.5)  # pacing: extends caption 2 slot
 
         # Transformation A: shear
         # A = [[1, 1], [0, 1]]
@@ -190,7 +190,7 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "First, apply transformation A: a shear. "
             "The grid slants to the right.",
-            duration=8,
+            duration=5.3,
         )
 
         self.play(
@@ -211,7 +211,7 @@ class Video28_MatrixMultiplication(Scene):
             ).move_to(RIGHT * 3.2 + UP * 2.5)),
             run_time=FAST,
         )
-        self.wait(0.5)
+        self.wait(3.4)  # pacing: extends caption 3 slot
 
         # Transformation B: rotation 90 degrees
         # B = [[0, -1], [1, 0]]
@@ -240,7 +240,7 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "Then apply transformation B: a 90 degree rotation. "
             "The sheared grid rotates into a new shape.",
-            duration=10,
+            duration=7,
         )
 
         self.play(
@@ -260,7 +260,7 @@ class Video28_MatrixMultiplication(Scene):
             ).move_to(RIGHT * 3.2 + UP * 2.5)),
             run_time=FAST,
         )
-        self.wait(1.0)
+        self.wait(5.2)  # pacing: extends caption 4 slot
 
         # Key insight
         insight = Text(
@@ -272,11 +272,11 @@ class Video28_MatrixMultiplication(Scene):
             "The result looks like a single transformation was applied. "
             "And that is exactly what matrix multiplication computes: "
             "the single matrix that does both at once.",
-            duration=14,
+            duration=9.9,
         )
 
         self.play(Write(insight), run_time=NORMAL)
-        self.wait(2.0)
+        self.wait(9.0)  # pacing: extends caption 5 slot
 
         self.ly.clear()
 
@@ -286,7 +286,7 @@ class Video28_MatrixMultiplication(Scene):
             "So how do we find the matrix for this combined transformation? "
             "We track the basis vectors. "
             "Where does i-hat go after both A and B?",
-            duration=14,
+            duration=8.4,
         )
 
         self.ly.title("Tracking Basis Vectors")
@@ -301,7 +301,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(step1_tex)
         self.play(Write(step1_tex), run_time=SLOW)
-        self.wait(1.5)
+        self.wait(5.8)  # pacing: extends caption 6 slot
 
         self.ly.clear()
 
@@ -309,7 +309,7 @@ class Video28_MatrixMultiplication(Scene):
             "After A, i-hat lands at the first column of A. "
             "Then B takes that vector and transforms it again. "
             "The result is the first column of B times A.",
-            duration=14,
+            duration=10.1,
         )
 
         # Show the column interpretation
@@ -324,12 +324,12 @@ class Video28_MatrixMultiplication(Scene):
 
         self.ly.center_in_content(a_mat)
         self.play(Write(a_mat), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(10.1)  # pacing: extends caption 7 slot
 
         self.add_subcaption(
             "After transformation A, i-hat lands at (a, c), the first column. "
             "Now transformation B acts on this vector.",
-            duration=12,
+            duration=8.8,
         )
 
         # First column of A highlighted
@@ -342,7 +342,7 @@ class Video28_MatrixMultiplication(Scene):
             FadeOut(a_mat),
             Write(col_a1), run_time=NORMAL,
         )
-        self.wait(1.0)
+        self.wait(7.8)  # pacing: extends caption 8 slot
 
         self.ly.clear()
 
@@ -350,7 +350,7 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "Applying B to (a, c) means multiplying B by this column vector. "
             "Using matrix-vector multiplication from last time.",
-            duration=12,
+            duration=9.2,
         )
 
         apply_b = MathTex(
@@ -362,7 +362,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(apply_b)
         self.play(Write(apply_b), run_time=SLOW)
-        self.wait(2.0)
+        self.wait(7.4)  # pacing: extends caption 9 slot
 
         self.ly.clear()
 
@@ -371,7 +371,7 @@ class Video28_MatrixMultiplication(Scene):
             "Similarly, j-hat goes through A then B. "
             "After A, j-hat lands at (b, d). "
             "After B, it lands at (eb plus fd, gb plus hd).",
-            duration=14,
+            duration=11.9,
         )
 
         apply_b_j = MathTex(
@@ -383,7 +383,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(apply_b_j)
         self.play(Write(apply_b_j), run_time=SLOW)
-        self.wait(2.0)
+        self.wait(10.3)  # pacing: extends caption 10 slot
 
         self.ly.clear()
 
@@ -392,7 +392,7 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "Putting it all together, the combined matrix B times A has these "
             "two columns we just computed. This IS the matrix multiplication formula.",
-            duration=14,
+            duration=9,
         )
 
         self.ly.title("Deriving the Formula")
@@ -404,14 +404,14 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(result)
         self.play(Write(result), run_time=SLOW)
-        self.wait(1.5)
+        self.wait(7.3)  # pacing: extends caption 11 slot
 
         # Break down each entry
         self.add_subcaption(
             "Look at the top-left entry: e times a plus f times c. "
             "That is the dot product of the first row of B "
             "with the first column of A.",
-            duration=12,
+            duration=9.2,
         )
 
         self.ly.clear()
@@ -423,7 +423,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(row_col)
         self.play(Write(row_col), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(7.5)  # pacing: extends caption 12 slot
 
         self.ly.clear()
 
@@ -431,7 +431,7 @@ class Video28_MatrixMultiplication(Scene):
             "The top-right entry is the dot product of the first row of B "
             "with the second column of A. "
             "And so on for every entry.",
-            duration=12,
+            duration=7.6,
         )
 
         # General pattern
@@ -450,7 +450,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         label.next_to(general, DOWN, buff=0.5)
         self.play(Write(label), run_time=NORMAL)
-        self.wait(2.0)
+        self.wait(3.5)  # pacing: extends caption 13 slot
 
         self.ly.clear()
 
@@ -460,7 +460,7 @@ class Video28_MatrixMultiplication(Scene):
             "Here is the standard algorithm for matrix multiplication. "
             "To find each entry, take a row from the first matrix "
             "and a column from the second matrix, and compute their dot product.",
-            duration=16,
+            duration=11.6,
         )
 
         self.ly.title("The Row-Column Algorithm")
@@ -482,14 +482,14 @@ class Video28_MatrixMultiplication(Scene):
         self.play(Write(left_mat), run_time=FAST)
         self.play(Write(times), run_time=FAST)
         self.play(Write(right_mat), run_time=FAST)
-        self.wait(1.0)
+        self.wait(10.2)  # pacing: extends caption 14 slot
 
         # Highlight the row and column
         self.add_subcaption(
             "For the top-left entry: take row 1 of the left matrix "
             "and column 1 of the right matrix. "
             "Their dot product is 1 times 5 plus 2 times 7, equals 19.",
-            duration=14,
+            duration=11.4,
         )
 
         row_box = SurroundingRectangle(
@@ -508,7 +508,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         comp.next_to(m_group, DOWN, buff=0.6)
         self.play(Write(comp), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(9.6)  # pacing: extends caption 15 slot
 
         # Fill in the result
         self.ly.clear()
@@ -516,7 +516,7 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "Repeat for each entry: row 1 dot column 2, "
             "row 2 dot column 1, row 2 dot column 2.",
-            duration=10,
+            duration=7.7,
         )
 
         # Show all four computations
@@ -528,7 +528,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(result)
         self.play(Write(result), run_time=SLOW)
-        self.wait(2.0)
+        self.wait(5.8)  # pacing: extends caption 16 slot
 
         self.ly.clear()
 
@@ -538,7 +538,7 @@ class Video28_MatrixMultiplication(Scene):
             "Let us work through a more interesting example "
             "using our transformation intuition. "
             "We will compose a shear with a 90 degree rotation.",
-            duration=12,
+            duration=8.4,
         )
 
         self.ly.title("Worked Example: Shear then Rotation")
@@ -571,7 +571,7 @@ class Video28_MatrixMultiplication(Scene):
         descs.next_to(ab_group, RIGHT, buff=0.8)
 
         self.play(Write(desc_a), Write(desc_b), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(4.3)  # pacing: extends caption 17 slot
 
         self.ly.clear()
 
@@ -580,7 +580,7 @@ class Video28_MatrixMultiplication(Scene):
             "We want B times A: first apply A, then B. "
             "The first column of A is (1, 0). "
             "Applying B gives (0, 1).",
-            duration=12,
+            duration=9.7,
         )
 
         step1 = MathTex(
@@ -591,14 +591,14 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(step1)
         self.play(Write(step1), run_time=SLOW)
-        self.wait(1.5)
+        self.wait(7.9)  # pacing: extends caption 18 slot
 
         self.ly.clear()
 
         self.add_subcaption(
             "The second column of A is (1, 1). "
             "Applying B gives (-1, 1).",
-            duration=8,
+            duration=5.9,
         )
 
         step2 = MathTex(
@@ -609,7 +609,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.ly.center_in_content(step2)
         self.play(Write(step2), run_time=SLOW)
-        self.wait(1.5)
+        self.wait(3.8)  # pacing: extends caption 19 slot
 
         self.ly.clear()
 
@@ -617,7 +617,7 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "So B times A equals this matrix. "
             "This single matrix performs the shear followed by the rotation.",
-            duration=10,
+            duration=6.9,
         )
 
         final_result = MathTex(
@@ -630,7 +630,7 @@ class Video28_MatrixMultiplication(Scene):
         )
         self.play(Write(final_result), run_time=NORMAL)
         self.play(Create(box), run_time=FAST)
-        self.wait(2.0)
+        self.wait(5.1)  # pacing: extends caption 20 slot
 
         self.ly.clear()
 
@@ -640,7 +640,7 @@ class Video28_MatrixMultiplication(Scene):
             "Now here is something crucial. "
             "Matrix multiplication is generally NOT commutative. "
             "A times B is not the same as B times A.",
-            duration=12,
+            duration=8.5,
         )
 
         self.ly.title("Order Matters!")
@@ -661,7 +661,7 @@ class Video28_MatrixMultiplication(Scene):
         self.play(Write(ba_label), run_time=NORMAL)
         self.wait(0.5)
         self.play(Write(ab_label), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(5.8)  # pacing: extends caption 21 slot
 
         # Highlight the difference
         neq = MathTex(
@@ -672,11 +672,11 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "These are completely different matrices! "
             "B times A gives a different transformation than A times B.",
-            duration=10,
+            duration=6.3,
         )
 
         self.play(Write(neq), run_time=NORMAL)
-        self.wait(1.5)
+        self.wait(5.1)  # pacing: extends caption 22 slot
 
         self.ly.clear()
 
@@ -685,7 +685,7 @@ class Video28_MatrixMultiplication(Scene):
             "Geometrically, this makes sense. "
             "Shearing then rotating gives a different shape "
             "than rotating then shearing. The order of operations matters.",
-            duration=14,
+            duration=9.2,
         )
 
         plane_left = make_plane(length=4.5, shift=LEFT * 3.2)
@@ -755,7 +755,7 @@ class Video28_MatrixMultiplication(Scene):
             font_size=BODY_SIZE, color=RED, font=SANS, weight=BOLD,
         ).move_to(DOWN * 2.5)
         self.play(Write(reminder), run_time=NORMAL)
-        self.wait(2.0)
+        self.wait(3.2)  # pacing: extends caption 23 slot
 
         self.ly.clear()
 
@@ -764,7 +764,7 @@ class Video28_MatrixMultiplication(Scene):
         self.add_subcaption(
             "Before we wrap up, let us note some important properties "
             "of matrix multiplication that will be useful later.",
-            duration=10,
+            duration=6.4,
         )
 
         self.ly.title("Properties of Matrix Multiplication")
@@ -821,14 +821,15 @@ class Video28_MatrixMultiplication(Scene):
         for prop in props:
             self.play(FadeIn(prop, shift=LEFT * 0.2), run_time=FAST)
             self.wait(0.8)
+        self.wait(0.8)  # pacing: extends caption 24 slot
 
         self.add_subcaption(
             "Notice the dimension rule: the inner dimensions must match. "
             "An m by n matrix can multiply an n by p matrix, "
             "giving an m by p result.",
-            duration=12,
+            duration=10.2,
         )
-        self.wait(2.0)
+        self.wait(10.5)  # pacing: extends caption 25 slot
 
         self.ly.clear()
 
@@ -838,7 +839,7 @@ class Video28_MatrixMultiplication(Scene):
             "Let us recap what we have learned about matrix multiplication. "
             "It is not just a mechanical algorithm. "
             "It is composition of transformations.",
-            duration=12,
+            duration=8.7,
         )
 
         self.ly.title("Key Takeaways")
@@ -857,15 +858,16 @@ class Video28_MatrixMultiplication(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(bullets, run_time=0.6, wait_time=0.5)
-        self.wait(1.0)
+        self.wait(3.4)  # pacing: extends caption 26 slot
 
         # Teaser
         self.add_subcaption(
             "Next time, we will learn about determinants: "
             "a single number that tells you how a transformation "
             "scales area. See you then!",
-            duration=12,
+            duration=7.9,
         )
+        self.wait(0.7)  # pacing: extends caption 27 slot
 
         self.ly.clear()
 
