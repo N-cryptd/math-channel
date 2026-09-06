@@ -522,7 +522,7 @@ Batch audit of ALL pre-Aug-2026 narrated renders — Real Analysis 99-110, Abstr
 | # | render vs natural (s) | defects | skip-risk | worst | action |
 |---|---|---|---|---|---|
 | 25 | 126.7 vs 139.5 | 14/20 | 4 | 9.89x | fix card t_9c8943a0 |
-| 26 | 144.1 vs 155.5 | 11/15 | 0 | 4.08x | fix card t_c0e34f1b |
+| 26 | 144.1 vs 155.5 | 11/15 | 0 | 4.08x | FIXED Sep 6 (t_c0e34f1b) — 11/15 defective (10 rushed 1.01-4.08x, worst seg#10 slot 3.4s vs 12.65s natural; seg#3 slot under the 1.08x+0.3 floor at 0.94x); post-fix render verified clean (214.9s, 15/15 narrated, 0 warnings, 0 skips, usage 0.35-0.79x; scene-0 extension holds a hook-question card — no blank post-play_intro hold) |
 | 27 | 176.2 vs 226.5 | 19/25 | 1 | 12.32x | FIXED Sep 5 (t_3c2b11d6) — 19/25 rushed 1.12-12.32x + seg#19 skipped silent (0.45s avail); post-fix render verified clean (295.1s, 25/25 narrated, 0 warnings, 0 skips, usage 0.46-0.92x; scene-1 blank-hold QA defect found and repaired: extension now holds hook-question card) |
 | 28 | 134.3 vs 235.7 | 26/27 | 1 | 7.39x | fix card t_aa9f7542 |
 | 29 | 107.9 vs 261.3 | 24/25 | 5 | 10.88x | fix card t_5760635a — captions #18-21 start PAST video end, NEVER narrated |

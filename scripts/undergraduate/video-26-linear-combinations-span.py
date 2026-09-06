@@ -67,9 +67,20 @@ class Video26_LinearCombinationsSpan(Scene):
         self.add_subcaption(
             "Welcome back to Linear Algebra. Last time we learned about vectors. "
             "We learned how to add them and scale them. But what if we do both at once?",
-            duration=12,
+            duration=8.6,
         )
         play_intro(self, "Linear Combinations and Span", "Linear Algebra")
+        # pacing: extends caption-0 slot. Hold CONTENT while it plays — play_intro
+        # self-clears to dots-only, so a bare wait() here leaves a blank screen
+        # (same defect class fixed on Video 27). Total = 4.8s, zero slot shift.
+        hook = Text(
+            "Scale vectors. Add the results. At the same time.",
+            font=SANS, font_size=BODY_SIZE, color=ACCENT,
+        )
+        self.ly.center_in_content(hook)
+        self.play(FadeIn(hook, shift=LEFT * 0.15), run_time=0.5)
+        self.wait(3.8)
+        self.play(FadeOut(hook), run_time=0.5)
 
         self.add_subcaption(
             "That is the key question: given a set of vectors, "
@@ -102,7 +113,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "A linear combination is when you scale each vector by some number "
             "and then add the results. For two vectors a and b, "
             "a linear combination looks like c one times a plus c two times b.",
-            duration=15,
+            duration=13.0,
         )
 
         plane = make_grid_plane(shift_vec=LEFT * 2.5)
@@ -138,7 +149,7 @@ class Video26_LinearCombinationsSpan(Scene):
         clamp_position(formula_group)
 
         self.play(Write(formula_group), run_time=NORMAL)
-        self.wait(1.0)
+        self.wait(10.5)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene2b_example(self):
@@ -148,7 +159,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "First we scale a by 2, then add b. The result is a new vector. "
             "Try different scalars: negative 1 times a plus 2 times b gives "
             "a completely different point.",
-            duration=18,
+            duration=15.6,
         )
 
         plane = make_grid_plane(shift_vec=LEFT * 2.5)
@@ -210,7 +221,7 @@ class Video26_LinearCombinationsSpan(Scene):
         )
         q_text.move_to(DOWN * 2.5)
         self.play(Write(q_text), run_time=NORMAL)
-        self.wait(2.0)
+        self.wait(5.0)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # ── Scene 3: The Span — Definition ─────────────────────────────────
@@ -221,7 +232,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "The span of a set of vectors is the collection of ALL possible "
             "linear combinations. Every point you can reach by choosing some "
             "scalars is in the span.",
-            duration=12,
+            duration=9.7,
         )
 
         title = self.ly.title("Definition: Span", color=PRIMARY)
@@ -233,7 +244,7 @@ class Video26_LinearCombinationsSpan(Scene):
         )
         self.ly.safe_place(definition, direction=DOWN, anchor=title)
         self.play(Write(definition), run_time=SLOW)
-        self.wait(2.0)
+        self.wait(8.8)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene3b_span_plane(self):
@@ -242,7 +253,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "Let's see this in action. Vector a and vector b are not parallel. "
             "Watch what happens as we vary the scalars through many values. "
             "When two vectors are not parallel, their span covers the entire plane.",
-            duration=16,
+            duration=13.6,
         )
 
         plane = make_grid_plane(shift_vec=ORIGIN)
@@ -298,7 +309,7 @@ class Video26_LinearCombinationsSpan(Scene):
         self.ly.safe_place(reveal, direction=DOWN, anchor=plane, buff=0.3)
 
         self.play(Write(reveal), run_time=NORMAL)
-        self.wait(2.5)
+        self.wait(6.0)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # ── Scene 4: When Span is Just a Line ──────────────────────────────
@@ -311,7 +322,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "Notice that b is exactly 2 times a. "
             "Vector b is just a scalar multiple of a. These vectors are "
             "linearly DEPENDENT. One is redundant.",
-            duration=18,
+            duration=19.1,
         )
 
         plane = make_grid_plane(shift_vec=LEFT * 2.5)
@@ -368,7 +379,7 @@ class Video26_LinearCombinationsSpan(Scene):
         )
         self.add(line_through)
         self.bring_to_front(a_vec, a_lbl, b_vec, b_lbl)
-        self.wait(1.5)
+        self.wait(14.1)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene4b_conclusion(self):
@@ -377,7 +388,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "No matter what scalars we choose, the result always lands "
             "on the same line. The span collapses from a plane to a line. "
             "We say the vectors are linearly dependent.",
-            duration=12,
+            duration=10.4,
         )
 
         reveal = Text(
@@ -386,7 +397,7 @@ class Video26_LinearCombinationsSpan(Scene):
         )
         self.ly.center_in_content(reveal)
         self.play(Write(reveal), run_time=NORMAL)
-        self.wait(2.5)
+        self.wait(8.3)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # ── Scene 5: Three-Case Taxonomy ───────────────────────────────────
@@ -417,7 +428,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "This connects back to scalar multiplication: "
             "all multiples of one vector stay on the same line through the origin. "
             "Adding a second independent vector breaks us free into the plane.",
-            duration=12,
+            duration=11.5,
         )
 
         bridge_items = [
@@ -427,7 +438,7 @@ class Video26_LinearCombinationsSpan(Scene):
             Text("breaks us into the plane", font_size=HEADING_SIZE, color=ACCENT, font=SANS, weight=BOLD),
         ]
         self.ly.progressive_reveal(bridge_items, run_time=0.7, wait_time=0.8)
-        self.wait(2.0)
+        self.wait(5.0)  # pacing: extends previous caption slot
         self.ly.clear()
 
     # ── Scene 6: 3D Preview ──────────────────────────────────────────────
@@ -438,7 +449,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "Everything extends to 3D and beyond. "
             "In three dimensions, two independent vectors span a flat plane. "
             "Adding a third independent vector lets you reach all of 3D space.",
-            duration=14,
+            duration=12.7,
         )
 
         # Stylized 3D axes
@@ -478,7 +489,7 @@ class Video26_LinearCombinationsSpan(Scene):
                      max_tip_length_to_length_ratio=0.15)
 
         self.play(Create(vec1), Create(vec2), run_time=NORMAL)
-        self.wait(0.5)
+        self.wait(13.3)  # pacing: extends previous caption slot
 
         # Plane patch
         plane_poly = Polygon(
@@ -489,10 +500,10 @@ class Video26_LinearCombinationsSpan(Scene):
 
         self.add_subcaption(
             "Two vectors span a plane, a flat sheet in 3D space.",
-            duration=8,
+            duration=4.4,
         )
         self.play(Create(plane_poly), run_time=SLOW)
-        self.wait(1.0)
+        self.wait(3.8)  # pacing: extends previous caption slot
 
         self.add_subcaption(
             "Adding a third vector not on this plane "
@@ -523,7 +534,7 @@ class Video26_LinearCombinationsSpan(Scene):
             "A linear combination scales and adds vectors. "
             "The span is the set of all possible linear combinations. "
             "It can be a point, a line, or a plane.",
-            duration=12,
+            duration=10.6,
         )
 
         bullets = [
@@ -534,14 +545,14 @@ class Video26_LinearCombinationsSpan(Scene):
             Text("5. Independent vectors maximize the span", font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(bullets, run_time=0.6, wait_time=0.5)
-        self.wait(1.0)
+        self.wait(7.2)  # pacing: extends previous caption slot
         self.ly.clear()
 
         # Teaser
         self.add_subcaption(
             "Next time, we will see how matrices provide a systematic way "
             "to describe linear combinations and transformations.",
-            duration=8,
+            duration=11.9,  # pacing: align declared end to actual slot (video end)
         )
 
         teaser = Text(
