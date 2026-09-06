@@ -134,7 +134,7 @@ class Video109_PointwiseUniformConvergence(Scene):
         )
         self.ly.safe_place(note, direction=DOWN, anchor=formal, buff=0.3)
         self.play(Write(note), run_time=NORMAL)
-        self.wait(21.5)  # pacing: extends previous caption slot (Δ=20.0)
+        self.wait(21.7)  # pacing: extends previous caption slot (Δ=20.2)
         self.ly.clear()
 
     # --- Scene 3: Uniform Convergence ---
