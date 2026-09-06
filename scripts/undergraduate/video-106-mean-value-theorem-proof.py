@@ -60,7 +60,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "on the open interval, then there is a point where "
             "the instantaneous rate of change equals the "
             "average rate of change.",
-            duration=40,
+            duration=27.7,
         )
         play_intro(self, "Mean Value Theorem (Proof)", "Real Analysis I")
 
@@ -71,11 +71,14 @@ class Video106_MeanValueTheoremProof(Scene):
             x_range=[-0.2, 2.5, 1], y_range=[-0.2, 130, 30],
             x_length=6.0, y_length=3.2,
             axis_config={"include_numbers": True, "font_size": 18, "stroke_width": 1.5},
-            x_label="time (hours)", y_label="distance (miles)",
+        )
+        axis_labels = axes.get_axis_labels(
+            Text("time (hours)", font_size=SMALL_SIZE, color=DIM, font=SANS),
+            Text("distance (miles)", font_size=SMALL_SIZE, color=DIM, font=SANS),
         )
         self.ly.center_in_content(axes)
         clamp_position(axes)
-        self.play(Create(axes), run_time=NORMAL)
+        self.play(Create(axes), FadeIn(axis_labels), run_time=NORMAL)
 
         # Curve: distance function, slightly curved (accelerate then decelerate)
         def dist_func(t):
@@ -137,7 +140,7 @@ class Video106_MeanValueTheoremProof(Scene):
             Text("MVT: They must be equal somewhere!", font_size=HEADING_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(1)
+        self.wait(13.8)  # pacing: extends previous caption slot (+12.8s)
         self.ly.clear()
 
     # --- Scene 2: Intro + Section Divider ---
@@ -146,9 +149,9 @@ class Video106_MeanValueTheoremProof(Scene):
             "We build up to the Mean Value Theorem through "
             "two prerequisite theorems: Fermat's Theorem "
             "and Rolle's Theorem.",
-            duration=6,
+            duration=6.7,
         )
-        self.ly.section_divider("1", "Fermat's Theorem")
+        self.ly.section_divider("1", "Fermat's Theorem", hold=5.7)  # pacing: extends previous caption slot (+4.9s)
         self.ly.clear()
 
     # --- Scene 3: Fermat's Theorem ---
@@ -164,7 +167,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "both one-sided limits must equal f prime of c, "
             "the only possibility is zero. "
             "The same argument works for a local minimum.",
-            duration=48,
+            duration=29.5,
         )
 
         title = self.ly.title("Fermat's Theorem")
@@ -244,7 +247,7 @@ class Video106_MeanValueTheoremProof(Scene):
         )
         self.ly.safe_place(result, direction=DOWN, anchor=left_text, buff=0.3)
         self.play(Write(result), run_time=NORMAL)
-        self.wait(1)
+        self.wait(23.8)  # pacing: extends previous caption slot (+22.8s)
         self.ly.clear()
 
     # --- Scene 4: Rolle's Theorem ---
@@ -261,7 +264,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "any point works. If they differ, at least one "
             "extreme is at an interior point, and Fermat's "
             "Theorem gives f prime equals zero there.",
-            duration=50,
+            duration=33.4,
         )
         self.ly.section_divider("2", "Rolle's Theorem")
 
@@ -358,7 +361,7 @@ class Video106_MeanValueTheoremProof(Scene):
         )
         self.ly.safe_place(step4, direction=DOWN, anchor=step3, buff=0.4)
         self.play(Write(step4), run_time=NORMAL)
-        self.wait(1)
+        self.wait(23.5)  # pacing: extends previous caption slot (+22.5s)
         self.ly.clear()
 
     # --- Scene 5: MVT Statement ---
@@ -371,7 +374,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "that f prime of c equals the slope of the "
             "secant line from a to b, that is, f of b minus "
             "f of a over b minus a.",
-            duration=20,
+            duration=20.4,
         )
         self.ly.section_divider("3", "The Mean Value Theorem")
 
@@ -411,7 +414,7 @@ class Video106_MeanValueTheoremProof(Scene):
         )
         self.ly.safe_place(geo, direction=DOWN, anchor=conclusion, buff=0.4)
         self.play(Write(geo), run_time=NORMAL)
-        self.wait(1)
+        self.wait(14.8)  # pacing: extends previous caption slot (+13.8s)
         self.ly.clear()
 
     # --- Scene 6: Auxiliary Function (Key Insight) ---
@@ -431,7 +434,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "Rolle's Theorem applies to h, giving us h prime "
             "of c equals zero for some c in the open "
             "interval. From there, the MVT follows.",
-            duration=65,
+            duration=43.2,
         )
 
         title = self.ly.title("The Key Insight: Auxiliary Function")
@@ -520,7 +523,7 @@ class Video106_MeanValueTheoremProof(Scene):
             Transform(axes2.copy(), axes2),
             run_time=NORMAL,
         )
-        self.remove(*[m for m in self.mobjects if m not in [axes2]])
+        self.remove(*[m for m in self.mobjects if m not in [axes2] and not getattr(m, "_is_background", False)])
         # Recreate axes cleanly
         self.ly.clear()
 
@@ -557,7 +560,7 @@ class Video106_MeanValueTheoremProof(Scene):
         )
         self.ly.safe_place(rolle_text, direction=DOWN, anchor=axes3, buff=0.15)
         self.play(Write(rolle_text), run_time=NORMAL)
-        self.wait(1)
+        self.wait(35.1)  # pacing: extends previous caption slot (+34.1s)
         self.ly.clear()
 
     # --- Scene 7: MVT Formal Proof ---
@@ -577,7 +580,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "prime of x minus the secant slope. Setting to "
             "zero and solving: f prime of c equals f of b "
             "minus f of a over b minus a. QED.",
-            duration=65,
+            duration=47.4,
         )
 
         title = self.ly.title("Formal Proof")
@@ -653,7 +656,7 @@ class Video106_MeanValueTheoremProof(Scene):
         )
         self.ly.safe_place(qed, direction=DOWN, anchor=set_zero, buff=0.5)
         self.play(Write(qed), run_time=NORMAL)
-        self.wait(1)
+        self.wait(41.4)  # pacing: extends previous caption slot (+40.4s)
         self.ly.clear()
 
     # --- Scene 8: Counterexamples ---
@@ -668,7 +671,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "Second: suppose f is not differentiable at one "
             "point. A sharp corner can prevent any tangent "
             "from matching the secant slope.",
-            duration=38,
+            duration=24.2,
         )
 
         title = self.ly.title("Why Conditions Are Necessary")
@@ -697,7 +700,7 @@ class Video106_MeanValueTheoremProof(Scene):
 
         # Open/closed dots at jump
         dot_open = Dot(axes1.c2p(1.4, 1.9), color=RED, radius=0.06)
-        dot_open2 = Circle(axes1.c2p(1.4, 1.9), radius=0.1, color=RED, stroke_width=2)
+        dot_open2 = Circle(radius=0.1, color=RED, stroke_width=2).move_to(axes1.c2p(1.4, 1.9))
         dot_solid = Dot(axes1.c2p(1.6, 2.58), color=PRIMARY, radius=0.06)
         self.play(FadeIn(dot_open), FadeIn(dot_solid), run_time=FAST)
 
@@ -752,7 +755,7 @@ class Video106_MeanValueTheoremProof(Scene):
         )
         self.ly.safe_place(summary, direction=DOWN, anchor=fail2, buff=0.3)
         self.play(Write(summary), run_time=NORMAL)
-        self.wait(1)
+        self.wait(17.1)  # pacing: extends previous caption slot (+16.1s)
         self.ly.clear()
 
     # --- Scene 9: Consequences ---
@@ -772,7 +775,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "M. This connects back to our earlier hierarchy: "
             "bounded derivative implies Lipschitz implies "
             "uniformly continuous implies continuous.",
-            duration=60,
+            duration=46.5,
         )
 
         title = self.ly.title("Consequences of the MVT")
@@ -852,7 +855,7 @@ class Video106_MeanValueTheoremProof(Scene):
         )
         self.ly.safe_place(ref, direction=DOWN, anchor=cascade, buff=0.3)
         self.play(Write(ref), run_time=FAST)
-        self.wait(1)
+        self.wait(43.7)  # pacing: extends previous caption slot (+42.7s)
         self.ly.clear()
 
     # --- Scene 10: Summary + Outro ---
@@ -870,7 +873,7 @@ class Video106_MeanValueTheoremProof(Scene):
             "constant, positive derivative means increasing, "
             "and bounded derivative implies Lipschitz. "
             "Next time: the Riemann Integral.",
-            duration=40,
+            duration=31.5,
         )
 
         title = self.ly.title("Proof Chain")
@@ -896,7 +899,7 @@ class Video106_MeanValueTheoremProof(Scene):
             Text("Bounded derivative => Lipschitz => Uniformly Continuous", font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(takeaways, start_from=title2)
-        self.wait(1)
+        self.wait(18.0)  # pacing: extends previous caption slot (+17.0s)
         self.ly.clear()
 
         play_outro(self, "The Riemann Integral", "Real Analysis I")
