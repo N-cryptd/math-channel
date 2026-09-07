@@ -54,7 +54,7 @@ class Video113_PermutationGroups(Scene):
             "These rearrangements form a group. "
             "Today we study permutation groups, "
             "one of the most important families of groups in all of mathematics.",
-            duration=41.1,
+            duration=41.8,  # natural 41.14 + 0.7 drift margin (t_ec056e29)
         )
         play_intro(self, "Permutation Groups", "Abstract Algebra I")
 
@@ -132,7 +132,7 @@ class Video113_PermutationGroups(Scene):
             "For example, S 3 has six elements, "
             "and S 4 has twenty four. "
             "S 3 is small enough that we can write down all six elements explicitly.",
-            duration=42.1,
+            duration=42.8,  # natural 42.12 + 0.7 (t_ec056e29)
         )
 
         title = self.ly.title("The Symmetric Group S_n")
@@ -227,7 +227,7 @@ class Video113_PermutationGroups(Scene):
             "called cycle notation, which is what mathematicians actually use. "
             "Two-line notation is the bridge that helps us understand "
             "how to read permutations before we switch to the compact form.",
-            duration=39.7,
+            duration=40.4,  # natural 39.65 + 0.7 (t_ec056e29)
         )
 
         title = self.ly.title("Two-Line Notation")
@@ -307,7 +307,7 @@ class Video113_PermutationGroups(Scene):
             "A permutation that is a single cycle covering all n elements "
             "is called an n-cycle. "
             "The identity is often written as just e.",
-            duration=45.7,
+            duration=46.4,  # natural 45.65 + 0.7 (t_ec056e29)
         )
 
         title = self.ly.title("Cycle Notation")
@@ -438,7 +438,7 @@ class Video113_PermutationGroups(Scene):
             "The result is the transposition two, three. "
             "Important: permutations are generally not commutative. "
             "The order matters.",
-            duration=50.8,
+            duration=51.5,  # natural 50.78 + 0.7 (t_ec056e29)
         )
 
         title = self.ly.title("Composition of Permutations")
@@ -568,7 +568,7 @@ class Video113_PermutationGroups(Scene):
             "So two maps to three. "
             "The decomposition is not unique, "
             "but we will see that the parity of the number of transpositions is fixed.",
-            duration=76.2,
+            duration=76.9,  # natural 76.18 + 0.7 (t_ec056e29)
         )
 
         title = self.ly.title("Transpositions")
@@ -694,7 +694,7 @@ class Video113_PermutationGroups(Scene):
             "An even number of crossings means an even permutation. "
             "For S 3, the three even permutations are e, one, two, three, and one, three, two. "
             "The three odd permutations are one, two, one, three, and two, three.",
-            duration=72.4,
+            duration=73.1,  # natural 72.41 + 0.7 (t_ec056e29)
         )
 
         title = self.ly.title("Parity: Even and Odd Permutations")
@@ -871,7 +871,7 @@ class Video113_PermutationGroups(Scene):
             "These ideas are fundamental to abstract algebra "
             "and will be essential when we study cosets and Lagrange's theorem. "
             "Thanks for watching!",
-            duration=59.3,
+            duration=60.0,  # natural 59.33 + 0.7 (t_ec056e29)
         )
 
         title = self.ly.title("The Alternating Group A_n")

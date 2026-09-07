@@ -67,7 +67,7 @@ class Video122_IntroductionToRings(Scene):
             "Today we define rings, explore examples, "
             "and build up to the concept of a field. "
             "This is Abstract Algebra, Video 12.",
-            duration=36.9,
+            duration=37.6,  # natural 36.91 + 0.7 drift margin (t_265f7ae5)
         )
         play_intro(self, "Introduction to Rings and Fields", "Abstract Algebra I")
 
@@ -115,7 +115,7 @@ class Video122_IntroductionToRings(Scene):
             "Notice that we do NOT require multiplication to be commutative, "
             "and we do NOT require a multiplicative identity. "
             "These are optional extra properties.",
-            duration=50,
+            duration=47.7,  # natural 46.99 + 0.7 (t_265f7ae5)
         )
         self.ly.section_divider("1", "Definition of a Ring")
 
@@ -155,7 +155,7 @@ class Video122_IntroductionToRings(Scene):
         )
         self.ly.safe_place(note, anchor=items[-1], direction=DOWN, buff=0.35)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(5)
+        self.wait(23.5)  # pacing: extends previous caption slot (Δ=18.5)
 
         self.ly.clear()
 
@@ -179,7 +179,7 @@ class Video122_IntroductionToRings(Scene):
             "For example, Z subscript 6 is a ring. "
             "The key point is that every ring contains "
             "an abelian group hiding inside it, under addition.",
-            duration=45,
+            duration=45.0,  # natural 44.28 + 0.7 (t_265f7ae5)
         )
 
         title = self.ly.title("Example: The Integers")
@@ -215,7 +215,7 @@ class Video122_IntroductionToRings(Scene):
             Text("Every ring has an abelian group under +", font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=boxed, run_time=0.8)
-        self.wait(6)
+        self.wait(22.2)  # pacing: extends previous caption slot (Δ=16.2)
 
         self.ly.clear()
 
@@ -240,7 +240,7 @@ class Video122_IntroductionToRings(Scene):
             "and multiplied by distributing. "
             "Both are important examples of rings "
             "that go beyond the integers.",
-            duration=45,
+            duration=44.7,  # natural 43.97 + 0.7 (t_265f7ae5)
         )
 
         title = self.ly.title("Example: Matrices")
@@ -292,7 +292,7 @@ class Video122_IntroductionToRings(Scene):
         )
         self.ly.safe_place(poly_note, anchor=boxed, direction=DOWN, buff=0.35)
         self.play(FadeIn(poly_note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(20.4)  # pacing: extends previous caption slot (Δ=16.4)
 
         self.ly.clear()
 
@@ -317,7 +317,7 @@ class Video122_IntroductionToRings(Scene):
             "every field is an integral domain, "
             "every integral domain is a commutative ring with unity, "
             "and every commutative ring with unity is a ring.",
-            duration=50,
+            duration=52.3,  # natural 51.55 + 0.7 (t_265f7ae5)
         )
         self.ly.section_divider("2", "Ring Taxonomy")
 
@@ -356,7 +356,7 @@ class Video122_IntroductionToRings(Scene):
         )
         self.ly.safe_place(note, anchor=boxed, direction=DOWN, buff=0.4)
         self.play(FadeIn(note, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(26.8)  # pacing: extends previous caption slot (Δ=22.8)
 
         self.ly.clear()
 
@@ -382,7 +382,7 @@ class Video122_IntroductionToRings(Scene):
             "This fails in Z subscript 6: "
             "2 times 3 equals 2 times 0, "
             "but 3 does not equal 0.",
-            duration=50,
+            duration=47.2,  # natural 46.51 + 0.7 (t_265f7ae5)
         )
 
         title = self.ly.title("Zero Divisors")
@@ -417,7 +417,7 @@ class Video122_IntroductionToRings(Scene):
             Text("Cancellation law: ab = ac, a \u2260 0 \u21d2 b = c", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=boxed, run_time=0.8)
-        self.wait(6)
+        self.wait(25.9)  # pacing: extends previous caption slot (Δ=19.9)
 
         self.ly.clear()
 
@@ -442,7 +442,7 @@ class Video122_IntroductionToRings(Scene):
             "because 2 has no multiplicative inverse in Z. "
             "Fields are the algebraic structure "
             "that best captures the arithmetic we are used to.",
-            duration=50,
+            duration=46.2,  # natural 45.48 + 0.7 (t_265f7ae5)
         )
         self.ly.section_divider("3", "Fields")
 
@@ -491,7 +491,7 @@ class Video122_IntroductionToRings(Scene):
         )
         self.ly.safe_place(non_ex, anchor=title2, direction=DOWN, buff=0.5)
         self.play(FadeIn(non_ex, shift=LEFT * 0.15), run_time=FAST)
-        self.wait(4)
+        self.wait(27.5)  # pacing: extends previous caption slot (Δ=23.5)
 
         self.ly.clear()
 
@@ -517,7 +517,7 @@ class Video122_IntroductionToRings(Scene):
             "ideals, and quotient rings in depth. "
             "This completes our introduction to abstract algebra. "
             "Thank you for watching.",
-            duration=35,
+            duration=46.8,  # natural 46.10 + 0.7 (t_265f7ae5)
         )
 
         title = self.ly.title("Summary")
@@ -541,7 +541,7 @@ class Video122_IntroductionToRings(Scene):
         )
         self.ly.center_in_content(closing)
         self.play(FadeIn(closing, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(3)
+        self.wait(27.2)  # pacing: extends previous caption slot (Δ=24.2)
 
         self.ly.clear()
         play_outro(self)

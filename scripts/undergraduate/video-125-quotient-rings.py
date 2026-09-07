@@ -67,7 +67,7 @@ class Video125_QuotientRings(Scene):
             "for ANY ring, not just the integers? "
             "The answer is yes, using ideals. "
             "This is Abstract Algebra, Video 125.",
-            duration=23.4,
+            duration=24.0,  # natural 23.33 + 0.7 drift margin (t_a2fbd953)
         )
         play_intro(self, "Quotient Rings", "Abstract Algebra I")
 
@@ -131,7 +131,7 @@ class Video125_QuotientRings(Scene):
             "Ideals are the ring-theoretic analog of normal subgroups. "
             "Just as normal subgroups let us quotient groups, "
             "ideals let us quotient rings.",
-            duration=26.4,
+            duration=27.1,  # natural 26.35 + 0.7 (t_a2fbd953)
         )
 
         self.ly.section_divider("1", "Recap: Why Ideals Matter")
@@ -206,7 +206,7 @@ class Video125_QuotientRings(Scene):
             "For multiplication, we need I to be an ideal "
             "to guarantee that a plus I times b plus I "
             "always lands in a b plus I.",
-            duration=47.7,
+            duration=48.3,  # natural 47.62 + 0.7 (t_a2fbd953)
         )
 
         self.ly.section_divider("2", "Constructing R/I")
@@ -290,7 +290,7 @@ class Video125_QuotientRings(Scene):
             "These are zero divisors! "
             "This tells us the ideal 6Z is neither prime nor maximal, "
             "since Z over 6Z is not an integral domain.",
-            duration=40.5,
+            duration=41.2,  # natural 40.49 + 0.7 (t_a2fbd953)
         )
 
         self.ly.section_divider("3", "Example: Z/6Z")
@@ -372,7 +372,7 @@ class Video125_QuotientRings(Scene):
             "Every nonzero element has a multiplicative inverse. "
             "We've just constructed F subscript 4, "
             "the finite field of order 4.",
-            duration=49.7,
+            duration=50.3,  # natural 49.61 + 0.7 (t_a2fbd953)
         )
 
         self.ly.section_divider("4", "Example: Constructing F_4")
@@ -455,7 +455,7 @@ class Video125_QuotientRings(Scene):
             "Example: the evaluation map from Z to Z subscript 7 "
             "sending n to n mod 7 has kernel 7Z. "
             "So Z over 7Z is isomorphic to Z subscript 7.",
-            duration=42.9,
+            duration=43.6,  # natural 42.86 + 0.7 (t_a2fbd953)
         )
 
         self.ly.section_divider("5", "First Isomorphism Theorem")
@@ -575,7 +575,7 @@ class Video125_QuotientRings(Scene):
             "of R over I entirely through the ideals of R. "
             "It's like collapsing the lattice of ideals "
             "by quotienting out I.",
-            duration=35.1,
+            duration=35.7,  # natural 35.04 + 0.7 (t_a2fbd953)
         )
 
         self.ly.section_divider("6", "Correspondence Theorem")
@@ -673,7 +673,7 @@ class Video125_QuotientRings(Scene):
             "has the same form in both worlds. "
             "This completes our Abstract Algebra I playlist. "
             "Thank you for watching!",
-            duration=45.3,
+            duration=45.9,  # natural 45.24 + 0.7 (t_a2fbd953)
         )
 
         title = self.ly.title("Summary: Quotient Rings")

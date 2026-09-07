@@ -65,7 +65,7 @@ class Video124_Ideals(Scene):
             "Ideals are the ring-theoretic analog of normal subgroups, "
             "and they unlock the deep structure of every ring. "
             "This is Abstract Algebra, Video 124.",
-            duration=22.6,
+            duration=23.3,  # natural 22.58 + 0.7 drift margin (t_8907c905)
         )
         play_intro(self, "Ideals in Ring Theory", "Abstract Algebra I")
 
@@ -110,7 +110,7 @@ class Video124_Ideals(Scene):
             "for every r in R and a in I, "
             "both r a and a r must lie in I. "
             "This is called the absorption law.",
-            duration=41.1,
+            duration=41.8,  # natural 41.11 + 0.7 (t_8907c905)
         )
 
         self.ly.section_divider("1", "From Groups to Rings")
@@ -180,7 +180,7 @@ class Video124_Ideals(Scene):
             "so every ideal is automatically two-sided. "
             "Every ideal is a subring, but the converse is false: "
             "not every subring is an ideal.",
-            duration=33.9,
+            duration=34.6,  # natural 33.94 + 0.7 (t_8907c905)
         )
 
         self.ly.section_divider("2", "Definition")
@@ -251,7 +251,7 @@ class Video124_Ideals(Scene):
             "but not an ideal. One half times one equals one half, "
             "which is not an integer. "
             "The absorption law fails.",
-            duration=46.3,
+            duration=47.0,  # natural 46.25 + 0.7 (t_8907c905)
         )
 
         title = self.ly.title("Example: nZ in Z")
@@ -339,7 +339,7 @@ class Video124_Ideals(Scene):
             "We can also combine ideals: "
             "the sum I plus J is the smallest ideal containing both, "
             "and the intersection I intersect J is also an ideal.",
-            duration=39.0,
+            duration=39.7,  # natural 38.95 + 0.7 (t_8907c905)
         )
 
         self.ly.section_divider("3", "Principal Ideals")
@@ -413,7 +413,7 @@ class Video124_Ideals(Scene):
             "when p is a prime number. "
             "In Z bracket x, the ideal (x) is prime "
             "but not maximal, since (x) is contained in (2, x).",
-            duration=43.1,
+            duration=43.8,  # natural 43.13 + 0.7 (t_8907c905)
         )
 
         self.ly.section_divider("4", "Prime and Maximal Ideals")
@@ -499,7 +499,7 @@ class Video124_Ideals(Scene):
             "But Z over (6) is Z subscript 6, which has zero divisors. "
             "Since 2 times 3 equals 0 in Z subscript 6, "
             "the ideal (6) is neither prime nor maximal.",
-            duration=54.4,
+            duration=55.1,  # natural 54.36 + 0.7 (t_8907c905)
         )
 
         self.ly.section_divider("5", "Key Theorems")
@@ -596,7 +596,7 @@ class Video124_Ideals(Scene):
             "while maximal ideals capture the every-element-invertible property. "
             "Next time, we'll construct quotient rings R over I "
             "and explore their structure in detail.",
-            duration=29.9,
+            duration=30.6,  # natural 29.93 + 0.7 (t_8907c905)
         )
 
         title = self.ly.title("Summary")

@@ -63,7 +63,7 @@ class Video123_PolynomialRings(Scene):
             "Given any ring R, we can build a brand new ring R of x, "
             "whose elements are polynomials with coefficients in R. "
             "This is Abstract Algebra, Video 10.",
-            duration=30,
+            duration=26.7,  # natural 26.04 + 0.7 (t_eaf6fca7)
         )
         play_intro(self, "Polynomial Rings", "Abstract Algebra I")
 
@@ -86,7 +86,8 @@ class Video123_PolynomialRings(Scene):
         boxed = self.ly.formula_box(bridge, color=PRIMARY)
         self.ly.safe_place(boxed, anchor=items[-1], direction=DOWN, buff=0.4)
         self.play(Write(bridge), Create(boxed[1]), run_time=NORMAL)
-        self.wait(5)
+        # pacing: extends previous caption slot (caption-1: 27.8s -> 32.6s, nat 26.0s)
+        self.wait(9.8)
 
         self.ly.clear()
 
@@ -108,7 +109,7 @@ class Video123_PolynomialRings(Scene):
             "and a sub zero is the constant term. "
             "We write deg of f to denote the degree of f. "
             "The zero polynomial is assigned degree minus infinity.",
-            duration=55,
+            duration=44.9,  # natural 44.21 + 0.7 (t_eaf6fca7)
         )
         self.ly.section_divider("1", "Definition of R[x]")
 
@@ -159,7 +160,8 @@ class Video123_PolynomialRings(Scene):
             Text("deg(g) = 2,  leading coeff = 5", font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=example, run_time=0.8)
-        self.wait(6)
+        # pacing: extends previous caption slot (caption-2: 44.7s -> 55.3s, nat 44.2s)
+        self.wait(16.6)
 
         self.ly.clear()
 
@@ -180,7 +182,7 @@ class Video123_PolynomialRings(Scene):
             "the degree of a product is exactly "
             "the sum of the degrees. "
             "This is because there are no zero divisors to cause cancellation.",
-            duration=55,
+            duration=33.7,  # natural 32.98 + 0.7 (t_eaf6fca7)
         )
         self.ly.section_divider("2", "Polynomial Operations")
 
@@ -276,7 +278,7 @@ class Video123_PolynomialRings(Scene):
             "So R of x is indeed a ring, "
             "whenever R is. "
             "The ring factory works automatically.",
-            duration=40,
+            duration=31.8,  # natural 31.08 + 0.7 (t_eaf6fca7)
         )
 
         title = self.ly.title("R[x] is a Ring")
@@ -301,7 +303,8 @@ class Video123_PolynomialRings(Scene):
         boxed = self.ly.formula_box(insight, color=PRIMARY)
         self.ly.safe_place(boxed, anchor=items[-1], direction=DOWN, buff=0.4)
         self.play(Write(insight), Create(boxed[1]), run_time=NORMAL)
-        self.wait(5)
+        # pacing: extends previous caption slot (caption-4: 24.4s -> 38.9s, nat 31.1s)
+        self.wait(19.5)
 
         self.ly.clear()
 
@@ -326,7 +329,7 @@ class Video123_PolynomialRings(Scene):
             "unless f or g is zero. "
             "For example, the integers Z are an integral domain, "
             "so Z of x is also an integral domain.",
-            duration=50,
+            duration=50.8,  # natural 50.14 + 0.7 (t_eaf6fca7)
         )
         self.ly.section_divider("3", "Inherited Properties")
 
@@ -362,7 +365,8 @@ class Video123_PolynomialRings(Scene):
             Text("Contradiction \\u21d2 f = 0 or g = 0", font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(steps, start_from=boxed, run_time=0.8)
-        self.wait(10)
+        # pacing: extends previous caption slot (caption-5: 37.9s -> 62.7s, nat 50.1s)
+        self.wait(34.8)
 
         self.ly.clear()
 
@@ -383,7 +387,7 @@ class Video123_PolynomialRings(Scene):
             "The only units in Z of x are one and minus one. "
             "This is because the coefficients must stay in Z, "
             "and only one and minus one have integer inverses.",
-            duration=40,
+            duration=38.6,  # natural 37.94 + 0.7 (t_eaf6fca7)
         )
 
         title = self.ly.title("Units in F[x]")
@@ -408,7 +412,8 @@ class Video123_PolynomialRings(Scene):
             MathTex(r"R[x]^\times = R^\times \cap \text{constants}", color=WHITE, font_size=30),
         ]
         self.ly.progressive_reveal(items2, start_from=title2, run_time=0.8)
-        self.wait(8)
+        # pacing: extends previous caption slot (caption-6: 29.5s -> 47.5s, nat 37.9s)
+        self.wait(26.1)
 
         self.ly.clear()
 
@@ -431,7 +436,7 @@ class Video123_PolynomialRings(Scene):
             "A useful test: if f has degree 2 or 3 and is reducible, "
             "then f has a root. So for low degree, "
             "checking for roots tells you about irreducibility.",
-            duration=55,
+            duration=52.5,  # natural 51.77 + 0.7 (t_eaf6fca7)
         )
         self.ly.section_divider("4", "Irreducibility")
 
@@ -483,7 +488,8 @@ class Video123_PolynomialRings(Scene):
         boxed3 = self.ly.formula_box(test, color=ACCENT)
         self.ly.center_in_content(boxed3)
         self.play(Write(test), Create(boxed3[1]), run_time=NORMAL)
-        self.wait(5)
+        # pacing: extends previous caption slot (caption-7: 42.8s -> 64.8s, nat 51.8s)
+        self.wait(27.1)
 
         self.ly.clear()
 
@@ -506,7 +512,7 @@ class Video123_PolynomialRings(Scene):
             "if and only if x minus a divides f. "
             "This links the algebraic notion of divisibility "
             "to the analytic notion of evaluating at a point.",
-            duration=45,
+            duration=43.7,  # natural 43.03 + 0.7 (t_eaf6fca7)
         )
         self.ly.section_divider("5", "Evaluation Homomorphism")
 
@@ -552,7 +558,8 @@ class Video123_PolynomialRings(Scene):
         boxed3 = self.ly.formula_box(corollary, color=RED)
         self.ly.safe_place(boxed3, anchor=boxed2, direction=DOWN, buff=0.4)
         self.play(Write(corollary), Create(boxed3[1]), run_time=NORMAL)
-        self.wait(5)
+        # pacing: extends previous caption slot (caption-8: 36.5s -> 53.8s, nat 43.0s)
+        self.wait(22.3)
 
         self.ly.clear()
 
@@ -572,7 +579,7 @@ class Video123_PolynomialRings(Scene):
             "And the evaluation homomorphism links algebra to substitution. "
             "In the next video, we will study ideals. "
             "Thank you for watching.",
-            duration=30,
+            duration=36.4,  # natural 35.71 + 0.7 (t_eaf6fca7)
         )
 
         title = self.ly.title("Summary")
@@ -597,7 +604,8 @@ class Video123_PolynomialRings(Scene):
         )
         self.ly.center_in_content(teaser)
         self.play(FadeIn(teaser, shift=LEFT * 0.15), run_time=NORMAL)
-        self.wait(3)
+        # pacing: extends previous caption slot (caption-9: 29.0s -> 44.7s, nat 35.7s)
+        self.wait(18.7)
 
         self.ly.clear()
         play_outro(self)
