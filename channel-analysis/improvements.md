@@ -2812,3 +2812,72 @@ Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks
 - Cinematic dark theme + motion (sweeping partition animations, growing tick ladders) vs. static whiteboard.
 - Story continuity: Video 270 division -> Video 271 integers below zero -> Video 272 numbers BETWEEN integers. The line gets denser every episode.
 - Real division-as-fraction proof (3 cookies, 4 friends) as the aha moment.
+
+---
+
+## [2026-09-07 14:55] Video 273 Decimals — Competitive Analysis (Foundations track)
+
+**Topic:** Decimals as the base-ten continuation of place value — the decimal point, tenths/hundredths/thousandths, decimals as fractions with power-of-ten denominators, decimals on the number line, comparing decimals, decimal addition, money as the native habitat, repeating-decimal teaser.
+**Videos analyzed:** 4 (3 channels). NOTE: LLM-vision models (phi-4-multimodal / nemotron-nano-vl in analyze_thumbnail.py AND the native vision backend) were subscription-blocked this run — thumbnail analysis below uses locally-computed pixel stats (luma / bright% / colorfulness / edge density) plus descriptions, chapters, and known channel style from the Video 272 entry. Search, metadata, and stats phases all succeeded.
+
+### 1. "Math Antics - Decimal Place Value" — Math Antics (KG6ILNOiMgM)
+- 4.70M views (Aug 2016), 3.85M subs
+- **Structure (8/10):** The canonical move: take the integer place-value chart kids already trust and EXTEND it to the right of a new symbol, the decimal point — ones, then tenths, hundredths, thousandths. Definition-first, vocabulary-forward, zero narrative.
+- **Pacing (8/10):** Slow, deliberate, repetition-heavy; long dwell on each chart state (same classroom rhythm as their fractions videos).
+- **Visuals (5/10):** Tablet-whiteboard style; static chart states, marker-color highlighting. The chart does all the work.
+- **Narration (8/10):** Direct, friendly, read-along friendly.
+- **Hooks (3/10):** None; assumes the viewer already decided to learn decimals.
+- **Thumbnail pixels:** warm cream/tan paper palette (mean luma 177, 77 percent bright), edge density 9.5 -> text-forward worksheet look, same family as their fractions thumbnails. Readability over drama.
+
+### 2. "Math Antics - Decimal Arithmetic" — Math Antics (kwh4SD1ToFc)
+- 6.53M views (Dec 2015), 3.85M subs — their single biggest decimals video by views
+- **Structure (8/10):** Two-rule playbook: (1) addition/subtraction — line up the decimal points, not the digits; (2) multiplication — multiply whole, then count off decimal places. Procedural, clean, memorable.
+- **Pacing (7/10):** Deliberate; worked examples get generous dwell time.
+- **Visuals (5/10):** Stacked-column arithmetic on the whiteboard; place-holder zeros shown explicitly.
+- **Narration (8/10):** Rule-first, then examples — the "line up the points" phrasing is the stickiest sentence in decimal pedagogy.
+- **Hooks (3/10):** None.
+- **Thumbnail pixels:** only hqdefault (480x360) survives — dark luma 82, 15 percent bright, colorfulness 64, edge density 11.2 -> bold blocky title card style.
+
+### 3. "An Introduction to Decimals | Decimal Place Value for Kids" — Doodles and Digits (KrAQneGhyuE)
+- 425K views (Feb 2024), 31.7K subs
+- **Structure (7/10):** Definition -> notation -> place value -> real-life applications (money, measurement). Explicitly CCSS-aligned: description quotes 4.NF.C.6 "rewrite 0.62 as 62/100" — i.e. the decimal-IS-a-fraction identity is the stated learning goal.
+- **Pacing (6/10):** Faster, denser than Math Antics; app-driven segments.
+- **Visuals (6/10):** Bright doodle/clipart collage style; busy frames.
+- **Narration (6/10):** Enthusiastic kid-teacher register.
+- **Hooks (4/10):** "What do those dots signify?" opener — mild curiosity gap.
+- **Thumbnail pixels:** very bright doodle collage (mean luma 193, 80 percent bright), edge density 14.1 (busiest of the four) -> colorful but noisy at small sizes.
+
+### 4. "Why Some Decimals Repeat and Others Don't" — Wrath of Math (U0x13CYsbrc)
+- 18.8K views (Nov 2024), 423K subs
+- **Structure (8/10):** Chaptered: The Issue -> More Expansions -> Prime Factors -> The Key -> Why Irrationals Don't Repeat -> Why Irrationals Don't Terminate -> Recap (~12 min). The real theorem: a fraction terminates exactly when its denominator's prime factors are only 2s and 5s.
+- **Pacing (6/10):** Lecture-register; dense for the foundations audience but the QUESTION-first structure ("some repeat, some don't — why?") is the right shape.
+- **Visuals (4/10):** Whiteboard-with-camera style, minimal animation.
+- **Narration (7/10):** Conversational chatty register (Math Chats series).
+- **Hooks (8/10):** The strongest hook of the four — a genuine open question drives the whole video.
+- **Thumbnail pixels:** whiteboard-bright (mean luma 231, 91 percent bright), colorfulness 75, edge density 12.0 -> high-contrast handwriting card.
+
+### Market gap (extends the Aug 2026 Foundations sweep)
+- Math Antics owns decimal procedure (6.5M + 4.7M views prove demand); every competitor treats the decimal point as a RULE to memorize.
+- Nobody tells the serial story our playlist has earned: 272 cut the line between 0 and 1 into FOURTHS; 273 cuts it into TEN — and can keep cutting forever. The decimal point is not a new symbol, it is place value marching past the ones place.
+- The decimal-is-a-fraction identity (0.7 = 7/10) appears in CCSS fine print and Math Antics' "Fractions and Decimals" conversion drill, but no competitor makes it the CENTRAL idea with the number line as the arbiter.
+- Repeating decimals: competitors either skip them (elementary tracks) or prove the full prime-factor theorem (Wrath of Math). The teaser — 1/3 = 0.333... as an infinite story we open but don't finish — is ours to own.
+
+### Techniques to adopt in Video 273
+1. **Open on the promise:** 272's outro promised "the decimal point, and the line cut into ten equal parts, forever" — deliver that shot in the first 20 seconds (serial hook; competitors have no continuity to exploit).
+2. **Kinetic place-value chart (Math Antics' core move, animated):** the integer chart 1-10-100 grows a mirror to the right of the point — 1/10, 1/100, 1/1000; symmetry is the aha (tenths are to the point what tens are to it).
+3. **Decimal = fraction identity as the spine:** 0.7 = 7/10 shown on the number line — the SAME point labeled both ways; then 0.25 = 25/100. Fractions never left; decimals are their base-ten costume.
+4. **Money as native habitat:** $1.23 read aloud as "one dollar, twenty-three cents" IS place value — every competitor leans on money; use it once, precisely, not as filler.
+5. **The 0.5 vs 0.45 trap:** longer is not bigger — compare with the fraction identity (5/10 vs 45/100), not the procedure. Competitors state the "line up the points" rule; we show WHY digits must be compared place by place.
+6. **Addition with aligned points, shown as column stack:** adopt the sticky phrase "line up the points, not the digits" (Math Antics' best sentence) with one worked sum 0.7 + 0.25.
+7. **Repeating teaser as cliffhanger:** 1/3 = 0.333... forever — end on "some numbers refuse to sit still; that is a story for another day" (Wrath of Math's question-shape, no theorem).
+
+### Techniques to avoid
+- Worksheet/quiz framing and pause-the-video contracts (Math Antics classroom contract) — watch-through cinema, not homework.
+- Static chart states: our chart BUILDS itself, column by column.
+- Song/dance formats (Numberock's 2.3M-view place value song) — off-brand for us.
+- Drill sequences of worked examples — one clean example per rule, then move.
+
+### Standout approaches
+- Math Antics: "line up the decimal points" — adopt the phrasing verbatim; some sentences are community property.
+- Wrath of Math: question-first chapter arc — our teaser scene borrows its shape at 1/10th the depth.
+- Doodles and Digits: the decimal-as-fraction identity quoted straight from CCSS 4.NF.C.6 — confirmation that our spine idea IS the standard's core, not a flourish.

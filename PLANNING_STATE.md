@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-**Last updated:** 2026-09-06
+**Last updated:** 2026-09-07
 
 **Completed Videos (Videos 1–268: scripts ✅, narrated renders ✅)**
 
@@ -393,8 +393,10 @@
 | 270 | Division and Remainders | ✅ | ✅ |
 | 271 | Negative Numbers | ✅ | ✅ |
 | 272 | Fractions | ✅ | ✅ |
+| 273 | Decimals | ✅ | ✅ |
 
 ## Notes
+- Video 273 (Decimals) BUILT + RENDERED 2026-09-07 (t_e46d53d8): 480p15, 492.7s (8:13), h264+aac, 10 TTS segments, 0 speedup warnings, 0 skips, 0 central-log events → rendered/Video273_Decimals_narrated.mp4 (md5-matched copy adfb51a8f4410009d642ccbad761112e, render > script). First video built end-to-end on the standardized cohort method: competitive analysis (4 videos / 3 channels — Math Antics ×2, Doodles and Digits, Wrath of Math; LLM vision down, thumbnails analyzed via local PIL pixel stats, competitor durations recorded "?s"); fresh 10-scene script (decimal place value, fraction-identity spine 0.7=7/10, comparing trap 0.5 vs 0.45, money habitat, "line up the decimal points" addition, ×10 slide, 1/3=0.333... teaser). Pacing: AST caption extraction + edge-tts -5% naturals (449.8s), declared = natural+0.7; render #1 SRT slot math found 9/10 slots 0.1-2.6s short of the 1.08x+0.3 floor → 9 block-final wait bumps +14.0s with `# pacing:` comments → render #2 10/10 slots pass (usage 0.86-0.92x). Audio -20.7 dB mean / -1.9 dB peak; dot QA 97.5% raw / 100% non-FP (120 frames; 3 flags = t=0 lead-in + two ≤0.5s ly.clear() transition dips at 99.3/343.3s, dense-sampled at 0.25s, normal content both sides). NEXT: Video 274 (Exponents) per curriculum row 9; row 8 "Decimals and Percents" pending a content card.
 - Video 123 (Polynomial Rings) PACING FIX VERIFIED + RENDERED 2026-09-07 (t_eaf6fca7): 480p15, 449.1s (7:29), h264+aac, 9 TTS segments, 0 speedup warnings, 0 central-log events → rendered/Video123_PolynomialRings_narrated.mp4 (md5 83e41140e32330005292a9c55b1296bc). Prior state: declareds oversized (0.6-0.8x usage) but 8/9 scene spans 0.15-6.9s SHORT of declared. Fix: 9 declareds re-aligned to natural+0.7 (352.9s naturals) — spans already held natural+1.0 everywhere, no wait changes. Shipped: usage 0.975-0.987x, audio -20.7/-2.4 dB, dot QA 100% (112 frames).
 - Video 124 (Ideals) PACING FIX VERIFIED + RENDERED 2026-09-07 (t_8907c905): 480p15, 339.8s (5:40), h264+aac, 8 TTS segments, 0 warnings, 0 central-log events → rendered/Video124_Ideals_narrated.mp4 (md5 169f8540edcaf499e8e4b98eee320adb). Prior run's 7 wait bumps present (spans +2.20..+5.05s) but declared == natural; 8 declareds → natural+0.7 (310.2s naturals). Shipped: usage 0.969-0.987x, audio -20.2/-2.3 dB, dot QA 100% (85 frames).
 - Video 125 (Quotient Rings) PACING FIX VERIFIED + RENDERED 2026-09-07 (t_a2fbd953): 480p15, 364.9s (6:05), h264+aac, 8 TTS segments, 0 warnings, 0 central-log events → rendered/Video125_QuotientRings_narrated.mp4 (md5 34258c6fe0bc46837b305da5f02e9d7b). 5 wait bumps present (spans +2.80..+14.80s), declared == natural; 8 declareds → natural+0.7 (310.5s naturals). Shipped: usage 0.972-0.986x, audio -20.6/-2.3 dB, dot QA 100% (91 frames).
