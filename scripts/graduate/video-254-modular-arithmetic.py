@@ -40,7 +40,7 @@ class Video254_ModularArithmetic(Scene):
             "The answer is five o'clock. You just did modular "
             "arithmetic mod twelve without realizing it."
             " This simple idea powers modern cryptography.",
-            duration=14,
+            duration=12.9,
         )
         play_intro(self, "Modular Arithmetic", "Number Theory")
 
@@ -54,6 +54,7 @@ class Video254_ModularArithmetic(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(1.9)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene2_definition(self):
@@ -61,7 +62,7 @@ class Video254_ModularArithmetic(Scene):
             "We say a is congruent to b modulo n if n divides "
             "a minus b. This defines an equivalence relation on "
             "the integers, partitioning them into n residue classes.",
-            duration=13,
+            duration=12.0,
         )
         self.ly.section_divider(1, "Congruence")
         title = self.ly.title("Definition of Congruence")
@@ -84,6 +85,7 @@ class Video254_ModularArithmetic(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(2.4)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene3_rules(self):
@@ -91,7 +93,7 @@ class Video254_ModularArithmetic(Scene):
             "Modular arithmetic preserves addition and multiplication. "
             "You can reduce modulo n at any point in the computation. "
             "This makes computing with large numbers much easier.",
-            duration=13,
+            duration=11.6,
         )
         self.ly.section_divider(2, "Arithmetic Rules")
         title = self.ly.title("Computing Mod n")
@@ -107,6 +109,7 @@ class Video254_ModularArithmetic(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(2.5)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene4_exponentiation(self):
@@ -115,7 +118,7 @@ class Video254_ModularArithmetic(Scene):
             "and integer a not divisible by p, a to the power of "
             "p minus one is congruent to one modulo p. This is "
             "incredibly powerful for computing large powers mod p.",
-            duration=16,
+            duration=15.7,
         )
         self.ly.section_divider(3, "Fermat's Little Theorem")
         title = self.ly.title("A Powerful Shortcut")
@@ -138,6 +141,7 @@ class Video254_ModularArithmetic(Scene):
                     font_size=BODY_SIZE, color=WHITE),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(6.1)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene5_applications(self):
@@ -146,7 +150,7 @@ class Video254_ModularArithmetic(Scene):
             "digits detect typos in book numbers. Hash functions "
             "in computer science use modular arithmetic. And "
             "RSA encryption relies entirely on modular exponentiation.",
-            duration=16,
+            duration=15.9,
         )
         self.ly.section_divider(4, "Applications")
         title = self.ly.title("Why This Matters")
@@ -162,6 +166,7 @@ class Video254_ModularArithmetic(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(6.8)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene6_summary(self):
@@ -171,7 +176,7 @@ class Video254_ModularArithmetic(Scene):
             "preserves addition and multiplication. Fermat's little "
             "theorem gives a powerful shortcut for prime moduli. "
             "Next, we solve linear equations in modular arithmetic.",
-            duration=18,
+            duration=18.4,
         )
         self.ly.section_divider(5, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -187,6 +192,7 @@ class Video254_ModularArithmetic(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(1.5)  # pacing: extends previous caption slot
         self.ly.clear()
 
         play_outro(self, "Linear Congruences", "Number Theory")
