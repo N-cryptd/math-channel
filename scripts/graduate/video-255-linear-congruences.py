@@ -38,7 +38,7 @@ class Video255_LinearCongruences(Scene):
             "What is x if three x equals seven mod eleven? "
             "To answer this, we need the modular inverse of three. "
             "The Euclidean algorithm from video two fifty one gives us a way.",
-            duration=14,
+            duration=11.7,  # pacing: natural 10.97 + 0.7
         )
         play_intro(self, "Linear Congruences", "Number Theory")
 
@@ -52,6 +52,7 @@ class Video255_LinearCongruences(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(0.6)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene2_definition(self):
@@ -60,7 +61,7 @@ class Video255_LinearCongruences(Scene):
             "equals b mod n. It has a solution if and only if the "
             "greatest common divisor of a and n divides b. "
             "If gcd of a and n is one, there is exactly one solution.",
-            duration=16,
+            duration=16.9,  # pacing: natural 16.20 + 0.7
         )
         self.ly.section_divider(1, "Linear Congruences")
         title = self.ly.title("When Does a Solution Exist?")
@@ -83,6 +84,7 @@ class Video255_LinearCongruences(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(7.3)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene3_inverses(self):
@@ -92,7 +94,7 @@ class Video255_LinearCongruences(Scene):
             "the extended Euclidean algorithm. For example, the inverse of "
             "three mod eleven is four, since three times four is twelve, "
             "which is one mod eleven.",
-            duration=18,
+            duration=18.5,  # pacing: natural 17.76 + 0.7
         )
         self.ly.section_divider(2, "Modular Inverse")
         title = self.ly.title("Finding the Inverse")
@@ -117,6 +119,7 @@ class Video255_LinearCongruences(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(7.6)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene4_systems(self):
@@ -126,7 +129,7 @@ class Video255_LinearCongruences(Scene):
             "Checking by hand: two, five, eight, eleven, fourteen. "
             "Eight mod five is three. So x equals eight is the answer. "
             "But there is a systematic method called the Chinese Remainder Theorem.",
-            duration=20,
+            duration=22.7,  # pacing: natural 22.01 + 0.7
         )
         self.ly.section_divider(3, "Systems of Congruences")
         title = self.ly.title("Multiple Constraints")
@@ -142,6 +145,7 @@ class Video255_LinearCongruences(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(13.6)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene5_summary(self):
@@ -152,7 +156,7 @@ class Video255_LinearCongruences(Scene):
             "using the extended Euclidean algorithm. And systems of "
             "congruences lead us to the Chinese Remainder Theorem, "
             "which we will cover in the next video.",
-            duration=20,
+            duration=21.4,  # pacing: natural 20.71 + 0.7
         )
         self.ly.section_divider(4, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -168,6 +172,7 @@ class Video255_LinearCongruences(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(4.4)  # pacing: extends previous caption slot
         self.ly.clear()
 
         play_outro(self, "Chinese Remainder Theorem", "Number Theory")
