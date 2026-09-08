@@ -40,7 +40,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
             "No matter how you try to break it apart, the prime factors "
             "are always the same. This fact is so natural that we take it "
             "for granted, but it actually requires a careful proof.",
-            duration=16,
+            duration=14.8,  # pacing: natural TTS 14.14s (t_ddba1fdc)
         )
         play_intro(self, "Fundamental Theorem of Arithmetic", "Number Theory")
 
@@ -54,6 +54,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(3.7)  # pacing: block-final hold, slot >= declared + 0.3 (t_ddba1fdc)
         self.ly.clear()
 
     def scene2_statement(self):
@@ -61,7 +62,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
             "The Fundamental Theorem of Arithmetic states that every integer "
             "greater than one can be written uniquely as a product of primes "
             "in non-decreasing order, up to the order of the factors.",
-            duration=13,
+            duration=12.0,  # pacing: natural TTS 11.28s (t_ddba1fdc)
         )
         self.ly.section_divider(1, "The Theorem")
         title = self.ly.title("Statement")
@@ -83,6 +84,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(3.6)  # pacing: block-final hold, slot >= declared + 0.3 (t_ddba1fdc)
         self.ly.clear()
 
     def scene3_existence(self):
@@ -91,7 +93,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
             "into primes. We prove this by strong induction on n. "
             "If n is prime, we are done. Otherwise n equals a times b where "
             "both a and b are smaller, so by induction they factor into primes.",
-            duration=16,
+            duration=18.2,  # pacing: natural TTS 17.47s (t_ddba1fdc)
         )
         self.ly.section_divider(2, "Existence")
         title = self.ly.title("Every n > 1 Has a Prime Factorization")
@@ -109,6 +111,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.7)  # pacing: block-final hold, slot >= declared + 0.3 (t_ddba1fdc)
         self.ly.clear()
 
     def scene4_uniqueness(self):
@@ -117,7 +120,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
             "the previous video. If we had two different factorizations, "
             "a prime from the first must divide a prime from the second, "
             "so they must be equal. Cancel and repeat.",
-            duration=16,
+            duration=14.5,  # pacing: natural TTS 13.78s (t_ddba1fdc)
         )
         self.ly.section_divider(3, "Uniqueness")
         title = self.ly.title("Why the Factorization is Unique")
@@ -135,6 +138,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(4.0)  # pacing: block-final hold, slot >= declared + 0.3 (t_ddba1fdc)
         self.ly.clear()
 
     def scene5_applications(self):
@@ -143,7 +147,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
             "the product of the minimum prime powers. The LCM is the product "
             "of the maximum. And they satisfy a beautiful relationship: "
             "GCD times LCM equals the product.",
-            duration=15,
+            duration=16.9,  # pacing: natural TTS 16.20s (t_ddba1fdc)
         )
         self.ly.section_divider(4, "Applications")
         title = self.ly.title("GCD, LCM, and Prime Factorization")
@@ -166,6 +170,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(7.2)  # pacing: block-final hold, slot >= declared + 0.3 (t_ddba1fdc)
         self.ly.clear()
 
     def scene6_summary(self):
@@ -176,7 +181,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
             "uniqueness follows from Euclid's lemma. We also saw "
             "how prime factorization simplifies GCD and LCM computation. "
             "Next, we enter the world of modular arithmetic.",
-            duration=19,
+            duration=23.2,  # pacing: natural TTS 22.46s (t_ddba1fdc)
         )
         self.ly.section_divider(5, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -192,6 +197,7 @@ class Video253_FundamentalTheoremArithmetic(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(6.2)  # pacing: block-final hold before outro, slot >= declared + 0.3 (t_ddba1fdc)
         self.ly.clear()
 
         play_outro(self, "Modular Arithmetic", "Number Theory")
