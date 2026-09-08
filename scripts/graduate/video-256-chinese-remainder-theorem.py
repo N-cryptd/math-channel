@@ -40,7 +40,7 @@ class Video256_ChineseRemainderTheorem(Scene):
             "remainder three when divided by five, and remainder two when "
             "divided by seven. What is the number? "
             "This is the oldest known problem solved by the Chinese Remainder Theorem.",
-            duration=20,
+            duration=19.8,
         )
         play_intro(self, "Chinese Remainder Theorem", "Number Theory")
 
@@ -54,6 +54,7 @@ class Video256_ChineseRemainderTheorem(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(8.7)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene2_statement(self):
@@ -62,7 +63,7 @@ class Video256_ChineseRemainderTheorem(Scene):
             "are pairwise coprime, then the system of congruences "
             "has a unique solution modulo the product of all moduli. "
             "This is both an existence and uniqueness result.",
-            duration=15,
+            duration=14.5,
         )
         self.ly.section_divider(1, "The Theorem")
         title = self.ly.title("Statement")
@@ -85,6 +86,7 @@ class Video256_ChineseRemainderTheorem(Scene):
                     font_size=BODY_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(4.2)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene3_algorithm(self):
@@ -93,7 +95,7 @@ class Video256_ChineseRemainderTheorem(Scene):
             "of all moduli. For each i, compute N_i equals N over n_i, "
             "then find the modular inverse m_i of N_i modulo n_i. "
             "The solution is the sum of a_i times m_i times N_i, modulo N.",
-            duration=18,
+            duration=23.3,
         )
         self.ly.section_divider(2, "Constructing the Solution")
         title = self.ly.title("The Algorithm")
@@ -131,6 +133,7 @@ class Video256_ChineseRemainderTheorem(Scene):
                     font_size=BODY_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(ex_items, start_from=title2)
+        self.wait(4.0)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene4_applications(self):
@@ -139,7 +142,7 @@ class Video256_ChineseRemainderTheorem(Scene):
             "cryptography. RSA decryption uses it to reconstruct the "
             "message from smaller moduli. It is also used in secret "
             "sharing schemes and in speeding up modular arithmetic.",
-            duration=15,
+            duration=15.4,
         )
         self.ly.section_divider(3, "Applications")
         title = self.ly.title("Why This Matters")
@@ -153,6 +156,7 @@ class Video256_ChineseRemainderTheorem(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.6)  # pacing: extends previous caption slot
         self.ly.clear()
 
     def scene5_summary(self):
@@ -162,7 +166,7 @@ class Video256_ChineseRemainderTheorem(Scene):
             "has a unique solution. The constructive algorithm uses "
             "modular inverses. And this theorem is fundamental to "
             "modern cryptography. Next, Fermat's little theorem in depth.",
-            duration=20,
+            duration=19.1,
         )
         self.ly.section_divider(4, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -176,6 +180,7 @@ class Video256_ChineseRemainderTheorem(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(3.4)  # pacing: extends previous caption slot
         self.ly.clear()
 
         play_outro(self, "Fermat's Little Theorem", "Number Theory")
