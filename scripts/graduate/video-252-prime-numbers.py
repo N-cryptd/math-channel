@@ -40,7 +40,7 @@ class Video252_PrimeNumbers(Scene):
             "Every integer has a story about how it breaks apart. "
             "Some numbers refuse to break down at all. "
             "These are the prime numbers, the atoms of arithmetic.",
-            duration=12,
+            duration=9.9,  # pacing: natural TTS 9.17s (t_e73a7281)
         )
         play_intro(self, "Prime Numbers", "Number Theory")
 
@@ -62,7 +62,7 @@ class Video252_PrimeNumbers(Scene):
             "positive divisors are one and itself. A composite number has "
             "at least one other divisor. Note that one is neither prime nor "
             "composite, which is crucial for unique factorization.",
-            duration=15,
+            duration=16.2,  # pacing: natural TTS 15.48s (t_e73a7281)
         )
         self.ly.section_divider(1, "Definition")
         title = self.ly.title("What is a Prime?")
@@ -85,6 +85,7 @@ class Video252_PrimeNumbers(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(6.6)  # pacing: block-final hold, slot >= declared + 0.3 (t_e73a7281)
         self.ly.clear()
 
     def scene3_infinitude(self):
@@ -93,7 +94,7 @@ class Video252_PrimeNumbers(Scene):
             "300 BC. The proof is by contradiction. Assume there are only "
             "finitely many primes, multiply them all together and add one. "
             "This new number cannot be divided by any prime on the list.",
-            duration=15,
+            duration=17.3,  # pacing: natural TTS 16.56s (t_e73a7281)
         )
         self.ly.section_divider(2, "Infinitely Many Primes")
         title = self.ly.title("Euclid's Theorem")
@@ -125,6 +126,7 @@ class Video252_PrimeNumbers(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(steps, start_from=title2)
+        self.wait(2.7)  # pacing: block-final hold, slot >= declared + 0.3 (t_e73a7281)
         self.ly.clear()
 
     def scene4_sieve(self):
@@ -132,7 +134,7 @@ class Video252_PrimeNumbers(Scene):
             "The Sieve of Eratosthenes is an ancient algorithm for finding "
             "all primes up to a given limit. Start with two, cross out all "
             "its multiples, then move to the next uncrossed number and repeat.",
-            duration=13,
+            duration=13.9,  # pacing: natural TTS 13.20s (t_e73a7281)
         )
         self.ly.section_divider(3, "Finding Primes")
         title = self.ly.title("The Sieve of Eratosthenes")
@@ -148,6 +150,7 @@ class Video252_PrimeNumbers(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(4.7)  # pacing: block-final hold, slot >= declared + 0.3 (t_e73a7281)
         self.ly.clear()
 
     def scene5_distribution(self):
@@ -156,7 +159,7 @@ class Video252_PrimeNumbers(Scene):
             "counts primes up to N. Pi of 10 is 4, pi of 100 is 25, and "
             "pi of 1000 is 168. The prime number theorem tells us pi of N "
             "is approximately N over the natural log of N.",
-            duration=15,
+            duration=19.5,  # pacing: natural TTS 18.82s (t_e73a7281)
         )
         self.ly.section_divider(4, "Distribution of Primes")
         title = self.ly.title("How Common Are Primes?")
@@ -178,6 +181,7 @@ class Video252_PrimeNumbers(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=pi_fn)
+        self.wait(9.8)  # pacing: block-final hold, slot >= declared + 0.3 (t_e73a7281)
         self.ly.clear()
 
     def scene6_properties(self):
@@ -185,7 +189,7 @@ class Video252_PrimeNumbers(Scene):
             "Euclid's lemma: if a prime divides a product, it must divide "
             "at least one factor. This uses Bezout's identity from the "
             "previous video and is the key step toward unique factorization.",
-            duration=13,
+            duration=12.9,  # pacing: natural TTS 12.22s (t_e73a7281)
         )
         self.ly.section_divider(5, "Key Properties")
         title = self.ly.title("Euclid's Lemma")
@@ -208,6 +212,7 @@ class Video252_PrimeNumbers(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(3.3)  # pacing: block-final hold, slot >= declared + 0.3 (t_e73a7281)
         self.ly.clear()
 
     def scene7_summary(self):
@@ -217,7 +222,7 @@ class Video252_PrimeNumbers(Scene):
             "sieve of Eratosthenes finds primes efficiently. And the prime "
             "number theorem describes how primes thin out. Next, we prove "
             "that every integer factors uniquely into primes.",
-            duration=18,
+            duration=20.5,  # pacing: natural TTS 19.82s (t_e73a7281)
         )
         self.ly.section_divider(6, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -233,6 +238,7 @@ class Video252_PrimeNumbers(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(3.5)  # pacing: block-final hold before outro, slot >= declared + 0.3 (t_e73a7281)
         self.ly.clear()
 
         play_outro(self, "Fundamental Theorem of Arithmetic", "Number Theory")
