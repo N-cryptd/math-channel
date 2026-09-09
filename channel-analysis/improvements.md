@@ -2881,3 +2881,162 @@ Dimensions: Structure 7/10 | Pacing 6/10 | Visuals 6/10 | Narration 7/10 | Hooks
 - Math Antics: "line up the decimal points" — adopt the phrasing verbatim; some sentences are community property.
 - Wrath of Math: question-first chapter arc — our teaser scene borrows its shape at 1/10th the depth.
 - Doodles and Digits: the decimal-as-fraction identity quoted straight from CCSS 4.NF.C.6 — confirmation that our spine idea IS the standard's core, not a flourish.
+
+## [2026-09-09 10:03] @3blue1brown — But what is cross-entropy? | Compression is Intelligence Part 2
+
+**URL:** https://www.youtube.com/watch?v=GlYgs6v2YfU
+**Views:** 717K views | **Date:** 1 month ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @3blue1brown — Reinventing Entropy | Compression is Intelligence Part 1
+
+**URL:** https://www.youtube.com/watch?v=l6DKRf-fAAM
+**Views:** 1.5M views | **Date:** 3 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @3blue1brown — How (and why) to take a logarithm of an image
+
+**URL:** https://www.youtube.com/watch?v=ldxFjLJ3rVY
+**Views:** 2M views | **Date:** 5 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @mathologer — Parity of permutations, impossible puzzles and the magical determinant
+
+**URL:** https://www.youtube.com/watch?v=rUiulWItECQ
+**Views:** 44K views | **Date:** 4 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @mathologer — I Built an Original One-Glance Proof from Dice
+
+**URL:** https://www.youtube.com/watch?v=8q95eiq-y-Q
+**Views:** 38K views | **Date:** 10 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @mathologer — How to build and solve a 4D Rubik's cubes in physical 3D (no simulator!)
+
+**URL:** https://www.youtube.com/watch?v=d-Yy-ILjM3k
+**Views:** 35K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @zachstar — When you have to go to confession for banging your priest's wife
+
+**URL:** https://www.youtube.com/watch?v=4pE2xLVRyaY
+**Views:** 106K views | **Date:** 2 days ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @zachstar — The Book of Job (basically)
+
+**URL:** https://www.youtube.com/watch?v=4iQYyM49Hew
+**Views:** 81K views | **Date:** 6 days ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @zachstar — When an introvert takes an Uber
+
+**URL:** https://www.youtube.com/watch?v=q8SN_cUXJAU
+**Views:** 77K views | **Date:** 3 weeks ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @drpeyam — Craving some complex integrals 
+
+**URL:** https://www.youtube.com/watch?v=1_Qi_N_-61I
+**Views:** 7.9K views | **Date:** 8 months ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @drpeyam — Laplace Equation Applications
+
+**URL:** https://www.youtube.com/watch?v=3OFxXnBFf9s
+**Views:** 3.5K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09 10:03] @drpeyam — Laplace transform of jumps
+
+**URL:** https://www.youtube.com/watch?v=AwTwycSSxRY
+**Views:** 1.5K views | **Date:** 1 year ago
+**Duration:** ?s | **Captions:** True
+
+---
+
+## [2026-09-09] Video 274 Exponents — Competitive Analysis (Foundations track)
+
+**Next planned video:** Video 274 "Exponents" (Numbers & Arithmetic playlist, curriculum row 9, est. 12 min, L1 beginner).
+**Method:** youtubei.js search (5 queries, 40 results) + full metadata on top 5 + thumbnail pixel analysis (local PIL fallback — NVIDIA NIM vision endpoints return HTTP 410 since ~Sep 2026; analyzer persisted at `analyze_thumbnail_local.py`). Raw data: `exponents_results.json`, `exponents_metadata.json`, `exponents_thumb_analysis.json`, thumbnails in `thumbnails/exponents/`.
+
+### Competitor Landscape (topic leaders)
+
+| Video | Channel | Views | Date | Length | Subs |
+|---|---|---|---|---|---|
+| Algebra Basics: Laws Of Exponents | mathantics | 3.82M | Nov 2020 | 13:46 | 3.85M |
+| Intro To Exponents (aka Indices) | mathantics | 2.11M | Jan 2019 | 10:05 | 3.85M |
+| Simplifying Exponents (fractions/variables/negatives) | The Organic Chemistry Tutor | 4.0M | 2017 | 11:48 | 10.9M |
+| Negative exponents | Khan Academy | 1.6M | 2013 | 7:14 | 9.44M |
+| What is an Exponent? (An Intro) | Math with Mr. J | 921K | Oct 2021 | 7:21 | 1.99M |
+| Negative exponent intuition | Khan Academy | 498K | Jun 2008 | 4:38 | 9.44M |
+| Introduction to Exponents | The Organic Chemistry Tutor | 366K | Jan 2018 | 10:33 | 10.9M |
+| Learn All EXPONENT RULES in 36 min | JensenMath | 123K | 2025 | 36:46 | ~200K |
+
+**Market shape:** evergreen topic dominated by OLD videos (2008–2021). Almost nothing recent and high-quality → low recency pressure, high evergreen demand. Three content niches: (a) "what is an exponent" intros (7–10 min), (b) laws/rules compilations (11–37 min, the biggest views), (c) short WHY-intuition clips — Khan's 2008 "negative exponent intuition" (4:38) still pulls 498K, proving appetite for the *why* behind 2⁰=1 and a⁻ᵇ=1/aᵇ.
+
+### Key insights per competitor
+
+- **Math Antics (the winner):** 3 exponent videos = 8.3M combined views. Splits intro (repeated multiplication, expanded↔exponential form) from laws (each rule derived visually, then examples). Hand-drawn friendly style, two-panel asymmetric layouts. Their laws video (3.8M) OUTPERFORMED their intro (2.1M) — rule-derivation content has the bigger ceiling.
+- **TOCT:** memorization-first rule listing with heavy SEO (formula-sheet link, full chapter list in description, "next video" playlist links). His "Simplifying Exponents" (4M) targets homework-search traffic. Works at 10.9M-sub scale; thin thumbnails entirely.
+- **Khan Academy:** the negative-exponent *intuition* clip (pattern of dividing by the base: 2³→2²→2¹→2⁰→2⁻¹) is the single most relevant structural idea in the space — 16 years old, still 498K. Nobody has modernized this with real animation.
+- **Math with Mr. J:** closest modern analog to our Foundations track (beginner, standards-aligned, gentle). Title SEO doubles the keyword ("What is an Exponent? | An Intro to Exponents"). 921K in 4 years on a 7:21 video.
+- **JensenMath:** 36-min rules dump got only 123K — poor views/length efficiency. Long compilation form is dying in this niche.
+
+### Thumbnail analysis (pixel-level, NIM down)
+
+Two schools in this niche:
+1. **Dark minimal / blackboard** (TOCT, Khan, 3B1B): black covers 68–88% of frame, brightness 9–18, content mass <10% per third, edge density 2.7–3.8%. Essentially formula screenshots. Rides on channel authority — **a small channel cannot win with this.**
+2. **Mid-tone friendly + accent color** (Math Antics, Mr. J, JensenMath): brightness 80–166, contrast 51–75, edge density 3.8–8.9% (still minimal — 1-2 elements max). Accent colors are consistently in the **yellow family**: Mr. J's yellow-green #d9ea90 (23.9% of frame) on dark gray #3f3e3e; JensenMath olive #919557 (12.3%) on gray-purple #434145. Math Antics uses blue/lavender #7379b2+#626898 (72%) with white.
+- Composition: asymmetric two-panel (content mass 54–58% in one lateral third — Math Antics intro, Mr. J) or centered single object (Math Antics laws, its most-viewed). Title text sits in the top band (JensenMath) or opposite the artwork.
+- Universal: NOBODY crowds the frame. Max edge density in the entire set = 8.9%.
+
+### Techniques to adopt (Video 274)
+
+1. **Thumbnail recipe:** our BG #1A1832 + one giant expression (e.g. 2⁵ rendered huge, MONO font) + exponent digit in ACCENT #FFD166 + dot-grid texture. This matches the winning dark+yellow-accent trend, is unmistakably our brand, and avoids the lazy pure-black formula look. Keep ≤2 elements (5-item budget applied to the thumbnail).
+2. **Duration 10–13 min** (curriculum says 12; both Math Antics winners are 10:05 and 13:46).
+3. **Structure — pattern-first spine:** open with repeated-multiplication build-up (2³→2⁵ expanded form, animated progressive stacks — our Manim version of Math Antics' static two-panel), then derive 2⁰=1 and 2⁻ⁿ=1/2ⁿ via the successive-division pattern (Khan's proven intuition, modernized with animation nobody else has), THEN present the laws as *consequences of the pattern* — not named rules to memorize (direct differentiation from TOCT's memorization-first format).
+4. **Title SEO:** double-keyword pattern like Mr. J — e.g. "What are Exponents? | Powers, Zero, and Negative Exponents Explained". Description lists each law with its formula (TOCT-style description SEO).
+5. **Chaptered description + next-video link** (TOCT playbook) — cheap, helps session time.
+6. **Reused series scaffolding:** same hook-question card + play_intro/outro as Videos 267–273 for playlist consistency.
+
+### Techniques to avoid
+
+- Pure-black formula-screenshot thumbnails (TOCT/Khan) — only works with 10M-sub authority.
+- 30+ min rules compilations (JensenMath, 123K — worst efficiency in the set).
+- Leading with formal rule NAMES ("product rule", "quotient rule") before the concrete pattern — beginners search "what does 2 to the 0 mean", not "zero exponent rule".
+- Crowded thumbnails (nobody in this niche does busy frames — and loses).
+- Do NOT copy Math Antics' hand-drawn character aesthetic — our differentiator is clean animated math; keep it.
+
+### Sweep notes (this run's channel sweep, 2026-09-09)
+
+- **3Blue1Brown:** "Compression is Intelligence" series is performing strongly (entropy 1.5M/3mo, cross-entropy 717K/1mo, log-of-image 2M/5mo). Confirms hot topics: information theory (we already have playlist 241–250) and applied intuition-first framing.
+- **Zach Star:** has pivoted to sketch comedy/essays — no longer a math-tutorial benchmark; deprioritize.
+- **Dr. Peyam:** low-view rapid-fire advanced clips (1.5–7.9K) — not relevant to Foundations track.
+- **Mathologer:** steady 35–44K on puzzle/proof content — irrelevant to beginner exponents.
+
+---
+
