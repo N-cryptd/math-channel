@@ -44,7 +44,7 @@ class Video257_FermatsLittleTheorem(Scene):
             "Computing this directly would be astronomical. But a beautiful "
             "result from the seventeenth century makes it trivial. "
             "This is Fermat's little theorem.",
-            duration=20,
+            duration=13.4,  # pacing: natural 12.74 + 0.7 (t_d79584f6)
         )
         play_intro(self, "Fermat's Little Theorem", "Number Theory")
 
@@ -81,7 +81,7 @@ class Video257_FermatsLittleTheorem(Scene):
             "a is any integer not divisible by p, then a to the power "
             "p minus one is congruent to one modulo p. An equivalent "
             "form is a to the p equals a modulo p, for all integers a.",
-            duration=18,
+            duration=18.2,  # pacing: natural 17.45 + 0.7 (t_d79584f6)
         )
         self.ly.section_divider(1, "The Theorem")
         title = self.ly.title("Statement")
@@ -115,6 +115,7 @@ class Video257_FermatsLittleTheorem(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(ex, start_from=title2)
+        self.wait(2.5)  # pacing: cap2 slot extension (span 16.3 -> 18.8 >= declared 18.2 + 0.5)
         self.ly.clear()
 
     # ──────────────────────────────────────────────────────────────
@@ -127,7 +128,7 @@ class Video257_FermatsLittleTheorem(Scene):
             "order p minus one. By Lagrange's theorem, the order "
             "of any element divides the group order. "
             "Therefore a to the p minus one equals the identity.",
-            duration=20,
+            duration=17.1,  # pacing: natural 16.42 + 0.7 (t_d79584f6)
         )
         self.ly.section_divider(2, "Proof via Lagrange")
         title = self.ly.title("The Group-Theoretic Proof")
@@ -153,6 +154,7 @@ class Video257_FermatsLittleTheorem(Scene):
                  font_size=HEADING_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(4.0)  # pacing: cap3 slot extension (span 13.8 -> 17.8 >= declared 17.1 + 0.5)
         self.ly.clear()
 
     # ──────────────────────────────────────────────────────────────
@@ -164,7 +166,7 @@ class Video257_FermatsLittleTheorem(Scene):
             "Multiply every element of one through p minus one by a. "
             "Since a is coprime to p, the map x to a x is a permutation "
             "of the set. So the products are equal, giving us the theorem.",
-            duration=22,
+            duration=17.2,  # pacing: natural 16.51 + 0.7 (t_d79584f6)
         )
         self.ly.section_divider(3, "Direct Proof")
         title = self.ly.title("Permutation Argument")
@@ -192,6 +194,7 @@ class Video257_FermatsLittleTheorem(Scene):
                     font_size=HEADING_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(2.9)  # pacing: cap4 slot extension (span 15.0 -> 17.9 >= declared 17.2 + 0.5)
         self.ly.clear()
 
     # ──────────────────────────────────────────────────────────────
@@ -203,7 +206,7 @@ class Video257_FermatsLittleTheorem(Scene):
             "It says that p is prime if and only if p minus one factorial "
             "is congruent to negative one modulo p. We can prove it using "
             "the fact that in a group, every element has a unique inverse.",
-            duration=22,
+            duration=18.1,  # pacing: natural 17.35 + 0.7 (t_d79584f6)
         )
         self.ly.section_divider(4, "Wilson's Theorem")
         title = self.ly.title("Wilson's Theorem")
@@ -241,6 +244,7 @@ class Video257_FermatsLittleTheorem(Scene):
                     font_size=BODY_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(ex, start_from=title2)
+        self.wait(1.0)  # pacing: cap5 safety bump (span 18.8 -> 19.8, margin over declared 18.1 + 0.5)
         self.ly.clear()
 
     # ──────────────────────────────────────────────────────────────
@@ -252,7 +256,7 @@ class Video257_FermatsLittleTheorem(Scene):
             "We can compute enormous powers modulo p by reducing the "
             "exponent. It also gives us a formula for modular inverses "
             "and forms the basis of probabilistic primality tests.",
-            duration=20,
+            duration=15.6,  # pacing: natural 14.90 + 0.7 (t_d79584f6)
         )
         self.ly.section_divider(5, "Applications")
         title = self.ly.title("Fast Modular Exponentiation")
@@ -282,6 +286,7 @@ class Video257_FermatsLittleTheorem(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(1.0)  # pacing: cap6 safety bump (span 16.3 -> 17.3 >= declared 15.6 + 0.5)
         self.ly.clear()
 
     # ──────────────────────────────────────────────────────────────
@@ -293,7 +298,7 @@ class Video257_FermatsLittleTheorem(Scene):
             "one equals one modulo p when p is prime. We proved it using "
             "Lagrange's theorem and a direct permutation argument. "
             "We saw Wilson's theorem and applications in cryptography.",
-            duration=20,
+            duration=16.8,  # pacing: natural 16.08 + 0.7 (t_d79584f6)
         )
         self.ly.section_divider(6, "Key Takeaways")
         title = self.ly.title("Summary")
@@ -309,6 +314,7 @@ class Video257_FermatsLittleTheorem(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(1.0)  # pacing: cap7 slot extension (span 17.1 -> 18.1 >= declared 16.8 + 0.5)
         self.ly.clear()
 
         play_outro(self, "Euler's Totient Function", "Number Theory")
