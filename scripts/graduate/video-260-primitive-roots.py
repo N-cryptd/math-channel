@@ -42,7 +42,7 @@ class Video260_PrimitiveRoots(Scene):
             "and so on. We get every nonzero residue. But the powers "
             "of two only give us one, two, and four. What makes three "
             "special? It is a primitive root.",
-            duration=26,
+            duration=18.87,
         )
         play_intro(self, "Primitive Roots", "Number Theory")
         title = self.ly.title("Powers That Generate Everything")
@@ -55,6 +55,7 @@ class Video260_PrimitiveRoots(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.72)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene2_order(self):
@@ -64,7 +65,7 @@ class Video260_PrimitiveRoots(Scene):
             "divides phi of n, by Lagrange's theorem from group theory. "
             "For example, the order of three mod seven is six, which "
             "equals phi of seven. The order of two mod seven is three.",
-            duration=30,
+            duration=20.74,
         )
         self.ly.section_divider(1, "Order of an Element")
         title = self.ly.title("The Order Function")
@@ -85,6 +86,7 @@ class Video260_PrimitiveRoots(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(11.09)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene3_definition(self):
@@ -94,7 +96,7 @@ class Video260_PrimitiveRoots(Scene):
             "generates the entire multiplicative group. The powers of a "
             "cycle through every element coprime to n. Three generates "
             "all of the nonzero residues mod seven, so it is a primitive root.",
-            duration=30,
+            duration=19.88,
         )
         self.ly.section_divider(2, "Primitive Root Definition")
         title = self.ly.title("When Order Equals phi(n)")
@@ -115,6 +117,7 @@ class Video260_PrimitiveRoots(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(10.23)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene4_existence(self):
@@ -124,7 +127,7 @@ class Video260_PrimitiveRoots(Scene):
             "mod p is always cyclic. How many primitive roots are there "
             "mod p? Exactly phi of p minus one. For p equals seven, "
             "phi of six equals two, and the primitive roots are three and five.",
-            duration=34,
+            duration=20.72,
         )
         self.ly.section_divider(3, "Existence for Primes")
         title = self.ly.title("Every Prime Has Primitive Roots")
@@ -137,6 +140,7 @@ class Video260_PrimitiveRoots(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(12.87)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene5_when_exist(self):
@@ -146,7 +150,7 @@ class Video260_PrimitiveRoots(Scene):
             "an odd prime p. In particular, they never exist modulo "
             "two to the k for k at least three. For example, mod eight "
             "the orders are all at most two, but phi of eight is four.",
-            duration=32,
+            duration=21.32,
         )
         self.ly.section_divider(4, "When Do They Exist?")
         title = self.ly.title("The Existence Theorem")
@@ -161,6 +165,7 @@ class Video260_PrimitiveRoots(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(12.17)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene6_finding(self):
@@ -171,7 +176,7 @@ class Video260_PrimitiveRoots(Scene):
             "one mod p. If all checks pass, g is a primitive root. "
             "For example, to test five mod eleven: p minus one is ten, "
             "whose prime factors are two and five.",
-            duration=36,
+            duration=23.67,
         )
         self.ly.section_divider(5, "Finding Primitive Roots")
         title = self.ly.title("Testing Algorithm")
@@ -186,6 +191,7 @@ class Video260_PrimitiveRoots(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(14.52)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene7_summary(self):
@@ -196,7 +202,7 @@ class Video260_PrimitiveRoots(Scene):
             "discrete logarithm problem, given a primitive root g and "
             "a residue b, finding the exponent, is the basis of "
             "Diffie-Hellman key exchange. Next time: quadratic residues.",
-            duration=30,
+            duration=21.70,
         )
         self.ly.section_divider(6, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -211,5 +217,6 @@ class Video260_PrimitiveRoots(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(4.74)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
         play_outro(self, "Primitive Roots", "Number Theory")
