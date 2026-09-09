@@ -44,7 +44,7 @@ class Video259_EulersTheoremRSA(Scene):
             "remarkable. We will see how this pure result in number "
             "theory is the foundation of RSA encryption, which secures "
             "your internet browsing every single day.",
-            duration=22,
+            duration=17.0,
         )
         play_intro(self, "Euler's Theorem and RSA", "Number Theory")
         title = self.ly.title("From Pure Math to Cryptography")
@@ -55,6 +55,7 @@ class Video259_EulersTheoremRSA(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.17)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene2_proof(self):
@@ -66,7 +67,7 @@ class Video259_EulersTheoremRSA(Scene):
             "Multiplying every element by a just permutes the group. "
             "Therefore the product of all elements is unchanged, and "
             "cancelling gives a to the phi of n equals one.",
-            duration=36,
+            duration=27.7,
         )
         self.ly.section_divider(1, "Euler's Theorem")
         title = self.ly.title("Proof of Euler's Theorem")
@@ -89,6 +90,7 @@ class Video259_EulersTheoremRSA(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(16.8)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene3_exponent_reduction(self):
@@ -99,7 +101,7 @@ class Video259_EulersTheoremRSA(Scene):
             "seven to the one hundredth mod fifteen. Phi of fifteen is "
             "eight, so one hundred mod eight is four. Seven to the "
             "fourth is twenty four hundred one, which is one mod fifteen.",
-            duration=34,
+            duration=25.1,
         )
         self.ly.section_divider(2, "Exponent Reduction")
         title = self.ly.title("Exponents Wrap Around mod phi(n)")
@@ -120,6 +122,7 @@ class Video259_EulersTheoremRSA(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(15.47)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene4_rsa_setup(self):
@@ -130,7 +133,7 @@ class Video259_EulersTheoremRSA(Scene):
             "phi of n equals p minus one times q minus one. Then choose "
             "an encryption exponent e coprime to phi of n, and compute "
             "the decryption exponent d as the inverse of e mod phi of n.",
-            duration=36,
+            duration=25.6,
         )
         self.ly.section_divider(3, "RSA Key Generation")
         title = self.ly.title("Setting Up RSA")
@@ -152,6 +155,7 @@ class Video259_EulersTheoremRSA(Scene):
         priv = Text("Private key: (d, n)  --  keep secret!",
                      font_size=BODY_SIZE, color=RED, font=SANS)
         self.ly.progressive_reveal([pub, priv], start_from=title2)
+        self.wait(12.43)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene5_rsa_encrypt_decrypt(self):
@@ -162,7 +166,7 @@ class Video259_EulersTheoremRSA(Scene):
             "equals c to the d mod n, recovering the original message. "
             "Security relies on the fact that factoring n into p "
             "times q is computationally infeasible for large n.",
-            duration=32,
+            duration=23.1,
         )
         self.ly.section_divider(4, "Encryption and Decryption")
         title = self.ly.title("The RSA Operations")
@@ -183,6 +187,7 @@ class Video259_EulersTheoremRSA(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=dec)
+        self.wait(12.93)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene6_rsa_proof(self):
@@ -194,7 +199,7 @@ class Video259_EulersTheoremRSA(Scene):
             "plus k phi of n, which equals m times m to the phi of n, "
             "all to the power k. By Euler's theorem this is m times one "
             "to the k, which equals m. Done.",
-            duration=42,
+            duration=29.2,
         )
         self.ly.section_divider(5, "Why RSA Works")
         title = self.ly.title("Proof of Correctness")
@@ -209,6 +214,7 @@ class Video259_EulersTheoremRSA(Scene):
                     font_size=BODY_SIZE, color=ACCENT),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(20.1)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene7_worked_example(self):
@@ -219,7 +225,7 @@ class Video259_EulersTheoremRSA(Scene):
             "coprime to twenty. The inverse of three mod twenty is "
             "seven, since three times seven is twenty one, which is one "
             "mod twenty. Now encrypt the message fourteen.",
-            duration=34,
+            duration=24.0,
         )
         self.ly.section_divider(6, "Worked Example")
         title = self.ly.title("Tiny RSA: p=3, q=11")
@@ -234,6 +240,7 @@ class Video259_EulersTheoremRSA(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(14.9)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
 
     def scene8_summary(self):
@@ -243,7 +250,7 @@ class Video259_EulersTheoremRSA(Scene):
             "RSA cryptosystem on top of it. The key insight is that "
             "Euler's theorem guarantees decryption recovers the original "
             "message. Next time we will explore primitive roots.",
-            duration=28,
+            duration=18.5,
         )
         self.ly.section_divider(7, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -258,5 +265,6 @@ class Video259_EulersTheoremRSA(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(1.35)  # block-final hold: slot = declared+0.5 (pacing fix)
         self.ly.clear()
         play_outro(self, "Euler's Theorem and RSA", "Number Theory")
