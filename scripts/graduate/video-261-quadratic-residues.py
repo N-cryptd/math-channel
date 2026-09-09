@@ -39,7 +39,7 @@ class Video261_QuadraticResidues(Scene):
             "seven, the squares of one through six are one, four, two, "
             "two, four, and one. Only three out of six nonzero residues "
             "are squares. These are called quadratic residues.",
-            duration=26,
+            duration=16.83,  # pacing: t_f2f5514a natural 16.13s + 0.7
         )
         play_intro(self, "Quadratic Residues", "Number Theory")
         title = self.ly.title("Which Numbers Are Squares?")
@@ -50,6 +50,7 @@ class Video261_QuadraticResidues(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.8)  # pacing: t_f2f5514a slot extension (block 10.35s vs declared 16.83s)
         self.ly.clear()
 
     def scene2_definition(self):
@@ -59,7 +60,7 @@ class Video261_QuadraticResidues(Scene):
             "such x exists, a is a quadratic nonresidue. For p equal "
             "to seven, the quadratic residues are one, two, and four. "
             "Three, five, and six are nonresidues.",
-            duration=32,
+            duration=20.60,  # pacing: t_f2f5514a natural 19.90s + 0.7
         )
         self.ly.section_divider(1, "Definition")
         title = self.ly.title("Quadratic Residues")
@@ -72,6 +73,7 @@ class Video261_QuadraticResidues(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(13.8)  # pacing: t_f2f5514a slot extension (block 8.15s vs declared 20.60s)
         self.ly.clear()
 
     def scene3_legendre(self):
@@ -81,7 +83,7 @@ class Video261_QuadraticResidues(Scene):
             "nonresidue, and zero if p divides a. It is multiplicative: "
             "the Legendre symbol of a b equals the product of the "
             "individual symbols.",
-            duration=30,
+            duration=17.91,  # pacing: t_f2f5514a natural 17.21s + 0.7
         )
         self.ly.section_divider(2, "The Legendre Symbol")
         title = self.ly.title("The Legendre Symbol (a/p)")
@@ -96,6 +98,7 @@ class Video261_QuadraticResidues(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(9.8)  # pacing: t_f2f5514a slot extension (block 9.45s vs declared 17.91s)
         self.ly.clear()
 
     def scene4_euler_criterion(self):
@@ -107,7 +110,7 @@ class Video261_QuadraticResidues(Scene):
             "for nonresidues. For example, two over seven equals two "
             "cubed equals eight, which is one mod seven. Confirmed, two "
             "is a quadratic residue.",
-            duration=44,
+            duration=27.53,  # pacing: t_f2f5514a natural 26.83s + 0.7
         )
         self.ly.section_divider(3, "Euler's Criterion")
         title = self.ly.title("Computing (a/p) via Exponentiation")
@@ -128,6 +131,7 @@ class Video261_QuadraticResidues(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(18.9)  # pacing: t_f2f5514a slot extension (block 9.95s vs declared 27.53s)
         self.ly.clear()
 
     def scene5_properties(self):
@@ -137,7 +141,7 @@ class Video261_QuadraticResidues(Scene):
             "on p mod four. It is one if p is one mod four, and minus "
             "one if p is three mod four. Also, a squared is always a "
             "quadratic residue.",
-            duration=32,
+            duration=18.36,  # pacing: t_f2f5514a natural 17.66s + 0.7
         )
         self.ly.section_divider(4, "Special Cases")
         title = self.ly.title("Useful Properties")
@@ -150,6 +154,7 @@ class Video261_QuadraticResidues(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(11.5)  # pacing: t_f2f5514a slot extension (block 8.15s vs declared 18.36s)
         self.ly.clear()
 
     def scene6_summary(self):
@@ -159,7 +164,7 @@ class Video261_QuadraticResidues(Scene):
             "This is already powerful, but the real breakthrough comes "
             "next: quadratic reciprocity, which lets us flip the "
             "Legendre symbol and compute (p/q) in terms of (q/p).",
-            duration=28,
+            duration=20.79,  # pacing: t_f2f5514a natural 20.09s + 0.7
         )
         self.ly.section_divider(5, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -174,5 +179,6 @@ class Video261_QuadraticResidues(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(12.7)  # pacing: t_f2f5514a slot extension (block 9.45s vs declared 20.79s)
         self.ly.clear()
         play_outro(self, "Quadratic Residues", "Number Theory")
