@@ -44,7 +44,7 @@ class Video258_EulersTotient(Scene):
             "a to the p minus one equals one mod p. But what if the "
             "modulus is composite? Euler found the answer, and the key "
             "is a remarkable counting function.",
-            duration=18,
+            duration=14.7,  # pacing: natural 14.04 + 0.7 (t_28402183)
         )
         play_intro(self, "Euler's Totient Function", "Number Theory")
 
@@ -58,6 +58,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(3.6)  # pacing: cap1 slot extension (span 11.65 -> 15.25 >= declared 14.7 + 0.5)
         self.ly.clear()
 
     # ── Scene 2: Definition and First Examples ──────────────────────
@@ -68,7 +69,7 @@ class Video258_EulersTotient(Scene):
             "their greatest common divisor is one. For example, phi of "
             "ten equals four, because one, three, seven, and nine are "
             "coprime to ten.",
-            duration=24,
+            duration=18.6,  # pacing: natural 17.90 + 0.7 (t_28402183)
         )
         self.ly.section_divider(1, "Definition")
         title = self.ly.title("Euler's Totient Function")
@@ -89,6 +90,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(10.4)  # pacing: cap2 slot extension (span 8.85 -> 19.25 >= declared 18.6 + 0.5)
         self.ly.clear()
 
     # ── Scene 3: Table of Values and Patterns ───────────────────────
@@ -98,7 +100,7 @@ class Video258_EulersTotient(Scene):
             "primes, phi of p equals p minus one, since every number "
             "from one to p minus one is coprime to p. There are other "
             "interesting patterns hiding in this table.",
-            duration=20,
+            duration=14.9,  # pacing: natural 14.18 + 0.7 (t_28402183)
         )
         self.ly.section_divider(2, "Building Intuition")
         title = self.ly.title("phi(n) for n = 1 to 12")
@@ -139,6 +141,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=rows[-1])
+        self.wait(7.3)  # pacing: cap3 slot extension (span 8.15 -> 15.45 >= declared 14.9 + 0.5)
         self.ly.clear()
 
     # ── Scene 4: Prime Powers ───────────────────────────────────────
@@ -149,7 +152,7 @@ class Video258_EulersTotient(Scene):
             "power p to the k, we count all p to the k numbers and "
             "subtract the multiples of p. This gives phi of p to the k "
             "equals p to the k minus p to the k minus one.",
-            duration=26,
+            duration=21.8,  # pacing: natural 21.14 + 0.7 (t_28402183)
         )
         self.ly.section_divider(3, "Prime Powers")
         title = self.ly.title("Totient of Prime Powers")
@@ -167,6 +170,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(12.8)  # pacing: cap4 slot extension (span 9.63 -> 22.43 >= declared 21.8 + 0.5)
         self.ly.clear()
 
     # ── Scene 5: Multiplicative Property ────────────────────────────
@@ -177,7 +181,7 @@ class Video258_EulersTotient(Scene):
             "This follows from the Chinese Remainder Theorem, which we "
             "saw earlier. Each coprime residue mod m pairs with each "
             "coprime residue mod n.",
-            duration=22,
+            duration=19.0,  # pacing: natural 18.26 + 0.7 (t_28402183)
         )
         self.ly.section_divider(4, "Multiplicative Property")
         title = self.ly.title("When gcd(m, n) = 1")
@@ -200,6 +204,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(9.4)  # pacing: cap5 slot extension (span 10.17 -> 19.57 >= declared 19.0 + 0.5)
         self.ly.clear()
 
     # ── Scene 6: The Product Formula ────────────────────────────────
@@ -210,7 +215,7 @@ class Video258_EulersTotient(Scene):
             "p two to the a two and so on, then phi of n equals n times "
             "one minus one over p one, times one minus one over p two, "
             "and so on. Let's work through an example.",
-            duration=26,
+            duration=20.5,  # pacing: natural 19.82 + 0.7 (t_28402183)
         )
         self.ly.section_divider(5, "The Product Formula")
         title = self.ly.title("phi(n) via Prime Factorization")
@@ -233,6 +238,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(12.2)  # pacing: cap6 slot extension (span 8.9 -> 21.1 >= declared 20.5 + 0.5)
         self.ly.clear()
 
     # ── Scene 7: Euler's Theorem ────────────────────────────────────
@@ -243,7 +249,7 @@ class Video258_EulersTotient(Scene):
             "of n equals n minus one, and we recover Fermat's little "
             "theorem. For example, three to the eighth equals six "
             "thousand five hundred sixty one, which is one mod fifteen.",
-            duration=26,
+            duration=22.0,  # pacing: natural 21.34 + 0.7 (t_28402183)
         )
         self.ly.section_divider(6, "Euler's Theorem")
         title = self.ly.title("The Generalization")
@@ -264,6 +270,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(13.7)  # pacing: cap7 slot extension (span 8.9 -> 22.6 >= declared 22.0 + 0.5)
         self.ly.clear()
 
     # ── Scene 8: Summary and Outro ──────────────────────────────────
@@ -275,7 +282,7 @@ class Video258_EulersTotient(Scene):
             "formula via prime factorization. Finally, Euler's theorem "
             "generalized Fermat's little theorem. The totient function "
             "is the key to RSA encryption, which we will explore next.",
-            duration=28,
+            duration=24.3,  # pacing: natural 23.64 + 0.7 (t_28402183)
         )
         self.ly.section_divider(7, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -291,6 +298,7 @@ class Video258_EulersTotient(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.3)  # pacing: cap8 slot extension (span 17.55 -> 24.85 >= declared 24.3 + 0.5)
         self.ly.clear()
 
         play_outro(self, "Euler's Totient Function", "Number Theory")
