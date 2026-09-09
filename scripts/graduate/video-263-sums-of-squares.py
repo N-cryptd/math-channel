@@ -43,7 +43,7 @@ class Video263_SumsOfSquares(Scene):
             "two squared plus three squared. But can seven be written "
             "this way? The answer reveals a deep connection between "
             "addition and prime numbers.",
-            duration=34,
+            duration=16.56,  # pacing: t_160abb96 natural 15.86s + 0.7
         )
         play_intro(self, "Sums of Two Squares", "Number Theory")
         title = self.ly.title("A Simple Question")
@@ -54,6 +54,7 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.5)  # pacing: t_160abb96 slot extension (block 10.35s vs declared 16.56s)
         self.ly.clear()
 
     def scene2_which_primes(self):
@@ -64,7 +65,7 @@ class Video263_SumsOfSquares(Scene):
             "seven, eleven, nineteen cannot be expressed this way. "
             "The pattern is: a prime p is a sum of two squares if and "
             "only if p equals two or p is one modulo four.",
-            duration=46,
+            duration=26.81,  # pacing: t_160abb96 natural 26.11s + 0.7
         )
         self.ly.section_divider(1, "Which Primes?")
         title = self.ly.title("Checking Small Primes")
@@ -94,6 +95,7 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=DIM, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=theorem)
+        self.wait(13.8)  # pacing: t_160abb96 slot extension (block 14.27s vs declared 26.81s)
         self.ly.clear()
 
     def scene3_brahmagupta(self):
@@ -104,7 +106,7 @@ class Video263_SumsOfSquares(Scene):
             "squared plus d squared equals the quantity ac minus bd "
             "squared plus the quantity ad plus bc squared. This "
             "identity is why prime factorization matters.",
-            duration=46,
+            duration=24.29,  # pacing: t_160abb96 natural 23.59s + 0.7
         )
         self.ly.section_divider(2, "The Key Identity")
         title = self.ly.title("Brahmagupta-Fibonacci Identity")
@@ -136,6 +138,7 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(10.5)  # pacing: t_160abb96 slot extension (block 15.06s vs declared 24.29s)
         self.ly.clear()
 
     def scene4_descent_idea(self):
@@ -148,7 +151,7 @@ class Video263_SumsOfSquares(Scene):
             "squared equals k times p for a small integer k. Then we "
             "use the Brahmagupta identity to reduce k step by step "
             "until k equals one.",
-            duration=52,
+            duration=31.52,  # pacing: t_160abb96 natural 30.82s + 0.7
         )
         self.ly.section_divider(3, "Why It's True")
         title = self.ly.title("Infinite Descent")
@@ -175,6 +178,7 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(17.8)  # pacing: t_160abb96 slot extension (block 15.00s vs declared 31.52s)
         self.ly.clear()
 
     def scene5_negative_case(self):
@@ -185,7 +189,7 @@ class Video263_SumsOfSquares(Scene):
             "squares can only be zero, one, or two modulo four. It can "
             "never equal three. Therefore no prime congruent to three "
             "mod four can be written as a sum of two squares.",
-            duration=42,
+            duration=23.81,  # pacing: t_160abb96 natural 23.11s + 0.7
         )
         self.ly.section_divider(4, "Why 3 mod 4 Fails")
         title = self.ly.title("The Modulo 4 Argument")
@@ -200,6 +204,7 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(15.5)  # pacing: t_160abb96 slot extension (block 9.64s vs declared 23.81s)
         self.ly.clear()
 
     def scene6_full_classification(self):
@@ -209,7 +214,7 @@ class Video263_SumsOfSquares(Scene):
             "is a sum of two squares if and only if every prime factor "
             "congruent to three mod four appears with an even exponent "
             "in the prime factorization of n.",
-            duration=38,
+            duration=18.68,  # pacing: t_160abb96 natural 17.98s + 0.7
         )
         self.ly.section_divider(5, "All Integers")
         title = self.ly.title("Full Classification")
@@ -232,6 +237,7 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(7.5)  # pacing: t_160abb96 slot extension (block 12.46s vs declared 18.68s)
         self.ly.clear()
 
     def scene7_worked_examples(self):
@@ -243,7 +249,7 @@ class Video263_SumsOfSquares(Scene):
             "c equals two, d equals three, we get ac minus bd equals minus four, "
             "and ad plus bc equals seven. So sixty five equals sixteen plus "
             "forty nine, which is four squared plus seven squared.",
-            duration=56,
+            duration=32.40,  # pacing: t_160abb96 natural 31.70s + 0.7
         )
         self.ly.section_divider(6, "Worked Examples")
         title = self.ly.title("Constructing 65 = 5 x 13")
@@ -260,6 +266,7 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(22.8)  # pacing: t_160abb96 slot extension (block 10.90s vs declared 32.40s)
         self.ly.clear()
 
     def scene8_summary(self):
@@ -271,7 +278,7 @@ class Video263_SumsOfSquares(Scene):
             "to three mod four appears with an even exponent. This "
             "beautiful result connects additive structure to the "
             "multiplicative structure of integers.",
-            duration=46,
+            duration=25.59,  # pacing: t_160abb96 natural 24.89s + 0.7
         )
         self.ly.section_divider(7, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -284,5 +291,6 @@ class Video263_SumsOfSquares(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(18.8)  # pacing: t_160abb96 slot extension (block 8.05s pre-clear vs declared 25.59s)
         self.ly.clear()
         play_outro(self, "Sums of Two Squares", "Number Theory")
