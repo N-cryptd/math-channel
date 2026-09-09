@@ -40,7 +40,7 @@ class Video262_QuadraticReciprocity(Scene):
             "computations into easy ones. For example, is seven a "
             "square mod eleven? Reciprocity turns this into: is eleven "
             "a square mod seven? Much easier to check.",
-            duration=32,
+            duration=18.99,  # pacing: t_b8fde84e natural 18.29s + 0.7
         )
         play_intro(self, "Quadratic Reciprocity", "Number Theory")
         title = self.ly.title("The Golden Theorem")
@@ -51,6 +51,7 @@ class Video262_QuadraticReciprocity(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(9.9)  # pacing: t_b8fde84e slot extension (block 10.35s vs declared 18.99s)
         self.ly.clear()
 
     def scene2_statement(self):
@@ -60,7 +61,7 @@ class Video262_QuadraticReciprocity(Scene):
             "p minus one times q minus one over four. This means they "
             "agree unless both are three mod four, in which case "
             "they disagree.",
-            duration=32,
+            duration=17.88,  # pacing: t_b8fde84e natural 17.18s + 0.7
         )
         self.ly.section_divider(1, "The Law")
         title = self.ly.title("Quadratic Reciprocity")
@@ -80,6 +81,7 @@ class Video262_QuadraticReciprocity(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=boxed)
+        self.wait(10.3)  # pacing: t_b8fde84e slot extension (block 8.85s vs declared 17.88s)
         self.ly.clear()
 
     def scene3_intuition(self):
@@ -89,7 +91,7 @@ class Video262_QuadraticReciprocity(Scene):
             "when reduced mod p, end up greater than p over two. This "
             "count determines the sign. The full proof is beautiful but "
             "technical, so we focus on using the law.",
-            duration=36,
+            duration=21.27,  # pacing: t_b8fde84e natural 20.57s + 0.7
         )
         self.ly.section_divider(2, "Why It Works")
         title = self.ly.title("Gauss's Lemma (Idea)")
@@ -104,6 +106,7 @@ class Video262_QuadraticReciprocity(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(12.9)  # pacing: t_b8fde84e slot extension (block 9.65s vs declared 21.27s)
         self.ly.clear()
 
     def scene4_computing(self):
@@ -113,7 +116,7 @@ class Video262_QuadraticReciprocity(Scene):
             "Step one: if the top number is even, factor out twos. "
             "Step two: use the law of quadratic reciprocity to flip. "
             "Step three: reduce the top modulo the bottom. Repeat.",
-            duration=34,
+            duration=20.57,  # pacing: t_b8fde84e natural 19.87s + 0.7
         )
         self.ly.section_divider(3, "Algorithm")
         title = self.ly.title("Computing Legendre Symbols")
@@ -126,6 +129,7 @@ class Video262_QuadraticReciprocity(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(13.5)  # pacing: t_b8fde84e slot extension (block 8.35s vs declared 20.57s)
         self.ly.clear()
 
     def scene5_worked_example(self):
@@ -139,7 +143,7 @@ class Video262_QuadraticReciprocity(Scene):
             "Two over eleven equals minus one, since eleven is three mod "
             "eight. Putting it together: minus one times minus one "
             "times minus one equals minus one.",
-            duration=56,
+            duration=35.09,  # pacing: t_b8fde84e natural 34.39s + 0.7
         )
         self.ly.section_divider(4, "Worked Example")
         title = self.ly.title("Compute (13/37)")
@@ -163,16 +167,17 @@ class Video262_QuadraticReciprocity(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(22.6)  # pacing: t_b8fde84e slot extension (block 13.80s vs declared 35.09s)
         self.ly.clear()
 
     def scene6_summary(self):
         self.add_subcaption(
             "Quadratic reciprocity is one of the deepest results in "
             "elementary number theory. It gives an efficient algorithm "
-            "for computing Legendre symbols, analogous to the Euclidean "
+            "algorithm for computing Legendre symbols, analogous to the Euclidean "
             "algorithm for greatest common divisors. Next time we will "
             "explore which numbers can be written as sums of two squares.",
-            duration=30,
+            duration=19.30,  # pacing: t_b8fde84e natural 18.60s + 0.7
         )
         self.ly.section_divider(5, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -185,5 +190,6 @@ class Video262_QuadraticReciprocity(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(12.4)  # pacing: t_b8fde84e slot extension (block 8.2s pre-clear vs declared 19.30s)
         self.ly.clear()
         play_outro(self, "Quadratic Reciprocity", "Number Theory")
