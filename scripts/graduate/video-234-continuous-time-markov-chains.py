@@ -63,7 +63,7 @@ class Video234_ContinuousTimeMarkovChains(Scene):
         self.add_subcaption(
             "In discrete time we have a transition matrix P. In continuous time, "
             "transitions happen at random moments governed by rate parameters.",
-            duration=9,
+            duration=9.65,
         )
         self.ly.section_divider(1, "Making Time Continuous")
 
@@ -101,7 +101,7 @@ class Video234_ContinuousTimeMarkovChains(Scene):
         self.add_subcaption(
             "The generator matrix Q plays the role of P in continuous time. "
             "Off-diagonal entries are transition rates; diagonal entries are negative sums.",
-            duration=10,
+            duration=11,
         )
         self.ly.section_divider(2, "The Generator Matrix Q")
 
@@ -129,7 +129,7 @@ class Video234_ContinuousTimeMarkovChains(Scene):
         self.add_subcaption(
             "The Kolmogorov forward and backward equations describe how "
             "transition probabilities evolve over time as systems of ODEs.",
-            duration=9,
+            duration=8.88,
         )
         self.ly.section_divider(3, "Kolmogorov Equations")
 
@@ -145,7 +145,7 @@ class Video234_ContinuousTimeMarkovChains(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=MONO),
         ]
         self.ly.two_columns(left, right, start_from=title)
-        self.wait(NORMAL)
+        self.wait(5.0)  # pacing fix t_4c2b649d: cap4 slot 5.77s -> 9.57s (natural 8.18s)
         self.ly.clear()
 
     def scene5_jump_chain(self):
@@ -173,7 +173,7 @@ class Video234_ContinuousTimeMarkovChains(Scene):
         self.add_subcaption(
             "Stationary distributions for continuous-time chains satisfy a "
             "similar equation to the discrete case, but using Q instead of P.",
-            duration=8,
+            duration=9.24,
         )
         self.ly.section_divider(5, "Long-Run Behavior")
 
@@ -199,7 +199,7 @@ class Video234_ContinuousTimeMarkovChains(Scene):
         self.add_subcaption(
             "To recap: continuous-time Markov chains use the generator Q instead of P. "
             "Next we study Brownian motion, the most important continuous-state process.",
-            duration=10,
+            duration=11.14,
         )
         title = self.ly.title("Key Takeaways")
         items = [
