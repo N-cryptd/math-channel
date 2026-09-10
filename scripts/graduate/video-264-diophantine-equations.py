@@ -48,7 +48,7 @@ class Video264_DiophantineEquations(Scene):
             "studying is a Diophantine equation. We seek integer solutions "
             "to polynomial equations, and today we learn which ones we "
             "can actually solve.",
-            duration=52,
+            duration=33.15,  # pacing: t_f578cb06 natural 32.45s + 0.7
         )
         play_intro(self, "Diophantine Equations", "Number Theory")
         title = self.ly.title("Fermat's Famous Margin")
@@ -66,6 +66,7 @@ class Video264_DiophantineEquations(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=flt)
+        self.wait(22.3)  # pacing: t_f578cb06 slot extension (block 12.13s vs declared 33.15s)
         self.ly.clear()
 
     def scene2_definition(self):
@@ -78,7 +79,7 @@ class Video264_DiophantineEquations(Scene):
             "five has infinitely many real solutions, a whole line, but "
             "only finitely many integer solutions. We want exactly those "
             "lattice points.",
-            duration=42,
+            duration=25.88,  # pacing: t_f578cb06 natural 25.18s + 0.7
         )
         self.ly.section_divider(1, "What Are Diophantine Equations?")
         title = self.ly.title("Integer Solutions Only")
@@ -109,6 +110,7 @@ class Video264_DiophantineEquations(Scene):
         self.ly.safe_place(item, DOWN, anchor=eq, buff=0.4)
         self.play(FadeIn(item, shift=LEFT * 0.15), run_time=NORMAL)
         self.wait(FAST)
+        self.wait(12.9)  # pacing: t_f578cb06 slot extension (block 14.33s vs declared 25.88s)
         self.ly.clear()
 
     def scene3_existence(self):
@@ -122,7 +124,7 @@ class Video264_DiophantineEquations(Scene):
             "integers x and y. So if d does not divide c, no solutions. "
             "Conversely, the extended Euclidean algorithm guarantees a "
             "solution when d does divide c.",
-            duration=50,
+            duration=35.67,  # pacing: t_f578cb06 natural 34.97s + 0.7
         )
         self.ly.section_divider(2, "Linear Diophantine Equations")
         title = self.ly.title("When Do Solutions Exist?")
@@ -160,6 +162,7 @@ class Video264_DiophantineEquations(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items3, start_from=title3)
+        self.wait(19.9)  # pacing: t_f578cb06 slot extension (block 17.10s vs declared 35.67s)
         self.ly.clear()
 
     def scene4_extended_euclid(self):
@@ -173,7 +176,7 @@ class Video264_DiophantineEquations(Scene):
             "six, or equivalently, two times negative one plus five times one "
             "equals three. So one solution is x zero equals negative one, y "
             "zero equals one.",
-            duration=56,
+            duration=36.60,  # pacing: t_f578cb06 natural 35.90s + 0.7
         )
         self.ly.section_divider(3, "Extended Euclidean Algorithm")
         title = self.ly.title("Example: 2x + 5y = 3")
@@ -204,6 +207,7 @@ class Video264_DiophantineEquations(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=title2)
+        self.wait(22.4)  # pacing: t_f578cb06 slot extension (block 15.53s vs declared 36.60s)
         self.ly.clear()
 
     def scene5_general_solution(self):
@@ -218,7 +222,7 @@ class Video264_DiophantineEquations(Scene):
             "two t. Setting t to zero gives our original solution. "
             "Setting t to one gives x equals four, y equals negative one. "
             "Every integer t gives another valid solution.",
-            duration=50,
+            duration=40.61,  # pacing: t_f578cb06 natural 39.91s + 0.7
         )
         self.ly.section_divider(4, "All Solutions")
         title = self.ly.title("General Solution")
@@ -240,6 +244,7 @@ class Video264_DiophantineEquations(Scene):
                     font_size=BODY_SIZE, color=PRIMARY),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
+        self.wait(30.6)  # pacing: t_f578cb06 slot extension (block 11.27s vs declared 40.61s)
         self.ly.clear()
 
     def scene6_pythagorean(self):
@@ -254,7 +259,7 @@ class Video264_DiophantineEquations(Scene):
             "positive integers with different parity and m greater than n. "
             "For example, m equals two, n equals one gives three, four, "
             "five. Every triple is a multiple of a primitive one.",
-            duration=58,
+            duration=42.56,  # pacing: t_f578cb06 natural 41.86s + 0.7
         )
         self.ly.section_divider(5, "Pythagorean Triples")
         title = self.ly.title("x^2 + y^2 = z^2")
@@ -295,6 +300,7 @@ class Video264_DiophantineEquations(Scene):
                     font_size=BODY_SIZE, color=SECONDARY),
         ]
         self.ly.progressive_reveal(items3, start_from=title3)
+        self.wait(25.9)  # pacing: t_f578cb06 slot extension (block 17.92s vs declared 42.56s)
         self.ly.clear()
 
     def scene7_general_strategy(self):
@@ -311,7 +317,7 @@ class Video264_DiophantineEquations(Scene):
             "nontrivial solution exists. These ideas connect to modern "
             "algebraic geometry, where the geometry of curves determines "
             "whether solutions exist.",
-            duration=56,
+            duration=45.58,  # pacing: t_f578cb06 natural 44.88s + 0.7
         )
         self.ly.section_divider(6, "General Strategy")
         title = self.ly.title("Three Tools")
@@ -343,6 +349,7 @@ class Video264_DiophantineEquations(Scene):
                  font_size=BODY_SIZE, color=RED, font=SANS),
         ]
         self.ly.progressive_reveal(items2, start_from=eq)
+        self.wait(31.4)  # pacing: t_f578cb06 slot extension (block 15.53s vs declared 45.58s)
         self.ly.clear()
 
     def scene8_summary(self):
@@ -360,7 +367,7 @@ class Video264_DiophantineEquations(Scene):
             "arithmetic, quadratic reciprocity, and finally Diophantine "
             "equations, you now have the core toolkit of elementary "
             "number theory. Thank you for watching.",
-            duration=52,
+            duration=47.86,  # pacing: t_f578cb06 natural 47.16s + 0.7
         )
         self.ly.section_divider(7, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -373,5 +380,6 @@ class Video264_DiophantineEquations(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(41.3)  # pacing: t_f578cb06 slot extension (block 7.9s pre-clear vs declared 47.86s)
         self.ly.clear()
         play_outro(self, "Diophantine Equations", "Number Theory")
