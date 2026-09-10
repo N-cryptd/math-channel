@@ -129,7 +129,7 @@ class Video232_StationaryDistributions(Scene):
         self.add_subcaption(
             "Not every Markov chain has a stationary distribution. "
             "For finite chains, irreducibility guarantees existence and uniqueness.",
-            duration=9,
+            duration=9.94,  # pacing: natural 9.24s + 0.7 (t_597e1f2b)
         )
         self.ly.section_divider(3, "When Does It Exist?")
 
@@ -143,7 +143,7 @@ class Video232_StationaryDistributions(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(2.2)  # pacing: t_597e1f2b (span 9.57s vs natural 9.24s -> target >= natural+1.0s)
         self.ly.clear()
 
     # -- Scene 5: Detailed Balance ------------------------------------
