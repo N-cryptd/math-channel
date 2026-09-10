@@ -44,7 +44,7 @@ class Video233_PoissonProcesses(Scene):
             "How many customers arrive at a store in an hour? How many emails "
             "do you receive in a day? These are counting processes, and the "
             "Poisson process is the most important model for them.",
-            duration=10,
+            duration=11.43,  # pacing fix t_ba3f396e: natural 10.73 + 0.7 (was 10; 1.11x speedup flagged)
         )
         play_intro(self, "Poisson Processes", "Stochastic Processes")
 
@@ -67,7 +67,7 @@ class Video233_PoissonProcesses(Scene):
             "A Poisson process is defined by three simple axioms about how "
             "events arrive: they start at zero, have independent increments, "
             "and the rate stays constant.",
-            duration=9,
+            duration=11.04,  # pacing fix t_ba3f396e: natural 10.34 + 0.7 (was 9)
         )
         self.ly.section_divider(1, "Definition")
 
@@ -83,7 +83,7 @@ class Video233_PoissonProcesses(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(1.8)  # pacing fix t_ba3f396e: cap2 slot slack (was NORMAL=1.2)
         self.ly.clear()
 
     # -- Scene 3: Poisson Distribution --------------------------------
@@ -193,7 +193,7 @@ class Video233_PoissonProcesses(Scene):
         self.add_subcaption(
             "The rate lambda can vary with time. This is the non-homogeneous "
             "Poisson process, useful for modeling rush hours or seasonal patterns.",
-            duration=9,
+            duration=9.84,  # pacing fix t_ba3f396e: natural 9.14 + 0.7 (was 9)
         )
         self.ly.section_divider(5, "Varying Rates")
 
@@ -207,7 +207,7 @@ class Video233_PoissonProcesses(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(1.9)  # pacing fix t_ba3f396e: cap6 slot slack (was NORMAL=1.2)
         self.ly.clear()
 
     # -- Scene 7: Summary ---------------------------------------------

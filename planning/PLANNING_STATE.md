@@ -1,6 +1,6 @@
 # Math Channel — Planning State
 
-Last updated: 2026-08-15
+Last updated: 2026-09-10 (SP pacing campaign notes; full per-video detail in planning/improvement-tracker.md)
 
 ## Completed Videos
 - Videos 1-24: Calculus I/II (scripts in scripts/pre-university/)
@@ -104,3 +104,18 @@ Last updated: 2026-08-15
 |- Video 208: The Fundamental Group — plan + script done (2026-08-17)
   - Script: scripts/graduate/video-208-fundamental-group.py (616 lines, compile-checked)
   - Render: PENDING
+
+## Pacing Campaign Notes (updated 2026-09-10)
+
+NOTE: this file was restored from an Aug-15 git revision on Sep 10 (after the Video 264 completion run corrupted it with a runaway prepend loop). Per-video progress lives in planning/improvement-tracker.md — that file is authoritative.
+
+- Pre-Aug-2026 render pacing audit (t_475b35a7): Videos 25-29, 99-125 all measured; 30 defective videos FIXED and verified Sep 5-6. Full table: improvement-tracker.md "2026-09-05" section.
+- Number Theory cohort (251-265): pacing campaign COMPLETE Sep 8-10 — every video fixed (declareds → natural+0.7 + block-final wait bumps), re-rendered, verified (0 speedup warnings, 0 skips, dot QA pass, md5-matched copies in rendered/).
+- Stochastic Processes cohort (229-240, in progress):
+  - 229 Random Walks FIXED Sep 10 (t_7106ac20): 20 declareds → natural+0.7 + 22 wait edits (2 passes; caption→gap attribution off-by-one found and corrected), 219.5s render verified clean, md5 19305cd7 → rendered/.
+  - 230 Markov Chains FIXED Sep 10 (t_0a5efeb8): 21 declareds → natural+0.7 + 21 wait bumps (single pass using the 229 attribution lesson), post-fix render verified end-to-end: 226.8s (3:47), 21/21 narrated, 0 speedup warnings, 0 skips, slot usage 0.777-0.956x (every span ≥ natural+0.3s), audio -20.4 dB mean / -2.3 dB peak, dot QA PASS 227/227 frames, md5 b15d8e09 → rendered/Video230_MarkovChains_narrated.mp4 (render 10:50 > script 10:47).
+  - 231 Classification of States VERIFIED healthy Sep 10 (t_37af286a): NO fix needed — naturals 71.5s vs spans ≥ natural+2.8s (ratios 0.49-0.77x); fresh 113.5s render verified, 8/8 narrated, dot QA PASS 113/113, md5 4e090106 → rendered/ copy refreshed (shipped SRT had been lost to media/ cleanup; baseline re-render regenerated it).
+  - 232 Stationary Distributions FIXED Sep 10 (t_597e1f2b): single borderline slot cap4 (0.97x — passed span<natural+0.3 by 27ms, failed the 0.93 healthy gate), cap4 declared 9→9.94 + scene4 final wait NORMAL(1.2)→2.2, 92.1s render verified clean (0/7 defects, every span ≥ natural+1.29s), md5 cd292f74 → rendered/.
+  - 233 Poisson Processes FIXED Sep 10 (t_ba3f396e): cap2/cap6 borderline ratios (0.955x/0.956x) + hidden third gate — 3 under-declared clips (cap1 flagged 1.106x speedup on first fix render; slot = declared − 0.3s gap), 3 declareds → natural+0.7 (11.43/11.04/9.84) + 2 scene-final wait bumps (1.2→1.8/1.9), 91.06s render verified end-to-end (7/7 narrated, 0 warnings, 0 skips, 0/7 defects, every span ≥ natural+1.06s, ratios 0.575-0.907x, audio -21.4 dB, dot QA PASS 91/91), md5 c45283bc → rendered/Video233_PoissonProcesses_narrated.mp4.
+- NEXT: SP cohort 234-240 pacing audits — measure naturals with DIRECT single-clip edge-tts (en-US-AndrewNeural --rate=-5%) vs shipped SRT spans; THREE gates (233 lesson): span < natural+0.3 (defect), ratio natural/span ≤ 0.93 (healthy), declared ≥ natural per caption (else narrate speedup — check media/narration_speedup_warnings.log on every render); fix recipe + caption→gap attribution rules in improvement-tracker.md SP audit section (2026-09-10). If shipped SRT is missing from media/ (cleanup), re-render baseline FIRST to regenerate it (231 protocol).
+- Kanban DB: the malformed board was quarantined (kanban.db.corrupt7.bak) and RESET Sep 10 ~midday; fresh board is operational (task creation + dispatch verified with the 233 cycle). Filesystem (improvement-tracker.md + this file + git log) remains the authoritative record.
