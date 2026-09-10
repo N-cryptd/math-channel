@@ -62,7 +62,7 @@ class Video238_OST(Scene):
             "The optional stopping theorem states that for a martingale and "
             "a stopping time satisfying certain conditions, the expected value "
             "at the stopping time equals the initial expected value.",
-            duration=10,
+            duration=12.1,
         )
         self.ly.section_divider(1, "The Theorem")
 
@@ -81,7 +81,7 @@ class Video238_OST(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(NORMAL)
+        self.wait(2.9)  # pacing: cap2 span >= natural 11.4 + 1.0 (was NORMAL)
         self.ly.clear()
 
     def scene3_conditions(self):
@@ -89,7 +89,7 @@ class Video238_OST(Scene):
             "The three sufficient conditions are: tau is bounded, the martingale "
             "differences are bounded, or tau has finite expectation and the martingale "
             "increments have finite mean.",
-            duration=10,
+            duration=11.3,
         )
         self.ly.section_divider(2, "Sufficient Conditions")
 
@@ -103,14 +103,14 @@ class Video238_OST(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(3.5)  # pacing: cap3 span >= natural 10.56 + 1.0 (was NORMAL)
         self.ly.clear()
 
     def scene4_gamblers_ruin(self):
         self.add_subcaption(
             "In gambler's ruin with fair coin, starting at k dollars, the OST "
             "immediately gives the probability of reaching N before 0.",
-            duration=9,
+            duration=9.5,
         )
         self.ly.section_divider(3, "Application: Gambler's Ruin")
 
@@ -124,7 +124,7 @@ class Video238_OST(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(2.5)  # pacing: cap4 span >= natural 8.81 + 1.0 (was NORMAL)
         self.ly.clear()
 
     def scene5_wald(self):
@@ -157,7 +157,7 @@ class Video238_OST(Scene):
         self.add_subcaption(
             "The OST says fair games stay fair even with clever stopping. "
             "Next we apply these ideas to stochastic calculus via Ito's lemma.",
-            duration=9,
+            duration=9.6,
         )
         title = self.ly.title("Key Takeaways")
         items = [
