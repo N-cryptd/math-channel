@@ -45,7 +45,7 @@ class Video230_MarkovChains(Scene):
             "Last time we studied random walks, where each step is "
             "independent of everything before it. Now we ask: what if "
             "the next step depends on where you are right now?",
-            duration=10,
+            duration=10.64,  # pacing: t_0a5efeb8 natural 9.94s + 0.7
         )
         play_intro(self, "Markov Chains", "Stochastic Processes")
 
@@ -67,7 +67,7 @@ class Video230_MarkovChains(Scene):
         self.add_subcaption(
             "The defining feature of a Markov chain is the Markov property. "
             "Given the present state, the future is independent of the past.",
-            duration=8,
+            duration=9.12,  # pacing: t_0a5efeb8 natural 8.42s + 0.7
         )
         self.ly.section_divider(1, "The Markov Property")
 
@@ -77,12 +77,12 @@ class Video230_MarkovChains(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(4.5)  # pacing: t_0a5efeb8 (block 5.0s anim vs natural 8.42s)
 
         self.add_subcaption(
             "Formally, the probability of moving to state j at the next "
             "step depends only on the current state i, not on earlier states.",
-            duration=8,
+            duration=8.60,  # pacing: t_0a5efeb8 natural 7.90s + 0.7
         )
 
         formula = MathTex(
@@ -92,12 +92,12 @@ class Video230_MarkovChains(Scene):
         )
         formula_box = self.ly.formula_box(formula, color=ACCENT)
         self.ly.safe_place(formula_box, DOWN, anchor=items[-1])
-        self.wait(NORMAL)
+        self.wait(9.0)  # pacing: t_0a5efeb8 (block 0.0s anim vs natural 7.90s)
 
         self.add_subcaption(
             "This is the Markov property, or memorylessness. "
             "The chain forgets everything except where it is right now.",
-            duration=8,
+            duration=7.25,  # pacing: t_0a5efeb8 natural 6.55s + 0.7
         )
 
         markov = Text(
@@ -105,7 +105,7 @@ class Video230_MarkovChains(Scene):
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(markov, DOWN, anchor=formula_box)
-        self.wait(SLOW)
+        self.wait(6.8)  # pacing: t_0a5efeb8 (block 0.8s anim vs natural 6.55s)
         self.ly.clear()
 
     # -- Scene 3: State diagram --------------------------------------
@@ -113,7 +113,7 @@ class Video230_MarkovChains(Scene):
         self.add_subcaption(
             "A finite Markov chain can be drawn as a state diagram. "
             "Each node is a state, each arrow is a transition with probability.",
-            duration=9,
+            duration=9.51,  # pacing: t_0a5efeb8 natural 8.81s + 0.7
         )
         self.ly.section_divider(2, "State Diagrams")
 
@@ -134,12 +134,12 @@ class Video230_MarkovChains(Scene):
 
         self.play(FadeIn(node_a), FadeIn(node_b), FadeIn(node_c),
                   run_time=NORMAL)
-        self.wait(FAST)
+        self.wait(5.0)  # pacing: t_0a5efeb8 (block 4.9s anim vs natural 8.81s)
 
         self.add_subcaption(
             "We have three weather states: Sunny, Cloudy, and Rainy. "
             "Each arrow is labeled with the transition probability.",
-            duration=7,
+            duration=8.43,  # pacing: t_0a5efeb8 natural 7.73s + 0.7
         )
 
         arrow_aa = CurvedArrow(
@@ -157,12 +157,12 @@ class Video230_MarkovChains(Scene):
 
         self.play(Create(arrow_aa), FadeIn(prob_aa), run_time=FAST)
         self.play(Create(arrow_ab), FadeIn(prob_ab), run_time=FAST)
-        self.wait(FAST)
+        self.wait(7.6)  # pacing: t_0a5efeb8 (block 1.2s anim vs natural 7.73s)
 
         self.add_subcaption(
             "From Sunny, there is a 70 percent chance of staying Sunny "
             "and a 30 percent chance of becoming Cloudy.",
-            duration=7,
+            duration=7.04,  # pacing: t_0a5efeb8 natural 6.34s + 0.7
         )
 
         arrow_ba = Arrow(node_b.get_bottom(), node_a.get_right(),
@@ -177,12 +177,12 @@ class Video230_MarkovChains(Scene):
 
         self.play(Create(arrow_ba), FadeIn(prob_ba), run_time=FAST)
         self.play(Create(arrow_bc), FadeIn(prob_bc), run_time=FAST)
-        self.wait(FAST)
+        self.wait(6.2)  # pacing: t_0a5efeb8 (block 1.2s anim vs natural 6.34s)
 
         self.add_subcaption(
             "From Cloudy, there is a 60 percent chance of returning to Sunny "
             "and a 40 percent chance of becoming Rainy.",
-            duration=7,
+            duration=7.37,  # pacing: t_0a5efeb8 natural 6.67s + 0.7
         )
 
         arrow_ca = Arrow(node_c.get_top() + LEFT * 0.2, node_a.get_bottom(),
@@ -199,7 +199,7 @@ class Video230_MarkovChains(Scene):
 
         self.play(Create(arrow_ca), FadeIn(prob_ca), run_time=FAST)
         self.play(Create(arrow_cc), FadeIn(prob_cc), run_time=FAST)
-        self.wait(SLOW)
+        self.wait(5.7)  # pacing: t_0a5efeb8 (block 2.0s anim vs natural 6.67s)
         self.ly.clear()
 
     # -- Scene 4: Transition matrix ----------------------------------
@@ -207,7 +207,7 @@ class Video230_MarkovChains(Scene):
         self.add_subcaption(
             "Every finite Markov chain has a transition matrix P. "
             "Entry P i j is the probability of moving from i to j.",
-            duration=8,
+            duration=9.17,  # pacing: t_0a5efeb8 natural 8.47s + 0.7
         )
         self.ly.section_divider(3, "Transition Matrices")
 
@@ -223,12 +223,12 @@ class Video230_MarkovChains(Scene):
         )
         self.ly.center_in_content(mat)
         self.play(Write(mat), run_time=NORMAL)
-        self.wait(NORMAL)
+        self.wait(4.6)  # pacing: t_0a5efeb8 (block 4.9s anim vs natural 8.47s)
 
         self.add_subcaption(
             "Each row sums to one. From any state you must go somewhere. "
             "Rows are probability distributions over the next state.",
-            duration=8,
+            duration=8.07,  # pacing: t_0a5efeb8 natural 7.37s + 0.7
         )
 
         row_sum = MathTex(
@@ -237,13 +237,13 @@ class Video230_MarkovChains(Scene):
         )
         row_sum_box = self.ly.formula_box(row_sum, color=ACCENT)
         self.ly.safe_place(row_sum_box, DOWN, anchor=mat)
-        self.wait(NORMAL)
+        self.wait(8.4)  # pacing: t_0a5efeb8 (block 0.0s anim vs natural 7.37s)
 
         self.add_subcaption(
             "A matrix with non-negative entries and rows summing to one "
             "is called a stochastic matrix, the algebraic backbone "
             "of the entire theory.",
-            duration=9,
+            duration=9.56,  # pacing: t_0a5efeb8 natural 8.86s + 0.7
         )
 
         stochastic = Text(
@@ -251,7 +251,7 @@ class Video230_MarkovChains(Scene):
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(stochastic, DOWN, anchor=row_sum_box)
-        self.wait(SLOW)
+        self.wait(9.1)  # pacing: t_0a5efeb8 (block 0.8s anim vs natural 8.86s)
         self.ly.clear()
 
     # -- Scene 5: Chapman-Kolmogorov ---------------------------------
@@ -260,7 +260,7 @@ class Video230_MarkovChains(Scene):
             "If P gives one-step transition probabilities, what about "
             "two steps or ten? The Chapman-Kolmogorov equations show "
             "that multi-step transitions are just matrix powers.",
-            duration=11,
+            duration=12.20,  # pacing: t_0a5efeb8 natural 11.50s + 0.7
         )
         self.ly.section_divider(4, "Chapman-Kolmogorov")
 
@@ -272,12 +272,12 @@ class Video230_MarkovChains(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(6.2)  # pacing: t_0a5efeb8 (block 6.3s anim vs natural 11.50s)
 
         self.add_subcaption(
             "The key equation: going from i to j in n plus m steps "
             "equals summing over all intermediate states k after n steps.",
-            duration=9,
+            duration=9.68,  # pacing: t_0a5efeb8 natural 8.98s + 0.7
         )
 
         ck_formula = MathTex(
@@ -286,13 +286,13 @@ class Video230_MarkovChains(Scene):
         )
         ck_box = self.ly.formula_box(ck_formula, color=ACCENT)
         self.ly.safe_place(ck_box, DOWN, anchor=items[-1])
-        self.wait(NORMAL)
+        self.wait(10.0)  # pacing: t_0a5efeb8 (block 0.0s anim vs natural 8.98s)
 
         self.add_subcaption(
             "In matrix language, this is simply P to the n times m "
             "equals P to the n times P to the m. Matrix multiplication "
             "chains the probabilities through intermediate states.",
-            duration=10,
+            duration=12.56,  # pacing: t_0a5efeb8 natural 11.86s + 0.7
         )
 
         matrix_form = MathTex(
@@ -300,7 +300,7 @@ class Video230_MarkovChains(Scene):
             font_size=BODY_SIZE, color=SECONDARY,
         )
         self.ly.safe_place(matrix_form, DOWN, anchor=ck_box)
-        self.wait(SLOW)
+        self.wait(12.1)  # pacing: t_0a5efeb8 (block 0.8s anim vs natural 11.86s)
         self.ly.clear()
 
     # -- Scene 6: Stationary distributions preview -------------------
@@ -309,7 +309,7 @@ class Video230_MarkovChains(Scene):
             "A natural question: does the chain settle into a long-run behavior? "
             "If we start in any state and wait long enough, does the "
             "distribution over states converge?",
-            duration=11,
+            duration=10.68,  # pacing: t_0a5efeb8 natural 9.98s + 0.7
         )
         self.ly.section_divider(5, "Stationary Distributions")
 
@@ -320,12 +320,12 @@ class Video230_MarkovChains(Scene):
                  font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(6.0)  # pacing: t_0a5efeb8 (block 5.0s anim vs natural 9.98s)
 
         self.add_subcaption(
             "Formally, pi is a row vector satisfying pi P equals pi. "
             "It is a left eigenvector of P with eigenvalue one.",
-            duration=9,
+            duration=8.79,  # pacing: t_0a5efeb8 natural 8.09s + 0.7
         )
 
         stat_formula = MathTex(
@@ -334,13 +334,13 @@ class Video230_MarkovChains(Scene):
         )
         stat_box = self.ly.formula_box(stat_formula, color=ACCENT)
         self.ly.safe_place(stat_box, DOWN, anchor=items[-1])
-        self.wait(NORMAL)
+        self.wait(9.1)  # pacing: t_0a5efeb8 (block 0.0s anim vs natural 8.09s)
 
         self.add_subcaption(
             "Under mild conditions, a finite Markov chain has a unique "
             "stationary distribution, and P to the n converges to a matrix "
             "whose rows are all equal to pi.",
-            duration=10,
+            duration=11.31,  # pacing: t_0a5efeb8 natural 10.61s + 0.7
         )
 
         converge = Text(
@@ -348,7 +348,7 @@ class Video230_MarkovChains(Scene):
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(converge, DOWN, anchor=stat_box)
-        self.wait(SLOW)
+        self.wait(10.9)  # pacing: t_0a5efeb8 (block 0.8s anim vs natural 10.61s)
         self.ly.clear()
 
     # -- Scene 7: Weather example (2-step) ---------------------------
@@ -356,7 +356,7 @@ class Video230_MarkovChains(Scene):
         self.add_subcaption(
             "Let us compute P squared for our weather chain. "
             "This gives the two-step transition probabilities.",
-            duration=8,
+            duration=6.92,  # pacing: t_0a5efeb8 natural 6.22s + 0.7
         )
         self.ly.section_divider(6, "Worked Example")
 
@@ -372,12 +372,12 @@ class Video230_MarkovChains(Scene):
         )
         self.ly.center_in_content(mat_p)
         self.play(Write(mat_p), run_time=NORMAL)
-        self.wait(FAST)
+        self.wait(2.4)  # pacing: t_0a5efeb8 (block 4.9s anim vs natural 6.22s)
 
         self.add_subcaption(
             "The top-left entry of P squared is 0.7 times 0.7 plus 0.3 times 0.6. "
             "This is the probability of Sunny then Sunny, plus Sunny then Cloudy then Sunny.",
-            duration=11,
+            duration=14.55,  # pacing: t_0a5efeb8 natural 13.85s + 0.7
         )
 
         # Highlight: the (1,1) entry calculation
@@ -388,12 +388,12 @@ class Video230_MarkovChains(Scene):
         calc_box = self.ly.formula_box(calc, color=ACCENT)
         self.ly.safe_place(calc_box, DOWN, anchor=mat_p)
         self.play(FadeIn(calc_box), run_time=NORMAL)
-        self.wait(NORMAL)
+        self.wait(13.7)  # pacing: t_0a5efeb8 (block 1.2s anim vs natural 13.85s)
 
         self.add_subcaption(
             "Already after two steps, the chance of being Sunny from Sunny "
             "dropped from 70 to 67 percent. The chain is mixing.",
-            duration=9,
+            duration=9.00,  # pacing: t_0a5efeb8 natural 8.30s + 0.7
         )
 
         insight = Text(
@@ -401,7 +401,7 @@ class Video230_MarkovChains(Scene):
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(insight, DOWN, anchor=calc_box)
-        self.wait(SLOW)
+        self.wait(8.6)  # pacing: t_0a5efeb8 (block 0.8s anim vs natural 8.30s)
         self.ly.clear()
 
     # -- Scene 8: Summary ---------------------------------------------
@@ -413,7 +413,7 @@ class Video230_MarkovChains(Scene):
             "Multi-step transitions come from matrix powers via Chapman-Kolmogorov. "
             "Stationary distributions describe the long-run behavior. "
             "Next time, we will study stationary distributions in depth and prove convergence.",
-            duration=20,
+            duration=26.57,  # pacing: t_0a5efeb8 natural 25.87s + 0.7
         )
         title = self.ly.title("Summary")
         items = [
@@ -428,7 +428,7 @@ class Video230_MarkovChains(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(12.4)  # pacing: t_0a5efeb8 (block 14.5s anim+outro vs natural 25.87s)
         play_outro(self, "Stationary Distributions", "Stochastic Processes")
         self.ly.clear()
 
