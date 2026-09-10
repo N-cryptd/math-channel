@@ -61,7 +61,7 @@ class Video236_Martingales(Scene):
         self.add_subcaption(
             "A sequence X_n is a martingale if the conditional expectation of the "
             "next value given all past information equals the current value.",
-            duration=9,
+            duration=10.25,
         )
         self.ly.section_divider(1, "Definition")
 
@@ -87,7 +87,7 @@ class Video236_Martingales(Scene):
         self.add_subcaption(
             "The simplest martingale is a symmetric random walk. Brownian motion "
             "is also a martingale, as are products of independent mean-one variables.",
-            duration=10,
+            duration=10.59,
         )
         self.ly.section_divider(2, "Classic Examples")
 
@@ -117,7 +117,7 @@ class Video236_Martingales(Scene):
         self.add_subcaption(
             "Submartingales tend to increase on average. Supermartingales tend to decrease. "
             "Both generalize the martingale concept.",
-            duration=8,
+            duration=9.03,
         )
         self.ly.section_divider(3, "Submartingales and Supermartingales")
 
@@ -133,7 +133,7 @@ class Video236_Martingales(Scene):
             Text("Tends to decrease", font_size=BODY_SIZE, color=WHITE, font=SANS),
         ]
         self.ly.two_columns(left, right, start_from=title)
-        self.wait(NORMAL)
+        self.wait(5.4)  # pacing fix: cap4 slot 5.65s -> ~9.85s (natural 8.33s, ratio 0.85)
         self.ly.clear()
 
     def scene5_transforms(self):
