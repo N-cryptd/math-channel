@@ -41,7 +41,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "Number theory begins with a simple question: when does one integer "
             "divide another? This idea of divisibility is the foundation for "
             "everything that follows, from prime numbers to cryptography.",
-            duration=14,
+            duration=13.40,  # pacing: t_e9a3cc99 natural 12.70s + 0.7
         )
         play_intro(self, "Divisibility and the Euclidean Algorithm", "Number Theory")
 
@@ -55,6 +55,7 @@ class Video251_DivisibilityEuclidean(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(3.2)  # pacing: t_e9a3cc99 slot extension (block 11.63s vs declared 13.40s)
         self.ly.clear()
 
     def scene2_divisibility(self):
@@ -63,7 +64,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "an integer k such that b equals a times k. For example, 3 divides 12 "
             "because 12 equals 3 times 4. But 5 does not divide 12. "
             "Divisibility is reflexive and transitive.",
-            duration=18,
+            duration=18.82,  # pacing: t_e9a3cc99 natural 18.12s + 0.7
         )
         self.ly.section_divider(1, "Divisibility")
         title = self.ly.title("Divisibility")
@@ -88,6 +89,7 @@ class Video251_DivisibilityEuclidean(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.1)  # pacing: t_e9a3cc99 slot extension (block 13.17s vs declared 18.82s)
         self.ly.clear()
 
     def scene3_division_algorithm(self):
@@ -97,7 +99,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "b equals a times q plus r, where the remainder r satisfies "
             "0 is less than or equal to r, which is less than a. "
             "Think of it as placing b on the number line between consecutive multiples of a.",
-            duration=22,
+            duration=22.68,  # pacing: t_e9a3cc99 natural 21.98s + 0.7
         )
         self.ly.section_divider(2, "Division Algorithm")
         title = self.ly.title("The Division Algorithm")
@@ -150,7 +152,7 @@ class Video251_DivisibilityEuclidean(Scene):
         )
         qr_text.next_to(axis, DOWN, buff=0.4)
         self.play(Write(qr_text), run_time=NORMAL)
-        self.wait(3)
+        self.wait(9.0)  # pacing: t_e9a3cc99 slot extension (block 21.1s actual, anim base 14.2)
         self.ly.clear()
 
     def scene4_gcd(self):
@@ -159,7 +161,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "integer that divides both. We write it as G C D of a comma b. "
             "When the G C D equals 1, we say a and b are coprime or relatively prime. "
             "For example, 8 and 15 are coprime since they share no common factor.",
-            duration=18,
+            duration=20.69,  # pacing: t_e9a3cc99 natural 19.99s + 0.7
         )
         self.ly.section_divider(3, "Greatest Common Divisor")
         title = self.ly.title("Greatest Common Divisor")
@@ -183,6 +185,7 @@ class Video251_DivisibilityEuclidean(Scene):
                     font_size=HEADING_SIZE, color=SECONDARY),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(9.0)  # pacing: t_e9a3cc99 slot extension (block 13.18s vs declared 20.69s)
         self.ly.clear()
 
     def scene5_euclidean_algorithm(self):
@@ -191,7 +194,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "repeated division. The key idea: G C D of a and b equals G C D "
             "of b and the remainder. We apply this repeatedly until the remainder "
             "is zero. Let us find G C D of 252 and 105.",
-            duration=18,
+            duration=20.38,  # pacing: t_e9a3cc99 natural 19.68s + 0.7
         )
         self.ly.section_divider(4, "The Euclidean Algorithm")
         title = self.ly.title("The Euclidean Algorithm")
@@ -223,7 +226,7 @@ class Video251_DivisibilityEuclidean(Scene):
         self.ly.progressive_reveal(steps, start_from=title)
         self.ly.safe_place(result, DOWN, anchor=steps[-1], buff=0.3)
         self.play(Write(result), run_time=NORMAL)
-        self.wait(3)
+        self.wait(6.5)  # pacing: t_e9a3cc99 slot extension (block 18.8s actual, anim base 14.3)
         self.ly.clear()
 
     def scene6_why_it_works(self):
@@ -232,7 +235,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "then d divides any linear combination, in particular d divides a minus b q. "
             "So the set of common divisors is unchanged when we replace a with the "
             "remainder. The remainders strictly decrease, so the algorithm must terminate.",
-            duration=18,
+            duration=21.24,  # pacing: t_e9a3cc99 natural 20.54s + 0.7
         )
         self.ly.section_divider(5, "Correctness")
         title = self.ly.title("Correctness of the Algorithm")
@@ -248,6 +251,7 @@ class Video251_DivisibilityEuclidean(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(13.1)  # pacing: t_e9a3cc99 slot extension (block 9.63s vs declared 21.24s)
         self.ly.clear()
 
     def scene7_bezout(self):
@@ -257,7 +261,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "We find x and y by back-substituting through the Euclidean algorithm steps. "
             "For our example, 21 equals 5 times 105 minus 2 times 252. "
             "A corollary: a and b are coprime if and only if a x plus b y equals 1 has a solution.",
-            duration=24,
+            duration=32.45,  # pacing: t_e9a3cc99 natural 31.75s + 0.7
         )
         self.ly.section_divider(6, "Bezout's Identity")
         title = self.ly.title("Bezout's Identity")
@@ -299,7 +303,7 @@ class Video251_DivisibilityEuclidean(Scene):
         )
         self.ly.safe_place(cor, DOWN, anchor=title, buff=0.5)
         self.play(Write(cor), run_time=NORMAL)
-        self.wait(3)
+        self.wait(13.8)  # pacing: t_e9a3cc99 slot extension (block 30.9s actual, anim base 19.1)
         self.ly.clear()
 
     def scene8_summary(self):
@@ -309,7 +313,7 @@ class Video251_DivisibilityEuclidean(Scene):
             "The G C D finds the largest shared divisor. The Euclidean algorithm "
             "computes it efficiently. And Bezout's identity shows the G C D is a "
             "linear combination. These tools power everything in number theory.",
-            duration=20,
+            duration=24.80,  # pacing: t_e9a3cc99 natural 24.10s + 0.7
         )
         self.ly.section_divider(7, "Summary")
         title = self.ly.title("Key Takeaways")
@@ -326,6 +330,7 @@ class Video251_DivisibilityEuclidean(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(7.6)  # pacing: t_e9a3cc99 slot extension (block 18.71s vs declared 24.80s)
         self.ly.clear()
 
         play_outro(self, "Prime Numbers", "Number Theory")
