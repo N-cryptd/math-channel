@@ -38,7 +38,7 @@ class Video265_NumberTheorySummary(Scene):
             "foundations of number theory. From the Euclidean algorithm "
             "to RSA encryption, from quadratic residues to sums of "
             "squares. Let us recap the key ideas and see how they connect.",
-            duration=32,
+            duration=15.44,  # pacing: t_4a442846 natural 14.74s + 0.7
         )
         play_intro(self, "Number Theory Summary", "Number Theory")
         title = self.ly.title("Fifteen Videos of Number Theory")
@@ -49,6 +49,7 @@ class Video265_NumberTheorySummary(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(6.5)  # pacing: t_4a442846 slot extension (block 10.35s vs declared 15.44s)
         self.ly.clear()
 
     def scene2_foundations(self):
@@ -58,7 +59,7 @@ class Video265_NumberTheorySummary(Scene):
             "fundamental theorem of arithmetic tells us every integer "
             "factors uniquely into primes. This uniqueness is the "
             "foundation everything else rests on.",
-            duration=32,
+            duration=17.21,  # pacing: t_4a442846 natural 16.51s + 0.7
         )
         self.ly.section_divider(1, "Foundations")
         title = self.ly.title("Divisibility and Primes")
@@ -71,6 +72,7 @@ class Video265_NumberTheorySummary(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(10.3)  # pacing: t_4a442846 slot extension (block 8.35s vs declared 17.21s)
         self.ly.clear()
 
     def scene3_modular(self):
@@ -80,7 +82,7 @@ class Video265_NumberTheorySummary(Scene):
             "from their residues. Fermat's little theorem and Euler's "
             "theorem provide exponentiation shortcuts. And these theorems "
             "directly power the RSA cryptosystem.",
-            duration=38,
+            duration=18.51,  # pacing: t_4a442846 natural 17.81s + 0.7
         )
         self.ly.section_divider(2, "Modular Arithmetic")
         title = self.ly.title("Working Modulo n")
@@ -93,6 +95,7 @@ class Video265_NumberTheorySummary(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(11.6)  # pacing: t_4a442846 slot extension (block 8.35s vs declared 18.51s)
         self.ly.clear()
 
     def scene4_structure(self):
@@ -102,7 +105,7 @@ class Video265_NumberTheorySummary(Scene):
             "Quadratic residues and the Legendre symbol revealed which "
             "numbers are squares modulo a prime. And quadratic reciprocity "
             "gave us an efficient algorithm for computing these symbols.",
-            duration=40,
+            duration=19.44,  # pacing: t_4a442846 natural 18.74s + 0.7
         )
         self.ly.section_divider(3, "Structure")
         title = self.ly.title("Multiplicative Structure")
@@ -115,6 +118,7 @@ class Video265_NumberTheorySummary(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(12.5)  # pacing: t_4a442846 slot extension (block 8.35s vs declared 19.44s)
         self.ly.clear()
 
     def scene5_advanced(self):
@@ -124,7 +128,7 @@ class Video265_NumberTheorySummary(Scene):
             "Diophantine equations seek integer solutions to polynomial "
             "equations. Together these topics form a complete introduction "
             "to elementary number theory.",
-            duration=36,
+            duration=18.48,  # pacing: t_4a442846 natural 17.78s + 0.7
         )
         self.ly.section_divider(4, "Applications")
         title = self.ly.title("Classical Problems")
@@ -137,6 +141,7 @@ class Video265_NumberTheorySummary(Scene):
                  font_size=BODY_SIZE, color=ACCENT, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
+        self.wait(11.6)  # pacing: t_4a442846 slot extension (block 8.35s vs declared 18.48s)
         self.ly.clear()
 
     def scene6_summary(self):
@@ -145,7 +150,7 @@ class Video265_NumberTheorySummary(Scene):
             "the tools to understand divisibility, modular arithmetic, "
             "quadratic residues, and even how your web browser keeps "
             "secrets safe. Thank you for watching.",
-            duration=28,
+            duration=13.66,  # pacing: t_4a442846 natural 12.96s + 0.7 (span 16.31s incl. outro already >= declared+0.3+1.0, no wait bump needed)
         )
         self.ly.section_divider(5, "Thank You")
         title = self.ly.title("The End of the Journey")

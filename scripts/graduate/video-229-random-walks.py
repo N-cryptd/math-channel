@@ -46,7 +46,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "Imagine flipping a coin and taking a step right for heads, "
             "left for tails. Where do you end up after a hundred flips?",
-            duration=8,
+            duration=8.28,  # pacing: t_7106ac20 natural 7.58s + 0.7
         )
         play_intro(self, "Random Walks", "Stochastic Processes")
 
@@ -68,7 +68,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "Formally, a simple random walk is a sequence of positions "
             "where each step adds plus one or minus one with equal probability.",
-            duration=7,
+            duration=9.44,  # pacing: t_7106ac20 natural 8.74s + 0.7
         )
         self.ly.section_divider(1, "Definition")
 
@@ -82,23 +82,23 @@ class Video229_RandomWalks(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(2.4)  # pacing: t_7106ac20 (block 7.43s anim vs natural 8.74s)
 
         self.add_subcaption(
             "After n steps, the position is the sum of n independent "
             "random variables, each equally likely to be plus or minus one.",
-            duration=7,
+            duration=9.53,  # pacing: t_7106ac20 natural 8.83s + 0.7
         )
 
         step_formula = MathTex(r"S_n = X_1 + X_2 + \cdots + X_n")
         step_box = self.ly.formula_box(step_formula, color=ACCENT)
         self.ly.safe_place(step_box, DOWN, anchor=items[-1])
-        self.wait(NORMAL)
+        self.wait(10.0)  # pacing: t_7106ac20 (block 0.0s anim vs natural 8.83s)
 
         self.add_subcaption(
             "The step variables X sub i are independent and identically distributed. "
             "This i.i.d. property makes random walks easy to analyze.",
-            duration=7,
+            duration=9.84,  # pacing: t_7106ac20 natural 9.14s + 0.7
         )
 
         iid = Text(
@@ -106,7 +106,7 @@ class Video229_RandomWalks(Scene):
             font_size=BODY_SIZE, color=DIM, font=SANS,
         )
         self.ly.safe_place(iid, DOWN, anchor=step_box)
-        self.wait(NORMAL)
+        self.wait(9.5)  # pacing: t_7106ac20 (block 0.83s anim vs natural 9.14s)
         self.ly.clear()
 
     # -- Scene 3: Visual 1D walk --------------------------------------
@@ -114,10 +114,10 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "Let us visualize a one-dimensional random walk. "
             "We start at zero and flip a coin at each step.",
-            duration=7,
+            duration=7.35,  # pacing: t_7106ac20 natural 6.65s + 0.7
         )
         title = self.ly.title("Visualizing a 1D Walk")
-        self.wait(FAST)
+        self.wait(6.4)  # pacing: t_7106ac20 (block 1.33s anim vs natural 6.65s)
 
         # Draw number line
         axes = Axes(
@@ -130,7 +130,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "Heads means step right, tails means step left. "
             "Watch how the walk wanders without any clear direction.",
-            duration=8,
+            duration=7.08,  # pacing: t_7106ac20 natural 6.38s + 0.7
         )
 
         # Animate a sample walk with seed for reproducibility
@@ -154,14 +154,15 @@ class Video229_RandomWalks(Scene):
             )
             self.play(Create(line), FadeIn(new_dot), run_time=FAST)
 
-        self.wait(NORMAL)
+        self.wait(0.8)  # pacing: t_7106ac20 (walk anim 6.6s holds; slot span target 7.4s)
 
         self.add_subcaption(
             "Even though the walk has no drift, it can stray "
             "surprisingly far from the origin. Let us quantify this.",
-            duration=7,
+            duration=7.59,  # pacing: t_7106ac20 natural 6.89s + 0.7
         )
 
+        self.wait(7.9)  # pacing: t_7106ac20 slot extension (block 0.83s anim vs natural 6.89s)
         self.ly.clear()
 
     # -- Scene 4: Expected displacement --------------------------------
@@ -169,7 +170,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "What is the expected position after n steps? "
             "Since each step has zero mean, the expected position stays at zero.",
-            duration=8,
+            duration=8.62,  # pacing: t_7106ac20 natural 7.92s + 0.7
         )
         self.ly.section_divider(2, "Expected Displacement")
 
@@ -184,26 +185,26 @@ class Video229_RandomWalks(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(2.8)  # pacing: t_7106ac20 (block 6.18s anim vs natural 7.92s)
 
         self.add_subcaption(
             "By linearity of expectation, the expected position after "
             "any number of steps is simply the sum of the individual expectations.",
-            duration=8,
+            duration=9.75,  # pacing: t_7106ac20 natural 9.05s + 0.7
         )
 
         result = MathTex(r"E[S_n] = \sum_{i=1}^{n} E[X_i] = 0",
                          font_size=BODY_SIZE, color=SECONDARY)
         result_box = self.ly.formula_box(result, color=ACCENT)
         self.ly.safe_place(result_box, DOWN, anchor=items[-1])
-        self.wait(NORMAL)
+        self.wait(8.1)  # pacing: t_7106ac20 (block 2.03s anim vs natural 9.05s)
 
         insight = Text(
             "On average, the walk never leaves the origin",
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(insight, DOWN, anchor=result_box)
-        self.wait(NORMAL)
+        self.wait(5.0)  # pacing: t_7106ac20 (block 3.28s anim vs natural 7.13s)
         self.ly.clear()
 
     # -- Scene 5: Variance --------------------------------------------
@@ -211,7 +212,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "While the expected position is zero, the walk spreads out. "
             "The variance grows linearly with the number of steps.",
-            duration=8,
+            duration=7.83,  # pacing: t_7106ac20 natural 7.13s + 0.7
         )
         title = self.ly.title("Variance Grows Linearly")
         items = [
@@ -224,30 +225,30 @@ class Video229_RandomWalks(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(7.7)  # pacing: t_7106ac20 (block 0.0s anim vs natural 6.65s)
 
         self.add_subcaption(
             "Since the steps are independent, the variances add. "
             "The variance of S sub n is exactly n.",
-            duration=7,
+            duration=7.35,  # pacing: t_7106ac20 natural 6.65s + 0.7
         )
 
         result = MathTex(r"\mathrm{Var}(S_n) = n",
                          font_size=BODY_SIZE, color=SECONDARY)
         result_box = self.ly.formula_box(result, color=ACCENT)
         self.ly.safe_place(result_box, DOWN, anchor=items[-1])
-        self.wait(NORMAL)
+        self.wait(7.7)  # pacing: t_7106ac20 (block 0.83s anim vs natural 7.44s)
 
         self.add_subcaption(
             "The standard deviation is the square root of n. "
             "This tells us how far the walk typically strays from the origin.",
-            duration=7,
+            duration=8.14,  # pacing: t_7106ac20 natural 7.44s + 0.7
         )
 
         sd = MathTex(r"\mathrm{SD}(S_n) = \sqrt{n}",
                       font_size=BODY_SIZE, color=PRIMARY)
         self.ly.safe_place(sd, DOWN, anchor=result_box)
-        self.wait(NORMAL)
+        self.wait(7.5)  # pacing: t_7106ac20 2nd pass (block 0.8s anim vs natural 7.44s)
         self.ly.clear()
 
     # -- Scene 6: Polya's recurrence -----------------------------------
@@ -255,7 +256,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "One of the most surprising results about random walks is Polya's "
             "recurrence theorem, proved in 1921.",
-            duration=7,
+            duration=7.64,  # pacing: t_7106ac20 natural 6.94s + 0.7
         )
         self.ly.section_divider(3, "Polya's Recurrence Theorem")
 
@@ -272,12 +273,12 @@ class Video229_RandomWalks(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(6.7)  # pacing: t_7106ac20 (block 2.83s anim vs natural 8.47s)
 
         self.add_subcaption(
             "In three dimensions and above, there is a positive probability "
             "that the walk wanders off forever, never returning to where it started.",
-            duration=8,
+            duration=9.17,  # pacing: t_7106ac20 natural 8.47s + 0.7
         )
 
         prob_line1 = MathTex(r"P(\mathrm{return}) = 1", r"\quad" ,r"d = 1, 2",
@@ -290,7 +291,7 @@ class Video229_RandomWalks(Scene):
         prob_box_group = VGroup(prob_group, prob_box)
         self.ly.safe_place(prob_box_group, DOWN, anchor=items[-1])
         self.play(FadeIn(prob_box_group), run_time=NORMAL)
-        self.wait(SLOW)
+        self.wait(7.5)  # pacing: t_7106ac20 2nd pass (block 2.0s anim vs natural 8.47s)
         self.ly.clear()
 
     # -- Scene 7: 2D walk intuition -----------------------------------
@@ -298,7 +299,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "In two dimensions, the walker moves to one of four neighbors "
             "with equal probability. Surprisingly, it still returns home.",
-            duration=8,
+            duration=8.57,  # pacing: t_7106ac20 natural 7.87s + 0.7
         )
         self.ly.section_divider(4, "The 2D Random Walk")
 
@@ -313,12 +314,12 @@ class Video229_RandomWalks(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(7.3)  # pacing: t_7106ac20 (block 1.63s anim vs natural 7.85s)
 
         self.add_subcaption(
             "In three dimensions, there are too many directions to escape into. "
             "The walk gets lost in space with positive probability.",
-            duration=8,
+            duration=8.55,  # pacing: t_7106ac20 natural 7.85s + 0.7
         )
 
         insight = Text(
@@ -326,7 +327,7 @@ class Video229_RandomWalks(Scene):
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(insight, DOWN, anchor=items[-1])
-        self.wait(SLOW)
+        self.wait(8.1)  # pacing: t_7106ac20 2nd pass (block 0.8s anim vs natural 7.85s)
         self.ly.clear()
 
     # -- Scene 8: Gambler's ruin --------------------------------------
@@ -334,7 +335,7 @@ class Video229_RandomWalks(Scene):
         self.add_subcaption(
             "A classic application is the gambler's ruin problem. "
             "A gambler with k dollars plays against a casino with N minus k.",
-            duration=8,
+            duration=8.60,  # pacing: t_7106ac20 natural 7.90s + 0.7
         )
         self.ly.section_divider(5, "Gambler's Ruin")
 
@@ -349,24 +350,24 @@ class Video229_RandomWalks(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(9.4)  # pacing: t_7106ac20 (block 0.0s anim vs natural 8.38s)
 
         self.add_subcaption(
             "The probability of ruin is one minus k over N. "
             "A poorer gambler facing a richer opponent is almost certain to go broke.",
-            duration=8,
+            duration=9.08,  # pacing: t_7106ac20 natural 8.38s + 0.7
         )
 
         ruin = MathTex(r"P(\mathrm{ruin}) = 1 - \frac{k}{N}",
                        font_size=BODY_SIZE, color=RED)
         ruin_box = self.ly.formula_box(ruin, color=RED)
         self.ly.safe_place(ruin_box, DOWN, anchor=items[-1])
-        self.wait(NORMAL)
+        self.wait(9.5)  # pacing: t_7106ac20 2nd pass (block 0.0s anim vs natural 8.38s)
 
         self.add_subcaption(
             "As N grows large with fixed k, the ruin probability approaches one. "
             "This is why casinos always win in the long run.",
-            duration=8,
+            duration=9.15,  # pacing: t_7106ac20 natural 8.45s + 0.7
         )
 
         corollary = Text(
@@ -375,7 +376,7 @@ class Video229_RandomWalks(Scene):
             font_size=BODY_SIZE, color=PRIMARY, font=SANS,
         )
         self.ly.safe_place(corollary, DOWN, anchor=ruin_box)
-        self.wait(SLOW)
+        self.wait(8.7)  # pacing: t_7106ac20 2nd pass (block 0.8s anim vs natural 8.45s)
         self.ly.clear()
 
     # -- Scene 9: Summary ---------------------------------------------
@@ -385,7 +386,7 @@ class Video229_RandomWalks(Scene):
             "The expected position stays at zero, but the variance grows linearly. "
             "Walks are recurrent in one and two dimensions, transient in higher ones. "
             "Next time, we will generalize to Markov chains.",
-            duration=15,
+            duration=18.10,  # pacing: t_7106ac20 natural 17.40s + 0.7
         )
         title = self.ly.title("Summary")
         items = [
@@ -400,6 +401,6 @@ class Video229_RandomWalks(Scene):
         ]
         self.ly.progressive_reveal(items, start_from=title)
 
-        self.wait(NORMAL)
+        self.wait(3.8)  # pacing: t_7106ac20 2nd pass (block 14.7s anim+outro vs natural 17.40s)
         play_outro(self, "Markov Chains", "Stochastic Processes")
         self.ly.clear()
