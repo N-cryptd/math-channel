@@ -43,7 +43,7 @@ class Video235_BrownianMotion(Scene):
             "In 1827, Robert Brown noticed pollen grains jiggling in water. "
             "Einstein explained this in 1905 as molecular bombardment. "
             "The mathematical model is Brownian motion.",
-            duration=11,
+            duration=13.56,
         )
         play_intro(self, "Brownian Motion", "Stochastic Processes")
 
@@ -57,7 +57,7 @@ class Video235_BrownianMotion(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(2.6)  # pacing fix t_fb7a6ddc: cap1 slot 12.80s -> 14.20s (natural 12.86s)
         self.ly.clear()
 
     def scene2_definition(self):
@@ -65,7 +65,7 @@ class Video235_BrownianMotion(Scene):
             "Formally, Brownian motion W(t) is defined by three properties: "
             "it starts at zero, has independent increments, and each increment "
             "is normally distributed with variance equal to the time gap.",
-            duration=12,
+            duration=14.19,
         )
         self.ly.section_divider(1, "Definition")
 
@@ -81,7 +81,7 @@ class Video235_BrownianMotion(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(5.2)  # pacing fix t_fb7a6ddc: cap2 slot 10.83s -> 14.83s (natural 13.49s)
         self.ly.clear()
 
     def scene3_properties(self):
@@ -89,7 +89,7 @@ class Video235_BrownianMotion(Scene):
             "From the definition, we can derive the mean, variance, and "
             "covariance structure of Brownian motion. The variance grows "
             "linearly with time, which is the hallmark of diffusive behavior.",
-            duration=12,
+            duration=12.82,
         )
         self.ly.section_divider(2, "Key Properties")
 
@@ -111,7 +111,7 @@ class Video235_BrownianMotion(Scene):
         formula3 = MathTex(r"Cov[W(s), W(t)] = \min(s, t)",
                            font_size=BODY_SIZE, color=ACCENT)
         self.ly.formula_box(formula3, ACCENT)
-        self.wait(NORMAL)
+        self.wait(3.3)  # pacing fix t_fb7a6ddc: cap3 slot 11.30s -> 13.40s (natural 12.12s)
         self.ly.clear()
 
     def scene4_self_similar(self):
@@ -119,7 +119,7 @@ class Video235_BrownianMotion(Scene):
             "Brownian motion is self-similar: if you zoom in on a path, it looks "
             "statistically the same at every scale. This fractal property is related "
             "to the fact that Brownian paths are nowhere differentiable.",
-            duration=12,
+            duration=14.24,
         )
         self.ly.section_divider(3, "Self-Similarity")
 
@@ -140,7 +140,7 @@ class Video235_BrownianMotion(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(NORMAL)
+        self.wait(3.8)  # pacing fix t_fb7a6ddc: cap4 slot 12.33s -> 14.93s (natural 13.54s)
         self.ly.clear()
 
     def scene5_random_walk_limit(self):
@@ -148,7 +148,7 @@ class Video235_BrownianMotion(Scene):
             "Brownian motion arises as the limit of scaled random walks. "
             "Shrink step sizes and speed up time, and the jagged walk "
             "smooths into continuous Brownian motion.",
-            duration=11,
+            duration=12.08,
         )
         self.ly.section_divider(4, "From Random Walks")
 
@@ -162,14 +162,14 @@ class Video235_BrownianMotion(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(4.3)  # pacing fix t_fb7a6ddc: cap5 slot 9.57s -> 12.67s (natural 11.38s)
         self.ly.clear()
 
     def scene6_heat_equation(self):
         self.add_subcaption(
             "The probability density of Brownian motion satisfies the heat equation. "
             "This creates a deep bridge between probability theory and partial differential equations.",
-            duration=11,
+            duration=11.19,
         )
         self.ly.section_divider(5, "Connection to Physics")
 
@@ -188,7 +188,7 @@ class Video235_BrownianMotion(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title2)
-        self.wait(NORMAL)
+        self.wait(1.9)  # pacing fix t_fb7a6ddc: cap6 slot 11.07s -> 11.77s (natural 10.49s)
         self.ly.clear()
 
     def scene7_summary(self):
@@ -196,7 +196,7 @@ class Video235_BrownianMotion(Scene):
             "Brownian motion: continuous paths, independent normal increments, "
             "linearly growing variance. Next we study martingales, which capture "
             "the idea of a fair game in probability.",
-            duration=10,
+            duration=12.92,
         )
         title = self.ly.title("Key Takeaways")
         items = [
