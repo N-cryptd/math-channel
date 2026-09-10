@@ -135,7 +135,7 @@ class Video237_StoppingTimes(Scene):
         self.add_subcaption(
             "Stopping times model when to quit based on available information. "
             "Next we prove the optional stopping theorem.",
-            duration=7,
+            duration=7.6,  # pacing: natural 6.94s + 0.7 margin (was 7 — 0.06s slack, usage 0.99x)
         )
         title = self.ly.title("Key Takeaways")
         items = [
