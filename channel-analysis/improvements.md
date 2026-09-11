@@ -3040,3 +3040,73 @@ Two schools in this niche:
 
 ---
 
+
+## Video 275 Roots and Radicals — Competitive Analysis
+
+**Method:** youtubei.js search (5 queries, ~50 results) + full metadata on top 6 + thumbnail pixel analysis (local PIL fallback — NIM vision down). Raw data: `roots_results.json`, `roots_metadata.json`, `roots_thumb_analysis.json`, thumbnails in `thumbnails/roots/`. Date: 2026-09-11.
+
+### Competitor Landscape (topic leaders)
+
+| Video | Channel | Views | Date | Length | Subs |
+|---|---|---|---|---|---|
+| How to calculate cube roots in your head | MindYourDecisions | 15.2M | Dec 2014 | 4:37 | 3.28M |
+| Simplifying Radicals (variables, fractions, cube roots) | The Organic Chemistry Tutor | 2.72M | Feb 2016 | 11:52 | 10.9M |
+| Exponents and Square Roots | mathantics | 2.41M | Jan 2019 | 11:09 | 3.85M |
+| What are Square Roots? | Math with Mr. J | 1.50M | Jul 2021 | 4:00 | 1.99M |
+| Simplifying Radicals Easy Method | Mario's Math Tutoring | 1.5M | ~2016 | 3:42 | ~500K |
+| Simplifying square roots | Khan Academy | 1.6M | 2013 | 3:09 | 9.45M |
+| Introduction to cube roots | Khan Academy | 931K | Apr 2015 | 8:00 | 9.45M |
+| Simplifying Square Roots | mathantics | 1.0M | 2020 | 12:01 | 3.85M |
+| Square Roots and Cube Roots | Math with Mr. J | 567K | 2023 | 5:03 | 1.99M |
+| Square roots explained Bob Ross style | Tibees | 355K | 2020 | 10:55 | ~1.3M |
+| Why is it called a SQUARE root? | Domain of Science | 288K | Oct 2016 | 3:03 | 1.67M |
+| Spiral of Theodorus (visual proof) | Mathematical Visual Proofs | 36K | 2023 | 2:33 | ~200K |
+
+**Market shape:** same evergreen profile as exponents (Video 274) — leaders are 2013-2021, almost nothing recent and high-quality. Three niches: (a) "what is a square root" intros (4-8 min, Mr. J/Khan), (b) simplifying-radicals technique compilations (the biggest aggregate views — TOCT 2.7M, Khan 1.6M, Mario's 1.5M, Math Antics 1.0M), (c) short WHY/magic clips that massively outperform their length: MindYourDecisions' 4:37 cube-root mental trick at 15.2M is the single biggest video in the entire space; Domain of Science's 3:03 "why is it called a square root" at 288K proves appetite for the name-is-geometry story.
+
+### Key insights per competitor
+
+- **Math Antics — "Exponents and Square Roots" (2.41M):** THE structural blueprint for our exact serial position — their most-viewed math video explicitly chains exponents into square roots as "the reverse". Names the terms (radical sign, radicand) AFTER the concept lands. Their follow-up "Simplifying Square Roots" (1.0M) shows the simplification technique is a separate, later-video topic — good scope confirmation for our row-10 foundations video (simplify-radicals belongs to Algebra Fundamentals, not here).
+- **Math with Mr. J — "What are Square Roots?" (1.50M in 4 years, 4:00):** closest modern intro analog, double-keyword title pattern ("What are Square Roots? | Math with Mr. J"), perfect-squares-first pedagogy, gentle standards-aligned tone. Short-form: he spends the whole 4 minutes on "what multiplied by itself gives" with a table of perfect squares.
+- **TOCT (2.72M):** homework-search technique compilation (formula-sheet link, chaptered description). Works at 10.9M-sub authority; not our lane — but his chapter list confirms search demand ordering: square roots > simplifying > cube roots > variables.
+- **Khan Academy — "Introduction to cube roots" (931K):** covers ∛ of negatives ((−2)³ = −8) — one of the few treatments of negative radicands under odd roots. Their "Simplifying square roots" (1.6M, 3:09) is pure technique.
+- **MindYourDecisions (15.2M):** cube-roots-in-your-head magic trick (last-digit cube map + size bracket). Engagement outlier of the whole space; the trick is real math kids can do — perfect "habitat/superpower" scene material.
+- **Domain of Science (288K):** the square-root name comes from literal squares (area → side). Short, geometric, memorable. Nobody has animated this properly.
+- **Tibees (355K):** "Bob Ross style" framing — personality-driven long-form works but is not replicable for us; confirms 10-11 min is a comfortable runtime for the topic.
+
+### Thumbnail analysis (pixel-level, NIM down)
+
+- Math Antics: mid-tone slate #64788e (30%) + beige, brightness 139, edge density 7.5%, content mass centered 82% — friendly dense two-panel. Highest saturation in the set.
+- Mr. J: dark gray #433d3d (43%) + cream + yellow-green #99d586 (13.7%), brightness 104, contrast 76 (very high), right-third mass 55% — asymmetric two-panel; accent is AGAIN in the yellow family (matches 274 finding).
+- Khan cube roots: black 73%, brightness 22, edge 3.0% — formula-screenshot authority style; fails for small channels (same verdict as 274).
+- MindYourDecisions: white 92% + black text, edge 1.8%; Domain of Science: white 88% + black glyph, contrast 78 — both ultra-minimal single-object compositions that read at any size.
+- Nobody in the top set features the radical sign itself as a designed hero object on a dark background. Our lane: BG #1A1832 + giant `√` radical in PRIMARY with the radicand digit in ACCENT #FFD166 + dot-grid texture, ≤2 elements — consistent with the 274 recipe (dark + yellow accent + minimal) and visually unclaimed in this niche.
+
+### Techniques to adopt (Video 275)
+
+1. **Thumbnail recipe:** giant radical expression (e.g. √9 = ? with 9 in ACCENT), BG #1A1832, dot-grid, ≤2 elements.
+2. **Duration 10-13 min** (curriculum 12; Math Antics' winner 11:09, Tibees 10:55).
+3. **Serial spine — "the undo":** open directly on 274's closing teaser (ladder in reverse; what undoes a square?). Frame roots as the fourth inverse pair (− undoes +, ÷ undoes ×, √ undoes the power). This inverse-pair framing is NOT how any competitor opens (they all open with "what times itself gives 9" definition-first) — the undo framing is ours and continues the playlist's connected story.
+4. **Geometry-of-the-name beat** (Domain of Science, 288K on the idea alone, and Math Antics' most-viewed video leans on it): a square of area 9 has side 3 — the root of the square. Cube roots get the volume version (continuity with 274's cubed = volume).
+5. **Perfect-squares table first, symbols second** (Mr. J's 1.5M pattern): 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 as the exact addresses, THEN the radical notation for reading them.
+6. **The sandwich estimate:** √10 between 3 and 4 (9 < 10 < 16) — none of the intros do this visually with a number line; √2's endless decimal follows naturally.
+7. **∛ of negatives** (Khan's beat): (−2)³ = −8 so ∛(−8) = −2; but √(−9) has no answer — both signs square positive. Sets up the odd/even root asymmetry.
+8. **± vs √ convention:** x² = 9 has two solutions (±3) but the symbol √9 means only the positive one — the principal-root convention stated as a definition, once, after intuition (Math Antics ordering).
+9. **Mental-magic scene** (MindYourDecisions, 15.2M): cube root of 1728 in your head — last digit 8 → answer ends in 2; between 10³ and 20³ → 12. The video's "superpower" moment.
+10. **Pythagoras payoff:** 3-4-5 triangle, 9 + 16 = 25 → √25 = 5 — roots answer "how long is the diagonal?" (Math Antics' separate Pythagoras video has 3.3M; a taste here, full treatment later in the track).
+11. **Title SEO double-keyword (Mr. J pattern):** "What are Square Roots? | Radicals, Cube Roots, and the Undo of Exponents Explained". Chaptered description + next-video link to The Real Number Line (TOCT playbook).
+12. **Close on the irrational doorway:** √2 is not any fraction — the number line needs more than fractions → next video (row 11, The Real Number Line) picks up exactly there. Serial teaser like 274's.
+
+### Techniques to avoid
+
+- Pure-black formula-screenshot thumbnails (Khan) — authority-only, as before.
+- Turning the video into a simplification-techniques compilation (TOCT/Mario's/Khan) — that's Algebra Fundamentals material (factoring row), not Foundations row 10; we keep only perfect-square factoring awareness implicitly.
+- Memorization-first vocabulary ("radicand", "index", "principal root") before the undo intuition lands — vocabulary is named AFTER each concept (Math Antics' proven ordering).
+- Crowded thumbnails; Math Antics' hand-drawn aesthetic (keep our clean animated math).
+
+### Sweep notes
+
+- Topic correlations: our own Video 274 teaser ("what undoes a square?") matches the exact gap in the market — no competitor video opens roots from the inverse-of-exponents framing. The MindYourDecisions trick (15.2M) shows the audience ceiling for "roots as a usable skill" content is enormous.
+- Also notable: Math Antics' Pythagoras video (3.3M) is their single biggest — the 3-4-5 → √25 = 5 beat earns its scene.
+
+---
