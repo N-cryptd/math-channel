@@ -40,7 +40,7 @@ class Video240_SDEs(Scene):
             "Ordinary differential equations describe deterministic evolution. "
             "Stochastic differential equations add random noise, modeling "
             "systems driven by uncertainty.",
-            duration=10,
+            duration=11.7,
         )
         play_intro(self, "Stochastic Differential Equations", "Stochastic Processes")
 
@@ -61,7 +61,7 @@ class Video240_SDEs(Scene):
         self.add_subcaption(
             "An Ito SDE has the form dX equals mu dt plus sigma dW, "
             "where mu is the drift coefficient and sigma is the diffusion coefficient.",
-            duration=8,
+            duration=11.4,
         )
         self.ly.section_divider(1, "Definition")
 
@@ -75,14 +75,14 @@ class Video240_SDEs(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(3.5)
         self.ly.clear()
 
     def scene3_interpretation(self):
         self.add_subcaption(
             "The integral form makes SDEs precise. Over small time steps, "
             "the change has a deterministic part and a random part.",
-            duration=8,
+            duration=9.1,
         )
         self.ly.section_divider(2, "Integral Form")
 
@@ -103,7 +103,7 @@ class Video240_SDEs(Scene):
         self.add_subcaption(
             "Two classic SDEs: geometric Brownian motion models stock prices, "
             "and the Ornstein-Uhlenbeck process models mean-reverting behavior.",
-            duration=9,
+            duration=10.0,
         )
         self.ly.section_divider(3, "Classic Models")
 
@@ -134,7 +134,7 @@ class Video240_SDEs(Scene):
             "This completes our Stochastic Processes playlist. We covered "
             "random walks, Markov chains, Poisson processes, Brownian motion, "
             "martingales, and stochastic calculus.",
-            duration=10,
+            duration=12.4,
         )
         title = self.ly.title("Key Takeaways")
         items = [
@@ -146,7 +146,7 @@ class Video240_SDEs(Scene):
                  font_size=BODY_SIZE, color=SECONDARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(2.0)
         self.ly.clear()
 
         play_outro(self, "", "Stochastic Processes")
