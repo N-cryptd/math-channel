@@ -61,7 +61,7 @@ class Video239_ItosLemma(Scene):
         self.add_subcaption(
             "In ordinary calculus, d(f(x)) equals f prime times dx. For Brownian "
             "motion, there is an additional second-order term from the quadratic variation.",
-            duration=9,
+            duration=12.4,  # pacing: natural 11.71 + 0.7 (was 9; slot was 2.19x rushed)
         )
         self.ly.section_divider(1, "Why Ordinary Calculus Fails")
 
@@ -75,7 +75,7 @@ class Video239_ItosLemma(Scene):
             Text("df = f' dW + (1/2) f'' dt", font_size=BODY_SIZE, color=ACCENT, font=MONO),
         ]
         self.ly.two_columns(left, right, start_from=title)
-        self.wait(NORMAL)
+        self.wait(8.8)  # pacing: +7.6 (was NORMAL 1.2) — cap2 span 5.65→13.25 ≥ 11.71+1.0
         self.ly.clear()
 
     def scene3_quadratic_variation(self):
@@ -125,7 +125,7 @@ class Video239_ItosLemma(Scene):
     def scene5_examples(self):
         self.add_subcaption(
             "Apply Ito's lemma to f(x) = x^2. We get d(W_t^2) = 2 W_t dW_t + dt.",
-            duration=7,
+            duration=11.8,  # pacing: natural 11.11 + 0.7 (was 7; slot was 1.59x rushed)
         )
         self.ly.section_divider(4, "Example")
 
@@ -139,7 +139,7 @@ class Video239_ItosLemma(Scene):
                  font_size=BODY_SIZE, color=PRIMARY, font=SANS),
         ]
         self.ly.progressive_reveal(items, start_from=title)
-        self.wait(NORMAL)
+        self.wait(4.4)  # pacing: +3.2 (was NORMAL 1.2) — cap5 span 9.55→12.75 ≥ 11.11+1.0
         self.ly.clear()
 
     def scene6_summary(self):
